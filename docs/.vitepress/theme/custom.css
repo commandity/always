@@ -1,0 +1,817 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap");
+:root {
+  --vp-font-family-base: "Nunito", sans-serif;
+}
+
+body {
+  font-family: var(--vp-font-family-base);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   HOMEPAGE BACKGROUND
+   ══════════════════════════════════════════════════════════════════ */
+.VPHome {
+  position: relative;
+}
+
+/* .VPHome::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/file-1.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  filter: blur(0.5px) brightness(0.5);
+  z-index: 0;
+  pointer-events: none;
+  transform: scaleX(-1);
+} */
+
+:root:not(.dark) .VPHome::before {
+  opacity: 0.5;
+  filter: blur(0.5px) brightness(0.3);
+}
+
+.VPHome .VPHero,
+.VPHome .VPFeatures,
+.VPHome .vp-doc {
+  position: relative;
+  z-index: 1;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   FEATURE CARDS — transparent glass
+   ══════════════════════════════════════════════════════════════════ */
+.VPFeature {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s !important;
+}
+
+:root:not(.dark) .VPFeatures .VPFeature {
+  border: 1px solid rgba(100, 108, 255, 0.3) !important;
+}
+
+.VPFeature:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--vp-c-brand-1) !important;
+}
+
+:root:not(.dark) .VPFeatures .VPFeature:hover {
+  border-color: var(--vp-c-brand-1) !important;
+}
+
+.VPFeature .details {
+  color: var(--vp-c-text-1) !important;
+}
+/* ══════════════════════════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════════════════════════ */
+.VPHero {
+  position: relative;
+  overflow: hidden;
+}
+
+.VPHero .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+:root {
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #ff6b35 20%,
+    #f7c59f 80%
+  );
+  --vp-home-hero-image-filter: blur(130px);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   HERO — vertically center the text content
+   ══════════════════════════════════════════════════════════════════ */
+.VPHero .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.VPHero .name {
+  background: linear-gradient(
+    135deg,
+    var(--vp-c-brand-1),
+    var(--vp-c-brand-2, var(--vp-c-text-1))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero .text {
+  background: linear-gradient(135deg, var(--vp-c-text-1), var(--vp-c-text-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero .tagline {
+  background: linear-gradient(135deg, var(--vp-c-text-2), var(--vp-c-text-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.VPHero .image-bg {
+  display: none !important;
+}
+
+.VPHero .image-src {
+  width: 320px !important;
+  height: 320px !important;
+  object-fit: cover !important;
+  aspect-ratio: 1 / 1 !important; /* ← keeps it perfectly square */
+  border-radius: 50% !important; /* ← 50% on a square = perfect circle */
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s !important;
+}
+
+.VPHero .image-src:hover {
+  transform: translateY(-3px) !important;
+}
+
+@media (max-width: 960px) {
+  .VPHero .image-container {
+    margin-top: 1rem;
+  }
+  .VPHero .image-src {
+    width: 240px !important;
+    height: 240px !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .VPHero .image-src {
+    width: 180px !important;
+    height: 180px !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   NAVBAR
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Non-sticky on large screens */
+/* @media (min-width: 960px) {
+  .Layout:has(.VPHome) .VPNav {
+    position: absolute !important;
+  }
+} */
+
+/* ── Dividers ── */
+@media (min-width: 960px) {
+  .dark .VPNavBarAppearance::before,
+  .dark .VPNavBarSocialLinks::before {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    transition: background-color 0.25s ease;
+  }
+
+  :root:not(.dark) .VPNavBarAppearance::before,
+  :root:not(.dark) .VPNavBarSocialLinks::before {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    transition: background-color 0.25s ease;
+  }
+
+  .VPNav .VPNavBar:not(.has-sidebar):not(.home.top) .divider {
+    height: 0px !important;
+  }
+}
+
+/* hide divider + navbar border on homepage at top — background illumination */
+.VPNavBar.home.top .divider {
+  display: none !important;
+}
+.VPNavBar.home.top {
+  border-bottom: none !important;
+}
+
+/* fill the whole navbar — title area is currently transparent */
+@media (min-width: 960px) {
+  .VPNavBar:not(.home.top) {
+    background-color: var(--vp-nav-bg-color) !important;
+  }
+}
+
+/* ── Layout ── */
+.VPNavBar .container {
+  display: flex !important;
+  align-items: center !important;
+}
+.VPNavBarSearch {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 20px !important;
+  flex-grow: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .VPNavBarSearch {
+    padding-right: 0 !important;
+  }
+}
+
+/* ── Logo ── */
+.VPNavBarTitle .logo {
+  filter: invert(0);
+}
+.dark .VPNavBarTitle .logo {
+  filter: invert(1);
+}
+
+/* ── Divider line (small/medium screens) ── */
+.VPNavBar .divider-line {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ── Divider line — light mode darker ── */
+:root:not(.dark) .VPNavBar .divider-line {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.VPLocalNavOutlineDropdown .items {
+  background-color: var(--vp-c-bg-soft) !important;
+  row-gap: 0 !important;
+}
+
+/* Add divider line between 回到頂部 and the links */
+.VPLocalNavOutlineDropdown .header {
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   SEARCH BOX — large screens
+   ══════════════════════════════════════════════════════════════════ */
+@media (min-width: 768px) {
+  /* Outer button */
+  .dark .VPNavBarSearch .DocSearch-Button {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border-radius: 8px !important;
+    transition: border-color 0.2s ease !important;
+  }
+  .dark .VPNavBarSearch .DocSearch-Button:hover {
+    border-color: var(--vp-c-brand-1) !important;
+  }
+
+  :root:not(.dark) .VPNavBarSearch .DocSearch-Button {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    border-radius: 8px !important;
+    transition: border-color 0.2s ease !important;
+  }
+  :root:not(.dark) .VPNavBarSearch .DocSearch-Button:hover {
+    border-color: var(--vp-c-brand-1) !important;
+  }
+
+  /* Transition on all inner elements */
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Search-Icon,
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Placeholder,
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Key,
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Key-Icon,
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Key-Icon path {
+    transition:
+      color 0.2s ease,
+      fill 0.2s ease,
+      stroke 0.2s ease !important;
+  }
+
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Key {
+    box-shadow: none !important;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease !important;
+  }
+
+  /* Key base — dark */
+  .dark .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Key {
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: var(--vp-c-text-2) !important;
+  }
+  .dark .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Key-Icon {
+    color: var(--vp-c-text-2) !important;
+    fill: currentColor !important;
+    stroke: currentColor !important;
+  }
+
+  /* Key base — light */
+  :root:not(.dark) .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Key {
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    color: var(--vp-c-text-2) !important;
+  }
+  :root:not(.dark)
+    .VPNavBarSearch
+    .DocSearch-Button
+    .DocSearch-Button-Key-Icon {
+    color: var(--vp-c-text-2) !important;
+    fill: currentColor !important;
+    stroke: currentColor !important;
+  }
+
+  /* Hover — dark */
+  .dark .VPNavBarSearch .DocSearch-Button:hover .DocSearch-Search-Icon,
+  .dark .VPNavBarSearch .DocSearch-Button:hover .DocSearch-Button-Placeholder,
+  .dark .VPNavBarSearch .DocSearch-Button:hover .DocSearch-Button-Key,
+  .dark .VPNavBarSearch .DocSearch-Button:hover .DocSearch-Button-Key-Icon {
+    color: var(--vp-c-text-1) !important;
+    fill: currentColor !important;
+    stroke: currentColor !important;
+  }
+  .dark .VPNavBarSearch .DocSearch-Button:hover .DocSearch-Button-Key {
+    border-color: var(--vp-c-brand-1) !important;
+  }
+
+  /* Hover — light */
+  :root:not(.dark)
+    .VPNavBarSearch
+    .DocSearch-Button:hover
+    .DocSearch-Search-Icon,
+  :root:not(.dark)
+    .VPNavBarSearch
+    .DocSearch-Button:hover
+    .DocSearch-Button-Placeholder,
+  :root:not(.dark)
+    .VPNavBarSearch
+    .DocSearch-Button:hover
+    .DocSearch-Button-Key,
+  :root:not(.dark)
+    .VPNavBarSearch
+    .DocSearch-Button:hover
+    .DocSearch-Button-Key-Icon {
+    color: var(--vp-c-text-1) !important;
+    fill: currentColor !important;
+    stroke: currentColor !important;
+  }
+  :root:not(.dark)
+    .VPNavBarSearch
+    .DocSearch-Button:hover
+    .DocSearch-Button-Key {
+    border-color: var(--vp-c-brand-1) !important;
+  }
+
+  /* ── Merge ⌘ and K into one unified box ── */
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Keys {
+    gap: 0 !important;
+  }
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Key:first-child {
+    border-right: none !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 3px !important;
+  }
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Button-Key:last-child {
+    border-left: none !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 3px !important;
+  }
+  /* Light mode: restore inner border removal after border shorthand override */
+  :root:not(.dark)
+    .VPNavBarSearch
+    .DocSearch-Button
+    .DocSearch-Button-Key:first-child {
+    border-right: none !important;
+  }
+  :root:not(.dark)
+    .VPNavBarSearch
+    .DocSearch-Button
+    .DocSearch-Button-Key:last-child {
+    border-left: none !important;
+  }
+}
+
+/* ── Search box — small screens: icon only ── */
+@media (max-width: 767px) {
+  .VPNavBarSearch .DocSearch-Button,
+  :root:not(.dark) .VPNavBarSearch .DocSearch-Button {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .VPNavBarSearch .DocSearch-Button .DocSearch-Search-Icon {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+
+  .VPNavBarSearch .DocSearch-Button:hover .DocSearch-Search-Icon {
+    color: var(--vp-c-brand-1) !important;
+    opacity: 1;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   FOOTER & LOCAL NAV
+   ══════════════════════════════════════════════════════════════════ */
+.VPFooter {
+  background: transparent !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.dark .VPFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.VPLocalNav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.VPLocalNav .container {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+:root:not(.dark) .VPLocalNav .container {
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   VPLocalNav
+   ══════════════════════════════════════════════════════════════════ */
+/* Always keep the dropdown right-aligned in the nav bar */
+.VPLocalNav .VPLocalNavOutlineDropdown {
+  margin-left: auto;
+}
+
+/* ── Dropdown panel: sidebar hidden (mobile / no sidebar pages) ── */
+.VPLocalNavOutlineDropdown .items {
+  right: 18px !important;
+  left: auto !important;
+}
+
+/* ── Dropdown panel: sidebar visible (desktop with sidebar) ──────── */
+@media (min-width: 960px) {
+  .VPLocalNav.has-sidebar .VPLocalNavOutlineDropdown .items {
+    right: 36px !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CUSTOM BUTTONS
+   ══════════════════════════════════════════════════════════════════ */
+.VPButton.danger {
+  background: #cc0000;
+  border-color: #cc0000;
+  color: #fff;
+}
+.VPButton.danger:hover {
+  background: #aa0000;
+  border-color: #aa0000;
+}
+
+.VPButton.green {
+  background: #1a7f37;
+  border-color: #1a7f37;
+  color: #fff;
+}
+.VPButton.green:hover {
+  background: #156030;
+  border-color: #156030;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   VIDEO IFRAME
+   ══════════════════════════════════════════════════════════════════ */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   BLOG / DOC STYLES
+   ══════════════════════════════════════════════════════════════════ */
+.vp-doc img {
+  border-radius: 16px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.vp-doc blockquote {
+  border-left: 6px solid var(--vp-c-brand-1);
+  border-radius: 6px 0 0 6px;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  opacity: 0.9;
+  color: var(--vp-c-text-1);
+}
+
+.journal-post {
+  max-width: 688px;
+  margin: 0 auto;
+}
+
+.journal-post > p {
+  text-indent: 2em;
+  line-height: 2;
+  margin: 1.5rem 0;
+}
+
+/* h2 title in .vue */
+h2.title {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  line-height: 32px !important;
+  letter-spacing: -0.02em !important;
+}
+
+.journal-post h1 + p,
+.journal-post h2 + p,
+.journal-post h3 + p,
+.journal-post hr + p {
+  text-indent: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: linear-gradient(
+    135deg,
+    var(--vp-c-brand-1),
+    var(--vp-c-brand-2, var(--vp-c-text-1))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   ── Light mode card backgrounds — subtle gray
+   ══════════════════════════════════════════════════════════════════ */
+
+/* :root:not(.dark) .VPFeature,
+:root:not(.dark) .citation-card,
+:root:not(.dark) .profile-card {
+  background-color: var(--vp-c-bg-soft) !important;
+} */
+
+/* ══════════════════════════════════════════════════════════════════
+   NAVBAR — force unified layout (always sidebar-page style)
+   ══════════════════════════════════════════════════════════════════
+
+   VitePress swaps between two navbar layouts based on `has-sidebar`.
+   Navigating across page types toggles the class, causing a reflow
+   glitch in the right items.  These overrides apply the sidebar
+   layout unconditionally so the class change has zero layout effect.
+   ──────────────────────────────────────────────────────────────── */
+
+@media (min-width: 960px) {
+  .VPNavBar .wrapper {
+    padding: 0 !important;
+  }
+  .VPNavBar .container {
+    max-width: 100% !important;
+  }
+  /* outer title div – always absolute, same width as sidebar */
+  .VPNavBar .container > .title {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 2 !important;
+    padding: 0 32px !important;
+    width: var(--vp-sidebar-width) !important;
+    height: var(--vp-nav-height) !important;
+    background-color: transparent !important;
+  }
+  .VPNavBar .container > .content {
+    position: relative !important;
+    z-index: 1 !important;
+    padding-right: 32px !important;
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+  /* always full-width — don't let VitePress's has-sidebar rule shift it */
+  .VPNavBar .divider {
+    padding-left: 0 !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPNavBar .container > .title {
+    padding-left: max(
+      32px,
+      calc((100% - (var(--vp-layout-max-width) - 64px)) / 2)
+    ) !important;
+    width: calc(
+      (100% - (var(--vp-layout-max-width) - 64px)) / 2 +
+        var(--vp-sidebar-width) - 32px
+    ) !important;
+  }
+  .VPNavBar .container > .content {
+    padding-right: calc(
+      (100vw - var(--vp-layout-max-width)) / 2 + 32px
+    ) !important;
+    padding-left: calc(
+      (100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width)
+    ) !important;
+  }
+}
+
+/* remove the bottom border on the title link when sidebar is present */
+.VPNavBarTitle.has-sidebar .title {
+  border-bottom-color: transparent !important;
+}
+
+/* The toggle button itself */
+.VPNavBarSidebarToggle {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.VPNavBar.home .VPNavBarSidebarToggle {
+  display: none !important;
+}
+
+@media (max-width: 959px) {
+  .VPNavBarSidebarToggle {
+    display: none !important;
+  }
+}
+
+body.hide-sidebar-toggle .VPNavBarSidebarToggle {
+  display: none !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   SIDEBAR — start below VPNav, no curtain
+   ══════════════════════════════════════════════════════════════════ */
+@media (min-width: 960px) {
+  .VPSidebar {
+    top: var(--vp-nav-height) !important;
+    padding-top: 0 !important;
+    height: calc(100vh - var(--vp-nav-height)) !important;
+  }
+  .VPSidebar .curtain {
+    display: none !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   MISC
+   ══════════════════════════════════════════════════════════════════ */
+:lang(zh) {
+  --vp-code-copy-copied-text-content: "已複製";
+}
+
+/* Prevent layout shift when search modal opens */
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Subtitle
+   ══════════════════════════════════════════════════════════════════ */
+
+.subtitle-text {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-3);
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CONTENT WIDTH — match .vue tool width (780px) regardless of
+   sidebar/aside state
+   ══════════════════════════════════════════════════════════════════ */
+.VPDoc .content-container {
+  max-width: 780px !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PASSWORD GATE
+   ══════════════════════════════════════════════════════════════════ */
+.pwd-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--vp-c-bg);
+}
+
+.pwd-dialog {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.pwd-dialog h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.pwd-dialog input {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  margin: 1rem 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.pwd-dialog input::-webkit-caps-lock-indicator {
+  display: none;
+}
+
+.pwd-dialog input:focus {
+  border-color: var(--vp-c-brand-1);
+}
+
+.pwd-dialog input.error {
+  border-color: #e44;
+}
+
+.pwd-dialog button {
+  display: inline-block;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.pwd-dialog button:hover {
+  opacity: 0.85;
+}
+
+.pwd-error {
+  color: #e44;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}

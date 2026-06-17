@@ -1,0 +1,19 @@
+{
+  "name": "my-docs",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "My documentation site powered by VitePress",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "@fontsource-variable/chiron-goround-tc": "^5.2.5",
+    "vitepress-sidebar": "^1.33.2"
+  }
+}

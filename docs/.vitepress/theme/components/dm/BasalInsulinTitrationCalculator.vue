@@ -929,6 +929,14 @@ async function copyMarkdown() {
               <div class="bo-start-sub">
                 可選藥物：Glargine（U-100/U-300）、Detemir、Degludec（Tresiba），每日一次固定時間注射
               </div>
+              <div class="bo-start-sub toujeo-note">
+                ⚠ Toujeo（Glargine U-300）濃度 300 U/mL，為 U-100 的 3 倍。<br />
+                1 unit Toujeo 的注射體積僅有 1 unit U-100 的 1/3（0.00333 mL vs
+                0.01 mL）。<br />
+                從 U-100 Glargine 轉換：建議 1:1 起始，但部分病人需增加 10–20%
+                始達同等療效。<br />
+                僅有預填筆（SoloStar / Max SoloStar），不可用 U-100 空針抽取。
+              </div>
             </div>
           </div>
         </div>
@@ -2189,6 +2197,16 @@ async function copyMarkdown() {
   font-size: 0.7rem;
   color: var(--vp-c-text-3);
   margin-top: 2px;
+}
+.toujeo-note {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  background: rgba(249, 115, 22, 0.06);
+  border-left: 3px solid #f97316;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  line-height: 1.55;
+  color: var(--vp-c-text-2);
 }
 
 /* ── Basal-only threshold card ──────────────────────────────────── */

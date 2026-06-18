@@ -227,6 +227,184 @@ _圖 2：左轉 5 圈。腳步沿逆時針方向，動作要領相同，方向�
 
 > **原則**：每 1–2 週晉升一層級，前提為當前層級可連續 2 次訓練無明顯不適。如有眩暈加劇或跌倒風險，退回前一層級。
 
+#### 變化節奏示意圖（快步 ↔ 慢步交替）
+
+<div style="text-align:center; margin: 1.5rem 0;">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 180" width="620" height="180" style="display:block; margin:auto; font-family:sans-serif;">
+  <!-- Timeline axis -->
+  <line x1="40" y1="90" x2="600" y2="90" stroke="#d1d5db" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Arrowhead -->
+  <polygon points="600,85 610,90 600,95" fill="#d1d5db"/>
+
+  <!-- Label: time -->
+
+<text x="300" y="40" text-anchor="middle" font-size="14" fill="#374151" font-weight="bold">時間 →</text>
+
+  <!-- === Block A: 快步 (3 fast steps) === -->
+  <!-- Tempo bracket -->
+  <line x1="55" y1="60" x2="155" y2="60" stroke="#ef4444" stroke-width="2"/>
+  <line x1="55" y1="55" x2="55" y2="65" stroke="#ef4444" stroke-width="2"/>
+  <line x1="155" y1="55" x2="155" y2="65" stroke="#ef4444" stroke-width="2"/>
+  <text x="105" y="53" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="bold">快步 0.5s</text>
+
+  <!-- Footstep A1 -->
+  <g transform="translate(65,78)">
+    <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
+      <g transform="scale(0.33)">
+        <path fill="#ef4444" d="M18.71,34.42"/>
+        <path fill="#ef4444" d="M18.98,39.86"/>
+        <path fill="#ef4444" d="M41.59,34.99"/>
+        <path fill="#ef4444" d="M56.68,39.05"/>
+      </g>
+    </svg>
+  </g>
+  <!-- Footstep A2 -->
+  <g transform="translate(100,78)">
+    <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
+      <g transform="scale(0.33)">
+        <path fill="#ef4444" d="M18.71,34.42"/>
+        <path fill="#ef4444" d="M18.98,39.86"/>
+        <path fill="#ef4444" d="M41.59,34.99"/>
+        <path fill="#ef4444" d="M56.68,39.05"/>
+      </g>
+    </svg>
+  </g>
+  <!-- Footstep A3 -->
+  <g transform="translate(135,78)">
+    <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
+      <g transform="scale(0.33)">
+        <path fill="#ef4444" d="M18.71,34.42"/>
+        <path fill="#ef4444" d="M18.98,39.86"/>
+        <path fill="#ef4444" d="M41.59,34.99"/>
+        <path fill="#ef4444" d="M56.68,39.05"/>
+      </g>
+    </svg>
+  </g>
+
+  <!-- Transition arrow -->
+  <path d="M 165,90 L 180,90" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <defs>
+    <marker id="arrowGray" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <!-- === Block B: 慢步 (2 slow steps) === -->
+  <!-- Tempo bracket -->
+  <line x1="195" y1="60" x2="345" y2="60" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="195" y1="55" x2="195" y2="65" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="345" y1="55" x2="345" y2="65" stroke="#3b82f6" stroke-width="2"/>
+  <text x="270" y="53" text-anchor="middle" font-size="11" fill="#3b82f6" font-weight="bold">慢步 2s</text>
+
+  <!-- Footstep B1 -->
+  <g transform="translate(220,78)">
+    <circle cx="15" cy="15" r="15" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+    <svg x="2" y="7" width="26" height="23" viewBox="0 0 60.4 54.74">
+      <g transform="scale(0.43)">
+        <path fill="#3b82f6" d="M18.71,34.42"/>
+        <path fill="#3b82f6" d="M18.98,39.86"/>
+        <path fill="#3b82f6" d="M41.59,34.99"/>
+        <path fill="#3b82f6" d="M56.68,39.05"/>
+      </g>
+    </svg>
+  </g>
+  <!-- Footstep B2 -->
+  <g transform="translate(290,78)">
+    <circle cx="15" cy="15" r="15" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+    <svg x="2" y="7" width="26" height="23" viewBox="0 0 60.4 54.74">
+      <g transform="scale(0.43)">
+        <path fill="#3b82f6" d="M18.71,34.42"/>
+        <path fill="#3b82f6" d="M18.98,39.86"/>
+        <path fill="#3b82f6" d="M41.59,34.99"/>
+        <path fill="#3b82f6" d="M56.68,39.05"/>
+      </g>
+    </svg>
+  </g>
+
+  <!-- Transition arrow -->
+  <path d="M 360,90 L 375,90" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- === Block C: 快步 (3 fast steps) === -->
+  <!-- Tempo bracket -->
+  <line x1="390" y1="60" x2="490" y2="60" stroke="#ef4444" stroke-width="2"/>
+  <line x1="390" y1="55" x2="390" y2="65" stroke="#ef4444" stroke-width="2"/>
+  <line x1="490" y1="55" x2="490" y2="65" stroke="#ef4444" stroke-width="2"/>
+  <text x="440" y="53" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="bold">快步 0.5s</text>
+
+  <!-- Footstep C1 -->
+  <g transform="translate(400,78)">
+    <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
+      <g transform="scale(0.33)">
+        <path fill="#ef4444" d="M18.71,34.42"/>
+        <path fill="#ef4444" d="M18.98,39.86"/>
+        <path fill="#ef4444" d="M41.59,34.99"/>
+        <path fill="#ef4444" d="M56.68,39.05"/>
+      </g>
+    </svg>
+  </g>
+  <g transform="translate(435,78)">
+    <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
+      <g transform="scale(0.33)">
+        <path fill="#ef4444" d="M18.71,34.42"/>
+        <path fill="#ef4444" d="M18.98,39.86"/>
+        <path fill="#ef4444" d="M41.59,34.99"/>
+        <path fill="#ef4444" d="M56.68,39.05"/>
+      </g>
+    </svg>
+  </g>
+  <g transform="translate(470,78)">
+    <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
+      <g transform="scale(0.33)">
+        <path fill="#ef4444" d="M18.71,34.42"/>
+        <path fill="#ef4444" d="M18.98,39.86"/>
+        <path fill="#ef4444" d="M41.59,34.99"/>
+        <path fill="#ef4444" d="M56.68,39.05"/>
+      </g>
+    </svg>
+  </g>
+
+  <!-- Rhythm legend - bottom -->
+  <!-- Fast pulse markers under timeline -->
+  <line x1="75" y1="95" x2="75" y2="105" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="110" y1="95" x2="110" y2="105" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="145" y1="95" x2="145" y2="105" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="410" y1="95" x2="410" y2="105" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="445" y1="95" x2="445" y2="105" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="480" y1="95" x2="480" y2="105" stroke="#ef4444" stroke-width="1.5"/>
+
+  <!-- Slow pulse markers under timeline -->
+  <line x1="235" y1="95" x2="235" y2="115" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="305" y1="95" x2="305" y2="115" stroke="#3b82f6" stroke-width="2"/>
+
+  <!-- Pulse labels -->
+
+<text x="75" y="120" text-anchor="middle" font-size="9" fill="#ef4444">0.5s</text>
+<text x="110" y="120" text-anchor="middle" font-size="9" fill="#ef4444">0.5s</text>
+<text x="145" y="120" text-anchor="middle" font-size="9" fill="#ef4444">0.5s</text>
+<text x="235" y="130" text-anchor="middle" font-size="9" fill="#3b82f6">2s</text>
+<text x="305" y="130" text-anchor="middle" font-size="9" fill="#3b82f6">2s</text>
+<text x="410" y="120" text-anchor="middle" font-size="9" fill="#ef4444">0.5s</text>
+<text x="445" y="120" text-anchor="middle" font-size="9" fill="#ef4444">0.5s</text>
+<text x="480" y="120" text-anchor="middle" font-size="9" fill="#ef4444">0.5s</text>
+
+  <!-- Stagger repeats label -->
+
+<text x="530" y="105" text-anchor="middle" font-size="11" fill="#6b7280" font-style="italic">重複循環</text>
+<path d="M 520,110 C 530,125 550,125 560,110" fill="none" stroke="#6b7280" stroke-width="1" stroke-dasharray="3,2"/>
+</svg>
+
+_圖 3：快步（0.5 秒／步）與慢步（2 秒／步）交替節奏。快步連續 3–5 步，慢步連續 2 步，循環進行。_
+
+</div>
+
 ## 其他前庭復健方法
 
 ### 1. Cawthorne–Cooksey 運動

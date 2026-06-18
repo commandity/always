@@ -573,6 +573,10 @@ export default defineConfig({
               text: "吞嚥復健",
               link: "/reference/ent/dysphagia-rehabilitation",
             },
+            {
+              text: "前庭復健",
+              link: "/reference/ent/vestibular-rehabilitation",
+            },
           ],
         },
         {

@@ -409,124 +409,191 @@ _圖 3：快步（0.5 秒／步）與慢步（2 秒／步）交替節奏。快�
 
 <div style="text-align:center; margin: 1.5rem 0;">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 340" width="500" height="340" style="display:block; margin:auto; font-family:sans-serif;">
-  <!-- Background turning path (dashed arc) -->
-  <path d="M 250,280 C 140,280 70,200 90,120 C 110,40 200,40 250,40" fill="none" stroke="#e2e8f0" stroke-width="3" stroke-dasharray="8,5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" style="display:block; margin:auto; font-family:sans-serif;">
 
-  <!-- Direction arrow on path -->
-  <path d="M 120,255 C 85,210 85,140 120,100" fill="none" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="4,3"/>
-  <polygon points="118,95 128,105 112,105" fill="#e2e8f0"/>
+  <!-- ════════ LEFT PANEL: 頭左右擺 ════════ -->
+  <g transform="translate(0,0)">
+    <!-- Panel background -->
+    <rect x="10" y="10" width="280" height="270" rx="12" fill="#fefcfc" stroke="#fca5a5" stroke-width="1"/>
 
-  <!-- Label: 轉身方向 -->
+    <!-- Title -->
+    <text x="150" y="35" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="bold">踏步轉身 + 左右擺頭</text>
 
-<text x="50" y="170" text-anchor="middle" font-size="11" fill="#9ca3af" transform="rotate(-70,50,170)">轉身方向</text>
+    <!-- Turning arc (dashed path) -->
+    <path d="M 70,220 C 40,180 50,130 80,100 C 120,60 180,70 210,80" fill="none" stroke="#fca5a5" stroke-width="2" stroke-dasharray="6,4"/>
 
-  <!-- === Figure 1 — 起步 (bottom center) === -->
-  <g transform="translate(230,260)">
-    <!-- Body circle -->
-    <circle cx="0" cy="-15" r="14" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
-    <!-- Head circle -->
-    <circle cx="0" cy="-38" r="10" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
-    <!-- Eyes -->
-    <circle cx="-3" cy="-40" r="1.5" fill="#6b7280"/>
-    <circle cx="4" cy="-40" r="1.5" fill="#6b7280"/>
-    <!-- Nose dot -->
-    <circle cx="0" cy="-37" r="1" fill="#6b7280"/>
-    <!-- Head arrow: shake L/R -->
-    <path d="M -12,-42 C -20,-48 -20,-32 -12,-38" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
-    <path d="M 12,-42 C 20,-48 20,-32 12,-38" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
-    <!-- Legs -->
-    <line x1="-5" y1="-2" x2="-8" y2="15" stroke="#6b7280" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="5" y1="-2" x2="8" y2="15" stroke="#6b7280" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Label -->
-    <text x="0" y="30" text-anchor="middle" font-size="10" fill="#6b7280">起步</text>
-  </g>
+    <!-- Direction arrow on arc -->
+    <polygon points="208,76 215,85 200,85" fill="#fca5a5"/>
 
-  <!-- === Figure 2 — 左轉 + 擺頭 === -->
-  <g transform="translate(160,160)">
-    <!-- Body circle -->
-    <circle cx="0" cy="-15" r="14" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
-    <!-- Head circle (turned left) -->
-    <circle cx="-6" cy="-36" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
-    <!-- Eyes -->
-    <circle cx="-9" cy="-38" r="1.5" fill="#ef4444"/>
-    <circle cx="-3" cy="-38" r="1.5" fill="#ef4444"/>
-    <!-- Head arrow: left-right -->
-    <path d="M -18,-40 C -26,-46 -26,-30 -18,-36" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
-    <path d="M 6,-40 C 14,-46 14,-30 6,-36" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round"/>
-    <!-- Rotation arrow around body -->
-    <path d="M 20,-15 A 20,20 0 0,1 -18,-10" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#arrowRed)"/>
-    <!-- Legs -->
-    <line x1="-6" y1="-2" x2="-12" y2="14" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="4" y1="-2" x2="10" y2="14" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Footstep icon -->
-    <svg x="-10" y="16" width="20" height="18" viewBox="0 0 60.4 54.74" transform="rotate(-20)">
-      <g transform="scale(0.33)">
-        <path fill="#ef4444" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
-        <path fill="#ef4444" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
-        <path fill="#ef4444" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
-        <path fill="#ef4444" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
+    <!-- === Figure (side view) === -->
+    <g transform="translate(90,158)">
+      <!-- Body silhouette -->
+      <rect x="-12" y="-18" width="24" height="38" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+      <!-- Arm back -->
+      <line x1="-12" y1="-8" x2="-20" y2="2" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Arm front -->
+      <line x1="12" y1="-8" x2="22" y2="5" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Head (side profile) -->
+      <circle cx="6" cy="-34" r="14" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+      <!-- Profile face right side -->
+      <path d="M 14,-40 Q 20,-36 18,-30 Q 16,-26 14,-24" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Eye -->
+      <circle cx="14" cy="-36" r="1.8" fill="#ef4444"/>
+      <!-- Head movement arrows: L/R shake -->
+      <path d="M -16,-34 C -26,-40 -26,-28 -16,-34" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="-16,-38 -22,-34 -16,-30" fill="#ef4444"/>
+      <path d="M 30,-34 C 40,-40 40,-28 30,-34" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="30,-38 36,-34 30,-30" fill="#ef4444"/>
+      <!-- Label on head arrow -->
+      <text x="-26" y="-48" text-anchor="middle" font-size="9" fill="#ef4444">左右</text>
+
+      <!-- Lower body: legs -->
+      <line x1="-6" y1="20" x2="-10" y2="40" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="6" y1="20" x2="12" y2="40" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Footstep icon under left foot -->
+      <svg x="-22" y="32" width="28" height="24" viewBox="0 0 60.4 54.74" transform="rotate(-15)">
+        <g transform="scale(0.37)">
+          <path fill="#ef4444" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+          <path fill="#ef4444" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+          <path fill="#ef4444" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+          <path fill="#ef4444" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
+        </g>
+      </svg>
+      <!-- Footstep icon under right foot -->
+      <svg x="6" y="34" width="28" height="24" viewBox="0 0 60.4 54.74" transform="rotate(10)">
+        <g transform="scale(0.37)">
+          <path fill="#ef4444" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+          <path fill="#ef4444" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+          <path fill="#ef4444" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+          <path fill="#ef4444" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
+        </g>
+      </svg>
+
+      <!-- Rotation indicator (curved arrow around body) -->
+      <path d="M 28,-4 A 30,30 0 0,1 -22,-4" fill="none" stroke="#fca5a5" stroke-width="1.8" stroke-dasharray="4,3"/>
+      <polygon points="-26,-6 -20,0 -22,-10" fill="#fca5a5"/>
+      <!-- Label: 旋轉 -->
+      <text x="38" y="4" font-size="9" fill="#fca5a5">轉身</text>
+    </g>
+
+    <!-- Additional footstep traces on arc -->
+    <svg x="170" y="68" width="24" height="20" viewBox="0 0 60.4 54.74" transform="rotate(45)">
+      <g transform="scale(0.32)">
+        <path fill="#fca5a5" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#fca5a5" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#fca5a5" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#fca5a5" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
-    <!-- Label -->
-    <text x="0" y="40" text-anchor="middle" font-size="9" fill="#ef4444">頭左右擺</text>
-  </g>
-
-  <!-- === Figure 3 — 右轉 + 點頭 === -->
-  <g transform="translate(290,80)">
-    <!-- Body circle -->
-    <circle cx="0" cy="-15" r="14" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
-    <!-- Head circle (tilted forward/nodding) -->
-    <circle cx="0" cy="-36" r="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
-    <!-- Eyes -->
-    <circle cx="-3" cy="-38" r="1.5" fill="#3b82f6"/>
-    <circle cx="4" cy="-38" r="1.5" fill="#3b82f6"/>
-    <!-- Head arrow: nod up/down -->
-    <path d="M -8,-45 C -12,-52 -4,-52 -8,-45" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-linecap="round"/>
-    <path d="M 8,-45 C 12,-52 4,-52 8,-45" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-linecap="round"/>
-    <!-- Nod arrows vertical -->
-    <path d="M -14,-38 L -14,-46" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
-    <path d="M 14,-38 L 14,-46" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
-    <!-- Rotation arrow -->
-    <path d="M -20,-15 A 20,20 0 0,0 18,-10" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="3,2"/>
-    <!-- Legs -->
-    <line x1="-4" y1="-2" x2="-6" y2="15" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="6" y1="-2" x2="8" y2="15" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Footstep icon -->
-    <svg x="-8" y="17" width="20" height="18" viewBox="0 0 60.4 54.74" transform="rotate(15)">
-      <g transform="scale(0.33)">
-        <path fill="#3b82f6" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
-        <path fill="#3b82f6" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
-        <path fill="#3b82f6" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
-        <path fill="#3b82f6" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
+    <svg x="30" y="170" width="24" height="20" viewBox="0 0 60.4 54.74" transform="rotate(-55)">
+      <g transform="scale(0.32)">
+        <path fill="#fca5a5" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#fca5a5" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#fca5a5" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#fca5a5" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
-    <!-- Label -->
-    <text x="0" y="40" text-anchor="middle" font-size="9" fill="#3b82f6">頭上下點</text>
+
+    <!-- Synchronization callout -->
+    <g transform="translate(30,242)">
+      <rect x="0" y="0" width="220" height="26" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="0.8"/>
+      <text x="110" y="17" text-anchor="middle" font-size="10" fill="#dc2626">踏步 ⨯ 轉身 ⨯ 頭左右擺</text>
+    </g>
+
   </g>
 
-  <!-- Arrow markers defs -->
-  <defs>
-    <marker id="arrowRed" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <polygon points="0,0 6,3 0,6" fill="#ef4444"/>
-    </marker>
-    <marker id="arrowBlue" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-      <polygon points="0,0 6,3 0,6" fill="#3b82f6"/>
-    </marker>
-  </defs>
+  <!-- ════════ RIGHT PANEL: 頭上下點 ════════ -->
+  <g transform="translate(300,0)">
+    <!-- Panel background -->
+    <rect x="10" y="10" width="280" height="270" rx="12" fill="#f0f9ff" stroke="#93c5fd" stroke-width="1"/>
 
-  <!-- Legend -->
-  <g transform="translate(20,310)">
-    <line x1="0" y1="0" x2="20" y2="0" stroke="#ef4444" stroke-width="2"/>
-    <text x="25" y="4" font-size="10" fill="#6b7280">左右擺頭</text>
-    <line x1="100" y1="0" x2="120" y2="0" stroke="#3b82f6" stroke-width="2"/>
-    <text x="125" y="4" font-size="10" fill="#6b7280">上下點頭</text>
-    <line x1="210" y1="0" x2="230" y2="0" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3,2"/>
-    <text x="235" y="4" font-size="10" fill="#6b7280">踏步轉身路徑</text>
+    <!-- Title -->
+    <text x="150" y="35" text-anchor="middle" font-size="13" fill="#2563eb" font-weight="bold">踏步轉身 + 上下點頭</text>
+
+    <!-- Turning arc (dashed path) -->
+    <path d="M 210,220 C 240,180 230,130 200,100 C 160,60 100,70 70,80" fill="none" stroke="#93c5fd" stroke-width="2" stroke-dasharray="6,4"/>
+
+    <!-- Direction arrow on arc -->
+    <polygon points="72,76 78,85 65,84" fill="#93c5fd"/>
+
+    <!-- === Figure (side view) === -->
+    <g transform="translate(160,158)">
+      <!-- Body silhouette -->
+      <rect x="-12" y="-18" width="24" height="38" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+      <!-- Arm back -->
+      <line x1="-12" y1="-8" x2="-20" y2="2" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Arm front -->
+      <line x1="12" y1="-8" x2="22" y2="5" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Head (side profile) -->
+      <circle cx="6" cy="-34" r="14" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+      <!-- Profile face right side -->
+      <path d="M 14,-40 Q 20,-36 18,-30 Q 16,-26 14,-24" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Eye -->
+      <circle cx="14" cy="-36" r="1.8" fill="#3b82f6"/>
+      <!-- Head movement arrows: U/D nod -->
+      <path d="M 6,-50 L 6,-58" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="2,-56 6,-62 10,-56" fill="#3b82f6"/>
+      <path d="M 6,-18 L 6,-10" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="2,-12 6,-6 10,-12" fill="#3b82f6"/>
+      <!-- Label on head arrow -->
+      <text x="20" y="-42" font-size="9" fill="#3b82f6">上下</text>
+
+      <!-- Lower body: legs -->
+      <line x1="-6" y1="20" x2="-10" y2="40" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="6" y1="20" x2="12" y2="40" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Footstep icon under left foot -->
+      <svg x="-22" y="32" width="28" height="24" viewBox="0 0 60.4 54.74" transform="rotate(-15)">
+        <g transform="scale(0.37)">
+          <path fill="#3b82f6" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+          <path fill="#3b82f6" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+          <path fill="#3b82f6" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+          <path fill="#3b82f6" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
+        </g>
+      </svg>
+      <!-- Footstep icon under right foot -->
+      <svg x="6" y="34" width="28" height="24" viewBox="0 0 60.4 54.74" transform="rotate(10)">
+        <g transform="scale(0.37)">
+          <path fill="#3b82f6" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+          <path fill="#3b82f6" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+          <path fill="#3b82f6" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+          <path fill="#3b82f6" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
+        </g>
+      </svg>
+
+      <!-- Rotation indicator -->
+      <path d="M -22,-4 A 30,30 0 0,0 24,-4" fill="none" stroke="#93c5fd" stroke-width="1.8" stroke-dasharray="4,3"/>
+      <polygon points="28,-6 22,0 24,-10" fill="#93c5fd"/>
+      <text x="-38" y="4" font-size="9" fill="#93c5fd">轉身</text>
+    </g>
+
+    <!-- Additional footstep traces on arc -->
+    <svg x="100" y="68" width="24" height="20" viewBox="0 0 60.4 54.74" transform="rotate(-45)">
+      <g transform="scale(0.32)">
+        <path fill="#93c5fd" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#93c5fd" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#93c5fd" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#93c5fd" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
+      </g>
+    </svg>
+    <svg x="240" y="170" width="24" height="20" viewBox="0 0 60.4 54.74" transform="rotate(55)">
+      <g transform="scale(0.32)">
+        <path fill="#93c5fd" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#93c5fd" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#93c5fd" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#93c5fd" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
+      </g>
+    </svg>
+
+    <!-- Synchronization callout -->
+    <g transform="translate(30,242)">
+      <rect x="0" y="0" width="220" height="26" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="0.8"/>
+      <text x="110" y="17" text-anchor="middle" font-size="10" fill="#2563eb">踏步 ⨯ 轉身 ⨯ 頭上下點</text>
+    </g>
+
   </g>
 </svg>
 
-_圖 4：頭部同步運動示意。左圖：踏步左轉＋頭左右擺動；右圖：踏步右轉＋頭上下點動。全身旋轉同時附加頭部運動，同時挑戰 VOR 與 VSR。_
+_圖 4：頭部同步運動示意。左：踏步轉身＋頭左右擺動（同時挑戰 VOR 水平增益）；右：踏步轉身＋頭上下點頭（同時挑戰 VOR 垂直增益）。動作中保持視線固視於前方固定目標。_
 
 </div>
 

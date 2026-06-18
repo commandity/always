@@ -86,6 +86,22 @@ Best evaluated with oral water contrast. Normal wall ≤5 mm (distended). Five l
 | **Doppler**     | Increased flow at ulcer base                                                          |
 | **Perforation** | Free air, localized fluid, omental thickening                                         |
 
+### 2.7 Gastric Volume Assessment
+
+Preoperative gastric ultrasound (bedside) to assess aspiration risk. Patient positioned right lateral decubitus (RLD). Measure antral CSA in the sagittal plane.
+
+| Parameter                  | Formula / Value                           |
+| -------------------------- | ----------------------------------------- |
+| **Gastric volume**         | 27.0 + (14.6 × RLD CSA) − (1.28 × age)    |
+| **Volume-to-weight ratio** | Gastric volume (mL) ÷ Patient weight (kg) |
+
+**Gastric Volume Ratio Interpretation:**
+
+| Ratio          | Risk | Clinical Significance                                                                                                                              |
+| -------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **<1.5 mL/kg** | Low  | Low risk of pulmonary aspiration — safe to proceed with anesthesia without additional precautions                                                  |
+| **>1.5 mL/kg** | High | Elevated risk of pulmonary aspiration — consider aspiration prophylaxis (rapid sequence induction, cricoid pressure, suctioning) or delayed intake |
+
 ## 3. Small Intestine
 
 Normal wall ≤3 mm. Valvulae conniventes visible as transverse folds.

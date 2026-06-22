@@ -680,8 +680,8 @@ export default defineConfig({
           text: "2026",
           collapsed: false,
           items: [
+            { text: "Anger is the enemy of wisdom", link: "/blog/2026-05-30" },
             { text: "Thinking of my life", link: "/blog/2026-04-10" },
-            // { text: 'Test', link: '/blog/2026-01-10' },
           ],
         },
       ],

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useRouter } from "vitepress";
 import { data as posts } from "../../posts.data.ts";
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, nextTick } from "vue";
 
-const router = useRouter();
 const selectedTag = ref<string | null>(null);
+const contentRefs = ref<Map<string, HTMLElement>>(new Map());
+const truncated = ref<Set<string>>(new Set());
 
 const allTags = computed(() => {
   const tags = new Set<string>();
@@ -30,18 +30,33 @@ function formatDate(dateStr: string) {
   });
 }
 
-function timeAgo(dateStr: string) {
-  const diff = Date.now() - +new Date(dateStr);
-  const days = Math.floor(diff / 86400000);
-  if (days < 30) return `${days} 天前`;
-  if (days < 365) return `${Math.floor(days / 30)} 個月前`;
-  return `${Math.floor(days / 365)} 年前`;
+function setContentRef(url: string, el: HTMLElement | null) {
+  if (el) contentRefs.value.set(url, el);
 }
+
+function stripH1(html: string) {
+  return html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/, "");
+}
+
+function stripCoverImg(html: string, cover: string) {
+  if (!cover) return html;
+  return html.replace(
+    /(<p>\s*)?<img[^>]*src="([^"]*)"[^>]*>(\s*<\/p>)?/,
+    (match, _pOpen, src, _pClose) => (src === cover ? "" : match),
+  );
+}
+
+onMounted(async () => {
+  await nextTick();
+  for (const p of filteredPosts.value) {
+    const el = contentRefs.value.get(p.url);
+    if (el && el.scrollHeight > el.clientHeight) truncated.value.add(p.url);
+  }
+});
 </script>
 
 <template>
   <div class="blog-home">
-    <!-- Hero -->
     <div class="blog-hero">
       <h1>
         <span class="hero-icon">✦</span>
@@ -52,7 +67,6 @@ function timeAgo(dateStr: string) {
       <div class="blog-hero__count">{{ posts.length }} 篇文章</div>
     </div>
 
-    <!-- Tag filter -->
     <div class="tag-bar">
       <button
         class="tag-btn"
@@ -72,15 +86,8 @@ function timeAgo(dateStr: string) {
       </button>
     </div>
 
-    <!-- Post grid -->
     <div class="blog-grid">
-      <article
-        v-for="post in filteredPosts"
-        :key="post.url"
-        class="blog-card"
-        @click="router.go(post.url)"
-      >
-        <!-- Cover image -->
+      <article v-for="post in filteredPosts" :key="post.url" class="blog-card">
         <div class="blog-card__cover">
           <img
             v-if="post.cover"
@@ -91,34 +98,28 @@ function timeAgo(dateStr: string) {
           <div v-else class="cover-placeholder">
             <span class="cover-initial">{{ post.title?.charAt(0) }}</span>
           </div>
-
-          <!-- Category badge overlaid on cover -->
           <span v-if="post.category" class="cover-badge">{{
             post.category
           }}</span>
         </div>
 
-        <!-- Card body -->
         <div class="blog-card__body">
           <div class="card-meta">
             <span class="card-date">{{ formatDate(post.date) }}</span>
-            <span class="card-ago">{{ timeAgo(post.date) }}</span>
           </div>
 
           <h2 class="card-title">{{ post.title }}</h2>
 
-          <p v-if="post.excerpt" class="card-excerpt">{{ post.excerpt }}</p>
+          <div
+            class="card-body-content"
+            :class="{ truncated: truncated.has(post.url) }"
+            :ref="
+              (el: any) => setContentRef(post.url, el as HTMLElement | null)
+            "
+            v-html="stripCoverImg(stripH1(post.html), post.cover)"
+          />
 
           <div class="card-footer">
-            <div class="card-author">
-              <img
-                v-if="post.avatar"
-                :src="post.avatar"
-                :alt="post.author"
-                class="author-avatar"
-              />
-              <span class="author-name">{{ post.author }}</span>
-            </div>
             <div class="card-tags">
               <span
                 v-for="tag in post.tags"
@@ -126,9 +127,12 @@ function timeAgo(dateStr: string) {
                 class="card-tag"
                 :class="{ active: selectedTag === tag }"
                 @click.stop="selectTag(tag)"
-                ># {{ tag }}</span
+                >#{{ tag }}</span
               >
             </div>
+            <a :href="post.url" class="card-read-more" @click.stop
+              >繼續閱讀 →</a
+            >
           </div>
         </div>
       </article>
@@ -138,12 +142,28 @@ function timeAgo(dateStr: string) {
 
 <style scoped>
 .blog-home {
-  max-width: 1152px;
+  max-width: 752px;
   margin: 0 auto;
-  padding: 3rem clamp(56px, 3vw, 134px);
+  padding: 32px 24px 96px;
+  width: 100%;
 }
 
-/* ── Hero ────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .blog-home {
+    padding: 48px 32px 128px;
+  }
+}
+@media (min-width: 960px) {
+  .blog-home {
+    padding: 48px 0 96px;
+  }
+}
+@media (min-width: 1440px) {
+  .blog-home {
+    max-width: 784px;
+  }
+}
+
 .blog-hero {
   text-align: center;
   padding: 1.5rem 0 2rem;
@@ -151,7 +171,7 @@ function timeAgo(dateStr: string) {
   border-bottom: 1px solid var(--vp-c-divider);
 }
 .blog-hero h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.3;
@@ -161,7 +181,6 @@ function timeAgo(dateStr: string) {
   justify-content: center;
   gap: 0.3em;
 }
-
 .hero-text {
   background: linear-gradient(
     135deg,
@@ -172,14 +191,12 @@ function timeAgo(dateStr: string) {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 .hero-icon {
   font-size: 1.6rem;
   color: var(--vp-c-brand-1);
   opacity: 0.6;
   -webkit-text-fill-color: initial;
 }
-
 .blog-hero p {
   color: var(--vp-c-text-2);
   font-size: 1.1rem;
@@ -194,7 +211,6 @@ function timeAgo(dateStr: string) {
   color: var(--vp-c-text-3);
 }
 
-/* ── Tag bar ─────────────────────────────────────────────────── */
 .tag-bar {
   display: flex;
   flex-wrap: wrap;
@@ -223,33 +239,16 @@ function timeAgo(dateStr: string) {
   font-weight: 600;
 }
 
-/* ── Grid ────────────────────────────────────────────────────── */
 .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-@media (max-width: 1152px) {
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
-  .blog-home {
-    padding: 2rem 1.5rem;
-  }
-}
-
-/* ── Card ────────────────────────────────────────────────────── */
 .blog-card {
   border-radius: 12px;
   border: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-soft);
-  cursor: pointer;
   overflow: hidden;
   transition:
     transform 0.2s,
@@ -264,7 +263,6 @@ function timeAgo(dateStr: string) {
   border-color: var(--vp-c-brand-1);
 }
 
-/* ── Cover ───────────────────────────────────────────────────── */
 .blog-card__cover {
   position: relative;
   width: 100%;
@@ -312,86 +310,92 @@ function timeAgo(dateStr: string) {
   letter-spacing: 0.04em;
 }
 
-/* ── Card body ───────────────────────────────────────────────── */
 .blog-card__body {
-  padding: 1.25rem;
+  padding: 1.25rem 2rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .card-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   margin-bottom: 0.5rem;
 }
 .card-date {
   font-size: 0.78rem;
   color: var(--vp-c-text-3);
 }
-.card-ago {
-  font-size: 0.78rem;
-  color: var(--vp-c-text-3);
-}
-.card-ago::before {
-  content: "·";
-  margin-right: 8px;
-}
 
 .card-title {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.75rem;
   line-height: 1.4;
   transition: color 0.2s;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 .blog-card:hover .card-title {
   color: var(--vp-c-brand-1);
 }
 
-.card-excerpt {
-  font-size: 0.85rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.6;
-  margin: 0 0 1rem;
-  flex: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+.card-body-content {
+  line-height: 1.7;
+  max-height: 480px;
   overflow: hidden;
+  position: relative;
+  flex: 1;
+}
+.card-body-content.truncated::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(transparent, var(--vp-c-bg-soft));
+  pointer-events: none;
 }
 
-/* ── Card footer ─────────────────────────────────────────────── */
+.card-body-content :deep(img) {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+}
+.card-body-content :deep(p) {
+  margin: 0.6rem 0;
+}
+.card-body-content :deep(blockquote) {
+  border-left: 3px solid var(--vp-c-brand-1);
+  margin: 0.75rem 0;
+  padding: 0.4rem 0.75rem;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg);
+  border-radius: 0 4px 4px 0;
+}
+.card-body-content :deep(h2),
+.card-body-content :deep(h3) {
+  margin: 1.25rem 0 0.6rem;
+}
+.card-body-content :deep(ul),
+.card-body-content :deep(ol) {
+  padding-left: 1.5rem;
+}
+.card-body-content :deep(a) {
+  color: var(--vp-c-brand-1);
+}
+.card-body-content :deep(.journal-post) {
+  max-width: none;
+  margin: 0;
+}
+
 .card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  flex-wrap: wrap;
-  margin-top: auto;
+  margin-top: 0.75rem;
   padding-top: 0.75rem;
   border-top: 1px solid var(--vp-c-divider);
-}
-.card-author {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.author-avatar {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.author-name {
-  font-size: 0.78rem;
-  color: var(--vp-c-text-3);
+  flex-wrap: wrap;
 }
 .card-tags {
   display: flex;
@@ -410,5 +414,22 @@ function timeAgo(dateStr: string) {
 .card-tag.active {
   color: var(--vp-c-brand-1);
   background: var(--vp-c-brand-soft);
+}
+.card-read-more {
+  font-size: 0.82rem;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.card-read-more:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  .card-title {
+    font-size: 1.1rem;
+  }
 }
 </style>

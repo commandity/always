@@ -7,7 +7,7 @@ import { ref, computed } from "vue";
 // AD8: Galvin et al., Neurology 2005;65:559–564. Public domain (Washington University)
 // 8 題，回答「是，有改變」= 1 分；總分 ≥ 2 建議進一步評估
 
-type Method = "BHT" | "AD8";
+type Method = "BHT" | "AD8" | "TDS";
 const method = ref<Method>("BHT");
 
 // ── BHT 6 題（加權分） ────────────────────────────────────────────
@@ -221,6 +221,141 @@ const ad8Severity = computed(() => {
   };
 });
 
+// ── TDS 腦力健診篩檢工具 ──────────────────────────────────────────────
+// Taiwan's TDS (腦力健診) cognitive screening tool
+// 4 domains: Orientation (4pts) + Registration (5pts) + Fluency (2pts) + Recall (5pts) = 16
+const tdsPerson = ref({
+  name: "",
+  gender: "" as "" | "M" | "F",
+  testY: "",
+  testM: "",
+  testD: "",
+  birthY: "",
+  birthM: "",
+  birthD: "",
+});
+
+const tdsBasicIssues = ref({
+  selfMemory: false,
+  familyMemory: false,
+  examinerMemory: false,
+});
+
+const tdsRiskFactors = ref({
+  edu: "",
+  bmi: "",
+  stroke: false,
+  dm: false,
+  dmMeds: false,
+  htn: false,
+  htnMeds: false,
+  chol: false,
+  cholMeds: false,
+  headInjury: false,
+  forgetMeds: false,
+  antidepressants: false,
+  source: "" as "" | "self" | "family",
+});
+
+// Orientation: year, month, day, weekday
+const tdsOrientation = ref<Record<string, boolean | null>>({
+  year: null,
+  month: null,
+  day: null,
+  weekday: null,
+});
+
+// Registration: 5 words (牙齒、毛線、教堂、菊花、紅色)
+const tdsWords = ["牙齒", "毛線", "教堂", "菊花", "紅色"];
+const tdsRegistration = ref<number>(-1); // 0-5 correct on first attempt
+
+// Fluency: count of 4-legged animals named in 1 min
+const tdsFluency = ref<number>(-1); // count
+
+// Recall: 5 words recall
+const tdsRecall = ref<number>(-1); // 0-5 correct
+
+const tdsOrientationScore = computed(() => {
+  const vals = Object.values(tdsOrientation.value);
+  if (vals.some((v) => v === null)) return null;
+  return vals.filter(Boolean).length;
+});
+
+const tdsRegistrationScore = computed(() => tdsRegistration.value);
+const tdsFluencyScore = computed(() => {
+  const c = tdsFluency.value;
+  if (c < 0) return null;
+  if (c >= 9) return 2;
+  if (c >= 5) return 1;
+  return 0;
+});
+const tdsRecallScore = computed(() => tdsRecall.value);
+
+const tdsTotal = computed(() => {
+  const o = tdsOrientationScore.value;
+  const r = tdsRegistrationScore.value;
+  const f = tdsFluencyScore.value;
+  const rec = tdsRecallScore.value;
+  if (o === null || r < 0 || f === null || rec < 0) return null;
+  return o + r + f + rec;
+});
+
+const tdsDone = computed(() => {
+  const orientDone = Object.values(tdsOrientation.value).every(
+    (v) => v !== null,
+  );
+  return (
+    orientDone &&
+    tdsRegistration.value >= 0 &&
+    tdsFluency.value >= 0 &&
+    tdsRecall.value >= 0
+  );
+});
+
+const tdsAnsweredCount = computed(() => {
+  let n = 0;
+  Object.values(tdsOrientation.value).forEach((v) => {
+    if (v !== null) n++;
+  });
+  if (tdsRegistration.value >= 0) n++;
+  if (tdsFluency.value >= 0) n++;
+  if (tdsRecall.value >= 0) n++;
+  return n;
+});
+
+const tdsSeverity = computed(() => {
+  const s = tdsTotal.value;
+  if (s === null)
+    return {
+      level: "填寫中",
+      color: "filling",
+      advice: "完成所有題目後顯示評估建議",
+    };
+  if (s >= 13)
+    return {
+      level: "認知功能正常",
+      color: "normal",
+      advice: `TDS ≥ 13（${s}/16）：認知功能在正常範圍，建議定期追蹤。`,
+    };
+  if (s >= 10)
+    return {
+      level: "輕度認知障礙（疑似）",
+      color: "mild",
+      advice: `TDS 10–12（${s}/16）：輕度認知障礙疑似，建議進一步使用 MoCA 或 MMSE 進行詳細評估。`,
+    };
+  if (s >= 7)
+    return {
+      level: "中度認知障礙",
+      color: "moderate",
+      advice: `TDS 7–9（${s}/16）：中度認知障礙，建議轉介神經內科或老年醫學科評估。`,
+    };
+  return {
+    level: "重度認知障礙",
+    color: "critical",
+    advice: `TDS ≤ 6（${s}/16）：重度認知障礙，需立即安排完整神經認知評估及失智症排除診斷。`,
+  };
+});
+
 // ── Shared ────────────────────────────────────────────────────────
 const copied = ref(false);
 const showResults = ref(false);
@@ -242,7 +377,7 @@ function generateMarkdown() {
       })
       .join("\n");
     return `# BHT 認知功能評估結果\n\n## 各題作答\n\n${rows}\n\n---\n\n## 計算結果\n\n- **BHT 總分**：${bhtScore.value ?? "未完成"} / 28\n- **嚴重程度**：${bhtSeverity.value.level}\n- **臨床建議**：${bhtSeverity.value.advice}`;
-  } else {
+  } else if (method.value === "AD8") {
     const rows = ad8Items
       .map((q) => {
         const ans = ad8Answers.value[q.key];
@@ -256,6 +391,29 @@ function generateMarkdown() {
       })
       .join("\n");
     return `# AD8 認知功能評估結果（家屬填答）\n\n## 各題作答\n\n${rows}\n\n---\n\n## 計算結果\n\n- **AD8 總分**：${ad8Score.value} / 8\n- **嚴重程度**：${ad8Severity.value.level}\n- **臨床建議**：${ad8Severity.value.advice}`;
+  } else {
+    const p = tdsPerson.value;
+    const bi = tdsBasicIssues.value;
+    const rf = tdsRiskFactors.value;
+    const orientLabels: Record<string, string> = {
+      year: "今年是哪一年",
+      month: "現在是幾月",
+      day: "今天是幾號",
+      weekday: "今天是星期幾",
+    };
+    const orientRows = Object.entries(tdsOrientation.value)
+      .map(
+        ([k, v]) =>
+          `- **${orientLabels[k] ?? k}**：${v === null ? "未填" : v ? "正確（1）" : "錯誤（0）"}`,
+      )
+      .join("\n");
+    const regLabel =
+      tdsRegistration.value < 0 ? "未填" : `${tdsRegistration.value} / 5`;
+    const fluRaw = tdsFluency.value < 0 ? "未填" : `${tdsFluency.value} 個`;
+    const fluScore =
+      tdsFluencyScore.value === null ? "—" : `${tdsFluencyScore.value} 分`;
+    const recLabel = tdsRecall.value < 0 ? "未填" : `${tdsRecall.value} / 5`;
+    return `# TDS 腦力健診篩檢結果\n\n## 基本資料\n\n- **姓名**：${p.name || "—"}\n- **性別**：${p.gender === "M" ? "男" : p.gender === "F" ? "女" : "—"}\n- **施測日期**：${p.testY || "—"} / ${p.testM || "—"} / ${p.testD || "—"}\n- **出生日期**：${p.birthY || "—"} / ${p.birthM || "—"} / ${p.birthD || "—"}\n\n## 基本問題\n\n- 自覺記憶力減退：${bi.selfMemory ? "有" : "無"}\n- 親友覺得記憶力減退：${bi.familyMemory ? "有" : "無"}\n- 施測者認為有記憶力障礙：${bi.examinerMemory ? "有" : "無"}\n\n## 危險因子\n\n- 教育年數：${rf.edu || "—"}\n- BMI：${rf.bmi || "—"}\n- 中風病史：${rf.stroke ? "有" : "無"}\n- 糖尿病：${rf.dm ? `有（藥物治療：${rf.dmMeds ? "有" : "無"}）` : "無"}\n- 高血壓：${rf.htn ? `有（藥物治療：${rf.htnMeds ? "有" : "無"}）` : "無"}\n- 高膽固醇：${rf.chol ? `有（藥物治療：${rf.cholMeds ? "有" : "無"}）` : "無"}\n- 頭部外傷昏迷：${rf.headInjury ? "有" : "無"}\n- 時常忘記服藥：${rf.forgetMeds ? "有" : "無"}\n- 抗憂鬱藥物或情緒低落：${rf.antidepressants ? "有" : "無"}\n\n## 各項得分\n\n### 定向力（/4）\n${orientRows}\n\n### 訊息登錄（/5）\n- 正確：${regLabel}\n\n### 思考流暢（/2）\n- 動物數：${fluRaw} → ${fluScore}\n\n### 訊息回憶（/5）\n- 正確：${recLabel}\n\n---\n\n## 計算結果\n\n- **TDS 總分**：${tdsTotal.value ?? "未完成"} / 16\n- **嚴重程度**：${tdsSeverity.value.level}\n- **臨床建議**：${tdsSeverity.value.advice}`;
   }
 }
 
@@ -272,6 +430,40 @@ function reset() {
   ad8Items.forEach((q) => {
     ad8Answers.value[q.key] = null;
   });
+  tdsPerson.value = {
+    name: "",
+    gender: "",
+    testY: "",
+    testM: "",
+    testD: "",
+    birthY: "",
+    birthM: "",
+    birthD: "",
+  };
+  tdsBasicIssues.value = {
+    selfMemory: false,
+    familyMemory: false,
+    examinerMemory: false,
+  };
+  tdsRiskFactors.value = {
+    edu: "",
+    bmi: "",
+    stroke: false,
+    dm: false,
+    dmMeds: false,
+    htn: false,
+    htnMeds: false,
+    chol: false,
+    cholMeds: false,
+    headInjury: false,
+    forgetMeds: false,
+    antidepressants: false,
+    source: "",
+  };
+  tdsOrientation.value = { year: null, month: null, day: null, weekday: null };
+  tdsRegistration.value = -1;
+  tdsFluency.value = -1;
+  tdsRecall.value = -1;
   showResults.value = false;
 }
 
@@ -281,18 +473,36 @@ function switchMethod(m: Method) {
 }
 
 const currentScore = computed(() =>
-  method.value === "BHT" ? bhtScore.value : ad8Score.value,
+  method.value === "BHT"
+    ? bhtScore.value
+    : method.value === "AD8"
+      ? ad8Score.value
+      : tdsTotal.value,
 );
 const currentSeverity = computed(() =>
-  method.value === "BHT" ? bhtSeverity.value : ad8Severity.value,
+  method.value === "BHT"
+    ? bhtSeverity.value
+    : method.value === "AD8"
+      ? ad8Severity.value
+      : tdsSeverity.value,
 );
 const currentDone = computed(() =>
-  method.value === "BHT" ? bhtDone.value : ad8Done.value,
+  method.value === "BHT"
+    ? bhtDone.value
+    : method.value === "AD8"
+      ? ad8Done.value
+      : tdsDone.value,
 );
 const currentAnsweredCount = computed(() =>
-  method.value === "BHT" ? bhtAnsweredCount.value : ad8AnsweredCount.value,
+  method.value === "BHT"
+    ? bhtAnsweredCount.value
+    : method.value === "AD8"
+      ? ad8AnsweredCount.value
+      : tdsAnsweredCount.value,
 );
-const currentTotal = computed(() => (method.value === "BHT" ? 28 : 8));
+const currentTotal = computed(() =>
+  method.value === "BHT" ? 28 : method.value === "AD8" ? 8 : 16,
+);
 
 const barPct = computed(() => {
   if (!currentDone.value || currentScore.value === null) return 0;
@@ -338,29 +548,29 @@ const barPct = computed(() => {
       </div>
       <template v-if="method === 'BHT'">
         <div class="severity-ticks-abs">
-          <span class="tick-abs" style="left: 0%">0</span>
+          <span class="tick-abs tick-green" style="left: 0%">0</span>
           <span class="tick-abs tick-yellow" style="left: 17.9%">5 ▾</span>
           <span class="tick-abs tick-orange" style="left: 35.7%">10 ▾</span>
           <span class="tick-abs tick-red" style="left: 60.7%">17 ▾</span>
           <span class="tick-abs tick-red" style="left: 100%">28</span>
         </div>
         <div class="severity-labels-abs">
-          <span class="label-abs" style="left: 0%">正常</span>
+          <span class="label-abs tick-green" style="left: 0%">正常</span>
           <span class="label-abs tick-yellow" style="left: 17.9%">輕度</span>
           <span class="label-abs tick-orange" style="left: 35.7%">中度</span>
           <span class="label-abs tick-red" style="left: 60.7%">重度</span>
           <span class="label-abs tick-red" style="left: 100%">重度</span>
         </div>
       </template>
-      <template v-else>
+      <template v-else-if="method === 'AD8'">
         <div class="severity-ticks-abs">
-          <span class="tick-abs" style="left: 0%">0</span>
+          <span class="tick-abs tick-green" style="left: 0%">0</span>
           <span class="tick-abs tick-yellow" style="left: 25%">2 ▾</span>
           <span class="tick-abs tick-orange" style="left: 50%">4 ▾</span>
           <span class="tick-abs tick-red" style="left: 100%">8</span>
         </div>
         <div class="severity-labels-abs">
-          <span class="label-abs" style="left: 0%">正常</span>
+          <span class="label-abs tick-green" style="left: 0%">正常</span>
           <span class="label-abs tick-yellow" style="left: 25%">輕度疑似</span>
           <span class="label-abs tick-orange" style="left: 50%"
             >中度建議完整評估</span
@@ -368,6 +578,21 @@ const barPct = computed(() => {
           <span class="label-abs tick-red" style="left: 100%"
             >重度建議完整評估</span
           >
+        </div>
+      </template>
+      <template v-else>
+        <div class="severity-ticks-abs">
+          <span class="tick-abs tick-red" style="left: 0%">0</span>
+          <span class="tick-abs tick-orange" style="left: 43.75%">7 ▾</span>
+          <span class="tick-abs tick-yellow" style="left: 62.5%">10 ▾</span>
+          <span class="tick-abs tick-green" style="left: 81.25%">13 ▾</span>
+          <span class="tick-abs tick-green" style="left: 100%">16</span>
+        </div>
+        <div class="severity-labels-abs">
+          <span class="label-abs tick-red" style="left: 0%">重度</span>
+          <span class="label-abs tick-orange" style="left: 43.75%">中度</span>
+          <span class="label-abs tick-yellow" style="left: 62.5%">輕度</span>
+          <span class="label-abs tick-green" style="left: 81.25%">正常</span>
         </div>
       </template>
     </div>
@@ -381,7 +606,8 @@ const barPct = computed(() => {
         >後的複評。初評任一認知題（記憶力或定向力）答案為「否」，即應選用此工具進行確認。
         <span class="notice-sep">·</span>
         <strong class="ad8-hint"
-          >若由家屬或主要照顧者填答，請切換至 AD8 量表。</strong
+          >若由家屬或主要照顧者填答，請切換至 AD8 量表。TDS
+          為台灣本土化篩檢工具。</strong
         >
       </span>
     </div>
@@ -391,7 +617,9 @@ const barPct = computed(() => {
       <div class="group-header-bar tab-bar">
         <span class="group-icon">📋</span>
         <span class="group-label-text">版本選擇</span>
-        <span class="group-sub-text">長者本人 → BHT　家屬 / 照顧者 → AD8</span>
+        <span class="group-sub-text"
+          >長者本人 → BHT　家屬 / 照顧者 → AD8　台灣本土 → TDS</span
+        >
       </div>
       <div class="tab-toggle">
         <button
@@ -401,6 +629,14 @@ const barPct = computed(() => {
         >
           <span class="tab-title">BHT</span>
           <span class="tab-sub">6 題 · 由長者本人作答 · 3–5 分鐘</span>
+        </button>
+        <button
+          class="tab-btn"
+          :class="{ 'tab-active-tds': method === 'TDS' }"
+          @click="switchMethod('TDS')"
+        >
+          <span class="tab-title tds-title">TDS</span>
+          <span class="tab-sub">4 項 · 腦力健診篩檢 · 5–8 分鐘</span>
         </button>
         <button
           class="tab-btn"
@@ -420,7 +656,13 @@ const barPct = computed(() => {
           0–28）， ≤ 4 為正常，≥ 10
           提示認知異常，需轉介進一步評估。適合長者本人作答，MMSE ≥ 15 者適用。
         </template>
-        <template v-else>
+        <template v-else-if="method === 'TDS'">
+          <strong>TDS 腦力健診篩檢工具：</strong
+          >台灣本土化認知篩檢工具，評估定向力（4 題）、訊息登錄（5
+          詞）、思考流暢（動物列舉）與訊息回憶（5 詞）。總分 0–16，≥ 13
+          為正常，≤ 6 提示重度認知障礙。
+        </template>
+        <template v-else-if="method === 'AD8'">
           <strong>AD8（8-item Informant Interview）：</strong>由 Galvin
           等人（2005，華盛頓大學）研發，<strong>由家屬或主要照顧者</strong>回答，評估過去數年間認知功能的改變。≥
           2 分提示可能有認知障礙，敏感性 84%、特異性
@@ -529,7 +771,7 @@ const barPct = computed(() => {
     </template>
 
     <!-- ══ AD8 題目 ══ -->
-    <template v-else>
+    <template v-else-if="method === 'AD8'">
       <div class="nihss-group">
         <div class="group-header-bar ad8-bar">
           <span class="group-icon">👥</span>
@@ -613,6 +855,464 @@ const barPct = computed(() => {
       </div>
     </template>
 
+    <!-- ══ TDS 題目 ══ -->
+    <template v-if="method === 'TDS'">
+      <!-- ── Personal info ─────────────────────────────────────── -->
+      <div class="nihss-group">
+        <div class="group-header-bar tds-bar">
+          <span class="group-icon">📋</span>
+          <span class="group-label-text">基本資料</span>
+          <span class="group-sub-text">TDS 腦力健診</span>
+        </div>
+        <div class="tds-person">
+          <div class="tds-person-row">
+            <label class="tds-label">姓名：</label>
+            <input
+              v-model="tdsPerson.name"
+              class="tds-input"
+              placeholder="請輸入姓名"
+            />
+            <label class="tds-label tds-label-gender">性別：</label>
+            <button
+              class="tds-gender-btn"
+              :class="{ active: tdsPerson.gender === 'M' }"
+              @click="tdsPerson.gender = 'M'"
+            >
+              男
+            </button>
+            <button
+              class="tds-gender-btn"
+              :class="{ active: tdsPerson.gender === 'F' }"
+              @click="tdsPerson.gender = 'F'"
+            >
+              女
+            </button>
+          </div>
+          <div class="tds-person-row">
+            <label class="tds-label">施測日期：</label>
+            <input
+              v-model="tdsPerson.testY"
+              class="tds-input tds-input-sm"
+              placeholder="年"
+            />
+            <span class="tds-sep">/</span>
+            <input
+              v-model="tdsPerson.testM"
+              class="tds-input tds-input-xs"
+              placeholder="月"
+            />
+            <span class="tds-sep">/</span>
+            <input
+              v-model="tdsPerson.testD"
+              class="tds-input tds-input-xs"
+              placeholder="日"
+            />
+          </div>
+          <div class="tds-person-row">
+            <label class="tds-label">生日：</label>
+            <input
+              v-model="tdsPerson.birthY"
+              class="tds-input tds-input-sm"
+              placeholder="民國年"
+            />
+            <span class="tds-sep">/</span>
+            <input
+              v-model="tdsPerson.birthM"
+              class="tds-input tds-input-xs"
+              placeholder="月"
+            />
+            <span class="tds-sep">/</span>
+            <input
+              v-model="tdsPerson.birthD"
+              class="tds-input tds-input-xs"
+              placeholder="日"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Basic issues ──────────────────────────────────────── -->
+      <div class="nihss-group">
+        <div class="group-header-bar tds-bar">
+          <span class="group-icon">🧠</span>
+          <span class="group-label-text">腦力健診基本問題</span>
+          <span class="group-sub-text">記憶力減退相關（可複選）</span>
+        </div>
+        <div class="tds-chk-list">
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsBasicIssues.selfMemory" />
+            <span>您是否覺得自己的記憶力有減退</span>
+          </label>
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsBasicIssues.familyMemory" />
+            <span>親友覺得受測者的記憶力有減退</span>
+          </label>
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsBasicIssues.examinerMemory" />
+            <span>施測者認為受測者有記憶力障礙</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ── Risk factors ──────────────────────────────────────── -->
+      <div class="nihss-group">
+        <div class="group-header-bar tds-bar">
+          <span class="group-icon">⚠</span>
+          <span class="group-label-text">危險因子</span>
+          <span class="group-sub-text">資料來源：</span>
+          <button
+            class="tds-rsrc-btn"
+            :class="{ active: tdsRiskFactors.source === 'self' }"
+            @click="tdsRiskFactors.source = 'self'"
+          >
+            本人
+          </button>
+          <button
+            class="tds-rsrc-btn"
+            :class="{ active: tdsRiskFactors.source === 'family' }"
+            @click="tdsRiskFactors.source = 'family'"
+          >
+            親友
+          </button>
+        </div>
+        <div class="tds-rf-grid">
+          <div class="tds-rf-row">
+            <label class="tds-label">教育：</label>
+            <input
+              v-model="tdsRiskFactors.edu"
+              class="tds-input tds-input-xs"
+              placeholder="年"
+            />
+            <span class="tds-rf-unit">年</span>
+          </div>
+          <div class="tds-rf-row">
+            <label class="tds-label">BMI：</label>
+            <input
+              v-model="tdsRiskFactors.bmi"
+              class="tds-input tds-input-sm"
+              placeholder="kg/m²"
+            />
+            <span class="tds-rf-unit">kg/m²</span>
+          </div>
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsRiskFactors.stroke" />
+            <span>中風病史</span>
+          </label>
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsRiskFactors.dm" />
+            <span>糖尿病</span>
+            <template v-if="tdsRiskFactors.dm">
+              <span class="tds-sub-chk">
+                <label
+                  ><input
+                    type="checkbox"
+                    v-model="tdsRiskFactors.dmMeds"
+                  />藥物治療</label
+                >
+              </span>
+            </template>
+          </label>
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsRiskFactors.htn" />
+            <span>高血壓</span>
+            <template v-if="tdsRiskFactors.htn">
+              <span class="tds-sub-chk">
+                <label
+                  ><input
+                    type="checkbox"
+                    v-model="tdsRiskFactors.htnMeds"
+                  />藥物治療</label
+                >
+              </span>
+            </template>
+          </label>
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsRiskFactors.chol" />
+            <span>高膽固醇</span>
+            <template v-if="tdsRiskFactors.chol">
+              <span class="tds-sub-chk">
+                <label
+                  ><input
+                    type="checkbox"
+                    v-model="tdsRiskFactors.cholMeds"
+                  />藥物治療</label
+                >
+              </span>
+            </template>
+          </label>
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsRiskFactors.headInjury" />
+            <span>頭部外傷且當時曾有過昏迷</span>
+          </label>
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsRiskFactors.forgetMeds" />
+            <span>時常忘記服用藥物</span>
+          </label>
+          <label class="tds-chk">
+            <input type="checkbox" v-model="tdsRiskFactors.antidepressants" />
+            <span
+              >曾經服用抗憂鬱藥物 或
+              在過去一月中有超過兩星期覺得對任何事提不起勁、不想動</span
+            >
+          </label>
+        </div>
+      </div>
+
+      <!-- ── Orientation ───────────────────────────────────────── -->
+      <div class="nihss-group">
+        <div class="group-header-bar tds-bar">
+          <span class="group-icon">📍</span>
+          <span class="group-label-text">定向力</span>
+          <span class="group-sub-text">請問今天是...（每題正確 1 分）</span>
+          <span class="group-score-tally tds-tally">
+            {{ tdsOrientationScore !== null ? tdsOrientationScore : 0 }}/4
+          </span>
+        </div>
+        <div class="item-list">
+          <div
+            v-for="(label, key) in {
+              year: '今年是哪一年？',
+              month: '現在是幾月？',
+              day: '今天是幾號？',
+              weekday: '今天是星期幾？',
+            }"
+            :key="key"
+            class="cog-item"
+            :class="{
+              answered:
+                tdsOrientation[key as keyof typeof tdsOrientation] !== null,
+            }"
+          >
+            <div class="item-header">
+              <div class="item-meta-row">
+                <span class="item-qnum bht-q">O</span>
+              </div>
+              <div class="item-name-block">
+                <span class="item-name">{{ label }}</span>
+              </div>
+              <span
+                class="item-score"
+                :class="
+                  tdsOrientation[key as keyof typeof tdsOrientation] === true
+                    ? 'score-ok'
+                    : tdsOrientation[key as keyof typeof tdsOrientation] ===
+                        false
+                      ? 'score-err'
+                      : 'score-nd'
+                "
+              >
+                {{
+                  tdsOrientation[key as keyof typeof tdsOrientation] === null
+                    ? "—"
+                    : tdsOrientation[key as keyof typeof tdsOrientation]
+                      ? "1"
+                      : "0"
+                }}
+              </span>
+            </div>
+            <div class="yn-row">
+              <button
+                class="btn-yn btn-yn-ok"
+                :class="{
+                  'yn-ok-active':
+                    tdsOrientation[key as keyof typeof tdsOrientation] === true,
+                }"
+                @click="
+                  tdsOrientation[key as keyof typeof tdsOrientation] = true
+                "
+              >
+                ✓ 正確（1 分）
+              </button>
+              <button
+                class="btn-yn btn-yn-abn"
+                :class="{
+                  'yn-abn-active':
+                    tdsOrientation[key as keyof typeof tdsOrientation] ===
+                    false,
+                }"
+                @click="
+                  tdsOrientation[key as keyof typeof tdsOrientation] = false
+                "
+              >
+                ✗ 錯誤（0 分）
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Registration ──────────────────────────────────────── -->
+      <div class="nihss-group">
+        <div class="group-header-bar tds-bar">
+          <span class="group-icon">🔤</span>
+          <span class="group-label-text">訊息登錄</span>
+          <span class="group-sub-text"
+            >請重述五個字詞（只記錄第一次回答的分數）</span
+          >
+          <span class="group-score-tally tds-tally">
+            {{ tdsRegistration >= 0 ? tdsRegistration : "—" }}/5
+          </span>
+        </div>
+        <div class="item-list">
+          <div class="cog-item" :class="{ answered: tdsRegistration >= 0 }">
+            <div class="item-header">
+              <div class="item-meta-row">
+                <span class="item-qnum bht-q">R</span>
+              </div>
+              <div class="item-name-block">
+                <span class="item-name">重述五個字詞</span>
+                <span class="item-sub"
+                  >牙齒 · 毛線 · 教堂 · 菊花 · 紅色（可重複教至全部說出）</span
+                >
+              </div>
+              <span
+                class="item-score"
+                :class="
+                  tdsRegistration >= 0
+                    ? tdsRegistration === 5
+                      ? 'score-ok'
+                      : 'score-err'
+                    : 'score-nd'
+                "
+              >
+                {{ tdsRegistration >= 0 ? tdsRegistration : "—" }}
+              </span>
+            </div>
+            <div class="count-row">
+              <span class="count-label">第一次回答正確數：</span>
+              <div class="count-btns">
+                <button
+                  v-for="n in 6"
+                  :key="n - 1"
+                  class="count-btn"
+                  :class="{
+                    'count-ok': n - 1 > 0 && tdsRegistration === n - 1,
+                    'count-active': tdsRegistration === n - 1,
+                  }"
+                  @click="tdsRegistration = n - 1"
+                >
+                  {{ n - 1 }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Fluency ───────────────────────────────────────────── -->
+      <div class="nihss-group">
+        <div class="group-header-bar tds-bar">
+          <span class="group-icon">🐾</span>
+          <span class="group-label-text">思考流暢</span>
+          <span class="group-sub-text"
+            >請說出四隻腳的動物，看一分鐘內能說出幾個</span
+          >
+          <span class="group-score-tally tds-tally">
+            {{ tdsFluencyScore !== null ? tdsFluencyScore : "—" }}/2
+          </span>
+        </div>
+        <div class="item-list">
+          <div class="cog-item" :class="{ answered: tdsFluency >= 0 }">
+            <div class="item-header">
+              <div class="item-meta-row">
+                <span class="item-qnum bht-q">F</span>
+              </div>
+              <div class="item-name-block">
+                <span class="item-name">列舉四隻腳的動物</span>
+                <span class="item-sub"
+                  >現實不存在的動物不算分（龍、麒麟等不計）</span
+                >
+              </div>
+              <span
+                class="item-score"
+                :class="
+                  tdsFluencyScore !== null
+                    ? tdsFluencyScore === 2
+                      ? 'score-ok'
+                      : 'score-err'
+                    : 'score-nd'
+                "
+              >
+                {{ tdsFluencyScore !== null ? tdsFluencyScore : "—" }}
+              </span>
+            </div>
+            <div class="count-row">
+              <span class="count-label">總數：</span>
+              <input
+                v-model.number="tdsFluency"
+                class="count-input"
+                type="number"
+                min="0"
+                placeholder="0"
+              />
+              <span class="count-score-hint" v-if="tdsFluency >= 0">
+                → <strong>{{ tdsFluencyScore }}</strong> 分 （<template
+                  v-if="tdsFluency >= 9"
+                  >≥ 9 = 2 分</template
+                >
+                <template v-else-if="tdsFluency >= 5">5–8 = 1 分</template>
+                <template v-else>< 5 = 0 分</template>）
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Recall ────────────────────────────────────────────── -->
+      <div class="nihss-group">
+        <div class="group-header-bar tds-bar">
+          <span class="group-icon">💭</span>
+          <span class="group-label-text">訊息回憶</span>
+          <span class="group-sub-text">請回想剛才重述的五個字詞</span>
+          <span class="group-score-tally tds-tally">
+            {{ tdsRecall >= 0 ? tdsRecall : "—" }}/5
+          </span>
+        </div>
+        <div class="item-list">
+          <div class="cog-item" :class="{ answered: tdsRecall >= 0 }">
+            <div class="item-header">
+              <div class="item-meta-row">
+                <span class="item-qnum bht-q">Re</span>
+              </div>
+              <div class="item-name-block">
+                <span class="item-name">回憶五個字詞</span>
+                <span class="item-sub">牙齒 · 毛線 · 教堂 · 菊花 · 紅色</span>
+              </div>
+              <span
+                class="item-score"
+                :class="
+                  tdsRecall >= 0
+                    ? tdsRecall === 5
+                      ? 'score-ok'
+                      : 'score-err'
+                    : 'score-nd'
+                "
+              >
+                {{ tdsRecall >= 0 ? tdsRecall : "—" }}
+              </span>
+            </div>
+            <div class="count-row">
+              <span class="count-label">正確說出：</span>
+              <div class="count-btns">
+                <button
+                  v-for="n in 6"
+                  :key="n - 1"
+                  class="count-btn"
+                  :class="{
+                    'count-ok': n - 1 > 0 && tdsRecall === n - 1,
+                    'count-active': tdsRecall === n - 1,
+                  }"
+                  @click="tdsRecall = n - 1"
+                >
+                  {{ n - 1 }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
     <!-- ── Result card ────────────────────────────────────────── -->
     <div class="cog-result" :class="currentSeverity.color">
       <div class="result-left">
@@ -627,7 +1327,9 @@ const barPct = computed(() => {
         <span class="result-calc" v-if="currentDone">{{
           method === "BHT"
             ? "加權計分（錯誤次數 × 加權值）"
-            : "是=1分，否/不知道=0分"
+            : method === "AD8"
+              ? "是=1分，否/不知道=0分"
+              : "定向+登錄+流暢+回憶（/16）"
         }}</span>
       </div>
     </div>
@@ -668,7 +1370,7 @@ const barPct = computed(() => {
           </div>
         </div>
       </template>
-      <template v-else>
+      <template v-else-if="method === 'AD8'">
         <div v-for="(q, idx) in ad8Items" :key="q.key" class="detail-row">
           <span class="detail-qnum">A{{ idx + 1 }}</span>
           <span class="detail-domain">{{ q.question }}</span>
@@ -702,6 +1404,79 @@ const barPct = computed(() => {
           <div class="detail-desc detail-desc-block">
             <span class="detail-desc-unit">/ 8</span>
             <span class="detail-desc-label">{{ ad8Severity.level }}</span>
+          </div>
+        </div>
+      </template>
+      <template v-else>
+        <div class="detail-row">
+          <span class="detail-qnum">O</span>
+          <span class="detail-domain">定向力</span>
+          <span
+            class="detail-score"
+            :class="
+              tdsOrientationScore !== null && tdsOrientationScore < 4
+                ? 'ds-abn'
+                : 'ds-ok'
+            "
+            >{{
+              tdsOrientationScore !== null ? tdsOrientationScore : "—"
+            }}</span
+          >
+          <span class="detail-desc">/ 4</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">R</span>
+          <span class="detail-domain">訊息登錄</span>
+          <span
+            class="detail-score"
+            :class="
+              tdsRegistration >= 0 && tdsRegistration < 5
+                ? tdsRegistration < 3
+                  ? 'ds-abn'
+                  : 'ds-ok'
+                : ''
+            "
+            >{{ tdsRegistration >= 0 ? tdsRegistration : "—" }}</span
+          >
+          <span class="detail-desc">/ 5</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">F</span>
+          <span class="detail-domain">思考流暢（動物列舉）</span>
+          <span
+            class="detail-score"
+            :class="
+              tdsFluencyScore !== null && tdsFluencyScore < 2
+                ? 'ds-abn'
+                : 'ds-ok'
+            "
+            >{{ tdsFluencyScore !== null ? tdsFluencyScore : "—" }}</span
+          >
+          <span class="detail-desc">/ 2</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Re</span>
+          <span class="detail-domain">訊息回憶</span>
+          <span
+            class="detail-score"
+            :class="
+              tdsRecall >= 0 && tdsRecall < 5
+                ? tdsRecall < 3
+                  ? 'ds-abn'
+                  : 'ds-ok'
+                : ''
+            "
+            >{{ tdsRecall >= 0 ? tdsRecall : "—" }}</span
+          >
+          <span class="detail-desc">/ 5</span>
+        </div>
+        <div class="detail-row detail-total">
+          <span class="detail-qnum">∑</span>
+          <span class="detail-domain">TDS 總分</span>
+          <span class="detail-score detail-score-brand">{{ tdsTotal }}</span>
+          <div class="detail-desc detail-desc-block">
+            <span class="detail-desc-unit">/ 16</span>
+            <span class="detail-desc-label">{{ tdsSeverity.level }}</span>
           </div>
         </div>
       </template>
@@ -746,10 +1521,14 @@ const barPct = computed(() => {
     </div>
     <p v-if="!currentDone" class="progress-hint">
       已完成 {{ currentAnsweredCount }}/{{
-        method === "BHT" ? bhtItems.length : 8
+        method === "BHT" ? bhtItems.length : method === "AD8" ? 8 : 7
       }}
       題，尚餘
-      {{ (method === "BHT" ? bhtItems.length : 8) - currentAnsweredCount }} 題
+      {{
+        (method === "BHT" ? bhtItems.length : method === "AD8" ? 8 : 7) -
+        currentAnsweredCount
+      }}
+      題
     </p>
   </div>
 </template>
@@ -948,6 +1727,10 @@ const barPct = computed(() => {
   color: #f97316;
   font-weight: 700;
 }
+.tick-green {
+  color: #22c55e;
+  font-weight: 700;
+}
 .tick-red {
   color: #ef4444;
   font-weight: 700;
@@ -1095,6 +1878,10 @@ const barPct = computed(() => {
   border-color: #0ea5e9;
   background: rgba(14, 165, 233, 0.06);
 }
+.tab-btn.tab-active-tds {
+  border-color: #14b8a6;
+  background: rgba(20, 184, 166, 0.06);
+}
 .tab-btn.tab-active-ad8 {
   border-color: #a855f7;
   background: rgba(168, 85, 247, 0.06);
@@ -1111,8 +1898,17 @@ const barPct = computed(() => {
 .tab-btn.tab-active .tab-title {
   color: #0ea5e9;
 }
+.tab-btn.tab-active-tds .tab-title {
+  color: #14b8a6;
+}
 .tab-btn.tab-active-ad8 .tab-title {
   color: #a855f7;
+}
+.tds-title {
+  color: var(--vp-c-text-1);
+}
+.tab-btn.tab-active-tds .tds-title {
+  color: #14b8a6;
 }
 .ad8-title {
   color: var(--vp-c-text-1);
@@ -1403,6 +2199,23 @@ const barPct = computed(() => {
   font-size: 0.78rem;
   color: var(--vp-c-text-2);
 }
+.count-input {
+  width: 72px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1.5px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: inherit;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.count-input:focus {
+  border-color: var(--vp-c-brand-1);
+}
 
 /* ── Result card — FIXED: stationary size ───────────────────────── */
 .cog-result {
@@ -1605,6 +2418,146 @@ const barPct = computed(() => {
 .warn-icon {
   color: #f97316;
   flex-shrink: 0;
+}
+
+/* ── TDS ──────────────────────────────────────────────────────────── */
+.tds-bar {
+  border-left: 3px solid #14b8a6;
+}
+.tds-tally {
+  color: #14b8a6;
+  background: rgba(20, 184, 166, 0.12);
+}
+.tds-person {
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.tds-person-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.tds-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  white-space: nowrap;
+}
+.tds-label-gender {
+  margin-left: 0.5rem;
+}
+.tds-input {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  font-size: 0.82rem;
+  font-family: inherit;
+  color: var(--vp-c-text-1);
+  outline: none;
+  transition: border-color 0.2s;
+  width: 160px;
+}
+.tds-input:focus {
+  border-color: #14b8a6;
+}
+.tds-input-sm {
+  width: 100px;
+}
+.tds-input-xs {
+  width: 60px;
+}
+.tds-input-num {
+  width: 80px;
+}
+.tds-sep {
+  color: var(--vp-c-text-3);
+  font-size: 0.85rem;
+}
+.tds-gender-btn {
+  padding: 3px 14px;
+  border-radius: 6px;
+  border: 1.5px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.tds-gender-btn.active {
+  border-color: #14b8a6;
+  color: #14b8a6;
+  background: rgba(20, 184, 166, 0.08);
+}
+.tds-chk-list {
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.tds-chk {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+.tds-chk input[type="checkbox"] {
+  accent-color: #14b8a6;
+}
+.tds-rf-grid {
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.tds-rf-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.tds-rf-unit {
+  font-size: 0.75rem;
+  color: var(--vp-c-text-3);
+}
+.tds-sub-chk {
+  margin-left: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--vp-c-text-2);
+}
+.tds-sub-chk label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.tds-rsrc-btn {
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-divider);
+  background: transparent;
+  color: var(--vp-c-text-3);
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.tds-rsrc-btn.active {
+  border-color: #14b8a6;
+  color: #14b8a6;
+  background: rgba(20, 184, 166, 0.08);
+}
+.note-tds {
+  background: rgba(20, 184, 166, 0.04);
+  border-color: rgba(20, 184, 166, 0.25);
 }
 
 /* ── Actions ─────────────────────────────────────────────────────── */

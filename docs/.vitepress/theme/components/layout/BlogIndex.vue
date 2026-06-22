@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { useRouter } from "vitepress";
 import { data as posts } from "../../posts.data.ts";
-import { ref, computed, onMounted, nextTick } from "vue";
+import { ref, computed } from "vue";
 
 const router = useRouter();
 const selectedTag = ref<string | null>(null);
-const contentRefs = ref<Map<string, HTMLElement>>(new Map());
-const truncated = ref<Set<string>>(new Set());
 
 const allTags = computed(() => {
   const tags = new Set<string>();
@@ -32,27 +30,18 @@ function formatDate(dateStr: string) {
   });
 }
 
-function setContentRef(url: string, el: HTMLElement | null) {
-  if (el) contentRefs.value.set(url, el);
+function timeAgo(dateStr: string) {
+  const diff = Date.now() - +new Date(dateStr);
+  const days = Math.floor(diff / 86400000);
+  if (days < 30) return `${days} 天前`;
+  if (days < 365) return `${Math.floor(days / 30)} 個月前`;
+  return `${Math.floor(days / 365)} 年前`;
 }
-
-function withoutTitle(html: string) {
-  return html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/, "");
-}
-
-onMounted(async () => {
-  await nextTick();
-  for (const p of filteredPosts.value) {
-    const el = contentRefs.value.get(p.url);
-    if (el && el.scrollHeight > el.clientHeight) {
-      truncated.value.add(p.url);
-    }
-  }
-});
 </script>
 
 <template>
   <div class="blog-home">
+    <!-- Hero -->
     <div class="blog-hero">
       <h1>
         <span class="hero-icon">✦</span>
@@ -63,6 +52,7 @@ onMounted(async () => {
       <div class="blog-hero__count">{{ posts.length }} 篇文章</div>
     </div>
 
+    <!-- Tag filter -->
     <div class="tag-bar">
       <button
         class="tag-btn"
@@ -82,35 +72,64 @@ onMounted(async () => {
       </button>
     </div>
 
-    <div class="posts-stack">
-      <article v-for="post in filteredPosts" :key="post.url" class="post-box">
-        <h2 class="post-title">
-          <a :href="post.url" class="post-title-link">{{ post.title }}</a>
-        </h2>
-        <div class="post-meta">
-          <time class="post-date">{{ formatDate(post.date) }}</time>
-          <span v-if="post.category" class="post-category">{{
+    <!-- Post grid -->
+    <div class="blog-grid">
+      <article
+        v-for="post in filteredPosts"
+        :key="post.url"
+        class="blog-card"
+        @click="router.go(post.url)"
+      >
+        <!-- Cover image -->
+        <div class="blog-card__cover">
+          <img
+            v-if="post.cover"
+            :src="post.cover"
+            :alt="post.title"
+            class="cover-img"
+          />
+          <div v-else class="cover-placeholder">
+            <span class="cover-initial">{{ post.title?.charAt(0) }}</span>
+          </div>
+
+          <!-- Category badge overlaid on cover -->
+          <span v-if="post.category" class="cover-badge">{{
             post.category
           }}</span>
         </div>
 
-        <div
-          :ref="(el: any) => setContentRef(post.url, el as HTMLElement | null)"
-          class="post-content"
-          :class="{ truncated: truncated.has(post.url) }"
-          v-html="withoutTitle(post.html)"
-        />
+        <!-- Card body -->
+        <div class="blog-card__body">
+          <div class="card-meta">
+            <span class="card-date">{{ formatDate(post.date) }}</span>
+            <span class="card-ago">{{ timeAgo(post.date) }}</span>
+          </div>
 
-        <div class="post-foot">
-          <span
-            v-for="tag in post.tags"
-            :key="tag"
-            class="post-tag"
-            :class="{ active: selectedTag === tag }"
-            @click="selectTag(tag)"
-            >{{ tag }}</span
-          >
-          <a :href="post.url" class="post-read-more">繼續閱讀 →</a>
+          <h2 class="card-title">{{ post.title }}</h2>
+
+          <p v-if="post.excerpt" class="card-excerpt">{{ post.excerpt }}</p>
+
+          <div class="card-footer">
+            <div class="card-author">
+              <img
+                v-if="post.avatar"
+                :src="post.avatar"
+                :alt="post.author"
+                class="author-avatar"
+              />
+              <span class="author-name">{{ post.author }}</span>
+            </div>
+            <div class="card-tags">
+              <span
+                v-for="tag in post.tags"
+                :key="tag"
+                class="card-tag"
+                :class="{ active: selectedTag === tag }"
+                @click.stop="selectTag(tag)"
+                ># {{ tag }}</span
+              >
+            </div>
+          </div>
         </div>
       </article>
     </div>
@@ -119,30 +138,12 @@ onMounted(async () => {
 
 <style scoped>
 .blog-home {
-  max-width: 752px;
+  max-width: 1152px;
   margin: 0 auto;
-  padding: 32px 24px 96px;
-  width: 100%;
+  padding: 3rem clamp(56px, 3vw, 134px);
 }
 
-@media (min-width: 768px) {
-  .blog-home {
-    padding: 48px 32px 128px;
-  }
-}
-
-@media (min-width: 960px) {
-  .blog-home {
-    padding: 48px 0 0;
-  }
-}
-
-@media (min-width: 1440px) {
-  .blog-home {
-    max-width: 784px;
-  }
-}
-
+/* ── Hero ────────────────────────────────────────────────────── */
 .blog-hero {
   text-align: center;
   padding: 1.5rem 0 2rem;
@@ -150,7 +151,7 @@ onMounted(async () => {
   border-bottom: 1px solid var(--vp-c-divider);
 }
 .blog-hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.3;
@@ -160,6 +161,7 @@ onMounted(async () => {
   justify-content: center;
   gap: 0.3em;
 }
+
 .hero-text {
   background: linear-gradient(
     135deg,
@@ -170,12 +172,14 @@ onMounted(async () => {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .hero-icon {
   font-size: 1.6rem;
   color: var(--vp-c-brand-1);
   opacity: 0.6;
   -webkit-text-fill-color: initial;
 }
+
 .blog-hero p {
   color: var(--vp-c-text-2);
   font-size: 1.1rem;
@@ -190,6 +194,7 @@ onMounted(async () => {
   color: var(--vp-c-text-3);
 }
 
+/* ── Tag bar ─────────────────────────────────────────────────── */
 .tag-bar {
   display: flex;
   flex-wrap: wrap;
@@ -218,130 +223,192 @@ onMounted(async () => {
   font-weight: 600;
 }
 
-.posts-stack {
+/* ── Grid ────────────────────────────────────────────────────── */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1152px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog-home {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ── Card ────────────────────────────────────────────────────── */
+.blog-card {
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--vp-c-brand-1);
 }
 
-.post-box {
-  border-bottom: 1px solid var(--vp-c-divider);
-  padding: 0 0 2.5rem;
+/* ── Cover ───────────────────────────────────────────────────── */
+.blog-card__cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--vp-c-bg-mute);
 }
-.post-box:last-child {
-  border-bottom: none;
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
 }
-
-.post-title {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem;
-  line-height: 1.35;
+.blog-card:hover .cover-img {
+  transform: scale(1.05);
 }
-.post-title-link {
-  color: var(--vp-c-text-1);
-  text-decoration: none;
-  transition: color 0.2s;
+.cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--vp-c-brand-soft),
+    var(--vp-c-bg-mute)
+  );
 }
-.post-title-link:hover {
+.cover-initial {
+  font-size: 4rem;
+  font-weight: 800;
   color: var(--vp-c-brand-1);
+  opacity: 0.4;
+}
+.cover-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  letter-spacing: 0.04em;
 }
 
-.post-meta {
+/* ── Card body ───────────────────────────────────────────────── */
+.blog-card__body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+.card-date {
   font-size: 0.78rem;
   color: var(--vp-c-text-3);
-  margin-bottom: 1rem;
 }
-.post-date + .post-category::before {
-  content: " · ";
+.card-ago {
+  font-size: 0.78rem;
+  color: var(--vp-c-text-3);
 }
-.post-category {
-  font-weight: 600;
-  color: var(--vp-c-text-2);
+.card-ago::before {
+  content: "·";
+  margin-right: 8px;
 }
 
-.post-content {
-  max-height: 640px;
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+  transition: color 0.2s;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  position: relative;
-  line-height: 1.7;
 }
-.post-content.truncated::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 150px;
-  background: linear-gradient(transparent, var(--vp-c-bg));
-  pointer-events: none;
-}
-
-.post-content :deep(img) {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 1rem 0;
-}
-.post-content :deep(blockquote) {
-  border-left: 3px solid var(--vp-c-brand-1);
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  color: var(--vp-c-text-2);
-  background: var(--vp-c-bg-soft);
-  border-radius: 0 6px 6px 0;
-}
-.post-content :deep(p) {
-  margin: 0.75rem 0;
-}
-.post-content :deep(h1),
-.post-content :deep(h2),
-.post-content :deep(h3) {
-  margin: 1.5rem 0 0.75rem;
-}
-.post-content :deep(ul),
-.post-content :deep(ol) {
-  padding-left: 1.5rem;
-}
-.post-content :deep(a) {
+.blog-card:hover .card-title {
   color: var(--vp-c-brand-1);
 }
 
-.post-foot {
+.card-excerpt {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Card footer ─────────────────────────────────────────────── */
+.card-footer {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin-top: 0.75rem;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.author-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.author-name {
+  font-size: 0.78rem;
+  color: var(--vp-c-text-3);
+}
+.card-tags {
+  display: flex;
+  gap: 4px;
   flex-wrap: wrap;
 }
-.post-tag {
-  font-size: 0.78rem;
+.card-tag {
+  font-size: 0.72rem;
   color: var(--vp-c-text-3);
   cursor: pointer;
-  transition: color 0.2s;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s;
 }
-.post-tag:hover,
-.post-tag.active {
+.card-tag:hover,
+.card-tag.active {
   color: var(--vp-c-brand-1);
-}
-.post-tag + .post-tag::before {
-  content: ", ";
-}
-.post-read-more {
-  font-size: 0.85rem;
-  color: var(--vp-c-brand-1);
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.2s;
-  white-space: nowrap;
-}
-.post-read-more:hover {
-  opacity: 0.7;
-}
-
-@media (max-width: 767px) {
-  .post-title {
-    font-size: 1.15rem;
-  }
+  background: var(--vp-c-brand-soft);
 }
 </style>

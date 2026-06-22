@@ -462,6 +462,7 @@ Drug-induced
 
 - **RAIU ↑**：Graves' disease, Toxic adenoma, Toxic MNG
 - **RAIU ↓**（破壞性甲狀腺炎）：De Quervain's, Silent/Postpartum, Amiodarone type 2
+- **fT3/fT4 ratio**：Graves' disease → **>0.4**（T3 優先分泌）；Destructive thyroiditis → **<0.3**（T4 為主釋放）
 
 ## Treatment Summary（治療總結）
 
@@ -477,6 +478,8 @@ Drug-induced
 
 ::: warning 甲狀腺毒症者 RAIU 鑑別至關重要
 甲狀腺毒症（TSH ↓, fT4 ↑）時，**RAIU 是區分 Graves' disease（攝取↑）與破壞性甲狀腺炎（攝取↓）的關鍵檢查**。錯誤診斷可能導致不當使用抗甲狀腺藥物。
+
+**輔助指標 — fT3/fT4 比值**：Graves'（**>0.4**，T3 優先分泌） vs 破壞性甲狀腺炎（**<0.3**，T4 儲存釋放為主）。比值愈高愈傾向 Graves'，可用於 RAIU 不可得或不適用時的初步鑑別。
 :::
 
 ::: info 超音波不能取代 RAIU

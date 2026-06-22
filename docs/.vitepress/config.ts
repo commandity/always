@@ -562,6 +562,10 @@ export default defineConfig({
               link: "/reference/ent/thyroiditis",
             },
             {
+              text: "甲狀腺腫瘤",
+              link: "/reference/ent/thyroid-tumor",
+            },
+            {
               text: "甲狀腺及頸部超音波",
               link: "/reference/ent/thyroid-sonography",
             },
@@ -597,6 +601,10 @@ export default defineConfig({
           text: "皮膚",
           collapsed: true,
           items: [
+            {
+              text: "糖尿病皮膚表現",
+              link: "/reference/skin/diabetes-skin-manifestations",
+            },
             {
               text: "皮膚科鑑別診斷",
               link: "/reference/clinic/dermatology-ddx",

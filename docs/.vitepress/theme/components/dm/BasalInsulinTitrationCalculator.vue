@@ -929,13 +929,25 @@ async function copyMarkdown() {
               <div class="bo-start-sub">
                 可選藥物：Glargine（U-100/U-300）、Detemir、Degludec（Tresiba），每日一次固定時間注射
               </div>
-              <div class="bo-start-sub toujeo-note">
-                ⚠ Toujeo（Glargine U-300）濃度 300 U/mL，為 U-100 的 3 倍。<br />
-                1 unit Toujeo 的注射體積僅有 1 unit U-100 的 1/3（0.00333 mL vs
-                0.01 mL）。<br />
-                從 U-100 Glargine 轉換：建議 1:1 起始，但部分病人需增加 10–20%
-                始達同等療效。<br />
-                僅有預填筆（SoloStar / Max SoloStar），不可用 U-100 空針抽取。
+              <div class="bo-start-sub toujeo-note" v-if="basalStartDose">
+                ⚠ Toujeo（Glargine U-300）濃度 300 U/mL = U-100 的 3 倍。<br />
+                <strong>{{ basalStartDose }} units</strong> × 體積/unit：<br />
+                ・Toujeo（U-300）=
+                {{ (basalStartDose / 300).toFixed(3) }} mL（每 1 unit = 0.00333
+                mL）<br />
+                ・U-100 胰島素 = {{ (basalStartDose / 100).toFixed(3) }} mL（每
+                1 unit = 0.01 mL）<br />
+                → 相同單位數，Toujeo 注射體積僅 U-100 的
+                <strong>1/3</strong>，病人感覺「打更少」。<br />
+                轉換：建議 1:1 起始，未達標可調至
+                <strong
+                  >{{ Math.round(basalStartDose * 1.15) }}–{{
+                    Math.round(basalStartDose * 1.2)
+                  }}
+                  units/day</strong
+                >（+15–20%）。<br />
+                僅有預填筆（SoloStar / Max SoloStar），不可用 U-100
+                空針抽取（濃度不同會導致 3 倍 overdose）。
               </div>
             </div>
           </div>
@@ -2166,30 +2178,40 @@ async function copyMarkdown() {
 }
 .bo-start-body {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 1.25rem;
   padding: 1rem;
   background: var(--vp-c-bg-soft);
+  font-size: 0.92rem;
 }
 .bo-start-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  min-width: 120px;
+  padding: 0.75rem 1rem;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 .bo-start-val {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #3b82f6;
   line-height: 1.1;
 }
 .bo-start-unit {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--vp-c-text-3);
   font-weight: 700;
+  margin-top: 2px;
 }
 .bo-start-detail {
-  font-size: 0.82rem;
+  flex: 1;
+  min-width: 0;
   color: var(--vp-c-text-1);
   line-height: 1.6;
 }

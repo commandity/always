@@ -166,13 +166,16 @@ Normal wall ≤4 mm. Haustra and teniae identify colon.
 
 ### 4.2 Diverticular Disease
 
-| Parameter      | Diverticulosis                                                  | Diverticulitis                                                        |
-| -------------- | --------------------------------------------------------------- | --------------------------------------------------------------------- |
-| **Morphology** | Small outpouchings, hyperechoic foci with dirty shadowing (gas) | Hypoechoic wall thickening; hyperechoic pericolonic fat (stranding)   |
-| **Abscess**    | -                                                               | Pericolic complex collection                                          |
-| **Doppler**    | Normal                                                          | Increased bowel wall + pericolonic flow                               |
-| **Location**   | Sigmoid most common (Western); right colon (Asian)              | Same                                                                  |
-| **DDx**        |                                                                 | Colon cancer: more focal, rigid, no intense pericolonic fat stranding |
+| Parameter             | Diverticulosis                                     | Diverticulitis                                                        |
+| --------------------- | -------------------------------------------------- | --------------------------------------------------------------------- |
+| **Bowel wall**        | Normal (<4 mm)                                     | **>5 mm**, hypoechoic thickening                                      |
+| **Lumen**             | Normal                                             | **Prominent fluid-filled loops** proximal to inflamed segment         |
+| **Pericolonic fat**   | Normal                                             | **Increased echogenicity** (fat stranding / hyperechoic)              |
+| **Pericolonic fluid** | -                                                  | **Fluid collections** adjacent to affected segment                    |
+| **Abscess**           | -                                                  | Pericolic or **intraabdominal abscess** (complex collection)          |
+| **Doppler**           | Normal                                             | Increased bowel wall + pericolonic flow                               |
+| **Location**          | Sigmoid most common (Western); right colon (Asian) | Same                                                                  |
+| **DDx**               |                                                    | Colon cancer: more focal, rigid, no intense pericolonic fat stranding |
 
 ### 4.3 Colorectal Carcinoma
 

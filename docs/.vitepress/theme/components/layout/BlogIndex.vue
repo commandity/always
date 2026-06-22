@@ -24,7 +24,7 @@ function selectTag(tag: string) {
   selectedTag.value = selectedTag.value === tag ? null : tag;
 }
 
-function formatDate(dateStr: string) {
+function fmtDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("zh-TW", {
     year: "numeric",
     month: "long",
@@ -32,11 +32,11 @@ function formatDate(dateStr: string) {
   });
 }
 
-function setContentRef(url: string, el: HTMLElement | null) {
+function setRef(url: string, el: HTMLElement | null) {
   if (el) contentRefs.value.set(url, el);
 }
 
-function withoutTitle(html: string) {
+function stripH1(html: string) {
   return html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/, "");
 }
 
@@ -44,78 +44,71 @@ onMounted(async () => {
   await nextTick();
   for (const p of filteredPosts.value) {
     const el = contentRefs.value.get(p.url);
-    if (el && el.scrollHeight > el.clientHeight) {
-      truncated.value.add(p.url);
-    }
+    if (el && el.scrollHeight > el.clientHeight) truncated.value.add(p.url);
   }
 });
 </script>
 
 <template>
   <div class="blog-home">
-    <div class="blog-hero">
+    <div class="hero">
       <h1>
         <span class="hero-icon">✦</span>
         <span class="hero-text">靜心閣</span>
         <span class="hero-icon">✦</span>
       </h1>
       <p>心得 ✏️ | 日記 📒 | 分享 💡</p>
-      <div class="blog-hero__count">{{ posts.length }} 篇文章</div>
+      <span class="hero-count">{{ posts.length }} 篇文章</span>
     </div>
 
-    <div class="tag-bar">
+    <div class="tags">
       <button
-        class="tag-btn"
-        :class="{ active: selectedTag === null }"
+        class="tag"
+        :class="{ on: selectedTag === null }"
         @click="selectedTag = null"
       >
         全部
       </button>
       <button
-        v-for="tag in allTags"
-        :key="tag"
-        class="tag-btn"
-        :class="{ active: selectedTag === tag }"
-        @click="selectTag(tag)"
+        v-for="t in allTags"
+        :key="t"
+        class="tag"
+        :class="{ on: selectedTag === t }"
+        @click="selectTag(t)"
       >
-        {{ tag }}
+        {{ t }}
       </button>
     </div>
 
-    <div class="posts-stack">
-      <article v-for="post in filteredPosts" :key="post.url" class="post-item">
-        <header class="post-header">
-          <div class="post-meta">
-            <time class="post-date">{{ formatDate(post.date) }}</time>
-            <span v-if="post.category" class="post-category">{{
-              post.category
-            }}</span>
-          </div>
-          <h2 class="post-title">
-            <a :href="post.url" class="post-title-link">{{ post.title }}</a>
-          </h2>
-        </header>
-
+    <div class="stack">
+      <article v-for="post in filteredPosts" :key="post.url" class="entry">
+        <time class="entry-date">{{ fmtDate(post.date) }}</time>
+        <h2 class="entry-title">
+          <a :href="post.url" class="entry-link">{{ post.title }}</a>
+        </h2>
         <div
-          :ref="(el: any) => setContentRef(post.url, el as HTMLElement | null)"
-          class="post-content"
+          :ref="(el: any) => setRef(post.url, el as HTMLElement | null)"
+          class="entry-body"
           :class="{ truncated: truncated.has(post.url) }"
-          v-html="withoutTitle(post.html)"
+          v-html="stripH1(post.html)"
         />
-
-        <footer class="post-footer">
-          <div class="post-tags">
+        <div class="entry-foot">
+          <span class="entry-meta">
+            <template v-if="post.category">
+              <span class="entry-cat">{{ post.category }}</span>
+              <template v-if="post.tags.length"> · </template>
+            </template>
             <span
-              v-for="tag in post.tags"
-              :key="tag"
-              class="post-tag"
-              :class="{ active: selectedTag === tag }"
-              @click="selectTag(tag)"
-              >#{{ tag }}</span
+              v-for="(t, i) in post.tags"
+              :key="t"
+              class="entry-tag"
+              :class="{ on: selectedTag === t }"
+              @click="selectTag(t)"
+              >{{ i ? ", " : "" }}{{ t }}</span
             >
-          </div>
-          <a :href="post.url" class="post-read-more"> 繼續閱讀 → </a>
-        </footer>
+          </span>
+          <a :href="post.url" class="entry-more">繼續閱讀 →</a>
+        </div>
       </article>
     </div>
   </div>
@@ -134,26 +127,25 @@ onMounted(async () => {
     padding: 48px 32px 128px;
   }
 }
-
 @media (min-width: 960px) {
   .blog-home {
     padding: 48px 0 0;
   }
 }
-
 @media (min-width: 1440px) {
   .blog-home {
     max-width: 784px;
   }
 }
 
-.blog-hero {
+.hero {
   text-align: center;
   padding: 1.5rem 0 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--vp-c-divider);
 }
-.blog-hero h1 {
+
+.hero h1 {
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -164,6 +156,7 @@ onMounted(async () => {
   justify-content: center;
   gap: 0.3em;
 }
+
 .hero-text {
   background: linear-gradient(
     135deg,
@@ -174,18 +167,19 @@ onMounted(async () => {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .hero-icon {
   font-size: 1.6rem;
   color: var(--vp-c-brand-1);
   opacity: 0.6;
   -webkit-text-fill-color: initial;
 }
-.blog-hero p {
+.hero p {
   color: var(--vp-c-text-2);
   font-size: 1.1rem;
   margin: 0 0 1.25rem;
 }
-.blog-hero__count {
+.hero-count {
   display: inline-block;
   border: 1px solid var(--vp-c-divider);
   border-radius: 999px;
@@ -194,13 +188,14 @@ onMounted(async () => {
   color: var(--vp-c-text-3);
 }
 
-.tag-bar {
+.tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 2.5rem;
 }
-.tag-btn {
+
+.tag {
   padding: 5px 16px;
   border-radius: 999px;
   border: 1px solid var(--vp-c-divider);
@@ -211,91 +206,83 @@ onMounted(async () => {
   transition: all 0.2s;
   font-family: inherit;
 }
-.tag-btn:hover {
+
+.tag:hover {
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
 }
-.tag-btn.active {
+.tag.on {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
   color: #fff;
   font-weight: 600;
 }
 
-.posts-stack {
+.stack {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 3.5rem;
 }
 
-.post-item {
+.entry {
   border-bottom: 1px solid var(--vp-c-divider);
   padding-bottom: 3rem;
 }
-.post-item:last-child {
+
+.entry:last-child {
   border-bottom: none;
 }
 
-.post-header {
-  margin-bottom: 1.25rem;
-}
-.post-meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.entry-date {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   margin-bottom: 0.5rem;
 }
-.post-date {
-  font-size: 0.82rem;
-  color: var(--vp-c-text-3);
-}
-.post-category {
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 2px 10px;
-  border-radius: 4px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  letter-spacing: 0.03em;
-}
-.post-title {
-  font-size: 1.35rem;
+
+.entry-title {
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 0;
-  line-height: 1.4;
+  margin: 0 0 1rem;
+  line-height: 1.35;
 }
-.post-title-link {
+
+.entry-link {
   color: var(--vp-c-text-1);
   text-decoration: none;
   transition: color 0.2s;
 }
-.post-title-link:hover {
+
+.entry-link:hover {
   color: var(--vp-c-brand-1);
 }
 
-.post-content {
-  max-height: 640px;
+.entry-body {
+  max-height: 600px;
   overflow: hidden;
   position: relative;
   line-height: 1.7;
 }
-.post-content.truncated::after {
+
+.entry-body.truncated::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 150px;
+  height: 120px;
   background: linear-gradient(transparent, var(--vp-c-bg));
   pointer-events: none;
 }
 
-.post-content :deep(img) {
+.entry-body :deep(img) {
   max-width: 100%;
   border-radius: 8px;
   margin: 1rem 0;
 }
-.post-content :deep(blockquote) {
+.entry-body :deep(blockquote) {
   border-left: 3px solid var(--vp-c-brand-1);
   margin: 1rem 0;
   padding: 0.5rem 1rem;
@@ -303,63 +290,65 @@ onMounted(async () => {
   background: var(--vp-c-bg-soft);
   border-radius: 0 6px 6px 0;
 }
-.post-content :deep(p) {
+.entry-body :deep(p) {
   margin: 0.75rem 0;
 }
-.post-content :deep(h1),
-.post-content :deep(h2),
-.post-content :deep(h3) {
+.entry-body :deep(h2),
+.entry-body :deep(h3) {
   margin: 1.5rem 0 0.75rem;
 }
-.post-content :deep(ul),
-.post-content :deep(ol) {
+.entry-body :deep(ul),
+.entry-body :deep(ol) {
   padding-left: 1.5rem;
 }
-.post-content :deep(a) {
+.entry-body :deep(a) {
   color: var(--vp-c-brand-1);
 }
 
-.post-footer {
+.entry-foot {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 1rem;
-  padding-top: 1rem;
+  margin-top: 1.25rem;
   flex-wrap: wrap;
 }
-.post-tags {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-.post-tag {
-  font-size: 0.76rem;
+
+.entry-meta {
+  font-size: 0.78rem;
   color: var(--vp-c-text-3);
+}
+
+.entry-cat {
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+}
+
+.entry-tag {
   cursor: pointer;
-  padding: 2px 8px;
-  border-radius: 4px;
-  transition: all 0.2s;
+  transition: color 0.2s;
 }
-.post-tag:hover,
-.post-tag.active {
+
+.entry-tag.on,
+.entry-tag:hover {
   color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
 }
-.post-read-more {
-  font-size: 0.85rem;
+
+.entry-more {
+  font-size: 0.82rem;
   color: var(--vp-c-brand-1);
   text-decoration: none;
   font-weight: 600;
   transition: opacity 0.2s;
   white-space: nowrap;
 }
-.post-read-more:hover {
+
+.entry-more:hover {
   opacity: 0.7;
 }
 
 @media (max-width: 767px) {
-  .post-title {
+  .entry-title {
     font-size: 1.15rem;
   }
 }

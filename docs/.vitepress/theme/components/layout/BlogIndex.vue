@@ -84,38 +84,45 @@ onMounted(async () => {
 
     <div class="posts-stack">
       <article v-for="post in filteredPosts" :key="post.url" class="post-item">
-        <header class="post-header">
-          <div class="post-meta">
-            <time class="post-date">{{ formatDate(post.date) }}</time>
-            <span v-if="post.category" class="post-category">{{
-              post.category
-            }}</span>
-          </div>
-          <h2 class="post-title">
-            <a :href="post.url" class="post-title-link">{{ post.title }}</a>
-          </h2>
-        </header>
+        <h2 class="post-title">
+          <a :href="post.url" class="post-title-link">{{ post.title }}</a>
+        </h2>
+        <div class="post-meta">
+          <time class="post-date">{{ formatDate(post.date) }}</time>
+          <span v-if="post.category" class="post-category">{{
+            post.category
+          }}</span>
+        </div>
 
         <div
-          :ref="(el: any) => setContentRef(post.url, el as HTMLElement | null)"
           class="post-content"
           :class="{ truncated: truncated.has(post.url) }"
-          v-html="withoutTitle(post.html)"
-        />
+        >
+          <div
+            :ref="
+              (el: any) => setContentRef(post.url, el as HTMLElement | null)
+            "
+            class="post-content-inner"
+            v-html="withoutTitle(post.html)"
+          />
+          <a
+            v-if="truncated.has(post.url)"
+            :href="post.url"
+            class="post-read-more"
+            >繼續閱讀 →</a
+          >
+        </div>
 
-        <footer class="post-footer">
-          <div class="post-tags">
-            <span
-              v-for="tag in post.tags"
-              :key="tag"
-              class="post-tag"
-              :class="{ active: selectedTag === tag }"
-              @click="selectTag(tag)"
-              >#{{ tag }}</span
-            >
-          </div>
-          <a :href="post.url" class="post-read-more"> 繼續閱讀 → </a>
-        </footer>
+        <div class="post-tags">
+          <span
+            v-for="tag in post.tags"
+            :key="tag"
+            class="post-tag"
+            :class="{ active: selectedTag === tag }"
+            @click="selectTag(tag)"
+            >{{ tag }}</span
+          >
+        </div>
       </article>
     </div>
   </div>
@@ -236,33 +243,11 @@ onMounted(async () => {
   border-bottom: none;
 }
 
-.post-header {
-  margin-bottom: 1.25rem;
-}
-.post-meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 0.5rem;
-}
-.post-date {
-  font-size: 0.82rem;
-  color: var(--vp-c-text-3);
-}
-.post-category {
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 2px 10px;
-  border-radius: 4px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  letter-spacing: 0.03em;
-}
 .post-title {
   font-size: 1.35rem;
   font-weight: 700;
-  margin: 0;
-  line-height: 1.4;
+  margin: 0 0 0.35rem;
+  line-height: 1.35;
 }
 .post-title-link {
   color: var(--vp-c-text-1);
@@ -273,21 +258,56 @@ onMounted(async () => {
   color: var(--vp-c-brand-1);
 }
 
+.post-meta {
+  font-size: 0.78rem;
+  color: var(--vp-c-text-3);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.post-category {
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+}
+.post-date + .post-category::before {
+  content: " · ";
+  font-weight: 400;
+}
+
 .post-content {
-  max-height: 640px;
-  overflow: hidden;
   position: relative;
   line-height: 1.7;
 }
-.post-content.truncated::after {
+
+.post-content-inner {
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.post-content.truncated .post-content-inner::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 150px;
+  height: 120px;
   background: linear-gradient(transparent, var(--vp-c-bg));
   pointer-events: none;
+}
+
+.post-read-more {
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.post-read-more:hover {
+  opacity: 0.7;
 }
 
 .post-content :deep(img) {
@@ -319,43 +339,21 @@ onMounted(async () => {
   color: var(--vp-c-brand-1);
 }
 
-.post-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  flex-wrap: wrap;
-}
 .post-tags {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--vp-c-text-3);
 }
 .post-tag {
-  font-size: 0.76rem;
-  color: var(--vp-c-text-3);
   cursor: pointer;
-  padding: 2px 8px;
-  border-radius: 4px;
-  transition: all 0.2s;
+  transition: color 0.2s;
 }
 .post-tag:hover,
 .post-tag.active {
   color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
 }
-.post-read-more {
-  font-size: 0.85rem;
-  color: var(--vp-c-brand-1);
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.2s;
-  white-space: nowrap;
-}
-.post-read-more:hover {
-  opacity: 0.7;
+.post-tag + .post-tag::before {
+  content: ", ";
 }
 
 @media (max-width: 767px) {

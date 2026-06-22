@@ -36,6 +36,10 @@ function setContentRef(url: string, el: HTMLElement | null) {
   if (el) contentRefs.value.set(url, el);
 }
 
+function withoutTitle(html: string) {
+  return html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/, "");
+}
+
 onMounted(async () => {
   await nextTick();
   for (const p of filteredPosts.value) {
@@ -96,7 +100,7 @@ onMounted(async () => {
           :ref="(el: any) => setContentRef(post.url, el as HTMLElement | null)"
           class="post-content"
           :class="{ truncated: truncated.has(post.url) }"
-          v-html="post.html"
+          v-html="withoutTitle(post.html)"
         />
 
         <footer class="post-footer">
@@ -119,9 +123,28 @@ onMounted(async () => {
 
 <style scoped>
 .blog-home {
-  max-width: 720px;
+  max-width: 752px;
   margin: 0 auto;
-  padding: 3rem clamp(24px, 4vw, 48px);
+  padding: 32px 24px 96px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .blog-home {
+    padding: 48px 32px 128px;
+  }
+}
+
+@media (min-width: 960px) {
+  .blog-home {
+    padding: 48px 0 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .blog-home {
+    max-width: 784px;
+  }
 }
 
 .blog-hero {
@@ -251,7 +274,7 @@ onMounted(async () => {
 }
 
 .post-content {
-  max-height: 480px;
+  max-height: 640px;
   overflow: hidden;
   position: relative;
   line-height: 1.7;
@@ -262,7 +285,7 @@ onMounted(async () => {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 120px;
+  height: 150px;
   background: linear-gradient(transparent, var(--vp-c-bg));
   pointer-events: none;
 }
@@ -335,10 +358,7 @@ onMounted(async () => {
   opacity: 0.7;
 }
 
-@media (max-width: 640px) {
-  .blog-home {
-    padding: 2rem 1.25rem;
-  }
+@media (max-width: 767px) {
   .post-title {
     font-size: 1.15rem;
   }

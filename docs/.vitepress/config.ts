@@ -551,6 +551,10 @@ export default defineConfig({
               text: "外籍門診詢問單（多國語言）",
               link: "/reference/clinic/foreigner-inquiry",
             },
+            {
+              text: "妊娠用藥分級查詢表（FDA A/B/C/D/X）",
+              link: "/reference/clinic/pregnancy-category-table",
+            },
           ],
         },
         {

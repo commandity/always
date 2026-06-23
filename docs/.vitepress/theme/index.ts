@@ -113,6 +113,7 @@ import IPSSCalculator from "./components/uro/IPSSCalculator.vue";
 import NIHCPSICalculator from "./components/uro/NIHCPSICalculator.vue";
 // CLINIC
 import ForeignerInquiry from "./components/clinic/ForeignerInquiry.vue";
+import PregnancyCategoryTable from "./components/clinic/PregnancyCategoryTable.vue";
 // GI
 import FIB4Calculator from "./components/gi/FIB4Calculator.vue";
 // CHEST
@@ -156,10 +157,10 @@ export default {
               "home-features-after": () =>
                 isHome.value
                   ? h("div", null, [
-                    h(HomeBillboard),
-                    h(HomeCitation),
-                    h(HomeProfile),
-                  ])
+                      h(HomeBillboard),
+                      h(HomeCitation),
+                      h(HomeProfile),
+                    ])
                   : null,
               "layout-top": () => (isHome.value ? h(GlowBackground) : null),
             }),
@@ -292,6 +293,7 @@ export default {
     app.component("FIB4Calculator", FIB4Calculator);
     // CLINIC
     app.component("ForeignerInquiry", ForeignerInquiry);
+    app.component("PregnancyCategoryTable", PregnancyCategoryTable);
     // CHEST
     app.component("PEFCalculator", PEFCalculator);
     app.component("CATCalculator", CATCalculator);

@@ -1,0 +1,160 @@
+---
+layout: doc
+title: 全身性疾病的皮膚表徵 — Skin Signs of Systemic Disease
+---
+
+# 全身性疾病的皮膚表徵
+
+**Skin Signs of Systemic Disease**
+
+## 內分泌與代謝疾病
+
+| 疾病                                                              | 皮膚表現                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 臨床要點                 |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| 糖尿病（Diabetes mellitus）                                       | 黑色棘皮症（acanthosis nigricans）、糖尿病皮病變／脛前斑（diabetic dermopathy）、糖尿病足潰瘍（diabetic foot ulcer）、糖尿病性水疱（bullosis diabeticorum）、類脂質漸進性壞死（necrobiosis lipoidica）、厚皮（scleroderma-like changes, scleredema diabeticorum）、全身搔癢（generalized pruritus）、黃皮膚／黃指甲（yellow skin & nails）、尋常性魚鱗癬（ichthyosiform changes）、皮膚乾燥症（xerosis）、亨特丘疹（Huntley's papules／finger pebbles）、紅疹（rubeosis faciei）、指甲癬（onychomycosis）、細菌／黴菌感染 | 參見獨立章節             |
+| 胰島素阻抗／代謝症候群（Insulin resistance / Metabolic syndrome） | 黑色棘皮症（acanthosis nigricans）、皮膚贅瘤（acrochordons／skin tags）、毛囊角化症（keratosis pilaris）、多毛症（hirsutism）、痤瘡（acne）、手掌乳頭狀角化（tripe palms）、脂漏增加（seborrhea）                                                                                                                                                                                                                                                                                                                         | 參見胰島素阻抗獨立章節   |
+| 庫欣氏症候群（Cushing syndrome）                                  | 向心性肥胖（central obesity）、紫紅色妊娠紋（striae rubra／purple striae）、皮膚萎縮變薄（skin atrophy）、易瘀青（easy bruising）、傷口癒合不良（poor wound healing）、多毛症（hirsutism）、痤瘡（acne）、滿月臉（moon face）、水牛肩（buffalo hump）                                                                                                                                                                                                                                                                     | 皮質類固醇過多所致       |
+| 愛迪生氏症（Addison disease）                                     | 全身性皮膚色素沉著（generalized hyperpigmentation，陽光曝露處、皺褶處、乳暈、口腔黏膜、掌紋最明顯）、藍黑色齒齦色素斑（blue-black gingival pigmentation）                                                                                                                                                                                                                                                                                                                                                                 | ACTH／MSH 升高所致       |
+| 肢端肥大症（Acromegaly）                                          | 肢端肥大（acral enlargement）、粗大面部特徵（coarse facial features：下頷突出、鼻大、眉弓突出）、皮膚增厚油膩（thick oily skin）、多汗（hyperhidrosis）、皮膚贅瘤（acrochordons）、巨舌（macroglossia）                                                                                                                                                                                                                                                                                                                   | GH/IGF-1 過度分泌        |
+| 甲狀腺機能亢進（Hyperthyroidism）                                 | 皮膚溫熱濕潤（warm moist skin）、手掌紅斑（palmar erythema）、甲狀腺皮膚病／脛前黏液水腫（thyroid dermopathy／pretibial myxedema）、杵狀指／指甲鬆動（thyroid acropachy）、瀰漫性落髮（diffuse alopecia）、白斑症（vitiligo）                                                                                                                                                                                                                                                                                             | Graves disease 最常見    |
+| 甲狀腺機能低下（Hypothyroidism）                                  | 皮膚乾燥粗厚（dry rough skin）、全身黏液水腫（generalized myxedema）、臉色蒼白蠟黃（pale waxy complexion）、毛髮稀疏乾燥（coarse brittle hair）、眉毛外側脫落（madarosis／loss of lateral eyebrows）、指甲脆弱（brittle nails）、手掌腳掌角化（palmar plantar hyperkeratosis）、胡蘿蔔素血症（carotenemia）                                                                                                                                                                                                               | 甲狀腺荷爾蒙不足         |
+| 副甲狀腺機能亢進（Hyperparathyroidism）                           | 皮膚鈣化（calcinosis cutis）、搔癢（pruritus）、血管鈣化（vascular calcification）                                                                                                                                                                                                                                                                                                                                                                                                                                        | 鈣磷代謝異常             |
+| 多囊性卵巢症候群（PCOS）                                          | 多毛症（hirsutism）、痤瘡（acne）、雄性禿（androgenetic alopecia）、黑色棘皮症（acanthosis nigricans）、皮膚贅瘤（acrochordons）、脂漏（seborrhea）                                                                                                                                                                                                                                                                                                                                                                       | 胰島素阻抗導致雄性素過高 |
+
+## 腦下垂體與神經內分泌
+
+| 疾病                                   | 皮膚表現                                                                                                                                                                                                  |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 類癌症候群（Carcinoid syndrome）       | 顏面潮紅（facial flushing，突發性紅斑，可持續數分鐘至數小時）、毛細血管擴張（telangiectasia）、糙皮病樣變化（pellagra-like changes，tryptophan 被腫瘤消耗所致）、硬皮病樣變化（scleroderma-like changes） |
+| 嗜鉻細胞瘤（Pheochromocytoma）         | 陣發性顏面蒼白／潮紅（paroxysmal pallor／flushing）、多汗（hyperhidrosis）、頭痛、心悸                                                                                                                    |
+| 升糖素瘤症候群（Glucagonoma syndrome） | 壞死溶解性游走性紅斑（necrolytic migratory erythema, NME — 軀幹四肢游走性紅斑、水疱、糜爛）、舌炎（glossitis）、口角炎（angular cheilitis）、糖尿病（diabetes）                                           |
+| 多發性內分泌腫瘤（MEN）                | 神經纖維瘤（neurofibromas）、咖啡牛奶斑（cafe-au-lait spots）                                                                                                                                             |
+| POEMS 症候群                           | 瀰漫性皮膚色素沉著（diffuse hyperpigmentation）、多毛症（hypertrichosis）、皮膚增厚（skin thickening）、杵狀指（clubbing）、血管瘤（hemangiomas）、硬化性骨病變（sclerotic bone lesions）                 |
+
+## 胃腸道與肝臟疾病
+
+| 疾病                                                     | 皮膚表現                                                                                                                                                                                                                                                                                                                                                                       |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 發炎性腸道疾病（IBD：Crohn disease／ulcerative colitis） | 口腔潰瘍（aphthous ulcers）、口角炎（angular cheilitis）、轉移性克隆氏症（metastatic Crohn disease — 皮膚肉芽腫）、壞死性膿皮症（pyoderma gangrenosum）、結節性紅斑（erythema nodosum）、Sweet症候群（Sweet syndrome）、肛裂／瘻管／肛門周圍膿瘍（fissures／fistulas／perianal abscesses）、口腔黏膜鵝卵石樣外觀（oral cobblestoning）、增殖性膿皮症（pyodermatitis vegetans） |
+| 乳糜瀉（Celiac disease）                                 | 皰疹樣皮炎（dermatitis herpetiformis — 劇癢群聚性水疱，分布於肘伸側、臀、膝、頭皮）、口腔潰瘍（aphthous ulcers）、牙釉質缺陷（enamel defects）                                                                                                                                                                                                                                 |
+| 肝臟疾病／膽汁鬱積（Liver disease / Cholestasis）        | 全身搔癢（cholestatic pruritus）、黃疸（jaundice）、蜘蛛痣（spider angiomas）、肝掌（palmar erythema）、手掌腱膜攣縮（Dupuytren contracture）、白色指甲（leukonychia）、杵狀指（clubbing）、黃色瘤（xanthelasma）、毛細血管擴張（telangiectasia）、紫斑（purpura）、臍周靜脈曲張（caput medusae）                                                                              |
+| 胰臟疾病（Pancreatic disease）                           | 胰腺性脂膜炎（pancreatic panniculitis — 小腿伸側痛性紅褐色結節，可潰瘍並流出油狀液體）、酶性脂膜炎（enzymic panniculitis）、脂肪壞死（fat necrosis）                                                                                                                                                                                                                           |
+| 腸道繞道術後症候群（Bowel bypass syndrome）              | 關節炎-皮炎症候群（arthritis-dermatitis syndrome）、Sweet症候群樣紅斑、水疱                                                                                                                                                                                                                                                                                                    |
+| Cronkhite-Canada 症候群                                  | 瀰漫性胃腸道息肉（diffuse GI polyposis）+ 外胚層變化：指甲萎縮（onychodystrophy）、落髮（alopecia）、皮膚色素沉著（hyperpigmentation — 手、臉、頸）、味覺障礙（dysgeusia）                                                                                                                                                                                                     |
+
+## 營養缺乏症
+
+| 缺乏                                                     | 皮膚表現                                                                                                                                                                         |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 維生素 A 缺乏（Vitamin A deficiency）                    | 毛囊角化過度（phrynoderma）、皮膚乾燥粗糙（xerosis）、夜盲症（night blindness）                                                                                                  |
+| 菸鹼酸缺乏（Niacin deficiency — Pellagra）               | 光敏感性紅斑（photosensitive dermatitis）+ 角化過度色素沉著（Casal necklace — 頸部項圈樣紅斑）、腹瀉（diarrhea）、失智（dementia）三聯徵（3 Ds）                                 |
+| 維生素 C 缺乏（Vitamin C deficiency — Scurvy）           | 毛囊周圍出血點（perifollicular hemorrhages）、瘀青（ecchymosis）、牙齦腫脹出血（gingival swelling／bleeding）、傷口癒合不良（poor wound healing）、螺絲狀毛髮（corkscrew hairs） |
+| 生物素缺乏（Biotin deficiency）                          | 眼周、鼻周、口周紅斑脫屑性皮炎（periorificial dermatitis）、落髮（alopecia）、指甲脆弱（brittle nails）                                                                          |
+| 鋅缺乏（Zinc deficiency — Acrodermatitis enteropathica） | 肢端及腔口周圍紅斑水疱膿疱（acral／periorificial dermatitis）→ 糜爛結痂、腹瀉（diarrhea）、落髮（alopecia）                                                                      |
+| 鐵缺乏（Iron deficiency）                                | 皮膚蒼白（pallor）、舌炎（glossitis）、口角炎（angular cheilitis）、匙狀甲（koilonychia）、搔癢（pruritus）、瀰漫性落髮（diffuse alopecia）                                      |
+| 蛋白質-熱量營養不良（Protein-energy malnutrition）       | 皮膚乾燥色素減退（dry hypopigmented skin）、毛髮變細變紅（dyschromotrichia）、裂隙狀指甲（fissured nails）、水腫（edema）、魚鱗癬樣脫屑（ichthyosiform desquamation）            |
+
+## 腎臟疾病
+
+| 疾病                               | 皮膚表現                                                                                                                                                                                                                                                                                                          |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 慢性腎臟病／尿毒症（CKD / Uremia） | 尿毒症搔癢（uremic pruritus，最常見也最困擾）、皮膚乾燥症（xerosis）、色素沉著（hyperpigmentation — 黃褐色）、鈣化防禦症（calciphylaxis／calcific uremic arteriolopathy — 網狀紫斑 → 痛性壞死潰瘍）、尿素霜（uremic frost，已少見）、半白甲（half-and-half nails／Lindsay nails）、搔抓致皮膚病變（excoriations） |
+| 鈣化防禦症（Calciphylaxis）        | 網狀紫斑（livedo reticularis）→ 痛性硬塊（painful indurated plaques）→ 缺血性潰瘍壞死（ischemic necrosis — 大腿、腹部、乳房脂肪豐富處）；死亡率高                                                                                                                                                                 |
+
+## 心臟與血管疾病
+
+| 疾病                                                     | 皮膚表現                                                                                                                                                                                                                                                  |
+| -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 膽固醇栓塞症候群（Cholesterol emboli syndrome）          | 藍趾症候群（blue／purple toe syndrome）、網狀青斑（livedo reticularis／racemosa）、紫斑（purpura）、壞死（necrosis）、足部潰瘍（foot ulcers）；常在血管攝影或抗凝血治療後發生                                                                             |
+| 高血壓性腿部潰瘍（Martorell hypertensive ulcer）         | 外踝上極度痛性潰瘍（extremely painful ulcer over lateral malleolus）、高血壓患者、對稱性                                                                                                                                                                  |
+| 靜脈功能不全（Venous insufficiency）                     | 靜脈曲張（varicose veins）、足踝部水腫（pedal edema）、靜脈性濕疹／重力性濕疹（venous／stasis eczema）、含鐵血黃素沉著（hemosiderin deposition — 棕紫色）、白色萎縮（atrophie blanche）、脂肪皮膚硬化症（lipodermatosclerosis）、靜脈潰瘍（venous ulcer） |
+| 淋巴水腫（Lymphedema）                                   | 非可凹性水腫（non-pitting edema）、Stemmer 徵（第二趾蹼無法捏起）、象皮病（elephantiasis nostras verrucosa — 乳頭狀瘤樣皮膚增生）、苔癬樣纖維化（lichenified fibrosis）                                                                                   |
+| 瀰漫性血管內凝血（DIC）                                  | 紫斑（purpura）、瘀斑（ecchymosis）、壞疽（gangrene）、全身性纖維蛋白溶解（systemic fibrinolysis）、暴發性紫斑（purpura fulminans）                                                                                                                       |
+| 細菌性栓塞（Septic emboli）                              | 手指末端痛性紅結節（Osler nodes）、手掌腳掌無痛紅斑（Janeway lesions）、裂片狀出血（splinter hemorrhages）、敗血性栓塞                                                                                                                                    |
+| 游走性血栓靜脈炎／Trousseau 症候群（Trousseau syndrome） | 游走性表層血栓靜脈炎（migratory superficial thrombophlebitis）；與潛在惡性腫瘤相關                                                                                                                                                                        |
+
+## 風濕免疫與自體免疫疾病
+
+| 疾病                                                | 皮膚表現                                                                                                                                                                                                                                                                                                                                                       |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 全身性紅斑狼瘡（SLE）                               | 蝴蝶斑（malar rash）、圓盤狀紅斑（discoid rash）、光敏感（photosensitivity）、口腔潰瘍（oral ulcers）、落髮（alopecia）、血管炎（vasculitis）、網狀青斑（livedo reticularis）、紫斑（purpura）、雷諾現象（Raynaud phenomenon）                                                                                                                                 |
+| 皮肌炎（Dermatomyositis）                           | 向光性紅斑（heliotrope rash — 紫紅色眼眶周圍水腫性紅斑）、Gottron 丘疹（Gottron papules — 手指關節背側紫紅色扁平丘疹）、技工手（mechanics hands）、披肩徵（shawl sign）、V形紅斑（V-sign）、甲周毛細血管擴張（periungual telangiectasia）、近端肌肉無力（proximal muscle weakness）                                                                            |
+| 硬皮症（Systemic sclerosis）                        | 手指皮膚硬化（sclerodactyly）、CREST 症候群（Calcinosis cutis、Raynaud phenomenon、Esophageal dysmotility、Sclerodactyly、Telangiectasia）、指尖潰瘍（digital ulcers）、毛細血管擴張（mat telangiectasia）、面具臉（mask-like face）、口周放射狀皺紋（radial furrowing）、色素減退（salt-and-pepper appearance）、甲褶微血管異常（nailfold capillary changes） |
+| 貝西氏症（Behçet disease）                          | 口腔潰瘍（oral aphthae，最常見，反覆疼痛）、生殖器潰瘍（genital ulcers，疼痛但癒合後留疤）、結節性紅斑（erythema nodosum）、針刺反應（pathergy reaction — 針刺後紅疹或膿疱）、痤瘡樣丘疹（acneiform papules）、血管炎（vasculitis）                                                                                                                            |
+| 類肉瘤症（Sarcoidosis）                             | 結節性紅斑（erythema nodosum，急性，常見於女性）、凍瘡樣狼瘡（lupus pernio — 鼻頰部紫紅色浸潤斑塊，慢性，預後差）、皮下結節（subcutaneous nodules）、疤痕浸潤（scar infiltration — 舊疤轉紫紅腫脹）                                                                                                                                                            |
+| 結節性多動脈炎（PAN）                               | 網狀青斑（livedo reticularis）、皮下痛性結節（subcutaneous painful nodules，沿血管分布）、紫斑（purpura）、指／趾缺血壞疽（digital ischemia／gangrene）                                                                                                                                                                                                        |
+| 史笛兒氏症成人型（Adult-onset Still disease）       | 鮭魚色軀幹四肢一過性紅斑（salmon-pink evanescent rash，典型伴隨發燒高峰）、搔癢（pruritus）                                                                                                                                                                                                                                                                    |
+| 反應性關節炎（Reactive arthritis／Reiter syndrome） | 掌蹠角化過度（keratoderma blennorrhagicum）、環狀龜頭炎（circinate balanitis）、口腔潰瘍（oral ulcers）、指甲營養不良（nail dystrophy）                                                                                                                                                                                                                        |
+| 史奈頓症候群（Sneddon syndrome）                    | 廣泛性網狀青斑（generalized livedo racemosa）+ 腦血管事件（cerebrovascular events）；抗磷脂抗體相關                                                                                                                                                                                                                                                            |
+| 類風濕性關節炎（RA）                                | 類風濕結節（rheumatoid nodules，肘伸側皮下）、血管炎（vasculitis：甲周小梗、腿部潰瘍）、手掌紅斑（palmar erythema）、Bywaters 病灶（甲褶或指墊微梗塞）                                                                                                                                                                                                         |
+
+## 血液疾病
+
+| 疾病                                  | 皮膚表現                                                                                                                                                                                                                                                                                      |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 白血病皮膚浸潤（Leukemia cutis）      | 紅褐色丘疹／結節／斑塊（red-brown papules／nodules／plaques，可出現在任何部位）；綠色瘤（chloroma）；齒齦浸潤腫大（gingival infiltration）                                                                                                                                                    |
+| 淋巴瘤（Lymphoma）                    | 皮膚T細胞淋巴瘤（cutaneous T-cell lymphoma：蕈狀肉芽腫 MF／Sézary 症候群）— 全身紅皮症（erythroderma）、劇癢斑塊（pruritic plaques）、淋巴結腫大；B細胞淋巴瘤（B-cell lymphoma）、血管內大B細胞淋巴瘤（intravascular large B-cell lymphoma）— 網狀青斑（livedo reticularis）、紫斑（purpura） |
+| 何杰金氏淋巴瘤（Hodgkin lymphoma）    | 全身搔癢（generalized pruritus，有時為首發症狀）、魚鱗癬樣皮膚（acquired ichthyosis）、帶狀疱疹（herpes zoster）、結節性紅斑（erythema nodosum）、色素沉著（hyperpigmentation）                                                                                                               |
+| 真性紅血球增多症（Polycythemia vera） | 酒糟鼻樣顏面潮紅（plethora／ruddy cyanosis）、水性搔癢（aquagenic pruritus，接觸水後劇癢，為典型症狀）、網狀青斑（livedo reticularis）、四肢末端紅痛症（erythromelalgia）                                                                                                                     |
+| 血色素沉著症（Hemochromatosis）       | 全身性青銅色色素沉著（bronze hyperpigmentation，陽光曝露處最明顯）、皮膚萎縮乾燥（atrophic dry skin）、匙狀甲（koilonychia）、落髮（alopecia）；青銅色糖尿病（bronze diabetes）                                                                                                               |
+| 紫斑症／凝血異常（Coagulopathy）      | 瘀點（petechiae）、紫斑（purpura）、瘀青（ecchymosis）、血腫（hematoma）、血管炎（vasculitis）、暴發性紫斑（purpura fulminans）                                                                                                                                                               |
+| 冷凝球蛋白血症（Cryoglobulinemia）    | 可觸摸性紫斑（palpable purpura，下肢最常見）、網狀青斑（livedo reticularis）、肢端發紺（acrocyanosis）、雷諾現象（Raynaud phenomenon）、腿部潰瘍（leg ulcers）                                                                                                                                |
+
+## 惡性腫瘤相關（副腫瘤性皮膚症候群 — Paraneoplastic syndromes）
+
+| 皮膚表現                                                   | 常見相關腫瘤                                                            | 備註                                       |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------ |
+| 壞死溶解性游走性紅斑（Necrolytic migratory erythema, NME） | 升糖素瘤（Glucagonoma，胰臟α細胞）                                      | 最早可發現的線索                           |
+| 黑色棘皮症（Acanthosis nigricans, malignant type）         | 胃癌（最常見，惡性型進展快速廣泛）                                      | 成人急速發生應警覺內臟惡性腫瘤             |
+| 皮肌炎（Dermatomyositis）                                  | 卵巢癌、肺癌、胃癌、大腸癌、胰臟癌                                      | 50歲以上成人皮肌炎約25%伴隨惡性腫瘤        |
+| Bazex 症候群（Paraneoplastic acrokeratosis）               | 上呼吸道／消化道鱗狀細胞癌（SCC of upper aerodigestive tract）          | 耳鼻指尖紫紅色角化脫屑                     |
+| 副腫瘤性天皰瘡（Paraneoplastic pemphigus, PNP）            | 淋巴增生性疾病（CLL、NHL）、Castleman disease                           | 嚴重口腔糜爛 + 多形性皮膚病灶              |
+| 後天性胎毛樣多毛症（Hypertrichosis lanuginosa acquisita）  | 大腸癌、肺癌、乳癌、膀胱癌                                              | 突然出現細絲狀胎毛樣毛髮；惡性腫瘤幾乎必見 |
+| 手掌乳頭狀角化（Tripe palms）                              | 胃癌、肺癌                                                              | 手掌天鵝絨樣乳頭狀增厚                     |
+| 紅斑性環狀離心性紅斑（Erythema gyratum repens）            | 肺癌、乳癌、食道癌                                                      | 同心環狀木紋樣紅斑，劇癢                   |
+| Sweet 症候群（Acute febrile neutrophilic dermatosis）      | 急性骨髓性白血病（AML）、造血系統惡性腫瘤                               | 發燒 + 痛性紅斑結節 + 嗜中性球增多         |
+| 游走性血栓靜脈炎（Trousseau syndrome）                     | 胰臟癌、肺癌、胃癌                                                      | 癌症相關高凝血狀態（hypercoagulability）   |
+| Sister Mary Joseph 結節（Sister Mary Joseph nodule）       | 腹腔內惡性腫瘤（胃、大腸、卵巢、胰臟）                                  | 肚臍轉移結節（umbilical metastasis）       |
+| 副腫瘤性全身搔癢（Paraneoplastic pruritus）                | 何杰金氏淋巴瘤、白血病、膽道癌                                          | 原因不明的頑固性全身搔癢                   |
+| Paget 病（Paget disease — mammary／extramammary）          | 乳腺管癌（breast ductal carcinoma）；肛門生殖器區域腺癌（extramammary） | Paget 細胞特徵                             |
+
+## 感染症與免疫重建
+
+| 疾病                           | 皮膚表現                                                                                                                                                                                                                                                                                                             |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| HIV／愛滋病（HIV／AIDS）       | 脂漏性皮膚炎（seborrheic dermatitis，頑固且嚴重，為常見初期表現）、口腔毛樣白斑症（oral hairy leukoplakia）、卡波西肉瘤（Kaposi sarcoma）、反覆帶狀疱疹／單純疱疹（recurrent HSV／HZV）、傳染性軟疣（molluscum contagiosum，廣泛難治）、嗜酸性毛囊炎（eosinophilic folliculitis）、嚴重皮癬菌感染（dermatophytosis） |
+| 川崎氏症（Kawasaki disease）   | 多形性紅疹（polymorphous rash，軀幹四肢）、手腳腫脹脫皮（edema／desquamation，典型恢復期指端膜狀脫屑）、雙側非化膿性結膜炎（conjunctivitis）、草莓舌（strawberry tongue）、唇乾裂出血（dry fissured lips）、頸部淋巴結腫大（cervical lymphadenopathy）                                                               |
+| 結節性紅斑（Erythema nodosum） | 雙側脛前痛性紅褐色結節（painful red-brown nodules — pretibial），不潰瘍；與鏈球菌感染、類肉瘤症（sarcoidosis）、IBD、藥物相關                                                                                                                                                                                        |
+
+## 遺傳性疾病
+
+| 疾病                                                      | 皮膚表現                                                                                                                                                                                                                                                                    |
+| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 神經纖維瘤症候群第一型（NF1, Von Recklinghausen disease） | 咖啡牛奶斑（cafe-au-lait spots，> 6 顆，> 5 mm 青春期前／> 15 mm 青春期後）、腋下／腹股溝雀斑（axillary／inguinal freckling — Crowe sign）、神經纖維瘤（neurofibromas：皮膚 cutaneous、皮下 subcutaneous、叢狀 plexiform）、虹膜利希結節（Lisch nodules — iris hamartomas） |
+| Wilson 病／肝豆狀核變性（Wilson disease）                 | 凱塞-佛來舍環（Kayser-Fleischer rings — 角膜周邊銅沉著綠色環）、皮膚色素沉著（hyperpigmentation）、藍色指甲弧影（blue lunula）                                                                                                                                              |
+| Lesch-Nyhan 症候群（Lesch-Nyhan syndrome）                | 自殘行為（self-mutilation — 咬嘴唇、手指、強迫性）、痛風石（gouty tophi）、尿路結石（urolithiasis）                                                                                                                                                                         |
+| 遲發性皮膚紫質症（Porphyria cutanea tarda, PCT）          | 光敏感性水疱（photosensitive bullae）、皮膚脆弱易破（skin fragility）、多毛症（hypertrichosis）、色素沉著（hyperpigmentation）、硬皮症樣變化（scleroderma-like changes）；與 C型肝炎、酒精、鐵過量相關                                                                      |
+| Blau 症候群／早發性類肉瘤症（Blau syndrome）              | 苔癬樣丘疹性紅斑（lichenoid papular eruption，常於5歲前出現）、關節炎（arthritis）、葡萄膜炎（uveitis） — 遺傳性肉芽腫性發炎（familial granulomatous inflammation）                                                                                                         |
+
+## 神經與精神疾病
+
+| 疾病                                              | 皮膚表現                                                                                                                                                                       |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 拔毛症（Trichotillomania）                        | 不規則斑片狀落髮（irregular patchy hair loss — 頭頂、雙側，保留髮線）、斷髮長度不一（fractured hairs）、患者常否認；食毛症（trichophagia）→ 毛胃石（bezoars）                  |
+| Ross 症候群（Ross syndrome）                      | 節段性無汗症（segmental anhidrosis）+ 代償性多汗（compensatory hyperhidrosis）+ 瞳孔異常（tonic pupil — Adie pupil）+ 皮膚乾燥（dry skin）                                     |
+| 脊髓損傷／截癱（Spinal cord injury / Paraplegia） | 壓瘡（pressure ulcers）、自主神經反射異常（autonomic dysreflexia — 顏面潮紅）、水腫（edema）、淋巴水腫（lymphedema）、皮膚萎縮（skin atrophy）、慢性感染（chronic infections） |
+
+## 其他系統性狀況
+
+| 狀況                                                 | 皮膚表現                                                                                                                                                                                                                                                 |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 肥胖與皮膚（Obesity and the skin）                   | 黑色棘皮症（acanthosis nigricans）、皮膚贅瘤（acrochordons）、皮膚裂縫（intertrigo）、脂漏增加（seborrhea）、毛囊炎（folliculitis）、蜂窩性組織炎（cellulitis）、靜脈功能不全（venous insufficiency）、脂肪水腫（lipoedema）、妊娠紋（striae distensae） |
+| 免疫抑制／器官移植（Immunosuppression / Transplant） | 皮膚感染（HPV 疣、黴菌、疱疹）、藥物相關皮疹（drug eruptions）、表皮防禦力下降、皮膚癌風險升高（SCC 增加 65–250 倍）                                                                                                                                     |
+| 免疫重建發炎症候群（IRIS）                           | 開始 ART 後，潛伏感染（帶狀疱疹、隱球菌、結核菌）或腫瘤（Kaposi sarcoma）之炎症性惡化（inflammatory flare）                                                                                                                                              |
+| 妄想性寄生蟲症（Morgellons disease）                 | 慢性搔癢（chronic pruritus）+ 皮膚潰瘍（skin ulcers）+ 自覺皮內或皮下有異物／纖維；爭議性診斷，多歸類為妄想性寄生蟲症（delusional parasitosis）                                                                                                          |
+
+---
+
+::: info 免責聲明
+本文整理自 DermNet 等皮膚科學參考資料，僅供醫療專業人員教育參考，**不構成個別患者的治療建議**。實際診斷與治療應依最新臨床指引及個別患者狀況決定。
+:::

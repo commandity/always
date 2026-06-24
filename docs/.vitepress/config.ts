@@ -599,6 +599,10 @@ export default defineConfig({
               text: "泌尿系統",
               link: "/reference/echo/urology-sono",
             },
+            {
+              text: "腹部超音波解剖學精要",
+              link: "/reference/echo/abdominal-sono",
+            },
           ],
         },
         {
@@ -612,6 +616,10 @@ export default defineConfig({
             {
               text: "皮膚科鑑別診斷",
               link: "/reference/clinic/dermatology-ddx",
+            },
+            {
+              text: "全身性疾病的皮膚表徵",
+              link: "/reference/skin/systemic-disease-skin-signs",
             },
           ],
         },
@@ -666,6 +674,10 @@ export default defineConfig({
             {
               text: "SGLT2 抑制劑（排糖藥）適應症與給付",
               link: "/reference/dm/sglt2-inhibitors",
+            },
+            {
+              text: "胰島素阻抗的臨床表現與皮膚表徵",
+              link: "/reference/dm/insulin-resistance",
             },
           ],
         },

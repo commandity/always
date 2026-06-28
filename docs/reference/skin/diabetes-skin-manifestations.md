@@ -23,9 +23,6 @@ title: 糖尿病皮膚表現
 - **臨床意義**：胰島素阻抗的皮膚標誌；出現時應篩檢 DM 及相關內分泌疾病
 - **治療**：首重生活型態調整（飲食、運動、減重）＋ metformin；局部可用 retinoid、vitamin D 類似物、keratolytic
 
-![Acanthosis Nigricans](./skin-manifestations/Acanthosis%20nigricans.jpg)
-_Acanthosis Nigricans — 頸後／腋下灰棕色天鵝絨樣斑塊_
-
 ### Diabetic Dermopathy（糖尿病皮病變／脛前斑）
 
 - **盛行率**：高達 **50%** — 最常見的 DM 皮膚表現
@@ -34,9 +31,6 @@ _Acanthosis Nigricans — 頸後／腋下灰棕色天鵝絨樣斑塊_
 - **病程**：18–24 個月消退，遺留色素沉著＋輕度凹陷；不同病灶可處於不同階段
 - **關聯性**：常伴隨 microvascular disease（視網膜病變、腎病變）；與 CVD 相關
 - **治療**：無需治療（自限性）；但需加強篩檢微血管併發症
-
-![Diabetic Dermopathy](./skin-manifestations/Diabetic%20Dermopathy.jpg)
-_Diabetic Dermopathy — 雙側脛前萎縮性棕色斑，表面細鱗屑_
 
 ### Diabetic Foot Syndrome（糖尿病足）
 
@@ -81,11 +75,6 @@ _Diabetic Dermopathy — 雙側脛前萎縮性棕色斑，表面細鱗屑_
 - **併發症**：~1/3 會潰瘍 → 續發性感染或 SCC
 - **治療**：困擾 — 多數治療反應不一；類固醇（局部／病灶內／口服）、calcineurin inhibitors、anti-TNF；控制血糖未必改善皮膚病灶
 
-![Necrobiosis Lipoidica mild](./skin-manifestations/Necrobiosis%20Lipoidica%20mild.jpg)
-_Necrobiosis Lipoidica（輕度）— 脛前黃棕色萎縮性斑塊伴 telangiectasias_
-![Necrobiosis Lipoidica severe](./skin-manifestations/Necrobiosis%20Lipoidica%20severe.jpg)
-_Necrobiosis Lipoidica（重度）— 廣泛潰瘍形成_
-
 ### Bullosis Diabeticorum（糖尿病性水疱）
 
 - **盛行率**：約 0.5% DM 患者
@@ -93,9 +82,6 @@ _Necrobiosis Lipoidica（重度）— 廣泛潰瘍形成_
 - **好發部位**：雙側下肢遠端（acral）
 - **預後**：2–6 週自癒，但易復發
 - **治療**：無需治療 — 保護皮膚、避免感染；大水泡可穿刺減壓
-
-![Bullosis Diabeticorum](./skin-manifestations/Bullosis%20Diabeticorum.jpg)
-_Bullosis Diabeticorum — 下肢遠端突發性無菌性水疱_
 
 ## 二、Nonspecific Dermatologic Signs and Symptoms
 
@@ -116,40 +102,17 @@ _Bullosis Diabeticorum — 下肢遠端突發性無菌性水疱_
 | **Yellow Skin & Nails**                   | 無症狀黃色變                   | 手掌、腳掌、臉、趾甲    | 可能與 carotene、glycosylated proteins 堆積有關 |
 | **Onychocryptosis**                       | 嵌甲                           | 大腳趾                  | type 2 DM 相關；與 BMI、創傷、血管供應有關      |
 
-![Ichthyosiform Changes](./skin-manifestations/Acquired%20ichthyosiform%20changes.jpg)
-_Ichthyosiform Changes — 雙側脛前乾燥魚鱗狀脫屑_
-![Eruptive Xanthomas](./skin-manifestations/Eruptive%20Xanthomas.jpg) ![Eruptive Xanthomatosis](./skin-manifestations/Eruptive%20Xanthomatosis.jpg)
-_Eruptive Xanthomas（左）及 Eruptive Xanthomatosis（右）— 伸側粉黃色丘疹_
-![Acrochordons](./skin-manifestations/Acrochordons.jpg)
-_Acrochordons（Skin Tags）— 頸部軟性有柄贅生物_
-![Keratosis Pilaris](./skin-manifestations/Keratosis%20pilaris.jpg)
-_Keratosis Pilaris — 上臂後側毛囊角化丘疹_
-![Palmar Erythema](./skin-manifestations/Palmar%20erythema.jpg)
-_Palmar Erythema — 對稱性手掌發紅_
-
 ## 三、Dermatologic Diseases Associated with DM
 
 - **Generalized Granuloma Annulare（GGA）** — 膚色／紅色環狀丘疹或斑塊，中央消退、邊緣隆起；軀幹＋四肢對稱分布；10–15% GGA 患者有 DM
-
-  ![Generalized Granuloma Annulare](./skin-manifestations/Generalized%20granuloma%20annulare.jpg)
-  _Generalized Granuloma Annulare — 軀幹環狀隆起丘疹／斑塊_
 
 - **Psoriasis** — 與 DM 風險增加相關（尤其年輕＋嚴重乾癬患者）
 - **Lichen Planus** — 多角形紫紅色丘疹，手腕／腳踝常見；~25% LP 患者有 DM
 - **Vitiligo** — 境界清楚之脫色斑；type 1 DM 更常見；應篩檢自體免疫甲狀腺疾病
 
-  ![Vitiligo](./skin-manifestations/Vitiligo.jpg)
-  _Vitiligo — 境界清楚之脫色斑（type 1 DM 常見）_
-
 - **Hidradenitis Suppurativa（HS）** — 腋下／腹股溝反覆發炎結節、膿瘍、瘻管；HS 患者 DM 盛行率為一般人群 3 倍
 
-  ![Hidradenitis suppurativa](./skin-manifestations/Hidradenitis%20suppurativa.jpg)
-  _Hidradenitis Suppurativa — 腋下反覆發炎結節、瘻管_
-
 - **Glucagonoma** — 罕見神經內分泌腫瘤；70–83% 出現 **Necrolytic Migratory Erythema（NME）**；20–40% 在診斷 glucagonoma 前已確診 DM
-
-  ![Necrolytic migratory erythema](./skin-manifestations/Necrolytic%20migratory%20erythema.jpg)
-  _Necrolytic Migratory Erythema（NME）— Glucagonoma 典型皮膚表現_
 
 - **Melanoma** — type 2 DM 雖不增加發生率，但診斷時分期更晚、更易出現 ulceration
 
@@ -214,5 +177,41 @@ _Palmar Erythema — 對稱性手掌發紅_
 8. **GLP-1 receptor agonist** — 高劑量可能引起感覺異常、落髮；快速減重導致 **"GLP-1 face"**（面部脂肪流失）
 9. **Scleredema diabeticorum** 緩慢進展、治療棘手；2024 EDF 指引：一線 UVA1/PUVA
 10. **多重皮膚表現同時出現** → 應全面評估血糖控制及 DM 併發症
+
+## 附錄：臨床影像速查（Photo Grid）
+
+> 以下影像整理自各類糖尿病相關皮膚表現，僅供形態學比對參考。
+
+### 一、Skin Manifestations Strongly Associated with DM
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/skin-manifestations/Acanthosis-nigricans.jpg" alt="Acanthosis nigricans" loading="lazy"/><figcaption>Acanthosis Nigricans</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Diabetic-Dermopathy.jpg" alt="Diabetic dermopathy" loading="lazy"/><figcaption>Diabetic Dermopathy</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Necrobiosis-Lipoidica-mild.jpg" alt="Necrobiosis lipoidica mild" loading="lazy"/><figcaption>Necrobiosis Lipoidica（輕度）</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Necrobiosis-Lipoidica-severe.jpg" alt="Necrobiosis lipoidica severe" loading="lazy"/><figcaption>Necrobiosis Lipoidica（重度）</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Bullosis-Diabeticorum.jpg" alt="Bullosis diabeticorum" loading="lazy"/><figcaption>Bullosis Diabeticorum</figcaption></figure>
+</div>
+
+### 二、Nonspecific Dermatologic Signs
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/skin-manifestations/Acquired-ichthyosiform-changes.jpg" alt="Ichthyosiform changes" loading="lazy"/><figcaption>Ichthyosiform Changes</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Eruptive-Xanthomas.jpg" alt="Eruptive xanthomas" loading="lazy"/><figcaption>Eruptive Xanthomas</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Eruptive-Xanthomatosis.jpg" alt="Eruptive xanthomatosis" loading="lazy"/><figcaption>Eruptive Xanthomatosis</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Acrochordons.jpg" alt="Acrochordons" loading="lazy"/><figcaption>Acrochordons (Skin Tags)</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Keratosis-pilaris.jpg" alt="Keratosis pilaris" loading="lazy"/><figcaption>Keratosis Pilaris</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Palmar-erythema.jpg" alt="Palmar erythema" loading="lazy"/><figcaption>Palmar Erythema</figcaption></figure>
+</div>
+
+### 三、Dermatologic Diseases Associated with DM
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/skin-manifestations/Generalized-granuloma-annulare.jpg" alt="Generalized granuloma annulare" loading="lazy"/><figcaption>Generalized Granuloma Annulare</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Vitiligo.jpg" alt="Vitiligo" loading="lazy"/><figcaption>Vitiligo</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Hidradenitis-suppurativa.jpg" alt="Hidradenitis suppurativa" loading="lazy"/><figcaption>Hidradenitis Suppurativa</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Necrolytic-migratory-erythema.jpg" alt="Necrolytic migratory erythema" loading="lazy"/><figcaption>Necrolytic Migratory Erythema (NME)</figcaption></figure>
+</div>
+
+---
 
 > **References**: Edwards E, Yosipovitch G. Skin Manifestations of Diabetes Mellitus. In: Feingold KR, et al., editors. Endotext [Internet]. South Dartmouth (MA): MDText.com, Inc.; 2000-. Updated March 21, 2025. Available from: https://www.ncbi.nlm.nih.gov/books/NBK481900/

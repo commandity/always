@@ -10,8 +10,6 @@ password: "516800"
 
 > **核心概念**：兒童皮疹原因廣泛，從自限性病毒感染到致命性敗血症皆有可能。**最重要的第一步是評估孩子是否 toxic（病懨懨／中毒樣）**，而非急著判斷皮疹形態。Toxic appearance + 皮疹 = 緊急情況，需立刻處理。
 
----
-
 ## 第一步：快速分診（Rapid Triage）
 
 ### Red Flags — 需緊急評估
@@ -26,8 +24,6 @@ password: "516800"
 | 意識改變                           | 腦膜炎、腦炎、敗血症相關腦病變                     |
 | 呼吸窘迫                           | 肺炎併發敗血症、麻疹重度肺炎                       |
 | 黏膜侵犯（口腔、眼、生殖器）       | SJS/TEN、EM major、Kawasaki、HSV                   |
-
----
 
 ## 第二步：發燒有無 → 鑑別方向
 
@@ -53,8 +49,6 @@ password: "516800"
               │
               └── 無症狀 → 病毒疹恢復期、pityriasis rosea、milium、血管瘤
 ```
-
----
 
 ## 第三步：皮疹形態分類（Morphology Approach）
 
@@ -105,8 +99,6 @@ password: "516800"
 | **血清病樣反應**（Serum sickness-like reaction）     | 用藥後（常見 cefaclor）7–14 天出現蕁麻疹樣皮疹 + 發燒 + 關節痛           | 良性自限；無血管炎或腎臟侵犯（與 HSP 鑑別）                                  |
 | **史迪爾氏症**（Still's disease, AOSD）              | 間歇高燒 + 褪色性鮭魚紅疹（evanescent salmon-pink rash）伴隨發燒高峰出現 | 關節痛、咽喉痛、血清 ferritin 顯著升高                                       |
 
----
-
 ## 第四步：無發燒（或微燒）皮疹鑑別
 
 ### 五、無發燒 — 搔癢性皮疹
@@ -138,8 +130,6 @@ password: "516800"
 | **新生兒頭部膿疱病**（Neonatal cephalic pustulosis）      | 額頭、臉頰、下巴紅色丘疹膿疱（新生兒痤瘡）                     | 出生後 2–4 週出現；數月內自癒；不需治療                                  |
 | **嬰兒脂漏性皮膚炎**（Seborrheic dermatitis／Cradle cap） | 頭皮油膩黃色脫屑（乳痂）；可延伸至臉、耳後、腋下               | 出生後數月常見；自限性；與 Malassezia 相關                               |
 
----
-
 ## 第五步：診斷輔助工具（Diagnostic Workup）
 
 ### 基礎評估
@@ -159,8 +149,6 @@ password: "516800"
 | PCR／病毒培養                                 | 懷疑特定病毒（HSV、VZV、Enterovirus 71、Measles）                                  |
 | 心臟超音波（Echocardiogram）                  | 川崎病 → 排除冠狀動脈瘤                                                            |
 
----
-
 ## 第六步：年齡層特殊考量
 
 | 年齡層                  | 好發診斷                                                                            |
@@ -170,8 +158,6 @@ password: "516800"
 | **幼兒（1–5 歲）**      | HFMD、水痘、玫瑰疹、猩紅熱、Gianotti-Crosti、烏龜/寵物相關 tinea、疥瘡              |
 | **學齡兒童（5–12 歲）** | Parvovirus B19、猩紅熱、川崎病、ITP、HSP、傳染性軟疣、玫瑰糠疹                      |
 | **青少年**              | EBV、多形性紅斑、藥物疹、DRESS、膿瘍性痤瘡、STI 相關皮疹（HIV、梅毒、HSV）          |
-
----
 
 ## 速查摘要表（Quick Reference Summary）
 
@@ -188,8 +174,6 @@ password: "516800"
 | 無   | 搔癢性               | 異位性皮膚炎、疥瘡、蕁麻疹                |
 | 無   | 水疱／結痂           | 膿痂疹、軟疣、體癬                        |
 | 無   | 無症狀               | 病毒疹恢復期、玫瑰糠疹、血管瘤            |
-
----
 
 ## 關鍵鑑別要點（Key Diff Tips）
 

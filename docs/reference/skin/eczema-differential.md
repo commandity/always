@@ -264,6 +264,65 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 
 ---
 
+## 附錄：臨床影像速查（Photo Grid）
+
+> 以下影像整理自各類濕疹及類濕疹疾病，僅供形態學比對參考。
+
+### 一、原發性濕疹（Primary Eczema）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/eczema-ddx/atopic-dermatitis.jpg" alt="Atopic dermatitis" loading="lazy"/><figcaption>Atopic Dermatitis</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/allergic-contact-dermatitis.jpg" alt="Allergic contact dermatitis" loading="lazy"/><figcaption>Allergic Contact Dermatitis</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/irritant-contact-dermatitis.jpg" alt="Irritant contact dermatitis" loading="lazy"/><figcaption>Irritant Contact Dermatitis</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/seborrhoeic-dermatitis.jpg" alt="Seborrheic dermatitis" loading="lazy"/><figcaption>Seborrheic Dermatitis</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/pompholyx.jpg" alt="Dyshidrotic eczema" loading="lazy"/><figcaption>Dyshidrotic Eczema</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/nummular-dermatitis.jpg" alt="Nummular eczema" loading="lazy"/><figcaption>Nummular Eczema</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/stasis-dermatitis.jpg" alt="Stasis dermatitis" loading="lazy"/><figcaption>Stasis Dermatitis</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/lichen-simplex-chronicus.jpg" alt="Lichen simplex chronicus" loading="lazy"/><figcaption>Lichen Simplex Chronicus</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/nodular-prurigo.jpg" alt="Prurigo nodularis" loading="lazy"/><figcaption>Prurigo Nodularis</figcaption></figure>
+</div>
+
+### 二、感染性及感染誘發（Infectious & Infection-related）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/eczema-ddx/dermatophytide-reaction.jpg" alt="Dermatophytid reaction" loading="lazy"/><figcaption>Dermatophytid (Id Reaction)</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/scabies.jpg" alt="Scabies" loading="lazy"/><figcaption>Scabies</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/impetigo.jpg" alt="Impetigo" loading="lazy"/><figcaption>Impetigo</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/tinea-corporis.jpeg" alt="Tinea corporis" loading="lazy"/><figcaption>Tinea Corporis</figcaption></figure>
+</div>
+
+### 三、系統性疾病相關（Systemic Disease-related）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/eczema-ddx/dermatitis-herpetiformis.jpg" alt="Dermatitis herpetiformis" loading="lazy"/><figcaption>Dermatitis Herpetiformis</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/xerosis.jpeg" alt="Xerosis" loading="lazy"/><figcaption>Xerosis</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/uremic-pruritus.jpg" alt="Uremic pruritus" loading="lazy"/><figcaption>Uremic Pruritus</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/acquired-ichthyosis.jpg" alt="Acquired ichthyosis" loading="lazy"/><figcaption>Acquired Ichthyosis</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/POEMS.jpeg" alt="POEMS syndrome" loading="lazy"/><figcaption>POEMS Syndrome</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/dermatomyositis.jpg" alt="Dermatomyositis mechanics hands" loading="lazy"/><figcaption>Dermatomyositis (Mechanic's Hands)</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/hodgkin-lymphoma.jpg" alt="Hodgkin lymphoma pruritus" loading="lazy"/><figcaption>Hodgkin Lymphoma Pruritus</figcaption></figure>
+</div>
+
+### 四、藥物疹（Drug Reactions）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/eczema-ddx/drug-eruption.jpg" alt="Drug eruption" loading="lazy"/><figcaption>Drug Eruption</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/morbilliform_drug_eruption.jpeg" alt="Morbilliform drug eruption" loading="lazy"/><figcaption>Morbilliform Drug Eruption</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/fix-drug-eruption.jpg" alt="Fixed drug eruption" loading="lazy"/><figcaption>Fixed Drug Eruption</figcaption></figure>
+</div>
+
+### 五、類濕疹疾病（Eczema Mimics）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/eczema-ddx/psoriasis.webp" alt="Psoriasis" loading="lazy"/><figcaption>Psoriasis</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/Pityriasisrosae.png" alt="Pityriasis rosea" loading="lazy"/><figcaption>Pityriasis Rosea</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/mycosis-fungoides.jpg" alt="Mycosis fungoides" loading="lazy"/><figcaption>Mycosis Fungoides (CTCL)</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/Bowen-disease.png" alt="Bowen disease" loading="lazy"/><figcaption>Bowen Disease</figcaption></figure>
+  <figure><img src="/reference/skin/eczema-ddx/extra-paget.jpg" alt="Extramammary Paget disease" loading="lazy"/><figcaption>Extramammary Paget Disease</figcaption></figure>
+</div>
+
+---
+
 ::: warning 臨床警示：何時必須皮膚活檢？
 
 - 對局部類固醇治療 4–6 週無反應

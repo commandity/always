@@ -553,15 +553,13 @@ body {
   color: var(--vp-c-text-1);
 }
 
-.journal-post {
-  max-width: 688px;
-  margin: 0 auto;
-}
-
-.journal-post > p {
-  text-indent: 2em;
+.journal .vp-doc > p {
   line-height: 2;
   margin: 1.5rem 0;
+}
+
+.journal .content-container {
+  max-width: 688px !important;
 }
 
 /* h2 title in .vue */
@@ -570,13 +568,6 @@ h2.title {
   font-weight: 600 !important;
   line-height: 32px !important;
   letter-spacing: -0.02em !important;
-}
-
-.journal-post h1 + p,
-.journal-post h2 + p,
-.journal-post h3 + p,
-.journal-post hr + p {
-  text-indent: 0;
 }
 
 h1,

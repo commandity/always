@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { data as posts } from "../../posts.data.ts";
-import { ref, computed, onMounted, nextTick } from "vue";
+import { ref, computed, watch, nextTick, onMounted } from "vue";
 
 const selectedTag = ref<string | null>(null);
 const contentRefs = ref<Map<string, HTMLElement>>(new Map());
@@ -32,6 +32,7 @@ function formatDate(dateStr: string) {
 
 function setContentRef(url: string, el: HTMLElement | null) {
   if (el) contentRefs.value.set(url, el);
+  else contentRefs.value.delete(url);
 }
 
 function stripH1(html: string) {
@@ -46,13 +47,23 @@ function stripCoverImg(html: string, cover: string) {
   );
 }
 
-onMounted(async () => {
-  await nextTick();
-  for (const p of filteredPosts.value) {
-    const el = contentRefs.value.get(p.url);
-    if (el && el.scrollHeight > el.clientHeight) truncated.value.add(p.url);
-  }
-});
+function detect() {
+  truncated.value = new Set();
+  nextTick().then(() => {
+    const posts = filteredPosts.value;
+    for (const p of posts) {
+      if (p.abstract) continue;
+      const el = contentRefs.value.get(p.url);
+      if (!el) continue;
+      const lh = parseFloat(getComputedStyle(el).lineHeight);
+      const th = (isNaN(lh) ? 27 : lh) * 10;
+      if (el.scrollHeight > th) truncated.value.add(p.url);
+    }
+  });
+}
+
+onMounted(detect);
+watch(filteredPosts, detect);
 </script>
 
 <template>
@@ -110,14 +121,26 @@ onMounted(async () => {
 
           <h2 class="card-title">{{ post.title }}</h2>
 
-          <div
-            class="card-body-content"
-            :class="{ truncated: truncated.has(post.url) }"
-            :ref="
-              (el: any) => setContentRef(post.url, el as HTMLElement | null)
-            "
-            v-html="stripCoverImg(stripH1(post.html), post.cover)"
-          />
+          <template v-if="post.abstract">
+            <div class="card-body-abstract">
+              <p>{{ post.abstract }}</p>
+            </div>
+          </template>
+          <template v-else>
+            <div class="card-body-content">
+              <div
+                class="card-body-text"
+                :class="{ truncated: truncated.has(post.url) }"
+                :ref="
+                  (el: any) => setContentRef(post.url, el as HTMLElement | null)
+                "
+                v-html="stripCoverImg(stripH1(post.html), post.cover)"
+              />
+              <div v-if="truncated.has(post.url)" class="card-body-more">
+                ......
+              </div>
+            </div>
+          </template>
 
           <div class="card-footer">
             <div class="card-tags">
@@ -155,12 +178,13 @@ onMounted(async () => {
 }
 @media (min-width: 960px) {
   .blog-home {
-    padding: 48px 0 96px;
+    padding: 48px 32px 96px;
+    max-width: 880px;
   }
 }
 @media (min-width: 1440px) {
   .blog-home {
-    max-width: 784px;
+    max-width: 960px;
   }
 }
 
@@ -339,20 +363,33 @@ onMounted(async () => {
 
 .card-body-content {
   line-height: 1.7;
-  max-height: 480px;
+  max-height: calc(1.7em * 11);
   overflow: hidden;
-  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.card-body-text {
+  overflow: hidden;
+}
+.card-body-text.truncated {
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+}
+.card-body-more {
+  line-height: 1.7;
+  color: var(--vp-c-text-3);
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.card-body-abstract {
   flex: 1;
 }
-.card-body-content.truncated::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: linear-gradient(transparent, var(--vp-c-bg-soft));
-  pointer-events: none;
+.card-body-abstract p {
+  margin: 0.6rem 0;
+  line-height: 1.7;
 }
 
 .card-body-content :deep(img) {
@@ -382,11 +419,6 @@ onMounted(async () => {
 .card-body-content :deep(a) {
   color: var(--vp-c-brand-1);
 }
-.card-body-content :deep(.journal-post) {
-  max-width: none;
-  margin: 0;
-}
-
 .card-footer {
   display: flex;
   align-items: center;

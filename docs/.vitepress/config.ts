@@ -618,6 +618,14 @@ export default defineConfig({
               link: "/reference/clinic/dermatology-ddx",
             },
             {
+              text: "濕疹鑑別診斷",
+              link: "/reference/skin/eczema-differential",
+            },
+            {
+              text: "兒童皮疹鑑別診斷（有無發燒）",
+              link: "/reference/skin/pediatric-rash-differential",
+            },
+            {
               text: "全身性疾病的皮膚表徵",
               link: "/reference/skin/systemic-disease-skin-signs",
             },
@@ -783,6 +791,12 @@ export default defineConfig({
         pageData.frontmatter.password =
           "sha256:" + createHash("sha256").update(s).digest("hex");
       }
+    }
+    if (
+      pageData.relativePath?.startsWith("blog/") &&
+      pageData.relativePath !== "blog/index.md"
+    ) {
+      pageData.frontmatter.pageClass = "journal";
     }
   },
 });

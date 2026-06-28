@@ -15,6 +15,7 @@ export default createContentLoader("blog/*.md", {
         author: p.frontmatter.author ?? "Anonymous",
         avatar: p.frontmatter.avatar ?? "",
         cover: p.frontmatter.cover ?? "",
+        abstract: p.frontmatter.abstract ?? "",
       }))
       .sort((a, b) => +new Date(b.date) - +new Date(a.date));
   },

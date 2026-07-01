@@ -1,4 +1,4 @@
-import { h, computed, watch, defineComponent } from "vue";
+import { h, computed, watch, defineComponent, onMounted } from "vue";
 import { useData, useRoute, useRouter } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { showSidebar } from "./components/layout/sidebarStore";
@@ -128,6 +128,30 @@ export default {
       const route = useRoute();
       const router = useRouter();
       const isHome = computed(() => frontmatter.value.layout === "home");
+
+      onMounted(() => {
+        const lb = document.createElement("div");
+        lb.className = "eczema-lightbox";
+        document.body.appendChild(lb);
+        const img = new Image();
+        lb.appendChild(img);
+        lb.addEventListener("click", () => lb.classList.remove("open"));
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") lb.classList.remove("open");
+        });
+        const observer = new MutationObserver(() => {
+          document.querySelectorAll(".eczema-grid figure").forEach((el) => {
+            if (el.dataset.lb) return;
+            el.dataset.lb = "1";
+            el.addEventListener("click", (e) => {
+              const src = el.querySelector("img")?.getAttribute("src") || "";
+              img.src = src;
+              lb.classList.add("open");
+            });
+          });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      });
 
       watch(
         [() => showSidebar.value, () => showAside.value, () => route.path],

@@ -206,10 +206,10 @@ title: 糖尿病皮膚表現
 ### 三、Dermatologic Diseases Associated with DM
 
 <div class="eczema-grid">
-  <figure><img src="/reference/skin/skin-manifestations/Generalized-granuloma-annulare.jpg" alt="Generalized granuloma annulare" loading="lazy"/><figcaption>Generalized Granuloma Annulare</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Generalized-granuloma-annulare.jpg" alt="Generalized granuloma annulare" loading="lazy"/><figcaption>Granuloma Annulare</figcaption></figure>
   <figure><img src="/reference/skin/skin-manifestations/Vitiligo.jpg" alt="Vitiligo" loading="lazy"/><figcaption>Vitiligo</figcaption></figure>
   <figure><img src="/reference/skin/skin-manifestations/Hidradenitis-suppurativa.jpg" alt="Hidradenitis suppurativa" loading="lazy"/><figcaption>Hidradenitis Suppurativa</figcaption></figure>
-  <figure><img src="/reference/skin/skin-manifestations/Necrolytic-migratory-erythema.jpg" alt="Necrolytic migratory erythema" loading="lazy"/><figcaption>Necrolytic Migratory Erythema (NME)</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Necrolytic-migratory-erythema.jpg" alt="Necrolytic migratory erythema" loading="lazy"/><figcaption>遷移性表皮壞死紅斑症 (NME)</figcaption></figure>
 </div>
 
 ---

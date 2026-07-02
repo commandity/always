@@ -226,8 +226,11 @@ function reset() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0%</span><span class="tick-threshold">45%</span><span>70%</span
-          ><span>90%</span><span>100%</span>
+          <span class="tk-normal">0%</span
+          ><span class="tick-threshold">45%</span
+          ><span class="tk-mild">70%</span
+          ><span class="tk-moderate">90%</span
+          ><span class="tk-severe">100%</span>
         </div>
       </div>
 
@@ -653,6 +656,23 @@ function reset() {
   height: 6px;
   background: #f59e0b;
   border-radius: 1px;
+}
+
+.severity-ticks .tk-normal {
+  color: #22c55e;
+  font-weight: 700;
+}
+.severity-ticks .tk-mild {
+  color: #84cc16;
+  font-weight: 700;
+}
+.severity-ticks .tk-moderate {
+  color: #f59e0b;
+  font-weight: 700;
+}
+.severity-ticks .tk-severe {
+  color: #f97316;
+  font-weight: 700;
 }
 
 /* ── Intro ─────────────────────────────────────────────────────── */

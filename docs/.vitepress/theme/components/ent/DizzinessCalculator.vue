@@ -5800,11 +5800,11 @@ const dhi_qIndex = (() => {
             />
           </div>
           <div class="dhi_severity-ticks">
-            <span>0</span>
+            <span class="tk-normal">0</span>
             <span class="tick-threshold">16</span>
-            <span>34</span>
-            <span>60</span>
-            <span>100</span>
+            <span class="tk-mild">34</span>
+            <span class="tk-moderate">60</span>
+            <span class="tk-severe">100</span>
           </div>
         </div>
 
@@ -8042,6 +8042,35 @@ const dhi_qIndex = (() => {
 }
 .tick-threshold {
   color: #f59e0b;
+  font-weight: 700;
+  position: relative;
+}
+.tick-threshold::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 6px;
+  background: #f59e0b;
+  border-radius: 1px;
+}
+
+.dhi_severity-ticks .tk-normal {
+  color: #22c55e;
+  font-weight: 700;
+}
+.dhi_severity-ticks .tk-mild {
+  color: #84cc16;
+  font-weight: 700;
+}
+.dhi_severity-ticks .tk-moderate {
+  color: #f59e0b;
+  font-weight: 700;
+}
+.dhi_severity-ticks .tk-severe {
+  color: #f97316;
   font-weight: 700;
 }
 

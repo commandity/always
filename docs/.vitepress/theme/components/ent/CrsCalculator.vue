@@ -313,8 +313,9 @@ async function snotCopy() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span>1</span><span>2</span
-          ><span class="tick-threshold">3 ✓</span><span>4</span><span>5</span>
+          <span>0</span><span>1</span><span class="tk-moderate">2</span
+          ><span class="tick-threshold">3 ✓</span
+          ><span class="tk-normal">4</span><span class="tk-normal">5</span>
         </div>
       </div>
 
@@ -598,8 +599,10 @@ async function snotCopy() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span>20</span><span class="tick-threshold">40</span
-          ><span>60</span><span>110</span>
+          <span class="tk-normal">0</span><span class="tk-mild">20</span
+          ><span class="tick-threshold amber">40</span
+          ><span class="tk-moderate">60</span
+          ><span class="tk-severe">110</span>
         </div>
       </div>
 
@@ -985,6 +988,29 @@ async function snotCopy() {
   height: 6px;
   background: #22c55e;
   border-radius: 1px;
+}
+.tick-threshold.amber {
+  color: #f59e0b;
+}
+.tick-threshold.amber::after {
+  background: #f59e0b;
+}
+
+.severity-ticks .tk-normal {
+  color: #22c55e;
+  font-weight: 700;
+}
+.severity-ticks .tk-mild {
+  color: #84cc16;
+  font-weight: 700;
+}
+.severity-ticks .tk-moderate {
+  color: #f59e0b;
+  font-weight: 700;
+}
+.severity-ticks .tk-severe {
+  color: #f97316;
+  font-weight: 700;
 }
 
 /* ── Intro ─────────────────────────────────────────────────────── */

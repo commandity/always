@@ -336,8 +336,9 @@ async function essCopy() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span>1</span><span class="tick-threshold">3</span
-          ><span>5</span><span>8</span>
+          <span class="tk-normal">0</span><span class="tk-normal">1</span
+          ><span class="tick-threshold">3</span
+          ><span class="tk-moderate">5</span><span class="tk-severe">8</span>
         </div>
       </div>
 
@@ -574,8 +575,11 @@ async function essCopy() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span>10</span><span>12</span><span>15</span
-          ><span>17</span><span>24</span>
+          <span class="tk-normal">0</span
+          ><span class="tick-threshold">10</span
+          ><span class="tk-mild">12</span><span class="tk-moderate">15</span
+          ><span class="tk-severe">17</span
+          ><span class="tk-critical">24</span>
         </div>
       </div>
 
@@ -939,6 +943,27 @@ async function essCopy() {
   height: 6px;
   background: #f97316;
   border-radius: 1px;
+}
+
+.severity-ticks .tk-normal {
+  color: #22c55e;
+  font-weight: 700;
+}
+.severity-ticks .tk-mild {
+  color: #84cc16;
+  font-weight: 700;
+}
+.severity-ticks .tk-moderate {
+  color: #f59e0b;
+  font-weight: 700;
+}
+.severity-ticks .tk-severe {
+  color: #f97316;
+  font-weight: 700;
+}
+.severity-ticks .tk-critical {
+  color: #ef4444;
+  font-weight: 700;
 }
 
 /* ── Intro ─────────────────────────────────────────────────────── */

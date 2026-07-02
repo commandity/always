@@ -997,15 +997,14 @@ html {
   color: var(--vp-c-text-2) !important;
 }
 
-/* Severity bar ticks */
+/* Severity bar ticks — font sizing only; tick colors come from each
+   component's severity zone classes (tk-*, tick-threshold, tick-cutoff) */
 .severity-ticks {
   font-size: 0.75rem !important;
-  color: var(--vp-c-text-2) !important;
 }
 .tick-abs,
 .label-abs {
   font-size: 0.72rem !important;
-  color: var(--vp-c-text-2) !important;
 }
 
 /* Risk strip */

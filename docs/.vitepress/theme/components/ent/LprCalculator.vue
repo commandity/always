@@ -367,11 +367,11 @@ function rsiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span>
+          <span class="tk-normal">0</span>
           <span class="tick-threshold">7</span>
-          <span>11</span>
-          <span>17</span>
-          <span>26</span>
+          <span class="tk-mild">11</span>
+          <span class="tk-moderate">17</span>
+          <span class="tk-severe">26</span>
         </div>
       </div>
 
@@ -548,11 +548,11 @@ function rsiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span>
+          <span class="tk-normal">0</span>
           <span class="tick-threshold">13</span>
-          <span>20</span>
-          <span>30</span>
-          <span>45</span>
+          <span class="tk-mild">20</span>
+          <span class="tk-moderate">30</span>
+          <span class="tk-severe">45</span>
         </div>
       </div>
 
@@ -932,6 +932,23 @@ function rsiReset() {
   height: 6px;
   background: #f59e0b;
   border-radius: 1px;
+}
+
+.severity-ticks .tk-normal {
+  color: #22c55e;
+  font-weight: 700;
+}
+.severity-ticks .tk-mild {
+  color: #84cc16;
+  font-weight: 700;
+}
+.severity-ticks .tk-moderate {
+  color: #f59e0b;
+  font-weight: 700;
+}
+.severity-ticks .tk-severe {
+  color: #f97316;
+  font-weight: 700;
 }
 
 /* Intro */

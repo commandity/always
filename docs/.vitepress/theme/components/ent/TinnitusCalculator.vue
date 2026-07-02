@@ -739,8 +739,11 @@ function tfiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span class="tick-threshold">16</span><span>36</span
-          ><span>56</span><span>76</span><span>100</span>
+          <span class="tk-normal">0</span
+          ><span class="tick-threshold">16</span
+          ><span class="tk-mild">36</span><span class="tk-moderate">56</span
+          ><span class="tk-severe">76</span
+          ><span class="tk-critical">100</span>
         </div>
       </div>
 
@@ -969,8 +972,10 @@ function tfiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span class="tick-threshold">25</span><span>50</span
-          ><span>75</span><span>100</span>
+          <span class="tk-normal">0</span
+          ><span class="tick-threshold">25</span
+          ><span class="tk-mild">50</span><span class="tk-moderate">75</span
+          ><span class="tk-severe">100</span>
         </div>
       </div>
 
@@ -1404,6 +1409,27 @@ function tfiReset() {
   height: 6px;
   background: #f59e0b;
   border-radius: 1px;
+}
+
+.severity-ticks .tk-normal {
+  color: #22c55e;
+  font-weight: 700;
+}
+.severity-ticks .tk-mild {
+  color: #84cc16;
+  font-weight: 700;
+}
+.severity-ticks .tk-moderate {
+  color: #f59e0b;
+  font-weight: 700;
+}
+.severity-ticks .tk-severe {
+  color: #f97316;
+  font-weight: 700;
+}
+.severity-ticks .tk-critical {
+  color: #ef4444;
+  font-weight: 700;
 }
 
 /* ── Sub-scores ────────────────────────────────────────────────── */

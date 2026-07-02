@@ -647,8 +647,10 @@ function grbasReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span>15</span><span>30</span><span>50</span
-          ><span>120</span>
+          <span class="tk-normal">0</span
+          ><span class="tick-threshold">15</span
+          ><span class="tk-mild">30</span><span class="tk-moderate">50</span
+          ><span class="tk-severe">120</span>
         </div>
       </div>
 
@@ -886,8 +888,10 @@ function grbasReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span>10</span><span>20</span><span>30</span
-          ><span>40</span>
+          <span class="tk-mild">0</span
+          ><span class="tick-threshold">10</span
+          ><span class="tk-moderate">20</span><span class="tk-severe">30</span
+          ><span class="tk-severe">40</span>
         </div>
       </div>
 
@@ -1127,8 +1131,10 @@ function grbasReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span>G0 正常</span><span>G1 輕度</span><span>G2 中度</span
-          ><span>G3 重度</span>
+          <span class="tk-normal">G0 正常</span
+          ><span class="tk-mild">G1 輕度</span
+          ><span class="tk-moderate">G2 中度</span
+          ><span class="tk-severe">G3 重度</span>
         </div>
       </div>
 
@@ -1488,6 +1494,40 @@ function grbasReset() {
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
   padding: 0 2px;
+}
+
+.tick-threshold {
+  color: #f59e0b;
+  font-weight: 700;
+  position: relative;
+}
+.tick-threshold::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 6px;
+  background: #f59e0b;
+  border-radius: 1px;
+}
+
+.severity-ticks .tk-normal {
+  color: #22c55e;
+  font-weight: 700;
+}
+.severity-ticks .tk-mild {
+  color: #84cc16;
+  font-weight: 700;
+}
+.severity-ticks .tk-moderate {
+  color: #f59e0b;
+  font-weight: 700;
+}
+.severity-ticks .tk-severe {
+  color: #f97316;
+  font-weight: 700;
 }
 
 /* ── Sub-scores ────────────────────────────────────────────────── */

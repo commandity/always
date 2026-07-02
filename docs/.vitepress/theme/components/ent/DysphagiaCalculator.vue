@@ -434,8 +434,10 @@ async function eat10Copy() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span class="tick-threshold">3</span><span>10</span
-          ><span>20</span><span>40</span>
+          <span class="tk-normal">0</span
+          ><span class="tick-threshold">3</span
+          ><span class="tk-mild">10</span><span class="tk-moderate">20</span
+          ><span class="tk-severe">40</span>
         </div>
       </div>
 
@@ -813,6 +815,23 @@ async function eat10Copy() {
   height: 6px;
   background: #f59e0b;
   border-radius: 1px;
+}
+
+.severity-ticks .tk-normal {
+  color: #22c55e;
+  font-weight: 700;
+}
+.severity-ticks .tk-mild {
+  color: #84cc16;
+  font-weight: 700;
+}
+.severity-ticks .tk-moderate {
+  color: #f59e0b;
+  font-weight: 700;
+}
+.severity-ticks .tk-severe {
+  color: #f97316;
+  font-weight: 700;
 }
 
 /* ── FOIS level bar ──────────────────────────────────────────────── */

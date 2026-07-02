@@ -571,7 +571,7 @@ const groups = [
   flex-shrink: 0;
   padding-top: 3px;
 }
-.item-qnum {
+.item-badge {
   font-size: 0.72rem;
   font-weight: 800;
   color: #fff;
@@ -581,11 +581,11 @@ const groups = [
   letter-spacing: 0.04em;
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.2);
 }
-.item-qnum.indigo-qnum {
+.item-badge.indigo-qnum {
   background: linear-gradient(135deg, #6366f1, #4f46e5);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.2);
 }
-.item-qnum.orange-qnum {
+.item-badge.orange-qnum {
   background: linear-gradient(135deg, #f97316, #ea580c);
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.2);
 }
@@ -669,7 +669,7 @@ const groups = [
   transition: color 0.2s;
   color: var(--vp-c-text-3);
 }
-.opt-desc {
+.item-desc {
   font-size: 0.7rem;
   font-weight: 700;
   line-height: 1.35;
@@ -701,10 +701,10 @@ const groups = [
 .opt-pill.s0.active .opt-num {
   color: #22c55e;
 }
-.opt-pill.s0 .opt-desc {
+.opt-pill.s0 .item-desc {
   color: rgba(34, 197, 94, 0.4);
 }
-.opt-pill.s0.active .opt-desc {
+.opt-pill.s0.active .item-desc {
   color: rgba(34, 197, 94, 0.7);
 }
 
@@ -731,10 +731,10 @@ const groups = [
 .opt-pill.s1.active .opt-num {
   color: #f59e0b;
 }
-.opt-pill.s1 .opt-desc {
+.opt-pill.s1 .item-desc {
   color: rgba(245, 158, 11, 0.4);
 }
-.opt-pill.s1.active .opt-desc {
+.opt-pill.s1.active .item-desc {
   color: rgba(245, 158, 11, 0.7);
 }
 
@@ -761,10 +761,10 @@ const groups = [
 .opt-pill.s2.active .opt-num {
   color: #ef4444;
 }
-.opt-pill.s2 .opt-desc {
+.opt-pill.s2 .item-desc {
   color: rgba(239, 68, 68, 0.4);
 }
-.opt-pill.s2.active .opt-desc {
+.opt-pill.s2.active .item-desc {
   color: rgba(239, 68, 68, 0.7);
 }
 

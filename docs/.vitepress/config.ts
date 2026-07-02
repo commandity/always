@@ -100,27 +100,14 @@ export default defineConfig({
               text: "喉",
               collapsed: false,
               items: [
-                { text: "RFS 逆流表現評分", link: "/guide/ent/rfs-calculator" },
-                { text: "RSI 逆流症狀指數", link: "/guide/ent/rsi-calculator" },
+                { text: "咽喉逆流", link: "/guide/ent/lpr" },
                 {
-                  text: "FOIS 功能性口腔攝食量表",
-                  link: "/guide/ent/fois-calculator",
+                  text: "吞嚥困難",
+                  link: "/guide/ent/dysphagia",
                 },
                 {
-                  text: "EAT-10 吞嚥篩檢量表",
-                  link: "/guide/ent/eat10-calculator",
-                },
-                {
-                  text: "VoiSS 嗓音症狀量表",
-                  link: "/guide/ent/voiss-calculator",
-                },
-                {
-                  text: "VHI-10 嗓音障礙指數",
-                  link: "/guide/ent/vhi10-calculator",
-                },
-                {
-                  text: "GRBAS 嗓音品質評估",
-                  link: "/guide/ent/grbas-calculator",
+                  text: "嗓音障礙",
+                  link: "/guide/ent/dysphonia",
                 },
               ],
             },
@@ -129,15 +116,14 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "HH 聽覺障礙鑑定計算器",
-                  link: "/guide/ent/hearing-handicap-calculator",
+                  text: "聽力障礙",
+                  link: "/guide/ent/hearing-loss",
                 },
-                { text: "THI 耳鳴障礙量表", link: "/guide/ent/thi-calculator" },
-                { text: "TFI 耳鳴功能指數", link: "/guide/ent/tfi-calculator" },
-                { text: "DHI 頭暈障礙量表", link: "/guide/ent/dhi-calculator" },
+                { text: "耳鳴", link: "/guide/ent/tinnitus" },
+                { text: "頭暈", link: "/guide/ent/dizziness" },
                 {
-                  text: "ETDQ-7 咽鼓管功能障礙問卷",
-                  link: "/guide/ent/etdq7-calculator",
+                  text: "耳咽管功能",
+                  link: "/guide/ent/et-function",
                 },
               ],
             },
@@ -146,34 +132,26 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "Dupixent 適應症評估",
-                  link: "/guide/ent/dupixent-calculator",
+                  text: "慢性鼻竇炎",
+                  link: "/guide/ent/crs",
                 },
                 {
-                  text: "NOSE 鼻腔阻塞症狀評估",
-                  link: "/guide/ent/nose-calculator",
+                  text: "鼻腔阻塞",
+                  link: "/guide/ent/nasal-obstruction",
                 },
                 {
-                  text: "ENS6Q 空鼻症症狀評估",
-                  link: "/guide/ent/ens6q-calculator",
-                },
-                {
-                  text: "SNOT-22 鼻竇生活品質量表",
-                  link: "/guide/ent/snot22-calculator",
+                  text: "空鼻症",
+                  link: "/guide/ent/empty-nose",
                 },
               ],
             },
             {
-              text: "睡眠與呼吸",
+              text: "睡眠呼吸",
               collapsed: false,
               items: [
                 {
-                  text: "STOP-BANG 睡眠呼吸中止症量表",
-                  link: "/guide/ent/stopbang-calculator",
-                },
-                {
-                  text: "ESS 愛普沃斯嗜睡量表",
-                  link: "/guide/ent/ess-calculator",
+                  text: "睡眠呼吸中止症",
+                  link: "/guide/ent/osa",
                 },
               ],
             },

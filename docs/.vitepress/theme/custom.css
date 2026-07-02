@@ -875,3 +875,222 @@ html {
   margin-top: 0.75rem;
   font-size: 0.9rem;
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   ── Calculator tool — font weight & size overrides
+       Override Vue scoped CSS in .vue calculator components.
+       Uses !important to beat [data-v-*] attribute selectors.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Base container — bump root rem reference */
+.subtitle {
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* Badge / score label */
+.score-label {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+}
+
+/* Group header */
+.group-label {
+  font-size: 0.98rem !important;
+  font-weight: 800 !important;
+}
+.group-sub {
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-2) !important;
+}
+.group-score-pill {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+}
+
+/* Item cards */
+.item-name {
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  color: var(--vp-c-text-1) !important;
+}
+.item-sub {
+  font-size: 0.85rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.item-hint {
+  font-size: 0.85rem !important;
+  color: var(--vp-c-text-1) !important;
+}
+
+/* Option pills */
+.opt-num {
+  font-size: 1.15rem !important;
+  font-weight: 900 !important;
+}
+.opt-desc {
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+}
+.item-desc,
+.item-detail {
+  font-size: 0.88rem !important;
+  color: var(--vp-c-text-1) !important;
+}
+
+/* Intro bar */
+.intro-bar {
+  font-size: 0.9rem !important;
+  color: var(--vp-c-text-1) !important;
+}
+
+/* Result card */
+.result-number {
+  font-size: 4rem !important;
+  font-weight: 900 !important;
+}
+.result-max {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+.result-level {
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
+}
+.result-advice {
+  font-size: 0.92rem !important;
+  font-weight: 500 !important;
+  color: var(--vp-c-text-1) !important;
+}
+.result-threshold {
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+}
+.result-sub {
+  font-size: 0.85rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.result-ahi {
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+}
+
+/* Results detail */
+.results-header {
+  font-size: 0.8rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.detail-domain {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+}
+.detail-desc {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-1) !important;
+}
+
+/* Progress hint */
+.progress-hint {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* Severity bar ticks */
+.severity-ticks {
+  font-size: 0.75rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.tick-abs,
+.label-abs {
+  font-size: 0.72rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* Risk strip */
+.risk-score {
+  font-size: 0.88rem !important;
+}
+.risk-rate {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+}
+.risk-tag {
+  font-size: 0.85rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* Examples / tags */
+.examples-label {
+  font-size: 0.75rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.example-tag {
+  font-size: 0.78rem !important;
+  color: var(--vp-c-text-1) !important;
+}
+
+/* Toggle / pill misc */
+.toggle-score {
+  color: var(--vp-c-text-2) !important;
+}
+.count-chip {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+}
+.sub-pill,
+.sub-pill-sm {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+}
+
+/* Unified patterns — renamed from Das28/StopBang/Abcd2-specific classes */
+.label-text {
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+}
+.btn-select {
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+}
+.input-label {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+}
+.hint-text,
+.unit-text {
+  font-size: 0.75rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.calc-eq {
+  font-size: 0.88rem !important;
+  color: var(--vp-c-text-1) !important;
+}
+.calc-title {
+  font-size: 0.8rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.legend-row {
+  font-size: 0.78rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.item-note {
+  font-size: 0.78rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.item-badge {
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+}
+.high-risk-note {
+  font-size: 0.88rem !important;
+  color: var(--vp-c-text-1) !important;
+}
+.detail-section-title {
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+}
+.detail-letter {
+  font-size: 0.78rem !important;
+}

@@ -6,13 +6,6 @@ title: RSI 逆流症狀指數
 # RSI 逆流症狀指數
 
 **RSI Reflux Symptom Index**
-
-## 概述
-
-**RSI**（Reflux Symptom Index）由 Belafsky 等人於 2002 年在美國加州大學戴維斯分校（UC Davis）發展，是目前**喉咽逆流**（Laryngopharyngeal Reflux，LPR）診斷與治療監測中最廣泛使用的患者自填問卷。RSI 共 9 題，評估喉咽逆流相關症狀的嚴重程度，具有良好的內部一致性（Cronbach's α = 0.85）及再測信度，並與 Reflux Finding Score（RFS）——喉鏡下評估的客觀逆流發現——具有顯著相關性。
-
----
-
 <RsiCalculator />
 
 ## 評分說明

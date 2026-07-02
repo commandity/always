@@ -6,13 +6,6 @@ title: Dupixent 杜避炎適應症評估
 # Dupixent 杜避炎適應症評估
 
 **Dupixent Indication Assessment**
-
-## 概述
-
-**Dupixent**（dupilumab）是一種針對 **IL-4 受體 α 亞基（IL-4Rα）** 的全人源化單株抗體，可同時阻斷 IL-4 與 IL-13 訊號傳遞，為第一個獲核准用於**第二型（Type 2）發炎疾病**的生物製劑。台灣目前核准的適應症包括慢性鼻竇炎合併鼻息肉（CRSwNP）、異位性皮膚炎（Atopic Dermatitis）及嗜酸性球性氣喘（Eosinophilic Asthma）。
-
----
-
 <DupixentCalculator />
 
 ## 適應症：慢性鼻竇炎合併鼻息肉（CRSwNP）

@@ -6,13 +6,6 @@ title: GRBAS 嗓音品質評估
 # GRBAS 嗓音品質評估
 
 **GRBAS Voice Quality Assessment**
-
-## 概述
-
-**GRBAS 量表**由日本語音學者 Hirano 於 1981 年提出，並經日本語音語言障礙研究委員會（Japan Society of Logopedics and Phoniatrics）標準化，是目前全球最廣泛使用的**聽知覺嗓音品質分析工具**。GRBAS 透過訓練有素的臨床醫師或語言治療師，依據聆聽患者嗓音後的主觀感知，對五個嗓音維度進行量化評分，可快速且有效地描述嗓音障礙的性質與嚴重程度。
-
----
-
 <GrbasCalculator />
 
 ## 量表架構

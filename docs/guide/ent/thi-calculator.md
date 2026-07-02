@@ -6,13 +6,6 @@ title: THI 耳鳴障礙量表
 # THI 耳鳴障礙量表
 
 **THI Tinnitus Handicap Inventory**
-
-## 概述
-
-**THI**（Tinnitus Handicap Inventory）由 Newman 等人於 1996 年在美國底特律亨利福特醫院發展，是目前全球**最廣泛使用的耳鳴自填評估工具**。THI 共 25 題，涵蓋功能（F）、情緒（E）、災難化（C）三個面向，評估耳鳴對日常生活的整體影響程度，具有優異的內部一致性（Cronbach's α = 0.93）及再測信度（r = 0.94），並被翻譯為超過 20 種語言廣泛應用於臨床與研究。
-
----
-
 <ThiCalculator />
 
 ## 評分說明

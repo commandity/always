@@ -6,13 +6,6 @@ title: STOP-BANG 睡眠呼吸中止症量表
 # STOP-BANG 睡眠呼吸中止症量表
 
 **STOP-BANG Sleep Apnea Screening**
-
-## 概述
-
-**STOP-BANG** 由 Frances Chung 等人於 2008 年發表於《麻醉學》期刊（_Anesthesiology_），最初用於術前評估阻塞性睡眠呼吸中止症（OSA）風險，現已廣泛應用於門診、急診及多種臨床場合。量表共 8 個是 / 否問題，涵蓋睡眠症狀（**STOP**）及解剖與人口學危險因子（**BANG**），是目前**靈敏度最高的 OSA 篩查工具之一**，其簡便性與準確性使其成為全球最廣泛使用的 OSA 篩查量表。
-
----
-
 <StopBangCalculator />
 
 ## 評分說明

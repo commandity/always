@@ -6,13 +6,6 @@ title: RFS 逆流表現評分
 # RFS 逆流表現評分
 
 **RFS Reflux Finding Score**
-
-## 概述
-
-**RFS**（Reflux Finding Score）由 Belafsky 等人於 2001 年在美國加州大學戴維斯分校（UC Davis）發展，是目前**喉咽逆流**（Laryngopharyngeal Reflux，LPR）診斷中最重要的**客觀評估工具**。RFS 由耳鼻喉科醫師透過喉鏡檢查，針對 8 項喉部所見逐一評分，具有良好的內部一致性（Cronbach's α = 0.90）及再測信度，並與 RSI（逆流症狀指數）——患者主觀症狀評估——具有顯著相關性。
-
----
-
 <RfsCalculator />
 
 ## 評分說明

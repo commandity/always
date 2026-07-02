@@ -6,13 +6,6 @@ title: ESS 愛普沃斯嗜睡量表
 # ESS 愛普沃斯嗜睡量表
 
 **ESS Epworth Sleepiness Scale**
-
-## 概述
-
-**愛普沃斯嗜睡量表**（Epworth Sleepiness Scale，ESS）由澳洲墨爾本愛普沃斯醫院（Epworth Hospital）的 Murray W. Johns 博士於 1991 年發表，是目前全球最廣泛使用的**日間嗜睡程度**主觀評估工具。ESS 透過詢問患者在 8 種日常情境中打瞌睡的可能性，量化嗜睡的整體程度，廣泛應用於阻塞性睡眠呼吸暫停（OSA）、猝睡症（Narcolepsy）及其他睡眠障礙的篩檢與追蹤。
-
----
-
 <ESSCalculator />
 
 ## 量表架構

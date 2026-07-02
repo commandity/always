@@ -6,13 +6,6 @@ title: ENS6Q 空鼻症症狀評估
 # ENS6Q 空鼻症症狀評估
 
 **ENS6Q Empty Nose Syndrome Symptom Assessment**
-
-## 概述
-
-**ENS6Q**（Empty Nose Syndrome 6-Item Questionnaire）由 Velasquez、Thamboo、Habib、Huang 及 Nayak 等人於 2016 年發表於 _International Forum of Allergy & Rhinology_，是目前**唯一經過效度驗證**的空鼻症（Empty Nose Syndrome, ENS）專屬患者自填問卷（Patient-Reported Outcome Measure，PROM）。本量表設計簡潔，共 6 題，可作為 SNOT-22 的輔助篩查工具，協助臨床醫師辨識疑似 ENS 患者。
-
----
-
 <ENS6QCalculator />
 
 ## 量表架構

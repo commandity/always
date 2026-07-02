@@ -6,13 +6,6 @@ title: DHI 頭暈障礙量表
 # DHI 頭暈障礙量表
 
 **DHI Dizziness Handicap Inventory**
-
-## 概述
-
-**DHI**（Dizziness Handicap Inventory）由 Jacobson 與 Newman 於 1990 年發表，是目前全球**最廣泛使用的頭暈自填評估工具**。DHI 共 25 題，涵蓋功能（F）、情緒（E）、身體（P）三個面向，評估頭暈或不平衡問題對日常生活的整體影響，具有優異的內部一致性（Cronbach's α = 0.89）及再測信度（r = 0.97），並對前庭復健治療的療效具有良好的反應性。
-
----
-
 <DhiCalculator />
 
 ## 評分說明

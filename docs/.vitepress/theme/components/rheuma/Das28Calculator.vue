@@ -846,7 +846,7 @@ function reset() {
   margin-bottom: 0.75rem;
   flex-wrap: wrap;
 }
-.mode-label {
+.label-text {
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--vp-c-text-2);
@@ -857,7 +857,7 @@ function reset() {
   flex: 1;
   min-width: 0;
 }
-.mode-btn {
+.btn-select {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -877,7 +877,7 @@ function reset() {
   min-width: 0;
   font-variant-numeric: tabular-nums;
 }
-.mode-btn {
+.btn-select {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -892,7 +892,7 @@ function reset() {
   color: var(--vp-c-text-2);
   transition: all 0.2s;
 }
-.mode-btn:hover {
+.btn-select:hover {
   background: var(--vp-c-bg-mute);
 }
 .mode-tender {
@@ -950,7 +950,7 @@ function reset() {
   border-top: 1px solid var(--vp-c-divider);
   margin-top: 2px;
 }
-.leg-row {
+.legend-row {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -1002,7 +1002,7 @@ function reset() {
   flex-direction: column;
   gap: 0.35rem;
 }
-.lab-label {
+.input-label {
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
@@ -1045,7 +1045,7 @@ function reset() {
   font-weight: 400;
   color: var(--vp-c-text-3);
 }
-.lab-unit {
+.unit-text {
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
   flex-shrink: 0;
@@ -1065,7 +1065,7 @@ function reset() {
 .formula-card:hover {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
-.formula-title {
+.calc-title {
   padding: 0.45rem 1rem;
   font-size: 0.72rem;
   font-weight: 700;
@@ -1075,7 +1075,7 @@ function reset() {
   background: var(--vp-c-bg-mute);
   border-bottom: 1px solid var(--vp-c-divider);
 }
-.formula-eq {
+.calc-eq {
   padding: 0.85rem 1rem;
   font-size: 0.82rem;
   color: var(--vp-c-text-2);
@@ -1344,7 +1344,7 @@ function reset() {
   margin-bottom: 0.6rem;
   flex-wrap: wrap;
 }
-.lab-mode-label {
+.label-text {
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--vp-c-text-2);
@@ -1355,7 +1355,7 @@ function reset() {
   gap: 0.4rem;
   flex-wrap: wrap;
 }
-.lab-mode-btn {
+.btn-select {
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -1370,7 +1370,7 @@ function reset() {
   color: var(--vp-c-text-2);
   transition: all 0.2s;
 }
-.lab-mode-btn:hover {
+.btn-select:hover {
   background: var(--vp-c-bg-mute);
 }
 .lm-active-esr {
@@ -1416,7 +1416,7 @@ function reset() {
   color: #8b5cf6;
 }
 
-.lab-hint-text {
+.hint-text {
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
   margin-top: 4px;
@@ -1424,7 +1424,7 @@ function reset() {
 }
 
 /* Formula title row with version pill */
-.formula-title-row {
+.calc-title-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -1433,7 +1433,7 @@ function reset() {
   background: linear-gradient(135deg, var(--vp-c-bg-mute), var(--vp-c-bg-soft));
   border-bottom: 1px solid var(--vp-c-divider);
 }
-.formula-title {
+.calc-title {
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--vp-c-text-3);

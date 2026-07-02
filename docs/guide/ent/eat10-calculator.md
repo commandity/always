@@ -6,13 +6,6 @@ title: EAT-10 吞嚥篩檢量表
 # EAT-10 吞嚥篩檢量表
 
 **EAT-10 Swallowing Screening Tool**
-
-## 概述
-
-**EAT-10**（Eating Assessment Tool-10）由 Belafsky 等人於 2008 年發表，是目前全球最廣泛使用的**吞嚥障礙**快速自填篩檢工具。EAT-10 共 10 題，評估吞嚥困難對患者功能、情緒及安全性的影響，已被翻譯成 30 種以上語言，並在多項大型研究中顯示出良好的信度、效度與對吞嚥障礙的高度敏感性。
-
----
-
 <Eat10Calculator />
 
 ## 評分說明

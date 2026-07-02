@@ -6,13 +6,6 @@ title: TFI 耳鳴功能指數
 # TFI 耳鳴功能指數
 
 **TFI Tinnitus Functional Index**
-
-## 概述
-
-**TFI**（Tinnitus Functional Index）由 Meikle 等人於 2012 年在美國奧勒岡健康與科學大學（OHSU）發展，是目前**對治療反應最敏感的耳鳴評估工具**。TFI 共 25 題，涵蓋 8 個面向，每題以 0–10 連續量尺評分，提供比傳統三選一（如 THI）更細緻的障礙評估。TFI 具有優異的內部一致性（Cronbach's α = 0.97）及再測信度，且最小臨床有意義差值（MCID）僅 13 分，使其成為監測治療效果的理想工具。
-
----
-
 <TfiCalculator />
 
 ## 評分說明

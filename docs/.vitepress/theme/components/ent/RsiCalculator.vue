@@ -532,13 +532,14 @@ function reset() {
   gap: 2px;
 }
 .group-label {
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.92rem;
+  font-weight: 800;
   color: var(--vp-c-text-1);
 }
 .group-sub {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
 }
 
 .group-score-pill {
@@ -627,24 +628,25 @@ function reset() {
   flex: 1;
 }
 .item-name {
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--vp-c-text-1);
   line-height: 1.4;
 }
 .item-sub {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
+  font-size: 0.82rem;
+  color: var(--vp-c-text-2);
 }
 .item-hint {
-  font-size: 0.72rem;
-  color: var(--vp-c-text-2);
+  font-size: 0.82rem;
+  color: var(--vp-c-text-1);
   font-style: italic;
+  opacity: 0.9;
 }
 
 .item-score {
-  font-size: 1.1rem;
-  font-weight: 800;
+  font-size: 1.25rem;
+  font-weight: 900;
   flex-shrink: 0;
   min-width: 32px;
   height: 32px;
@@ -807,88 +809,88 @@ function reset() {
 }
 
 .opt-num {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 900;
   transition: color 0.2s;
 }
 .opt-pill.s0 .opt-num {
-  color: rgba(34, 197, 94, 0.5);
+  color: rgba(34, 197, 94, 0.85);
 }
 .opt-pill.s0.active .opt-num {
   color: #22c55e;
 }
 .opt-pill.s1 .opt-num {
-  color: rgba(132, 204, 22, 0.5);
+  color: rgba(132, 204, 22, 0.85);
 }
 .opt-pill.s1.active .opt-num {
   color: #84cc16;
 }
 .opt-pill.s2 .opt-num {
-  color: rgba(234, 179, 8, 0.5);
+  color: rgba(234, 179, 8, 0.85);
 }
 .opt-pill.s2.active .opt-num {
   color: #eab308;
 }
 .opt-pill.s3 .opt-num {
-  color: rgba(245, 158, 11, 0.5);
+  color: rgba(245, 158, 11, 0.85);
 }
 .opt-pill.s3.active .opt-num {
   color: #f59e0b;
 }
 .opt-pill.s4 .opt-num {
-  color: rgba(249, 115, 22, 0.5);
+  color: rgba(249, 115, 22, 0.85);
 }
 .opt-pill.s4.active .opt-num {
   color: #f97316;
 }
 .opt-pill.s5 .opt-num {
-  color: rgba(239, 68, 68, 0.5);
+  color: rgba(239, 68, 68, 0.85);
 }
 .opt-pill.s5.active .opt-num {
   color: #ef4444;
 }
 
 .opt-desc {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.2;
   transition: color 0.2s;
 }
 .opt-pill.s0 .opt-desc {
-  color: rgba(34, 197, 94, 0.4);
-}
-.opt-pill.s0.active .opt-desc {
   color: rgba(34, 197, 94, 0.7);
 }
-.opt-pill.s1 .opt-desc {
-  color: rgba(132, 204, 22, 0.4);
+.opt-pill.s0.active .opt-desc {
+  color: rgba(34, 197, 94, 0.9);
 }
-.opt-pill.s1.active .opt-desc {
+.opt-pill.s1 .opt-desc {
   color: rgba(132, 204, 22, 0.7);
 }
-.opt-pill.s2 .opt-desc {
-  color: rgba(234, 179, 8, 0.4);
+.opt-pill.s1.active .opt-desc {
+  color: rgba(132, 204, 22, 0.9);
 }
-.opt-pill.s2.active .opt-desc {
+.opt-pill.s2 .opt-desc {
   color: rgba(234, 179, 8, 0.7);
 }
-.opt-pill.s3 .opt-desc {
-  color: rgba(245, 158, 11, 0.4);
+.opt-pill.s2.active .opt-desc {
+  color: rgba(234, 179, 8, 0.9);
 }
-.opt-pill.s3.active .opt-desc {
+.opt-pill.s3 .opt-desc {
   color: rgba(245, 158, 11, 0.7);
 }
-.opt-pill.s4 .opt-desc {
-  color: rgba(249, 115, 22, 0.4);
+.opt-pill.s3.active .opt-desc {
+  color: rgba(245, 158, 11, 0.9);
 }
-.opt-pill.s4.active .opt-desc {
+.opt-pill.s4 .opt-desc {
   color: rgba(249, 115, 22, 0.7);
 }
+.opt-pill.s4.active .opt-desc {
+  color: rgba(249, 115, 22, 0.9);
+}
 .opt-pill.s5 .opt-desc {
-  color: rgba(239, 68, 68, 0.4);
+  color: rgba(239, 68, 68, 0.7);
 }
 .opt-pill.s5.active .opt-desc {
-  color: rgba(239, 68, 68, 0.7);
+  color: rgba(239, 68, 68, 0.9);
 }
 
 /* ── Result card ───────────────────────────────────────────────── */
@@ -937,8 +939,8 @@ function reset() {
   flex-shrink: 0;
 }
 .result-number {
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: 4rem;
+  font-weight: 900;
   line-height: 1;
   color: var(--vp-c-text-3);
   transition: color 0.3s;
@@ -957,7 +959,8 @@ function reset() {
 }
 
 .result-max {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--vp-c-text-3);
 }
 .result-right {
@@ -966,18 +969,19 @@ function reset() {
   gap: 5px;
 }
 .result-level {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 800;
   color: var(--vp-c-text-1);
 }
 .result-advice {
-  font-size: 0.83rem;
-  color: var(--vp-c-text-2);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
   line-height: 1.5;
 }
 .result-threshold {
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 .rsi-result.normal .result-threshold {
   color: #22c55e;

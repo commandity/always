@@ -6,13 +6,6 @@ title: NOSE 鼻腔阻塞症狀評估
 # NOSE 鼻腔阻塞症狀評估
 
 **NOSE Nasal Obstruction Symptom Evaluation**
-
-## 概述
-
-**NOSE**（Nasal Obstruction Symptom Evaluation）量表由 Michael G. Stewart 等人於 2004 年在 _Otolaryngology—Head and Neck Surgery_ 期刊發表，是目前**鼻腔阻塞**評估中最廣泛使用的疾病專屬患者自填問卷（Patient-Reported Outcome Measure，PROM）。NOSE 量表結構簡潔、施測快速（約 1–2 分鐘），在超過 1,450 篇引用文獻中被用於鼻中隔彎曲、鼻甲肥大、慢性鼻炎、過敏性鼻炎及功能性鼻整形手術的術前術後評估，是耳鼻喉科鼻科學的金標準評估工具。
-
----
-
 <NoseCalculator />
 
 ## 量表架構

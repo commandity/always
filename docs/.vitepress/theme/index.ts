@@ -60,6 +60,17 @@ import TfiCalculator from "./components/ent/TfiCalculator.vue";
 import ThiCalculator from "./components/ent/ThiCalculator.vue";
 import StopBangCalculator from "./components/ent/StopBangCalculator.vue";
 import ThyroidSonographyReport from "./components/ent/ThyroidSonographyReport.vue";
+import DysphagiaCalculator from "./components/ent/DysphagiaCalculator.vue";
+import LprCalculator from "./components/ent/LprCalculator.vue";
+import DysphoniaCalculator from "./components/ent/DysphoniaCalculator.vue";
+import TinnitusCalculator from "./components/ent/TinnitusCalculator.vue";
+import HearingLossCalculator from "./components/ent/HearingLossCalculator.vue";
+import DizzinessCalculator from "./components/ent/DizzinessCalculator.vue";
+import EtFunctionCalculator from "./components/ent/EtFunctionCalculator.vue";
+import CrsCalculator from "./components/ent/CrsCalculator.vue";
+import NasalObstructionCalculator from "./components/ent/NasalObstructionCalculator.vue";
+import EmptyNoseCalculator from "./components/ent/EmptyNoseCalculator.vue";
+import OsaCalculator from "./components/ent/OsaCalculator.vue";
 // INFECTION
 import Crb65Calculator from "./components/infection/Crb65Calculator.vue";
 import CentorCalculator from "./components/infection/CentorCalculator.vue";
@@ -241,6 +252,17 @@ export default {
     app.component("ThiCalculator", ThiCalculator);
     app.component("StopBangCalculator", StopBangCalculator);
     app.component("ThyroidSonographyReport", ThyroidSonographyReport);
+    app.component("DysphagiaCalculator", DysphagiaCalculator);
+    app.component("LprCalculator", LprCalculator);
+    app.component("DysphoniaCalculator", DysphoniaCalculator);
+    app.component("TinnitusCalculator", TinnitusCalculator);
+    app.component("HearingLossCalculator", HearingLossCalculator);
+    app.component("DizzinessCalculator", DizzinessCalculator);
+    app.component("EtFunctionCalculator", EtFunctionCalculator);
+    app.component("CrsCalculator", CrsCalculator);
+    app.component("NasalObstructionCalculator", NasalObstructionCalculator);
+    app.component("EmptyNoseCalculator", EmptyNoseCalculator);
+    app.component("OsaCalculator", OsaCalculator);
     // INFECTION
     app.component("Crb65Calculator", Crb65Calculator);
     app.component("CentorCalculator", CentorCalculator);

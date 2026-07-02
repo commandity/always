@@ -647,7 +647,8 @@ function reset() {
 }
 
 .item-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.75rem;
   padding: 0.65rem 0.9rem;
@@ -658,7 +659,6 @@ function reset() {
 .level-num {
   font-size: 1.4rem;
   font-weight: 900;
-  flex-shrink: 0;
   width: 36px;
   height: 36px;
   display: flex;
@@ -717,7 +717,6 @@ function reset() {
   font-size: 1.2rem;
   font-weight: 800;
   color: #22c55e;
-  flex-shrink: 0;
   width: 28px;
   height: 28px;
   display: flex;

@@ -97,13 +97,13 @@ const severity = computed(() => {
     return {
       level: "正常範圍",
       color: "normal",
-      advice: "咽鼓管功能正常，無顯著功能障礙",
+      advice: "耳咽管功能正常，無顯著功能障礙",
     };
   if (avg < 3.0)
     return {
       level: "輕度功能障礙",
       color: "mild",
-      advice: "輕度咽鼓管功能障礙，建議追蹤觀察",
+      advice: "輕度耳咽管功能障礙，建議追蹤觀察",
     };
   if (avg < 4.5)
     return {
@@ -114,7 +114,7 @@ const severity = computed(() => {
   return {
     level: "重度功能障礙",
     color: "severe",
-    advice: "重度咽鼓管功能障礙，建議積極治療或手術評估",
+    advice: "重度耳咽管功能障礙，建議積極治療或手術評估",
   };
 });
 
@@ -127,7 +127,7 @@ function generateMarkdown() {
     })
     .join("\n");
 
-  return `# ETDQ-7 咽鼓管功能障礙問卷評估結果\n\n## 各題評分\n\n${lines}\n\n---\n\n## 計算結果\n\n- **各題總分**：${totalScore.value} / 49\n- **平均分數**：${meanScore.value} / 7\n- **嚴重程度**：${severity.value.level}\n- **臨床建議**：${severity.value.advice}`;
+  return `# ETDQ-7 耳咽管功能障礙問卷評估結果\n\n## 各題評分\n\n${lines}\n\n---\n\n## 計算結果\n\n- **各題總分**：${totalScore.value} / 49\n- **平均分數**：${meanScore.value} / 7\n- **嚴重程度**：${severity.value.level}\n- **臨床建議**：${severity.value.advice}`;
 }
 
 async function copyMarkdown() {
@@ -149,7 +149,7 @@ function reset() {
     <!-- Header -->
     <div class="etdq-header">
       <div class="header-title">
-        <h2 class="title">ETDQ-7 咽鼓管功能障礙問卷</h2>
+        <h2 class="title">ETDQ-7 耳咽管功能障礙問卷</h2>
         <p class="subtitle">
           Eustachian Tube Dysfunction Questionnaire · 7 題版本
         </p>
@@ -214,7 +214,7 @@ function reset() {
       <span
         >請依據您<strong>過去一個月</strong>耳朵症狀的嚴重程度評分。每題
         1（沒有問題）至 7（極嚴重），共 7 題。平均分數 ≥ 2.1
-        建議就醫評估咽鼓管功能。</span
+        建議就醫評估耳咽管功能。</span
       >
     </div>
 
@@ -222,7 +222,7 @@ function reset() {
     <div class="etdq-group">
       <div class="group-header">
         <div class="group-label-block">
-          <span class="group-label">咽鼓管症狀評估</span>
+          <span class="group-label">耳咽管症狀評估</span>
           <span class="group-sub">Eustachian Tube Symptoms · 7 題</span>
         </div>
         <div class="group-score-pill">{{ answeredCount }}/7 題</div>

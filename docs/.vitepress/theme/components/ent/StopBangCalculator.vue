@@ -762,14 +762,14 @@ function reset() {
   flex: 1;
   min-width: 0;
 }
-.item-question {
+.item-name {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
   margin-bottom: 3px;
   line-height: 1.4;
 }
-.item-name {
+.item-sub {
   font-size: 0.7rem;
   color: var(--vp-c-text-3);
   margin-bottom: 4px;
@@ -780,7 +780,7 @@ function reset() {
   line-height: 1.5;
   margin-bottom: 3px;
 }
-.item-hint {
+.item-note {
   font-size: 0.7rem;
   color: var(--vp-c-text-3);
   font-style: italic;

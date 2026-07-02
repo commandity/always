@@ -6,15 +6,6 @@ title: 聽覺障礙鑑定計算器
 # 聽覺障礙鑑定計算器（b230）
 
 **Hearing Impairment Assessment Calculator (b230)**
-
-## 概述
-
-依據中華民國**衛生福利部《身心障礙者鑑定作業辦法》** ICF 編碼 **b230 聽覺功能（Hearing functions）**，本計算器自動計算純音聽力閾值（PTA）、單耳聽障比率，以及雙耳整體障礙比率，並依官方標準判定聽覺功能障礙等級。
-
-> ※ 請於下列公式中填寫相關數值，並於拾五入填寫至小數點後一位。
-
----
-
 <HearingHandicapCalculator />
 
 ## 計算公式

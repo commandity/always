@@ -100,13 +100,16 @@ export default defineConfig({
               text: "喉",
               collapsed: false,
               items: [
-                { text: "咽喉逆流", link: "/guide/ent/lpr" },
                 {
-                  text: "吞嚥困難",
+                  text: "咽喉逆流（RFS・RSI）",
+                  link: "/guide/ent/lpr",
+                },
+                {
+                  text: "吞嚥困難（FOIS・EAT-10）",
                   link: "/guide/ent/dysphagia",
                 },
                 {
-                  text: "嗓音障礙",
+                  text: "嗓音障礙（VoiSS・VHI-10・GRBAS）",
                   link: "/guide/ent/dysphonia",
                 },
               ],
@@ -116,13 +119,19 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "聽力障礙",
+                  text: "聽力障礙（PTA 障礙鑑定）",
                   link: "/guide/ent/hearing-loss",
                 },
-                { text: "耳鳴", link: "/guide/ent/tinnitus" },
-                { text: "頭暈", link: "/guide/ent/dizziness" },
                 {
-                  text: "耳咽管功能",
+                  text: "耳鳴（THI・TFI）",
+                  link: "/guide/ent/tinnitus",
+                },
+                {
+                  text: "頭暈（眩暈鑑別・DHI）",
+                  link: "/guide/ent/dizziness",
+                },
+                {
+                  text: "耳咽管功能（ETDQ-7）",
                   link: "/guide/ent/et-function",
                 },
               ],
@@ -132,15 +141,15 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "慢性鼻竇炎",
+                  text: "慢性鼻竇炎（Dupixent・SNOT-22）",
                   link: "/guide/ent/crs",
                 },
                 {
-                  text: "鼻腔阻塞",
+                  text: "鼻腔阻塞（NOSE）",
                   link: "/guide/ent/nasal-obstruction",
                 },
                 {
-                  text: "空鼻症",
+                  text: "空鼻症（ENS6Q）",
                   link: "/guide/ent/empty-nose",
                 },
               ],
@@ -150,7 +159,7 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "睡眠呼吸中止症",
+                  text: "睡眠呼吸中止症（STOP-BANG・ESS）",
                   link: "/guide/ent/osa",
                 },
               ],
@@ -162,37 +171,16 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "Access Recirculation 血管通路再循環率",
-              link: "/guide/nephro/access-recirculation",
+              text: "腎功能評估（eGFR・酸鹼・FE）",
+              link: "/guide/nephro/renal-function",
             },
             {
-              text: "Bicarbonate Deficit 碳酸氫鈉缺乏量",
-              link: "/guide/nephro/bicarb-deficit",
+              text: "體液狀態評估（FWD・IVC/BSA）",
+              link: "/guide/nephro/volume-status",
             },
             {
-              text: "Delta/Delta 混合酸鹼分析",
-              link: "/guide/nephro/delta-delta",
-            },
-            {
-              text: "Fractional Excretion 分餾排泄率",
-              link: "/guide/nephro/fractional-excretion",
-            },
-            {
-              text: "H₂O Deficit 自由水缺乏量",
-              link: "/guide/nephro/h2o-deficit",
-            },
-            { text: "IVC/BSA 比值", link: "/guide/nephro/ivc-bsa" },
-            {
-              text: "Kt/V 透析充分度",
-              link: "/guide/nephro/ktv",
-            },
-            {
-              text: "MDRD 腎絲球過濾率估算",
-              link: "/guide/nephro/mdrd-calculator",
-            },
-            {
-              text: "Urea Reduction Ratio 尿素減少率",
-              link: "/guide/nephro/urr",
+              text: "血液透析評估（Kt/V・URR・再循環）",
+              link: "/guide/nephro/hemodialysis",
             },
           ],
         },
@@ -205,8 +193,8 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "Levothyroxine 劑量計算器",
-                  link: "/guide/meta/levothyroxine-calculator",
+                  text: "甲狀腺用藥（Levothyroxine 劑量）",
+                  link: "/guide/meta/thyroid",
                 },
               ],
             },
@@ -215,32 +203,8 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "BEE 基礎能量消耗",
-                  link: "/guide/meta/basal-energy-expenditure",
-                },
-                {
-                  text: "BSA 體表面積計算",
-                  link: "/guide/meta/bsa-calculator",
-                },
-                {
-                  text: "Calorie requirement 成人每日熱量需求參考表",
-                  link: "/guide/meta/calorie-requirements-table",
-                },
-                {
-                  text: "EER 成人熱量需求估算",
-                  link: "/guide/meta/calorie-requirements",
-                },
-                {
-                  text: "Ideal Body Weight 理想體重及調整體重",
-                  link: "/guide/meta/ideal-body-weight",
-                },
-                {
-                  text: "Lean Body Weight 瘦體重計算",
-                  link: "/guide/meta/lean-body-weight",
-                },
-                {
-                  text: "Schofield BMR 基礎代謝率",
-                  link: "/guide/meta/schofield-bmr",
+                  text: "代謝評估（BEE・BSA・熱量・體重・BMR）",
+                  link: "/guide/meta/metabolism",
                 },
               ],
             },
@@ -251,24 +215,16 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "風濕免疫自我評估",
-              link: "/guide/rheuma/autoscreen-calculator",
+              text: "風濕免疫自我評估（症狀篩檢）",
+              link: "/guide/rheuma/autoimmune-screen",
             },
             {
               text: "類風濕關節炎",
               collapsed: false,
               items: [
                 {
-                  text: "RAPID3 快速評估指數",
-                  link: "/guide/rheuma/rapid3-calculator",
-                },
-                {
-                  text: "DAS28 疾病活動指數",
-                  link: "/guide/rheuma/das28-calculator",
-                },
-                {
-                  text: "CDAI 臨床疾病活動指數",
-                  link: "/guide/rheuma/cdai-calculator",
+                  text: "疾病活動評估（RAPID3・DAS28・CDAI）",
+                  link: "/guide/rheuma/rheumatoid-arthritis",
                 },
               ],
             },
@@ -277,8 +233,8 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "BASDAI 疾病活動指數",
-                  link: "/guide/rheuma/basdai-calculator",
+                  text: "疾病活動評估（BASDAI）",
+                  link: "/guide/rheuma/ankylosing-spondylitis",
                 },
               ],
             },
@@ -287,8 +243,8 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "FRAX 骨折風險評估工具",
-                  link: "/guide/rheuma/frax-calculator",
+                  text: "骨折風險評估（FRAX）",
+                  link: "/guide/rheuma/fracture",
                 },
               ],
             },
@@ -303,12 +259,8 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "NIHSS 中風量表",
-                  link: "/guide/neuro/nihss-calculator",
-                },
-                {
-                  text: "ABCD-2 TIA 風險評估",
-                  link: "/guide/neuro/abcd2-calculator",
+                  text: "中風評估（NIHSS・ABCD²）",
+                  link: "/guide/neuro/stroke",
                 },
               ],
             },
@@ -317,28 +269,8 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "FAST 功能性評估分期",
-                  link: "/guide/neuro/fast-calculator",
-                },
-                {
-                  text: "MMSE 簡易心智狀態評估",
-                  link: "/guide/neuro/mmse-calculator",
-                },
-                {
-                  text: "NPI 神經精神症狀量表",
-                  link: "/guide/neuro/npi-calculator",
-                },
-                {
-                  text: "CDR 臨床失智評量表",
-                  link: "/guide/neuro/cdr-calculator",
-                },
-                {
-                  text: "GDS 整體退化量表",
-                  link: "/guide/neuro/gds-calculator",
-                },
-                {
-                  text: "CMAI 激動情緒行為量表",
-                  link: "/guide/neuro/cmai-calculator",
+                  text: "認知評估（FAST・MMSE・CDR・GDS・NPI・CMAI）",
+                  link: "/guide/neuro/cognition",
                 },
               ],
             },
@@ -347,8 +279,8 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "UPDRS 巴金森症狀衡量表",
-                  link: "/guide/neuro/updrs-calculator",
+                  text: "運動功能評估（UPDRS）",
+                  link: "/guide/neuro/motor-function",
                 },
               ],
             },
@@ -357,30 +289,8 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "SS 纖維肌痛症狀嚴重度量表",
-                  link: "/guide/neuro/fibromyalgia-calculator",
-                },
-                {
-                  text: "WPI 廣泛疼痛指數",
-                  link: "/guide/neuro/wpi-calculator",
-                },
-              ],
-            },
-            {
-              text: "其他",
-              collapsed: false,
-              items: [
-                {
-                  text: "CTS 腕隧道症候群臨床決策樹",
-                  link: "/guide/neuro/Neurology-CTS",
-                },
-                {
-                  text: "MIGRAINE 偏頭痛篩查與診斷標準",
-                  link: "/guide/neuro/Neurology-Migraine",
-                },
-                {
-                  text: "ACUTE VERTIGO 眩暈鑑別診斷工具",
-                  link: "/guide/neuro/Neurology-Vertigo",
+                  text: "纖維肌痛評估（WPI・SS）",
+                  link: "/guide/neuro/fibromyalgia",
                 },
               ],
             },
@@ -391,8 +301,12 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "CTS 腕隧道症候群臨床決策樹",
-              link: "/guide/pain/carpal-tunnel",
+              text: "腕隧道症候群（Katz・Wainner CPR）",
+              link: "/guide/pain/cts",
+            },
+            {
+              text: "偏頭痛（篩查・ICHD-3）",
+              link: "/guide/pain/migraine",
             },
             {
               text: "LBP Evaluation 腰痛評估決策樹",

@@ -1487,11 +1487,7 @@ async function snotCopy() {
 }
 .opt-pill.s0.active {
   border-color: #22c55e;
-  background: linear-gradient(
-    180deg,
-    rgba(34, 197, 94, 0.12),
-    rgba(34, 197, 94, 0.06)
-  );
+  background: color-mix(in srgb, rgb(34, 197, 94) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.08);
 }
 
@@ -1505,11 +1501,7 @@ async function snotCopy() {
 }
 .opt-pill.s1.active {
   border-color: #84cc16;
-  background: linear-gradient(
-    180deg,
-    rgba(132, 204, 22, 0.12),
-    rgba(132, 204, 22, 0.06)
-  );
+  background: color-mix(in srgb, rgb(132, 204, 22) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(132, 204, 22, 0.08);
 }
 
@@ -1523,11 +1515,7 @@ async function snotCopy() {
 }
 .opt-pill.s2.active {
   border-color: #eab308;
-  background: linear-gradient(
-    180deg,
-    rgba(234, 179, 8, 0.12),
-    rgba(234, 179, 8, 0.06)
-  );
+  background: color-mix(in srgb, rgb(234, 179, 8) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.08);
 }
 
@@ -1541,11 +1529,7 @@ async function snotCopy() {
 }
 .opt-pill.s3.active {
   border-color: #f59e0b;
-  background: linear-gradient(
-    180deg,
-    rgba(245, 158, 11, 0.12),
-    rgba(245, 158, 11, 0.06)
-  );
+  background: color-mix(in srgb, rgb(245, 158, 11) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.08);
 }
 
@@ -1559,11 +1543,7 @@ async function snotCopy() {
 }
 .opt-pill.s4.active {
   border-color: #f97316;
-  background: linear-gradient(
-    180deg,
-    rgba(249, 115, 22, 0.12),
-    rgba(249, 115, 22, 0.06)
-  );
+  background: color-mix(in srgb, rgb(249, 115, 22) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.08);
 }
 
@@ -1577,11 +1557,7 @@ async function snotCopy() {
 }
 .opt-pill.s5.active {
   border-color: #ef4444;
-  background: linear-gradient(
-    180deg,
-    rgba(239, 68, 68, 0.12),
-    rgba(239, 68, 68, 0.06)
-  );
+  background: color-mix(in srgb, rgb(239, 68, 68) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.08);
 }
 

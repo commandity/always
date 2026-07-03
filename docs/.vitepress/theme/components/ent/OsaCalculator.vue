@@ -575,11 +575,9 @@ async function essCopy() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span
-          ><span class="tick-threshold">10</span
+          <span class="tk-normal">0</span><span class="tick-threshold">10</span
           ><span class="tk-mild">12</span><span class="tk-moderate">15</span
-          ><span class="tk-severe">17</span
-          ><span class="tk-critical">24</span>
+          ><span class="tk-severe">17</span><span class="tk-critical">24</span>
         </div>
       </div>
 
@@ -1086,7 +1084,7 @@ async function essCopy() {
 }
 .sb-item.selected {
   border-color: var(--vp-c-brand-1);
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.04), transparent);
+  background: color-mix(in srgb, rgb(34, 197, 94) 18%, var(--vp-c-bg));
 }
 .item-letter {
   flex-shrink: 0;
@@ -1120,21 +1118,23 @@ async function essCopy() {
   margin-bottom: 3px;
   line-height: 1.4;
 }
+/* !important needed: custom.css force-normalizes .item-name/.item-detail/
+   .item-hint globally with !important, which beats scoped rules otherwise */
 .sb-item .item-name {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--vp-c-text-2);
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-2) !important;
   margin-bottom: 3px;
 }
 .sb-item .item-detail {
-  font-size: 0.78rem;
-  color: var(--vp-c-text-2);
+  font-size: 0.78rem !important;
+  color: var(--vp-c-text-3) !important;
   line-height: 1.5;
   margin-bottom: 3px;
 }
 .sb-item .item-hint {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
+  font-size: 0.7rem !important;
+  color: var(--vp-c-text-3) !important;
   font-style: italic;
 }
 .item-toggle {
@@ -1320,11 +1320,7 @@ async function essCopy() {
 }
 .opt-pill.s0.active {
   border-color: #22c55e;
-  background: linear-gradient(
-    180deg,
-    rgba(34, 197, 94, 0.12),
-    rgba(34, 197, 94, 0.06)
-  );
+  background: color-mix(in srgb, rgb(34, 197, 94) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.08);
 }
 
@@ -1338,11 +1334,7 @@ async function essCopy() {
 }
 .opt-pill.s1.active {
   border-color: #84cc16;
-  background: linear-gradient(
-    180deg,
-    rgba(132, 204, 22, 0.12),
-    rgba(132, 204, 22, 0.06)
-  );
+  background: color-mix(in srgb, rgb(132, 204, 22) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(132, 204, 22, 0.08);
 }
 
@@ -1356,11 +1348,7 @@ async function essCopy() {
 }
 .opt-pill.s2.active {
   border-color: #eab308;
-  background: linear-gradient(
-    180deg,
-    rgba(234, 179, 8, 0.12),
-    rgba(234, 179, 8, 0.06)
-  );
+  background: color-mix(in srgb, rgb(234, 179, 8) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.08);
 }
 
@@ -1374,11 +1362,7 @@ async function essCopy() {
 }
 .opt-pill.s3.active {
   border-color: #f59e0b;
-  background: linear-gradient(
-    180deg,
-    rgba(245, 158, 11, 0.12),
-    rgba(245, 158, 11, 0.06)
-  );
+  background: color-mix(in srgb, rgb(245, 158, 11) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.08);
 }
 

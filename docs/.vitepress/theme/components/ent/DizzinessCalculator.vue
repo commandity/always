@@ -8386,11 +8386,7 @@ const dhi_qIndex = (() => {
 }
 .dhi .opt-pill.s0.active {
   border-color: #22c55e;
-  background: linear-gradient(
-    180deg,
-    rgba(34, 197, 94, 0.12),
-    rgba(34, 197, 94, 0.06)
-  );
+  background: color-mix(in srgb, rgb(34, 197, 94) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.08);
 }
 .dhi .opt-pill.s0 .opt-num {
@@ -8417,11 +8413,7 @@ const dhi_qIndex = (() => {
 }
 .dhi .opt-pill.s2.active {
   border-color: #eab308;
-  background: linear-gradient(
-    180deg,
-    rgba(234, 179, 8, 0.12),
-    rgba(234, 179, 8, 0.06)
-  );
+  background: color-mix(in srgb, rgb(234, 179, 8) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.08);
 }
 .dhi .opt-pill.s2 .opt-num {
@@ -8448,11 +8440,7 @@ const dhi_qIndex = (() => {
 }
 .dhi .opt-pill.s4.active {
   border-color: #f97316;
-  background: linear-gradient(
-    180deg,
-    rgba(249, 115, 22, 0.12),
-    rgba(249, 115, 22, 0.06)
-  );
+  background: color-mix(in srgb, rgb(249, 115, 22) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.08);
 }
 .dhi .opt-pill.s4 .opt-num {

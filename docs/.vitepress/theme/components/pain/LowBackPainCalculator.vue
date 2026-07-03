@@ -662,11 +662,7 @@ function reset() {
 }
 .dur-btn.active {
   border-color: var(--vp-c-brand-1);
-  background: linear-gradient(
-    180deg,
-    rgba(99, 102, 241, 0.12),
-    rgba(99, 102, 241, 0.06)
-  );
+  background: color-mix(in srgb, rgb(99, 102, 241) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.08);
 }
 .dur-label {

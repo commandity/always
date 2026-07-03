@@ -26,20 +26,26 @@ import AsaCalculator from "./components/anes/AsaCalculator.vue";
 import Phq9Gad7Calculator from "./components/psy/Phq9Gad7Calculator.vue";
 import Sf36Calculator from "./components/psy/Sf36Calculator.vue";
 // NEURO
-import GdsCalculator from "./components/neuro/GdsCalculator.vue";
-import CdrCalculator from "./components/neuro/CdrCalculator.vue";
-import NihssCalculator from "./components/neuro/NihssCalculator.vue";
-import UpdrsCalculator from "./components/neuro/UpdrsCalculator.vue";
-import Abcd2Calculator from "./components/neuro/Abcd2Calculator.vue";
-import NpiCalculator from "./components/neuro/NpiCalculator.vue";
-import WpiCalculator from "./components/neuro/WpiCalculator.vue";
-import FastCalculator from "./components/neuro/FastCalculator.vue";
-import CmaiCalculator from "./components/neuro/CmaiCalculator.vue";
-import MmseCalculator from "./components/neuro/MmseCalculator.vue";
-import CTSCalculator from "./components/neuro/CTSCalculator.vue";
-import MigraineCalculator from "./components/neuro/MigraineCalculator.vue";
+import GdsCalculator from "./components/neuro/old/GdsCalculator.vue";
+import CdrCalculator from "./components/neuro/old/CdrCalculator.vue";
+import NihssCalculator from "./components/neuro/old/NihssCalculator.vue";
+import UpdrsCalculator from "./components/neuro/old/UpdrsCalculator.vue";
+import Abcd2Calculator from "./components/neuro/old/Abcd2Calculator.vue";
+import NpiCalculator from "./components/neuro/old/NpiCalculator.vue";
+import WpiCalculator from "./components/neuro/old/WpiCalculator.vue";
+import FastCalculator from "./components/neuro/old/FastCalculator.vue";
+import CmaiCalculator from "./components/neuro/old/CmaiCalculator.vue";
+import MmseCalculator from "./components/neuro/old/MmseCalculator.vue";
+import CTSCalculator from "./components/neuro/old/CTSCalculator.vue";
+import MigraineCalculator from "./components/neuro/old/MigraineCalculator.vue";
 import VertigoEvaluator from "./components/neuro/VertigoEvaluator.vue";
-import FibromyalgiaCalculator from "./components/neuro/FibromyalgiaCalculator.vue";
+import FibromyalgiaCalculator from "./components/neuro/old/FibromyalgiaCalculator.vue";
+import StrokeCalculator from "./components/neuro/StrokeCalculator.vue";
+import CognitionCalculator from "./components/neuro/CognitionCalculator.vue";
+import MotorFunctionCalculator from "./components/neuro/MotorFunctionCalculator.vue";
+import FibromyalgiaAssessment from "./components/neuro/FibromyalgiaAssessment.vue";
+import MigraineAssessment from "./components/pain/MigraineAssessment.vue";
+import CtsAssessment from "./components/pain/CtsAssessment.vue";
 // ENT
 import HearingHandicapCalculator from "./components/ent/old/HearingHandicapCalculator.vue";
 import DupixentCalculator from "./components/ent/old/DupixentCalculator.vue";
@@ -78,24 +84,31 @@ import CentorCalculator from "./components/infection/CentorCalculator.vue";
 import Cha2ds2vaCalculator from "./components/cv/Cha2ds2vaCalculator.vue";
 import PreventAscvdCalculator from "./components/cv/PreventAscvdCalculator.vue";
 // RHEUMA
-import Das28Calculator from "./components/rheuma/Das28Calculator.vue";
-import FraxCalculator from "./components/rheuma/FraxCalculator.vue";
-import CdaiCalculator from "./components/rheuma/CdaiCalculator.vue";
-import Rapid3Calculator from "./components/rheuma/Rapid3Calculator.vue";
-import BasdaiCalculator from "./components/rheuma/BasdaiCalculator.vue";
-import AutoScreenCalculator from "./components/rheuma/AutoScreenCalculator.vue";
+import Das28Calculator from "./components/rheuma/old/Das28Calculator.vue";
+import FraxCalculator from "./components/rheuma/old/FraxCalculator.vue";
+import CdaiCalculator from "./components/rheuma/old/CdaiCalculator.vue";
+import Rapid3Calculator from "./components/rheuma/old/Rapid3Calculator.vue";
+import BasdaiCalculator from "./components/rheuma/old/BasdaiCalculator.vue";
+import AutoScreenCalculator from "./components/rheuma/old/AutoScreenCalculator.vue";
+import RheumaScreenCalculator from "./components/rheuma/RheumaScreenCalculator.vue";
+import RheumatoidArthritisCalculator from "./components/rheuma/RheumatoidArthritisCalculator.vue";
+import AnkylosingSpondylitisCalculator from "./components/rheuma/AnkylosingSpondylitisCalculator.vue";
+import FractureCalculator from "./components/rheuma/FractureCalculator.vue";
 // NEPHRO
-import AccessRecirculationCalculator from "./components/nephro/AccessRecirculationCalculator.vue";
-import BicarbDeficitCalculator from "./components/nephro/BicarbDeficitCalculator.vue";
-import DeltaDeltaCalculator from "./components/nephro/DeltaDeltaCalculator.vue";
-import FractionalExcretionCalculator from "./components/nephro/FractionalExcretionCalculator.vue";
-import H2oDeficitCalculator from "./components/nephro/H2oDeficitCalculator.vue";
-import IvcBsaCalculator from "./components/nephro/IvcBsaCalculator.vue";
-import KtvCalculator from "./components/nephro/KtvCalculator.vue";
-import UreaReductionCalculator from "./components/nephro/UreaReductionCalculator.vue";
-import MdrdCalculator from "./components/nephro/MdrdCalculator.vue";
+import AccessRecirculationCalculator from "./components/nephro/old/AccessRecirculationCalculator.vue";
+import BicarbDeficitCalculator from "./components/nephro/old/BicarbDeficitCalculator.vue";
+import DeltaDeltaCalculator from "./components/nephro/old/DeltaDeltaCalculator.vue";
+import FractionalExcretionCalculator from "./components/nephro/old/FractionalExcretionCalculator.vue";
+import H2oDeficitCalculator from "./components/nephro/old/H2oDeficitCalculator.vue";
+import IvcBsaCalculator from "./components/nephro/old/IvcBsaCalculator.vue";
+import KtvCalculator from "./components/nephro/old/KtvCalculator.vue";
+import UreaReductionCalculator from "./components/nephro/old/UreaReductionCalculator.vue";
+import MdrdCalculator from "./components/nephro/old/MdrdCalculator.vue";
+import RenalFunctionCalculator from "./components/nephro/RenalFunctionCalculator.vue";
+import VolumeStatusCalculator from "./components/nephro/VolumeStatusCalculator.vue";
+import HemodialysisCalculator from "./components/nephro/HemodialysisCalculator.vue";
 // PAIN
-import CarpalTunnelCalculator from "./components/pain/CarpalTunnelCalculator.vue";
+import CarpalTunnelCalculator from "./components/pain/old/CarpalTunnelCalculator.vue";
 import LowBackPainCalculator from "./components/pain/LowBackPainCalculator.vue";
 import NeuropathicPainCalculator from "./components/pain/NeuropathicPainCalculator.vue";
 import OswestryCalculator from "./components/pain/OswestryCalculator.vue";
@@ -109,14 +122,16 @@ import MNASFCalculator from "./components/geria/MNASFCalculator.vue";
 import WhoVisionCalculator from "./components/geria/WhoVisionCalculator.vue";
 // META
 import LipidProtocolCalculator from "./components/lipid/LipidProtocolCalculator.vue";
-import BasalEnergyExpenditureCalculator from "./components/meta/BasalEnergyExpenditureCalculator.vue";
-import BSACalculator from "./components/meta/BSACalculator.vue";
-import LevothyroxineCalculator from "./components/meta/LevothyroxineCalculator.vue";
-import CalorieRequirementsCalculator from "./components/meta/CalorieRequirementsCalculator.vue";
-import CalorieRequirementsTableCalculator from "./components/meta/CalorieRequirementsTableCalculator.vue";
-import IdealBodyWeightCalculator from "./components/meta/IdealBodyWeightCalculator.vue";
-import LeanBodyWeightCalculator from "./components/meta/LeanBodyWeightCalculator.vue";
-import ScofieldBMRCalculator from "./components/meta/ScofieldBMRCalculator.vue";
+import BasalEnergyExpenditureCalculator from "./components/meta/old/BasalEnergyExpenditureCalculator.vue";
+import BSACalculator from "./components/meta/old/BSACalculator.vue";
+import LevothyroxineCalculator from "./components/meta/old/LevothyroxineCalculator.vue";
+import CalorieRequirementsCalculator from "./components/meta/old/CalorieRequirementsCalculator.vue";
+import CalorieRequirementsTableCalculator from "./components/meta/old/CalorieRequirementsTableCalculator.vue";
+import IdealBodyWeightCalculator from "./components/meta/old/IdealBodyWeightCalculator.vue";
+import LeanBodyWeightCalculator from "./components/meta/old/LeanBodyWeightCalculator.vue";
+import ScofieldBMRCalculator from "./components/meta/old/ScofieldBMRCalculator.vue";
+import ThyroidCalculator from "./components/meta/ThyroidCalculator.vue";
+import MetabolismCalculator from "./components/meta/MetabolismCalculator.vue";
 import BasalInsulinTitrationCalculator from "./components/dm/BasalInsulinTitrationCalculator.vue";
 import OhaSelectionGuide from "./components/dm/OhaSelectionGuide.vue";
 // URO
@@ -232,6 +247,12 @@ export default {
     app.component("MigraineCalculator", MigraineCalculator);
     app.component("VertigoEvaluator", VertigoEvaluator);
     app.component("FibromyalgiaCalculator", FibromyalgiaCalculator);
+    app.component("StrokeCalculator", StrokeCalculator);
+    app.component("CognitionCalculator", CognitionCalculator);
+    app.component("MotorFunctionCalculator", MotorFunctionCalculator);
+    app.component("FibromyalgiaAssessment", FibromyalgiaAssessment);
+    app.component("MigraineAssessment", MigraineAssessment);
+    app.component("CtsAssessment", CtsAssessment);
     // ENT
     app.component("HearingHandicapCalculator", HearingHandicapCalculator);
     app.component("DupixentCalculator", DupixentCalculator);
@@ -276,6 +297,16 @@ export default {
     app.component("Rapid3Calculator", Rapid3Calculator);
     app.component("BasdaiCalculator", BasdaiCalculator);
     app.component("AutoScreenCalculator", AutoScreenCalculator);
+    app.component("RheumaScreenCalculator", RheumaScreenCalculator);
+    app.component(
+      "RheumatoidArthritisCalculator",
+      RheumatoidArthritisCalculator,
+    );
+    app.component(
+      "AnkylosingSpondylitisCalculator",
+      AnkylosingSpondylitisCalculator,
+    );
+    app.component("FractureCalculator", FractureCalculator);
     // NEPHRO
     app.component(
       "AccessRecirculationCalculator",
@@ -292,6 +323,9 @@ export default {
     app.component("KtvCalculator", KtvCalculator);
     app.component("UreaReductionCalculator", UreaReductionCalculator);
     app.component("MdrdCalculator", MdrdCalculator);
+    app.component("RenalFunctionCalculator", RenalFunctionCalculator);
+    app.component("VolumeStatusCalculator", VolumeStatusCalculator);
+    app.component("HemodialysisCalculator", HemodialysisCalculator);
     // PAIN
     app.component("CarpalTunnelCalculator", CarpalTunnelCalculator);
     app.component("LowBackPainCalculator", LowBackPainCalculator);
@@ -327,6 +361,8 @@ export default {
     app.component("IdealBodyWeightCalculator", IdealBodyWeightCalculator);
     app.component("LeanBodyWeightCalculator", LeanBodyWeightCalculator);
     app.component("ScofieldBMRCalculator", ScofieldBMRCalculator);
+    app.component("ThyroidCalculator", ThyroidCalculator);
+    app.component("MetabolismCalculator", MetabolismCalculator);
     app.component(
       "BasalInsulinTitrationCalculator",
       BasalInsulinTitrationCalculator,

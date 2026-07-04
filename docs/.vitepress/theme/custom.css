@@ -1093,3 +1093,77 @@ html {
 .detail-letter {
   font-size: 0.78rem !important;
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   Calculator typography normalization — unified scale across all
+   .vue tools (panel subtitles, group headers, Q chips, detail rows).
+   Complements the item/opt/result rules above.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Panel header subtitle (under the h2 title) */
+.subtitle {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* Group / section headers */
+.group-label {
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+}
+.group-sub {
+  font-size: 0.78rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.group-label-text {
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+}
+.group-sub-text {
+  font-size: 0.78rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* Question number chips and per-item score boxes */
+.item-qnum {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+}
+.item-score {
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+
+/* Section question titles (ODI-style questionnaires) */
+.sec-title {
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+}
+
+/* Results detail table */
+.results-header {
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+}
+.detail-qnum {
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+}
+.detail-domain {
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+}
+.detail-desc {
+  font-size: 0.78rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* Sub-score pills */
+.sub-label {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+}
+.sub-val {
+  font-size: 0.85rem !important;
+  font-weight: 800 !important;
+}

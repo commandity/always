@@ -309,17 +309,12 @@ export default defineConfig({
               link: "/guide/pain/migraine",
             },
             {
-              text: "LBP Evaluation 腰痛評估決策樹",
-              link: "/guide/pain/low-back-pain",
+              text: "疼痛評估（腰痛・神經性疼痛）",
+              link: "/guide/pain/pain-evaluation",
             },
             {
-              text: "Neuropathic Pain Scale 神經性疼痛量表",
-              link: "/guide/pain/neuropathic-pain",
-            },
-            { text: "Oswestry 失能指數", link: "/guide/pain/oswestry" },
-            {
-              text: "Roland-Morris 失能問卷",
-              link: "/guide/pain/roland-morris",
+              text: "失能評估（Oswestry・Roland-Morris）",
+              link: "/guide/pain/disability",
             },
           ],
         },

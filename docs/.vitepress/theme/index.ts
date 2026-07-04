@@ -109,10 +109,12 @@ import VolumeStatusCalculator from "./components/nephro/VolumeStatusCalculator.v
 import HemodialysisCalculator from "./components/nephro/HemodialysisCalculator.vue";
 // PAIN
 import CarpalTunnelCalculator from "./components/pain/old/CarpalTunnelCalculator.vue";
-import LowBackPainCalculator from "./components/pain/LowBackPainCalculator.vue";
-import NeuropathicPainCalculator from "./components/pain/NeuropathicPainCalculator.vue";
-import OswestryCalculator from "./components/pain/OswestryCalculator.vue";
-import RolandMorrisCalculator from "./components/pain/RolandMorrisCalculator.vue";
+import LowBackPainCalculator from "./components/pain/old/LowBackPainCalculator.vue";
+import NeuropathicPainCalculator from "./components/pain/old/NeuropathicPainCalculator.vue";
+import OswestryCalculator from "./components/pain/old/OswestryCalculator.vue";
+import RolandMorrisCalculator from "./components/pain/old/RolandMorrisCalculator.vue";
+import PainCalculator from "./components/pain/PainCalculator.vue";
+import DisabilityCalculator from "./components/pain/DisabilityCalculator.vue";
 // GERIATRIC
 import GeriatricDepressionScaleCalculator from "./components/geria/GeriatricDepressionScaleCalculator.vue";
 import ICOPEScreeningCalculator from "./components/geria/ICOPEScreeningCalculator.vue";
@@ -332,6 +334,8 @@ export default {
     app.component("NeuropathicPainCalculator", NeuropathicPainCalculator);
     app.component("OswestryCalculator", OswestryCalculator);
     app.component("RolandMorrisCalculator", RolandMorrisCalculator);
+    app.component("PainCalculator", PainCalculator);
+    app.component("DisabilityCalculator", DisabilityCalculator);
     // GERIATRIC
     app.component(
       "GeriatricDepressionScaleCalculator",

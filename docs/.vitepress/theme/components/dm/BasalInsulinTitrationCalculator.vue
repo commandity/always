@@ -1782,7 +1782,7 @@ async function copyMarkdown() {
   display: grid;
   grid-template-columns: 110px repeat(3, minmax(160px, 1fr));
   gap: 0.6rem;
-  font-size: 0.74rem;
+  font-size: 0.84rem;
   align-items: start;
   min-width: 560px;
 }
@@ -1793,7 +1793,7 @@ async function copyMarkdown() {
 .ref-rowhead {
   font-weight: 700;
   color: var(--vp-c-text-3);
-  font-size: 0.66rem;
+  font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -2261,7 +2261,7 @@ async function copyMarkdown() {
     font-size: 1.25rem;
   }
   .ref-row {
-    font-size: 0.68rem;
+    font-size: 0.78rem;
   }
 }
 </style>

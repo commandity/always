@@ -4593,7 +4593,7 @@ function sco_reset() {
   border: 1px solid var(--vp-c-divider);
   border-radius: 10px;
   overflow: hidden;
-  font-size: 0.78rem;
+  font-size: 0.88rem;
 }
 .crt .rt-row {
   display: grid;
@@ -4609,7 +4609,7 @@ function sco_reset() {
 }
 .crt .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -4637,7 +4637,7 @@ function sco_reset() {
 }
 .crt .rt-loss {
   color: var(--vp-c-text-3);
-  font-size: 0.74rem;
+  font-size: 0.84rem;
 }
 .crt .table-note {
   font-size: 0.72rem;
@@ -4956,7 +4956,7 @@ function sco_reset() {
   }
 .crt .rt-row {
     grid-template-columns: 50px 1fr 1fr 1fr 1fr;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 .crt .rt-row span:last-child {
     display: none;
@@ -7419,27 +7419,27 @@ function sco_reset() {
 .metabolism .score-badge.normal {
   border-color: #22c55e;
   color: #22c55e;
-  background: linear-gradient(180deg, rgba(34, 197, 94, 0.07), transparent);
+  background: color-mix(in srgb, rgb(34, 197, 94) 10%, var(--vp-c-bg));
 }
 .metabolism .score-badge.mild {
   border-color: #f59e0b;
   color: #f59e0b;
-  background: linear-gradient(180deg, rgba(245, 158, 11, 0.07), transparent);
+  background: color-mix(in srgb, rgb(245, 158, 11) 10%, var(--vp-c-bg));
 }
 .metabolism .score-badge.moderate {
   border-color: #f97316;
   color: #f97316;
-  background: linear-gradient(180deg, rgba(249, 115, 22, 0.07), transparent);
+  background: color-mix(in srgb, rgb(249, 115, 22) 10%, var(--vp-c-bg));
 }
 .metabolism .score-badge.badge-male {
   border-color: #38bdf8;
   color: #38bdf8;
-  background: linear-gradient(180deg, rgba(56, 189, 248, 0.07), transparent);
+  background: color-mix(in srgb, rgb(56, 189, 248) 10%, var(--vp-c-bg));
 }
 .metabolism .score-badge.badge-female {
   border-color: #f472b6;
   color: #f472b6;
-  background: linear-gradient(180deg, rgba(244, 114, 182, 0.07), transparent);
+  background: color-mix(in srgb, rgb(244, 114, 182) 10%, var(--vp-c-bg));
 }
 @media (max-width: 640px) {
   .metabolism .score-badge {
@@ -7491,9 +7491,21 @@ function sco_reset() {
   font-size: 0.72rem !important;
 }
 /* activity factor / PA selectors */
-.metabolism .af-desc,
+.metabolism .af-desc {
+  font-size: 0.85rem !important;
+}
 .metabolism .af-factor {
-  font-size: 0.78rem !important;
+  font-size: 0.9rem !important;
+}
+.metabolism .af-name {
+  font-size: 0.95rem !important;
+}
+/* BEE sex-selector tab buttons */
+.metabolism .bee .tab-title {
+  font-size: 1rem !important;
+}
+.metabolism .bee .tab-sub {
+  font-size: 0.74rem !important;
 }
 /* 公式選擇 group header sub text */
 .metabolism .group-sub-text {
@@ -7514,10 +7526,10 @@ function sco_reset() {
   font-size: 0.7rem !important;
 }
 .metabolism .rt-loss {
-  font-size: 0.8rem !important;
+  font-size: 0.9rem !important;
 }
 .metabolism .rt-row {
-  font-size: 0.78rem !important;
+  font-size: 0.88rem !important;
 }
 /* formula rows and table headers */
 .metabolism .bt-formula,
@@ -7531,7 +7543,7 @@ function sco_reset() {
 .metabolism .st-header,
 .metabolism .tt-header,
 .metabolism .rt-header {
-  font-size: 0.75rem !important;
+  font-size: 0.85rem !important;
 }
 .metabolism .results-header {
   font-size: 0.76rem !important;
@@ -7541,5 +7553,123 @@ function sco_reset() {
 }
 .metabolism .item-qnum {
   font-size: 0.72rem !important;
+}
+
+/* ══ Calorie Requirements Table（crt）字級調整 ══ */
+.metabolism .crt .tab-title {
+  font-size: 1rem !important;
+}
+.metabolism .crt .tab-sub {
+  font-size: 0.76rem !important;
+}
+.metabolism .crt .pal-name {
+  font-size: 0.92rem !important;
+}
+.metabolism .crt .pal-desc {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.metabolism .crt .age-label {
+  font-size: 0.85rem !important;
+}
+.metabolism .crt .age-val {
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+}
+.metabolism .crt .age-unit {
+  font-size: 0.72rem !important;
+}
+
+/* ══════════════ 統一選擇按鈕樣式（以 Calorie Requirements Table 為準）══════════════
+   Applies crt's sex-tab / PAL-button look to every metabolism sub-tool.
+   Scoped to .tab-toggle so it never touches the wrapper tab bar. */
+.metabolism .tab-toggle {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.metabolism .tab-toggle .tab-btn {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.18s;
+}
+.metabolism .tab-toggle .tab-btn.tab-active-m {
+  border-color: #38bdf8 !important;
+  background: rgba(56, 189, 248, 0.06) !important;
+}
+.metabolism .tab-toggle .tab-btn.tab-active-f {
+  border-color: #f472b6 !important;
+  background: rgba(244, 114, 182, 0.06) !important;
+}
+.metabolism .tab-toggle .tab-title {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: var(--vp-c-text-1);
+}
+.metabolism .tab-toggle .tab-sub {
+  font-size: 0.76rem !important;
+  color: var(--vp-c-text-3);
+}
+.metabolism .tab-toggle .tab-btn.tab-active-m .tab-title {
+  color: #38bdf8 !important;
+}
+.metabolism .tab-toggle .tab-btn.tab-active-f .tab-title {
+  color: #f472b6 !important;
+}
+
+.metabolism .pal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+.metabolism .pal-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0.7rem 0.85rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: all 0.18s;
+}
+.metabolism .pal-btn.pal-active {
+  border-color: #22c55e !important;
+  background: rgba(34, 197, 94, 0.06) !important;
+}
+.metabolism .pal-name {
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  color: var(--vp-c-text-1);
+}
+.metabolism .pal-desc {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-2) !important;
+  line-height: 1.4;
+}
+.metabolism .pal-btn.pal-active .pal-name {
+  color: #22c55e !important;
+}
+.metabolism .pal-pa {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+
+/* EER 與 Schofield BMR：PAL 卡片改為每列 2 個 */
+.metabolism .cal .pal-grid,
+.metabolism .sco .pal-grid {
+  grid-template-columns: 1fr 1fr;
 }
 </style>

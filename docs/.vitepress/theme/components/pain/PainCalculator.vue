@@ -513,8 +513,8 @@ function nps_reset() {
           :key="q.key"
           class="lbp-item"
           :class="{
-            scored: rfAnswers[q.key] === true,
-            'motor-scored': rfAnswers[q.key] === true,
+            'lbp-yes': rfAnswers[q.key] === true,
+            'lbp-no': rfAnswers[q.key] === false,
           }"
         >
           <div class="item-header">
@@ -563,8 +563,8 @@ function nps_reset() {
           :key="q.key"
           class="lbp-item"
           :class="{
-            scored: nrAnswers[q.key] === true,
-            'coord-scored': nrAnswers[q.key] === true,
+            'lbp-yes': nrAnswers[q.key] === true,
+            'lbp-no': nrAnswers[q.key] === false,
           }"
         >
           <div class="item-header">
@@ -613,8 +613,8 @@ function nps_reset() {
           :key="q.key"
           class="lbp-item"
           :class="{
-            scored: yfAnswers[q.key] === true,
-            'lang-scored': yfAnswers[q.key] === true,
+            'lbp-yes': yfAnswers[q.key] === true,
+            'lbp-no': yfAnswers[q.key] === false,
           }"
         >
           <div class="item-header">
@@ -1233,7 +1233,6 @@ function nps_reset() {
   gap: 0.6rem;
   padding: 0.55rem 0.85rem;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--vp-c-bg-mute), var(--vp-c-bg-soft));
   border: 1px solid var(--vp-c-divider);
   margin-bottom: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
@@ -2237,4 +2236,12 @@ function nps_reset() {
   }
 }
 
+.lbp .lbp-item.lbp-yes {
+  border-color: #ef4444;
+  background: color-mix(in srgb, #ef4444 6%, var(--vp-c-bg));
+}
+.lbp .lbp-item.lbp-no {
+  border-color: #22c55e;
+  background: color-mix(in srgb, #22c55e 6%, var(--vp-c-bg));
+}
 </style>

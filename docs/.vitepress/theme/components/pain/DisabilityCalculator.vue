@@ -1214,19 +1214,29 @@ function rm_reset() {
   flex: 1;
 }
 .odi .opt-score-badge {
-  font-size: 0.68rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 0.74rem;
   font-weight: 800;
-  color: var(--vp-c-text-3);
+  color: var(--vp-c-text-2);
   background: var(--vp-c-bg-mute);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
-  padding: 0 5px;
+  border: 1.5px solid var(--vp-c-divider);
   flex-shrink: 0;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s;
 }
 .odi .sec-opt.opt-selected .opt-score-badge {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
   color: #fff;
+  box-shadow: 0 1px 4px color-mix(in srgb, var(--vp-c-brand-1) 30%, transparent);
 }
 .odi .opt-text {
   font-size: 0.82rem;
@@ -1338,7 +1348,7 @@ function rm_reset() {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   align-items: center;
 }
 .odi .rt-row:last-child {
@@ -1346,7 +1356,7 @@ function rm_reset() {
 }
 .odi .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -1371,7 +1381,7 @@ function rm_reset() {
   color: #ef4444;
 }
 .odi .rt-sm {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
   text-align: left;
 }
@@ -1882,7 +1892,7 @@ function rm_reset() {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   align-items: center;
 }
 .rm .rt-row:last-child {
@@ -1890,7 +1900,7 @@ function rm_reset() {
 }
 .rm .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -1915,7 +1925,7 @@ function rm_reset() {
   color: #ef4444;
 }
 .rm .rt-sm {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
 }
 .rm /* ── Results detail (NIHSS pattern) ───────────────────────────── */

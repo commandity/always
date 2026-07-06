@@ -751,27 +751,31 @@ function grbasReset() {
               >
             </div>
 
-            <div class="option-row">
-              <label
-                v-for="opt in voissScoreOptions"
-                :key="opt.value"
-                class="opt-pill"
-                :class="{
-                  active: voissSelections[q.key] === opt.value,
-                  high: opt.value >= 3 && voissSelections[q.key] === opt.value,
-                  ['s' + opt.value]: true,
-                }"
-              >
-                <input
-                  type="radio"
-                  :name="'voiss-' + q.key"
-                  :value="opt.value"
-                  v-model="voissSelections[q.key]"
-                />
-                <span class="opt-num">{{ opt.label }}</span>
-                <span class="opt-desc">{{ opt.desc }}</span>
-              </label>
-            </div>
+            <div class="sec-options">
+                <label
+                  v-for="opt in voissScoreOptions"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': voissSelections[q.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="'voiss-' + q.key"
+                    :value="opt.value"
+                    v-model="voissSelections[q.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: voissSelections[q.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="voissSelections[q.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.label }}</span>
+                    <span class="opt-text">{{ opt.desc }}</span>
+                  </div>
+                </label>
+              </div>
           </div>
         </div>
       </div>
@@ -980,27 +984,31 @@ function grbasReset() {
               >
             </div>
 
-            <div class="option-row">
-              <label
-                v-for="opt in vhiScoreOptions"
-                :key="opt.value"
-                class="opt-pill"
-                :class="{
-                  active: vhiSelections[q.key] === opt.value,
-                  high: opt.value >= 3 && vhiSelections[q.key] === opt.value,
-                  ['s' + opt.value]: true,
-                }"
-              >
-                <input
-                  type="radio"
-                  :name="'vhi-' + q.key"
-                  :value="opt.value"
-                  v-model="vhiSelections[q.key]"
-                />
-                <span class="opt-num">{{ opt.label }}</span>
-                <span class="opt-desc">{{ opt.desc }}</span>
-              </label>
-            </div>
+            <div class="sec-options">
+                <label
+                  v-for="opt in vhiScoreOptions"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': vhiSelections[q.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="'vhi-' + q.key"
+                    :value="opt.value"
+                    v-model="vhiSelections[q.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: vhiSelections[q.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="vhiSelections[q.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.label }}</span>
+                    <span class="opt-text">{{ opt.desc }}</span>
+                  </div>
+                </label>
+              </div>
           </div>
         </div>
       </div>
@@ -1193,27 +1201,31 @@ function grbasReset() {
               <span class="item-desc">{{ p.desc }}</span>
             </div>
 
-            <div class="option-row grbas-option-row">
-              <label
-                v-for="opt in grbasScoreOptions"
-                :key="opt.value"
-                class="opt-pill"
-                :class="{
-                  active: grbasSelections[p.key] === opt.value,
-                  high: opt.value >= 2 && grbasSelections[p.key] === opt.value,
-                  ['s' + opt.value]: true,
-                }"
-              >
-                <input
-                  type="radio"
-                  :name="'grbas-' + p.key"
-                  :value="opt.value"
-                  v-model="grbasSelections[p.key]"
-                />
-                <span class="opt-num">{{ opt.label }}</span>
-                <span class="opt-desc">{{ opt.desc }}</span>
-              </label>
-            </div>
+            <div class="sec-options">
+                <label
+                  v-for="opt in grbasScoreOptions"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': grbasSelections[p.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="'grbas-' + p.key"
+                    :value="opt.value"
+                    v-model="grbasSelections[p.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: grbasSelections[p.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="grbasSelections[p.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.label }}</span>
+                    <span class="opt-text">{{ opt.desc }}</span>
+                  </div>
+                </label>
+              </div>
           </div>
         </div>
       </div>
@@ -1659,32 +1671,14 @@ function grbasReset() {
 
 /* VoiSS group accents */
 .group-header.impair-header {
-  background: linear-gradient(
-    135deg,
-    #eef2ff,
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border-left: 4px solid #6366f1;
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .group-header.emo-header {
-  background: linear-gradient(
-    135deg,
-    #ecfdf5,
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border-left: 4px solid #14b8a6;
   box-shadow: 0 1px 3px rgba(20, 184, 166, 0.06);
 }
 .group-header.phys-header {
-  background: linear-gradient(
-    135deg,
-    #fff7ed,
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border-left: 4px solid #f97316;
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
@@ -1707,22 +1701,10 @@ function grbasReset() {
 
 /* VHI-10 group accents */
 .vhi .group-header.func-header {
-  background: linear-gradient(
-    135deg,
-    #eef2ff,
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border-left: 4px solid #6366f1;
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .vhi .group-header.emo-header {
-  background: linear-gradient(
-    135deg,
-    #ecfdf5,
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border-left: 4px solid #14b8a6;
   box-shadow: 0 1px 3px rgba(20, 184, 166, 0.06);
 }
@@ -1739,12 +1721,6 @@ function grbasReset() {
 
 /* GRBAS group accent */
 .grbas .group-header {
-  background: linear-gradient(
-    135deg,
-    #fff7ed,
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border-left: 4px solid #f97316;
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }

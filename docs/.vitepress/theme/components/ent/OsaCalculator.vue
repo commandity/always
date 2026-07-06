@@ -625,26 +625,31 @@ async function essCopy() {
                 >{{ essSel[q.key] >= 0 ? essSel[q.key] : "—" }}</span
               >
             </div>
-            <div class="option-row">
-              <label
-                v-for="opt in essOpts"
-                :key="opt.value"
-                class="opt-pill"
-                :class="{
-                  active: essSel[q.key] === opt.value,
-                  ['s' + opt.value]: true,
-                }"
-              >
-                <input
-                  type="radio"
-                  :name="q.key"
-                  :value="opt.value"
-                  v-model="essSel[q.key]"
-                />
-                <span class="opt-num">{{ opt.label }}</span>
-                <span class="opt-desc">{{ opt.desc }}</span>
-              </label>
-            </div>
+            <div class="sec-options">
+                <label
+                  v-for="opt in essOpts"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': essSel[q.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="q.key"
+                    :value="opt.value"
+                    v-model="essSel[q.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: essSel[q.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="essSel[q.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.label }}</span>
+                    <span class="opt-text">{{ opt.desc }}</span>
+                  </div>
+                </label>
+              </div>
           </div>
         </div>
       </div>
@@ -1004,18 +1009,14 @@ async function essCopy() {
 /* Stop-Bang specific group headers */
 .stop-header {
   border-left: 4px solid #6366f1;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), transparent);
 }
 .bang-header {
   border-left: 4px solid #f97316;
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), transparent);
 }
 
 /* ESS-specific group header */
 .ess-group .group-header {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), transparent);
   border-left: 4px solid #f59e0b;
-  box-shadow: 0 1px 3px rgba(245, 158, 11, 0.06);
 }
 
 .group-label-block {

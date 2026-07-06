@@ -698,26 +698,31 @@ function fm_reset() {
               {{ selections[sym.key] >= 0 ? selections[sym.key] : "—" }}
             </span>
           </div>
-          <div class="option-row">
-            <label
-              v-for="opt in coreOptions"
-              :key="opt.value"
-              class="opt-pill"
-              :class="{
-                active: selections[sym.key] === opt.value,
-                ['s' + opt.value]: true,
-              }"
-            >
-              <input
-                type="radio"
-                :name="sym.key"
-                :value="opt.value"
-                v-model="selections[sym.key]"
-              />
-              <span class="opt-num">{{ opt.label }}</span>
-              <span class="opt-desc">{{ opt.desc }}</span>
-            </label>
-          </div>
+          <div class="sec-options">
+                <label
+                  v-for="opt in coreOptions"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': selections[sym.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="sym.key"
+                    :value="opt.value"
+                    v-model="selections[sym.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: selections[sym.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="selections[sym.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.label }}</span>
+                    <span class="opt-text">{{ opt.desc }}</span>
+                  </div>
+                </label>
+              </div>
         </div>
       </div>
     </div>
@@ -764,15 +769,12 @@ function fm_reset() {
               {{ selections["somatic"] >= 0 ? selections["somatic"] : "—" }}
             </span>
           </div>
-          <div class="option-row">
+          <div class="sec-options">
             <label
               v-for="opt in somaticOptions"
               :key="opt.value"
-              class="opt-pill"
-              :class="{
-                active: selections['somatic'] === opt.value,
-                ['s' + opt.value]: true,
-              }"
+              class="sec-opt"
+              :class="{ 'opt-selected': selections['somatic'] === opt.value }"
             >
               <input
                 type="radio"
@@ -780,8 +782,19 @@ function fm_reset() {
                 :value="opt.value"
                 v-model="selections['somatic']"
               />
-              <span class="opt-num">{{ opt.label }}</span>
-              <span class="opt-desc">{{ opt.desc }}</span>
+              <div
+                class="opt-radio"
+                :class="{ selected: selections['somatic'] === opt.value }"
+              >
+                <div
+                  class="opt-dot"
+                  v-if="selections['somatic'] === opt.value"
+                />
+              </div>
+              <div class="opt-content">
+                <span class="opt-score-badge">{{ opt.label }}</span>
+                <span class="opt-text">{{ opt.desc }}</span>
+              </div>
             </label>
           </div>
         </div>
@@ -1135,44 +1148,20 @@ function fm_reset() {
   margin-bottom: 0.6rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .wpi .left-header {
   border-left-color: #3b82f6;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(59, 130, 246, 0.06);
 }
 .wpi .right-header {
   border-left-color: #ef4444;
-  background: linear-gradient(
-    135deg,
-    rgba(239, 68, 68, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(239, 68, 68, 0.06);
 }
 .wpi .axial-header {
   border-left-color: #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
 .wpi .group-label-block {
@@ -1751,34 +1740,16 @@ function fm_reset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid #6366f1;
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .fm .core-header {
   border-left-color: #6366f1;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .fm .somatic-header {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .fm .group-label-block {

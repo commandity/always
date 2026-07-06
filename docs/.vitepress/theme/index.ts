@@ -81,8 +81,9 @@ import OsaCalculator from "./components/ent/OsaCalculator.vue";
 import Crb65Calculator from "./components/infection/Crb65Calculator.vue";
 import CentorCalculator from "./components/infection/CentorCalculator.vue";
 // CV
-import Cha2ds2vaCalculator from "./components/cv/Cha2ds2vaCalculator.vue";
-import PreventAscvdCalculator from "./components/cv/PreventAscvdCalculator.vue";
+import Cha2ds2vaCalculator from "./components/cv/old/Cha2ds2vaCalculator.vue";
+import PreventAscvdCalculator from "./components/cv/old/PreventAscvdCalculator.vue";
+import CardiovascularRisk from "./components/cv/CardiovascularRisk.vue";
 // RHEUMA
 import Das28Calculator from "./components/rheuma/old/Das28Calculator.vue";
 import FraxCalculator from "./components/rheuma/old/FraxCalculator.vue";
@@ -116,12 +117,13 @@ import RolandMorrisCalculator from "./components/pain/old/RolandMorrisCalculator
 import PainCalculator from "./components/pain/PainCalculator.vue";
 import DisabilityCalculator from "./components/pain/DisabilityCalculator.vue";
 // GERIATRIC
-import GeriatricDepressionScaleCalculator from "./components/geria/GeriatricDepressionScaleCalculator.vue";
-import ICOPEScreeningCalculator from "./components/geria/ICOPEScreeningCalculator.vue";
-import CognitiveBHTAD8 from "./components/geria/CognitiveBHTAD8.vue";
-import LocomotorSPPB from "./components/geria/LocomotorSPPB.vue";
-import MNASFCalculator from "./components/geria/MNASFCalculator.vue";
-import WhoVisionCalculator from "./components/geria/WhoVisionCalculator.vue";
+import GeriatricDepressionScaleCalculator from "./components/geria/old/GeriatricDepressionScaleCalculator.vue";
+import ICOPEScreeningCalculator from "./components/geria/old/ICOPEScreeningCalculator.vue";
+import CognitiveBHTAD8 from "./components/geria/old/CognitiveBHTAD8.vue";
+import LocomotorSPPB from "./components/geria/old/LocomotorSPPB.vue";
+import MNASFCalculator from "./components/geria/old/MNASFCalculator.vue";
+import WhoVisionCalculator from "./components/geria/old/WhoVisionCalculator.vue";
+import GeriatricAssessment from "./components/geria/GeriatricAssessment.vue";
 // META
 import LipidProtocolCalculator from "./components/lipid/LipidProtocolCalculator.vue";
 import BasalEnergyExpenditureCalculator from "./components/meta/old/BasalEnergyExpenditureCalculator.vue";
@@ -137,8 +139,9 @@ import MetabolismCalculator from "./components/meta/MetabolismCalculator.vue";
 import BasalInsulinTitrationCalculator from "./components/dm/BasalInsulinTitrationCalculator.vue";
 import OhaSelectionGuide from "./components/dm/OhaSelectionGuide.vue";
 // URO
-import IPSSCalculator from "./components/uro/IPSSCalculator.vue";
-import NIHCPSICalculator from "./components/uro/NIHCPSICalculator.vue";
+import IPSSCalculator from "./components/uro/old/IPSSCalculator.vue";
+import NIHCPSICalculator from "./components/uro/old/NIHCPSICalculator.vue";
+import ProstateAssessment from "./components/uro/ProstateAssessment.vue";
 // CLINIC
 import ForeignerInquiry from "./components/clinic/ForeignerInquiry.vue";
 import PregnancyCategoryTable from "./components/clinic/PregnancyCategoryTable.vue";
@@ -292,6 +295,7 @@ export default {
     // CV
     app.component("Cha2ds2vaCalculator", Cha2ds2vaCalculator);
     app.component("PreventAscvdCalculator", PreventAscvdCalculator);
+    app.component("CardiovascularRisk", CardiovascularRisk);
     // RHEUMA
     app.component("Das28Calculator", Das28Calculator);
     app.component("FraxCalculator", FraxCalculator);
@@ -346,6 +350,7 @@ export default {
     app.component("LocomotorSPPB", LocomotorSPPB);
     app.component("MNASFCalculator", MNASFCalculator);
     app.component("WhoVisionCalculator", WhoVisionCalculator);
+    app.component("GeriatricAssessment", GeriatricAssessment);
     // META
     app.component("LipidProtocolCalculator", LipidProtocolCalculator);
     app.component(
@@ -375,6 +380,7 @@ export default {
     // URO
     app.component("IPSSCalculator", IPSSCalculator);
     app.component("NIHCPSICalculator", NIHCPSICalculator);
+    app.component("ProstateAssessment", ProstateAssessment);
     // GI
     app.component("FIB4Calculator", FIB4Calculator);
     // CLINIC

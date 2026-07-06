@@ -1255,11 +1255,11 @@ function ivc_reset() {
   line-height: 1;
 }
 .h2o .gender-label {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 .h2o .gender-sub {
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
   font-weight: 400;
 }
@@ -1422,7 +1422,7 @@ function ivc_reset() {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   align-items: center;
 }
 .h2o .rt-row:last-child {
@@ -1430,7 +1430,7 @@ function ivc_reset() {
 }
 .h2o .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -1456,7 +1456,7 @@ function ivc_reset() {
   color: #ef4444;
 }
 .h2o .rt-sm {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
 }
 /* ── Result card ───────────────────────────────────────────────── */
@@ -2106,7 +2106,7 @@ function ivc_reset() {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   align-items: center;
 }
 .ivc .rt-row:last-child {
@@ -2114,7 +2114,7 @@ function ivc_reset() {
 }
 .ivc .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -2140,7 +2140,7 @@ function ivc_reset() {
   color: #ef4444;
 }
 .ivc .rt-sm {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
 }
 /* ── Result card ───────────────────────────────────────────────── */

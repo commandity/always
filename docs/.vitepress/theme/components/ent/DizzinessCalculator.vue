@@ -5899,39 +5899,17 @@ const dhi_qIndex = (() => {
                   <span class="item-sub">{{ q.sub }}</span>
                   <span class="item-hint">{{ q.hint }}</span>
                 </div>
-                <span
-                  class="item-score"
-                  :class="{
-                    zero: dhi_selections[q.key] === 0,
-                    unanswered: dhi_selections[q.key] < 0,
-                    high: dhi_selections[q.key] === 4,
-                  }"
-                >
-                  {{ dhi_selections[q.key] >= 0 ? dhi_selections[q.key] : "—" }}
-                </span>
-              </div>
-
-              <!-- 3 options: 4 / 2 / 0 -->
-              <div class="option-row">
-                <label
-                  v-for="opt in dhi_scoreOptions"
-                  :key="opt.value"
-                  class="opt-pill"
-                  :class="{
-                    active: dhi_selections[q.key] === opt.value,
-                    high: opt.value === 4 && dhi_selections[q.key] === 4,
-                    ['s' + opt.value]: true,
-                  }"
-                >
-                  <input
-                    type="radio"
-                    :name="q.key"
-                    :value="opt.value"
-                    v-model="dhi_selections[q.key]"
-                  />
-                  <span class="opt-num">{{ opt.label }}</span>
-                  <span class="opt-desc">{{ opt.desc }}</span>
-                </label>
+                <div class="yn-row">
+                  <button
+                    v-for="opt in dhi_scoreOptions"
+                    :key="opt.value"
+                    class="yn-btn"
+                    :class="{ 'yn-active': dhi_selections[q.key] === opt.value }"
+                    @click="dhi_selections[q.key] = opt.value"
+                  >
+                    {{ opt.desc }}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -6528,12 +6506,6 @@ const dhi_qIndex = (() => {
   gap: 0.55rem;
   padding: 0.5rem 0.8rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 184, 166, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid #14b8a6;
   margin-bottom: 0.5rem;
@@ -6541,62 +6513,26 @@ const dhi_qIndex = (() => {
 }
 .vertigo .flow-bar {
   border-left: 4px solid #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
 .vertigo .triage-bar {
   border-left: 4px solid #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
 .vertigo .h-bar {
   border-left: 4px solid #3b82f6;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(59, 130, 246, 0.06);
 }
 .vertigo .i-bar {
   border-left: 4px solid #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
 .vertigo .n-bar {
   border-left: 4px solid #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .vertigo .plus-bar {
   border-left: 4px solid #06b6d4;
-  background: linear-gradient(
-    135deg,
-    rgba(6, 182, 212, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(6, 182, 212, 0.06);
 }
 .vertigo .step-bar-1 {
@@ -6691,12 +6627,6 @@ const dhi_qIndex = (() => {
 }
 .vertigo .vmmd-bar {
   border-left: 4px solid #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
 .vertigo .vm-bar-a {
@@ -8157,15 +8087,12 @@ const dhi_qIndex = (() => {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 .dhi .group-header.func-header {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), transparent);
   border-left: 4px solid #6366f1;
 }
 .dhi .group-header.emo-header {
-  background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), transparent);
   border-left: 4px solid #14b8a6;
 }
 .dhi .group-header.phys-header {
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), transparent);
   border-left: 4px solid #f97316;
 }
 
@@ -8753,5 +8680,8 @@ const dhi_qIndex = (() => {
   .dhi .detail-desc {
     width: 40px;
   }
+}
+.dhi .item-header {
+  align-items: center;
 }
 </style>

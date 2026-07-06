@@ -1,62 +1,49 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 
-// ── CRB-65 Items ──────────────────────────────────────────────────
-// Lim 2003 — 4 criteria, each scored 0 or 1, total 0–4
-// C = Confusion, R = Respiratory rate, B = Blood pressure, 65 = Age ≥ 65
+// CRB-65 — Lim 2003. 4 criteria, each 0 or 1, total 0–4.
 const criteria = [
   {
     key: "confusion",
-    code: "C",
+    letter: "C",
     name: "意識混亂",
     sub: "Confusion",
-    desc: "新發生的定向障礙（時間、地點、人物）",
-    detail:
-      "新出現的意識障礙，包括對時間、地點或人物的定向力喪失。不包括慢性認知症造成的基礎混亂。",
+    detail: "新發生的定向障礙（時間、地點、人物）",
     hint: "急性發作的意識狀態改變（排除基礎失智症）",
   },
   {
     key: "resp",
-    code: "R",
+    letter: "R",
     name: "呼吸急促",
-    sub: "Respiratory Rate ≥ 30 /min",
-    desc: "呼吸速率 ≥ 30 次 / 分鐘",
-    detail: "靜息狀態下呼吸頻率達到或超過 30 次/分，反映肺部通氣功能顯著受損。",
+    sub: "Respiratory rate ≥ 30",
+    detail: "呼吸速率 ≥ 30 次 / 分鐘",
     hint: "靜息狀態下測量呼吸頻率",
   },
   {
     key: "bp",
-    code: "B",
+    letter: "B",
     name: "低血壓",
-    sub: "Blood Pressure: SBP < 90 or DBP ≤ 60 mmHg",
-    desc: "收縮壓 < 90 mmHg 或舒張壓 ≤ 60 mmHg",
-    detail:
-      "任一條件成立即計分：收縮壓低於 90 mmHg，或舒張壓低於或等於 60 mmHg，提示循環功能受損。",
+    sub: "Blood pressure low",
+    detail: "收縮壓 < 90 mmHg 或舒張壓 ≤ 60 mmHg",
     hint: "以就診時測量值為準",
   },
   {
     key: "age",
-    code: "65",
+    letter: "65",
     name: "年齡 ≥ 65 歲",
     sub: "Age ≥ 65 years",
-    desc: "患者年齡達 65 歲或以上",
-    detail: "年齡是肺炎嚴重度的獨立預測因子，65 歲以上患者死亡風險顯著增加。",
+    detail: "患者年齡達 65 歲或以上",
     hint: "依據患者實際年齡",
   },
 ];
 
-// ── State ─────────────────────────────────────────────────────────
-const selections = ref<Record<string, boolean>>({
-  confusion: false,
-  resp: false,
-  bp: false,
-  age: false,
-});
-
+const activeTab = ref<"crb65">("crb65");
+const selections = ref<Record<string, boolean>>(
+  Object.fromEntries(criteria.map((c) => [c.key, false])),
+);
 const showResults = ref(false);
 const copied = ref(false);
 
-// ── Computed ──────────────────────────────────────────────────────
 const totalScore = computed(
   () => Object.values(selections.value).filter(Boolean).length,
 );
@@ -67,257 +54,256 @@ const severity = computed(() => {
     return {
       level: "低風險",
       color: "normal",
-      mortality: "< 1%",
-      advice: "可考慮門診治療，密切追蹤",
-      management: "口服抗生素、門診追蹤，若無改善 24–48 小時內重新評估",
       tag: "門診治療",
+      mortality: "< 1%",
+      advice: "30 天死亡率低，可考慮門診治療並密切追蹤。",
     };
-  if (s <= 1)
+  if (s === 1)
     return {
       level: "低至中風險",
       color: "mild",
-      mortality: "1–3%",
-      advice: "考慮短期住院觀察或密切門診追蹤",
-      management: "依臨床判斷考慮住院，口服或靜脈抗生素，每日評估",
       tag: "考慮住院",
+      mortality: "1–3%",
+      advice: "考慮短期住院觀察或密切門診追蹤，依臨床判斷。",
     };
-  if (s <= 2)
+  if (s === 2)
     return {
       level: "中至高風險",
       color: "moderate",
-      mortality: "3–15%",
-      advice: "建議住院治療",
-      management: "住院治療，靜脈抗生素，監測生命徵象，評估 ICU 需求",
       tag: "建議住院",
+      mortality: "3–15%",
+      advice: "死亡率上升，建議住院治療與監測。",
     };
   return {
     level: "高風險",
     color: "severe",
-    mortality: "> 15%",
-    advice: "建議緊急住院，評估加護病房",
-    management: "緊急住院，考慮 ICU，積極支持治療，評估機械通氣需求",
     tag: "緊急住院 / ICU",
+    mortality: "> 15%",
+    advice: "死亡風險高，建議緊急住院，評估加護病房照護。",
   };
 });
 
-// ── Functions ─────────────────────────────────────────────────────
+function toggle(key: string) {
+  selections.value[key] = !selections.value[key];
+}
+function reset() {
+  criteria.forEach((c) => (selections.value[c.key] = false));
+  showResults.value = false;
+}
 function generateMarkdown() {
-  const today = new Date();
-  const date = `${today.getFullYear()}/${String(today.getMonth() + 1).padStart(2, "0")}/${String(today.getDate()).padStart(2, "0")}`;
-  const sv = severity.value;
   const lines = criteria
     .map(
       (c) =>
-        `- **${c.name}**（${c.sub}）：${selections.value[c.key] ? "是（+1）" : "否（0）"}`,
+        `- **${c.letter} — ${c.name}**（${c.sub}）：${selections.value[c.key] ? "是（+1）" : "否（0）"}`,
     )
     .join("\n");
-
-  return `# CRB-65 肺炎嚴重度評估結果
-
-## 評估日期：${date}
-
-## 評估項目
-
-${lines}
-
----
-
-- **CRB-65 總分**：${totalScore.value} / 4
-- **風險等級**：${sv.level}
-- **預估死亡率**：${sv.mortality}
-- **建議處置**：${sv.advice}
-- **治療建議**：${sv.management}`;
+  return `# CRB-65 肺炎嚴重度評估結果\n\n## 評估項目\n\n${lines}\n\n---\n\n## 摘要\n\n- **CRB-65 總分**：${totalScore.value} / 4\n- **風險等級**：${severity.value.level}\n- **30 天死亡率參考**：${severity.value.mortality}\n- **建議處置**：${severity.value.advice}`;
 }
-
 async function copyMarkdown() {
   await navigator.clipboard.writeText(generateMarkdown());
   copied.value = true;
   setTimeout(() => (copied.value = false), 2000);
 }
-
-function reset() {
-  criteria.forEach((c) => {
-    selections.value[c.key] = false;
-  });
-  showResults.value = false;
-}
-
-function toggle(key: string) {
-  selections.value[key] = !selections.value[key];
-}
 </script>
 
 <template>
-  <div class="crb">
-    <!-- Header -->
-    <div class="crb-header">
-      <div class="header-title">
-        <h2 class="title">CRB-65 肺炎嚴重度評估</h2>
-        <p class="subtitle">
-          Community-Acquired Pneumonia Severity · 社區型肺炎住院決策工具
-        </p>
-      </div>
-      <div class="score-badge" :class="severity.color">
-        <span class="score-number">{{ totalScore }}</span>
-        <span class="score-label">{{ severity.tag }}</span>
-      </div>
-    </div>
-
-    <!-- Severity bar -->
-    <div class="severity-bar-wrap">
-      <div class="severity-bar">
-        <div
-          class="severity-fill"
-          :class="severity.color"
-          :style="{ width: (totalScore / 4) * 100 + '%' }"
-        />
-      </div>
-      <div class="severity-ticks">
-        <span>0</span>
-        <span class="tick-threshold">1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-      </div>
-    </div>
-
-    <!-- Mortality summary pills -->
-    <div class="mortality-strip">
-      <div class="mort-pill" :class="{ active: totalScore === 0 }">
-        <span class="mort-score">0 分</span>
-        <span class="mort-rate normal-mort">死亡率 &lt; 1%</span>
-        <span class="mort-tag">門診</span>
-      </div>
-      <div class="mort-pill" :class="{ active: totalScore === 1 }">
-        <span class="mort-score">1 分</span>
-        <span class="mort-rate mild-mort">死亡率 1–3%</span>
-        <span class="mort-tag">考慮住院</span>
-      </div>
-      <div class="mort-pill" :class="{ active: totalScore === 2 }">
-        <span class="mort-score">2 分</span>
-        <span class="mort-rate moderate-mort">死亡率 3–15%</span>
-        <span class="mort-tag">建議住院</span>
-      </div>
-      <div class="mort-pill" :class="{ active: totalScore >= 3 }">
-        <span class="mort-score">3–4 分</span>
-        <span class="mort-rate severe-mort">死亡率 &gt; 15%</span>
-        <span class="mort-tag">緊急住院</span>
-      </div>
-    </div>
-
-    <!-- Intro -->
-    <div class="intro-bar">
-      <span class="intro-dot">◉</span>
-      <span
-        >請依據患者就診時的臨床狀態評估以下 4 項指標，每項符合計
-        <strong>1 分</strong>，總分 0–4 分。CRB-65
-        適用於<strong>基層診所及急診</strong>快速評估社區型肺炎嚴重度。</span
+  <div class="crb65assess">
+    <div class="tab-bar">
+      <button
+        class="tab-btn"
+        :class="{ active: activeTab === 'crb65' }"
+        @click="activeTab = 'crb65'"
       >
+        <span class="tab-label">CRB-65 肺炎嚴重度評估</span>
+        <span class="tab-sub">CRB-65 Severity Score</span>
+      </button>
     </div>
 
-    <!-- 4 criteria cards -->
-    <div class="criteria-list">
-      <div
-        v-for="c in criteria"
-        :key="c.key"
-        class="criteria-card"
-        :class="{ selected: selections[c.key] }"
-        @click="toggle(c.key)"
-      >
-        <div
-          class="criteria-code"
-          :class="{ 'code-active': selections[c.key] }"
+    <div v-show="activeTab === 'crb65'" class="crb65">
+      <div class="sb-header">
+        <div class="header-title">
+          <h2 class="title">CRB-65 評分</h2>
+          <p class="subtitle">
+            Community-acquired Pneumonia Severity · 社區型肺炎嚴重度分層（Lim
+            2003）
+          </p>
+        </div>
+        <div class="score-badge" :class="severity.color">
+          <span class="score-number">{{ totalScore }}</span>
+          <span class="score-label">{{ severity.tag }}</span>
+        </div>
+      </div>
+
+      <div class="severity-bar-wrap">
+        <div class="severity-bar">
+          <div
+            class="severity-fill"
+            :class="severity.color"
+            :style="{ width: (totalScore / 4) * 100 + '%' }"
+          />
+        </div>
+        <div class="severity-ticks">
+          <span class="tk-normal">0</span><span class="tk-mild">1</span
+          ><span class="tk-moderate">2</span><span class="tk-severe">3</span
+          ><span class="tk-severe">4</span>
+        </div>
+      </div>
+
+      <div class="intro-bar">
+        <span class="intro-dot">◆</span>
+        <span
+          >勾選符合的臨床項目，每項 <strong>+1</strong>，總分
+          0–4。CRB-65 不需檢驗數據，適合門急診快速分層社區型肺炎的死亡風險與住院決策。</span
         >
-          {{ c.code }}
-        </div>
-        <div class="criteria-content">
-          <div class="criteria-name">{{ c.name }}</div>
-          <div class="criteria-sub">{{ c.sub }}</div>
-          <div class="criteria-desc">{{ c.desc }}</div>
-          <div class="criteria-detail">{{ c.detail }}</div>
-          <div class="criteria-hint">{{ c.hint }}</div>
-        </div>
-        <div class="criteria-toggle">
-          <div class="toggle-box" :class="{ 'toggle-on': selections[c.key] }">
-            <svg
-              v-if="selections[c.key]"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3.5"
-            >
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
+      </div>
+
+      <div class="sb-group">
+        <div class="group-header crb-group-header">
+          <div class="group-label-block">
+            <span class="group-label">CRB-65 臨床項目</span>
+            <span class="group-sub">Confusion · RR · BP · Age · 4 項</span>
           </div>
-          <span class="toggle-score" :class="{ 'score-on': selections[c.key] }">
-            {{ selections[c.key] ? "+1" : "0" }}
-          </span>
+          <div class="group-score-pill crb-pill">{{ totalScore }} / 4</div>
         </div>
-      </div>
-    </div>
-
-    <!-- Result card -->
-    <div class="crb-result" :class="severity.color">
-      <div class="result-left">
-        <span class="result-number">{{ totalScore }}</span>
-        <span class="result-max">/ 4</span>
-      </div>
-      <div class="result-right">
-        <div class="result-top">
-          <span class="result-level">{{ severity.level }}</span>
-          <span class="result-mortality"
-            >預估死亡率：{{ severity.mortality }}</span
+        <div class="item-list">
+          <div
+            v-for="c in criteria"
+            :key="c.key"
+            class="sb-item"
+            :class="{ selected: selections[c.key] }"
+            @click="toggle(c.key)"
           >
+            <div class="item-letter">{{ c.letter }}</div>
+            <div class="item-content">
+              <div class="item-question">{{ c.name }}</div>
+              <div class="item-name">{{ c.sub }}</div>
+              <div class="item-detail">{{ c.detail }}</div>
+              <div class="item-hint">{{ c.hint }}</div>
+            </div>
+            <div class="item-toggle">
+              <div class="toggle-box" :class="{ 'toggle-on': selections[c.key] }">
+                <svg
+                  v-if="selections[c.key]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <span class="toggle-score" :class="{ 'score-on': selections[c.key] }">{{
+                selections[c.key] ? "+1" : "0"
+              }}</span>
+            </div>
+          </div>
         </div>
-        <span class="result-advice">{{ severity.advice }}</span>
-        <span class="result-management">{{ severity.management }}</span>
       </div>
-    </div>
 
-    <!-- Results detail -->
-    <div v-if="showResults" class="results-detail">
-      <div class="results-header">評估明細</div>
-      <div v-for="c in criteria" :key="c.key" class="detail-row">
-        <span class="detail-code">{{ c.code }}</span>
-        <span class="detail-domain">{{ c.name }}</span>
-        <span class="detail-score" :class="{ positive: selections[c.key] }">
-          {{ selections[c.key] ? "+1" : "0" }}
-        </span>
-        <span class="detail-desc">{{
-          selections[c.key] ? "符合" : "不符合"
-        }}</span>
+      <div class="sb-result" :class="severity.color">
+        <div class="result-left">
+          <span class="result-number">{{ totalScore }}</span>
+          <span class="result-max">/ 4</span>
+        </div>
+        <div class="result-right">
+          <div class="result-top">
+            <span class="result-level">{{ severity.level }}</span>
+          </div>
+          <span class="result-ahi">30 天死亡率參考：{{ severity.mortality }}</span>
+          <span class="result-advice">{{ severity.advice }}</span>
+          <div class="result-sub-scores">
+            <span class="sub-pill-sm crb-sm">{{ severity.tag }}</span>
+          </div>
+        </div>
       </div>
-      <div class="detail-row total-row">
-        <span class="detail-code">∑</span>
-        <span class="detail-domain">CRB-65 總分</span>
-        <span class="detail-score positive">{{ totalScore }}</span>
-        <span class="detail-desc">{{ severity.level }}</span>
-      </div>
-    </div>
 
-    <!-- Actions -->
-    <div class="crb-actions">
-      <button class="btn-view" @click="showResults = !showResults">
-        {{ showResults ? "收起明細" : "查看評估結果" }}
-      </button>
-      <button class="btn-copy" @click="copyMarkdown">
-        {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
-      </button>
-      <button class="btn-reset" @click="reset">重置</button>
+      <div v-if="showResults" class="results-detail">
+        <div class="results-header">評估明細</div>
+        <div v-for="c in criteria" :key="c.key" class="detail-row">
+          <span class="detail-letter">{{ c.letter }}</span>
+          <span class="detail-domain">{{ c.name }}</span>
+          <span class="detail-score" :class="{ positive: selections[c.key] }">{{
+            selections[c.key] ? "+1" : "0"
+          }}</span>
+          <span class="detail-desc">{{ selections[c.key] ? "是" : "否" }}</span>
+        </div>
+        <div class="detail-row total-row">
+          <span class="detail-letter brand-sm">∑</span>
+          <span class="detail-domain">CRB-65 總分</span>
+          <span class="detail-score positive">{{ totalScore }} / 4</span>
+          <span class="detail-desc">{{ severity.level }}</span>
+        </div>
+      </div>
+
+      <div class="sb-actions">
+        <button class="btn-view" @click="showResults = !showResults">
+          {{ showResults ? "收起明細" : "查看評估結果" }}
+        </button>
+        <button class="btn-copy" @click="copyMarkdown">
+          {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
+        </button>
+        <button class="btn-reset" @click="reset">重置</button>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.crb {
+.crb65assess {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+.tab-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.tab-btn.active {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+.tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+}
+.tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
+}
+.crb65 {
   max-width: 780px;
   margin: 0 auto;
   padding: 2rem 0 3rem;
   font-size: 0.9rem;
 }
-
-/* ── Header ────────────────────────────────────────────────────── */
-.crb-header {
+.sb-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -338,13 +324,12 @@ function toggle(key: string) {
   color: var(--vp-c-text-3);
   margin: 0;
 }
-
 .score-badge {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 90px;
+  min-width: 88px;
   padding: 0.6rem 1rem;
   border-radius: 14px;
   border: 1px solid var(--vp-c-divider);
@@ -353,52 +338,34 @@ function toggle(key: string) {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 .score-number {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
   line-height: 1;
-  transition: color 0.3s;
 }
 .score-label {
-  font-size: 0.68rem;
-  font-weight: 600;
-  margin-top: 2px;
-  letter-spacing: 0.02em;
+  font-size: 0.66rem;
+  font-weight: 700;
+  margin-top: 3px;
   text-align: center;
-  white-space: nowrap;
 }
-
 .score-badge.normal {
   border-color: #22c55e;
   color: #22c55e;
-  box-shadow:
-    0 0 0 1px rgba(34, 197, 94, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.04);
 }
 .score-badge.mild {
   border-color: #f59e0b;
   color: #f59e0b;
-  box-shadow:
-    0 0 0 1px rgba(245, 158, 11, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.04);
 }
 .score-badge.moderate {
   border-color: #f97316;
   color: #f97316;
-  box-shadow:
-    0 0 0 1px rgba(249, 115, 22, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.04);
 }
 .score-badge.severe {
   border-color: #ef4444;
   color: #ef4444;
-  box-shadow:
-    0 0 0 1px rgba(239, 68, 68, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.04);
 }
-
-/* ── Severity bar ──────────────────────────────────────────────── */
 .severity-bar-wrap {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .severity-bar {
   height: 8px;
@@ -406,7 +373,7 @@ function toggle(key: string) {
   background: var(--vp-c-bg-mute);
   overflow: hidden;
   margin-bottom: 4px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 .severity-fill {
   height: 100%;
@@ -416,90 +383,37 @@ function toggle(key: string) {
     background 0.3s;
 }
 .severity-fill.normal {
-  background: linear-gradient(90deg, #22c55e, #4ade80);
+  background: #22c55e;
 }
 .severity-fill.mild {
-  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  background: #f59e0b;
 }
 .severity-fill.moderate {
-  background: linear-gradient(90deg, #f97316, #fb923c);
+  background: #f97316;
 }
 .severity-fill.severe {
-  background: linear-gradient(90deg, #ef4444, #f87171);
+  background: #ef4444;
 }
-
 .severity-ticks {
   display: flex;
   justify-content: space-between;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
   padding: 0 2px;
-}
-.tick-threshold {
-  color: #f59e0b;
   font-weight: 700;
 }
-
-/* ── Mortality strip ───────────────────────────────────────────── */
-.mortality-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.4rem;
-  margin-bottom: 1.25rem;
-}
-.mort-pill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-  padding: 0.5rem 0.3rem;
-  border-radius: 10px;
-  border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
-  text-align: center;
-  transition: all 0.25s;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-}
-.mort-pill.active {
-  border-color: var(--vp-c-brand-1);
-  background: linear-gradient(
-    135deg,
-    var(--vp-c-brand-soft),
-    var(--vp-c-bg-soft)
-  );
-  box-shadow:
-    0 0 0 1px rgba(99, 102, 241, 0.06),
-    0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
-.mort-score {
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-}
-.mort-rate {
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-.mort-tag {
-  font-size: 0.8rem;
-  color: var(--vp-c-text-3);
-}
-
-.normal-mort {
+.severity-ticks .tk-normal {
   color: #22c55e;
 }
-.mild-mort {
+.severity-ticks .tk-mild {
   color: #f59e0b;
 }
-.moderate-mort {
+.severity-ticks .tk-moderate {
   color: #f97316;
 }
-.severe-mort {
+.severity-ticks .tk-severe {
   color: #ef4444;
 }
-
-/* ── Intro ─────────────────────────────────────────────────────── */
 .intro-bar {
   display: flex;
   align-items: flex-start;
@@ -518,20 +432,61 @@ function toggle(key: string) {
   color: var(--vp-c-brand-1);
   flex-shrink: 0;
 }
-
-/* ── Criteria cards ────────────────────────────────────────────── */
-.criteria-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+.sb-group {
   margin-bottom: 1.5rem;
 }
-
-.criteria-card {
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.65rem 0.85rem 0.65rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+.crb-group-header {
+  border-left: 4px solid var(--vp-c-brand-1);
+}
+.group-label-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.group-label {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--vp-c-text-1);
+}
+.group-sub {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+}
+.group-score-pill {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.crb-pill {
+  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 30%, transparent);
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 6%, transparent);
+}
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.sb-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.9rem;
-  padding: 0.9rem 1rem;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   background: var(--vp-c-bg-soft);
@@ -541,82 +496,68 @@ function toggle(key: string) {
     background 0.2s;
   user-select: none;
 }
-.criteria-card:hover {
+.sb-item:hover {
   background: var(--vp-c-bg-mute);
 }
-.criteria-card.selected {
+.sb-item.selected {
   border-color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, var(--vp-c-bg));
 }
-
-.criteria-code {
+.item-letter {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: var(--vp-c-bg-mute);
-  border: 1px solid var(--vp-c-divider);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   font-weight: 900;
-  color: var(--vp-c-text-3);
-  letter-spacing: -0.03em;
-  transition: all 0.2s;
   margin-top: 2px;
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
 }
-.criteria-code.code-active {
-  background: var(--vp-c-brand-1);
-  border-color: var(--vp-c-brand-1);
-  color: #fff;
-}
-
-.criteria-content {
+.item-content {
   flex: 1;
   min-width: 0;
 }
-.criteria-name {
-  font-size: 0.95rem;
+.item-question {
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+  line-height: 1.4;
 }
-.criteria-sub {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
-  margin-bottom: 4px;
-}
-.criteria-desc {
-  font-size: 0.82rem;
-  color: var(--vp-c-text-2);
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-.criteria-detail {
-  font-size: 0.78rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.5;
-  margin-bottom: 4px;
-}
-.criteria-hint {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
+.sb-item .item-name {
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-3) !important;
   font-style: italic;
+  margin-bottom: 4px;
 }
-
-.criteria-toggle {
+.sb-item .item-detail {
+  font-size: 0.8rem !important;
+  color: var(--vp-c-text-2) !important;
+  line-height: 1.5;
+  margin-bottom: 3px;
+}
+.sb-item .item-hint {
+  font-size: 0.72rem !important;
+  color: var(--vp-c-text-3) !important;
+  line-height: 1.5;
+}
+.item-toggle {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   padding-top: 2px;
 }
 .toggle-box {
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
   border: 1.5px solid var(--vp-c-divider);
   background: var(--vp-c-bg);
   display: flex;
@@ -625,15 +566,14 @@ function toggle(key: string) {
   transition: all 0.15s;
 }
 .toggle-box svg {
-  width: 13px;
-  height: 13px;
+  width: 14px;
+  height: 14px;
   color: #fff;
 }
 .toggle-on {
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
 }
-
 .toggle-score {
   font-size: 0.78rem;
   font-weight: 800;
@@ -642,46 +582,31 @@ function toggle(key: string) {
 .score-on {
   color: var(--vp-c-brand-1);
 }
-
-/* ── Result card ───────────────────────────────────────────────── */
-.crb-result {
+.sb-result {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   padding: 1.25rem 1.5rem;
   border-radius: 14px;
   border: 1px solid var(--vp-c-divider);
-  background: linear-gradient(135deg, var(--vp-c-bg-soft), var(--vp-c-bg-mute));
+  background: var(--vp-c-bg-soft);
   margin-bottom: 1rem;
   flex-wrap: wrap;
   transition: all 0.3s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.crb-result.normal {
+.sb-result.normal {
   border-color: #22c55e;
-  box-shadow:
-    0 0 0 1px rgba(34, 197, 94, 0.06),
-    0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.crb-result.mild {
+.sb-result.mild {
   border-color: #f59e0b;
-  box-shadow:
-    0 0 0 1px rgba(245, 158, 11, 0.06),
-    0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.crb-result.moderate {
+.sb-result.moderate {
   border-color: #f97316;
-  box-shadow:
-    0 0 0 1px rgba(249, 115, 22, 0.06),
-    0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.crb-result.severe {
+.sb-result.severe {
   border-color: #ef4444;
-  box-shadow:
-    0 0 0 1px rgba(239, 68, 68, 0.06),
-    0 1px 3px rgba(0, 0, 0, 0.04);
 }
-
 .result-left {
   display: flex;
   align-items: baseline;
@@ -695,23 +620,22 @@ function toggle(key: string) {
   color: var(--vp-c-text-3);
   transition: color 0.3s;
 }
-.crb-result.normal .result-number {
+.sb-result.normal .result-number {
   color: #22c55e;
 }
-.crb-result.mild .result-number {
+.sb-result.mild .result-number {
   color: #f59e0b;
 }
-.crb-result.moderate .result-number {
+.sb-result.moderate .result-number {
   color: #f97316;
 }
-.crb-result.severe .result-number {
+.sb-result.severe .result-number {
   color: #ef4444;
 }
 .result-max {
   font-size: 1rem;
   color: var(--vp-c-text-3);
 }
-
 .result-right {
   display: flex;
   flex-direction: column;
@@ -721,97 +645,94 @@ function toggle(key: string) {
 .result-top {
   display: flex;
   align-items: baseline;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .result-level {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
 }
-.result-mortality {
+.result-ahi {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--vp-c-brand-1);
 }
 .result-advice {
-  font-size: 0.85rem;
-  color: var(--vp-c-text-2);
-  font-weight: 600;
-}
-.result-management {
-  font-size: 0.78rem;
+  font-size: 0.83rem;
   color: var(--vp-c-text-2);
   line-height: 1.5;
 }
-
-/* ── Results detail ────────────────────────────────────────────── */
-.results-detail {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 1rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+.result-sub-scores {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 2px;
 }
-.results-header {
-  padding: 0.5rem 0.9rem;
+.sub-pill-sm {
   font-size: 0.72rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--vp-c-text-3);
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+.crb-sm {
+  background: color-mix(in srgb, var(--vp-c-brand-1) 10%, transparent);
+  color: var(--vp-c-brand-1);
+  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 30%, transparent);
+}
+.results-detail {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.results-header {
+  padding: 0.6rem 1rem;
   background: var(--vp-c-bg-mute);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--vp-c-text-1);
   border-bottom: 1px solid var(--vp-c-divider);
 }
 .detail-row {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.5rem 0.9rem;
-  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 0.45rem 1rem;
+  border-top: 1px solid var(--vp-c-divider);
+  font-size: 0.82rem;
 }
-.detail-row:last-child {
-  border-bottom: none;
+.detail-row:first-child {
+  border-top: none;
 }
-.total-row {
-  background: linear-gradient(135deg, var(--vp-c-bg-mute), var(--vp-c-bg-soft));
-  font-weight: 800;
-}
-
-.detail-code {
-  font-size: 0.72rem;
-  font-weight: 900;
-  color: var(--vp-c-brand-1);
+.detail-letter {
   flex-shrink: 0;
-  width: 28px;
+  width: 26px;
+  text-align: center;
+  font-weight: 800;
+  color: var(--vp-c-brand-1);
 }
 .detail-domain {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
   flex: 1;
+  color: var(--vp-c-text-2);
 }
 .detail-score {
-  font-size: 0.82rem;
   font-weight: 800;
-  flex-shrink: 0;
-  width: 52px;
-  text-align: right;
   color: var(--vp-c-text-3);
 }
 .detail-score.positive {
   color: var(--vp-c-brand-1);
 }
 .detail-desc {
-  font-size: 0.75rem;
-  color: var(--vp-c-text-2);
-  flex-shrink: 0;
-  width: 52px;
-  text-align: left;
+  font-size: 0.78rem;
+  color: var(--vp-c-text-3);
+  min-width: 40px;
+  text-align: right;
 }
-
-/* ── Actions ───────────────────────────────────────────────────── */
-.crb-actions {
+.total-row {
+  background: var(--vp-c-bg-mute);
+  font-weight: 700;
+}
+.sb-actions {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
@@ -829,16 +750,13 @@ function toggle(key: string) {
 }
 .btn-view {
   border: none;
-  background: linear-gradient(135deg, var(--vp-c-brand-1), #4f46e5);
+  background: var(--vp-c-brand-1);
   color: #fff;
   box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
 }
 .btn-view:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
-}
-.btn-view:active {
-  transform: translateY(0);
 }
 .btn-copy {
   border: 1.5px solid var(--vp-c-brand-1);
@@ -858,28 +776,12 @@ function toggle(key: string) {
   color: #ef4444;
   background: rgba(239, 68, 68, 0.04);
 }
-
 @media (max-width: 640px) {
-  .crb-header {
-    flex-direction: column;
+  .tab-label {
+    font-size: 0.9rem;
   }
-  .score-badge {
-    flex-direction: row;
-    gap: 0.5rem;
-    align-self: flex-start;
-  }
-  .score-number {
-    font-size: 1.5rem;
-  }
-  .mortality-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .crb-result {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .criteria-card {
-    flex-wrap: wrap;
+  .result-number {
+    font-size: 2.6rem;
   }
 }
 </style>

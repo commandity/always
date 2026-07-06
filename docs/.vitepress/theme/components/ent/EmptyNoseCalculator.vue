@@ -278,26 +278,31 @@ function ensReset() {
               </span>
             </div>
 
-            <div class="option-row">
-              <label
-                v-for="opt in ensScoreOptions"
-                :key="opt.value"
-                class="opt-pill"
-                :class="{
-                  active: ensSelections[q.key] === opt.value,
-                  ['s' + opt.value]: true,
-                }"
-              >
-                <input
-                  type="radio"
-                  :name="'ens-' + q.key"
-                  :value="opt.value"
-                  v-model="ensSelections[q.key]"
-                />
-                <span class="opt-num">{{ opt.label }}</span>
-                <span class="opt-desc">{{ opt.desc }}</span>
-              </label>
-            </div>
+            <div class="sec-options">
+                <label
+                  v-for="opt in ensScoreOptions"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': ensSelections[q.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="'ens-' + q.key"
+                    :value="opt.value"
+                    v-model="ensSelections[q.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: ensSelections[q.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="ensSelections[q.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.label }}</span>
+                    <span class="opt-text">{{ opt.desc }}</span>
+                  </div>
+                </label>
+              </div>
           </div>
         </div>
       </div>
@@ -710,12 +715,6 @@ function ensReset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(168, 85, 247, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid #a855f7;
   box-shadow: 0 1px 3px rgba(168, 85, 247, 0.06);

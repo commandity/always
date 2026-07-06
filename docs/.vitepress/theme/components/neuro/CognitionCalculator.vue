@@ -1570,45 +1570,22 @@ function cmai_reset() {
               <span class="item-name">{{ item.name }}</span>
               <span class="item-sub">{{ item.sub }}</span>
             </div>
-            <span
-              class="item-score"
-              :class="{
-                zero: mmse_selections[item.key] === 0,
-                high: mmse_selections[item.key] === 1,
-                unanswered: mmse_selections[item.key] < 0,
-              }"
-            >
-              {{ mmse_selections[item.key] >= 0 ? mmse_selections[item.key] : "—" }}
-            </span>
-          </div>
-
-          <div class="option-row">
-            <label
-              class="opt-pill s1"
-              :class="{ active: mmse_selections[item.key] === 1 }"
-            >
-              <input
-                type="radio"
-                :name="item.key"
-                :value="1"
-                v-model="mmse_selections[item.key]"
-              />
-              <span class="opt-num">1</span>
-              <span class="opt-desc">正確</span>
-            </label>
-            <label
-              class="opt-pill s0"
-              :class="{ active: mmse_selections[item.key] === 0 }"
-            >
-              <input
-                type="radio"
-                :name="item.key"
-                :value="0"
-                v-model="mmse_selections[item.key]"
-              />
-              <span class="opt-num">0</span>
-              <span class="opt-desc">錯誤</span>
-            </label>
+            <div class="yn-row">
+              <button
+                class="yn-btn"
+                :class="{ 'yn-active': mmse_selections[item.key] === 1 }"
+                @click="mmse_selections[item.key] = 1"
+              >
+                正確
+              </button>
+              <button
+                class="yn-btn"
+                :class="{ 'yn-active': mmse_selections[item.key] === 0 }"
+                @click="mmse_selections[item.key] = 0"
+              >
+                錯誤
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1768,15 +1745,12 @@ function cmai_reset() {
           </span>
         </div>
 
-        <div class="option-row">
+        <div class="sec-options">
           <label
             v-for="opt in domain.options"
             :key="opt.score"
-            class="opt-pill"
-            :class="{
-              active: cdr_selections[domain.key] === opt.score,
-              ['s' + (opt.score === 0.5 ? 'half' : opt.score)]: true,
-            }"
+            class="sec-opt"
+            :class="{ 'opt-selected': cdr_selections[domain.key] === opt.score }"
           >
             <input
               type="radio"
@@ -1784,8 +1758,19 @@ function cmai_reset() {
               :value="opt.score"
               @change="cdr_select(domain.key, opt.score)"
             />
-            <span class="opt-num">{{ opt.score }}</span>
-            <span class="opt-desc">{{ opt.label }}</span>
+            <div
+              class="opt-radio"
+              :class="{ selected: cdr_selections[domain.key] === opt.score }"
+            >
+              <div
+                class="opt-dot"
+                v-if="cdr_selections[domain.key] === opt.score"
+              />
+            </div>
+            <div class="opt-content">
+              <span class="opt-score-badge">{{ opt.score }}</span>
+              <span class="opt-text">{{ opt.label }}</span>
+            </div>
           </label>
         </div>
       </div>
@@ -2069,52 +2054,26 @@ function cmai_reset() {
               <span class="item-name">{{ domain.name }}</span>
               <span class="item-sub">{{ domain.sub }}</span>
             </div>
-            <span
-              class="item-score"
-              :class="{
-                zero: npi_selections[domain.key].present === false,
-                high: domainScore(domain.key) > 0,
-                unanswered: npi_selections[domain.key].present === null,
-              }"
-            >
-              {{
-                npi_selections[domain.key].present === false
-                  ? "無"
-                  : domainScore(domain.key) > 0
-                    ? "+" + domainScore(domain.key)
-                    : "—"
-              }}
-            </span>
-          </div>
-
-          <!-- ── Presence pills ──────────────────── -->
-          <div class="option-row two-col">
-            <label
-              class="opt-pill s-yes"
-              :class="{ active: npi_selections[domain.key].present === true }"
-            >
-              <input
-                type="radio"
-                :name="domain.key + '_p'"
-                :value="true"
+            <div class="yn-row">
+              <button
+                class="yn-btn"
+                :class="{
+                  'yn-active': npi_selections[domain.key].present === true,
+                }"
                 @click="togglePresent(domain.key, true)"
-              />
-              <span class="opt-num">有</span>
-              <span class="opt-desc">症狀存在</span>
-            </label>
-            <label
-              class="opt-pill s-no"
-              :class="{ active: npi_selections[domain.key].present === false }"
-            >
-              <input
-                type="radio"
-                :name="domain.key + '_p'"
-                :value="false"
+              >
+                有
+              </button>
+              <button
+                class="yn-btn"
+                :class="{
+                  'yn-active': npi_selections[domain.key].present === false,
+                }"
                 @click="togglePresent(domain.key, false)"
-              />
-              <span class="opt-num">無</span>
-              <span class="opt-desc">無此症狀</span>
-            </label>
+              >
+                無
+              </button>
+            </div>
           </div>
 
           <!-- ── Frequency & severity ────────────── -->
@@ -2124,14 +2083,14 @@ function cmai_reset() {
           >
             <div class="sub-section">
               <div class="sub-label">頻率 Frequency</div>
-              <div class="option-row four-col">
+              <div class="sec-options">
                 <label
                   v-for="opt in frequencyOptions"
                   :key="opt.value"
-                  class="opt-pill"
+                  class="sec-opt"
                   :class="{
-                    active: npi_selections[domain.key].frequency === opt.value,
-                    ['s' + opt.value]: true,
+                    'opt-selected':
+                      npi_selections[domain.key].frequency === opt.value,
                   }"
                 >
                   <input
@@ -2140,32 +2099,40 @@ function cmai_reset() {
                     :value="opt.value"
                     v-model="npi_selections[domain.key].frequency"
                   />
-                  <span class="opt-num">{{ opt.value }}</span>
-                  <span class="opt-desc">{{ opt.label }}</span>
+                  <div
+                    class="opt-radio"
+                    :class="{
+                      selected:
+                        npi_selections[domain.key].frequency === opt.value,
+                    }"
+                  >
+                    <div
+                      class="opt-dot"
+                      v-if="npi_selections[domain.key].frequency === opt.value"
+                    />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.value }}</span>
+                    <span class="opt-text">{{ opt.label }}</span>
+                  </div>
                 </label>
               </div>
             </div>
             <div class="sub-section">
               <div class="sub-label">嚴重性 Severity</div>
-              <div class="option-row three-col">
-                <label
+              <div class="yn-row yn-row-left">
+                <button
                   v-for="opt in severityOptions"
                   :key="opt.value"
-                  class="opt-pill"
+                  class="yn-btn"
                   :class="{
-                    active: npi_selections[domain.key].severity === opt.value,
-                    ['s' + opt.value]: true,
+                    'yn-active':
+                      npi_selections[domain.key].severity === opt.value,
                   }"
+                  @click="npi_selections[domain.key].severity = opt.value"
                 >
-                  <input
-                    type="radio"
-                    :name="`${domain.key}_sev`"
-                    :value="opt.value"
-                    v-model="npi_selections[domain.key].severity"
-                  />
-                  <span class="opt-num">{{ opt.label }}</span>
-                  <span class="opt-desc">{{ opt.desc }}</span>
-                </label>
+                  {{ opt.desc }}
+                </button>
               </div>
             </div>
           </div>
@@ -2324,26 +2291,31 @@ function cmai_reset() {
             </span>
           </div>
 
-          <div class="option-row">
-            <label
-              v-for="opt in freqOptions"
-              :key="opt.value"
-              class="opt-pill"
-              :class="{
-                active: cmai_selections[item.key] === opt.value,
-                ['s' + opt.value]: true,
-              }"
-            >
-              <input
-                type="radio"
-                :name="item.key"
-                :value="opt.value"
-                v-model="cmai_selections[item.key]"
-              />
-              <span class="opt-num">{{ opt.label }}</span>
-              <span class="opt-desc">{{ opt.desc }}</span>
-            </label>
-          </div>
+          <div class="sec-options">
+                <label
+                  v-for="opt in freqOptions"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': cmai_selections[item.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="item.key"
+                    :value="opt.value"
+                    v-model="cmai_selections[item.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: cmai_selections[item.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="cmai_selections[item.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.label }}</span>
+                    <span class="opt-text">{{ opt.desc }}</span>
+                  </div>
+                </label>
+              </div>
         </div>
       </div>
     </div>
@@ -2656,54 +2628,24 @@ function cmai_reset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(34, 197, 94, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid #22c55e;
   box-shadow: 0 1px 3px rgba(34, 197, 94, 0.06);
 }
 .fast .group-header.g-normal-header {
   border-left-color: #22c55e;
-  background: linear-gradient(
-    135deg,
-    rgba(34, 197, 94, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(34, 197, 94, 0.06);
 }
 .fast .group-header.g-mild-header {
   border-left-color: #f59e0b;
-  background: linear-gradient(
-    135deg,
-    rgba(245, 158, 11, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(245, 158, 11, 0.06);
 }
 .fast .group-header.g-severe-header {
   border-left-color: #ef4444;
-  background: linear-gradient(
-    135deg,
-    rgba(239, 68, 68, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(239, 68, 68, 0.06);
 }
 .fast .group-header.g-critical-header {
   border-left-color: #7c3aed;
-  background: linear-gradient(
-    135deg,
-    rgba(124, 58, 237, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(124, 58, 237, 0.06);
 }
 .fast .group-label-block {
@@ -3354,64 +3296,28 @@ function cmai_reset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .mmse .group-header.orient-header {
   border-left-color: #3b82f6;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(59, 130, 246, 0.06);
 }
 .mmse .group-header.reg-header {
   border-left-color: #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
 .mmse .group-header.calc-header {
   border-left-color: #f59e0b;
-  background: linear-gradient(
-    135deg,
-    rgba(245, 158, 11, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(245, 158, 11, 0.06);
 }
 .mmse .group-header.recall-header {
   border-left-color: #14b8a6;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 184, 166, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(20, 184, 166, 0.06);
 }
 .mmse .group-header.lang-header {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .mmse .group-label-block {
@@ -4161,12 +4067,6 @@ function cmai_reset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
@@ -4879,44 +4779,20 @@ function cmai_reset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .gds .group-header.none-header {
   border-left-color: #22c55e;
-  background: linear-gradient(
-    135deg,
-    rgba(34, 197, 94, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(34, 197, 94, 0.06);
 }
 .gds .group-header.mild2-header {
   border-left-color: #eab308;
-  background: linear-gradient(
-    135deg,
-    rgba(234, 179, 8, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(234, 179, 8, 0.06);
 }
 .gds .group-header.severe-header {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .gds .group-label-block {
@@ -5613,12 +5489,6 @@ function cmai_reset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
@@ -6354,44 +6224,20 @@ function cmai_reset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .cmai .pa-header {
   border-left-color: #ef4444;
-  background: linear-gradient(
-    135deg,
-    rgba(239, 68, 68, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(239, 68, 68, 0.06);
 }
 .cmai .pna-header {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .cmai .vb-header {
   border-left-color: #6366f1;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .cmai .group-label-block {
@@ -7141,5 +6987,13 @@ function cmai_reset() {
 .cognition .meta-item,
 .cognition .meta-sep {
   font-size: 0.76rem !important;
+}
+.mmse .item-header,
+.npi .item-header {
+  align-items: center;
+}
+.npi .yn-row-left {
+  justify-content: flex-start;
+  padding: 0.25rem 0 0.5rem;
 }
 </style>

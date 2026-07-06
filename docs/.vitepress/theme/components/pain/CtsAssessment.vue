@@ -467,8 +467,8 @@ function ctp_reset() {
         :class="{ active: activeTab === 'cts' }"
         @click="activeTab = 'cts'"
       >
-        <span class="tab-label">診斷模型（Katz・D'Arcy）</span>
-        <span class="tab-sub">Flick + Katz · Multivariate</span>
+        <span class="tab-label">Flick + Katz</span>
+        <span class="tab-sub">臨床診斷模型</span>
       </button>
       <button
         class="tab-btn"
@@ -476,7 +476,7 @@ function ctp_reset() {
         @click="activeTab = 'ctp'"
       >
         <span class="tab-label">Wainner CPR</span>
-        <span class="tab-sub">Clinical Prediction Rule 2005</span>
+        <span class="tab-sub">臨床預測法則</span>
       </button>
     </div>
 
@@ -584,35 +584,23 @@ function ctp_reset() {
               93%, Spec 96%</span
             >
           </div>
-          <span
-            class="item-val"
-            :class="
-              flick === 'yes'
-                ? 'val-pos'
-                : flick === 'no'
-                  ? 'val-neg'
-                  : 'val-nd'
-            "
-          >
-            {{ flick !== null ? (flick === "yes" ? "陽性" : "陰性") : "—" }}
-          </span>
-        </div>
-        <div class="yn-row">
+          <div class="yn-row">
           <button
             class="btn-yn btn-yn-pos"
             :class="{ 'yn-pos-active': flick === 'yes' }"
             @click="flick = 'yes'"
           >
-            是（Flick 徵陽性）
+            是
           </button>
           <button
             class="btn-yn btn-yn-neg"
             :class="{ 'yn-neg-active': flick === 'no' }"
             @click="flick = 'no'"
           >
-            否（無甩手動作）
+            否
           </button>
         </div>
+          </div>
       </div>
     </div>
 
@@ -716,41 +704,23 @@ function ctp_reset() {
                   vs little finger</span
                 >
               </div>
-              <span
-                class="item-val"
-                :class="
-                  hypalgesia === 'yes'
-                    ? 'val-pos'
-                    : hypalgesia === 'no'
-                      ? 'val-neg'
-                      : 'val-nd'
-                "
-              >
-                {{
-                  hypalgesia !== null
-                    ? hypalgesia === "yes"
-                      ? "陽性"
-                      : "陰性"
-                    : "—"
-                }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-pos"
                 :class="{ 'yn-pos-active': hypalgesia === 'yes' }"
                 @click="hypalgesia = 'yes'"
               >
-                是（陽性）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-neg"
                 :class="{ 'yn-neg-active': hypalgesia === 'no' }"
                 @click="hypalgesia = 'no'"
               >
-                否（陰性）
+                否
               </button>
             </div>
+          </div>
           </div>
 
           <!-- M2: Nocturnal -->
@@ -774,41 +744,23 @@ function ctp_reset() {
                   >Nocturnal symptoms waking from sleep</span
                 >
               </div>
-              <span
-                class="item-val"
-                :class="
-                  nocturnal === 'yes'
-                    ? 'val-pos'
-                    : nocturnal === 'no'
-                      ? 'val-neg'
-                      : 'val-nd'
-                "
-              >
-                {{
-                  nocturnal !== null
-                    ? nocturnal === "yes"
-                      ? "陽性"
-                      : "陰性"
-                    : "—"
-                }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-pos"
                 :class="{ 'yn-pos-active': nocturnal === 'yes' }"
                 @click="nocturnal = 'yes'"
               >
-                是（陽性）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-neg"
                 :class="{ 'yn-neg-active': nocturnal === 'no' }"
                 @click="nocturnal = 'no'"
               >
-                否（陰性）
+                否
               </button>
             </div>
+          </div>
           </div>
 
           <!-- M3: Phalen -->
@@ -829,37 +781,23 @@ function ctp_reset() {
                   reproduces symptoms</span
                 >
               </div>
-              <span
-                class="item-val"
-                :class="
-                  phalen === 'yes'
-                    ? 'val-pos'
-                    : phalen === 'no'
-                      ? 'val-neg'
-                      : 'val-nd'
-                "
-              >
-                {{
-                  phalen !== null ? (phalen === "yes" ? "陽性" : "陰性") : "—"
-                }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-pos"
                 :class="{ 'yn-pos-active': phalen === 'yes' }"
                 @click="phalen = 'yes'"
               >
-                是（陽性）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-neg"
                 :class="{ 'yn-neg-active': phalen === 'no' }"
                 @click="phalen = 'no'"
               >
-                否（陰性）
+                否
               </button>
             </div>
+          </div>
           </div>
 
           <!-- M4: Square Wrist -->
@@ -883,41 +821,23 @@ function ctp_reset() {
                   >Wrist depth-to-width ratio &gt; 0.7 (square wrist sign)</span
                 >
               </div>
-              <span
-                class="item-val"
-                :class="
-                  squareWrist === 'yes'
-                    ? 'val-pos'
-                    : squareWrist === 'no'
-                      ? 'val-neg'
-                      : 'val-nd'
-                "
-              >
-                {{
-                  squareWrist !== null
-                    ? squareWrist === "yes"
-                      ? "陽性"
-                      : "陰性"
-                    : "—"
-                }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-pos"
                 :class="{ 'yn-pos-active': squareWrist === 'yes' }"
                 @click="squareWrist = 'yes'"
               >
-                是（陽性）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-neg"
                 :class="{ 'yn-neg-active': squareWrist === 'no' }"
                 @click="squareWrist = 'no'"
               >
-                否（陰性）
+                否
               </button>
             </div>
+          </div>
           </div>
 
           <!-- M5: Tinel -->
@@ -938,35 +858,23 @@ function ctp_reset() {
                   paresthesias</span
                 >
               </div>
-              <span
-                class="item-val"
-                :class="
-                  tinel === 'yes'
-                    ? 'val-pos'
-                    : tinel === 'no'
-                      ? 'val-neg'
-                      : 'val-nd'
-                "
-              >
-                {{ tinel !== null ? (tinel === "yes" ? "陽性" : "陰性") : "—" }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-pos"
                 :class="{ 'yn-pos-active': tinel === 'yes' }"
                 @click="tinel = 'yes'"
               >
-                是（陽性）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-neg"
                 :class="{ 'yn-neg-active': tinel === 'no' }"
                 @click="tinel = 'no'"
               >
-                否（陰性）
+                否
               </button>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -1166,7 +1074,6 @@ function ctp_reset() {
         <span class="result-number">{{
           cts_currentComplete ? cts_currentResult.prob : "—"
         }}</span>
-        <span class="result-max">CTS 診斷機率</span>
       </div>
       <div class="result-right">
         <span class="result-ver">{{
@@ -1313,34 +1220,15 @@ function ctp_reset() {
             </span>
             <div class="item-name-block">
               <span class="item-name">{{ q.text }}</span>
-              <span class="item-sub">{{ q.hint }}</span>
+              <span class="item-sub">{{ q.hint }} · {{ q.lr }}</span>
             </div>
-            <span
-              class="item-val"
-              :class="
-                currentAns[q.key] === true
-                  ? 'val-pos'
-                  : currentAns[q.key] === false
-                    ? 'val-neg'
-                    : 'val-nd'
-              "
-            >
-              {{
-                currentAns[q.key] === true
-                  ? "陽性"
-                  : currentAns[q.key] === false
-                    ? "陰性"
-                    : "—"
-              }}
-            </span>
-          </div>
-          <div class="yn-row">
+            <div class="yn-row">
             <button
               class="btn-yn btn-yn-pos"
               :class="{ 'yn-pos-active': currentAns[q.key] === true }"
               @click="setAns(q.key, true)"
             >
-              陽性（{{ q.lr }}）
+              陽性
             </button>
             <button
               class="btn-yn btn-yn-neg"
@@ -1349,6 +1237,7 @@ function ctp_reset() {
             >
               陰性
             </button>
+          </div>
           </div>
         </div>
       </div>
@@ -1730,12 +1619,6 @@ function ctp_reset() {
   gap: 0.6rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid #8b5cf6;
   margin-bottom: 0.5rem;
@@ -1753,32 +1636,14 @@ function ctp_reset() {
 }
 .cts .flick-bar {
   border-left-color: #ef4444;
-  background: linear-gradient(
-    135deg,
-    rgba(239, 68, 68, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(239, 68, 68, 0.06);
 }
 .cts .katz-bar {
   border-left-color: #3b82f6;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(59, 130, 246, 0.06);
 }
 .cts .mv-bar {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .cts .group-icon {
@@ -2517,12 +2382,6 @@ function ctp_reset() {
   gap: 0.6rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid #8b5cf6;
   margin-bottom: 0.5rem;
@@ -2540,22 +2399,10 @@ function ctp_reset() {
 }
 .ctp .bv-bar {
   border-left-color: #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
 .ctp .mv-bar {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .ctp .group-icon {
@@ -2767,7 +2614,7 @@ function ctp_reset() {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   align-items: center;
 }
 .ctp .rt-row:last-child {
@@ -2792,7 +2639,7 @@ function ctp_reset() {
 }
 .ctp .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -2817,7 +2664,7 @@ function ctp_reset() {
   color: #ef4444;
 }
 .ctp .rt-sm {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
   text-align: left;
 }
@@ -3177,5 +3024,23 @@ function ctp_reset() {
 }
 .ctsassess .kopt-sub {
   font-size: 0.75rem !important;
+}
+/* ── CTS: options in the same row as the question (ICOPE style) ── */
+.ctsassess .item-header {
+  align-items: center;
+}
+.ctsassess .item-header .yn-row {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  background: none;
+  border-top: none;
+  padding: 0;
+  margin-top: 0;
+  gap: 0.4rem;
+}
+.ctsassess .item-header .yn-row .btn-yn {
+  flex: 0 0 auto;
+  min-width: 58px;
+  padding: 0.5rem 0.9rem;
 }
 </style>

@@ -323,23 +323,9 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "WHO ICOPE 長者功能篩查",
-              link: "/guide/geria/icope-screening",
+              text: "長者功能評估（ICOPE・AD8・SPPB・MNA-SF・GDS・視力）",
+              link: "/guide/geria/geriatric-assessment",
             },
-            {
-              text: "BHT & AD8 認知功能複評工具",
-              link: "/guide/geria/CognitiveBHT&AD8",
-            },
-            {
-              text: "SPPB 行動功能複評工具",
-              link: "/guide/geria/LocomotorSPPB",
-            },
-            { text: "MNA-SF 營養不良複評工具", link: "/guide/geria/MNA-SF" },
-            {
-              text: "GDS 老年抑鬱量表",
-              link: "/guide/geria/geriatric-depression-scale-calculator",
-            },
-            { text: "WHO 近距離視力測試卡", link: "/guide/geria/WHO-Vision" },
           ],
         },
         {
@@ -353,10 +339,6 @@ export default defineConfig({
           text: "胸腔",
           collapsed: true,
           items: [
-            {
-              text: "CRB-65 肺炎嚴重度評估",
-              link: "/guide/infection/crb65-calculator",
-            },
             {
               text: "PEF 峰值呼氣流速預測",
               link: "/guide/chest/PEF-Peak-Expiratory-Flow",
@@ -372,12 +354,22 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "Centor Score 鏈球菌咽喉炎風險評估",
-              link: "/guide/infection/centor-calculator",
+              text: "上呼吸道",
+              items: [
+                {
+                  text: "Centor Score 鏈球菌咽喉炎風險評估",
+                  link: "/guide/infection/centor-calculator",
+                },
+              ],
             },
             {
-              text: "CRB-65 肺炎嚴重度評估",
-              link: "/guide/infection/crb65-calculator",
+              text: "下呼吸道",
+              items: [
+                {
+                  text: "CRB-65 肺炎嚴重度評估",
+                  link: "/guide/infection/crb65-calculator",
+                },
+              ],
             },
           ],
         },
@@ -385,15 +377,14 @@ export default defineConfig({
           text: "泌尿",
           collapsed: true,
           items: [
-            { text: "IPSS 國際攝護腺症狀評分表", link: "/guide/uro/IPSS" },
             {
-              text: "NIH-CPSI 慢性攝護腺炎症狀評分",
-              link: "/guide/uro/NIH-CPSI",
+              text: "攝護腺症狀評分（IPSS・NIH-CPSI）",
+              link: "/guide/uro/prostate-assessment",
             },
           ],
         },
         {
-          text: "腸胃",
+          text: "肝膽腸胃",
           collapsed: true,
           items: [
             {
@@ -407,12 +398,8 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "CHA₂DS₂-VA 心房顫動中風風險評估",
-              link: "/guide/cv/cha2ds2va-calculator",
-            },
-            {
-              text: "PREVENT-ASCVD 動脈粥樣硬化心血管疾病風險評估",
-              link: "/guide/cv/prevent-ascvd-calculator",
+              text: "心血管風險評估（CHA₂DS₂-VA・PREVENT）",
+              link: "/guide/cv/cardiovascular-risk",
             },
           ],
         },
@@ -421,10 +408,25 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "PHQ-9 & GAD-7 自我評估量表",
-              link: "/guide/psy/phq9-gad7-calculator",
+              text: "情緒",
+              collapsed: false,
+              items: [
+                {
+                  text: "PHQ-9 & GAD-7 自我評估量表",
+                  link: "/guide/psy/phq9-gad7-calculator",
+                },
+              ],
             },
-            { text: "SF-36 健康狀況調查", link: "/guide/psy/sf36-calculator" },
+            {
+              text: "日常功能",
+              collapsed: false,
+              items: [
+                {
+                  text: "SF-36 健康狀況調查",
+                  link: "/guide/psy/sf36-calculator",
+                },
+              ],
+            },
           ],
         },
       ],

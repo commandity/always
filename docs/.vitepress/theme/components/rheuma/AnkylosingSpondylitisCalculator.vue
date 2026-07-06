@@ -380,86 +380,16 @@ const domainOrder = ["GS", "MS"] as const;
           </div>
 
           <!-- VAS slider row -->
-          <div class="vas-row">
-            <span class="vas-anchor-l">{{ item.anchorL }}</span>
-            <div class="vas-track-wrap">
-              <div class="vas-track">
-                <div
-                  class="vas-fill-bar"
-                  :class="domainDefs[dk].color + '-fill'"
-                  :style="{
-                    width:
-                      scores[item.key] !== null
-                        ? (scores[item.key]! / 10) * 100 + '%'
-                        : '0%',
-                  }"
-                />
-                <div
-                  class="vas-thumb"
-                  :class="domainDefs[dk].color + '-thumb'"
-                  v-if="scores[item.key] !== null"
-                  :style="{ left: (scores[item.key]! / 10) * 100 + '%' }"
-                />
-                <input
-                  type="range"
-                  min="0"
-                  max="10"
-                  step="0.5"
-                  :value="getScore(item.key)"
-                  @input="
-                    setScore(
-                      item.key,
-                      parseFloat(($event.target as HTMLInputElement).value),
-                    )
-                  "
-                  class="vas-range"
-                />
+          <div class="field-input-wrap">
+            <div class="slider-col">
+              <div class="item-anchor-row">
+                <span class="anchor-left">{{ item.anchorL }}</span>
+                <span class="anchor-right">{{ item.anchorR }}</span>
               </div>
-              <!-- 11 tick marks 0–10 -->
-              <div class="vas-ticks">
-                <span v-for="n in 11" :key="n">{{ n - 1 }}</span>
-              </div>
+              <input type="range" min="0" max="10" step="0.5" class="field-slider" :value="getScore(item.key)" @input="setScore(item.key, parseFloat(($event.target as HTMLInputElement).value))" />
+              <div class="field-ticks"><span v-for="n in 11" :key="n">{{ n - 1 }}</span></div>
             </div>
-            <span class="vas-anchor-r">{{ item.anchorR }}</span>
-          </div>
-
-          <!-- Numeric input row -->
-          <div class="num-row">
-            <span class="num-hint">或直接輸入數字：</span>
-            <div
-              class="num-input-wrap"
-              :class="{
-                'ni-filled': scores[item.key] !== null,
-                'ni-flagged':
-                  scores[item.key] !== null && scores[item.key]! >= 4,
-              }"
-            >
-              <input
-                type="number"
-                min="0"
-                max="10"
-                step="0.5"
-                :value="scores[item.key] ?? ''"
-                @input="
-                  setScore(
-                    item.key,
-                    parseFloat(
-                      ($event.target as HTMLInputElement).value || '0',
-                    ),
-                  )
-                "
-                @change="
-                  setScore(
-                    item.key,
-                    parseFloat(
-                      ($event.target as HTMLInputElement).value || '0',
-                    ),
-                  )
-                "
-                placeholder="0–10"
-                class="num-input"
-              />
-            </div>
+            <input type="number" min="0" max="10" step="0.5" class="field-number" placeholder="—" :value="scores[item.key] ?? ''" @input="scores[item.key] = ($event.target as HTMLInputElement).value === '' ? null : Math.max(0, Math.min(10, parseFloat(($event.target as HTMLInputElement).value)))" />
           </div>
         </div>
       </div>
@@ -680,7 +610,7 @@ const domainOrder = ["GS", "MS"] as const;
 .tab-sub {
   display: block;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--vp-c-text-3);
   margin-top: 2px;
   letter-spacing: 0.01em;
@@ -967,22 +897,10 @@ const domainOrder = ["GS", "MS"] as const;
 }
 .basdai .gs-header {
   border-left-color: #6366f1;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .basdai .ms-header {
   border-left-color: #14b8a6;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 184, 166, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(20, 184, 166, 0.06);
 }
 .basdai .group-label-block {
@@ -1038,11 +956,11 @@ const domainOrder = ["GS", "MS"] as const;
 }
 .basdai .basdai-item.answered {
   border-color: rgba(99, 102, 241, 0.3);
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.04), transparent);
+  background: color-mix(in srgb, rgb(34, 197, 94) 5%, var(--vp-c-bg-soft));
 }
 .basdai .basdai-item.flagged {
   border-color: #ef4444 !important;
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.04), transparent);
+  background: color-mix(in srgb, rgb(239, 68, 68) 5%, var(--vp-c-bg-soft));
   box-shadow: 0 2px 10px rgba(249, 115, 22, 0.08);
 }
 .basdai .basdai-item.answered.gs-active {
@@ -1191,6 +1109,11 @@ const domainOrder = ["GS", "MS"] as const;
 .basdai .ms-fill {
   background: #14b8a6;
 }
+.basdai .vas-thumb.vas-thumb-unset {
+  background: var(--vp-c-bg) !important;
+  border: 2.5px solid var(--vp-c-brand-1) !important;
+  box-shadow: 0 1px 4px color-mix(in srgb, var(--vp-c-brand-1) 30%, transparent);
+}
 .basdai .vas-thumb {
   position: absolute;
   top: 50%;
@@ -1224,7 +1147,14 @@ const domainOrder = ["GS", "MS"] as const;
   justify-content: space-between;
   font-size: 0.58rem;
   color: var(--vp-c-text-3);
-  padding: 0 1px;
+  padding: 0 10px;
+}
+.basdai .vas-ticks span {
+  width: 0;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  white-space: nowrap;
 }
 /* ── Numeric input row ─────────────────────────────────────────── */
 .basdai .num-row {
@@ -1331,7 +1261,6 @@ const domainOrder = ["GS", "MS"] as const;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--vp-c-text-3);
-  background: linear-gradient(135deg, var(--vp-c-bg-mute), var(--vp-c-bg-soft));
   border-bottom: 1px solid var(--vp-c-divider);
 }
 .basdai .formula-body {
@@ -1614,7 +1543,7 @@ const domainOrder = ["GS", "MS"] as const;
 }
 .basdai .detail-domain {
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--vp-c-text-1);
   flex: 1;
 }
@@ -1756,5 +1685,80 @@ const domainOrder = ["GS", "MS"] as const;
 .asassess .vas-num {
   font-size: 0.95rem !important;
   font-weight: 700 !important;
+}
+.basdai .item-anchor-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0.9rem 0.15rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--vp-c-text-3);
+  line-height: 1.4;
+}
+.basdai .item-anchor-row .anchor-right {
+  text-align: right;
+}
+.basdai .field-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.5rem 0.9rem 0.7rem;
+}
+.basdai .field-slider {
+  width: 100%;
+  accent-color: var(--vp-c-brand-1);
+  cursor: pointer;
+  height: 6px;
+}
+.basdai .slider-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.basdai .field-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  padding: 0 8px;
+}
+.basdai .field-ticks span {
+  width: 0;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  white-space: nowrap;
+}
+.basdai .field-number {
+  width: 66px;
+  padding: 5px 8px;
+  border: 1.5px solid var(--vp-c-divider);
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-family: inherit;
+  -moz-appearance: textfield;
+}
+.basdai .field-number::-webkit-outer-spin-button,
+.basdai .field-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.basdai .field-number:focus {
+  outline: none;
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 2px var(--vp-c-brand-soft);
+}
+.basdai .field-number::placeholder {
+  color: var(--vp-c-text-3);
+  font-weight: 400;
+}
+.basdai .slider-col .item-anchor-row {
+  padding: 0 6px 3px;
 }
 </style>

@@ -426,21 +426,12 @@ function rsiReset() {
               </span>
             </div>
 
-            <div
-              class="option-row"
-              :style="{
-                gridTemplateColumns: `repeat(${item.scores.length}, 1fr)`,
-              }"
-            >
+            <div class="sec-options">
               <label
                 v-for="opt in item.scores"
                 :key="opt.value"
-                class="opt-pill"
-                :class="{
-                  active: rfsSelections[item.key] === opt.value,
-                  high: opt.value >= 3 && rfsSelections[item.key] === opt.value,
-                  ['s' + opt.value]: true,
-                }"
+                class="sec-opt"
+                :class="{ 'opt-selected': rfsSelections[item.key] === opt.value }"
               >
                 <input
                   type="radio"
@@ -448,8 +439,19 @@ function rsiReset() {
                   :value="opt.value"
                   v-model="rfsSelections[item.key]"
                 />
-                <span class="opt-num">{{ opt.value }}</span>
-                <span class="opt-desc">{{ opt.desc }}</span>
+                <div
+                  class="opt-radio"
+                  :class="{ selected: rfsSelections[item.key] === opt.value }"
+                >
+                  <div
+                    class="opt-dot"
+                    v-if="rfsSelections[item.key] === opt.value"
+                  />
+                </div>
+                <div class="opt-content">
+                  <span class="opt-score-badge">{{ opt.value }}</span>
+                  <span class="opt-text">{{ opt.desc }}</span>
+                </div>
               </label>
             </div>
           </div>
@@ -607,27 +609,31 @@ function rsiReset() {
               </span>
             </div>
 
-            <div class="option-row rsi-option-row">
-              <label
-                v-for="opt in rsiScoreOptions"
-                :key="opt.value"
-                class="opt-pill"
-                :class="{
-                  active: rsiSelections[q.key] === opt.value,
-                  high: opt.value >= 4 && rsiSelections[q.key] === opt.value,
-                  ['s' + opt.value]: true,
-                }"
-              >
-                <input
-                  type="radio"
-                  :name="'rsi-' + q.key"
-                  :value="opt.value"
-                  v-model="rsiSelections[q.key]"
-                />
-                <span class="opt-num">{{ opt.label }}</span>
-                <span class="opt-desc">{{ opt.desc }}</span>
-              </label>
-            </div>
+            <div class="sec-options">
+                <label
+                  v-for="opt in rsiScoreOptions"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': rsiSelections[q.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="'rsi-' + q.key"
+                    :value="opt.value"
+                    v-model="rsiSelections[q.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: rsiSelections[q.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="rsiSelections[q.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.label }}</span>
+                    <span class="opt-text">{{ opt.desc }}</span>
+                  </div>
+                </label>
+              </div>
           </div>
         </div>
       </div>
@@ -992,24 +998,12 @@ function rsiReset() {
 
 /* RFS group — amber accent */
 .rfs-group .group-header {
-  background: linear-gradient(
-    135deg,
-    #fef9e7,
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border-left: 4px solid #f59e0b;
   box-shadow: 0 1px 3px rgba(245, 158, 11, 0.06);
 }
 
 /* RSI group — teal accent */
 .rsi-group .group-header {
-  background: linear-gradient(
-    135deg,
-    #ecfdf5,
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border-left: 4px solid #14b8a6;
   box-shadow: 0 1px 3px rgba(20, 184, 166, 0.06);
 }

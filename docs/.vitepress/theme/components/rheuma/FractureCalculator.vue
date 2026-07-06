@@ -439,8 +439,8 @@ const riskFactors = [
     <div class="section-content">
       <div class="field-row">
         <div class="field-label">
-          <span class="field-name">年齡</span>
-          <span class="field-sub">Age · 40–90 歲（超出取邊界值）</span>
+          <span class="item-name">年齡</span>
+          <span class="item-sub">Age · 40–90 歲（超出取邊界值）</span>
         </div>
         <div
           class="field-input-wrap"
@@ -461,8 +461,8 @@ const riskFactors = [
 
       <div class="field-row">
         <div class="field-label">
-          <span class="field-name">性別</span>
-          <span class="field-sub">Sex</span>
+          <span class="item-name">性別</span>
+          <span class="item-sub">Sex</span>
         </div>
         <div class="sex-toggle">
           <button
@@ -485,8 +485,8 @@ const riskFactors = [
       <div class="field-row-2">
         <div class="field-half">
           <div class="field-label">
-            <span class="field-name">體重</span>
-            <span class="field-sub">Weight</span>
+            <span class="item-name">體重</span>
+            <span class="item-sub">Weight</span>
           </div>
           <div class="field-input-wrap" :class="{ 'f-filled': weight !== '' }">
             <input
@@ -502,8 +502,8 @@ const riskFactors = [
         </div>
         <div class="field-half">
           <div class="field-label">
-            <span class="field-name">身高</span>
-            <span class="field-sub">Height</span>
+            <span class="item-name">身高</span>
+            <span class="item-sub">Height</span>
           </div>
           <div class="field-input-wrap" :class="{ 'f-filled': height !== '' }">
             <input
@@ -542,8 +542,8 @@ const riskFactors = [
     <div class="section-content">
       <div class="field-row">
         <div class="field-label">
-          <span class="field-name">T-score</span>
-          <span class="field-sub">DXA 股骨頸 · NHANES III 參考</span>
+          <span class="item-name">T-score</span>
+          <span class="item-sub">DXA 股骨頸 · NHANES III 參考</span>
         </div>
         <div
           class="field-input-wrap"
@@ -598,7 +598,7 @@ const riskFactors = [
         </div>
         <div class="rf-content">
           <div class="rf-name-row">
-            <span class="rf-name">{{ rf.label }}</span>
+            <span class="item-name">{{ rf.label }}</span>
             <span
               class="rf-badge"
               :class="rf.badge === '強' ? 'badge-strong' : 'badge-mid'"
@@ -606,8 +606,8 @@ const riskFactors = [
               {{ rf.badge }}危險因子
             </span>
           </div>
-          <div class="rf-sub">{{ rf.sub }}</div>
-          <div class="rf-detail">{{ rf.detail }}</div>
+          <div class="item-sub">{{ rf.sub }}</div>
+          <div class="item-hint">{{ rf.detail }}</div>
         </div>
       </div>
     </div>
@@ -1007,17 +1007,11 @@ const riskFactors = [
 .frax .section-title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
+  justify-content: flex-start;
+  gap: 0.5rem;
   margin-bottom: 0.5rem;
-  padding: 0.65rem 0.85rem 0.65rem 1.5rem;
+  padding: 0.65rem 0.85rem 0.65rem 1.2rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
@@ -1080,15 +1074,6 @@ const riskFactors = [
   gap: 1px;
   min-width: 100px;
   flex-shrink: 0;
-}
-.frax .field-name {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-}
-.frax .field-sub {
-  font-size: 0.65rem;
-  color: var(--vp-c-text-3);
 }
 .frax .field-input-wrap {
   display: flex;
@@ -1273,11 +1258,6 @@ const riskFactors = [
   margin-bottom: 2px;
   flex-wrap: wrap;
 }
-.frax .rf-name {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-}
 .frax .rf-badge {
   font-size: 0.62rem;
   font-weight: 700;
@@ -1291,16 +1271,6 @@ const riskFactors = [
 .frax .badge-mid {
   background: rgba(245, 158, 11, 0.1);
   color: #f59e0b;
-}
-.frax .rf-sub {
-  font-size: 0.68rem;
-  color: var(--vp-c-text-3);
-  margin-bottom: 3px;
-}
-.frax .rf-detail {
-  font-size: 0.75rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.5;
 }
 /* ── Severity bar (ENS6Q absolute positioning) ─────────────────── */
 .frax .severity-bar-wrap {
@@ -1777,5 +1747,44 @@ const riskFactors = [
     border-right: none;
     border-bottom: 1px solid var(--vp-c-divider);
   }
+}
+
+/* ══ FRAX 字級對齊統一版面 ══ */
+.frax .field-unit,
+.frax .bmi-unit {
+  font-size: 0.76rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.frax .field-warn {
+  font-size: 0.76rem !important;
+}
+.frax .bmd-hint,
+.frax .section-optional {
+  font-size: 0.76rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.frax .rc-label {
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+}
+.frax .rc-sublabel {
+  font-size: 0.78rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.frax .rc-risk {
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+}
+.frax .result-title {
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+}
+.frax .incomplete-note,
+.frax .progress-hint {
+  font-size: 0.8rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.frax .item-sub {
+  margin-bottom: 3px;
 }
 </style>

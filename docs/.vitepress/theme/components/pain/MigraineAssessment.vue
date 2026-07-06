@@ -361,89 +361,6 @@ function reset() {
       </div>
     </div>
 
-    <!-- ── Both-tab summary strip ─────────────────────────────── -->
-    <div class="tab-strip">
-      <div
-        v-for="tab in ['screen', 'without', 'with'] as MainTab[]"
-        :key="tab"
-        class="tab-strip-card"
-        :class="[
-          tab === 'screen'
-            ? scrComplete
-              ? scrScore >= 2
-                ? 'critical'
-                : 'normal'
-              : 'tab-nd'
-            : tab === 'without'
-              ? wa_complete
-                ? wa_result.met
-                  ? 'critical'
-                  : wa_result.color
-                : 'tab-nd'
-              : aw_complete
-                ? aw_result.met
-                  ? 'critical'
-                  : aw_result.color
-                : 'tab-nd',
-          mainTab === tab ? 'tab-active' : '',
-        ]"
-        @click="switchTab(tab)"
-      >
-        <span class="tsc-icon">{{
-          tab === "screen" ? "🔍" : tab === "without" ? "🧠" : "✨"
-        }}</span>
-        <span class="tsc-label">
-          {{
-            tab === "screen"
-              ? "ID Migraine"
-              : tab === "without"
-                ? "無先兆 1.1"
-                : "有先兆 1.2"
-          }}
-        </span>
-        <span class="tsc-val">
-          {{
-            tab === "screen"
-              ? scrComplete
-                ? scrScore + "/3"
-                : "—"
-              : tab === "without"
-                ? wa_complete
-                  ? wa_result.met
-                    ? "✓"
-                    : "✗"
-                  : "—"
-                : aw_complete
-                  ? aw_result.met
-                    ? "✓"
-                    : "✗"
-                  : "—"
-          }}
-        </span>
-        <span class="tsc-sub">
-          {{
-            tab === "screen"
-              ? scrComplete
-                ? scrScore >= 2
-                  ? "陽性"
-                  : "陰性"
-                : "3 題篩查"
-              : tab === "without"
-                ? wa_complete
-                  ? wa_result.met
-                    ? "診斷成立"
-                    : "不符合"
-                  : "9 項標準"
-                : aw_complete
-                  ? aw_result.met
-                    ? "診斷成立"
-                    : "不符合"
-                  : "14 項標準"
-          }}
-        </span>
-      </div>
-    </div>
-
     <!-- ── Tab selector group ─────────────────────────────────── -->
     <div class="nihss-group">
       <div class="group-header-bar tab-bar">
@@ -574,35 +491,23 @@ function reset() {
                 <span class="item-name"
                   >過去三個月內，頭痛發作時是否有噁心或嘔吐的感覺？</span
                 >
-                <span class="item-sub"
-                  >Did you have nausea or stomach discomfort when you had a
-                  headache?</span
-                >
               </div>
-              <span
-                class="item-val"
-                :class="
-                  q1 === 'yes' ? 'val-yes' : q1 === 'no' ? 'val-no' : 'val-nd'
-                "
-              >
-                {{ q1 === null ? "—" : q1 === "yes" ? "是" : "否" }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-yes"
                 :class="{ 'yn-yes-active': q1 === 'yes' }"
                 @click="q1 = 'yes'"
               >
-                是（Yes）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-no"
                 :class="{ 'yn-no-active': q1 === 'no' }"
                 @click="q1 = 'no'"
               >
-                否（No）
+                否
               </button>
+            </div>
             </div>
           </div>
           <!-- Q2 Photophobia -->
@@ -616,34 +521,23 @@ function reset() {
                 <span class="item-name"
                   >過去三個月內，頭痛發作時光線是否令您感到困擾？</span
                 >
-                <span class="item-sub"
-                  >Did light bother you when you had a headache?</span
-                >
               </div>
-              <span
-                class="item-val"
-                :class="
-                  q2 === 'yes' ? 'val-yes' : q2 === 'no' ? 'val-no' : 'val-nd'
-                "
-              >
-                {{ q2 === null ? "—" : q2 === "yes" ? "是" : "否" }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-yes"
                 :class="{ 'yn-yes-active': q2 === 'yes' }"
                 @click="q2 = 'yes'"
               >
-                是（Yes）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-no"
                 :class="{ 'yn-no-active': q2 === 'no' }"
                 @click="q2 = 'no'"
               >
-                否（No）
+                否
               </button>
+            </div>
             </div>
           </div>
           <!-- Q3 Disability -->
@@ -657,35 +551,23 @@ function reset() {
                 <span class="item-name"
                   >過去三個月內，頭痛是否讓您至少有一天無法進行正常工作、學習或日常活動？</span
                 >
-                <span class="item-sub"
-                  >Did your headache limit your ability to work, study, or do
-                  what you needed to do for at least one day?</span
-                >
               </div>
-              <span
-                class="item-val"
-                :class="
-                  q3 === 'yes' ? 'val-yes' : q3 === 'no' ? 'val-no' : 'val-nd'
-                "
-              >
-                {{ q3 === null ? "—" : q3 === "yes" ? "是" : "否" }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-yes"
                 :class="{ 'yn-yes-active': q3 === 'yes' }"
                 @click="q3 = 'yes'"
               >
-                是（Yes）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-no"
                 :class="{ 'yn-no-active': q3 === 'no' }"
                 @click="q3 = 'no'"
               >
-                否（No）
+                否
               </button>
+            </div>
             </div>
           </div>
         </div>
@@ -805,39 +687,24 @@ function reset() {
             <span class="item-qnum q-a">A</span>
             <div class="item-name-block">
               <span class="item-name">頭痛發作次數是否 ≥ 5 次？</span>
-              <span class="item-sub"
-                >At least 5 attacks fulfilling criteria B–D</span
-              >
             </div>
-            <span
-              class="item-val"
-              :class="
-                wa_a === 'yes'
-                  ? 'val-ok'
-                  : wa_a === 'no'
-                    ? 'val-fail'
-                    : 'val-nd'
-              "
-            >
-              {{ wa_a !== null ? (wa_a === "yes" ? "是" : "否") : "—" }}
-            </span>
-          </div>
-          <div class="yn-row">
+            <div class="yn-row">
             <button
               class="btn-yn btn-yn-ok"
               :class="{ 'yn-ok-active': wa_a === 'yes' }"
               @click="wa_a = 'yes'"
             >
-              是（≥5 次）
+              是
             </button>
             <button
               class="btn-yn btn-yn-fail"
               :class="{ 'yn-fail-active': wa_a === 'no' }"
               @click="wa_a = 'no'"
             >
-              否（&lt; 5 次）
+              否
             </button>
           </div>
+            </div>
         </div>
       </div>
 
@@ -870,31 +737,14 @@ function reset() {
               <span class="item-name"
                 >未治療或治療無效時，頭痛持續 4–72 小時？</span
               >
-              <span class="item-sub"
-                >Headache attacks lasting 4–72 hours (untreated or
-                unsuccessfully treated)</span
-              >
             </div>
-            <span
-              class="item-val"
-              :class="
-                wa_b === 'yes'
-                  ? 'val-ok'
-                  : wa_b === 'no'
-                    ? 'val-fail'
-                    : 'val-nd'
-              "
-            >
-              {{ wa_b !== null ? (wa_b === "yes" ? "是" : "否") : "—" }}
-            </span>
-          </div>
-          <div class="yn-row">
+            <div class="yn-row">
             <button
               class="btn-yn btn-yn-ok"
               :class="{ 'yn-ok-active': wa_b === 'yes' }"
               @click="wa_b = 'yes'"
             >
-              是（4–72 hr）
+              是
             </button>
             <button
               class="btn-yn btn-yn-fail"
@@ -904,6 +754,7 @@ function reset() {
               否
             </button>
           </div>
+            </div>
         </div>
       </div>
 
@@ -979,30 +830,14 @@ function reset() {
               <span class="item-qnum q-c">{{ item.id }}</span>
               <div class="item-name-block">
                 <span class="item-name">{{ item.zh }}</span>
-                <span class="item-sub">{{ item.en }}</span>
               </div>
-              <span
-                class="item-val"
-                :class="
-                  item.ref === 'yes'
-                    ? 'val-ok'
-                    : item.ref === 'no'
-                      ? 'val-fail'
-                      : 'val-nd'
-                "
-              >
-                {{
-                  item.ref !== null ? (item.ref === "yes" ? "是" : "否") : "—"
-                }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-ok"
                 :class="{ 'yn-ok-active': item.ref === 'yes' }"
                 @click="item.setter('yes')"
               >
-                是（符合）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-fail"
@@ -1011,6 +846,7 @@ function reset() {
               >
                 否
               </button>
+            </div>
             </div>
           </div>
         </div>
@@ -1052,28 +888,14 @@ function reset() {
               <span class="item-qnum q-d">D1</span>
               <div class="item-name-block">
                 <span class="item-name">噁心和/或嘔吐</span>
-                <span class="item-sub">Nausea and/or vomiting</span>
               </div>
-              <span
-                class="item-val"
-                :class="
-                  wa_d1 === 'yes'
-                    ? 'val-ok'
-                    : wa_d1 === 'no'
-                      ? 'val-fail'
-                      : 'val-nd'
-                "
-              >
-                {{ wa_d1 !== null ? (wa_d1 === "yes" ? "是" : "否") : "—" }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-ok"
                 :class="{ 'yn-ok-active': wa_d1 === 'yes' }"
                 @click="wa_d1 = 'yes'"
               >
-                是（符合）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-fail"
@@ -1082,6 +904,7 @@ function reset() {
               >
                 否
               </button>
+            </div>
             </div>
           </div>
           <div
@@ -1096,28 +919,14 @@ function reset() {
                 <span class="item-name"
                   >畏光（photophobia）且畏聲（phonophobia）</span
                 >
-                <span class="item-sub">Photophobia and phonophobia</span>
               </div>
-              <span
-                class="item-val"
-                :class="
-                  wa_d2 === 'yes'
-                    ? 'val-ok'
-                    : wa_d2 === 'no'
-                      ? 'val-fail'
-                      : 'val-nd'
-                "
-              >
-                {{ wa_d2 !== null ? (wa_d2 === "yes" ? "是" : "否") : "—" }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-ok"
                 :class="{ 'yn-ok-active': wa_d2 === 'yes' }"
                 @click="wa_d2 = 'yes'"
               >
-                是（符合）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-fail"
@@ -1126,6 +935,7 @@ function reset() {
               >
                 否
               </button>
+            </div>
             </div>
           </div>
         </div>
@@ -1160,39 +970,24 @@ function reset() {
               <span class="item-name"
                 >頭痛不能更好地以其他 ICHD-3 診斷解釋？</span
               >
-              <span class="item-sub"
-                >Not better accounted for by another ICHD-3 diagnosis</span
-              >
             </div>
-            <span
-              class="item-val"
-              :class="
-                wa_e === 'yes'
-                  ? 'val-ok'
-                  : wa_e === 'no'
-                    ? 'val-fail'
-                    : 'val-nd'
-              "
-            >
-              {{ wa_e !== null ? (wa_e === "yes" ? "是" : "否") : "—" }}
-            </span>
-          </div>
-          <div class="yn-row">
+            <div class="yn-row">
             <button
               class="btn-yn btn-yn-ok"
               :class="{ 'yn-ok-active': wa_e === 'yes' }"
               @click="wa_e = 'yes'"
             >
-              是（排除其他）
+              是
             </button>
             <button
               class="btn-yn btn-yn-fail"
               :class="{ 'yn-fail-active': wa_e === 'no' }"
               @click="wa_e = 'no'"
             >
-              否（尚未排除）
+              否
             </button>
           </div>
+            </div>
         </div>
       </div>
 
@@ -1287,39 +1082,24 @@ function reset() {
               <span class="item-name"
                 >符合 B–C 標準的發作次數是否 ≥ 2 次？</span
               >
-              <span class="item-sub"
-                >At least 2 attacks fulfilling criteria B and C</span
-              >
             </div>
-            <span
-              class="item-val"
-              :class="
-                aw_a === 'yes'
-                  ? 'val-ok'
-                  : aw_a === 'no'
-                    ? 'val-fail'
-                    : 'val-nd'
-              "
-            >
-              {{ aw_a !== null ? (aw_a === "yes" ? "是" : "否") : "—" }}
-            </span>
-          </div>
-          <div class="yn-row">
+            <div class="yn-row">
             <button
               class="btn-yn btn-yn-ok"
               :class="{ 'yn-ok-active': aw_a === 'yes' }"
               @click="aw_a = 'yes'"
             >
-              是（≥2 次）
+              是
             </button>
             <button
               class="btn-yn btn-yn-fail"
               :class="{ 'yn-fail-active': aw_a === 'no' }"
               @click="aw_a = 'no'"
             >
-              否（1 次）
+              否
             </button>
           </div>
+            </div>
         </div>
       </div>
 
@@ -1414,32 +1194,23 @@ function reset() {
               <span class="item-qnum q-b">{{ item.id }}</span>
               <div class="item-name-block">
                 <span class="item-name">{{ item.zh }}</span>
-                <span class="item-sub">{{ item.en }}</span>
               </div>
-              <span
-                class="item-val"
-                :class="item.ref === 'yes' ? 'val-ok' : 'val-nd'"
-              >
-                {{
-                  item.ref !== null ? (item.ref === "yes" ? "有" : "無") : "—"
-                }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-ok"
                 :class="{ 'yn-ok-active': item.ref === 'yes' }"
                 @click="item.setter('yes')"
               >
-                有此先兆
+                是
               </button>
               <button
                 class="btn-yn btn-yn-fail"
                 :class="{ 'yn-fail-active': item.ref === 'no' }"
                 @click="item.setter('no')"
               >
-                無此先兆
+                否
               </button>
+            </div>
             </div>
           </div>
         </div>
@@ -1535,30 +1306,14 @@ function reset() {
               <span class="item-qnum q-c">{{ item.id }}</span>
               <div class="item-name-block">
                 <span class="item-name">{{ item.zh }}</span>
-                <span class="item-sub">{{ item.en }}</span>
               </div>
-              <span
-                class="item-val"
-                :class="
-                  item.ref === 'yes'
-                    ? 'val-ok'
-                    : item.ref === 'no'
-                      ? 'val-fail'
-                      : 'val-nd'
-                "
-              >
-                {{
-                  item.ref !== null ? (item.ref === "yes" ? "是" : "否") : "—"
-                }}
-              </span>
-            </div>
-            <div class="yn-row">
+              <div class="yn-row">
               <button
                 class="btn-yn btn-yn-ok"
                 :class="{ 'yn-ok-active': item.ref === 'yes' }"
                 @click="item.setter('yes')"
               >
-                是（符合）
+                是
               </button>
               <button
                 class="btn-yn btn-yn-fail"
@@ -1567,6 +1322,7 @@ function reset() {
               >
                 否
               </button>
+            </div>
             </div>
           </div>
         </div>
@@ -1603,40 +1359,24 @@ function reset() {
               <span class="item-name"
                 >已排除 TIA 及其他可能導致類似先兆症狀的疾病？</span
               >
-              <span class="item-sub"
-                >Not better accounted for by another ICHD-3 diagnosis; TIA
-                excluded</span
-              >
             </div>
-            <span
-              class="item-val"
-              :class="
-                aw_d === 'yes'
-                  ? 'val-ok'
-                  : aw_d === 'no'
-                    ? 'val-fail'
-                    : 'val-nd'
-              "
-            >
-              {{ aw_d !== null ? (aw_d === "yes" ? "是" : "否") : "—" }}
-            </span>
-          </div>
-          <div class="yn-row">
+            <div class="yn-row">
             <button
               class="btn-yn btn-yn-ok"
               :class="{ 'yn-ok-active': aw_d === 'yes' }"
               @click="aw_d = 'yes'"
             >
-              是（已排除）
+              是
             </button>
             <button
               class="btn-yn btn-yn-fail"
               :class="{ 'yn-fail-active': aw_d === 'no' }"
               @click="aw_d = 'no'"
             >
-              否（尚未排除）
+              否
             </button>
           </div>
+            </div>
         </div>
       </div>
 
@@ -2159,12 +1899,6 @@ function reset() {
   gap: 0.6rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(6, 182, 212, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid #06b6d4;
   margin-bottom: 0.5rem;
@@ -2182,12 +1916,6 @@ function reset() {
 }
 .mg .q-bar {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .mg .crit-bar-a {
@@ -2295,11 +2023,11 @@ function reset() {
 }
 .mg .item-yes,
 .mg .item-ok {
-  border-color: #22c55e;
+  border-color: #ef4444;
 }
 .mg .item-no,
 .mg .item-fail {
-  border-color: #ef4444;
+  border-color: #22c55e;
 }
 .mg .item-na {
   border-color: var(--vp-c-divider);
@@ -2380,17 +2108,17 @@ function reset() {
 }
 .mg .val-yes,
 .mg .val-ok {
-  color: #22c55e;
+  color: #ef4444;
 }
 .mg .val-no,
 .mg .val-fail {
-  color: #ef4444;
+  color: #22c55e;
 }
 .mg .val-nd {
   color: var(--vp-c-text-3);
 }
-.mg /* ── Yes/No buttons ──────────────────────────────────────────── */
-.yn-row {
+/* ── Yes/No buttons ── */
+.mg .yn-row {
   display: flex;
   gap: 2px;
   padding: 3px;
@@ -2417,17 +2145,17 @@ function reset() {
 }
 .mg .btn-yn-yes.yn-yes-active,
 .mg .btn-yn-ok.yn-ok-active {
-  border-color: #22c55e;
-  background: color-mix(in srgb, rgb(34, 197, 94) 18%, var(--vp-c-bg));
-  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.08);
-  color: #22c55e;
-}
-.mg .btn-yn-no.yn-no-active,
-.mg .btn-yn-fail.yn-fail-active {
   border-color: #ef4444;
   background: color-mix(in srgb, rgb(239, 68, 68) 18%, var(--vp-c-bg));
   box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.08);
   color: #ef4444;
+}
+.mg .btn-yn-no.yn-no-active,
+.mg .btn-yn-fail.yn-fail-active {
+  border-color: #22c55e;
+  background: color-mix(in srgb, rgb(34, 197, 94) 18%, var(--vp-c-bg));
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.08);
+  color: #22c55e;
 }
 .mg /* ── Sub-score row ───────────────────────────────────────────── */
 .sub-score-row {
@@ -2725,5 +2453,23 @@ function reset() {
 .mg .tab-strip {
     flex-direction: column;
   }
+}
+/* ── ID Migraine / criteria: options in the same row as the question (ICOPE style) ── */
+.mg .item-header {
+  align-items: center;
+}
+.mg .item-header .yn-row {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  background: none;
+  border-top: none;
+  padding: 0;
+  margin-top: 0;
+  gap: 0.4rem;
+}
+.mg .item-header .yn-row .btn-yn {
+  flex: 0 0 auto;
+  min-width: 58px;
+  padding: 0.5rem 0.9rem;
 }
 </style>

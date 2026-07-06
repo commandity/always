@@ -2814,7 +2814,7 @@ function selectSubst(s: string) {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   align-items: center;
 }
 .mdrd .rt-row:last-child {
@@ -2822,7 +2822,7 @@ function selectSubst(s: string) {
 }
 .mdrd .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -2836,12 +2836,12 @@ function selectSubst(s: string) {
   font-family: monospace;
 }
 .mdrd .rt-range {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-family: monospace;
   color: var(--vp-c-text-2);
 }
 .mdrd .rt-sm {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
 }
 .mdrd .normal-t {
@@ -3592,7 +3592,7 @@ function selectSubst(s: string) {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   align-items: center;
 }
 .bdc .rt-row:last-child {
@@ -3600,7 +3600,7 @@ function selectSubst(s: string) {
 }
 .bdc .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -3626,7 +3626,7 @@ function selectSubst(s: string) {
   color: #ef4444;
 }
 .bdc .rt-sm {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
 }
 /* ── Result card ───────────────────────────────────────────────── */
@@ -4318,7 +4318,7 @@ function selectSubst(s: string) {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   align-items: center;
 }
 .ddc .rt-row:last-child {
@@ -4326,7 +4326,7 @@ function selectSubst(s: string) {
 }
 .ddc .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -4340,7 +4340,7 @@ function selectSubst(s: string) {
   font-family: monospace;
 }
 .ddc .rt-sm {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
 }
 /* ── Result card ───────────────────────────────────────────────── */
@@ -5051,7 +5051,7 @@ function selectSubst(s: string) {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   align-items: center;
 }
 .fec .rt-row:last-child {
@@ -5059,7 +5059,7 @@ function selectSubst(s: string) {
 }
 .fec .rt-header {
   background: var(--vp-c-bg-mute);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   text-transform: uppercase;
@@ -5082,7 +5082,7 @@ function selectSubst(s: string) {
   color: #ef4444;
 }
 .fec .rt-sm {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
 }
 /* ── Result card ───────────────────────────────────────────────── */

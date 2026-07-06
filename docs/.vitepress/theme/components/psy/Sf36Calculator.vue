@@ -691,7 +691,14 @@ function reset() {
 </script>
 
 <template>
-  <div class="sf36">
+  <div class="sf36assess">
+    <div class="tab-bar">
+      <button class="tab-btn active">
+        <span class="tab-label">SF-36 健康狀況調查</span>
+        <span class="tab-sub">36-Item Short Form Health Survey</span>
+      </button>
+    </div>
+    <div class="sf36">
     <!-- Header -->
     <div class="sf36-header">
       <div class="header-title">
@@ -805,15 +812,12 @@ function reset() {
             </span>
           </div>
 
-          <div class="option-row" :style="{ '--cols': q.options.length }">
+          <div class="sec-options">
             <label
               v-for="opt in q.options"
               :key="opt.value"
-              class="opt-pill"
-              :class="{
-                active: selections[q.key] === opt.value,
-                [optClass(q, opt.value)]: true,
-              }"
+              class="sec-opt"
+              :class="{ 'opt-selected': selections[q.key] === opt.value }"
             >
               <input
                 type="radio"
@@ -821,8 +825,16 @@ function reset() {
                 :value="opt.value"
                 v-model="selections[q.key]"
               />
-              <span class="opt-num">{{ opt.value }}</span>
-              <span class="opt-desc">{{ opt.label }}</span>
+              <div
+                class="opt-radio"
+                :class="{ selected: selections[q.key] === opt.value }"
+              >
+                <div class="opt-dot" v-if="selections[q.key] === opt.value" />
+              </div>
+              <div class="opt-content">
+                <span class="opt-score-badge">{{ opt.value }}</span>
+                <span class="opt-text">{{ opt.label }}</span>
+              </div>
             </label>
           </div>
         </div>
@@ -911,6 +923,7 @@ function reset() {
     <p v-if="!isComplete" class="progress-hint">
       已完成 {{ answeredCount }}/36 題，尚餘 {{ 36 - answeredCount }} 題
     </p>
+    </div>
   </div>
 </template>
 
@@ -1751,5 +1764,93 @@ function reset() {
   .detail-domain {
     width: 80px;
   }
+}
+/* ══ Single-tab bar wrapper ══ */
+.sf36assess {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.sf36assess > .tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+.sf36assess > .tab-bar .tab-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.sf36assess > .tab-bar .tab-btn.active {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+.sf36assess > .tab-bar .tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.sf36assess > .tab-bar .tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
+  margin-top: 2px;
+}
+/* ══ Enlarged / rearranged score badges ══ */
+.sf36 .summary-badges {
+  display: flex;
+  gap: 0.6rem;
+}
+.sf36 .score-badge {
+  width: 104px !important;
+  min-width: 104px !important;
+  height: 96px !important;
+  border-width: 1.5px;
+}
+.sf36 .score-badge .score-number {
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+}
+.sf36 .score-badge .score-label {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  margin-top: 4px;
+}
+/* ══ Unified consensus font sizes ══ */
+.sf36 .subtitle {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.sf36 .group-label-text {
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+}
+.sf36 .item-name {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+}
+.sf36 .item-score {
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+.sf36 .results-header,
+.sf36 .result-title {
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
 }
 </style>

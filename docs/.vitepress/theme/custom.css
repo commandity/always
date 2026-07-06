@@ -1140,6 +1140,17 @@ html {
   font-weight: 700 !important;
 }
 
+/* Section titles — bold across all tools */
+.section-title,
+.group-label,
+.group-label-text {
+  font-weight: 800 !important;
+}
+.section-title {
+  font-size: 0.92rem !important;
+  color: var(--vp-c-text-1) !important;
+}
+
 /* Results detail table */
 .results-header {
   font-size: 0.74rem !important;
@@ -1166,4 +1177,172 @@ html {
 .sub-val {
   font-size: 0.85rem !important;
   font-weight: 800 !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Yes/No option buttons attached rightward (LBP pattern), neutral color.
+   Used by 2–3 option questions across calculators. LBP's own
+   .lbp .yn-btn (pos/neg colored) is more specific and unaffected.
+   ══════════════════════════════════════════════════════════════════ */
+.yn-row {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.yn-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 62px;
+  padding: 0.5rem 0.95rem;
+  border: 1.5px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-2);
+  transition:
+    background 0.18s,
+    border-color 0.18s,
+    color 0.18s,
+    box-shadow 0.18s,
+    transform 0.1s;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.yn-btn:hover {
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 40%, var(--vp-c-divider));
+  background: var(--vp-c-bg-soft);
+}
+.yn-btn:active {
+  transform: translateY(1px);
+}
+.yn-btn.yn-active {
+  border-color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 16%, var(--vp-c-bg));
+  color: var(--vp-c-brand-1);
+  font-weight: 700 !important;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 25%, transparent),
+    0 1px 4px color-mix(in srgb, var(--vp-c-brand-1) 18%, transparent);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   Oswestry-style vertical option list (>3 option questions), neutral.
+   Reused by CDR and the multi-option list tools. ODI's own .odi .sec-opt
+   rules are more specific and unaffected.
+   ══════════════════════════════════════════════════════════════════ */
+.sec-options {
+  display: flex;
+  flex-direction: column;
+}
+.sec-opt {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+  cursor: pointer;
+  transition: background 0.12s;
+  user-select: none;
+}
+.sec-opt:last-child {
+  border-bottom: none;
+}
+.sec-opt input[type="radio"] {
+  display: none;
+}
+.sec-opt:hover {
+  background: var(--vp-c-bg-soft);
+}
+.sec-opt.opt-selected {
+  background: var(--vp-c-brand-soft);
+}
+.opt-radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.12s;
+}
+.opt-radio.selected {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-1);
+}
+.opt-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.opt-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+.opt-score-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-mute);
+  border: 1.5px solid var(--vp-c-divider);
+  flex-shrink: 0;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+.sec-opt:hover .opt-score-badge {
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 40%, var(--vp-c-divider));
+}
+.sec-opt.opt-selected .opt-score-badge {
+  color: #fff;
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px color-mix(in srgb, var(--vp-c-brand-1) 30%, transparent);
+}
+.opt-text {
+  font-size: 0.85rem !important;
+  color: var(--vp-c-text-1);
+  line-height: 1.45;
+}
+.sec-opt.opt-selected .opt-text {
+  font-weight: 600;
+}
+
+/* Green (healthy/positive) and red (depressive/negative) yes-no fills — LBP color style */
+.yn-btn.yn-green {
+  border-color: #22c55e;
+  background: color-mix(in srgb, rgb(34, 197, 94) 18%, var(--vp-c-bg));
+  color: #22c55e;
+  font-weight: 700 !important;
+  box-shadow:
+    0 0 0 1px rgba(34, 197, 94, 0.18),
+    0 1px 4px rgba(34, 197, 94, 0.18);
+}
+.yn-btn.yn-red {
+  border-color: #ef4444;
+  background: color-mix(in srgb, rgb(239, 68, 68) 18%, var(--vp-c-bg));
+  color: #ef4444;
+  font-weight: 700 !important;
+  box-shadow:
+    0 0 0 1px rgba(239, 68, 68, 0.18),
+    0 1px 4px rgba(239, 68, 68, 0.18);
 }

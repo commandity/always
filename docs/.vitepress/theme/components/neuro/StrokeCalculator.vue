@@ -533,15 +533,12 @@ const abcd2_groups = [
             </span>
           </div>
 
-          <div class="option-row">
+          <div class="sec-options">
             <label
               v-for="score in nihssItems[id].scores"
               :key="score.value"
-              class="opt-pill"
-              :class="[
-                score.value === 96 ? 'un' : 's' + score.value,
-                { active: nihss_selections[id] === score.value },
-              ]"
+              class="sec-opt"
+              :class="{ 'opt-selected': nihss_selections[id] === score.value }"
             >
               <input
                 type="radio"
@@ -549,10 +546,21 @@ const abcd2_groups = [
                 :value="score.value"
                 v-model="nihss_selections[id]"
               />
-              <span class="opt-num">{{
-                score.value === 96 ? "UN" : score.value
-              }}</span>
-              <span class="opt-desc">{{ score.description }}</span>
+              <div
+                class="opt-radio"
+                :class="{ selected: nihss_selections[id] === score.value }"
+              >
+                <div
+                  class="opt-dot"
+                  v-if="nihss_selections[id] === score.value"
+                />
+              </div>
+              <div class="opt-content">
+                <span class="opt-score-badge">{{
+                  score.value === 96 ? "UN" : score.value
+                }}</span>
+                <span class="opt-text">{{ score.description }}</span>
+              </div>
             </label>
           </div>
         </div>
@@ -683,33 +691,17 @@ const abcd2_groups = [
               <span class="item-name">{{ items[id].name }}</span>
               <span class="item-sub">{{ items[id].sub }}</span>
             </div>
-            <span
-              class="item-score"
-              :class="{ zero: abcd2_selections[id] === 0, high: abcd2_selections[id] > 0 }"
-            >
-              +{{ abcd2_selections[id] }}
-            </span>
-          </div>
-
-          <div class="option-row">
-            <label
-              v-for="score in items[id].scores"
-              :key="score.value"
-              class="opt-pill"
-              :class="{
-                active: abcd2_selections[id] === score.value,
-                ['s' + score.value]: true,
-              }"
-            >
-              <input
-                type="radio"
-                :name="`abcd2-${id}`"
-                :value="score.value"
-                v-model="abcd2_selections[id]"
-              />
-              <span class="opt-num">{{ score.value }}</span>
-              <span class="opt-desc">{{ score.description }}</span>
-            </label>
+            <div class="yn-row">
+              <button
+                v-for="score in items[id].scores"
+                :key="score.value"
+                class="yn-btn"
+                :class="{ 'yn-active': abcd2_selections[id] === score.value }"
+                @click="abcd2_selections[id] = score.value"
+              >
+                {{ score.description }}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1072,64 +1064,28 @@ const abcd2_groups = [
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .nihss .group-header.conscious-header {
   border-left-color: #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
 .nihss .group-header.eye-header {
   border-left-color: #3b82f6;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(59, 130, 246, 0.06);
 }
 .nihss .group-header.motor-header {
   border-left-color: #ef4444;
-  background: linear-gradient(
-    135deg,
-    rgba(239, 68, 68, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(239, 68, 68, 0.06);
 }
 .nihss .group-header.coord-header {
   border-left-color: #f59e0b;
-  background: linear-gradient(
-    135deg,
-    rgba(245, 158, 11, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(245, 158, 11, 0.06);
 }
 .nihss .group-header.lang-header {
   border-left-color: #14b8a6;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 184, 166, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(20, 184, 166, 0.06);
 }
 .nihss .group-label-block {
@@ -1911,12 +1867,6 @@ const abcd2_groups = [
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
@@ -1927,12 +1877,6 @@ const abcd2_groups = [
 }
 .abcd2 .group-header.orange-header {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .abcd2 .group-label-block {
@@ -2493,4 +2437,7 @@ const abcd2_groups = [
   }
 }
 
+.abcd2 .item-header {
+  align-items: center;
+}
 </style>

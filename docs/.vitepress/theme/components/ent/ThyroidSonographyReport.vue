@@ -784,11 +784,6 @@ function reset() {
 .section-header {
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   margin-bottom: 0.75rem;

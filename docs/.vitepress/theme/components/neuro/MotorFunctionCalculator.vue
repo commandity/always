@@ -849,71 +849,12 @@ function reset() {
             </span>
           </div>
 
-          <template
-            v-if="
-              item.scores.length === 5 &&
-              !['q32', 'q33', 'q34', 'q39'].includes(item.key)
-            "
-          >
-            <div class="option-row-5">
-              <div class="opt-row-5-top">
-                <label
-                  v-for="score in item.scores.slice(0, 3)"
-                  :key="score.value"
-                  class="opt-pill"
-                  :class="{
-                    active: selections[item.key] === score.value,
-                    ['s' + score.value]: true,
-                    'opt-wide': score.value === 0,
-                  }"
-                >
-                  <input
-                    type="radio"
-                    :name="item.key"
-                    :value="score.value"
-                    v-model="selections[item.key]"
-                  />
-                  <span class="opt-num">{{ score.value }}</span>
-                  <span class="opt-desc">{{ score.description }}</span>
-                </label>
-              </div>
-              <div class="opt-row-5-bot">
-                <label
-                  v-for="score in item.scores.slice(3)"
-                  :key="score.value"
-                  class="opt-pill"
-                  :class="{
-                    active: selections[item.key] === score.value,
-                    ['s' + score.value]: true,
-                  }"
-                >
-                  <input
-                    type="radio"
-                    :name="item.key"
-                    :value="score.value"
-                    v-model="selections[item.key]"
-                  />
-                  <span class="opt-num">{{ score.value }}</span>
-                  <span class="opt-desc">{{ score.description }}</span>
-                </label>
-              </div>
-            </div>
-          </template>
-          <div
-            v-else
-            class="option-row"
-            :style="{
-              gridTemplateColumns: 'repeat(' + item.scores.length + ', 1fr)',
-            }"
-          >
+          <div class="sec-options">
             <label
               v-for="score in item.scores"
               :key="score.value"
-              class="opt-pill"
-              :class="{
-                active: selections[item.key] === score.value,
-                ['s' + score.value]: true,
-              }"
+              class="sec-opt"
+              :class="{ 'opt-selected': selections[item.key] === score.value }"
             >
               <input
                 type="radio"
@@ -921,8 +862,19 @@ function reset() {
                 :value="score.value"
                 v-model="selections[item.key]"
               />
-              <span class="opt-num">{{ score.value }}</span>
-              <span class="opt-desc">{{ score.description }}</span>
+              <div
+                class="opt-radio"
+                :class="{ selected: selections[item.key] === score.value }"
+              >
+                <div
+                  class="opt-dot"
+                  v-if="selections[item.key] === score.value"
+                />
+              </div>
+              <div class="opt-content">
+                <span class="opt-score-badge">{{ score.value }}</span>
+                <span class="opt-text">{{ score.description }}</span>
+              </div>
             </label>
           </div>
         </div>
@@ -1287,64 +1239,28 @@ function reset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .updrs .mental-header {
   border-left-color: #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
 .updrs .daily-header {
   border-left-color: #f59e0b;
-  background: linear-gradient(
-    135deg,
-    rgba(245, 158, 11, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(245, 158, 11, 0.06);
 }
 .updrs .motor-header {
   border-left-color: #3b82f6;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(59, 130, 246, 0.06);
 }
 .updrs .compla-header {
   border-left-color: #ef4444;
-  background: linear-gradient(
-    135deg,
-    rgba(239, 68, 68, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(239, 68, 68, 0.06);
 }
 .updrs .complb-header {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .updrs .group-label-block {

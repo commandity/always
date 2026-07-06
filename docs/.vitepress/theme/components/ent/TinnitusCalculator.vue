@@ -830,39 +830,17 @@ function tfiReset() {
                 <span class="item-sub">{{ q.sub }}</span>
                 <span class="item-hint">{{ q.hint }}</span>
               </div>
-              <span
-                class="item-score"
-                :class="{
-                  zero: thiSelections[q.key] === 0,
-                  unanswered: thiSelections[q.key] < 0,
-                  high: thiSelections[q.key] === 4,
-                }"
-                >{{
-                  thiSelections[q.key] >= 0 ? thiSelections[q.key] : "—"
-                }}</span
-              >
-            </div>
-
-            <div class="option-row option-row-3">
-              <label
-                v-for="opt in thiScoreOptions"
-                :key="opt.value"
-                class="opt-pill"
-                :class="{
-                  active: thiSelections[q.key] === opt.value,
-                  high: opt.value === 4 && thiSelections[q.key] === 4,
-                  ['s' + opt.value]: true,
-                }"
-              >
-                <input
-                  type="radio"
-                  :name="'thi-' + q.key"
-                  :value="opt.value"
-                  v-model="thiSelections[q.key]"
-                />
-                <span class="opt-num">{{ opt.label }}</span>
-                <span class="opt-desc">{{ opt.desc }}</span>
-              </label>
+              <div class="yn-row">
+                <button
+                  v-for="opt in thiScoreOptions"
+                  :key="opt.value"
+                  class="yn-btn"
+                  :class="{ 'yn-active': thiSelections[q.key] === opt.value }"
+                  @click="thiSelections[q.key] = opt.value"
+                >
+                  {{ opt.desc }}
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1057,30 +1035,17 @@ function tfiReset() {
               >
             </div>
 
-            <div class="anchor-row">
-              <span class="anchor-lo">{{ q.anchor_lo }}</span>
-              <span class="anchor-hi">{{ q.anchor_hi }}</span>
-            </div>
-
-            <div class="option-row-11">
-              <label
-                v-for="n in 11"
-                :key="n - 1"
-                class="opt-cell"
-                :class="{
-                  active: tfiSelections[q.key] === n - 1,
-                  high: n - 1 >= 8 && tfiSelections[q.key] === n - 1,
-                  ['s' + (n - 1)]: true,
-                }"
-              >
-                <input
-                  type="radio"
-                  :name="'tfi-' + q.key"
-                  :value="n - 1"
-                  v-model="tfiSelections[q.key]"
-                />
-                <span class="opt-num-sm">{{ n - 1 }}</span>
-              </label>
+            <!-- VAS slider row (BASDAI style) -->
+            <div class="field-input-wrap">
+              <div class="slider-col">
+                <div class="item-anchor-row">
+                  <span class="anchor-left">{{ q.anchor_lo }}</span>
+                  <span class="anchor-right">{{ q.anchor_hi }}</span>
+                </div>
+                <input type="range" min="0" max="10" step="1" class="field-slider" :value="tfiSelections[q.key] >= 0 ? tfiSelections[q.key] : 0" @input="tfiSelections[q.key] = parseInt(($event.target as HTMLInputElement).value)" />
+                <div class="field-ticks"><span v-for="n in 11" :key="n">{{ n - 1 }}</span></div>
+              </div>
+              <input type="number" min="0" max="10" class="field-number" placeholder="—" :value="tfiSelections[q.key] >= 0 ? tfiSelections[q.key] : ''" @input="tfiSelections[q.key] = ($event.target as HTMLInputElement).value === '' ? -1 : Math.max(0, Math.min(10, parseInt(($event.target as HTMLInputElement).value)))" />
             </div>
           </div>
         </div>
@@ -1219,7 +1184,7 @@ function tfiReset() {
 .tab-sub {
   display: block;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--vp-c-text-3);
   margin-top: 2px;
   letter-spacing: 0.01em;
@@ -1585,7 +1550,7 @@ function tfiReset() {
 
 .group-sub {
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--vp-c-text-2);
 }
 
@@ -1601,15 +1566,12 @@ function tfiReset() {
 
 /* THI group accents */
 .thi .group-header.func-header {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), transparent);
   border-left: 4px solid #6366f1;
 }
 .thi .group-header.emo-header {
-  background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), transparent);
   border-left: 4px solid #14b8a6;
 }
 .thi .group-header.cat-header {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), transparent);
   border-left: 4px solid #ef4444;
 }
 
@@ -1631,35 +1593,27 @@ function tfiReset() {
 
 /* TFI group accents */
 .tfi .group-header.intr-header {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), transparent);
   border-left: 4px solid #8b5cf6;
 }
 .tfi .group-header.ctrl-header {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), transparent);
   border-left: 4px solid #3b82f6;
 }
 .tfi .group-header.cogn-header {
-  background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), transparent);
   border-left: 4px solid #14b8a6;
 }
 .tfi .group-header.slp-header {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), transparent);
   border-left: 4px solid #6366f1;
 }
 .tfi .group-header.aud-header {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), transparent);
   border-left: 4px solid #f59e0b;
 }
 .tfi .group-header.relx-header {
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), transparent);
   border-left: 4px solid #22c55e;
 }
 .tfi .group-header.qol-header {
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), transparent);
   border-left: 4px solid #f97316;
 }
 .tfi .group-header.emot-header {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), transparent);
   border-left: 4px solid #ef4444;
 }
 
@@ -2735,5 +2689,213 @@ function tfiReset() {
   .detail-desc {
     width: 48px;
   }
+}
+
+/* ══ TFI 0–10 評分改用 BASDAI 滑桿 + 數字輸入樣式（無顏色）══ */
+.tfi .vas-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem 0.4rem;
+}
+.tfi .vas-anchor-l,
+.tfi .vas-anchor-r {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  flex-shrink: 0;
+  width: 64px;
+  line-height: 1.2;
+}
+.tfi .vas-anchor-r {
+  text-align: right;
+}
+.tfi .vas-track-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.tfi .vas-track {
+  position: relative;
+  height: 8px;
+  background: var(--vp-c-bg-mute);
+  border-radius: 999px;
+}
+.tfi .vas-fill-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--vp-c-brand-1);
+  transition: width 0.2s;
+  pointer-events: none;
+}
+.tfi .vas-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-1);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  transition: left 0.15s;
+}
+.tfi .vas-thumb.vas-thumb-unset {
+  background: var(--vp-c-bg) !important;
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px color-mix(in srgb, var(--vp-c-brand-1) 30%, transparent);
+}
+.tfi .vas-range {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  margin: 0;
+}
+.tfi .vas-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--vp-c-text-2);
+  padding: 0 10px;
+}
+.tfi .vas-ticks span {
+  width: 0;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  white-space: nowrap;
+}
+.tfi .num-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem 0.6rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+.tfi .num-hint {
+  font-size: 0.7rem;
+  color: var(--vp-c-text-3);
+  flex-shrink: 0;
+}
+.tfi .num-input-wrap {
+  border: 1.5px solid var(--vp-c-divider);
+  border-radius: 7px;
+  background: var(--vp-c-bg-soft);
+  padding: 2px 8px;
+  transition: all 0.25s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  width: 72px;
+}
+.tfi .num-input-wrap.ni-filled {
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, transparent);
+}
+.tfi .num-input {
+  width: 52px;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  outline: none;
+  font-family: inherit;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+.tfi .num-input::placeholder {
+  font-weight: 400;
+  color: var(--vp-c-text-3);
+  font-size: 0.8rem;
+}
+.tfi .num-input::-webkit-outer-spin-button,
+.tfi .num-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.thi .item-header {
+  align-items: center;
+}
+.tfi .item-anchor-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0.9rem 0.15rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--vp-c-text-3);
+  line-height: 1.4;
+}
+.tfi .item-anchor-row .anchor-right {
+  text-align: right;
+}
+.tfi .field-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.5rem 0.9rem 0.7rem;
+}
+.tfi .field-slider {
+  width: 100%;
+  accent-color: var(--vp-c-brand-1);
+  cursor: pointer;
+  height: 6px;
+}
+.tfi .slider-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.tfi .field-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  padding: 0 8px;
+}
+.tfi .field-ticks span {
+  width: 0;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  white-space: nowrap;
+}
+.tfi .field-number {
+  width: 66px;
+  padding: 5px 8px;
+  border: 1.5px solid var(--vp-c-divider);
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-family: inherit;
+  -moz-appearance: textfield;
+}
+.tfi .field-number::-webkit-outer-spin-button,
+.tfi .field-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.tfi .field-number:focus {
+  outline: none;
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 2px var(--vp-c-brand-soft);
+}
+.tfi .field-number::placeholder {
+  color: var(--vp-c-text-3);
+  font-weight: 400;
+}
+.tfi .slider-col .item-anchor-row {
+  padding: 0 6px 3px;
 }
 </style>

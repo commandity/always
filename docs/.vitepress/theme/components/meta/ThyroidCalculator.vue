@@ -93,27 +93,86 @@ const recommendedDose = computed(() => {
   return nearest;
 });
 
-// Alternative combinations
+// Alternative regimens — fine-titration via weekly-average dosing.
+// Levothyroxine has a long half-life (~7 days), so alternating-day or
+// day-of-week schemes let the *average* daily dose land between the fixed
+// tablet strengths (e.g. 25 mcg / 50 mcg on alternate days → 37.5 mcg/day).
 const combinations = computed(() => {
   if (calculatedDose.value === null) return [];
-  const target = calculatedDose.value;
-  const combos: { label: string; diff: number }[] = [];
+  const T = calculatedDose.value;
+  const S = tabletStrengths;
+  const r1 = (n: number) => Math.round(n * 10) / 10;
 
-  // Single pill (already in recommendedDose)
-  // Look for 2-pill combos within ±15 mcg
-  for (const a of tabletStrengths) {
-    for (const b of tabletStrengths) {
-      if (b < a) continue;
-      const sum = a + b;
-      const diff = Math.abs(sum - target);
-      if (diff <= 15 && diff > 0) {
-        combos.push({ label: `${a} mcg + ${b} mcg = ${sum} mcg`, diff });
+  type Cand = {
+    type: "alt" | "week";
+    avg: number;
+    diff: number;
+    label: string;
+    detail: string;
+  };
+  const cands: Cand[] = [];
+
+  // Only pair neighbouring strengths that straddle the target — clinicians
+  // alternate between adjacent tablet sizes (e.g. 25/50), never a tiny dose
+  // with a huge one. Require a ≤ T ≤ b and a modest gap.
+  const pairOk = (a: number, b: number) =>
+    a <= T && T <= b && b - a <= 50;
+
+  // 1) Alternating-day (隔日輪替) between two strengths a < b → avg (a+b)/2
+  for (const a of S) {
+    for (const b of S) {
+      if (b <= a || !pairOk(a, b)) continue;
+      const avg = (a + b) / 2;
+      const diff = Math.abs(avg - T);
+      if (diff <= 4) {
+        cands.push({
+          type: "alt",
+          avg,
+          diff,
+          label: `隔日輪替 ${a} mcg 與 ${b} mcg`,
+          detail: `一天 ${a}、隔天 ${b}，長期平均 ${r1(avg)} mcg/day`,
+        });
       }
     }
   }
-  // Sort by closeness, take top 3
-  combos.sort((x, y) => x.diff - y.diff);
-  return combos.slice(0, 3);
+
+  // 2) Weekly split (每週分配): n days of b + (7−n) days of a
+  for (const a of S) {
+    for (const b of S) {
+      if (b <= a || !pairOk(a, b)) continue;
+      for (let n = 1; n <= 6; n++) {
+        const avg = (n * b + (7 - n) * a) / 7;
+        const diff = Math.abs(avg - T);
+        if (diff <= 2) {
+          cands.push({
+            type: "week",
+            avg,
+            diff,
+            label: `每週 ${7 - n} 天 ${a} mcg ＋ ${n} 天 ${b} mcg`,
+            detail: `週平均 ${r1(avg)} mcg/day`,
+          });
+        }
+      }
+    }
+  }
+
+  // Prefer smallest daily-average error; alternating schemes are simpler,
+  // so break ties in their favour. De-dup identical labels.
+  cands.sort(
+    (x, y) =>
+      x.diff - y.diff ||
+      (x.type === "alt" ? -1 : 1) - (y.type === "alt" ? -1 : 1) ||
+      x.avg - y.avg,
+  );
+  const seen = new Set<string>();
+  const out: Cand[] = [];
+  for (const c of cands) {
+    if (seen.has(c.label)) continue;
+    seen.add(c.label);
+    out.push(c);
+    if (out.length >= 3) break;
+  }
+  return out;
 });
 
 // Daily dose severity indicator
@@ -345,11 +404,17 @@ function reset() {
 
       <!-- Combination alternatives -->
       <div v-if="isValid && combinations.length > 0" class="combos">
-        <div class="combos-title">替代組合方案</div>
+        <div class="combos-title">替代方案（週平均劑量微調）</div>
         <div v-for="(c, i) in combinations" :key="i" class="combo-row">
           <span class="combo-bullet">·</span>
-          <span class="combo-label">{{ c.label }}</span>
-          <span class="combo-diff">誤差 {{ c.diff.toFixed(0) }} mcg</span>
+          <div class="combo-body">
+            <span class="combo-label">{{ c.label }}</span>
+            <span class="combo-detail">{{ c.detail }}</span>
+          </div>
+        </div>
+        <div class="combos-note">
+          左旋甲狀腺素半衰期約 7
+          天，可用隔日或每週不同劑量使平均日劑量落在錠劑規格之間；亦可選用可剝半的錠劑。
         </div>
       </div>
     </div>
@@ -396,20 +461,6 @@ function reset() {
     </div>
 
     <!-- Tablet strengths reference -->
-    <div class="tablet-ref">
-      <div class="ref-title">市售 Levothyroxine 錠劑規格（mcg）</div>
-      <div class="tablet-grid">
-        <span
-          v-for="s in tabletStrengths"
-          :key="s"
-          class="tablet-chip"
-          :class="{ 'chip-recommended': s === recommendedDose && isValid }"
-        >
-          {{ s }}
-        </span>
-      </div>
-    </div>
-
     <!-- Results detail -->
     <div v-if="showResults && isValid" class="results-detail">
       <div class="results-header">計算明細</div>
@@ -1041,42 +1092,6 @@ function reset() {
   color: #f97316;
 }
 /* ── Tablet strength reference ─────────────────────────────────── */
-.levo .tablet-ref {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  background: var(--vp-c-bg-soft);
-}
-.levo .ref-title {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--vp-c-text-3);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.5rem;
-}
-.levo .tablet-grid {
-  display: flex;
-  gap: 0.35rem;
-  flex-wrap: wrap;
-}
-.levo .tablet-chip {
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 6px;
-  background: var(--vp-c-bg-mute);
-  border: 1px solid var(--vp-c-divider);
-  color: var(--vp-c-text-2);
-  transition: all 0.2s;
-}
-.levo .chip-recommended {
-  background: var(--vp-c-brand-1);
-  border-color: var(--vp-c-brand-1);
-  color: #fff;
-  transform: scale(1.1);
-}
 /* ── Results detail ────────────────────────────────────────────── */
 .levo .results-detail {
   border: 1px solid var(--vp-c-divider);
@@ -1215,5 +1230,77 @@ function reset() {
 .levo .tablet-rec {
     padding: 0.85rem 1rem;
   }
+}
+
+/* ══ 甲狀腺工具字級調整 ══ */
+.levo .sc-name {
+  font-size: 1rem !important;
+}
+.levo .sc-sub {
+  font-size: 0.85rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.levo .formula-label {
+  font-size: 0.78rem !important;
+}
+.levo .formula-value {
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+}
+.levo .formula-op {
+  font-size: 1.35rem !important;
+}
+.levo .tablet-title {
+  font-size: 0.82rem !important;
+}
+.levo .tablet-dose {
+  font-size: 1.6rem !important;
+}
+.levo .tablet-note {
+  font-size: 0.85rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.levo .combos-title {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+}
+.levo .combo-row {
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.35rem 0 !important;
+}
+.levo .combo-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+  min-width: 0;
+}
+.levo .combo-label {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: var(--vp-c-text-1) !important;
+}
+.levo .combo-detail {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.levo .combos-note {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--vp-c-divider);
+}
+.levo .notes-header {
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+.levo .note-title {
+  font-size: 0.95rem !important;
+}
+.levo .note-list li {
+  font-size: 0.92rem !important;
 }
 </style>

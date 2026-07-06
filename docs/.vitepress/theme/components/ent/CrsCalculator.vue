@@ -654,27 +654,31 @@ async function snotCopy() {
                 >{{ snotSel[item.key] >= 0 ? snotSel[item.key] : "—" }}</span
               >
             </div>
-            <div class="option-row s22-option-row">
-              <label
-                v-for="opt in snotOpts"
-                :key="opt.value"
-                class="opt-pill"
-                :class="{
-                  active: snotSel[item.key] === opt.value,
-                  high: opt.value >= 4 && snotSel[item.key] === opt.value,
-                  ['s' + opt.value]: true,
-                }"
-              >
-                <input
-                  type="radio"
-                  :name="item.key"
-                  :value="opt.value"
-                  v-model="snotSel[item.key]"
-                />
-                <span class="opt-num">{{ opt.label }}</span>
-                <span class="opt-desc">{{ opt.desc }}</span>
-              </label>
-            </div>
+            <div class="sec-options">
+                <label
+                  v-for="opt in snotOpts"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': snotSel[item.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="item.key"
+                    :value="opt.value"
+                    v-model="snotSel[item.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: snotSel[item.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="snotSel[item.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.label }}</span>
+                    <span class="opt-text">{{ opt.desc }}</span>
+                  </div>
+                </label>
+              </div>
           </div>
         </div>
       </div>
@@ -1046,7 +1050,6 @@ async function snotCopy() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--vp-c-bg-mute), var(--vp-c-bg-soft));
   border: 1px solid var(--vp-c-divider);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
@@ -1058,39 +1061,15 @@ async function snotCopy() {
 }
 .group-header.nasal-header {
   border-left: 4px solid #3b82f6;
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
 }
 .group-header.ear-header {
   border-left: 4px solid #f59e0b;
-  background: linear-gradient(
-    135deg,
-    rgba(245, 158, 11, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
 }
 .group-header.sleep-header {
   border-left: 4px solid #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
 }
 .group-header.psych-header {
   border-left: 4px solid #14b8a6;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 184, 166, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
 }
 
 .group-label-block {

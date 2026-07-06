@@ -13,7 +13,6 @@ const categories = [
   {
     key: "joint",
     name: "關節症狀",
-    icon: "🦴",
     color: "joint",
     symptoms: [
       {
@@ -75,7 +74,6 @@ const categories = [
   {
     key: "skin",
     name: "皮膚症狀",
-    icon: "🩺",
     color: "skin",
     symptoms: [
       {
@@ -125,7 +123,6 @@ const categories = [
   {
     key: "dry",
     name: "乾燥症狀",
-    icon: "💧",
     color: "dry",
     symptoms: [
       {
@@ -157,7 +154,6 @@ const categories = [
   {
     key: "systemic",
     name: "全身症狀",
-    icon: "🌡",
     color: "systemic",
     symptoms: [
       {
@@ -189,7 +185,6 @@ const categories = [
   {
     key: "other",
     name: "其他特殊症狀",
-    icon: "🔍",
     color: "other",
     symptoms: [
       {
@@ -422,17 +417,17 @@ const urgencyNote = computed(() => {
           class="disease-intro-card"
           :style="{ borderTopColor: d.color }"
         >
-          <div class="dic-name">{{ d.name }}</div>
-          <div class="dic-full">{{ d.full }}</div>
-          <div class="dic-desc">{{ d.desc }}</div>
+          <div class="item-name">{{ d.name }}</div>
+          <div class="item-sub">{{ d.full }}</div>
+          <div class="item-hint">{{ d.desc }}</div>
           <div class="dic-dept">
-            <span class="dic-icon">🏥</span>{{ d.specialist }}
+            {{ d.specialist }}
           </div>
         </div>
       </div>
 
       <div class="disclaimer-box">
-        <div class="disc-title">⚠ 重要聲明</div>
+        <div class="disc-title">重要聲明</div>
         <p>
           本工具<strong>僅供症狀初步參考</strong>，不能作為醫學診斷依據。症狀符合不代表確診，確診需要血液檢查、影像學及專科醫師的完整評估。如有任何疑慮，請盡快諮詢醫師。
         </p>
@@ -473,9 +468,8 @@ const urgencyNote = computed(() => {
 
       <!-- Category groups -->
       <div v-for="cat in categories" :key="cat.key" class="cat-group">
-        <div class="cat-header" :class="cat.color + '-header'">
-          <span class="cat-icon">{{ cat.icon }}</span>
-          <span class="cat-name">{{ cat.name }}</span>
+        <div class="group-header-bar" :class="cat.color + '-header'">
+          <span class="group-label-text">{{ cat.name }}</span>
           <span class="cat-count" v-if="checkedByCategory[cat.key]?.length > 0">
             {{ checkedByCategory[cat.key].length }} 項
           </span>
@@ -515,8 +509,8 @@ const urgencyNote = computed(() => {
               </svg>
             </div>
             <div class="sym-content">
-              <span class="sym-text">{{ sym.text }}</span>
-              <span class="sym-hint">{{ sym.hint }}</span>
+              <span class="item-name">{{ sym.text }}</span>
+              <span class="item-hint">{{ sym.hint }}</span>
             </div>
           </label>
         </div>
@@ -614,14 +608,13 @@ const urgencyNote = computed(() => {
             }}</span>
           </div>
           <div class="dbc-dept">
-            <span>🏥 {{ diseases[code].specialist }}</span>
+            <span>{{ diseases[code].specialist }}</span>
             <span class="dbc-urgency">{{ diseases[code].urgency }}</span>
           </div>
         </div>
 
         <div v-if="sortedDiseases.length === 0" class="no-match">
-          <div class="nm-icon">✓</div>
-          <div class="nm-text">所選症狀與五種自體免疫疾病的符合度均很低</div>
+                    <div class="nm-text">所選症狀與五種自體免疫疾病的符合度均很低</div>
           <div class="nm-sub">
             請持續觀察症狀變化，若症狀持續或加重請諮詢醫師
           </div>
@@ -633,7 +626,7 @@ const urgencyNote = computed(() => {
         <div class="cs-title">您勾選的症狀（{{ checkedCount }} 項）</div>
         <div v-for="cat in categories" :key="cat.key">
           <div v-if="checkedByCategory[cat.key]?.length > 0" class="cs-cat">
-            <span class="cs-cat-name">{{ cat.icon }} {{ cat.name }}</span>
+            <span class="cs-cat-name">{{ cat.name }}</span>
             <div class="cs-syms">
               <span
                 v-for="s in checkedByCategory[cat.key]"
@@ -648,7 +641,7 @@ const urgencyNote = computed(() => {
 
       <!-- Disclaimer -->
       <div class="disclaimer-box result-disc">
-        <div class="disc-title">⚠ 重要提醒</div>
+        <div class="disc-title">重要提醒</div>
         <p>
           本結果<strong>僅為症狀初步分析，不能作為診斷依據</strong>。確診自體免疫疾病需要專業醫師的臨床評估、血液免疫學檢查（ANA、RF、抗CCP
           等）及影像學檢查。請勿依據本結果自行診斷或服藥。
@@ -782,32 +775,12 @@ const urgencyNote = computed(() => {
   padding: 0.75rem;
   background: var(--vp-c-bg-soft);
 }
-.screener .dic-name {
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-  margin-bottom: 2px;
-}
-.screener .dic-full {
-  font-size: 0.62rem;
-  color: var(--vp-c-text-3);
-  margin-bottom: 6px;
-}
-.screener .dic-desc {
-  font-size: 0.72rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.5;
-  margin-bottom: 6px;
-}
 .screener .dic-dept {
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
   display: flex;
   align-items: center;
   gap: 3px;
-}
-.screener .dic-icon {
-  font-size: 0.8rem;
 }
 .screener .disclaimer-box {
   border: 1px solid rgba(239, 68, 68, 0.3);
@@ -922,13 +895,12 @@ const urgencyNote = computed(() => {
 .screener .cat-group {
   margin-bottom: 1.5rem;
 }
-.screener .cat-header {
+.screener .group-header-bar {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.55rem 0.75rem;
+  padding: 0.6rem 0.85rem 0.6rem 1.2rem;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--vp-c-bg-mute), var(--vp-c-bg-soft));
   border: 1px solid var(--vp-c-divider);
   margin-bottom: 0.4rem;
   min-height: 44px;
@@ -937,61 +909,25 @@ const urgencyNote = computed(() => {
 }
 .screener .joint-header {
   border-left: 4px solid #6366f1;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .screener .skin-header {
   border-left: 4px solid #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .screener .dry-header {
   border-left: 4px solid #0d9488;
-  background: linear-gradient(
-    135deg,
-    rgba(13, 148, 136, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(13, 148, 136, 0.06);
 }
 .screener .systemic-header {
   border-left: 4px solid #dc2626;
-  background: linear-gradient(
-    135deg,
-    rgba(220, 38, 38, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(220, 38, 38, 0.06);
 }
 .screener .other-header {
   border-left: 4px solid #8b5cf6;
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(139, 92, 246, 0.06);
 }
-.screener .cat-icon {
-  font-size: 1.1rem;
-}
-.screener .cat-name {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
+.screener .group-header-bar .group-label-text {
   flex: 1;
 }
 .screener .cat-count {
@@ -1083,18 +1019,6 @@ const urgencyNote = computed(() => {
   display: flex;
   flex-direction: column;
   gap: 3px;
-}
-.screener .sym-text {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-  line-height: 1.4;
-}
-.screener .sym-hint {
-  font-size: 0.72rem;
-  color: var(--vp-c-text-3);
-  line-height: 1.4;
-  font-style: italic;
 }
 /* Checked state tint */
 .screener .joint-checked {
@@ -1381,11 +1305,6 @@ const urgencyNote = computed(() => {
 .screener .no-match:hover {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
-.screener .nm-icon {
-  font-size: 2rem;
-  color: #22c55e;
-  margin-bottom: 0.5rem;
-}
 .screener .nm-text {
   font-size: 0.9rem;
   font-weight: 700;
@@ -1522,35 +1441,12 @@ const urgencyNote = computed(() => {
 .screener .disease-intro-card {
   padding: 0.9rem 1.1rem !important;
 }
-.screener .dic-name {
-  font-size: 1rem !important;
-  margin-bottom: 3px !important;
-}
-.screener .dic-full {
-  font-size: 0.78rem !important;
-  margin-bottom: 8px !important;
-}
-.screener .dic-desc {
-  font-size: 0.88rem !important;
-  line-height: 1.6 !important;
-  margin-bottom: 8px !important;
-}
 .screener .dic-dept {
   font-size: 0.8rem !important;
   color: var(--vp-c-text-2) !important;
 }
-.screener .dic-icon {
-  font-size: 0.9rem !important;
-}
 
 /* 症狀清單 — 放大字級 */
-.screener .sym-text {
-  font-size: 0.92rem !important;
-}
-.screener .sym-hint {
-  font-size: 0.8rem !important;
-  color: var(--vp-c-text-2) !important;
-}
 
 /* 勾選框垂直置中於症狀卡片 */
 .screener .symptom-item {
@@ -1559,5 +1455,24 @@ const urgencyNote = computed(() => {
 .screener .sym-check-box {
   align-self: center !important;
   margin-top: 0 !important;
+}
+
+/* Renamed to global item-* classes; preserve screener-specific layout */
+.screener .symptom-item .item-name {
+  line-height: 1.4;
+}
+.screener .symptom-item .item-hint {
+  line-height: 1.4;
+  font-style: italic;
+}
+.screener .disease-intro-card .item-name {
+  margin-bottom: 2px;
+}
+.screener .disease-intro-card .item-sub {
+  margin-bottom: 6px;
+}
+.screener .disease-intro-card .item-hint {
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
 </style>

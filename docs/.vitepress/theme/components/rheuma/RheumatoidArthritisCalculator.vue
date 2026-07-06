@@ -983,29 +983,31 @@ function cdai_reset() {
           </div>
 
           <!-- 4-column option row -->
-          <div class="option-row">
-            <label
-              v-for="opt in diffOptions"
-              :key="opt.value"
-              class="opt-pill"
-              :class="{
-                active: answers[item.key] === opt.value,
-                flagged: answers[item.key] === opt.value && opt.value >= 2,
-                [domainDefs[dk].color + '-opt']:
-                  answers[item.key] === opt.value && opt.value > 0,
-                ['s' + opt.value]: true,
-              }"
-            >
-              <input
-                type="radio"
-                :name="item.key"
-                :value="opt.value"
-                v-model="answers[item.key]"
-              />
-              <span class="opt-num">{{ opt.value }}</span>
-              <span class="opt-desc">{{ opt.label }}</span>
-            </label>
-          </div>
+          <div class="sec-options">
+                <label
+                  v-for="opt in diffOptions"
+                  :key="opt.value"
+                  class="sec-opt"
+                  :class="{ 'opt-selected': answers[item.key] === opt.value }"
+                >
+                  <input
+                    type="radio"
+                    :name="item.key"
+                    :value="opt.value"
+                    v-model="answers[item.key]"
+                  />
+                  <div
+                    class="opt-radio"
+                    :class="{ selected: answers[item.key] === opt.value }"
+                  >
+                    <div class="opt-dot" v-if="answers[item.key] === opt.value" />
+                  </div>
+                  <div class="opt-content">
+                    <span class="opt-score-badge">{{ opt.value }}</span>
+                    <span class="opt-text">{{ opt.label }}</span>
+                  </div>
+                </label>
+              </div>
         </div>
       </div>
     </div>
@@ -2475,44 +2477,20 @@ function cdai_reset() {
   margin-bottom: 0.5rem;
   padding: 0.65rem 0.85rem 0.65rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 184, 166, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid #14b8a6;
   box-shadow: 0 1px 3px rgba(20, 184, 166, 0.06);
 }
 .r3 .sc-header {
   border-left-color: #14b8a6;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 184, 166, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(20, 184, 166, 0.06);
 }
 .r3 .mb-header {
   border-left-color: #6366f1;
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.06);
 }
 .r3 .ac-header {
   border-left-color: #f97316;
-  background: linear-gradient(
-    135deg,
-    rgba(249, 115, 22, 0.08),
-    var(--vp-c-bg-mute),
-    var(--vp-c-bg-soft)
-  );
   box-shadow: 0 1px 3px rgba(249, 115, 22, 0.06);
 }
 .r3 .group-label-block {
@@ -4296,7 +4274,6 @@ function cdai_reset() {
   align-items: center;
   gap: 0.75rem;
   padding: 0.7rem 1rem;
-  background: linear-gradient(135deg, var(--vp-c-bg-mute), var(--vp-c-bg-soft));
   border-bottom: 1px solid var(--vp-c-divider);
   flex-wrap: wrap;
 }
@@ -5524,7 +5501,6 @@ function cdai_reset() {
   align-items: center;
   gap: 0.75rem;
   padding: 0.7rem 1rem;
-  background: linear-gradient(135deg, var(--vp-c-bg-mute), var(--vp-c-bg-soft));
   border-bottom: 1px solid var(--vp-c-divider);
 }
 .raassess .step-num {

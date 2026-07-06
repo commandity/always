@@ -935,6 +935,18 @@ async function prevent_copyMarkdown() {
           <strong>{{ s.letter }}</strong
           >：{{ s.detail }}
         </span>
+        <div class="cpr-note">
+          <span
+            ><strong>CAC</strong>（冠狀動脈鈣化積分，Coronary Artery
+            Calcium）：以低劑量心臟電腦斷層測量冠狀動脈鈣化的 Agatston
+            分數，用於風險落在中間 /
+            不確定時重新分層——CAC = 0 多屬低風險、可考慮暫緩 statin；分數愈高風險愈高。</span
+          >
+          <span
+            ><strong>生殖風險標誌</strong>（reproductive risk
+            markers）：與女性心血管風險相關的病史，如子癇前症、妊娠高血壓、妊娠糖尿病、早發停經與多囊性卵巢症候群（PCOS）等，屬風險增強因子。</span
+          >
+        </div>
       </div>
     </div>
 
@@ -2813,5 +2825,20 @@ async function prevent_copyMarkdown() {
   padding: 1px 10px;
   border-radius: 999px;
   background: color-mix(in srgb, currentColor 12%, transparent);
+}
+/* CPR footnote: CAC / reproductive risk marker definitions */
+.prevent .cpr-note {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--vp-c-divider);
+  font-size: 0.76rem;
+  line-height: 1.55;
+  color: var(--vp-c-text-3);
+}
+.prevent .cpr-note strong {
+  color: var(--vp-c-text-2);
 }
 </style>

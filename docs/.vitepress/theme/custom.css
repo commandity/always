@@ -50,7 +50,7 @@ body {
   -webkit-backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   transition:
-    transform 0.2s,
+    background 0.25s,
     box-shadow 0.2s,
     border-color 0.2s !important;
 }
@@ -60,14 +60,9 @@ body {
 }
 
 .VPFeature:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1) !important;
-  border-color: var(--vp-c-brand-1) !important;
-}
-
-:root:not(.dark) .VPFeatures .VPFeature:hover {
-  border-color: var(--vp-c-brand-1) !important;
+  background: rgba(255, 255, 255, 0.13) !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.14) !important;
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, white) !important;
 }
 
 .VPFeature .details {

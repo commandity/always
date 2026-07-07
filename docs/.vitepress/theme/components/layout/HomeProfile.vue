@@ -86,7 +86,7 @@ const avatarSrc = computed(() =>
   align-items: flex-start;
   margin: 2rem 0;
   transition:
-    transform 0.2s,
+    background 0.25s,
     box-shadow 0.2s,
     border-color 0.2s;
 }
@@ -96,9 +96,9 @@ const avatarSrc = computed(() =>
 }
 
 .home-profile:hover .profile-card {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  border-color: var(--vp-c-brand-1);
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, white);
 }
 
 /* Left — avatar */

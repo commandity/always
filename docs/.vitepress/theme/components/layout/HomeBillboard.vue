@@ -3,7 +3,19 @@ import { data as allPosts } from "../../../../blog/data.data";
 import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 
 const posts = allPosts.slice(0, 5);
-const fallback = "/images/default-cover.jpg";
+
+// Rotate through the abstract billboard images (docs/public/abstract) for posts
+// that have no front cover, so every slide still shows a visual.
+const abstractImages = Array.from(
+  { length: 9 },
+  (_, i) => `/abstract/abstract-${i + 1}.jpg`,
+);
+const fallbackCovers = new Map<string, string>(
+  posts.map((p, i) => [p.url, abstractImages[i % abstractImages.length]]),
+);
+function coverOf(p: any): string {
+  return p.cover || fallbackCovers.get(p.url) || abstractImages[0];
+}
 
 function fmt(raw: string): string {
   return String(raw ?? "").slice(0, 10);
@@ -113,7 +125,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
             :style="{ '--dur': '0.6s' }"
             tabindex="0"
           >
-            <img :src="p.cover || fallback" :alt="p.title" class="hbb-bg" />
+            <img :src="coverOf(p)" :alt="p.title" class="hbb-bg" />
             <div class="hbb-overlay" />
             <div class="hbb-content">
               <div class="hbb-meta">
@@ -140,7 +152,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
             ]"
             aria-hidden="true"
           >
-            <img :src="p.cover || fallback" :alt="p.title" class="hbb-bg" />
+            <img :src="coverOf(p)" :alt="p.title" class="hbb-bg" />
             <div class="hbb-overlay" />
             <div class="hbb-content">
               <div class="hbb-meta">
@@ -215,7 +227,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
           @click="goTo(i, i > current ? 'next' : 'prev')"
         >
           <img
-            :src="p.cover || fallback"
+            :src="coverOf(p)"
             :alt="p.title"
             class="hbb-thumb-img"
           />
@@ -282,13 +294,8 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
 
 .hbb-stage:hover {
   background: rgba(255, 255, 255, 0.1) !important;
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1) !important;
-  border-color: var(--vp-c-brand-1) !important;
-}
-
-:root:not(.dark) .hbb-stage:hover {
-  border-color: var(--vp-c-brand-1) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16) !important;
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, white) !important;
 }
 
 /* ── Slides ─────────────────────────────────────────────────────── */
@@ -358,7 +365,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
   gap: 0.6rem;
 }
 .hbb-badge {
-  font-size: 0.62rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -366,9 +373,13 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
   background: var(--vp-c-brand-1);
   padding: 2px 9px;
   border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* line-height: 1; */
 }
 .hbb-date {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.65);
   font-variant-numeric: tabular-nums;
 }
@@ -479,50 +490,87 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
 .hbb-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(0.9);
   z-index: 10;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(8px);
+  width: 36px;
+  height: 68px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.07)
+  );
+  backdrop-filter: blur(14px) saturate(1.25);
+  -webkit-backdrop-filter: blur(14px) saturate(1.25);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.2s;
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.35s ease,
+    transform 0.35s cubic-bezier(0.34, 1.45, 0.5, 1);
   opacity: 0;
 }
 .hbb-stage:hover .hbb-arrow {
   opacity: 1;
+  transform: translateY(-50%) scale(1);
 }
 .hbb-arrow:hover {
-  background: var(--vp-c-brand-1);
-  border-color: var(--vp-c-brand-1);
-  transform: translateY(-50%) scale(1.08);
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--vp-c-brand-1) 88%, white),
+    var(--vp-c-brand-1)
+  );
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.42),
+    0 0 0 5px color-mix(in srgb, var(--vp-c-brand-1) 22%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.14);
+}
+.hbb-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+  transition-duration: 0.1s;
 }
 .hbb-arrow svg {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+  transition: transform 0.25s ease;
+}
+.hbb-arrow-left:hover svg {
+  transform: translateX(-2px);
+}
+.hbb-arrow-right:hover svg {
+  transform: translateX(2px);
 }
 .hbb-arrow-left {
-  left: 1rem;
+  left: 0.7rem;
 }
 .hbb-arrow-right {
-  right: 1rem;
+  right: 0.7rem;
 }
 
 @media (max-width: 640px) {
   .hbb-arrow {
-    opacity: 0.7;
-    width: 32px;
-    height: 32px;
+    opacity: 0.75;
+    width: 28px;
+    height: 52px;
   }
   .hbb-arrow svg {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
   }
 }
 

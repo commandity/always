@@ -593,6 +593,7 @@ export default defineConfig({
           text: "2026",
           collapsed: false,
           items: [
+            { text: "每個人都有自己的因果", link: "/blog/2026-07-06" },
             { text: "Anger is the enemy of wisdom", link: "/blog/2026-05-30" },
             { text: "Thinking of my life", link: "/blog/2026-04-10" },
           ],

@@ -99,24 +99,16 @@ watch(filteredPosts, detect);
 
     <div class="blog-grid">
       <article v-for="post in filteredPosts" :key="post.url" class="blog-card">
-        <div class="blog-card__cover">
-          <img
-            v-if="post.cover"
-            :src="post.cover"
-            :alt="post.title"
-            class="cover-img"
-          />
-          <div v-else class="cover-placeholder">
-            <span class="cover-initial">{{ post.title?.charAt(0) }}</span>
-          </div>
-          <span v-if="post.category" class="cover-badge">{{
-            post.category
-          }}</span>
+        <div v-if="post.cover" class="blog-card__cover">
+          <img :src="post.cover" :alt="post.title" class="cover-img" />
         </div>
 
-        <div class="blog-card__body">
+        <div class="blog-card__body" :class="{ 'no-cover': !post.cover }">
           <div class="card-meta">
             <span class="card-date">{{ formatDate(post.date) }}</span>
+            <span v-if="post.category" class="meta-category">{{
+              post.category
+            }}</span>
           </div>
 
           <h2 class="card-title">{{ post.title }}</h2>
@@ -275,16 +267,16 @@ watch(filteredPosts, detect);
   background: var(--vp-c-bg-soft);
   overflow: hidden;
   transition:
-    transform 0.2s,
+    background 0.25s,
     box-shadow 0.2s,
     border-color 0.2s;
   display: flex;
   flex-direction: column;
 }
 .blog-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-mute);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, white);
 }
 
 .blog-card__cover {
@@ -343,10 +335,25 @@ watch(filteredPosts, detect);
 
 .card-meta {
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .card-date {
   font-size: 0.78rem;
   color: var(--vp-c-text-3);
+}
+.meta-category {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 6px;
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+.blog-card__body.no-cover {
+  padding-top: 1.5rem;
 }
 
 .card-title {

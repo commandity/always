@@ -222,15 +222,15 @@ function formatDate(dateStr: string) {
   background: var(--vp-c-bg-soft);
   overflow: hidden;
   transition:
-    transform 0.2s,
+    background 0.25s,
     box-shadow 0.2s,
     border-color 0.2s;
 }
 
 .citation-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-mute);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, white);
 }
 
 /* Left colored strip with big quote mark */

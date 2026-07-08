@@ -74,7 +74,7 @@ TyG = ln\[TG (mg/dL) × 空腹血糖 (mg/dL) ÷ 2\]
 - **觸感**：皮膚增厚，觸摸時有粗糙、乳頭狀突起感
 - **病理機制**：高濃度胰島素結合 IGF-1 受體，刺激角質細胞與纖維母細胞增生
 
-![Acanthosis Nigricans](../skin/skin-manifestations/Acanthosis-nigricans.jpg)
+![Acanthosis Nigricans](/reference/skin/skin-manifestations/Acanthosis-nigricans.jpg)
 _Acanthosis Nigricans — 頸後灰棕色天鵝絨樣斑塊_
 
 臨床注意事項：
@@ -92,7 +92,7 @@ _Acanthosis Nigricans — 頸後灰棕色天鵝絨樣斑塊_
 - 數量與 HOMA-IR 呈正相關
 - 可能與 IGF-1 受體過度活化及胰島素的促增生作用有關
 
-![Acrochordons](../skin/skin-manifestations/Acrochordons.jpg)
+![Acrochordons](/reference/skin/skin-manifestations/Acrochordons.jpg)
 _Acrochordons（Skin Tags）— 頸部軟性有柄贅生物_
 
 ### 毛囊角化症（Keratosis Pilaris）
@@ -103,7 +103,7 @@ _Acrochordons（Skin Tags）— 頸部軟性有柄贅生物_
 - 雖在一般族群中亦相當常見，但若合併其他胰島素阻抗表徵（如黑色棘皮症、肥胖），應提高警覺
 - 治療以保濕及角質溶解劑為主，但根本改善有賴胰島素敏感度的提升
 
-![Keratosis Pilaris](../skin/skin-manifestations/Keratosis-pilaris.jpg)
+![Keratosis Pilaris](/reference/skin/skin-manifestations/Keratosis-pilaris.jpg)
 _Keratosis Pilaris — 上臂後側毛囊角化丘疹_
 
 ### 其他相關皮膚表現

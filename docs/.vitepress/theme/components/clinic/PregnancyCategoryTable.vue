@@ -405,6 +405,14 @@ span.preg-table.badge.is-nr {
   color: var(--vp-c-text-1);
 }
 
+/* Category C — light mode: --vp-c-yellow-1 is a dark amber, so brighten the
+   badge background for readable contrast against the dark text */
+:root:not(.dark) span.preg-table.badge.is-c,
+:root:not(.dark) button.preg-table.chip.is-c.is-active {
+  background-color: #f5c518;
+  color: #3a2e00;
+}
+
 details.preg-table.legend {
   margin: 4px 0 10px;
   font-size: 13px;

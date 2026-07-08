@@ -578,7 +578,7 @@ async function copyMarkdown() {
 }
 
 function imgPath(name: string) {
-  return `/images/symptoms/${encodeURIComponent(name)}`;
+  return `/reference/clinic/symptoms/${encodeURIComponent(name)}`;
 }
 
 function checkboxId(s: Symptom) {
@@ -753,7 +753,7 @@ function checkboxId(s: Symptom) {
   max-width: 860px;
   margin: 0 auto;
   padding: 1.5rem 0 3rem;
-  font-size: 0.9rem;
+  font-size: 1.0rem;
 }
 
 .lang-tabs {
@@ -768,7 +768,7 @@ function checkboxId(s: Symptom) {
   border: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-soft);
   color: var(--vp-c-text-2);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
@@ -793,7 +793,7 @@ function checkboxId(s: Symptom) {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 .q-title {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
   margin: 0 0 0.75rem;
@@ -802,7 +802,7 @@ function checkboxId(s: Symptom) {
 }
 .zh-ref {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 400;
   color: var(--vp-c-text-3);
   margin-bottom: 2px;
@@ -848,13 +848,13 @@ function checkboxId(s: Symptom) {
   background: rgba(255, 255, 255, 0.08);
 }
 .sym-zh-ref {
-  font-size: 0.72rem;
-  font-weight: 400;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--vp-c-text-3);
   line-height: 1.3;
 }
 .sym-label {
-  font-size: 0.88rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--vp-c-text-1);
   line-height: 1.3;
@@ -872,7 +872,7 @@ function checkboxId(s: Symptom) {
   border: 1.5px solid var(--vp-c-divider);
   background: var(--vp-c-bg);
   color: var(--vp-c-text-2);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
@@ -898,14 +898,14 @@ function checkboxId(s: Symptom) {
   padding: 4px 8px;
   border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
   font-family: inherit;
 }
 .month-input span,
 .detail-input span {
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   color: var(--vp-c-text-2);
 }
 .detail-input {
@@ -918,7 +918,7 @@ function checkboxId(s: Symptom) {
   padding: 6px 10px;
   border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
   font-family: inherit;
@@ -941,7 +941,7 @@ function checkboxId(s: Symptom) {
 .btn-reset {
   padding: 9px 22px;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
@@ -984,7 +984,7 @@ function checkboxId(s: Symptom) {
 }
 .export-pre {
   padding: 1rem 1.25rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   white-space: pre-wrap;
   word-break: break-word;

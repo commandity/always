@@ -188,6 +188,66 @@ password: "516800"
 9. **異位性皮膚炎：慢性復發 + 劇癢 + 過敏家族史 + 特定分布**
 10. **疥瘡：夜間搔癢 + 家庭群聚 + 指縫隧道**
 
+## 附錄：臨床影像速查（Photo Grid）
+
+> 以下影像整理自兒童常見皮疹與類似病灶，僅供形態學比對參考。
+
+### 一、新生兒暫時性 / 良性疹（Neonatal Transient & Benign）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/ped-rash/erythema-toxicum-neonatorum.jpeg" alt="Erythema Toxicum Neonatorum" loading="lazy"/><figcaption>Erythema Toxicum Neonatorum</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/neonatal-cephalic-pustulosis.jpg" alt="Neonatal Cephalic Pustulosis" loading="lazy"/><figcaption>Neonatal Cephalic Pustulosis</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/miliaria.jpg" alt="Miliaria" loading="lazy"/><figcaption>Miliaria</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/miliaria-rubra.jpeg" alt="Miliaria Rubra" loading="lazy"/><figcaption>Miliaria Rubra</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/pediatric-seborrheic-dermatitis.jpg" alt="Seborrheic Dermatitis (Cradle Cap)" loading="lazy"/><figcaption>Seborrheic Dermatitis (Cradle Cap)</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/lupus-neon.jpg" alt="Neonatal Lupus" loading="lazy"/><figcaption>Neonatal Lupus</figcaption></figure>
+</div>
+
+### 二、血管性胎記（Vascular Birthmarks）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/ped-rash/infantile-hemangioma.jpeg" alt="Infantile Hemangioma" loading="lazy"/><figcaption>Infantile Hemangioma</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/naevus-simplex.jpg" alt="Naevus Simplex (Salmon Patch)" loading="lazy"/><figcaption>Naevus Simplex (Salmon Patch)</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/nevus-flammeus.jpeg" alt="Nevus Flammeus (Port-wine Stain)" loading="lazy"/><figcaption>Nevus Flammeus (Port-wine Stain)</figcaption></figure>
+</div>
+
+### 三、病毒疹（Viral Exanthems）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/ped-rash/measles.png" alt="Measles" loading="lazy"/><figcaption>Measles</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/varicella.jpeg" alt="Varicella" loading="lazy"/><figcaption>Varicella</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/viral-exanthem.jpeg" alt="Viral Exanthem" loading="lazy"/><figcaption>Viral Exanthem</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/infectious-mononucleosis.jpg" alt="Infectious Mononucleosis" loading="lazy"/><figcaption>Infectious Mononucleosis</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/hsv-gingivostomatitis.png" alt="HSV Gingivostomatitis" loading="lazy"/><figcaption>HSV Gingivostomatitis</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/molluscum-contagiosum.png.jpg" alt="Molluscum Contagiosum" loading="lazy"/><figcaption>Molluscum Contagiosum</figcaption></figure>
+</div>
+
+### 四、細菌與黴菌感染（Bacterial & Fungal）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/ped-rash/scarlet-fever.jpg" alt="Scarlet Fever" loading="lazy"/><figcaption>Scarlet Fever</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/scarlet_fever_2.jpg" alt="Scarlet fever tongue" loading="lazy"/><figcaption>Scarlet Fever (Strawberry Tongue)</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/tinea-corporis.jpg" alt="Tinea Corporis" loading="lazy"/><figcaption>Tinea Corporis</figcaption></figure>
+</div>
+
+### 五、發炎、過敏與全身性（Inflammatory / Hypersensitivity / Systemic）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/ped-rash/Kawaskaki.png" alt="Kawasaki Disease" loading="lazy"/><figcaption>Kawasaki Disease</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/still-disease.jpeg" alt="Still Disease (Systemic JIA)" loading="lazy"/><figcaption>Still Disease (Systemic JIA)</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/serum-sickness-like-reaction.jpg" alt="Serum Sickness-like Reaction" loading="lazy"/><figcaption>Serum Sickness-like Reaction</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/acute-urticaria.jpg" alt="Acute Urticaria" loading="lazy"/><figcaption>Acute Urticaria</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/papular-urticaria.png" alt="Papular Urticaria" loading="lazy"/><figcaption>Papular Urticaria</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/dengue-hemorrhagic-fever.jpg" alt="Dengue Hemorrhagic Fever" loading="lazy"/><figcaption>Dengue Hemorrhagic Fever</figcaption></figure>
+</div>
+
+### 六、丘疹鱗屑（Papulosquamous）
+
+<div class="eczema-grid">
+  <figure><img src="/reference/skin/ped-rash/pityriasis-rosea.jpeg" alt="Pityriasis Rosea" loading="lazy"/><figcaption>Pityriasis Rosea</figcaption></figure>
+  <figure><img src="/reference/skin/ped-rash/pityriasis%20alba.jpeg" alt="Pityriasis alba" loading="lazy"/><figcaption>Pityriasis Alba</figcaption></figure>
+</div>
+
 ---
 
 ::: warning 臨床警示：何時必須立即轉診／住院？

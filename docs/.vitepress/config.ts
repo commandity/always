@@ -444,6 +444,10 @@ export default defineConfig({
               text: "妊娠用藥分級查詢表（FDA A/B/C/D/X）",
               link: "/reference/clinic/pregnancy-category-table",
             },
+            {
+              text: "藥物交互作用查詢（drug–drug・drug–food）",
+              link: "/reference/clinic/drug-interaction-checker",
+            },
           ],
         },
         {

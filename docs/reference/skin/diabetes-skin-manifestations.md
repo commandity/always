@@ -187,8 +187,8 @@ title: 糖尿病皮膚表現
 <div class="eczema-grid">
   <figure><img src="/reference/skin/skin-manifestations/Acanthosis-nigricans.jpg" alt="Acanthosis nigricans" loading="lazy"/><figcaption>Acanthosis Nigricans</figcaption></figure>
   <figure><img src="/reference/skin/skin-manifestations/Diabetic-Dermopathy.jpg" alt="Diabetic dermopathy" loading="lazy"/><figcaption>Diabetic Dermopathy</figcaption></figure>
-  <figure><img src="/reference/skin/skin-manifestations/Necrobiosis-Lipoidica-mild.jpg" alt="Necrobiosis lipoidica mild" loading="lazy"/><figcaption>Necrobiosis Lipoidica（輕度）</figcaption></figure>
-  <figure><img src="/reference/skin/skin-manifestations/Necrobiosis-Lipoidica-severe.jpg" alt="Necrobiosis lipoidica severe" loading="lazy"/><figcaption>Necrobiosis Lipoidica（重度）</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Necrobiosis-Lipoidica-mild.jpg" alt="Necrobiosis lipoidica mild" loading="lazy"/><figcaption>Necrobiosis Lipoidica（mild）</figcaption></figure>
+  <figure><img src="/reference/skin/skin-manifestations/Necrobiosis-Lipoidica-severe.jpg" alt="Necrobiosis lipoidica severe" loading="lazy"/><figcaption>Necrobiosis Lipoidica（severe）</figcaption></figure>
   <figure><img src="/reference/skin/skin-manifestations/Bullosis-Diabeticorum.jpg" alt="Bullosis diabeticorum" loading="lazy"/><figcaption>Bullosis Diabeticorum</figcaption></figure>
 </div>
 

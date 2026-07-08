@@ -19,7 +19,7 @@ import CitationIndex from "./components/layout/CitationIndex.vue";
 import GlowBackground from "./components/layout/GlowBackground.vue";
 import AboutPage from "./components/layout/AboutPage.vue";
 import FloatingBgmPlayer from "./components/layout/FloatingBgmPlayer.vue";
-import PasswordGate from "./components/PasswordGate.vue";
+import PasswordGate from "./components/layout/PasswordGate.vue";
 // ANES
 import AsaCalculator from "./components/anes/AsaCalculator.vue";
 // PSYCHOLOGY
@@ -143,6 +143,7 @@ import IPSSCalculator from "./components/uro/old/IPSSCalculator.vue";
 import NIHCPSICalculator from "./components/uro/old/NIHCPSICalculator.vue";
 import ProstateAssessment from "./components/uro/ProstateAssessment.vue";
 // CLINIC
+import DrugInteractionChecker from "./components/clinic/DrugInteractionChecker.vue";
 import ForeignerInquiry from "./components/clinic/ForeignerInquiry.vue";
 import PregnancyCategoryTable from "./components/clinic/PregnancyCategoryTable.vue";
 // GI
@@ -384,6 +385,7 @@ export default {
     // GI
     app.component("FIB4Calculator", FIB4Calculator);
     // CLINIC
+    app.component("DrugInteractionChecker", DrugInteractionChecker);
     app.component("ForeignerInquiry", ForeignerInquiry);
     app.component("PregnancyCategoryTable", PregnancyCategoryTable);
     // CHEST

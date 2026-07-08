@@ -2979,27 +2979,22 @@ function ctp_reset() {
 .ctsassess .score-badge.normal {
   border-color: #22c55e;
   color: #22c55e;
-  background: linear-gradient(180deg, rgba(34, 197, 94, 0.07), transparent);
 }
 .ctsassess .score-badge.mild {
   border-color: #f59e0b;
   color: #f59e0b;
-  background: linear-gradient(180deg, rgba(245, 158, 11, 0.07), transparent);
 }
 .ctsassess .score-badge.moderate {
   border-color: #f97316;
   color: #f97316;
-  background: linear-gradient(180deg, rgba(249, 115, 22, 0.07), transparent);
 }
 .ctsassess .score-badge.badge-male {
   border-color: #38bdf8;
   color: #38bdf8;
-  background: linear-gradient(180deg, rgba(56, 189, 248, 0.07), transparent);
 }
 .ctsassess .score-badge.badge-female {
   border-color: #f472b6;
   color: #f472b6;
-  background: linear-gradient(180deg, rgba(244, 114, 182, 0.07), transparent);
 }
 @media (max-width: 640px) {
   .ctsassess .score-badge {

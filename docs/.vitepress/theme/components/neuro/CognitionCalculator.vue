@@ -4617,45 +4617,45 @@ function cmai_reset() {
   letter-spacing: 0.02em;
   text-align: center;
 }
-.gds .sb-unset {
+.gds .score-badge.sb-unset {
   color: var(--vp-c-text-3);
 }
-.gds .sb-none {
+.gds .score-badge.sb-none {
   border-color: #22c55e;
   color: #22c55e;
   box-shadow:
     0 0 0 1px rgba(34, 197, 94, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.gds .sb-mild {
+.gds .score-badge.sb-mild {
   border-color: #84cc16;
   color: #84cc16;
   box-shadow:
     0 0 0 1px rgba(132, 204, 22, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.gds .sb-mild2 {
+.gds .score-badge.sb-mild2 {
   border-color: #eab308;
   color: #eab308;
   box-shadow:
     0 0 0 1px rgba(234, 179, 8, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.gds .sb-mod {
+.gds .score-badge.sb-mod {
   border-color: #f59e0b;
   color: #f59e0b;
   box-shadow:
     0 0 0 1px rgba(245, 158, 11, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.gds .sb-severe {
+.gds .score-badge.sb-severe {
   border-color: #f97316;
   color: #f97316;
   box-shadow:
     0 0 0 1px rgba(249, 115, 22, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.gds .sb-crit {
+.gds .score-badge.sb-crit {
   border-color: #ef4444;
   color: #ef4444;
   box-shadow:
@@ -6080,28 +6080,28 @@ function cmai_reset() {
   letter-spacing: 0.02em;
   text-align: center;
 }
-.cmai .sb-normal {
+.cmai .score-badge.sb-normal {
   border-color: #22c55e;
   color: #22c55e;
   box-shadow:
     0 0 0 1px rgba(34, 197, 94, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.cmai .sb-mild {
+.cmai .score-badge.sb-mild {
   border-color: #f59e0b;
   color: #f59e0b;
   box-shadow:
     0 0 0 1px rgba(245, 158, 11, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.cmai .sb-moderate {
+.cmai .score-badge.sb-moderate {
   border-color: #f97316;
   color: #f97316;
   box-shadow:
     0 0 0 1px rgba(249, 115, 22, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
 }
-.cmai .sb-severe {
+.cmai .score-badge.sb-severe {
   border-color: #ef4444;
   color: #ef4444;
   box-shadow:
@@ -6941,27 +6941,22 @@ function cmai_reset() {
 .cognition .score-badge.normal {
   border-color: #22c55e;
   color: #22c55e;
-  background: linear-gradient(180deg, rgba(34, 197, 94, 0.07), transparent);
 }
 .cognition .score-badge.mild {
   border-color: #f59e0b;
   color: #f59e0b;
-  background: linear-gradient(180deg, rgba(245, 158, 11, 0.07), transparent);
 }
 .cognition .score-badge.moderate {
   border-color: #f97316;
   color: #f97316;
-  background: linear-gradient(180deg, rgba(249, 115, 22, 0.07), transparent);
 }
 .cognition .score-badge.badge-male {
   border-color: #38bdf8;
   color: #38bdf8;
-  background: linear-gradient(180deg, rgba(56, 189, 248, 0.07), transparent);
 }
 .cognition .score-badge.badge-female {
   border-color: #f472b6;
   color: #f472b6;
-  background: linear-gradient(180deg, rgba(244, 114, 182, 0.07), transparent);
 }
 @media (max-width: 640px) {
   .cognition .score-badge {

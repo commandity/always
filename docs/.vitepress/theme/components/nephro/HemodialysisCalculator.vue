@@ -1432,7 +1432,6 @@ function arc_reset() {
 .hemodialysis .score-badge.normal {
   border-color: #22c55e;
   color: #22c55e;
-  background: linear-gradient(180deg, rgba(34, 197, 94, 0.07), transparent);
   box-shadow:
     0 0 0 1px rgba(34, 197, 94, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
@@ -1440,7 +1439,6 @@ function arc_reset() {
 .hemodialysis .score-badge.mild {
   border-color: #f59e0b;
   color: #f59e0b;
-  background: linear-gradient(180deg, rgba(245, 158, 11, 0.07), transparent);
   box-shadow:
     0 0 0 1px rgba(245, 158, 11, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
@@ -1448,7 +1446,6 @@ function arc_reset() {
 .hemodialysis .score-badge.moderate {
   border-color: #f97316;
   color: #f97316;
-  background: linear-gradient(180deg, rgba(249, 115, 22, 0.07), transparent);
   box-shadow:
     0 0 0 1px rgba(249, 115, 22, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);
@@ -1456,7 +1453,6 @@ function arc_reset() {
 .hemodialysis .score-badge.critical {
   border-color: #ef4444;
   color: #ef4444;
-  background: linear-gradient(180deg, rgba(239, 68, 68, 0.07), transparent);
   box-shadow:
     0 0 0 1px rgba(239, 68, 68, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.04);

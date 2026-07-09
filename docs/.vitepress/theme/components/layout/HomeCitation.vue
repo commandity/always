@@ -17,7 +17,7 @@ const latest = citations[0];
     >
       <div class="citation-card">
         <div class="citation-quote">"</div>
-        <blockquote class="citation-text">{{ latest.text }}</blockquote>
+        <blockquote class="citation-text" v-html="latest.text"></blockquote>
         <div class="citation-footer">
           <div class="citation-author">
             <span class="citation-dash">—</span>
@@ -181,5 +181,20 @@ const latest = citations[0];
     gap: 4px;
     font-size: 0.82rem;
   }
+}
+/* Japanese furigana (ruby) + Chinese translation line */
+.citation-text :deep(rt) {
+  font-size: 0.5em;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  letter-spacing: 0.02em;
+}
+.citation-text :deep(.cite-zh) {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.82em;
+  font-weight: 400;
+  color: var(--vp-c-text-2);
+  letter-spacing: 0.03em;
 }
 </style>

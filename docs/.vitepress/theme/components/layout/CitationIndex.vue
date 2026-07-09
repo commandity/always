@@ -77,7 +77,7 @@ function formatDate(dateStr: string) {
 
         <!-- Main content -->
         <div class="card-body">
-          <blockquote class="card-text">{{ citation.text }}</blockquote>
+          <blockquote class="card-text" v-html="citation.text"></blockquote>
 
           <div class="card-footer">
             <div class="card-author-block">
@@ -361,5 +361,23 @@ function formatDate(dateStr: string) {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+/* Japanese furigana (ruby) + Chinese translation line */
+.card-text :deep(ruby) {
+  ruby-align: center;
+}
+.card-text :deep(rt) {
+  font-size: 0.5em;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  letter-spacing: 0.02em;
+}
+.card-text :deep(.cite-zh) {
+  display: block;
+  margin-top: 0.7rem;
+  font-size: 0.86em;
+  font-weight: 400;
+  color: var(--vp-c-text-2);
+  letter-spacing: 0.03em;
 }
 </style>

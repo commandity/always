@@ -113,18 +113,16 @@ body {
   background-clip: text;
 }
 
+/* Solid colour (no gradient text-clip) so the emoji icons keep their
+   native colour instead of becoming grey gradient silhouettes. */
 .VPHero .text {
-  background: linear-gradient(135deg, var(--vp-c-text-1), var(--vp-c-text-2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--vp-c-text-1);
+  -webkit-text-fill-color: currentColor;
 }
 
 .VPHero .tagline {
-  background: linear-gradient(135deg, var(--vp-c-text-2), var(--vp-c-text-3));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--vp-c-text-2);
+  -webkit-text-fill-color: currentColor;
 }
 
 .VPHero .image-container {

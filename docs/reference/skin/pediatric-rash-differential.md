@@ -27,28 +27,64 @@ password: "516800"
 
 ## 第二步：發燒有無 → 鑑別方向
 
-```
-兒童皮疹
-    │
-    ├── 有毒癥象（toxic appearance）
-    │       └── 緊急處理，不須等待確診
-    │
-    ├── 有發燒 ──┬── 疹子與發燒同時出現
-    │           │     → 麻疹、scarlet fever、Kawasaki、enterovirus
-    │           │
-    │           ├── 疹子在退燒後出現
-    │           │     → Roseola（HHV-6/7）經典表現
-    │           │
-    │           └── 疹子在發燒數日後出現
-    │                 → Measles、EBV、Dengue、Gianotti-Crosti
-    │
-    └── 無發燒（或微燒）
-              ├── 搔癢為主 → 異位性皮膚炎、疥瘡、蕁麻疹、接觸性皮炎
-              │
-              ├── 水疱 → 膿痂疹（impetigo）、molluscum、tinea、contact
-              │
-              └── 無症狀 → 病毒疹恢復期、pityriasis rosea、milium、血管瘤
-```
+<div style="margin:1.75rem 0;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.5rem;border-radius:999px;background:var(--vp-c-brand-1);color:#fff;font-weight:700;letter-spacing:0.02em;">兒童皮疹 Pediatric Rash</span>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
+  <div style="display:flex;flex-wrap:wrap;gap:1.1rem;align-items:flex-start;justify-content:center;">
+    <div style="flex:1 1 200px;display:flex;flex-direction:column;align-items:center;gap:0.4rem;">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #ef4444;background:rgba(239,68,68,0.08);color:#dc2626;font-weight:700;font-size:0.9rem;text-align:center;">🚨 有毒癥象 Toxic</span>
+      <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.05rem 0;">↓</div>
+      <div style="width:100%;border:1.5px solid #ef4444;border-radius:12px;background:rgba(239,68,68,0.06);overflow:hidden;">
+        <div style="padding:0.6rem 0.85rem;text-align:center;">
+          <div style="font-weight:700;color:#dc2626;">緊急處理</div>
+          <div style="font-size:0.79rem;color:var(--vp-c-text-2);margin-top:0.25rem;line-height:1.5;">不須等待確診<br>Emergency — do not wait for diagnosis</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1.5 1 250px;display:flex;flex-direction:column;align-items:center;gap:0.4rem;">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #f59e0b;background:rgba(245,158,11,0.10);color:#d97706;font-weight:700;font-size:0.9rem;text-align:center;">有發燒 With Fever</span>
+      <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.05rem 0;">↓</div>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;width:100%;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #f59e0b;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.4rem 0.75rem;background:rgba(245,158,11,0.10);font-weight:700;color:#d97706;font-size:0.82rem;">疹子與發燒同時出現</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">麻疹 Measles、Scarlet fever、Kawasaki、Enterovirus</div>
+        </div>
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #f59e0b;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.4rem 0.75rem;background:rgba(245,158,11,0.10);font-weight:700;color:#d97706;font-size:0.82rem;">疹子在退燒後出現</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">Roseola（HHV-6/7）— 經典表現</div>
+        </div>
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #f59e0b;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.4rem 0.75rem;background:rgba(245,158,11,0.10);font-weight:700;color:#d97706;font-size:0.82rem;">疹子在發燒數日後出現</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">Measles、EBV、Dengue、Gianotti-Crosti</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1.5 1 250px;display:flex;flex-direction:column;align-items:center;gap:0.4rem;">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #0ea5e9;background:rgba(14,165,233,0.09);color:#0284c7;font-weight:700;font-size:0.9rem;text-align:center;">無發燒／微燒 No / Mild Fever</span>
+      <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.05rem 0;">↓</div>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;width:100%;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0ea5e9;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.4rem 0.75rem;background:rgba(14,165,233,0.09);font-weight:700;color:#0284c7;font-size:0.82rem;">搔癢為主 Pruritic</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">異位性皮膚炎、疥瘡、蕁麻疹、接觸性皮炎</div>
+        </div>
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0ea5e9;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.4rem 0.75rem;background:rgba(14,165,233,0.09);font-weight:700;color:#0284c7;font-size:0.82rem;">水疱 Vesicular</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">膿痂疹 Impetigo、Molluscum、Tinea、Contact</div>
+        </div>
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0ea5e9;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.4rem 0.75rem;background:rgba(14,165,233,0.09);font-weight:700;color:#0284c7;font-size:0.82rem;">無症狀 Asymptomatic</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">病毒疹恢復期、Pityriasis rosea、Milium、血管瘤</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+::: warning 分診順序
+**永遠先評估 toxic appearance**（病懨懨／中毒樣）——不論皮疹形態，toxic + 皮疹即為急症（敗血症、腦膜炎球菌血症、TSS、SSSS），須立即處理，不待確診。非 toxic 者再依**有無發燒**及**疹子與發燒的時序**分流。
+:::
 
 ## 第三步：皮疹形態分類（Morphology Approach）
 

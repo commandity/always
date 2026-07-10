@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { withBase } from "vitepress";
+import { computed, ref } from "vue";
 
 // ── Edit your info here ──────────────────────────────────────────
 const authors = [
@@ -128,7 +129,11 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
     <div class="about-hero">
       <div class="hero-left">
         <div class="avatar-wrap">
-          <img :src="active().avatar" :alt="active().name" class="avatar" />
+          <img
+            :src="withBase(active().avatar)"
+            :alt="active().name"
+            class="avatar"
+          />
           <div class="avatar-ring" />
         </div>
       </div>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { withBase } from "vitepress";
 import { data as posts } from "../../posts.data.ts";
 import { ref, computed, watch, nextTick, onMounted } from "vue";
 
@@ -100,7 +101,11 @@ watch(filteredPosts, detect);
     <div class="blog-grid">
       <article v-for="post in filteredPosts" :key="post.url" class="blog-card">
         <div v-if="post.cover" class="blog-card__cover">
-          <img :src="post.cover" :alt="post.title" class="cover-img" />
+          <img
+            :src="withBase(post.cover)"
+            :alt="post.title"
+            class="cover-img"
+          />
         </div>
 
         <div class="blog-card__body" :class="{ 'no-cover': !post.cover }">

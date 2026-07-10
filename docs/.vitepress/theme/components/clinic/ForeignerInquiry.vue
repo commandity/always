@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { withBase } from "vitepress";
 import { ref, computed } from "vue";
 
 type Lang = "en" | "zh" | "vi" | "th" | "id" | "ph" | "my";
@@ -578,7 +579,7 @@ async function copyMarkdown() {
 }
 
 function imgPath(name: string) {
-  return `/reference/clinic/symptoms/${encodeURIComponent(name)}`;
+  return withBase(`/reference/clinic/symptoms/${encodeURIComponent(name)}`);
 }
 
 function checkboxId(s: Symptom) {
@@ -753,7 +754,7 @@ function checkboxId(s: Symptom) {
   max-width: 860px;
   margin: 0 auto;
   padding: 1.5rem 0 3rem;
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
 .lang-tabs {

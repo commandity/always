@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { useData, useRouter } from "vitepress";
+import { useData, useRouter, withBase } from "vitepress";
 import { computed } from "vue";
 
 const { isDark } = useData();
 const router = useRouter();
 
 const avatarSrc = computed(() =>
-  isDark.value ? "/assets/avatar-f0f0f0.svg" : "/assets/avatar-333333.svg",
+  withBase(
+    isDark.value ? "/assets/avatar-f0f0f0.svg" : "/assets/avatar-333333.svg",
+  ),
 );
 </script>
 

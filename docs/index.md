@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: NEO JERZY
-  text: 凝淨齋  <img src="/icons/shrine.svg" style="display:inline;height:1em;vertical-align:-0.1em">
-  tagline: 墨香能養心 <img src="/icons/book-light.svg" style="display:inline;height:1em;vertical-align:-0.1em">｜經卷可明志 <img src="/icons/ruler.svg" style="display:inline;height:1em;vertical-align:-0.1em">｜修心得養性 <img src="/icons/earth.svg" style="display:inline;height:1em;vertical-align:-0.1em">
+  text: 凝淨齋  ⛩️
+  tagline: 墨香能養心 📖 ｜ 經卷可明志 📐 ｜ 修心得養性 🌍
   image:
     light: /light-circle-hero.svg
     dark: /dark-circle-hero.svg
@@ -42,5 +42,5 @@ features:
   - icon: 📬
     title: 聯絡方式
     details: 發現任何資訊有誤、需要補充說明、任何建議與回饋，歡迎郵件聯繫。
-    link: 'mailto:neojerzy@gmail.com'
---- 
+    link: "mailto:neojerzy@gmail.com"
+---

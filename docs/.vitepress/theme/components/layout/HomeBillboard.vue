@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { withBase } from "vitepress";
 import { data as allPosts } from "../../../../blog/data.data";
 import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 
@@ -10,11 +11,12 @@ const abstractImages = Array.from(
   { length: 9 },
   (_, i) => `/abstract/abstract-${i + 1}.jpg`,
 );
+
 const fallbackCovers = new Map<string, string>(
   posts.map((p, i) => [p.url, abstractImages[i % abstractImages.length]]),
 );
 function coverOf(p: any): string {
-  return p.cover || fallbackCovers.get(p.url) || abstractImages[0];
+  return withBase(p.cover || fallbackCovers.get(p.url) || abstractImages[0]);
 }
 
 function fmt(raw: string): string {

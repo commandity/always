@@ -891,6 +891,28 @@ html {
   display: none !important;
 }
 
+/* Severity bar — unify across all calculator tools (bar height, wrap
+   spacing, tick + label font size/weight). Colours stay per-tool. */
+.severity-bar {
+  height: 8px !important;
+}
+.severity-bar-wrap {
+  margin-bottom: 2rem !important;
+}
+.severity-ticks-abs,
+.severity-labels-abs {
+  margin-top: 2px !important;
+}
+.tick-abs,
+.tick-threshold {
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+}
+.label-abs {
+  font-size: 0.63rem !important;
+  font-weight: 400 !important;
+}
+
 /* Badge / score label */
 .score-label {
   font-size: 0.75rem !important;

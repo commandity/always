@@ -7,11 +7,11 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 
 **Dysphagia Rehabilitation — Assessment & Management of Swallowing Disorders**
 
-## Overview（概論）
+## 概論 Overview
 
 吞嚥障礙（dysphagia）指食物或液體從口腔到胃部運輸過程中任一階段發生困難，可分為**口咽性（oropharyngeal）**及**食道性（esophageal）**。口咽性吞嚥障礙最為常見，與吸入性肺炎、營養不良、脫水、生活品質下降及死亡率增加密切相關。吞嚥復健整合代償策略、行為治療、神經肌肉訓練及手術介入，目標為恢復安全且足夠的經口進食。
 
-## Rehabilitation Flowchart（復健流程）
+## 復健流程 Rehabilitation Flowchart
 
 <div style="margin:1.75rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -69,7 +69,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
   </div>
 </div>
 
-## Phases of Swallowing（吞嚥四期）
+## 吞嚥四期 Phases of Swallowing
 
 | 期別                 | 時間       | 關鍵事件                                                  | 神經控制                                 |
 | -------------------- | ---------- | --------------------------------------------------------- | ---------------------------------------- |
@@ -78,7 +78,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **Pharyngeal**       | **反射性** | 軟顎關閉→喉部上抬＋前移→聲帶閉合＋會厭反折→UES鬆弛→咽收縮 | CN IX, CN X, medullary swallowing center |
 | **Esophageal**       | 反射性     | 食道蠕動→LES鬆弛→食團進入胃部                             | CN X, enteric nervous system             |
 
-## Etiology（病因分類）
+## 病因分類 Etiology
 
 | 類別                     | 常見原因                                                                                                                      |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -89,9 +89,9 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **Aging (presbyphagia)** | 吞嚥肌肉萎縮、感覺閾值上升、hyolaryngeal elevation 下降、UES compliance↓                                                      |
 | **Psychogenic**          | Globus hystericus、phagophobia、functional dysphagia                                                                          |
 
-## Clinical Evaluation（臨床評估）
+## 臨床評估 Clinical Evaluation
 
-### Bedside Screening（床邊篩檢）
+### 床邊篩檢 Bedside Screening
 
 | 工具                                   | 說明                                              | 備註                          |
 | -------------------------------------- | ------------------------------------------------- | ----------------------------- |
@@ -107,7 +107,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 - **Signs of aspiration**：吞嚥前／中／後咳嗽、choking、聲音潮濕（wet voice）、血氧飽和度↓≥3%、呼吸窘迫
 - **Cervical auscultation**：吞嚥聲音異常（clicking, gurgling）
 
-### Instrumental Assessment（儀器評估）
+### 儀器評估 Instrumental Assessment
 
 | 檢查                                                     | 原理                           | 優點                                                         | 限制                                                                     |
 | -------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -116,7 +116,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **HRM（High-Resolution Manometry）**                     | 記錄咽部收縮壓力及 UES 鬆弛    | 量化咽收縮力、UES 鬆弛比例、pharyngeal contractile integral  | 無法直接觀察 aspiration、需專業判讀                                      |
 | **Pulse oximetry**                                       | 連續血氧監測                   | 簡便、輔助篩檢                                               | 敏感度不理想，不可單獨用來診斷                                           |
 
-### VFSS Key Parameters（透視吞嚥關鍵參數）
+### 透視吞嚥關鍵參數 VFSS Key Parameters
 
 | 參數                                   | 正常值                           | 異常意義                                       |
 | -------------------------------------- | -------------------------------- | ---------------------------------------------- |
@@ -141,9 +141,9 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **7** | 進入氣道，通過聲帶，儘管嘗試清除仍未清除       |
 | **8** | 進入氣道，通過聲帶，無清除嘗試                 |
 
-## Treatment Approaches（治療策略）
+## 治療策略 Treatment Approaches
 
-### Compensatory Strategies（代償策略—立即改善安全）
+### 代償策略—立即改善安全 Compensatory Strategies
 
 | 策略                       | 方法                                                               | 適應症                                                      |
 | -------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -171,7 +171,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **6** | Soft & bite-sized | 柔軟一口大小           |
 | **7** | Regular           | 一般質地               |
 
-### Rehabilitation Exercises（復健訓練）
+### 復健訓練 Rehabilitation Exercises
 
 #### Oral Phase Exercises
 
@@ -196,7 +196,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **Respiratory-swallow coordination**              | 練習吞嚥後立即呼氣→咳嗽 secures airway                     | 改善 aspiration 患者的喉部保護                 |
 | **Semi-occluded vocal tract (SOVT) with swallow** | 使用 straw 或 Lax Vox 在水中吹泡後吞嚥                     | 促進喉部上抬及閉合協調                         |
 
-#### Sensory Stimulation Techniques（感覺刺激）
+#### 感覺刺激 Sensory Stimulation Techniques
 
 | 技術                                            | 方法                                            | 適應症                         |
 | ----------------------------------------------- | ----------------------------------------------- | ------------------------------ |
@@ -206,7 +206,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **Taste-enhanced bolus**                        | 明顯味道（如鹽、甜、苦）強化                    | Dementia 伴 dysphagia          |
 | **Neuromuscular electrical stimulation (NMES)** | 表面電極置於 hyolaryngeal區域，感應性收縮刺激   | Reduced hyolaryngeal elevation |
 
-### Surgical & Procedural Interventions（手術及程序介入）
+### 手術及程序介入 Surgical & Procedural Interventions
 
 | 術式                                  | 適應症                                                | 說明                                                                  |
 | ------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------- |
@@ -221,7 +221,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 
 ## Common Conditions & Specific Protocols
 
-### 1. Post-Stroke Dysphagia（中風後吞嚥障礙）
+### 1. 中風後吞嚥障礙 Post-Stroke Dysphagia
 
 - **發生率**：急性中風約 37–78%，其中 50% 在 6 個月內恢復
 - **危險因子**：brainstem stroke（尤其是 medullary lateral syndrome / Wallenberg syndrome）、bilateral hemispheric stroke、NIHSS >10、年齡 >70
@@ -244,7 +244,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
   - **深腦刺激術（DBS）**：對吞嚥效果不一致，部分患者可能有負面影響
 - **Monitor**：定期 FEES（因 silent aspiration 比例高）+ 營養評估 + 肺炎預防
 
-### 3. Head & Neck Cancer Dysphagia（頭頸癌吞嚥障礙）
+### 3. 頭頸癌吞嚥障礙 Head & Neck Cancer Dysphagia
 
 - **成因**：腫瘤本身（結構破壞）、手術（切除範圍）、放療（纖維化、唾液減少、trismus）、化療（黏膜炎）
 - **特色**：multi-factorial — oral phase（舌缺損、trismus）+ pharyngeal phase（咽縮肌 fibrosis、laryngeal edema）+ UES（fibrosis stenosis）
@@ -256,7 +256,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
   - **IDDSI diet progression**：依功能逐步升級
 - **長期追蹤**：dysphagia 可持續數年（RT 後 fibrosis 持續進展—late effect）
 
-### 4. Presbyphagia（老年吞嚥變化）
+### 4. 老年吞嚥變化 Presbyphagia
 
 - **生理改變**：肌肉萎縮（sarcopenia）、感覺閾值↑、hyolaryngeal excursion↓、UES compliance↓、唾液分泌↓
 - **特徵**：吞嚥速度變慢、pharyngeal residue 比例↑、silent aspiration 風險↑
@@ -267,7 +267,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
   - 營養補充（蛋白質 + vitamin D）— 改善 sarcopenia
   - 環境調整：充足時間、減少 distractions
 
-### 5. Cricopharyngeal Dysfunction（環咽肌功能障礙）
+### 5. 環咽肌功能障礙 Cricopharyngeal Dysfunction
 
 - **生理**：UES（upper esophageal sphincter）由 cricopharyngeus 肌肉形成，平時保持張力性收縮，吞嚥時完全鬆弛至少 0.5–1.0s
 - **異常形式**：
@@ -289,7 +289,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
   - 晚期：comfort feeding、PEG 討論（倫理考量→需權衡生活品質）
   - 避免：強迫進食、behavioral dysphagia 惡化
 
-## Outcome Measures（療效評估）
+## 療效評估 Outcome Measures
 
 | 工具                                                    | 頻率        | 目標                                                    |
 | ------------------------------------------------------- | ----------- | ------------------------------------------------------- |
@@ -313,7 +313,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **6** | 完全經口進食（無特殊準備，但需避免特定食物） |
 | **7** | 完全經口進食（無限制）                       |
 
-## Special Populations（特殊族群）
+## 特殊族群 Special Populations
 
 | 族群                                | 考量                                                                                                                                                |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -323,7 +323,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **Dementia**                        | 人權倫理議題：comfort feeding vs PEG、避免 physical restraint、尊重患者意願                                                                         |
 | **Post-laryngectomy**               | Total laryngectomy → 咽部重建後可能仍有 aspiration（neoglottic incompetence）、需 TEP 復健                                                          |
 
-## References（參考文獻）
+## 參考文獻 References
 
 1. Steele CM, Alsanei WA, Ayanikalath S, et al. The Influence of Food Texture and Liquid Consistency Modification on Swallowing Physiology and Function: A Systematic Review. _Dysphagia_. 2015;30(1):2-26.
 2. Clavé P, Shaker R. Dysphagia: Current Reality and Future Perspectives. _Nat Rev Gastroenterol Hepatol_. 2015;12(5):259-270.

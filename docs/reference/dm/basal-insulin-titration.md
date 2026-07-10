@@ -13,7 +13,7 @@ title: T2DM 胰島素治療選擇與劑量調整 — Insulin Therapy Mode Select
 
 ## 治療模式說明
 
-### 一、基礎胰島素 OADs+BI（Basal-Only）
+### 一、基礎胰島素 OADs+BI Basal-Only
 
 #### 起始時機
 
@@ -42,7 +42,7 @@ title: T2DM 胰島素治療選擇與劑量調整 — Insulin Therapy Mode Select
 | **SGLT2i**         | 可持續使用；心腎共病或減重可考慮加上；注意 euglycemic DKA           |
 | **GLP-1 RA**       | ADA 優先選擇之注射藥物；可考慮 OADs+GLP-1 RA 或 OADs+BI+GLP-1 RA    |
 
-#### 何時停止增加基礎胰島素（Overbasalization）
+#### 何時停止增加基礎胰島素 Overbasalization
 
 - FBG 持續在 80–130 mg/dL（已達標）
 - 發生低血糖（< 70 mg/dL）
@@ -119,7 +119,7 @@ Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量
 - **調整**：每週 1–2 次，每次 1–2 units 或 10–15%
 - 可每日 1–3 次注射；無法彈性調整劑量來因應餐前高血糖與攝取醣類分量不一
 
-### 四、分次混合療法（Split-Mixed Regimen）
+### 四、分次混合療法 Split-Mixed Regimen
 
 傳統 NPH（中效）＋ Regular（短效）胰島素分次混合。
 
@@ -156,7 +156,7 @@ Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量
 2. 測得血糖值 − 目標血糖值 = 相差血糖值
 3. 相差血糖值 ÷ ISF = 校正胰島素劑量
 
-### 固定劑型合併藥物（Fixed-Ratio Combination）
+### 固定劑型合併藥物 Fixed-Ratio Combination
 
 - **iDegLira**：Degludec + Liraglutide
 - **iGlarLixi**：Glargine + Lixisenatide

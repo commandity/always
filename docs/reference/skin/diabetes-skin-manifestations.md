@@ -15,7 +15,7 @@ title: 糖尿病皮膚表現
 
 ## 一、Skin Manifestations Strongly Associated with DM
 
-### Acanthosis Nigricans（黑色棘皮症）
+### 黑色棘皮症 Acanthosis Nigricans
 
 - **表現**：灰棕色、天鵝絨樣／疣狀斑塊，邊界不清，對稱分布
 - **好發部位**：頸後、腋下、肘、腹股溝、臍周、乳房下皺褶
@@ -23,7 +23,7 @@ title: 糖尿病皮膚表現
 - **臨床意義**：胰島素阻抗的皮膚標誌；出現時應篩檢 DM 及相關內分泌疾病
 - **治療**：首重生活型態調整（飲食、運動、減重）＋ metformin；局部可用 retinoid、vitamin D 類似物、keratolytic
 
-### Diabetic Dermopathy（糖尿病皮病變／脛前斑）
+### 糖尿病皮病變／脛前斑 Diabetic Dermopathy
 
 - **盛行率**：高達 **50%** — 最常見的 DM 皮膚表現
 - **表現**：圓形紅丘疹 → 1–2 週內演變為萎縮性棕色斑，表面細鱗屑
@@ -32,7 +32,7 @@ title: 糖尿病皮膚表現
 - **關聯性**：常伴隨 microvascular disease（視網膜病變、腎病變）；與 CVD 相關
 - **治療**：無需治療（自限性）；但需加強篩檢微血管併發症
 
-### Diabetic Foot Syndrome（糖尿病足）
+### 糖尿病足 Diabetic Foot Syndrome
 
 - **發生率**：年發生率 1–4%，終身盛行率 4–10%
 - **常見病灶**：
@@ -44,9 +44,9 @@ title: 糖尿病皮膚表現
 - **關鍵數字**：15–25% DM 患者會發生足潰瘍；50% 三年內復發
 - **治療**：跨團隊照護、預防為上（每日檢查、適當鞋具）；傷口照護、抗生素、清創、血管重建
 
-### Diabetic Thick Skin（糖尿病厚皮）
+### 糖尿病厚皮 Diabetic Thick Skin
 
-#### Scleroderma-like Skin Changes（類硬皮症變化）
+#### 類硬皮症變化 Scleroderma-like Skin Changes
 
 - **盛行率**：10–50% DM 患者，type 1 > type 2
 - **表現**：無痛、硬結、蠟樣皮膚增厚，對稱分布於手指背側（sclerodactyly）
@@ -60,14 +60,14 @@ title: 糖尿病皮膚表現
 - **徵象**：Prayer sign、**Tabletop sign**（前臂垂直桌面時手掌無法貼平）
 - **治療**：控制血糖＋伸展運動；NSAIDs / 局部類固醇注射
 
-#### Scleredema Diabeticorum（糖尿病性硬腫症）
+#### 糖尿病性硬腫症 Scleredema Diabeticorum
 
 - **盛行率**：DM 患者 2.5–14%
 - **表現**：對稱性、瀰漫性皮膚硬化增厚 — 上背、肩、頸後最常見；遠端肢體通常不受影響
 - **嚴重 case**：可限制軀幹活動，甚至導致限制性呼吸問題
 - **治療**：**2024 EDF guideline** — 一線：UVA1 / PUVA 光療；二線：methotrexate；進階：immunosuppressants、IVIG
 
-### Necrobiosis Lipoidica（類脂質漸進性壞死）
+### 類脂質漸進性壞死 Necrobiosis Lipoidica
 
 - **盛行率**：僅 0.3–1.6% DM 患者；但 25% NL 患者同時有 DM
 - **表現**：紅褐色邊緣＋黃棕色萎縮性中心（可見 telangiectasias）之斑塊
@@ -75,7 +75,7 @@ title: 糖尿病皮膚表現
 - **併發症**：~1/3 會潰瘍 → 續發性感染或 SCC
 - **治療**：困擾 — 多數治療反應不一；類固醇（局部／病灶內／口服）、calcineurin inhibitors、anti-TNF；控制血糖未必改善皮膚病灶
 
-### Bullosis Diabeticorum（糖尿病性水疱）
+### 糖尿病性水疱 Bullosis Diabeticorum
 
 - **盛行率**：約 0.5% DM 患者
 - **表現**：突發性、非紅斑性、緊張性無菌水疱（0.5–5 cm），常 overnight 出現
@@ -178,7 +178,7 @@ title: 糖尿病皮膚表現
 9. **Scleredema diabeticorum** 緩慢進展、治療棘手；2024 EDF 指引：一線 UVA1/PUVA
 10. **多重皮膚表現同時出現** → 應全面評估血糖控制及 DM 併發症
 
-## 附錄：臨床影像速查（Photo Grid）
+## 附錄：臨床影像速查 Photo Grid
 
 > 以下影像整理自各類糖尿病相關皮膚表現，僅供形態學比對參考。
 

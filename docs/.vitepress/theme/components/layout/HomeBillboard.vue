@@ -118,7 +118,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
           <!-- Active slide -->
           <a
             v-if="i === current"
-            :href="p.url"
+            :href="withBase(p.url)"
             class="hbb-slide"
             :class="[
               'slide-enter',

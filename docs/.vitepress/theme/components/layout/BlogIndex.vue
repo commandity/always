@@ -150,7 +150,7 @@ watch(filteredPosts, detect);
                 >#{{ tag }}</span
               >
             </div>
-            <a :href="post.url" class="card-read-more" @click.stop
+            <a :href="withBase(post.url)" class="card-read-more" @click.stop
               >繼續閱讀 →</a
             >
           </div>

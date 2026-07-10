@@ -1,15 +1,7 @@
 <script setup lang="ts">
-import { useData, useRouter, withBase } from "vitepress";
-import { computed } from "vue";
+import { useRouter, withBase } from "vitepress";
 
-const { isDark } = useData();
 const router = useRouter();
-
-const avatarSrc = computed(() =>
-  withBase(
-    isDark.value ? "/assets/avatar-f0f0f0.svg" : "/assets/avatar-333333.svg",
-  ),
-);
 </script>
 
 <template>
@@ -23,7 +15,16 @@ const avatarSrc = computed(() =>
     >
       <div class="profile-card">
         <div class="profile-left">
-          <img :src="avatarSrc" alt="Profile" class="profile-avatar" />
+          <img
+            :src="withBase('/assets/avatar-333333.svg')"
+            alt="Profile"
+            class="profile-avatar avatar-light"
+          />
+          <img
+            :src="withBase('/assets/avatar-f0f0f0.svg')"
+            alt="Profile"
+            class="profile-avatar avatar-dark"
+          />
           <div class="profile-status">
             <span class="status-dot" />
             Busy
@@ -184,5 +185,20 @@ const avatarSrc = computed(() =>
   .profile-bio {
     text-align: left;
   }
+}
+</style>
+
+<!-- Global (non-scoped) so it keys off the html.dark class set by the head
+     theme script, independent of VitePress's isDark ref (which the custom
+     theme watcher can desync — e.g. on iOS following system dark mode). -->
+<style>
+.home-profile .avatar-dark {
+  display: none;
+}
+.dark .home-profile .avatar-light {
+  display: none;
+}
+.dark .home-profile .avatar-dark {
+  display: inline-block;
 }
 </style>

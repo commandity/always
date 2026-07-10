@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: NEO JERZY
-  text: 凝淨齋  ⛩️
-  tagline: 墨香能養心 📝 ｜ 經卷可明志 ✏️ ｜ 修心得養性 🍵
+  text: 凝淨齋 ⛩️
+  tagline: 墨香養心 📝｜經卷明志 ✏️｜修心養性 🍵
   image:
     light: /light-circle-hero.svg
     dark: /dark-circle-hero.svg

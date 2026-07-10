@@ -883,8 +883,11 @@ html {
   color: var(--vp-c-text-2) !important;
 }
 
-/* Remove the upper-right score badge from every calculator tool header */
-.score-badge {
+/* Remove the upper-right corner badge from every calculator tool header
+   (tools name it score-badge / dose-badge / result-badge) */
+.score-badge,
+.dose-badge,
+.result-badge {
   display: none !important;
 }
 

@@ -46,9 +46,7 @@ function onEnter() {
   if (s.length) addDrug(s[activeSuggestion.value] ?? s[0]);
   else if (query.value.trim()) {
     // 允許直接加入完全相符者
-    const exact = ALL_DRUGS.find(
-      (d) => d === query.value.trim().toLowerCase(),
-    );
+    const exact = ALL_DRUGS.find((d) => d === query.value.trim().toLowerCase());
     if (exact) addDrug(exact);
   }
 }
@@ -67,7 +65,8 @@ const ddiResults = computed(() => {
   const set = selectedSet.value;
   if (set.size === 0) return [];
   const list = DDI_LIST.filter((d) => {
-    if (single.value) return d.a === selected.value[0] || d.b === selected.value[0];
+    if (single.value)
+      return d.a === selected.value[0] || d.b === selected.value[0];
     return set.has(d.a) && set.has(d.b);
   });
   return [...list].sort(
@@ -86,7 +85,10 @@ const dfiResults = computed(() => {
 });
 
 const noResults = computed(
-  () => hasSelection.value && ddiResults.value.length === 0 && dfiResults.value.length === 0,
+  () =>
+    hasSelection.value &&
+    ddiResults.value.length === 0 &&
+    dfiResults.value.length === 0,
 );
 
 function sevLabel(s: Severity) {
@@ -158,10 +160,13 @@ const legend: { s: Severity }[] = [
         >輸入一個藥品可查看其所有已知藥物與食物交互作用；輸入多個藥品可檢查彼此之間是否有交互作用。</template
       >
       <template v-else-if="single"
-        >顯示 <strong>{{ displayDrug(selected[0]) }}</strong> 的所有已知交互作用。</template
+        >顯示
+        <strong>{{ displayDrug(selected[0]) }}</strong>
+        的所有已知交互作用。</template
       >
       <template v-else
-        >檢查所選 {{ selected.length }} 種藥品之間及各自的食物交互作用。</template
+        >檢查所選
+        {{ selected.length }} 種藥品之間及各自的食物交互作用。</template
       >
     </p>
 
@@ -195,7 +200,9 @@ const legend: { s: Severity }[] = [
             sevLabel(d.severity)
           }}</span>
         </div>
-        <p class="dxi effect"><span class="dxi lbl">後果</span>{{ d.effect }}</p>
+        <p class="dxi effect">
+          <span class="dxi lbl">後果</span>{{ d.effect }}
+        </p>
         <p class="dxi mgmt"><span class="dxi lbl mg">處置</span>{{ d.mgmt }}</p>
       </div>
     </section>
@@ -222,7 +229,9 @@ const legend: { s: Severity }[] = [
             sevLabel(d.severity)
           }}</span>
         </div>
-        <p class="dxi effect"><span class="dxi lbl">後果</span>{{ d.effect }}</p>
+        <p class="dxi effect">
+          <span class="dxi lbl">後果</span>{{ d.effect }}
+        </p>
         <p class="dxi mgmt"><span class="dxi lbl mg">處置</span>{{ d.mgmt }}</p>
       </div>
     </section>
@@ -358,7 +367,7 @@ const legend: { s: Severity }[] = [
   width: 18px;
   height: 18px;
   box-sizing: border-box;
-  padding: 0 0 6px;
+  transform: translateY(-3px);
   border: none;
   border-radius: 50%;
   background-color: transparent;
@@ -369,7 +378,7 @@ const legend: { s: Severity }[] = [
 }
 .dxi.chip-x:hover {
   background-color: var(--vp-c-brand-1);
-  color: var(--vp-c-white);
+  color: #fff;
 }
 
 .dxi.hint {

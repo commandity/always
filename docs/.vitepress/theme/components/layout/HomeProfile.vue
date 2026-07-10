@@ -16,10 +16,10 @@ const avatarSrc = computed(() =>
   <div class="home-profile-wrap">
     <div
       class="home-profile"
-      @click="router.go('/about')"
+      @click="router.go(withBase('/about'))"
       role="link"
       tabindex="0"
-      @keydown.enter="router.go('/about')"
+      @keydown.enter="router.go(withBase('/about'))"
     >
       <div class="profile-card">
         <div class="profile-left">

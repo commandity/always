@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRouter } from "vitepress";
+import { useRouter, withBase } from "vitepress";
 import { data as citations } from "../../citation.data.ts";
 
 const router = useRouter();
@@ -10,10 +10,10 @@ const latest = citations[0];
   <div class="home-citation-wrap">
     <div
       class="home-citation"
-      @click="router.go('/citation')"
+      @click="router.go(withBase('/citation'))"
       role="link"
       tabindex="0"
-      @keydown.enter="router.go('/citation')"
+      @keydown.enter="router.go(withBase('/citation'))"
     >
       <div class="citation-card">
         <div class="citation-quote">"</div>

@@ -316,30 +316,29 @@ const legend: { s: Severity }[] = [
   background-color: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
 }
+/* Matches the 清除篩選 (reset) button in PregnancyCategoryTable,
+   kept at 44px so it lines up with the search input. */
 .dxi.clear-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 44px;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 14px;
   font-size: 14px;
-  font-weight: 600;
+  color: var(--vp-c-text-2);
+  background-color: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   border-radius: 10px;
-  background-color: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-2);
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.18s ease;
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease;
 }
 .dxi.clear-btn:hover {
-  border-color: #e74c3c;
-  color: #e74c3c;
-  background-color: color-mix(in srgb, #e74c3c 8%, var(--vp-c-bg-soft));
-}
-.dxi.clear-btn:active {
-  transform: scale(0.97);
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-brand-1);
 }
 
 /* 已選藥品 chips */

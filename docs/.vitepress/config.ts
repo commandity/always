@@ -463,10 +463,6 @@ export default defineConfig({
               link: "/reference/ent/thyroid-tumor",
             },
             {
-              text: "甲狀腺及頸部超音波",
-              link: "/reference/ent/thyroid-sonography",
-            },
-            {
               text: "嗓音復健",
               link: "/reference/ent/dysphonia-rehabilitation",
             },
@@ -485,6 +481,10 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
+              text: "甲狀腺及頸部超音波",
+              link: "/reference/echo/thyroid-sonography",
+            },
+            {
               text: "消化系統",
               link: "/reference/echo/digestive-sono",
             },
@@ -495,6 +495,22 @@ export default defineConfig({
             {
               text: "腹部超音波解剖學精要",
               link: "/reference/echo/abdominal-sono",
+            },
+          ],
+        },
+        {
+          text: "物理治療",
+          collapsed: true,
+          items: [
+            {
+              text: "肩",
+              collapsed: true,
+              items: [
+                {
+                  text: "肩關節分期復健運動",
+                  link: "/reference/pt/shoulder/shoulder-rehab",
+                },
+              ],
             },
           ],
         },

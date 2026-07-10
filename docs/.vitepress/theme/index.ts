@@ -65,7 +65,7 @@ import DhiCalculator from "./components/ent/old/DhiCalculator.vue";
 import TfiCalculator from "./components/ent/old/TfiCalculator.vue";
 import ThiCalculator from "./components/ent/old/ThiCalculator.vue";
 import StopBangCalculator from "./components/ent/old/StopBangCalculator.vue";
-import ThyroidSonographyReport from "./components/ent/ThyroidSonographyReport.vue";
+import ThyroidSonographyReport from "./components/echo/ThyroidSonographyReport.vue";
 import DysphagiaCalculator from "./components/ent/DysphagiaCalculator.vue";
 import LprCalculator from "./components/ent/LprCalculator.vue";
 import DysphoniaCalculator from "./components/ent/DysphoniaCalculator.vue";

@@ -2,8 +2,13 @@
 import { ref, computed } from "vue";
 
 // ── Report metadata ──────────────────────────────────────────────
+// Today's date in Taiwan time zone (Asia/Taipei, UTC+8), YYYY-MM-DD.
+function taiwanToday() {
+  return new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Taipei" });
+}
+
 const patient = ref({ id: "", name: "", dob: "", refPhysician: "" });
-const examDate = ref(new Date().toISOString().slice(0, 10));
+const examDate = ref(taiwanToday());
 
 // ── Gland measurements ───────────────────────────────────────────
 const rightLobe = ref({ length: "", width: "", thickness: "" });
@@ -309,7 +314,7 @@ async function copyReport() {
 
 function reset() {
   patient.value = { id: "", name: "", dob: "", refPhysician: "" };
-  examDate.value = new Date().toISOString().slice(0, 10);
+  examDate.value = taiwanToday();
   rightLobe.value = { length: "", width: "", thickness: "" };
   leftLobe.value = { length: "", width: "", thickness: "" };
   isthmus.value = { thickness: "" };
@@ -819,7 +824,7 @@ function reset() {
   gap: 3px;
 }
 .field-label {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--vp-c-text-2);
   letter-spacing: 0.02em;

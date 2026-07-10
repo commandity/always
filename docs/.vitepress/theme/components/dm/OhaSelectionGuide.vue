@@ -253,15 +253,6 @@ const stepOk = computed(() => {
 
 <template>
   <div class="oha">
-    <div class="oha-header">
-      <div class="header-title">
-        <h2 class="title">OHA 選擇指引 — 以共病為導向</h2>
-        <p class="subtitle">
-          Oral Hypoglycemic Agent Selection Guide · 依患者條件逐步選擇最佳藥物
-        </p>
-      </div>
-    </div>
-
     <!-- Step indicator -->
     <div class="step-bar">
       <div
@@ -281,14 +272,14 @@ const stepOk = computed(() => {
 
     <!-- ========== Step 1 ========== -->
     <div class="section" v-show="step === 1">
-      <div class="section-bar demo-bar">
-        <span class="section-icon">👤</span>
-        <span class="section-label">Step 1 · 基本資料</span>
-        <span class="section-sub">年齡與腎功能影響藥物選擇</span>
+      <div class="group-header-bar demo-bar">
+        <span class="group-icon">👤</span>
+        <span class="group-label-text">Step 1 · 基本資料</span>
+        <span class="group-sub-text">年齡與腎功能影響藥物選擇</span>
       </div>
       <div class="oha-card">
         <div class="oha-row">
-          <span class="oha-q">年齡</span>
+          <span class="item-name">年齡</span>
           <input
             v-model="age"
             type="number"
@@ -302,7 +293,7 @@ const stepOk = computed(() => {
           >
         </div>
         <div class="oha-row">
-          <span class="oha-q">eGFR</span>
+          <span class="item-name">eGFR</span>
           <input
             v-model="egfr"
             type="number"
@@ -323,49 +314,49 @@ const stepOk = computed(() => {
 
     <!-- ========== Step 2 ========== -->
     <div class="section" v-show="step === 2">
-      <div class="section-bar rf-bar">
-        <span class="section-icon">🫀</span>
-        <span class="section-label">Step 2 · 共病評估</span>
-        <span class="section-sub">勾選所有符合項目（決定 add-on 首選）</span>
+      <div class="group-header-bar rf-bar">
+        <span class="group-icon">🫀</span>
+        <span class="group-label-text">Step 2 · 共病評估</span>
+        <span class="group-sub-text">勾選所有符合項目（決定 add-on 首選）</span>
       </div>
       <div class="oha-card">
         <label class="oha-row oha-label" :class="{ active: hasHF }">
           <input type="checkbox" v-model="hasHF" />
-          <div class="oha-cb-content">
-            <span class="oha-cb-name">心衰竭 HF</span>
-            <span class="oha-cb-desc">HFrEF / HFmrEF / HFpEF</span>
+          <div class="item-name-block">
+            <span class="item-name">心衰竭 HF</span>
+            <span class="item-sub">HFrEF / HFmrEF / HFpEF</span>
           </div>
           <span class="oha-cb-tag sglt2-tag">→ SGLT2i</span>
         </label>
         <label class="oha-row oha-label" :class="{ active: hasCKD }">
           <input type="checkbox" v-model="hasCKD" />
-          <div class="oha-cb-content">
-            <span class="oha-cb-name">慢性腎臟病 CKD</span>
-            <span class="oha-cb-desc">eGFR 25–75 或 uACR ≥ 200</span>
+          <div class="item-name-block">
+            <span class="item-name">慢性腎臟病 CKD</span>
+            <span class="item-sub">eGFR 25–75 或 uACR ≥ 200</span>
           </div>
           <span class="oha-cb-tag sglt2-tag">→ SGLT2i</span>
         </label>
         <label class="oha-row oha-label" :class="{ active: hasASCVD }">
           <input type="checkbox" v-model="hasASCVD" />
-          <div class="oha-cb-content">
-            <span class="oha-cb-name">ASCVD</span>
-            <span class="oha-cb-desc">CAD / CVA / PAD</span>
+          <div class="item-name-block">
+            <span class="item-name">ASCVD</span>
+            <span class="item-sub">CAD / CVA / PAD</span>
           </div>
           <span class="oha-cb-tag glp1-tag">→ GLP-1 RA / SGLT2i</span>
         </label>
         <label class="oha-row oha-label" :class="{ active: hasObesity }">
           <input type="checkbox" v-model="hasObesity" />
-          <div class="oha-cb-content">
-            <span class="oha-cb-name">肥胖</span>
-            <span class="oha-cb-desc">BMI ≥ 30</span>
+          <div class="item-name-block">
+            <span class="item-name">肥胖</span>
+            <span class="item-sub">BMI ≥ 30</span>
           </div>
           <span class="oha-cb-tag glp1-tag">→ GLP-1 RA</span>
         </label>
         <label class="oha-row oha-label" :class="{ active: isFrail }">
           <input type="checkbox" v-model="isFrail" />
-          <div class="oha-cb-content">
-            <span class="oha-cb-name">老年衰弱 / 低血糖高風險</span>
-            <span class="oha-cb-desc">跌倒風險、多重疾病、需避免低血糖</span>
+          <div class="item-name-block">
+            <span class="item-name">老年衰弱 / 低血糖高風險</span>
+            <span class="item-sub">跌倒風險、多重疾病、需避免低血糖</span>
           </div>
           <span class="oha-cb-tag dpp4-tag">→ DPP-4i</span>
         </label>
@@ -374,14 +365,14 @@ const stepOk = computed(() => {
 
     <!-- ========== Step 3 ========== -->
     <div class="section" v-show="step === 3">
-      <div class="section-bar lab-bar">
-        <span class="section-icon">🧪</span>
-        <span class="section-label">Step 3 · 臨床參數</span>
-        <span class="section-sub">A1C 與目前用藥</span>
+      <div class="group-header-bar lab-bar">
+        <span class="group-icon">🧪</span>
+        <span class="group-label-text">Step 3 · 臨床參數</span>
+        <span class="group-sub-text">A1C 與目前用藥</span>
       </div>
       <div class="oha-card">
         <div class="oha-row">
-          <span class="oha-q">A1C</span>
+          <span class="item-name">A1C</span>
           <input
             v-model="a1c"
             type="number"
@@ -396,7 +387,7 @@ const stepOk = computed(() => {
           >
         </div>
         <div class="oha-row">
-          <span class="oha-q">Metformin 使用狀態</span>
+          <span class="item-name">Metformin 使用狀態</span>
           <div class="oha-opts">
             <button
               class="opt-btn"
@@ -426,10 +417,10 @@ const stepOk = computed(() => {
 
     <!-- ========== Step 4: Results ========== -->
     <div class="section" v-show="step === 4">
-      <div class="section-bar res-bar">
-        <span class="section-icon">💊</span>
-        <span class="section-label">Step 4 · 個人化用藥建議</span>
-        <span class="section-sub">依共病優先順序排列</span>
+      <div class="group-header-bar res-bar">
+        <span class="group-icon">💊</span>
+        <span class="group-label-text">Step 4 · 個人化用藥建議</span>
+        <span class="group-sub-text">依共病優先順序排列</span>
       </div>
 
       <div class="oha-result" v-if="recommendations.length">
@@ -464,8 +455,10 @@ const stepOk = computed(() => {
             </div>
           </div>
           <div class="rec-body">
-            <div class="rec-drug">{{ r.drug }}</div>
-            <div class="rec-category">{{ r.category }}</div>
+            <div class="rec-head">
+              <span class="rec-drug">{{ r.drug }}</span>
+              <span class="rec-category">{{ r.category }}</span>
+            </div>
             <div class="rec-reason">{{ r.reason }}</div>
             <details class="rec-nhi-detail">
               <summary class="rec-nhi-summary">健保給付條件</summary>
@@ -525,25 +518,9 @@ const stepOk = computed(() => {
 
 <style scoped>
 .oha {
+  max-width: 820px;
   margin: 0 auto;
-  padding: 2rem 0 3rem;
   font-size: 0.9rem;
-}
-.oha-header {
-  margin-bottom: 1.25rem;
-}
-.title {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-  margin: 0 0 0.2rem;
-  border: none !important;
-  padding: 0 !important;
-}
-.subtitle {
-  font-size: 0.75rem;
-  color: var(--vp-c-text-3);
-  margin: 0;
 }
 
 /* ── Step indicator ── */
@@ -601,7 +578,7 @@ const stepOk = computed(() => {
   border-color: #10b981;
 }
 .step-label {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   white-space: nowrap;
@@ -614,7 +591,7 @@ const stepOk = computed(() => {
 .section {
   margin-bottom: 1.5rem;
 }
-.section-bar {
+.group-header-bar {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -637,18 +614,12 @@ const stepOk = computed(() => {
 .res-bar {
   border-left-color: #8b5cf6;
 }
-.section-icon {
+.group-icon {
   font-size: 1rem;
   flex-shrink: 0;
 }
-.section-label {
-  font-size: 0.88rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-}
-.section-sub {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
+/* .group-label-text / .group-sub-text fonts unified globally in custom.css */
+.group-sub-text {
   flex: 1;
 }
 
@@ -669,11 +640,9 @@ const stepOk = computed(() => {
 .oha-row:last-child {
   border-bottom: none;
 }
-.oha-q {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-  width: 110px;
+/* Question labels: shared .item-name font (unified globally), fixed width for alignment */
+.oha-row > .item-name {
+  width: 120px;
   flex-shrink: 0;
 }
 .oha-input {
@@ -719,21 +688,13 @@ const stepOk = computed(() => {
   height: 16px;
   flex-shrink: 0;
 }
-.oha-cb-content {
+.item-name-block {
   display: flex;
   flex-direction: column;
   gap: 1px;
   flex: 1;
 }
-.oha-cb-name {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-}
-.oha-cb-desc {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
-}
+/* .item-name / .item-sub fonts unified globally in custom.css */
 .oha-cb-tag {
   font-size: 0.65rem;
   font-weight: 700;
@@ -780,13 +741,15 @@ const stepOk = computed(() => {
   margin-bottom: 1rem;
 }
 .rec-card {
-  display: flex;
-  gap: 0.65rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.7rem;
+  row-gap: 4px;
+  align-items: start;
   padding: 0.7rem 0.9rem;
   border-radius: 10px;
   border: 1.5px solid var(--vp-c-divider);
   background: var(--vp-c-bg-soft);
-  align-items: flex-start;
 }
 .rec-card.first {
   border-left: 3px solid #6366f1;
@@ -802,24 +765,27 @@ const stepOk = computed(() => {
   border-left: 3px solid #ef4444;
   background: rgba(239, 68, 68, 0.04);
 }
-.rec-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  flex-shrink: 0;
-  min-width: 60px;
+/* rec-left/rec-body dissolve into the card grid so the left rail badges
+   align row-by-row with the body: priority↔head (row 1), nhi↔reason (row 2) */
+.rec-left,
+.rec-body {
+  display: contents;
 }
 .rec-priority-badge {
-  font-size: 0.62rem;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  font-size: 0.68rem;
   font-weight: 800;
   padding: 2px 8px;
   border-radius: 6px;
-  flex-shrink: 0;
   white-space: nowrap;
 }
 .rec-nhi-badge {
-  font-size: 0.58rem;
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  font-size: 0.64rem;
   font-weight: 800;
   padding: 1px 8px;
   border-radius: 4px;
@@ -843,12 +809,18 @@ const stepOk = computed(() => {
   color: #6b7280;
 }
 .rec-nhi-detail {
-  margin-top: 4px;
-  font-size: 0.7rem;
+  grid-column: 2;
+  grid-row: 3;
+  min-width: 0;
+  margin-top: 0px;
+  font-size: 0.76rem;
 }
 .rec-nhi-summary {
-  font-size: 0.68rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.15;
   color: var(--vp-c-text-3);
   cursor: pointer;
   list-style: none;
@@ -877,6 +849,7 @@ const stepOk = computed(() => {
   background: rgba(99, 102, 241, 0.04);
   border: 1px solid var(--vp-c-divider);
   color: var(--vp-c-text-2);
+  font-weight: 600;
   line-height: 1.5;
 }
 .rec-card.first .rec-priority-badge {
@@ -895,29 +868,48 @@ const stepOk = computed(() => {
   background: rgba(239, 68, 68, 0.12);
   color: #dc2626;
 }
-.rec-body {
+.rec-head {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  flex: 1;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.55rem;
 }
 .rec-drug {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: var(--vp-c-text-1);
 }
 .rec-category {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--vp-c-text-3);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--vp-c-text-2);
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
+.rec-card.first .rec-category {
+  color: #6366f1;
+}
+.rec-card.addon .rec-category {
+  color: #10b981;
+}
+.rec-card.alternative .rec-category {
+  color: #d97706;
+}
+.rec-card.avoid .rec-category {
+  color: #dc2626;
+}
 .rec-reason {
-  font-size: 0.75rem;
+  grid-column: 2;
+  grid-row: 2;
+  padding: 3px 0px;
+  min-width: 0;
+  font-size: 0.84rem;
+  font-weight: 600;
   color: var(--vp-c-text-2);
-  margin-top: 2px;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .oha-summary {
@@ -928,7 +920,7 @@ const stepOk = computed(() => {
   margin-bottom: 1rem;
 }
 .summary-title {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 800;
   color: var(--vp-c-text-1);
   margin-bottom: 0.5rem;
@@ -936,9 +928,9 @@ const stepOk = computed(() => {
 .summary-list {
   margin: 0;
   padding-left: 1.1rem;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: var(--vp-c-text-2);
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 /* ── Warn box ── */
@@ -1038,9 +1030,8 @@ const stepOk = computed(() => {
 }
 
 @media (max-width: 640px) {
-  .oha-q {
-    width: 70px;
-    font-size: 0.75rem;
+  .oha-row > .item-name {
+    width: 92px;
   }
   .oha-input {
     width: 90px;

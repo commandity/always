@@ -472,7 +472,7 @@ WHO 2022 已將其獨立分類（非 FTC 亞型），舊稱 Hürthle cell varian
 
 ### Imaging（超音波特徵）
 
-- **甲狀腺中段（isthmus 附近）**結節（C 細胞好發部位）
+- **甲狀腺中段**（isthmus 附近）結節（C 細胞好發部位）
 - **回音**：**低回音至等回音**
 - **鈣化**：**粗顆粒狀鈣化**（dystrophic calcification，澱粉樣蛋白沉積引起）— 不同於 PTC 的微鈣化
   - 形成典型的**沙粒狀但較粗大（coarse stippled）鈣化**

@@ -57,7 +57,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 | **GRBAS scale**                    | G(grade) R(roughness) B(breathiness) A(asthenia) S(strain)，0–3 四階               | 主觀聽知覺評估 — 臨床常用                                                  |
 | **VHI-10**（語音障礙指數）         | 10 題患者自評問卷（0–40 分）                                                       | >11 → 自覺障礙顯著                                                         |
 
-### Voice Handicap Index-10 (VHI-10) <a href="/guide/ent/vhi10-calculator" title="VHI-10 計算機" target="_blank" rel="noopener" style="display:inline-flex;vertical-align:middle;margin-left:4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+### Voice Handicap Index-10 (VHI-10) <a href="/guide/ent/dysphonia" title="VHI-10 計算機" target="_blank" rel="noopener" style="display:inline-flex;vertical-align:middle;margin-left:4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
 
 | 題目                                    | 0–4 分 |
 | --------------------------------------- | ------ |
@@ -78,17 +78,17 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 
 ### Behavioral Voice Therapy（行為治療 — 第一線）
 
-| 技術                                       | 適應症                                       | 方法                                                          |
-| ------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------- |
-| **Vocal hygiene**                          | 所有 dysphonia 基礎                          | 水分補充、減少 throat clearing、避免菸酒、控制 GERD/LPR       |
-| **Semi-occluded vocal tract**              | MTD、結節、MTD                               | Straw phonation、lip trill、humming、Lax Vox®—降低聲帶撞擊力 |
-| **Resonant voice therapy**                 | MTD、輕中度結節                              | Forward focus 共鳴訓練 — 以「嗯」引導，減輕喉部緊張           |
-| **Lee Silverman Voice Treatment (LSVT®)** | Parkinson's disease 伴 hypokinetic dysphonia | 每日高強度訓練：最大化音量、改善聲門閉合、放大感知努力        |
-| **Flow phonation**                         | MTD（過度內收型）                            | 放鬆喉部，以平穩呼氣引導發聲                                  |
-| **Accent method**                          | MTD、結節、閉合不全                          | 節律性腹式呼吸配合響亮發音 — 改善呼吸與發聲協調               |
-| **Vocal function exercises**               | MTD、老年聲帶萎縮                            | 4 組每日 2 次：最長 warm-up、滑音上升／下降、最長 /o/ 穩定音  |
-| **Manual laryngeal therapy**               | MTD（喉部張力增高）                          | 甲狀軟骨減壓按摩、環甲間隙放鬆、舌骨鬆動術                    |
-| **Conversation training therapy**          | MTD（實際溝通困難）                          | 直接在日常對話情境中應用技巧（非僅在診間練習）                |
+| 技術                                      | 適應症                                       | 方法                                                         |
+| ----------------------------------------- | -------------------------------------------- | ------------------------------------------------------------ |
+| **Vocal hygiene**                         | 所有 dysphonia 基礎                          | 水分補充、減少 throat clearing、避免菸酒、控制 GERD/LPR      |
+| **Semi-occluded vocal tract**             | MTD、結節、MTD                               | Straw phonation、lip trill、humming、Lax Vox®—降低聲帶撞擊力 |
+| **Resonant voice therapy**                | MTD、輕中度結節                              | Forward focus 共鳴訓練 — 以「嗯」引導，減輕喉部緊張          |
+| **Lee Silverman Voice Treatment (LSVT®)** | Parkinson's disease 伴 hypokinetic dysphonia | 每日高強度訓練：最大化音量、改善聲門閉合、放大感知努力       |
+| **Flow phonation**                        | MTD（過度內收型）                            | 放鬆喉部，以平穩呼氣引導發聲                                 |
+| **Accent method**                         | MTD、結節、閉合不全                          | 節律性腹式呼吸配合響亮發音 — 改善呼吸與發聲協調              |
+| **Vocal function exercises**              | MTD、老年聲帶萎縮                            | 4 組每日 2 次：最長 warm-up、滑音上升／下降、最長 /o/ 穩定音 |
+| **Manual laryngeal therapy**              | MTD（喉部張力增高）                          | 甲狀軟骨減壓按摩、環甲間隙放鬆、舌骨鬆動術                   |
+| **Conversation training therapy**         | MTD（實際溝通困難）                          | 直接在日常對話情境中應用技巧（非僅在診間練習）               |
 
 ### Medical Treatment（藥物治療）
 

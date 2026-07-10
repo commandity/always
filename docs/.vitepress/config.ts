@@ -569,10 +569,6 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "CHOL 健保降血脂藥物給付判定",
-              link: "/reference/dm/ lipid - protocol",
-            },
-            {
               text: "INSULIN 基礎胰島素劑量調整計算器",
               link: "/reference/dm/basal-insulin-titration",
             },
@@ -595,10 +591,6 @@ export default defineConfig({
             {
               text: "SGLT2 抑制劑（排糖藥）適應症與給付",
               link: "/reference/dm/sglt2-inhibitors",
-            },
-            {
-              text: "胰島素阻抗的臨床表現與皮膚表徵",
-              link: "/reference/dm/insulin-resistance",
             },
           ],
         },

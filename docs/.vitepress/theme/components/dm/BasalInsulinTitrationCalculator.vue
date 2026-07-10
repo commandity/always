@@ -588,22 +588,12 @@ async function copyMarkdown() {
 
 <template>
   <div class="ins">
-    <div class="ins-header">
-      <div class="header-title">
-        <h2 class="title">T2DM 胰島素治療選擇與劑量調整</h2>
-        <p class="subtitle">
-          Insulin Therapy Mode Selector &amp; Titration Guide ·
-          選擇治療模式，依體重與血糖參數計算建議劑量與調整策略
-        </p>
-      </div>
-    </div>
-
     <!-- Mode Selection -->
     <div class="mode-section">
-      <div class="section-bar mode-bar">
-        <span class="section-icon">🎯</span>
-        <span class="section-label">Step 1 · 選擇胰島素治療模式</span>
-        <span class="section-sub">請選擇適合病人的 T2DM 胰島素方案</span>
+      <div class="group-header-bar mode-bar">
+        <span class="group-icon">🎯</span>
+        <span class="group-label-text">Step 1 · 選擇胰島素治療模式</span>
+        <span class="group-sub-text">請選擇適合病人的 T2DM 胰島素方案</span>
       </div>
       <div class="mode-grid">
         <button
@@ -614,9 +604,9 @@ async function copyMarkdown() {
           @click="mode = opt.value"
         >
           <span class="mode-icon">{{ opt.icon }}</span>
-          <div class="mode-body">
-            <span class="mode-name">{{ opt.label }}</span>
-            <span class="mode-desc">{{ opt.desc }}</span>
+          <div class="item-name-block">
+            <span class="item-name">{{ opt.label }}</span>
+            <span class="item-sub">{{ opt.desc }}</span>
           </div>
         </button>
       </div>
@@ -624,10 +614,10 @@ async function copyMarkdown() {
 
     <!-- Step 2: Inputs -->
     <div class="input-section">
-      <div class="section-bar input-bar">
-        <span class="section-icon">📝</span>
-        <span class="section-label">Step 2 · 病人參數輸入</span>
-        <span class="section-sub">依所選模式填寫對應資料</span>
+      <div class="group-header-bar input-bar">
+        <span class="group-icon">📝</span>
+        <span class="group-label-text">Step 2 · 病人參數輸入</span>
+        <span class="group-sub-text">依所選模式填寫對應資料</span>
       </div>
 
       <!-- Shared: Weight -->
@@ -897,9 +887,9 @@ async function copyMarkdown() {
 
     <!-- Step 3: Results -->
     <div class="results-section">
-      <div class="section-bar result-bar">
-        <span class="section-icon">💡</span>
-        <span class="section-label">Step 3 · 建議與調整指引</span>
+      <div class="group-header-bar result-bar">
+        <span class="group-icon">💡</span>
+        <span class="group-label-text">Step 3 · 建議與調整指引</span>
       </div>
 
       <!-- Basal-only results -->
@@ -1419,30 +1409,13 @@ async function copyMarkdown() {
 
 <style scoped>
 .ins {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
-  padding: 2rem 0 3rem;
   font-size: 0.9rem;
-}
-.ins-header {
-  margin-bottom: 1.25rem;
-}
-.title {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-  margin: 0 0 0.2rem;
-  border: none !important;
-  padding: 0 !important;
-}
-.subtitle {
-  font-size: 0.75rem;
-  color: var(--vp-c-text-3);
-  margin: 0;
 }
 
 /* ── Shared section bar ─────────────────────────────────────────── */
-.section-bar {
+.group-header-bar {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -1462,18 +1435,12 @@ async function copyMarkdown() {
 .result-bar {
   border-left-color: #f97316;
 }
-.section-icon {
+.group-icon {
   font-size: 1rem;
   flex-shrink: 0;
 }
-.section-label {
-  font-size: 0.88rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-}
-.section-sub {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
+/* .group-label-text / .group-sub-text fonts unified globally in custom.css */
+.group-sub-text {
   flex: 1;
 }
 
@@ -1511,20 +1478,12 @@ async function copyMarkdown() {
   font-size: 1.4rem;
   flex-shrink: 0;
 }
-.mode-body {
+.item-name-block {
   display: flex;
   flex-direction: column;
   gap: 1px;
 }
-.mode-name {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-}
-.mode-desc {
-  font-size: 0.68rem;
-  color: var(--vp-c-text-3);
-}
+/* .item-name / .item-sub fonts unified globally in custom.css */
 
 /* ── Inputs ─────────────────────────────────────────────────────── */
 .input-section {
@@ -2035,8 +1994,8 @@ async function copyMarkdown() {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 .notes-header {
-  padding: 0.55rem 1rem;
-  font-size: 0.8rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.86rem;
   font-weight: 700;
   color: var(--vp-c-text-2);
   background: var(--vp-c-bg-mute);
@@ -2044,15 +2003,15 @@ async function copyMarkdown() {
 }
 .note-list {
   margin: 0;
-  padding: 0.75rem 1rem 0.75rem 2rem;
+  padding: 0.8rem 1rem 0.8rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 .note-list li {
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   color: var(--vp-c-text-2);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 /* ── Actions ────────────────────────────────────────────────────── */
@@ -2100,64 +2059,107 @@ async function copyMarkdown() {
 }
 
 .ref-note {
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   color: var(--vp-c-text-3);
   margin-top: 0.6rem;
-  padding: 0.4rem 0.6rem;
+  padding: 0.45rem 0.65rem;
   background: var(--vp-c-bg-mute);
   border-radius: 6px;
   border-left: 3px solid var(--vp-c-border, var(--vp-c-divider));
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* ── OADs reference ─────────────────────────────────────────────── */
 .oad-ref {
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
-  padding: 0.75rem 1rem;
   margin-bottom: 0.75rem;
   background: var(--vp-c-bg-soft);
+  overflow: hidden;
 }
 .oad-ref-summary {
-  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.86rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
   cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.oad-ref-summary::-webkit-details-marker {
+  display: none;
+}
+.oad-ref-summary::after {
+  content: "▾";
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-3);
+  transition: transform 0.2s ease;
+}
+.oad-ref[open] > .oad-ref-summary {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+.oad-ref[open] > .oad-ref-summary::after {
+  transform: rotate(180deg);
 }
 .oad-table {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  margin-top: 0.65rem;
+  padding: 0 0.7rem 0rem;
   overflow-x: auto;
 }
 .oad-row {
   display: grid;
   grid-template-columns: 120px 1fr;
-  gap: 0.5rem;
-  font-size: 0.74rem;
-  align-items: start;
-  padding: 0.3rem 0;
+  gap: 0.7rem;
+  font-size: 0.82rem;
+  align-items: baseline;
+  padding: 0.3rem 0.1rem;
   border-bottom: 1px solid var(--vp-c-divider);
 }
 .oad-row:last-child {
   border-bottom: none;
 }
 .oad-row-header {
-  padding-bottom: 0.3rem;
+  padding-top: 0.5rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
-  font-size: 0.66rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 .oad-drug {
+  justify-self: start;
   font-weight: 700;
-  color: var(--vp-c-text-1);
+  font-size: 0.78rem;
+  color: #0d9488;
+  background: rgba(13, 148, 136, 0.1);
+  padding: 3px 11px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 .oad-rec {
   color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+.oad-ref .ref-note {
+  margin: 0 0.7rem 0.5rem;
+  padding: 0.4rem 0.5rem 0;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--vp-c-divider);
+  border-radius: 0;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--vp-c-text-3);
   line-height: 1.5;
+}
+.oad-ref .ref-note::before {
+  content: "※ ";
+  font-style: normal;
 }
 
 /* ── Basal-only start dose card ─────────────────────────────────── */

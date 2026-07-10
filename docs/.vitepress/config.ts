@@ -538,6 +538,10 @@ export default defineConfig({
               text: "全身性疾病的皮膚表徵",
               link: "/reference/skin/systemic-disease-skin-signs",
             },
+            {
+              text: "水疱性病灶鑑別診斷",
+              link: "/reference/skin/vesicular-lesions-differential",
+            },
           ],
         },
         {

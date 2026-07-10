@@ -7,7 +7,7 @@ title: "胰島素阻抗的臨床表現與皮膚表徵 — Insulin Resistance: Cl
 
 **Insulin Resistance: Clinical & Cutaneous Manifestations**
 
----
+## 概述
 
 胰島素阻抗（insulin resistance, IR）是指細胞對胰島素的反應降低，身體需要分泌更多胰島素才能維持正常血糖的代償狀態。在胰島素阻抗的早期階段，空腹血糖與糖化血色素可能仍屬正常，因此臨床辨識依賴對身體表徵、生物標記及代謝症候群元件的綜合判斷。
 

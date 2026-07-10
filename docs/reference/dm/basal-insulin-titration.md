@@ -7,10 +7,6 @@ title: T2DM 胰島素治療選擇與劑量調整 — Insulin Therapy Mode Select
 
 **T2DM Insulin Therapy Selection & Dose Titration**
 
-## 概述
-
-本工具依據 **2022 ADA 治療指引** 及 **臺灣糖尿病學會臨床建議** 製作，提供四種 T2DM 胰島素治療模式的起始劑量建議與調整（titration）指引。選擇適合病人的治療模式後，輸入體重與血糖參數即可獲得建議處方與調整策略。
-
 ---
 
 <BasalInsulinTitrationCalculator />

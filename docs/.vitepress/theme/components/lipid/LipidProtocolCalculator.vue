@@ -484,28 +484,19 @@ function reset() {
 
 <template>
   <div class="lipid">
-    <div class="lipid-header">
-      <div class="header-title">
-        <h2 class="title">血脂給付判定 — 健保降血脂藥物給付規定</h2>
-        <p class="subtitle">
-          Taiwan NHI Lipid-Lowering Drug Eligibility · 健保 2.6.1
-        </p>
-      </div>
-    </div>
-
     <!-- Step 1: Personal history -->
     <div class="section">
-      <div class="section-bar cat-bar">
-        <span class="section-icon">🫀</span>
-        <span class="section-label">Step 1 · 個人病史</span>
-        <span class="section-sub">勾選符合項目（可複選）</span>
+      <div class="group-header-bar cat-bar">
+        <span class="group-icon">🫀</span>
+        <span class="group-label-text">Step 1 · 個人病史</span>
+        <span class="group-sub-text">勾選符合項目（可複選）</span>
       </div>
       <div class="cat-grid">
         <label class="cat-opt" :class="{ active: hasACS }">
           <input type="checkbox" v-model="hasACS" />
-          <div class="cat-content">
-            <span class="cat-name">ACS / PCI/CABG</span>
-            <span class="cat-desc"
+          <div class="item-name-block">
+            <span class="item-name">ACS / PCI/CABG</span>
+            <span class="item-sub"
               >急性冠狀動脈症候群、心導管介入或冠脈繞道術後</span
             >
           </div>
@@ -513,18 +504,18 @@ function reset() {
         </label>
         <label class="cat-opt" :class="{ active: hasCVD }">
           <input type="checkbox" v-model="hasCVD" />
-          <div class="cat-content">
-            <span class="cat-name">CVD</span>
-            <span class="cat-desc"
+          <div class="item-name-block">
+            <span class="item-name">CVD</span>
+            <span class="item-sub"
               >冠狀動脈粥狀硬化、缺血性腦血管疾病、TIA、症狀性頸動脈狹窄</span
             >
           </div>
         </label>
         <label class="cat-opt" :class="{ active: hasDM }">
           <input type="checkbox" v-model="hasDM" />
-          <div class="cat-content">
-            <span class="cat-name">DM</span>
-            <span class="cat-desc">糖尿病</span>
+          <div class="item-name-block">
+            <span class="item-name">DM</span>
+            <span class="item-sub">糖尿病</span>
           </div>
         </label>
       </div>
@@ -532,10 +523,10 @@ function reset() {
 
     <!-- Step 2: Demographics (always visible - age affects all groups) -->
     <div class="section">
-      <div class="section-bar demo-bar">
-        <span class="section-icon">👤</span>
-        <span class="section-label">Step 2 · 基本資料</span>
-        <span class="section-sub">年齡影響治療強度選擇</span>
+      <div class="group-header-bar demo-bar">
+        <span class="group-icon">👤</span>
+        <span class="group-label-text">Step 2 · 基本資料</span>
+        <span class="group-sub-text">年齡影響治療強度選擇</span>
       </div>
       <div class="rf-card">
         <div class="rf-row">
@@ -586,10 +577,10 @@ function reset() {
 
     <!-- Step 3: Risk factors (only when no CVD/DM/ACS) -->
     <div class="section" v-if="isLowRisk">
-      <div class="section-bar rf-bar">
-        <span class="section-icon">📋</span>
-        <span class="section-label">Step 3 · 危險因子評估</span>
-        <span class="section-sub"
+      <div class="group-header-bar rf-bar">
+        <span class="group-icon">📋</span>
+        <span class="group-label-text">Step 3 · 危險因子評估</span>
+        <span class="group-sub-text"
           >計數 <strong>{{ rfCount }}</strong> / 5 項</span
         >
       </div>
@@ -636,10 +627,10 @@ function reset() {
 
     <!-- Step 4: Lab data -->
     <div class="section">
-      <div class="section-bar lab-bar">
-        <span class="section-icon">🧪</span>
-        <span class="section-label">Step 4 · 檢驗值</span>
-        <span class="section-sub">mg/dL</span>
+      <div class="group-header-bar lab-bar">
+        <span class="group-icon">🧪</span>
+        <span class="group-label-text">Step 4 · 檢驗值</span>
+        <span class="group-sub-text">mg/dL</span>
       </div>
       <div class="lab-grid">
         <div class="lab-item">
@@ -698,10 +689,10 @@ function reset() {
 
     <!-- Step 5: Non-drug treatment -->
     <div class="section" v-if="initiateMet && protocol.nonDrug">
-      <div class="section-bar nd-bar">
-        <span class="section-icon">📝</span>
-        <span class="section-label">Step 4 · 非藥物治療評估</span>
-        <span class="section-sub">尚未達標，給藥前先確認</span>
+      <div class="group-header-bar nd-bar">
+        <span class="group-icon">📝</span>
+        <span class="group-label-text">Step 4 · 非藥物治療評估</span>
+        <span class="group-sub-text">尚未達標，給藥前先確認</span>
       </div>
       <div class="nd-card">
         <span class="nd-q"
@@ -728,7 +719,7 @@ function reset() {
 
     <!-- Results -->
     <div
-      class="section-bar rc-header"
+      class="group-header-bar rc-header"
       v-if="effectiveCat"
       :style="{ '--accent': catColors[effectiveCat] }"
     >
@@ -949,30 +940,14 @@ function reset() {
 
 <style scoped>
 .lipid {
+  max-width: 820px;
   margin: 0 auto;
-  padding: 2rem 0 3rem;
   font-size: 0.9rem;
-}
-.lipid-header {
-  margin-bottom: 1.25rem;
-}
-.title {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-  margin: 0 0 0.2rem;
-  border: none !important;
-  padding: 0 !important;
-}
-.subtitle {
-  font-size: 0.75rem;
-  color: var(--vp-c-text-3);
-  margin: 0;
 }
 .section {
   margin-bottom: 1.5rem;
 }
-.section-bar {
+.group-header-bar {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -995,18 +970,12 @@ function reset() {
 .lab-bar {
   border-left-color: #3b82f6;
 }
-.section-icon {
+.group-icon {
   font-size: 1rem;
   flex-shrink: 0;
 }
-.section-label {
-  font-size: 0.88rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-}
-.section-sub {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
+/* .group-label-text / .group-sub-text fonts unified globally in custom.css */
+.group-sub-text {
   flex: 1;
 }
 .cat-grid {
@@ -1035,21 +1004,13 @@ function reset() {
   height: 16px;
   flex-shrink: 0;
 }
-.cat-content {
+.item-name-block {
   display: flex;
   flex-direction: column;
   gap: 2px;
   flex: 1;
 }
-.cat-name {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-}
-.cat-desc {
-  font-size: 0.72rem;
-  color: var(--vp-c-text-3);
-}
+/* .item-name / .item-sub fonts unified globally in custom.css */
 .badge-init {
   font-size: 0.65rem;
   font-weight: 700;
@@ -1261,18 +1222,18 @@ function reset() {
 }
 .rc-row {
   display: grid;
-  grid-template-columns: 56px 1fr 80px 1fr 160px;
+  grid-template-columns: 62px 1fr 92px 1fr 168px;
   gap: 0.5rem;
   padding: 0.55rem 0.9rem;
   border-bottom: 1px solid var(--vp-c-divider);
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   align-items: center;
 }
 .rc-row:last-child {
   border-bottom: none;
 }
 .rc-row-header {
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
   background: var(--vp-c-bg-mute);
@@ -1297,7 +1258,7 @@ function reset() {
 }
 .rc-col-goal {
   text-align: left;
-  font-size: 0.76rem;
+  font-size: 0.84rem;
   white-space: nowrap;
 }
 .rc-meds {
@@ -1511,8 +1472,8 @@ function reset() {
     grid-template-columns: 1fr;
   }
   .rc-row {
-    grid-template-columns: 44px 1fr 64px 1fr 135px;
-    font-size: 0.7rem;
+    grid-template-columns: 48px 1fr 74px 1fr 140px;
+    font-size: 0.78rem;
   }
   .rf-q {
     width: 80px;

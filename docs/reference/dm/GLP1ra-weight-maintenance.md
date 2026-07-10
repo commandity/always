@@ -7,7 +7,7 @@ title: 停用 GLP-1 RA 後的體重維持：現有證據與研究缺口
 
 **Weight Maintenance After GLP-1 RA Cessation: Evidence & Research Gaps**
 
----
+## 概述
 
 美國臨床內分泌醫學會（AACE）在其最新指引中，倡導以「併發症為中心」的照護模式，針對成人肥胖症及脂肪組織相關慢性疾病提供治療。為便於臨床落實，指引依優先順序列出各肥胖症併發症的建議藥物，升糖素類似胜肽-1 受體促效劑（GLP-1 RA）位居首位。
 

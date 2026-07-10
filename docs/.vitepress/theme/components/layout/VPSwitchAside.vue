@@ -1,19 +1,28 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import { useRoute } from "vitepress";
+import { useData, useRoute } from "vitepress";
 import { useMediaQuery } from "@vueuse/core";
 import VPSwitch from "vitepress/dist/client/theme-default/components/VPSwitch.vue";
 import { showAside, originalAsideDisabled } from "./asideStore";
 
 const route = useRoute();
+const { site } = useData();
 const is1280 = useMediaQuery("(min-width: 1280px)");
 
 const PREFIXES = ["/guide", "/reference", "/blog"] as const;
 
+// route.path includes the site base (e.g. "/always/reference/…" on GitHub
+// Pages), so strip it before matching the section prefixes.
+function stripBase(path: string) {
+  const base = site.value.base;
+  return base !== "/" && path.startsWith(base)
+    ? "/" + path.slice(base.length)
+    : path;
+}
+
 function matchP(p: string) {
-  return (
-    route.path.startsWith(p + "/") || route.path === p || route.path === p + "/"
-  );
+  const path = stripBase(route.path);
+  return path.startsWith(p + "/") || path === p || path === p + "/";
 }
 
 const show = computed(

@@ -23,6 +23,83 @@ title: 甲狀腺腫瘤 — 良性／惡性鑑別診斷、超音波特徵與治�
 | **Thyroid Lymphoma**                   | 淋巴球（B 細胞為主）     | 常合併 Hashimoto's         |
 | **Metastatic Tumors**                  | 他處惡性轉移             | 腎細胞癌、肺癌、乳癌最常見 |
 
+## 甲狀腺惡性腫瘤鑑別流程（Calcitonin → Anti-TPO → BRAF）
+
+<div style="margin:1.75rem 0;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.5rem;border-radius:999px;background:var(--vp-c-brand-1);color:#fff;font-weight:700;letter-spacing:0.02em;">測 Calcitonin</span>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
+  <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;justify-content:center;">
+    <div style="flex:1 1 210px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #ef4444;background:rgba(239,68,68,0.08);color:#ef4444;font-weight:700;font-size:0.9rem;text-align:center;">Calcitonin ↑↑</span>
+      <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.15rem 0;">↓</div>
+      <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #ef4444;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="padding:0.55rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(239,68,68,0.08);">
+          <div style="font-weight:700;color:#dc2626;">MTC 髓質癌</div>
+          <div style="font-size:0.76rem;color:var(--vp-c-text-3);">C 細胞（神經內分泌）</div>
+        </div>
+        <ul style="list-style:none;margin:0;padding:0.6rem 0.9rem;">
+          <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#ef4444;flex:none;margin-top:0.42rem;"></span><span>CEA ↑</span></li>
+          <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#ef4444;flex:none;margin-top:0.42rem;"></span><span>RET 基因突變 (+)</span></li>
+          <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#ef4444;flex:none;margin-top:0.42rem;"></span><span>常為遺傳性（MEN2）</span></li>
+        </ul>
+      </div>
+    </div>
+    <div style="flex:2.2 1 440px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;border:1.5px dashed #14b8a6;border-radius:14px;padding:0.9rem 0.85rem;background:rgba(20,184,166,0.06);">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #0d9488;background:rgba(13,148,136,0.10);color:#0d9488;font-weight:700;font-size:0.9rem;text-align:center;">Calcitonin 正常</span>
+      <div style="color:var(--vp-c-text-3);font-size:0.8rem;line-height:1.25;text-align:center;">↓ 測 Anti-TPO 抗體</div>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;width:100%;">
+        <div style="flex:1 1 195px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+          <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #8b5cf6;background:rgba(139,92,246,0.10);color:#8b5cf6;font-weight:700;font-size:0.9rem;text-align:center;">Anti-TPO ↑</span>
+          <div style="color:var(--vp-c-text-3);font-size:0.8rem;line-height:1.25;text-align:center;">↓ Hashimoto's 背景 ＋ 快速腫大</div>
+          <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #8b5cf6;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+            <div style="padding:0.55rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(139,92,246,0.10);">
+              <div style="font-weight:700;color:#7c3aed;">甲狀腺淋巴瘤 Lymphoma</div>
+              <div style="font-size:0.76rem;color:var(--vp-c-text-3);">B 細胞為主</div>
+            </div>
+            <ul style="list-style:none;margin:0;padding:0.6rem 0.9rem;">
+              <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8b5cf6;flex:none;margin-top:0.42rem;"></span><span>LDH ↑</span></li>
+              <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8b5cf6;flex:none;margin-top:0.42rem;"></span><span>Pseudocystic US（假囊狀）</span></li>
+              <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8b5cf6;flex:none;margin-top:0.42rem;"></span><span>Flow cytometry 確診</span></li>
+            </ul>
+          </div>
+        </div>
+        <div style="flex:1.5 1 250px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+          <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #10b981;background:rgba(16,185,129,0.10);color:#10b981;font-weight:700;font-size:0.9rem;text-align:center;">Anti-TPO −</span>
+          <div style="color:var(--vp-c-text-3);font-size:0.8rem;line-height:1.25;text-align:center;">↓ TSH 正常、Tg ↑/N → 測 BRAF V600E</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;width:100%;">
+            <div style="flex:1 1 130px;display:flex;flex-direction:column;align-items:center;gap:0.3rem;">
+              <span style="display:inline-block;padding:0.35rem 0.9rem;border-radius:999px;border:1.5px solid #0ea5e9;background:rgba(14,165,233,0.09);color:#0284c7;font-weight:700;font-size:0.85rem;text-align:center;">BRAF 陽性 (+)</span>
+              <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.1rem 0;">↓</div>
+              <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #0ea5e9;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+                <div style="padding:0.55rem 0.9rem;text-align:center;background:rgba(14,165,233,0.09);">
+                  <div style="font-weight:700;color:#0284c7;">PTC 乳突癌</div>
+                  <div style="font-size:0.76rem;color:var(--vp-c-text-3);">分化型・最常見</div>
+                </div>
+              </div>
+            </div>
+            <div style="flex:1 1 130px;display:flex;flex-direction:column;align-items:center;gap:0.3rem;">
+              <span style="display:inline-block;padding:0.35rem 0.9rem;border-radius:999px;border:1.5px solid #f59e0b;background:rgba(245,158,11,0.10);color:#d97706;font-weight:700;font-size:0.85rem;text-align:center;">BRAF 陰性 (−)</span>
+              <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.1rem 0;">↓</div>
+              <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #f59e0b;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+                <div style="padding:0.55rem 0.9rem;text-align:center;background:rgba(245,158,11,0.10);">
+                  <div style="font-weight:700;color:#d97706;">FTC / FA</div>
+                  <div style="font-size:0.76rem;color:var(--vp-c-text-3);">術後病理確診</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+::: tip 判讀要點
+本流程用於**細胞學無法定性**時，以血清／分子標記輔助鑑別：**Calcitonin ↑↑** → **MTC**（C 細胞來源，查 CEA、RET）。Calcitonin 正常者以 **Anti-TPO** 分流：**陽性**且 Hashimoto's 背景合併快速腫大 → 疑 **甲狀腺淋巴瘤**（LDH↑、假囊狀超音波、流式細胞術確診）；**陰性**者查 **BRAF V600E**：**陽性 → PTC**、**陰性 → FTC／FA**（濾泡型病灶良惡性須靠**術後病理**判斷包膜／血管侵犯，分子檢測無法區分）。
+:::
+
 ## 1. Follicular Adenoma（濾泡性腺瘤）— 良性
 
 ### Introduction

@@ -11,6 +11,76 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 
 音聲障礙（dysphonia）指因聲帶結構、神經支配、或功能使用不當導致的聲音品質異常。依病因可分為**功能性**（muscle tension dysphonia, psychogenic）、**器質性**（聲帶結節、息肉、溝狀聲帶、單側聲帶麻痺、喉萎縮）及**神經性**（痙攣性發聲障礙、聲帶震顫）。嗓音復健透過**行為治療**、**手術矯正**及**藥物治療**三者相輔，目標為恢復有效且可持續的發聲功能。
 
+## Rehabilitation Flowchart（復健流程）
+
+<div style="margin:1.75rem 0;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.5rem;border-radius:999px;background:var(--vp-c-brand-1);color:#fff;font-weight:700;letter-spacing:0.02em;">Dysphonia 音聲障礙</span>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
+  <div style="border:1.5px dashed #14b8a6;border-radius:14px;padding:1rem 0.85rem;background:rgba(20,184,166,0.05);">
+    <div style="text-align:center;color:var(--vp-c-text-2);font-weight:600;font-size:0.85rem;">病史 ＋ 喉鏡檢查 History + Laryngoscopy</div>
+    <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.2rem 0 0.55rem;">↓</div>
+    <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;justify-content:center;">
+      <div style="flex:1 1 220px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+        <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #f59e0b;background:rgba(245,158,11,0.10);color:#d97706;font-weight:700;font-size:0.9rem;text-align:center;">Organic 器質性</span>
+        <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.1rem 0;">↓</div>
+        <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #f59e0b;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.55rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(245,158,11,0.10);">
+            <div style="font-weight:700;color:#d97706;">治療 Treatment</div>
+          </div>
+          <ul style="list-style:none;margin:0;padding:0.6rem 0.9rem;">
+            <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;flex:none;margin-top:0.42rem;"></span><span>Surgery 手術（phonosurgery）</span></li>
+            <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;flex:none;margin-top:0.42rem;"></span><span>Voice therapy 嗓音治療</span></li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex:1 1 220px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+        <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #0ea5e9;background:rgba(14,165,233,0.09);color:#0284c7;font-weight:700;font-size:0.9rem;text-align:center;">Functional 功能性</span>
+        <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.1rem 0;">↓</div>
+        <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #0ea5e9;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.55rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(14,165,233,0.09);">
+            <div style="font-weight:700;color:#0284c7;">治療 Treatment</div>
+          </div>
+          <ul style="list-style:none;margin:0;padding:0.6rem 0.9rem;">
+            <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#0ea5e9;flex:none;margin-top:0.42rem;"></span><span>Voice therapy 嗓音治療（第一線）</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.4rem 0;">↓</div>
+  <div style="border:1.5px dashed #6366f1;border-radius:14px;padding:1rem 0.85rem;background:rgba(99,102,241,0.05);">
+    <div style="text-align:center;color:var(--vp-c-text-2);font-weight:600;font-size:0.85rem;margin-bottom:0.5rem;">治療後再評估 After Treatment, Re-evaluate</div>
+    <div style="display:flex;justify-content:center;">
+      <span style="display:inline-block;padding:0.4rem 1.2rem;border-radius:999px;border:1.5px solid #6366f1;background:rgba(99,102,241,0.10);color:#6366f1;font-weight:700;font-size:0.9rem;text-align:center;">再評估 Re-evaluate</span>
+    </div>
+    <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.2rem 0;">↓</div>
+    <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;justify-content:center;">
+      <div style="flex:1 1 220px;display:flex;flex-direction:column;align-items:center;gap:0.3rem;">
+        <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #10b981;background:rgba(16,185,129,0.10);color:#10b981;font-weight:700;font-size:0.9rem;text-align:center;">Improved 改善</span>
+        <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.1rem 0;">↓</div>
+        <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #10b981;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.55rem 0.9rem;text-align:center;background:rgba(16,185,129,0.10);">
+            <div style="font-weight:700;color:#10b981;">Discharge 結案</div>
+            <div style="font-size:0.76rem;color:var(--vp-c-text-3);">療效達標、追蹤結案</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1 1 220px;display:flex;flex-direction:column;align-items:center;gap:0.3rem;">
+        <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #ef4444;background:rgba(239,68,68,0.08);color:#ef4444;font-weight:700;font-size:0.9rem;text-align:center;">Persistent 持續</span>
+        <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.1rem 0;">↓</div>
+        <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #ef4444;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.55rem 0.9rem;text-align:center;background:rgba(239,68,68,0.08);">
+            <div style="font-weight:700;color:#dc2626;">重新評估診斷 ± 手術</div>
+            <div style="font-size:0.76rem;color:var(--vp-c-text-3);">Re-evaluate diagnosis ± surgery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Vocal Function & Biomechanics（發聲機能與生物力學）
 
 | 機制                 | 描述                                                                 |
@@ -171,23 +241,6 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 
 - **特徵**：男性持續使用青春期前高頻假聲，頸部肌肉緊張
 - **治療**：Digital laryngeal manipulation + yawn-sigh technique + 咳嗽引導自然低頻
-
-## Rehabilitation Flowchart
-
-```
- Dysphonia
-   ├── History + Laryngoscopy
-   │
-   ├── Organic
-   │    ├── Surgery
-   │    └── Voice therapy
-   │
-   └── Functional → Voice therapy
-
- After treatment, re-evaluate
-   ├── Improved → Discharge
-   └── Persistent → Re-evaluate diagnosis ± surgery
-```
 
 ## Outcome Measures（療效評估）
 

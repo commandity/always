@@ -1,0 +1,28 @@
+Shoulder Pain + Supraspinatus Nodule in a Hemodialysis Patient
+Key fact: Access arm + dialysis changes the differential
+Possible Cause Clues How to Differentiate
+Dialysis-related amyloidosis (DRA) ⭐ most likely Long-term HD; palpable nodule at supraspinatus ("shoulder pad sign"); ± carpal tunnel US: thickened hypoechoic supraspinatus tendon, nodular deposits; MRI: low-signal β2M amyloid deposits; serum β2-microglobulin elevated
+Calcific tendinitis (metastatic calcification) CKD-MBD: high Ca×P, high PTH X-ray: cloudy calcification in supraspinatus tendon; US: hyperechoic focus ± acoustic shadow
+Rotator cuff tear Weakness, painful arc, + drop arm test US: tendon discontinuity, gap; MRI confirms full/partial tear
+Impingement / bursitis Painful arc, Neer/Hawkins + US: subacromial-subdeltoid bursa fluid, no intrinsic tendon deposit
+Septic arthritis (higher risk in HD) Fever, erythema, limited ROM, ↑ CRP/PCT US + aspiration: culture, WBC count
+Gout / pseudogout Flare pattern, hyperuricemia, tophus US: double-contour sign or CPPD; aspiration: monosodium urate or CPPD crystals
+Diagnostic algorithm
+
+1. X-ray shoulder (AP, axillary, Y-view) → calcifications, erosions, joint space
+2. Ultrasound (linear probe, 7–12 MHz) → most useful single test
+   - Measure supraspinatus tendon thickness (normal <7 mm; DRA >8 mm)
+   - Nodule: echogenicity, shadowing, vascularity, compressibility
+   - Assess bursa, tear, calcifications
+3. Lab: Ca, P, PTH, β2-microglobulin, CRP, ESR, uric acid, CBC
+4. MRI if US inconclusive (soft tissue mass characterization, rule out abscess or tumor)
+   Treatment
+   Cause Treatment
+   DRA Optimize dialysis (high-flux, HDF, longer session); kidney transplant is definitive; NSAIDs cautiously; PT; local steroid injection only for severe pain (infection risk)
+   Calcific tendinitis NSAIDs, PT, ESWT, US-guided barbotage/needling
+   Rotator cuff tear PT; steroid injection (single, strict sterile); consider surgical repair if acute/functional deficit
+   Bursitis/impingement PT, subacromial steroid injection, activity modification
+   Septic Urgent aspiration → IV antibiotics, ortho consult
+   Gout/pseudogout Colchicine (adjust for CKD), steroid, ± allopurinol
+   Bottom line
+   In an HD patient with ipsilateral arm, dialysis-related amyloidosis (DRA) is the top suspect — especially if the nodule is firm, non-tender, and the tendon feels thickened on US. Exclude calcific tendinitis on X-ray/US first. If uncertain, MRI with contrast. Avoid routine steroid injections in HD patients unless necessary (infection risk).

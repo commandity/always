@@ -226,18 +226,69 @@ flowchart TD
 
 ## TG 高於 500 mg/dL 治療流程
 
-```mermaid
-flowchart TD
-    A[TG ≥ 500 mg/dL] --> B[排除次要原因:\n未控制 DM / 飲酒 / 藥物（Corticosteroid, HRT, β-blocker, Thiazide）\n甲狀腺低下 / 腎病 / 肝病]
-    B --> C[立即開始 Fibrate]
-    C --> D{Fenofibrate 可用?}
-    D -->|是| E[Fenofibrate 145 mg QD]
-    D -->|否| F[Gemfibrozil 600 mg BID\n（注意不可與 Statin 併用）]
-    E --> G[若 TG 仍 > 500:\n加 Omega-3 2-4 g/day]
-    F --> G
-    G --> H[目標 TG < 500 mg/dL\n（預防胰臟炎）]
-    H --> I[TG < 500 穩定後:\n評估是否需要 Statin\n（依 ASCVD 風險）]
-```
+<div style="margin:1.75rem 0;display:flex;flex-direction:column;align-items:center;">
+  <span style="display:inline-block;padding:0.45rem 1.5rem;border-radius:999px;background:var(--vp-c-brand-1);color:#fff;font-weight:700;letter-spacing:0.02em;">TG ≥ 500 mg/dL</span>
+  <div style="color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.25rem 0;">↓</div>
+  <div style="width:100%;max-width:480px;border:1px solid var(--vp-c-divider);border-top:4px solid #f59e0b;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+    <div style="padding:0.55rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(245,158,11,0.10);">
+      <div style="font-weight:700;color:#d97706;">排除次要原因 Exclude Secondary Causes</div>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0.6rem 0.9rem;">
+      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;flex:none;margin-top:0.42rem;"></span><span>未控制糖尿病 Uncontrolled DM</span></li>
+      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;flex:none;margin-top:0.42rem;"></span><span>飲酒 Alcohol</span></li>
+      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;flex:none;margin-top:0.42rem;"></span><span>藥物 Drugs：Corticosteroid、HRT、β-blocker、Thiazide</span></li>
+      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;flex:none;margin-top:0.42rem;"></span><span>甲狀腺低下 Hypothyroidism</span></li>
+      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;flex:none;margin-top:0.42rem;"></span><span>腎病 / 肝病 Renal / Liver disease</span></li>
+    </ul>
+  </div>
+  <div style="color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.25rem 0;">↓</div>
+  <span style="display:inline-block;padding:0.4rem 1.2rem;border-radius:999px;border:1.5px solid #8b5cf6;background:rgba(139,92,246,0.10);color:#8b5cf6;font-weight:700;font-size:0.9rem;text-align:center;">立即開始 Fibrate Start Fibrate</span>
+  <div style="color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.25rem 0;">↓</div>
+  <span style="display:inline-block;padding:0.4rem 1.2rem;border-radius:999px;border:1.5px solid #6366f1;background:rgba(99,102,241,0.10);color:#6366f1;font-weight:700;font-size:0.9rem;text-align:center;">Fenofibrate 可用？Available?</span>
+  <div style="color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.25rem 0;">↓</div>
+  <div style="width:100%;max-width:520px;display:flex;flex-wrap:wrap;gap:1rem;align-items:stretch;justify-content:center;">
+    <div style="flex:1 1 210px;border:1px solid var(--vp-c-divider);border-top:4px solid #10b981;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+      <div style="padding:0.5rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(16,185,129,0.10);">
+        <div style="font-weight:700;color:#10b981;">是 Yes</div>
+      </div>
+      <div style="padding:0.6rem 0.9rem;text-align:center;">
+        <div style="font-weight:700;color:var(--vp-c-text-1);">Fenofibrate</div>
+        <div style="font-size:0.82rem;color:var(--vp-c-text-2);">145 mg QD</div>
+      </div>
+    </div>
+    <div style="flex:1 1 210px;border:1px solid var(--vp-c-divider);border-top:4px solid #f59e0b;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+      <div style="padding:0.5rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(245,158,11,0.10);">
+        <div style="font-weight:700;color:#d97706;">否 No</div>
+      </div>
+      <div style="padding:0.6rem 0.9rem;text-align:center;">
+        <div style="font-weight:700;color:var(--vp-c-text-1);">Gemfibrozil</div>
+        <div style="font-size:0.82rem;color:var(--vp-c-text-2);">600 mg BID</div>
+        <div style="font-size:0.76rem;color:#dc2626;font-weight:600;margin-top:0.3rem;">⚠ 不可與 Statin 併用</div>
+      </div>
+    </div>
+  </div>
+  <div style="color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.25rem 0;">↓</div>
+  <div style="width:100%;max-width:480px;border:1px solid var(--vp-c-divider);border-top:4px solid #0ea5e9;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+    <div style="padding:0.55rem 0.9rem;text-align:center;background:rgba(14,165,233,0.09);">
+      <div style="font-weight:700;color:#0284c7;">加 Omega-3 2–4 g/day</div>
+      <div style="font-size:0.76rem;color:var(--vp-c-text-3);">若 TG 仍 &gt; 500 mg/dL</div>
+    </div>
+  </div>
+  <div style="color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.25rem 0;">↓</div>
+  <div style="width:100%;max-width:480px;border:1.5px solid #10b981;border-radius:12px;background:rgba(16,185,129,0.08);overflow:hidden;">
+    <div style="padding:0.6rem 0.9rem;text-align:center;">
+      <div style="font-weight:800;color:#10b981;">🎯 目標 TG &lt; 500 mg/dL</div>
+      <div style="font-size:0.78rem;color:var(--vp-c-text-2);">預防胰臟炎 Prevent pancreatitis</div>
+    </div>
+  </div>
+  <div style="color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.25rem 0;">↓</div>
+  <div style="width:100%;max-width:480px;border:1px solid var(--vp-c-divider);border-top:4px solid #6366f1;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+    <div style="padding:0.55rem 0.9rem;text-align:center;background:rgba(99,102,241,0.08);">
+      <div style="font-weight:700;color:#6366f1;">TG &lt; 500 穩定後：評估是否需要 Statin</div>
+      <div style="font-size:0.76rem;color:var(--vp-c-text-3);">依 ASCVD 風險 · Assess statin per ASCVD risk</div>
+    </div>
+  </div>
+</div>
 
 ## 監測規定
 

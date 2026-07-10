@@ -1,0 +1,37 @@
+Prolotherapy for Shoulder / Supraspinatus
+Mechanism
+Inject a proliferant (typically hypertonic dextrose) at tendon/ligament entheses → local inflammation → growth factor recruitment → collagen remodeling. Not instant; requires 3–6 sessions.
+Typical protocol (supraspinatus insertion)
+Step	Detail
+Solution	12.5–25% dextrose (1 part D50 + 1–3 parts 1% lidocaine or saline)
+Volume	1–3 mL total per session
+Needle	27G × 1.5" (or 25G for deeper)
+Frequency	Every 3–4 weeks × 3–6 sessions
+---	---
+Technique (US-guided, in-plane approach)
+1. Position: Patient seated, hand behind back (supraspinatus exposed anteriorly) or arm adducted across chest.
+2. Target: Greater tuberosity enthesis (supraspinatus footprint) + tendon substance where thickened/defective.
+3. Inject in 3–4 aliquots (peppering technique):
+   - 0.5–1 mL at the bony insertion (periosteal peel)
+   - 0.5 mL into the tendon midsubstance (avoid intratendinous high-pressure — painful)
+   - 0.5 mL at the bursal surface (subacromial space)
+4. Post-injection: Soreness for 24–72 h (expected inflammatory response). Ice, acetaminophen only (avoid NSAIDs — they defeat the purpose).
+For DRA (β2M amyloid) specifically
+Factor	Consideration
+Efficacy	Limited data. Dextrose stimulates collagen, but DRA is amyloid infiltration, not tendinosis — less responsive
+Alternative	PRP likely better (growth factors active on degenerate tissue)
+Practical	If you try dextrose: 15% × 2–3 mL, same technique; temper expectations
+Key precautions (HD patient)
+- ✅ Acetaminophen for post-procedure pain
+- ❌ Avoid NSAIDs for 7–10 days post-injection (they block the proliferant response — the whole point)
+- ✅ Sterile technique mandatory (immunocompromised + fistula)
+- ✅ HD timing: inject non-HD day (no heparin overlap, less bleeding)
+- ✅ Fistula arm: inject lateral/posterior supraspinatus, avoid medial approach near cephalic vein
+- ⚠️ Do not inject if active infection, cellulitis, or bacteremia
+Expected timeline
+Session	Effect
+1–2	Increased soreness, minimal improvement
+3–4	Pain starts to reduce
+5–6	Max benefit; may repeat q6–12 months PRN
+If no response after 4 sessions
+→ Reconsider diagnosis: full-thickness tear? glenohumeral arthritis? cervical radiculopathy? DRA severe → transplant evaluation.

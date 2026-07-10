@@ -27,7 +27,7 @@ title: 甲狀腺炎 — 急性／亞急性／慢性／Hashimoto 鑑別診斷與�
   </div>
   <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
   <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;">
-    <div style="flex:2 1 340px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+    <div style="flex:2 1 340px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;border:1.5px dashed #f87171;border-radius:14px;padding:0.9rem 0.85rem;background:rgba(239,68,68,0.04);">
       <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #ef4444;background:rgba(239,68,68,0.08);color:#ef4444;font-weight:700;font-size:0.9rem;text-align:center;">TSH ↓　甲狀腺毒症 Thyrotoxicosis</span>
       <div style="color:var(--vp-c-text-3);font-size:0.8rem;line-height:1.25;text-align:center;">↓ 測 RAIU 放射碘攝取率</div>
       <div style="display:flex;flex-wrap:wrap;gap:1rem;width:100%;">

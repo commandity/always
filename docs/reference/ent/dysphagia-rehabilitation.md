@@ -11,6 +11,64 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 
 吞嚥障礙（dysphagia）指食物或液體從口腔到胃部運輸過程中任一階段發生困難，可分為**口咽性（oropharyngeal）**及**食道性（esophageal）**。口咽性吞嚥障礙最為常見，與吸入性肺炎、營養不良、脫水、生活品質下降及死亡率增加密切相關。吞嚥復健整合代償策略、行為治療、神經肌肉訓練及手術介入，目標為恢復安全且足夠的經口進食。
 
+## Rehabilitation Flowchart（復健流程）
+
+<div style="margin:1.75rem 0;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.5rem;border-radius:999px;background:var(--vp-c-brand-1);color:#fff;font-weight:700;letter-spacing:0.02em;">Dysphagia identified 確認吞嚥障礙</span>
+  </div>
+  <div style="text-align:center;color:var(--vp-c-text-2);font-weight:600;font-size:0.85rem;margin:0.35rem 0 0.1rem;">↓ EAT-10 篩檢 Screening</div>
+  <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;justify-content:center;">
+    <div style="flex:1 1 190px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #10b981;background:rgba(16,185,129,0.10);color:#10b981;font-weight:700;font-size:0.9rem;text-align:center;">EAT-10 ≤ 2</span>
+      <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.1rem 0;">↓</div>
+      <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #10b981;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="padding:0.55rem 0.9rem;text-align:center;background:rgba(16,185,129,0.10);">
+          <div style="font-weight:700;color:#10b981;">Monitor 監測追蹤</div>
+          <div style="font-size:0.76rem;color:var(--vp-c-text-3);">低風險・定期追蹤</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:2.6 1 440px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;border:1.5px dashed #f59e0b;border-radius:14px;padding:0.9rem 0.85rem;background:rgba(245,158,11,0.05);">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #f59e0b;background:rgba(245,158,11,0.10);color:#d97706;font-weight:700;font-size:0.9rem;text-align:center;">EAT-10 &gt; 2 ／隱性吸入 Silent aspiration</span>
+      <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.05rem 0;">↓</div>
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #6366f1;background:rgba(99,102,241,0.10);color:#6366f1;font-weight:700;font-size:0.9rem;text-align:center;">VFSS / FEES 儀器評估</span>
+      <div style="text-align:center;color:var(--vp-c-text-3);font-size:0.8rem;line-height:1.25;margin:0.05rem 0;">↓ PAS 分級 Grading</div>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;width:100%;">
+        <div style="flex:1.5 1 250px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+          <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #0ea5e9;background:rgba(14,165,233,0.09);color:#0284c7;font-weight:700;font-size:0.9rem;text-align:center;">PAS 1–3 低吸入風險</span>
+          <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.05rem 0;">↓</div>
+          <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #0ea5e9;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+            <div style="padding:0.55rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(14,165,233,0.09);">
+              <div style="font-weight:700;color:#0284c7;">管理 Management</div>
+            </div>
+            <ul style="list-style:none;margin:0;padding:0.6rem 0.9rem;">
+              <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#0ea5e9;flex:none;margin-top:0.42rem;"></span><span>Compensatory + monitoring 代償策略＋監測</span></li>
+              <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#0ea5e9;flex:none;margin-top:0.42rem;"></span><span>Oral trial → Discharge 口腔進食試驗 → 結案</span></li>
+              <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#0ea5e9;flex:none;margin-top:0.42rem;"></span><span>Rehab exercises 復健訓練</span></li>
+              <li style="padding:0.1rem 0 0.1rem 1.2rem;display:flex;align-items:flex-start;gap:0.4rem;font-size:0.8rem;color:var(--vp-c-text-2);"><span style="color:#10b981;">↳</span><span><strong style="color:#10b981;">Improved 改善</strong> → Diet upgrade 飲食升級</span></li>
+              <li style="padding:0.1rem 0 0.1rem 1.2rem;display:flex;align-items:flex-start;gap:0.4rem;font-size:0.8rem;color:var(--vp-c-text-2);"><span style="color:#f59e0b;">↳</span><span><strong style="color:#d97706;">Not improved 未改善</strong> → Repeat VFSS ± escalate 重複 VFSS ± 升級</span></li>
+            </ul>
+          </div>
+        </div>
+        <div style="flex:1 1 190px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+          <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #ef4444;background:rgba(239,68,68,0.08);color:#ef4444;font-weight:700;font-size:0.9rem;text-align:center;">PAS 4–8 高吸入風險</span>
+          <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.05rem 0;">↓</div>
+          <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #ef4444;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+            <div style="padding:0.55rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(239,68,68,0.08);">
+              <div style="font-weight:700;color:#dc2626;">外科／內科會診</div>
+              <div style="font-size:0.76rem;color:var(--vp-c-text-3);">Surgical / medical consult</div>
+            </div>
+            <ul style="list-style:none;margin:0;padding:0.6rem 0.9rem;">
+              <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;"><span style="width:6px;height:6px;border-radius:50%;background:#ef4444;flex:none;margin-top:0.42rem;"></span><span>Continue management 持續管理</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Phases of Swallowing（吞嚥四期）
 
 | 期別                 | 時間       | 關鍵事件                                                  | 神經控制                                 |
@@ -230,25 +288,6 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
   - 中期：食物質地調整（IDDSI）、姿勢代償、訓練照護者餵食技巧
   - 晚期：comfort feeding、PEG 討論（倫理考量→需權衡生活品質）
   - 避免：強迫進食、behavioral dysphagia 惡化
-
-## Rehabilitation Flowchart
-
-```
- Dysphagia identified
-   ├── EAT-10 ≤2 → Monitor
-   └── EAT-10 >2 / silent aspiration → VFSS/FEES
-                    ├── PAS 1-3
-                    │    ├── Compensatory + monitoring
-                    │    ├── Rehab exercises
-                    │    │    ├── Improved → Diet upgrade
-                    │    │    └── Not improved → Repeat VFSS
-                    │    │                      ± escalate
-                    │    │
-                    │    └── Oral trial → Discharge
-                    │
-                    └── PAS 4-8 → Surgical / medical consult
-                                  └── Continue management
-```
 
 ## Outcome Measures（療效評估）
 

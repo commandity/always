@@ -2,6 +2,7 @@ import { createContentLoader, defineConfig } from "vitepress";
 import { createHash } from "node:crypto";
 
 export default defineConfig({
+  base: "/always/",
   appearance: true,
   ignoreDeadLinks: true,
   // ── Site metadata ──────────────────────────────────────────────

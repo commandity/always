@@ -883,6 +883,11 @@ html {
   color: var(--vp-c-text-2) !important;
 }
 
+/* Remove the upper-right score badge from every calculator tool header */
+.score-badge {
+  display: none !important;
+}
+
 /* Badge / score label */
 .score-label {
   font-size: 0.75rem !important;

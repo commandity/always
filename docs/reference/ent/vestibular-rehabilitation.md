@@ -230,36 +230,36 @@ _圖 2：左轉 5 圈。腳步沿逆時針方向，動作要領相同，方向�
   <!-- Footstep A1 -->
   <g transform="translate(65,78)">
     <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
-    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
-      <g transform="scale(0.33)">
-        <path fill="#ef4444" d="M18.71,34.42"/>
-        <path fill="#ef4444" d="M18.98,39.86"/>
-        <path fill="#ef4444" d="M41.59,34.99"/>
-        <path fill="#ef4444" d="M56.68,39.05"/>
+    <svg x="3" y="3" width="14" height="14" viewBox="0 0 60.4 54.74">
+      <g transform="rotate(90, 30.2, 27.37) translate(30.2, 27.37) scale(0.9) translate(-30.2, -27.37)">
+        <path fill="#ef4444" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#ef4444" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#ef4444" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#ef4444" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
   </g>
   <!-- Footstep A2 -->
   <g transform="translate(100,78)">
     <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
-    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
-      <g transform="scale(0.33)">
-        <path fill="#ef4444" d="M18.71,34.42"/>
-        <path fill="#ef4444" d="M18.98,39.86"/>
-        <path fill="#ef4444" d="M41.59,34.99"/>
-        <path fill="#ef4444" d="M56.68,39.05"/>
+    <svg x="3" y="3" width="14" height="14" viewBox="0 0 60.4 54.74">
+      <g transform="rotate(90, 30.2, 27.37) translate(30.2, 27.37) scale(0.9) translate(-30.2, -27.37)">
+        <path fill="#ef4444" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#ef4444" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#ef4444" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#ef4444" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
   </g>
   <!-- Footstep A3 -->
   <g transform="translate(135,78)">
     <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
-    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
-      <g transform="scale(0.33)">
-        <path fill="#ef4444" d="M18.71,34.42"/>
-        <path fill="#ef4444" d="M18.98,39.86"/>
-        <path fill="#ef4444" d="M41.59,34.99"/>
-        <path fill="#ef4444" d="M56.68,39.05"/>
+    <svg x="3" y="3" width="14" height="14" viewBox="0 0 60.4 54.74">
+      <g transform="rotate(90, 30.2, 27.37) translate(30.2, 27.37) scale(0.9) translate(-30.2, -27.37)">
+        <path fill="#ef4444" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#ef4444" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#ef4444" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#ef4444" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
   </g>
@@ -282,24 +282,24 @@ _圖 2：左轉 5 圈。腳步沿逆時針方向，動作要領相同，方向�
   <!-- Footstep B1 -->
   <g transform="translate(220,78)">
     <circle cx="15" cy="15" r="15" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
-    <svg x="2" y="7" width="26" height="23" viewBox="0 0 60.4 54.74">
-      <g transform="scale(0.43)">
-        <path fill="#3b82f6" d="M18.71,34.42"/>
-        <path fill="#3b82f6" d="M18.98,39.86"/>
-        <path fill="#3b82f6" d="M41.59,34.99"/>
-        <path fill="#3b82f6" d="M56.68,39.05"/>
+    <svg x="3" y="3" width="24" height="24" viewBox="0 0 60.4 54.74">
+      <g transform="rotate(90, 30.2, 27.37) translate(30.2, 27.37) scale(0.9) translate(-30.2, -27.37)">
+        <path fill="#3b82f6" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#3b82f6" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#3b82f6" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#3b82f6" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
   </g>
   <!-- Footstep B2 -->
   <g transform="translate(290,78)">
     <circle cx="15" cy="15" r="15" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
-    <svg x="2" y="7" width="26" height="23" viewBox="0 0 60.4 54.74">
-      <g transform="scale(0.43)">
-        <path fill="#3b82f6" d="M18.71,34.42"/>
-        <path fill="#3b82f6" d="M18.98,39.86"/>
-        <path fill="#3b82f6" d="M41.59,34.99"/>
-        <path fill="#3b82f6" d="M56.68,39.05"/>
+    <svg x="3" y="3" width="24" height="24" viewBox="0 0 60.4 54.74">
+      <g transform="rotate(90, 30.2, 27.37) translate(30.2, 27.37) scale(0.9) translate(-30.2, -27.37)">
+        <path fill="#3b82f6" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#3b82f6" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#3b82f6" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#3b82f6" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
   </g>
@@ -317,34 +317,34 @@ _圖 2：左轉 5 圈。腳步沿逆時針方向，動作要領相同，方向�
   <!-- Footstep C1 -->
   <g transform="translate(400,78)">
     <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
-    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
-      <g transform="scale(0.33)">
-        <path fill="#ef4444" d="M18.71,34.42"/>
-        <path fill="#ef4444" d="M18.98,39.86"/>
-        <path fill="#ef4444" d="M41.59,34.99"/>
-        <path fill="#ef4444" d="M56.68,39.05"/>
+    <svg x="3" y="3" width="14" height="14" viewBox="0 0 60.4 54.74">
+      <g transform="rotate(90, 30.2, 27.37) translate(30.2, 27.37) scale(0.9) translate(-30.2, -27.37)">
+        <path fill="#ef4444" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#ef4444" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#ef4444" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#ef4444" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
   </g>
   <g transform="translate(435,78)">
     <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
-    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
-      <g transform="scale(0.33)">
-        <path fill="#ef4444" d="M18.71,34.42"/>
-        <path fill="#ef4444" d="M18.98,39.86"/>
-        <path fill="#ef4444" d="M41.59,34.99"/>
-        <path fill="#ef4444" d="M56.68,39.05"/>
+    <svg x="3" y="3" width="14" height="14" viewBox="0 0 60.4 54.74">
+      <g transform="rotate(90, 30.2, 27.37) translate(30.2, 27.37) scale(0.9) translate(-30.2, -27.37)">
+        <path fill="#ef4444" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#ef4444" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#ef4444" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#ef4444" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
   </g>
   <g transform="translate(470,78)">
     <circle cx="10" cy="10" r="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
-    <svg x="0" y="4" width="20" height="18" viewBox="0 0 60.4 54.74">
-      <g transform="scale(0.33)">
-        <path fill="#ef4444" d="M18.71,34.42"/>
-        <path fill="#ef4444" d="M18.98,39.86"/>
-        <path fill="#ef4444" d="M41.59,34.99"/>
-        <path fill="#ef4444" d="M56.68,39.05"/>
+    <svg x="3" y="3" width="14" height="14" viewBox="0 0 60.4 54.74">
+      <g transform="rotate(90, 30.2, 27.37) translate(30.2, 27.37) scale(0.9) translate(-30.2, -27.37)">
+        <path fill="#ef4444" d="M18.71,34.42c-4.43,1.77-10.14,1.64-14.36.79C.54,34.45-4.28,12.41,7.07,2.37c3.92-3.47,10.74-2.7,14.58-.41,6.95,4.14,8.24,20.05.59,25.73l-3.53,6.73Z"/>
+        <path fill="#ef4444" d="M18.98,39.86c4.56,1.57,2.45,11.45-1.87,13.59-4.72,2.35-11.43,1.83-13.74-4.44-1-2.72-.19-6.48-.03-9.67,4.63.65,10-1.42,15.64.52Z"/>
+        <path fill="#ef4444" d="M41.59,34.99c-1.49-2.75-2.49-7.01-5.08-8.99-5.48-4.2-5.51-21.99,4.6-25.21,6.04-1.93,12.24,0,15.63,6.03,4.77,8.46,4.59,18.98,1.16,28.45-5.02.38-10.95.96-16.31-.27Z"/>
+        <path fill="#ef4444" d="M56.68,39.05c.61,3.73.85,6.75-.16,9.84-1.97,6-8.89,6.82-13.9,4.15-4.21-2.25-5.8-11.65-1.16-14.15l15.23.17Z"/>
       </g>
     </svg>
   </g>
@@ -388,15 +388,12 @@ _圖 3：快步（0.5 秒／步）與慢步（2 秒／步）交替節奏。快�
 <div style="text-align:center; margin: 1.5rem 0;">
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" style="display:block; margin:auto; font-family:sans-serif;">
-
   <!-- LEFT PANEL -->
   <rect x="10" y="10" width="280" height="270" rx="10" fill="#fff5f5" stroke="#fc8181" stroke-width="1.5"/>
   <text x="150" y="35" text-anchor="middle" font-size="14" fill="#e53e3e" font-weight="bold">踏步轉身 + 左右擺頭</text>
-
   <!-- turning arc -->
   <path d="M 60,220 C 35,180 45,125 80,95 C 120,60 180,70 210,80" fill="none" stroke="#fc8181" stroke-width="2" stroke-dasharray="6,4"/>
   <polygon points="208,76 215,85 200,84" fill="#fc8181"/>
-
   <!-- footsteps on arc -->
   <ellipse cx="55" cy="210" rx="8" ry="5" fill="#fc8181" transform="rotate(-65,55,210)" opacity="0.45"/>
   <ellipse cx="42" cy="175" rx="8" ry="5" fill="#fc8181" transform="rotate(-45,42,175)" opacity="0.45"/>
@@ -405,7 +402,6 @@ _圖 3：快步（0.5 秒／步）與慢步（2 秒／步）交替節奏。快�
   <ellipse cx="112" cy="95" rx="8" ry="5" fill="#fc8181" transform="rotate(18,112,95)" opacity="0.45"/>
   <ellipse cx="150" cy="80" rx="8" ry="5" fill="#fc8181" transform="rotate(28,150,80)" opacity="0.45"/>
   <ellipse cx="192" cy="74" rx="8" ry="5" fill="#fc8181" transform="rotate(30,192,74)" opacity="0.45"/>
-
   <!-- figure -->
   <g transform="translate(90,160)">
     <rect x="-14" y="-20" width="28" height="44" rx="8" fill="#fed7d7" stroke="#e53e3e" stroke-width="1.5"/>
@@ -414,38 +410,29 @@ _圖 3：快步（0.5 秒／步）與慢步（2 秒／步）交替節奏。快�
     <circle cx="7" cy="-38" r="14" fill="#fed7d7" stroke="#e53e3e" stroke-width="1.5"/>
     <path d="M 16,-44 Q 22,-40 20,-34 Q 18,-30 16,-27" fill="none" stroke="#e53e3e" stroke-width="1.5" stroke-linecap="round"/>
     <circle cx="16" cy="-40" r="2" fill="#e53e3e"/>
-
-    <!-- head shake -->
-    <path d="M -18,-38 C -32,-46 -32,-30 -18,-38" fill="none" stroke="#e53e3e" stroke-width="2" stroke-linecap="round"/>
-    <polygon points="-18,-42 -26,-38 -18,-34" fill="#e53e3e"/>
-    <path d="M 34,-38 C 48,-46 48,-30 34,-38" fill="none" stroke="#e53e3e" stroke-width="2" stroke-linecap="round"/>
-    <polygon points="34,-42 42,-38 34,-34" fill="#e53e3e"/>
-    <text x="-28" y="-54" text-anchor="middle" font-size="10" fill="#e53e3e" font-weight="bold">左右</text>
-
+    <!-- head shake: arc over head, arrowheads both ends -->
+    <path d="M -14,-48 A 21,21 0 0 1 28,-48" fill="none" stroke="#e53e3e" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="-18,-48 -10,-48 -14,-39" fill="#e53e3e"/>
+    <polygon points="24,-48 32,-48 28,-39" fill="#e53e3e"/>
+    <text x="50" y="-54" text-anchor="middle" font-size="10" fill="#e53e3e" font-weight="bold">左右</text>
     <line x1="-6" y1="24" x2="-12" y2="44" stroke="#e53e3e" stroke-width="2.5" stroke-linecap="round"/>
     <line x1="6" y1="24" x2="12" y2="44" stroke="#e53e3e" stroke-width="2.5" stroke-linecap="round"/>
-    <ellipse cx="-20" cy="18" rx="9" ry="5" fill="#e53e3e" transform="rotate(-20,-20,18)" opacity="0.6"/>
-    <ellipse cx="16" cy="16" rx="9" ry="5" fill="#e53e3e" transform="rotate(15,16,16)" opacity="0.6"/>
-
+    <ellipse cx="-15" cy="47" rx="9" ry="5" fill="#e53e3e" transform="rotate(-15,-15,47)" opacity="0.6"/>
+    <ellipse cx="15" cy="47" rx="9" ry="5" fill="#e53e3e" transform="rotate(15,15,47)" opacity="0.6"/>
     <!-- turn arrow -->
     <path d="M 34,-4 A 36,36 0 0,1 -28,-4" fill="none" stroke="#fc8181" stroke-width="1.8" stroke-dasharray="4,3"/>
     <polygon points="-32,-6 -26,0 -28,-10" fill="#fc8181"/>
     <text x="44" y="4" font-size="10" fill="#fc8181">轉身</text>
-
   </g>
-
   <rect x="30" y="245" width="220" height="24" rx="6" fill="#fed7d7" stroke="#fc8181" stroke-width="1"/>
   <text x="140" y="261" text-anchor="middle" font-size="10" fill="#e53e3e">踏步 + 轉身 + 頭左右擺</text>
-
   <!-- RIGHT PANEL -->
   <g transform="translate(300,0)">
     <rect x="10" y="10" width="280" height="270" rx="10" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.5"/>
     <text x="150" y="35" text-anchor="middle" font-size="14" fill="#3182ce" font-weight="bold">踏步轉身 + 上下點頭</text>
-
     <!-- turning arc -->
     <path d="M 220,220 C 245,180 235,125 200,95 C 160,60 100,70 70,80" fill="none" stroke="#63b3ed" stroke-width="2" stroke-dasharray="6,4"/>
     <polygon points="72,76 79,85 65,84" fill="#63b3ed"/>
-
     <!-- footsteps on arc -->
     <ellipse cx="225" cy="210" rx="8" ry="5" fill="#63b3ed" transform="rotate(65,225,210)" opacity="0.45"/>
     <ellipse cx="238" cy="175" rx="8" ry="5" fill="#63b3ed" transform="rotate(45,238,175)" opacity="0.45"/>
@@ -454,37 +441,30 @@ _圖 3：快步（0.5 秒／步）與慢步（2 秒／步）交替節奏。快�
     <ellipse cx="168" cy="95" rx="8" ry="5" fill="#63b3ed" transform="rotate(-18,168,95)" opacity="0.45"/>
     <ellipse cx="130" cy="80" rx="8" ry="5" fill="#63b3ed" transform="rotate(-28,130,80)" opacity="0.45"/>
     <ellipse cx="88" cy="74" rx="8" ry="5" fill="#63b3ed" transform="rotate(-30,88,74)" opacity="0.45"/>
-
     <!-- figure -->
     <g transform="translate(170,160)">
       <rect x="-14" y="-20" width="28" height="44" rx="8" fill="#bee3f8" stroke="#3182ce" stroke-width="1.5"/>
       <line x1="-14" y1="-8" x2="-26" y2="4" stroke="#3182ce" stroke-width="2.5" stroke-linecap="round"/>
       <line x1="14" y1="-8" x2="26" y2="6" stroke="#3182ce" stroke-width="2.5" stroke-linecap="round"/>
       <circle cx="7" cy="-38" r="14" fill="#bee3f8" stroke="#3182ce" stroke-width="1.5"/>
-      <path d="M 16,-44 Q 22,-40 20,-34 Q 18,-30 16,-27" fill="none" stroke="#3182ce" stroke-width="1.5" stroke-linecap="round"/>
-      <circle cx="16" cy="-40" r="2" fill="#3182ce"/>
-
-      <!-- head nod -->
-      <path d="M 7,-54 L 7,-64" stroke="#3182ce" stroke-width="2" stroke-linecap="round"/>
-      <polygon points="3,-62 7,-68 11,-62" fill="#3182ce"/>
-      <path d="M 7,-18 L 7,-8" stroke="#3182ce" stroke-width="2" stroke-linecap="round"/>
-      <polygon points="3,-10 7,-4 11,-10" fill="#3182ce"/>
-      <text x="22" y="-46" text-anchor="middle" font-size="10" fill="#3182ce" font-weight="bold">上下</text>
-
+      <path d="M -2,-44 Q -8,-40 -6,-34 Q -4,-30 -2,-27" fill="none" stroke="#3182ce" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="-2" cy="-40" r="2" fill="#3182ce"/>
+      <!-- head nod: arc in front of face, arrowheads both ends -->
+      <path d="M -12,-54 Q -28,-38 -12,-22" fill="none" stroke="#3182ce" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="-16,-53 -8,-53 -12,-62" fill="#3182ce" transform="translate(1,0) rotate(30, -12, -56)"/>
+      <polygon points="-16,-23 -8,-23 -12,-14" fill="#3182ce" transform="translate(1,0) rotate(-30, -12, -20)"/>
+      <text x="-34" y="-54" text-anchor="middle" font-size="10" fill="#3182ce" font-weight="bold">上下</text>
       <line x1="-6" y1="24" x2="-12" y2="44" stroke="#3182ce" stroke-width="2.5" stroke-linecap="round"/>
       <line x1="6" y1="24" x2="12" y2="44" stroke="#3182ce" stroke-width="2.5" stroke-linecap="round"/>
-      <ellipse cx="-20" cy="18" rx="9" ry="5" fill="#3182ce" transform="rotate(-20,-20,18)" opacity="0.6"/>
-      <ellipse cx="16" cy="16" rx="9" ry="5" fill="#3182ce" transform="rotate(15,16,16)" opacity="0.6"/>
-
+      <ellipse cx="-15" cy="47" rx="9" ry="5" fill="#3182ce" transform="rotate(-15,-15,47)" opacity="0.6"/>
+      <ellipse cx="15" cy="47" rx="9" ry="5" fill="#3182ce" transform="rotate(15,15,47)" opacity="0.6"/>
       <!-- turn arrow -->
       <path d="M -28,-4 A 36,36 0 0,0 30,-4" fill="none" stroke="#63b3ed" stroke-width="1.8" stroke-dasharray="4,3"/>
       <polygon points="34,-6 28,0 30,-10" fill="#63b3ed"/>
       <text x="-44" y="4" font-size="10" fill="#63b3ed">轉身</text>
     </g>
-
     <rect x="30" y="245" width="220" height="24" rx="6" fill="#bee3f8" stroke="#63b3ed" stroke-width="1"/>
     <text x="140" y="261" text-anchor="middle" font-size="10" fill="#3182ce">踏步 + 轉身 + 頭上下點</text>
-
   </g>
 </svg>
 

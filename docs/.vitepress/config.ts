@@ -483,6 +483,10 @@ export default defineConfig({
               text: "氣喘（診斷・評估・治療）",
               link: "/reference/chest/asthma",
             },
+            {
+              text: "肺阻塞 COPD（診斷・評估・治療）",
+              link: "/reference/chest/copd",
+            },
           ],
         },
         {

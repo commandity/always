@@ -233,10 +233,14 @@ function reset() {
               step="1"
               class="weight-slider"
             />
-          </div>
-          <div class="weight-ticks">
-            <span>30</span><span>45</span><span>60</span><span>75</span
-            ><span>90</span><span>105</span><span>120</span>
+            <div class="weight-ticks">
+              <span style="left: 0%">30</span><span style="left: 16.7%">45</span
+              ><span style="left: 33.3%">60</span
+              ><span style="left: 50%">75</span
+              ><span style="left: 66.7%">90</span
+              ><span style="left: 83.3%">105</span
+              ><span style="left: 100%">120</span>
+            </div>
           </div>
         </div>
       </div>
@@ -684,7 +688,7 @@ function reset() {
   border: 1px solid var(--vp-c-divider);
   border-radius: 10px;
   background: var(--vp-c-bg-soft);
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1rem 1.8rem;
 }
 .weight-row {
   display: flex;
@@ -722,8 +726,8 @@ function reset() {
 .slider-track {
   position: absolute;
   top: 50%;
-  left: 0;
-  right: 0;
+  left: 11px;
+  right: 11px;
   height: 8px;
   border-radius: 999px;
   background: var(--vp-c-bg-mute);
@@ -784,13 +788,24 @@ function reset() {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 .weight-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: absolute;
+  left: 11px;
+  right: 11px;
+  top: 100%;
+  height: 1.2em;
   font-size: 0.68rem;
   font-weight: 700;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
-  margin-top: 2px;
+}
+.weight-ticks span {
+  position: absolute;
+  transform: translateX(-50%);
+}
+.weight-ticks span:first-child {
+  transform: none;
+}
+.weight-ticks span:last-child {
+  transform: translateX(-100%);
 }
 
 /* ── Item List ─────────────────────────────────────────────────── */

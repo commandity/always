@@ -285,6 +285,15 @@ const legend: { s: Severity }[] = [
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+}
+/* hide the native search clear (×) button */
+.dxi.search::-webkit-search-cancel-button,
+.dxi.search::-webkit-search-decoration {
+  appearance: none;
+  -webkit-appearance: none;
+  display: none;
 }
 .dxi.search:focus {
   outline: 2px solid var(--vp-c-brand-1);

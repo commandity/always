@@ -135,7 +135,7 @@ const legend: { s: Severity }[] = [
           </li>
         </ul>
       </div>
-      <button v-if="hasSelection" class="dxi clear-btn" @click="clearAll">
+      <button class="dxi clear-btn" @click="clearAll">
         清除
       </button>
     </div>
@@ -263,34 +263,28 @@ const legend: { s: Severity }[] = [
 /* 搜尋列 */
 .dxi.search-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  align-items: stretch;
   margin-bottom: 12px;
 }
 .dxi.search-wrap {
   position: relative;
-  flex: 1;
   display: flex;
+  flex: 1 1 240px;
+  min-width: 0;
 }
 /* Padding-based sizing (matches PregnancyCategoryTable) so the input and
    清除 button share the same height automatically. */
 .dxi.search {
-  width: 100%;
-  margin: 0;
+  flex: 1;
+  min-width: 0;
   padding: 8px 12px;
   font-size: 14px;
-  line-height: 1.5;
   color: var(--vp-c-text-1);
   background-color: var(--vp-c-bg);
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   box-sizing: border-box;
-  appearance: none;
-  -webkit-appearance: none;
-}
-.dxi.search::-webkit-search-decoration,
-.dxi.search::-webkit-search-cancel-button {
-  -webkit-appearance: none;
 }
 .dxi.search:focus {
   outline: 2px solid var(--vp-c-brand-1);
@@ -325,18 +319,12 @@ const legend: { s: Severity }[] = [
 }
 /* Matches the 清除篩選 (reset) button in PregnancyCategoryTable. */
 .dxi.clear-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 8px 12px;
+  padding: 8px 14px;
   font-size: 14px;
-  line-height: 1.5;
   color: var(--vp-c-text-2);
   background-color: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
-  box-sizing: border-box;
   cursor: pointer;
   white-space: nowrap;
 }

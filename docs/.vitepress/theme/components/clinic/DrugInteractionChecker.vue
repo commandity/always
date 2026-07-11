@@ -264,12 +264,13 @@ const legend: { s: Severity }[] = [
 .dxi.search-row {
   display: flex;
   gap: 8px;
-  align-items: center;
+  align-items: stretch;
   margin-bottom: 12px;
 }
 .dxi.search-wrap {
   position: relative;
   flex: 1;
+  display: flex;
 }
 /* Padding-based sizing (matches PregnancyCategoryTable) so the input and
    清除 button share the same height automatically. */
@@ -324,6 +325,9 @@ const legend: { s: Severity }[] = [
 }
 /* Matches the 清除篩選 (reset) button in PregnancyCategoryTable. */
 .dxi.clear-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 8px 12px;
   font-size: 14px;

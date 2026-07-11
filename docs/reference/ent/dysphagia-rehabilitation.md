@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 吞嚥復健 — 吞嚥障礙之評估與治療
+title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitation — Assessment & Management of Swallowing Disorders
 ---
 
 # 吞嚥復健 — 吞嚥障礙之評估與治療

@@ -316,7 +316,7 @@ const legend: { s: Severity }[] = [
 }
 /* Matches the 清除篩選 (reset) button in PregnancyCategoryTable. */
 .dxi.clear-btn {
-  padding: 8px 14px;
+  padding: 8px 12px;
   font-size: 14px;
   color: var(--vp-c-text-2);
   background-color: var(--vp-c-bg-soft);

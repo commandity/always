@@ -462,178 +462,190 @@ function cpsi_reset() {
       </button>
     </div>
 
-  <div v-show="activeTab === 'ipss'" class="ipss">
-    <!-- ── Header ─────────────────────────────────────────────── -->
-    <div class="ipss-header">
-      <div class="header-title">
-        <h2 class="title">IPSS 國際攝護腺症狀評分表</h2>
-        <p class="subtitle">
-          International Prostate Symptom Score · Barry 1992 · 7 題症狀 + 1
-          題生活品質（Q8 不計入總分）
-        </p>
+    <div v-show="activeTab === 'ipss'" class="ipss">
+      <!-- ── Header ─────────────────────────────────────────────── -->
+      <div class="ipss-header">
+        <div class="header-title">
+          <h2 class="title">IPSS 國際攝護腺症狀評分表</h2>
+          <p class="subtitle">
+            International Prostate Symptom Score · Barry 1992 · 7 題症狀 + 1
+            題生活品質（Q8 不計入總分）
+          </p>
+        </div>
+        <div class="score-badge" :class="ipss_severity.color">
+          <span class="badge-label">IPSS</span>
+          <span class="score-number">{{ ipss_totalScore ?? "—" }}</span>
+          <span
+            class="score-unit"
+            :style="{ opacity: ipss_totalScore !== null ? 1 : 0 }"
+            >/ 35</span
+          >
+          <span class="score-label">{{
+            ipss_isComplete
+              ? ipss_severity.level.split("（")[0]
+              : `${answeredCount}/7 題`
+          }}</span>
+        </div>
       </div>
-      <div class="score-badge" :class="ipss_severity.color">
-        <span class="badge-label">IPSS</span>
-        <span class="score-number">{{ ipss_totalScore ?? "—" }}</span>
-        <span
-          class="score-unit"
-          :style="{ opacity: ipss_totalScore !== null ? 1 : 0 }"
-          >/ 35</span
-        >
-        <span class="score-label">{{
-          ipss_isComplete ? ipss_severity.level.split("（")[0] : `${answeredCount}/7 題`
-        }}</span>
-      </div>
-    </div>
 
-    <!-- ── Severity bar ────────────────────────────────────────── -->
-    <div class="severity-bar-wrap">
-      <div class="severity-bar">
+      <!-- ── Severity bar ────────────────────────────────────────── -->
+      <div class="severity-bar-wrap">
+        <div class="severity-bar">
+          <div
+            class="severity-fill"
+            :class="ipss_severity.color"
+            :style="{ width: ipss_barPct + '%' }"
+          />
+        </div>
+        <div class="severity-ticks-abs">
+          <span class="tick-abs" style="left: 0%">0</span>
+          <span class="tick-abs tick-yellow" style="left: 22.9%">8 ▾</span>
+          <span class="tick-abs tick-red" style="left: 57.1%">20 ▾</span>
+          <span class="tick-abs tick-red" style="left: 100%">35</span>
+        </div>
+        <div class="severity-labels-abs">
+          <span class="label-abs" style="left: 0%">輕度</span>
+          <span class="label-abs tick-yellow" style="left: 22.9%">中度</span>
+          <span class="label-abs tick-red" style="left: 57.1%">重度</span>
+          <span class="tick-abs tick-red" style="left: 100%">重度</span>
+        </div>
+      </div>
+
+      <!-- ── Q1–Q7 symptom questions ────────────────────────────── -->
+      <div class="nihss-group">
+        <div class="group-header-bar q-bar">
+          <span class="group-icon">🔍</span>
+          <span class="group-label-text">症狀評估（Q1–Q7）</span>
+          <span class="group-sub-text"
+            >依過去一個月的症狀頻率作答 · 每題 0–5 分</span
+          >
+          <span
+            class="group-score-tally"
+            :class="ipss_isComplete ? 'tally-scored' : 'tally-nd'"
+          >
+            {{
+              ipss_isComplete
+                ? ipss_totalScore + " / 35"
+                : answeredCount + "/7 題"
+            }}
+          </span>
+        </div>
+
+        <div class="item-list">
+          <div
+            v-for="(q, idx) in questions"
+            :key="q.key"
+            class="ipss-item"
+            :class="
+              selections[q.key] !== null
+                ? selections[q.key]! >= 4
+                  ? 'item-high'
+                  : selections[q.key]! >= 2
+                    ? 'item-mid'
+                    : 'item-low'
+                : ''
+            "
+          >
+            <div class="item-header">
+              <div class="item-meta-row">
+                <span
+                  class="item-qnum"
+                  :class="q.domain === 'storage' ? 'q-storage' : 'q-voiding'"
+                  >Q{{ idx + 1 }}</span
+                >
+              </div>
+              <div class="item-name-block">
+                <span class="item-name">{{ q.zh }}</span>
+                <span class="item-sub">{{ q.en }}</span>
+              </div>
+              <span
+                class="item-val"
+                :class="
+                  selections[q.key] !== null
+                    ? selections[q.key]! >= 4
+                      ? 'val-high'
+                      : selections[q.key]! >= 2
+                        ? 'val-mid'
+                        : 'val-low'
+                    : 'val-nd'
+                "
+              >
+                {{ selections[q.key] !== null ? selections[q.key] : "—" }}
+              </span>
+            </div>
+            <div class="sec-options">
+              <div
+                v-for="opt in q.isNocturia ? nocturiaLabels : freqLabels"
+                :key="opt.val"
+                class="sec-opt"
+                :class="{ 'opt-selected': selections[q.key] === opt.val }"
+                @click="selections[q.key] = opt.val"
+              >
+                <div
+                  class="opt-radio"
+                  :class="{ selected: selections[q.key] === opt.val }"
+                >
+                  <div class="opt-dot" v-if="selections[q.key] === opt.val" />
+                </div>
+                <div class="opt-content">
+                  <span class="opt-score-badge">{{ opt.val }}</span>
+                  <span class="opt-text">{{ opt.zh }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Q8 Quality of Life ─────────────────────────────────── -->
+      <div class="nihss-group">
+        <div class="group-header-bar qol-bar">
+          <span class="group-icon">❤️</span>
+          <span class="group-label-text">生活品質評估（Q8）</span>
+          <span class="group-sub-text"
+            >此題不計入 IPSS 總分，但為重要的治療決策依據</span
+          >
+          <span
+            class="group-score-tally"
+            :class="ipss_qolScore !== null ? 'tally-qol' : 'tally-nd'"
+          >
+            {{ ipss_qolScore !== null ? ipss_qolScore + " / 6" : "—" }}
+          </span>
+        </div>
         <div
-          class="severity-fill"
-          :class="ipss_severity.color"
-          :style="{ width: ipss_barPct + '%' }"
-        />
-      </div>
-      <div class="severity-ticks-abs">
-        <span class="tick-abs" style="left: 0%">0</span>
-        <span class="tick-abs tick-yellow" style="left: 22.9%">8 ▾</span>
-        <span class="tick-abs tick-red" style="left: 57.1%">20 ▾</span>
-        <span class="tick-abs tick-red" style="left: 100%">35</span>
-      </div>
-      <div class="severity-labels-abs">
-        <span class="label-abs" style="left: 0%">輕度</span>
-        <span class="label-abs tick-yellow" style="left: 22.9%">中度</span>
-        <span class="label-abs tick-red" style="left: 57.1%">重度</span>
-        <span class="tick-abs tick-red" style="left: 100%">重度</span>
-      </div>
-    </div>
-
-    <!-- ── Q1–Q7 symptom questions ────────────────────────────── -->
-    <div class="nihss-group">
-      <div class="group-header-bar q-bar">
-        <span class="group-icon">🔍</span>
-        <span class="group-label-text">症狀評估（Q1–Q7）</span>
-        <span class="group-sub-text"
-          >依過去一個月的症狀頻率作答 · 每題 0–5 分</span
-        >
-        <span
-          class="group-score-tally"
-          :class="ipss_isComplete ? 'tally-scored' : 'tally-nd'"
-        >
-          {{ ipss_isComplete ? ipss_totalScore + " / 35" : answeredCount + "/7 題" }}
-        </span>
-      </div>
-
-      <div class="item-list">
-        <div
-          v-for="(q, idx) in questions"
-          :key="q.key"
           class="ipss-item"
-          :class="
-            selections[q.key] !== null
-              ? selections[q.key]! >= 4
-                ? 'item-high'
-                : selections[q.key]! >= 2
-                  ? 'item-mid'
-                  : 'item-low'
-              : ''
-          "
+          :class="ipss_qolScore !== null ? 'item-mid' : ''"
         >
           <div class="item-header">
             <div class="item-meta-row">
-              <span
-                class="item-qnum"
-                :class="q.domain === 'storage' ? 'q-storage' : 'q-voiding'"
-                >Q{{ idx + 1 }}</span
-              >
+              <span class="item-qnum q-qol">Q8</span>
             </div>
             <div class="item-name-block">
-              <span class="item-name">{{ q.zh }}</span>
-              <span class="item-sub">{{ q.en }}</span>
+              <span class="item-name"
+                >如果您必須在餘生中，都保持現在的泌尿狀況，您的感受如何？</span
+              >
+              <span class="item-sub"
+                >If you were to spend the rest of your life with your urinary
+                condition just the way it is now, how would you feel about
+                that?</span
+              >
             </div>
             <span
               class="item-val"
               :class="
-                selections[q.key] !== null
-                  ? selections[q.key]! >= 4
+                ipss_qolScore !== null
+                  ? ipss_qolScore >= 4
                     ? 'val-high'
-                    : selections[q.key]! >= 2
+                    : ipss_qolScore >= 2
                       ? 'val-mid'
                       : 'val-low'
                   : 'val-nd'
               "
             >
-              {{ selections[q.key] !== null ? selections[q.key] : "—" }}
+              {{ ipss_qolScore !== null ? ipss_qolScore : "—" }}
             </span>
           </div>
           <div class="sec-options">
-            <div
-              v-for="opt in q.isNocturia ? nocturiaLabels : freqLabels"
-              :key="opt.val"
-              class="sec-opt"
-              :class="{ 'opt-selected': selections[q.key] === opt.val }"
-              @click="selections[q.key] = opt.val"
-            >
-              <div class="opt-radio" :class="{ selected: selections[q.key] === opt.val }">
-                <div class="opt-dot" v-if="selections[q.key] === opt.val" />
-              </div>
-              <div class="opt-content">
-                <span class="opt-score-badge">{{ opt.val }}</span>
-                <span class="opt-text">{{ opt.zh }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Q8 Quality of Life ─────────────────────────────────── -->
-    <div class="nihss-group">
-      <div class="group-header-bar qol-bar">
-        <span class="group-icon">❤️</span>
-        <span class="group-label-text">生活品質評估（Q8）</span>
-        <span class="group-sub-text"
-          >此題不計入 IPSS 總分，但為重要的治療決策依據</span
-        >
-        <span
-          class="group-score-tally"
-          :class="ipss_qolScore !== null ? 'tally-qol' : 'tally-nd'"
-        >
-          {{ ipss_qolScore !== null ? ipss_qolScore + " / 6" : "—" }}
-        </span>
-      </div>
-      <div class="ipss-item" :class="ipss_qolScore !== null ? 'item-mid' : ''">
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-qol">Q8</span>
-          </div>
-          <div class="item-name-block">
-            <span class="item-name"
-              >如果您必須在餘生中，都保持現在的泌尿狀況，您的感受如何？</span
-            >
-            <span class="item-sub"
-              >If you were to spend the rest of your life with your urinary
-              condition just the way it is now, how would you feel about
-              that?</span
-            >
-          </div>
-          <span
-            class="item-val"
-            :class="
-              ipss_qolScore !== null
-                ? ipss_qolScore >= 4
-                  ? 'val-high'
-                  : ipss_qolScore >= 2
-                    ? 'val-mid'
-                    : 'val-low'
-                : 'val-nd'
-            "
-          >
-            {{ ipss_qolScore !== null ? ipss_qolScore : "—" }}
-          </span>
-        </div>
-        <div class="sec-options">
             <div
               v-for="opt in qolLabels"
               :key="opt.val"
@@ -641,7 +653,10 @@ function cpsi_reset() {
               :class="{ 'opt-selected': ipss_qolScore === opt.val }"
               @click="ipss_qolScore = opt.val"
             >
-              <div class="opt-radio" :class="{ selected: ipss_qolScore === opt.val }">
+              <div
+                class="opt-radio"
+                :class="{ selected: ipss_qolScore === opt.val }"
+              >
                 <div class="opt-dot" v-if="ipss_qolScore === opt.val" />
               </div>
               <div class="opt-content">
@@ -650,327 +665,338 @@ function cpsi_reset() {
               </div>
             </div>
           </div>
-        <div v-if="ipss_qolScore !== null" class="qol-note">
-          Q8 = {{ ipss_qolScore }} 分 → {{ qolSeverity }}
-          <template v-if="ipss_qolScore >= 4"
-            >（症狀明顯困擾，強烈建議積極介入治療）</template
-          >
+          <div v-if="ipss_qolScore !== null" class="qol-note">
+            Q8 = {{ ipss_qolScore }} 分 → {{ qolSeverity }}
+            <template v-if="ipss_qolScore >= 4"
+              >（症狀明顯困擾，強烈建議積極介入治療）</template
+            >
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- ── Sub-score summary ──────────────────────────────────── -->
-    <div v-if="answeredCount > 0" class="sub-score-row">
-      <div
-        class="sub-score-card"
-        :class="
-          storageDomain >= 8
-            ? 'ss-high'
-            : storageDomain >= 4
-              ? 'ss-mid'
-              : 'ss-low'
-        "
-      >
-        <span class="ss-label">💧 儲尿症狀</span>
-        <div class="ss-score-row">
-          <span class="ss-val">{{ storageDomain }}</span>
-          <span class="ss-max">/ 20</span>
-        </div>
-        <span class="ss-note">Q1,Q2,Q4,Q7</span>
-      </div>
-      <div
-        class="sub-score-card"
-        :class="
-          voidingDomain >= 6
-            ? 'ss-high'
-            : voidingDomain >= 3
-              ? 'ss-mid'
-              : 'ss-low'
-        "
-      >
-        <span class="ss-label">🌊 排尿症狀</span>
-        <div class="ss-score-row">
-          <span class="ss-val">{{ voidingDomain }}</span>
-          <span class="ss-max">/ 15</span>
-        </div>
-        <span class="ss-note">Q3,Q5,Q6</span>
-      </div>
-      <div class="sub-score-card ss-total" :class="ipss_severity.color">
-        <span class="ss-label">總分</span>
-        <div class="ss-score-row">
-          <span class="ss-val">{{ ipss_totalScore ?? "—" }}</span>
-          <span class="ss-max">/ 35</span>
-        </div>
-        <span class="ss-note">{{
-          ipss_totalScore !== null ? ipss_severity.level.split("（")[0] : ""
-        }}</span>
-      </div>
-    </div>
-
-    <!-- ── Result card ────────────────────────────────────────── -->
-    <div class="ipss-result" :class="ipss_severity.color">
-      <div class="result-left">
-        <span class="result-number">{{ ipss_totalScore ?? "—" }}</span>
-        <span class="result-max">/ 35</span>
-      </div>
-      <div class="result-right">
-        <span class="result-ver">IPSS</span>
-        <span class="result-level">{{ ipss_severity.level }}</span>
-        <span class="result-advice">{{ ipss_severity.advice }}</span>
-      </div>
-    </div>
-
-    <!-- ── Results detail ─────────────────────────────────────── -->
-    <div v-if="ipss_showResults && ipss_isComplete" class="results-detail">
-      <div class="results-header">評估明細</div>
-      <div v-for="(q, idx) in questions" :key="q.key" class="detail-row">
-        <span class="detail-qnum">Q{{ idx + 1 }}</span>
-        <span class="detail-domain">{{ q.shortLabel }}</span>
-        <span
-          class="detail-score"
-          :class="
-            (selections[q.key] ?? 0) >= 4
-              ? 'ds-high'
-              : (selections[q.key] ?? 0) >= 2
-                ? 'ds-mid'
-                : 'ds-low'
-          "
-          >{{ selections[q.key] }}</span
-        >
-        <span class="detail-desc">{{
-          q.domain === "storage" ? "儲尿" : "排尿"
-        }}</span>
-      </div>
-      <div v-if="ipss_qolScore !== null" class="detail-row">
-        <span class="detail-qnum">Q8</span>
-        <span class="detail-domain">生活品質（不計入總分）</span>
-        <span class="detail-score ds-mid">{{ ipss_qolScore }}</span>
-        <span class="detail-desc">{{ qolSeverity }}</span>
-      </div>
-      <div class="detail-row detail-total">
-        <span class="detail-qnum">∑</span>
-        <span class="detail-domain">IPSS 總分</span>
-        <span class="detail-score detail-score-brand">{{ ipss_totalScore }}</span>
-        <div class="detail-desc detail-desc-block">
-          <span class="detail-desc-unit">/ 35</span>
-          <span class="detail-desc-label">{{ ipss_severity.level }}</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Alert ──────────────────────────────────────────────── -->
-    <div
-      v-if="ipss_isComplete && ipss_severity.screen"
-      class="ipss-alert"
-      :class="`alert-${ipss_severity.color}`"
-    >
-      <span class="alert-icon">⚠</span>
-      <span
-        ><strong>IPSS {{ ipss_totalScore }} 分（{{ ipss_severity.level }}）：</strong
-        >{{ ipss_severity.advice }}</span
-      >
-    </div>
-
-    <!-- ── Clinical note ──────────────────────────────────────── -->
-    <div class="warn-box">
-      <span class="warn-icon">⚠</span>
-      <span
-        >IPSS 為症狀評估工具，不能取代泌尿科完整評估，亦不能診斷 BPH。Q8
-        生活品質評分是治療決策的重要依據，即使 IPSS 分數偏低，若 Q8 ≥ 4
-        仍建議積極介入。IPSS 與尿流速、殘尿量及攝護腺體積相關性有限。</span
-      >
-    </div>
-
-    <!-- ── Actions ────────────────────────────────────────────── -->
-    <div class="ipss-actions">
-      <button class="btn-view" @click="ipss_showResults = !ipss_showResults">
-        {{ ipss_showResults ? "收起明細" : "查看評估結果" }}
-      </button>
-      <button class="btn-copy" :disabled="!ipss_isComplete" @click="ipss_copyOutput">
-        {{ ipss_copied ? "已複製 ✓" : "複製 Markdown 結果" }}
-      </button>
-      <button class="btn-reset" @click="ipss_reset">重置</button>
-    </div>
-    <p v-if="!ipss_isComplete" class="progress-hint">
-      已完成 {{ answeredCount }}/7 題，尚餘 {{ 7 - answeredCount }} 題
-    </p>
-  </div>
-
-  <div v-show="activeTab === 'cpsi'" class="cpsi">
-    <!-- ── Header ─────────────────────────────────────────────── -->
-    <div class="cpsi-header">
-      <div class="header-title">
-        <h2 class="title">NIH-CPSI 慢性攝護腺炎症狀評分</h2>
-        <p class="subtitle">
-          NIH Chronic Prostatitis Symptom Index · Litwin 1999 · 3
-          大域：疼痛（0–21）+ 排尿（0–10）+ 生活品質（0–12）
-        </p>
-      </div>
-      <div class="score-badge" :class="cpsi_severity.color">
-        <span class="badge-label">NIH-CPSI</span>
-        <span class="score-number">{{ cpsi_totalScore ?? "—" }}</span>
-        <span
-          class="score-unit"
-          :style="{ opacity: cpsi_totalScore !== null ? 1 : 0 }"
-          >/ 43</span
-        >
-        <span class="score-label">{{
-          cpsi_isComplete ? cpsi_severity.level : `${answeredSections}/3 域`
-        }}</span>
-      </div>
-    </div>
-
-    <!-- ── Severity bar ────────────────────────────────────────── -->
-    <div class="severity-bar-wrap">
-      <div class="severity-bar">
+      <!-- ── Sub-score summary ──────────────────────────────────── -->
+      <div v-if="answeredCount > 0" class="sub-score-row">
         <div
-          class="severity-fill"
-          :class="cpsi_severity.color"
-          :style="{ width: cpsi_barPct + '%' }"
-        />
-      </div>
-      <div class="severity-ticks-abs">
-        <span class="tick-abs" style="left: 0%">0</span>
-        <span class="tick-abs tick-yellow" style="left: 34.9%">15 ▾</span>
-        <span class="tick-abs tick-red" style="left: 69.8%">30 ▾</span>
-        <span class="tick-abs tick-red" style="left: 100%">43</span>
-      </div>
-      <div class="severity-labels-abs">
-        <span class="label-abs" style="left: 0%">輕度</span>
-        <span class="label-abs tick-yellow" style="left: 34.9%">中度</span>
-        <span class="label-abs tick-red" style="left: 69.8%">重度</span>
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════════════════════════════
-         域 1：疼痛域 Pain Domain
-    ══════════════════════════════════════════════════════════ -->
-    <div class="nihss-group">
-      <div class="group-header-bar pain-bar">
-        <span class="group-icon">🔴</span>
-        <span class="group-label-text">疼痛域 Pain Domain（Q1–Q4）</span>
-        <span class="group-sub-text"
-          >疼痛部位 + 射精疼痛 + 頻率 + 程度 · 最高 21 分</span
+          class="sub-score-card"
+          :class="
+            storageDomain >= 8
+              ? 'ss-high'
+              : storageDomain >= 4
+                ? 'ss-mid'
+                : 'ss-low'
+          "
         >
-        <span
-          class="group-score-tally"
-          :class="painScore !== null ? 'tally-pain' : 'tally-nd'"
+          <span class="ss-label">💧 儲尿症狀</span>
+          <div class="ss-score-row">
+            <span class="ss-val">{{ storageDomain }}</span>
+            <span class="ss-max">/ 20</span>
+          </div>
+          <span class="ss-note">Q1,Q2,Q4,Q7</span>
+        </div>
+        <div
+          class="sub-score-card"
+          :class="
+            voidingDomain >= 6
+              ? 'ss-high'
+              : voidingDomain >= 3
+                ? 'ss-mid'
+                : 'ss-low'
+          "
         >
-          {{ painScore !== null ? painScore + " / 21" : "—" }}
-        </span>
-      </div>
-
-      <!-- Q1 Pain locations (checkboxes) -->
-      <div class="cpsi-item">
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-pain">Q1</span>
+          <span class="ss-label">🌊 排尿症狀</span>
+          <div class="ss-score-row">
+            <span class="ss-val">{{ voidingDomain }}</span>
+            <span class="ss-max">/ 15</span>
           </div>
-          <div class="item-name-block">
-            <span class="item-name"
-              >過去一週，您是否曾在下列部位感覺疼痛或不舒服？（可複選）</span
-            >
-            <span class="item-sub"
-              >In the last week, have you experienced any pain or discomfort in
-              the following areas? (check all that apply)</span
-            >
+          <span class="ss-note">Q3,Q5,Q6</span>
+        </div>
+        <div class="sub-score-card ss-total" :class="ipss_severity.color">
+          <span class="ss-label">總分</span>
+          <div class="ss-score-row">
+            <span class="ss-val">{{ ipss_totalScore ?? "—" }}</span>
+            <span class="ss-max">/ 35</span>
           </div>
-          <span class="item-val" :class="q1Score > 0 ? 'val-pain' : 'val-nd'">{{
-            q1Score
+          <span class="ss-note">{{
+            ipss_totalScore !== null ? ipss_severity.level.split("（")[0] : ""
           }}</span>
         </div>
-        <div class="checkbox-grid">
-          <label
-            v-for="item in q1Items"
-            :key="item.key"
-            class="check-item"
-            :class="{ 'check-active': q1Selections[item.key] }"
-          >
-            <input type="checkbox" v-model="q1Selections[item.key]" />
-            <span class="check-label">{{ item.zh }}</span>
-          </label>
+      </div>
+
+      <!-- ── Result card ────────────────────────────────────────── -->
+      <div class="ipss-result" :class="ipss_severity.color">
+        <div class="result-left">
+          <span class="result-number">{{ ipss_totalScore ?? "—" }}</span>
+          <span class="result-max">/ 35</span>
+        </div>
+        <div class="result-right">
+          <span class="result-ver">IPSS</span>
+          <span class="result-level">{{ ipss_severity.level }}</span>
+          <span class="result-advice">{{ ipss_severity.advice }}</span>
         </div>
       </div>
 
-      <!-- Q2 Ejaculatory pain -->
-      <div
-        class="cpsi-item"
-        :class="q2 !== null ? (q2 === 1 ? 'item-pain' : 'item-ok') : ''"
-      >
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-pain">Q2</span>
-          </div>
-          <div class="item-name-block">
-            <span class="item-name"
-              >過去一週，您是否曾在射精時或射精後感覺疼痛或不舒服？</span
-            >
-            <span class="item-sub"
-              >In the last week, have you experienced any pain or discomfort
-              during or after sexual climax (ejaculation)?</span
-            >
-          </div>
-          <div class="yn-row">
-            <button
-              class="yn-btn"
-              :class="{ 'yn-green': q2 === 0 }"
-              @click="q2 = 0"
-            >
-              否
-            </button>
-            <button
-              class="yn-btn"
-              :class="{ 'yn-red': q2 === 1 }"
-              @click="q2 = 1"
-            >
-              是
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Q3 Pain frequency -->
-      <div
-        class="cpsi-item"
-        :class="
-          q3 !== null
-            ? q3 >= 3
-              ? 'item-high'
-              : q3 >= 1
-                ? 'item-mid'
-                : 'item-low'
-            : ''
-        "
-      >
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-pain">Q3</span>
-          </div>
-          <div class="item-name-block">
-            <span class="item-name"
-              >過去一週，您在這些部位有多頻繁感覺到疼痛或不舒服？</span
-            >
-            <span class="item-sub"
-              >How often have you had pain or discomfort in any of these areas
-              over the last week?</span
-            >
-          </div>
+      <!-- ── Results detail ─────────────────────────────────────── -->
+      <div v-if="ipss_showResults && ipss_isComplete" class="results-detail">
+        <div class="results-header">評估明細</div>
+        <div v-for="(q, idx) in questions" :key="q.key" class="detail-row">
+          <span class="detail-qnum">Q{{ idx + 1 }}</span>
+          <span class="detail-domain">{{ q.shortLabel }}</span>
           <span
-            class="item-val"
+            class="detail-score"
             :class="
-              q3 !== null
-                ? q3 >= 3
-                  ? 'val-high'
-                  : q3 >= 1
-                    ? 'val-mid'
-                    : 'val-low'
-                : 'val-nd'
+              (selections[q.key] ?? 0) >= 4
+                ? 'ds-high'
+                : (selections[q.key] ?? 0) >= 2
+                  ? 'ds-mid'
+                  : 'ds-low'
             "
+            >{{ selections[q.key] }}</span
           >
-            {{ q3 !== null ? q3 : "—" }}
+          <span class="detail-desc">{{
+            q.domain === "storage" ? "儲尿" : "排尿"
+          }}</span>
+        </div>
+        <div v-if="ipss_qolScore !== null" class="detail-row">
+          <span class="detail-qnum">Q8</span>
+          <span class="detail-domain">生活品質（不計入總分）</span>
+          <span class="detail-score ds-mid">{{ ipss_qolScore }}</span>
+          <span class="detail-desc">{{ qolSeverity }}</span>
+        </div>
+        <div class="detail-row detail-total">
+          <span class="detail-qnum">∑</span>
+          <span class="detail-domain">IPSS 總分</span>
+          <span class="detail-score detail-score-brand">{{
+            ipss_totalScore
+          }}</span>
+          <div class="detail-desc detail-desc-block">
+            <span class="detail-desc-unit">/ 35</span>
+            <span class="detail-desc-label">{{ ipss_severity.level }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Alert ──────────────────────────────────────────────── -->
+      <div
+        v-if="ipss_isComplete && ipss_severity.screen"
+        class="ipss-alert"
+        :class="`alert-${ipss_severity.color}`"
+      >
+        <span class="alert-icon">⚠</span>
+        <span
+          ><strong
+            >IPSS {{ ipss_totalScore }} 分（{{
+              ipss_severity.level
+            }}）：</strong
+          >{{ ipss_severity.advice }}</span
+        >
+      </div>
+
+      <!-- ── Clinical note ──────────────────────────────────────── -->
+      <div class="warn-box">
+        <span class="warn-icon">⚠</span>
+        <span
+          >IPSS 為症狀評估工具，不能取代泌尿科完整評估，亦不能診斷 BPH。Q8
+          生活品質評分是治療決策的重要依據，即使 IPSS 分數偏低，若 Q8 ≥ 4
+          仍建議積極介入。IPSS 與尿流速、殘尿量及攝護腺體積相關性有限。</span
+        >
+      </div>
+
+      <!-- ── Actions ────────────────────────────────────────────── -->
+      <div class="ipss-actions">
+        <button class="btn-view" @click="ipss_showResults = !ipss_showResults">
+          {{ ipss_showResults ? "收起明細" : "查看評估結果" }}
+        </button>
+        <button
+          class="btn-copy"
+          :disabled="!ipss_isComplete"
+          @click="ipss_copyOutput"
+        >
+          {{ ipss_copied ? "已複製 ✓" : "複製 Markdown 結果" }}
+        </button>
+        <button class="btn-reset" @click="ipss_reset">重置</button>
+      </div>
+      <p v-if="!ipss_isComplete" class="progress-hint">
+        已完成 {{ answeredCount }}/7 題，尚餘 {{ 7 - answeredCount }} 題
+      </p>
+    </div>
+
+    <div v-show="activeTab === 'cpsi'" class="cpsi">
+      <!-- ── Header ─────────────────────────────────────────────── -->
+      <div class="cpsi-header">
+        <div class="header-title">
+          <h2 class="title">NIH-CPSI 慢性攝護腺炎症狀評分</h2>
+          <p class="subtitle">
+            NIH Chronic Prostatitis Symptom Index · Litwin 1999 · 3
+            大域：疼痛（0–21）+ 排尿（0–10）+ 生活品質（0–12）
+          </p>
+        </div>
+        <div class="score-badge" :class="cpsi_severity.color">
+          <span class="badge-label">NIH-CPSI</span>
+          <span class="score-number">{{ cpsi_totalScore ?? "—" }}</span>
+          <span
+            class="score-unit"
+            :style="{ opacity: cpsi_totalScore !== null ? 1 : 0 }"
+            >/ 43</span
+          >
+          <span class="score-label">{{
+            cpsi_isComplete ? cpsi_severity.level : `${answeredSections}/3 域`
+          }}</span>
+        </div>
+      </div>
+
+      <!-- ── Severity bar ────────────────────────────────────────── -->
+      <div class="severity-bar-wrap">
+        <div class="severity-bar">
+          <div
+            class="severity-fill"
+            :class="cpsi_severity.color"
+            :style="{ width: cpsi_barPct + '%' }"
+          />
+        </div>
+        <div class="severity-ticks-abs">
+          <span class="tick-abs" style="left: 0%">0</span>
+          <span class="tick-abs tick-yellow" style="left: 34.9%">15 ▾</span>
+          <span class="tick-abs tick-red" style="left: 69.8%">30 ▾</span>
+          <span class="tick-abs tick-red" style="left: 100%">43</span>
+        </div>
+        <div class="severity-labels-abs">
+          <span class="label-abs" style="left: 0%">輕度</span>
+          <span class="label-abs tick-yellow" style="left: 34.9%">中度</span>
+          <span class="label-abs tick-red" style="left: 69.8%">重度</span>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+         域 1：疼痛域 Pain Domain
+    ══════════════════════════════════════════════════════════ -->
+      <div class="nihss-group">
+        <div class="group-header-bar pain-bar">
+          <span class="group-icon">🔴</span>
+          <span class="group-label-text">疼痛域 Pain Domain（Q1–Q4）</span>
+          <span class="group-sub-text"
+            >疼痛部位 + 射精疼痛 + 頻率 + 程度 · 最高 21 分</span
+          >
+          <span
+            class="group-score-tally"
+            :class="painScore !== null ? 'tally-pain' : 'tally-nd'"
+          >
+            {{ painScore !== null ? painScore + " / 21" : "—" }}
           </span>
         </div>
-        <div class="sec-options">
+
+        <!-- Q1 Pain locations (checkboxes) -->
+        <div class="cpsi-item">
+          <div class="item-header">
+            <div class="item-meta-row">
+              <span class="item-qnum q-pain">Q1</span>
+            </div>
+            <div class="item-name-block">
+              <span class="item-name"
+                >過去一週，您是否曾在下列部位感覺疼痛或不舒服？（可複選）</span
+              >
+              <span class="item-sub"
+                >In the last week, have you experienced any pain or discomfort
+                in the following areas? (check all that apply)</span
+              >
+            </div>
+            <span
+              class="item-val"
+              :class="q1Score > 0 ? 'val-pain' : 'val-nd'"
+              >{{ q1Score }}</span
+            >
+          </div>
+          <div class="checkbox-grid">
+            <label
+              v-for="item in q1Items"
+              :key="item.key"
+              class="check-item"
+              :class="{ 'check-active': q1Selections[item.key] }"
+            >
+              <input type="checkbox" v-model="q1Selections[item.key]" />
+              <span class="check-label">{{ item.zh }}</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Q2 Ejaculatory pain -->
+        <div
+          class="cpsi-item"
+          :class="q2 !== null ? (q2 === 1 ? 'item-pain' : 'item-ok') : ''"
+        >
+          <div class="item-header">
+            <div class="item-meta-row">
+              <span class="item-qnum q-pain">Q2</span>
+            </div>
+            <div class="item-name-block">
+              <span class="item-name"
+                >過去一週，您是否曾在射精時或射精後感覺疼痛或不舒服？</span
+              >
+              <span class="item-sub"
+                >In the last week, have you experienced any pain or discomfort
+                during or after sexual climax (ejaculation)?</span
+              >
+            </div>
+            <div class="yn-row">
+              <button
+                class="yn-btn"
+                :class="{ 'yn-green': q2 === 0 }"
+                @click="q2 = 0"
+              >
+                否
+              </button>
+              <button
+                class="yn-btn"
+                :class="{ 'yn-red': q2 === 1 }"
+                @click="q2 = 1"
+              >
+                是
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 Pain frequency -->
+        <div
+          class="cpsi-item"
+          :class="
+            q3 !== null
+              ? q3 >= 3
+                ? 'item-high'
+                : q3 >= 1
+                  ? 'item-mid'
+                  : 'item-low'
+              : ''
+          "
+        >
+          <div class="item-header">
+            <div class="item-meta-row">
+              <span class="item-qnum q-pain">Q3</span>
+            </div>
+            <div class="item-name-block">
+              <span class="item-name"
+                >過去一週，您在這些部位有多頻繁感覺到疼痛或不舒服？</span
+              >
+              <span class="item-sub"
+                >How often have you had pain or discomfort in any of these areas
+                over the last week?</span
+              >
+            </div>
+            <span
+              class="item-val"
+              :class="
+                q3 !== null
+                  ? q3 >= 3
+                    ? 'val-high'
+                    : q3 >= 1
+                      ? 'val-mid'
+                      : 'val-low'
+                  : 'val-nd'
+              "
+            >
+              {{ q3 !== null ? q3 : "—" }}
+            </span>
+          </div>
+          <div class="sec-options">
             <div
               v-for="opt in q3Labels"
               :key="opt.val"
@@ -987,124 +1013,165 @@ function cpsi_reset() {
               </div>
             </div>
           </div>
-      </div>
-
-      <!-- Q4 Pain severity NRS 0-10 -->
-      <div
-        class="cpsi-item"
-        :class="
-          q4 !== null
-            ? q4 >= 7
-              ? 'item-high'
-              : q4 >= 4
-                ? 'item-mid'
-                : 'item-low'
-            : ''
-        "
-      >
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-pain">Q4</span>
-          </div>
-          <div class="item-name-block">
-            <span class="item-name"
-              >過去一週，下列哪個數字最能代表您在最嚴重時的疼痛程度？（0 =
-              完全不痛，10 = 您能想像最嚴重的疼痛）</span
-            >
-            <span class="item-sub"
-              >Which number best describes your AVERAGE pain or discomfort on
-              the days that you had it, over the last week? (0 = no pain, 10 =
-              pain as bad as you can imagine)</span
-            >
-          </div>
-          <span
-            class="item-val"
-            :class="
-              q4 !== null
-                ? q4 >= 7
-                  ? 'val-high'
-                  : q4 >= 4
-                    ? 'val-mid'
-                    : 'val-low'
-                : 'val-nd'
-            "
-          >
-            {{ q4 !== null ? q4 : "—" }}
-          </span>
         </div>
-        <div class="field-input-wrap">
-          <div class="slider-col">
-            <div class="item-anchor-row">
-              <span class="anchor-left">完全不痛</span>
-              <span class="anchor-right">最嚴重</span>
+
+        <!-- Q4 Pain severity NRS 0-10 -->
+        <div
+          class="cpsi-item"
+          :class="
+            q4 !== null
+              ? q4 >= 7
+                ? 'item-high'
+                : q4 >= 4
+                  ? 'item-mid'
+                  : 'item-low'
+              : ''
+          "
+        >
+          <div class="item-header">
+            <div class="item-meta-row">
+              <span class="item-qnum q-pain">Q4</span>
             </div>
-            <input type="range" min="0" max="10" step="1" class="field-slider" :value="q4 !== null ? q4 : 0" @input="q4 = parseInt(($event.target as HTMLInputElement).value)" />
-            <div class="field-ticks"><span v-for="n in 11" :key="n">{{ n - 1 }}</span></div>
+            <div class="item-name-block">
+              <span class="item-name"
+                >過去一週，下列哪個數字最能代表您在最嚴重時的疼痛程度？（0 =
+                完全不痛，10 = 您能想像最嚴重的疼痛）</span
+              >
+              <span class="item-sub"
+                >Which number best describes your AVERAGE pain or discomfort on
+                the days that you had it, over the last week? (0 = no pain, 10 =
+                pain as bad as you can imagine)</span
+              >
+            </div>
+            <span
+              class="item-val"
+              :class="
+                q4 !== null
+                  ? q4 >= 7
+                    ? 'val-high'
+                    : q4 >= 4
+                      ? 'val-mid'
+                      : 'val-low'
+                  : 'val-nd'
+              "
+            >
+              {{ q4 !== null ? q4 : "—" }}
+            </span>
           </div>
-          <input type="number" min="0" max="10" class="field-number" placeholder="—" :value="q4 !== null ? q4 : ''" @input="q4 = ($event.target as HTMLInputElement).value === '' ? null : Math.max(0, Math.min(10, parseInt(($event.target as HTMLInputElement).value)))" />
+          <div class="field-input-wrap">
+            <div class="slider-col">
+              <div class="item-anchor-row">
+                <span class="anchor-left">完全不痛</span>
+                <span class="anchor-right">最嚴重</span>
+              </div>
+              <div class="slider-track-wrap">
+                <div class="slider-track">
+                  <div
+                    class="slider-fill fill-q4"
+                    :style="{
+                      width: ((q4 !== null ? q4 : 0) / 10) * 100 + '%',
+                    }"
+                  />
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="10"
+                  step="1"
+                  class="field-slider"
+                  :value="q4 !== null ? q4 : 0"
+                  @input="
+                    q4 = parseInt(($event.target as HTMLInputElement).value)
+                  "
+                />
+              </div>
+              <div class="field-ticks">
+                <span v-for="n in 11" :key="n">{{ n - 1 }}</span>
+              </div>
+            </div>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              class="field-number"
+              placeholder="—"
+              :value="q4 !== null ? q4 : ''"
+              @input="
+                q4 =
+                  ($event.target as HTMLInputElement).value === ''
+                    ? null
+                    : Math.max(
+                        0,
+                        Math.min(
+                          10,
+                          parseInt(($event.target as HTMLInputElement).value),
+                        ),
+                      )
+              "
+            />
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- ══════════════════════════════════════════════════════════
+      <!-- ══════════════════════════════════════════════════════════
          域 2：排尿域 Urinary Domain
     ══════════════════════════════════════════════════════════ -->
-    <div class="nihss-group">
-      <div class="group-header-bar urinary-bar">
-        <span class="group-icon">💧</span>
-        <span class="group-label-text">排尿域 Urinary Domain（Q5–Q6）</span>
-        <span class="group-sub-text">排尿不盡 + 排尿頻率 · 最高 10 分</span>
-        <span
-          class="group-score-tally"
-          :class="urinaryScore !== null ? 'tally-urinary' : 'tally-nd'"
-        >
-          {{ urinaryScore !== null ? urinaryScore + " / 10" : "—" }}
-        </span>
-      </div>
-
-      <!-- Q5 Incomplete emptying -->
-      <div
-        class="cpsi-item"
-        :class="
-          q5 !== null
-            ? q5 >= 4
-              ? 'item-high'
-              : q5 >= 2
-                ? 'item-mid'
-                : 'item-low'
-            : ''
-        "
-      >
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-urinary">Q5</span>
-          </div>
-          <div class="item-name-block">
-            <span class="item-name"
-              >過去一週，您排尿後有多頻繁感覺膀胱仍未完全排空？</span
-            >
-            <span class="item-sub"
-              >Over the last week, how often have you had the sensation of not
-              emptying your bladder completely after you finished
-              urinating?</span
-            >
-          </div>
+      <div class="nihss-group">
+        <div class="group-header-bar urinary-bar">
+          <span class="group-icon">💧</span>
+          <span class="group-label-text">排尿域 Urinary Domain（Q5–Q6）</span>
+          <span class="group-sub-text">排尿不盡 + 排尿頻率 · 最高 10 分</span>
           <span
-            class="item-val"
-            :class="
-              q5 !== null
-                ? q5 >= 4
-                  ? 'val-high'
-                  : q5 >= 2
-                    ? 'val-mid'
-                    : 'val-low'
-                : 'val-nd'
-            "
+            class="group-score-tally"
+            :class="urinaryScore !== null ? 'tally-urinary' : 'tally-nd'"
           >
-            {{ q5 !== null ? q5 : "—" }}
+            {{ urinaryScore !== null ? urinaryScore + " / 10" : "—" }}
           </span>
         </div>
-        <div class="sec-options">
+
+        <!-- Q5 Incomplete emptying -->
+        <div
+          class="cpsi-item"
+          :class="
+            q5 !== null
+              ? q5 >= 4
+                ? 'item-high'
+                : q5 >= 2
+                  ? 'item-mid'
+                  : 'item-low'
+              : ''
+          "
+        >
+          <div class="item-header">
+            <div class="item-meta-row">
+              <span class="item-qnum q-urinary">Q5</span>
+            </div>
+            <div class="item-name-block">
+              <span class="item-name"
+                >過去一週，您排尿後有多頻繁感覺膀胱仍未完全排空？</span
+              >
+              <span class="item-sub"
+                >Over the last week, how often have you had the sensation of not
+                emptying your bladder completely after you finished
+                urinating?</span
+              >
+            </div>
+            <span
+              class="item-val"
+              :class="
+                q5 !== null
+                  ? q5 >= 4
+                    ? 'val-high'
+                    : q5 >= 2
+                      ? 'val-mid'
+                      : 'val-low'
+                  : 'val-nd'
+              "
+            >
+              {{ q5 !== null ? q5 : "—" }}
+            </span>
+          </div>
+          <div class="sec-options">
             <div
               v-for="opt in q5Labels"
               :key="opt.val"
@@ -1121,50 +1188,50 @@ function cpsi_reset() {
               </div>
             </div>
           </div>
-      </div>
-
-      <!-- Q6 Urinary frequency -->
-      <div
-        class="cpsi-item"
-        :class="
-          q6 !== null
-            ? q6 >= 4
-              ? 'item-high'
-              : q6 >= 2
-                ? 'item-mid'
-                : 'item-low'
-            : ''
-        "
-      >
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-urinary">Q6</span>
-          </div>
-          <div class="item-name-block">
-            <span class="item-name"
-              >過去一週，您有多頻繁在排尿後 2 小時內又必須再次排尿？</span
-            >
-            <span class="item-sub"
-              >Over the last week, how often have you had to urinate again less
-              than two hours after you finished urinating?</span
-            >
-          </div>
-          <span
-            class="item-val"
-            :class="
-              q6 !== null
-                ? q6 >= 4
-                  ? 'val-high'
-                  : q6 >= 2
-                    ? 'val-mid'
-                    : 'val-low'
-                : 'val-nd'
-            "
-          >
-            {{ q6 !== null ? q6 : "—" }}
-          </span>
         </div>
-        <div class="sec-options">
+
+        <!-- Q6 Urinary frequency -->
+        <div
+          class="cpsi-item"
+          :class="
+            q6 !== null
+              ? q6 >= 4
+                ? 'item-high'
+                : q6 >= 2
+                  ? 'item-mid'
+                  : 'item-low'
+              : ''
+          "
+        >
+          <div class="item-header">
+            <div class="item-meta-row">
+              <span class="item-qnum q-urinary">Q6</span>
+            </div>
+            <div class="item-name-block">
+              <span class="item-name"
+                >過去一週，您有多頻繁在排尿後 2 小時內又必須再次排尿？</span
+              >
+              <span class="item-sub"
+                >Over the last week, how often have you had to urinate again
+                less than two hours after you finished urinating?</span
+              >
+            </div>
+            <span
+              class="item-val"
+              :class="
+                q6 !== null
+                  ? q6 >= 4
+                    ? 'val-high'
+                    : q6 >= 2
+                      ? 'val-mid'
+                      : 'val-low'
+                  : 'val-nd'
+              "
+            >
+              {{ q6 !== null ? q6 : "—" }}
+            </span>
+          </div>
+          <div class="sec-options">
             <div
               v-for="opt in q5Labels"
               :key="opt.val"
@@ -1181,71 +1248,71 @@ function cpsi_reset() {
               </div>
             </div>
           </div>
+        </div>
       </div>
-    </div>
 
-    <!-- ══════════════════════════════════════════════════════════
+      <!-- ══════════════════════════════════════════════════════════
          域 3：生活品質域 QoL Impact Domain
     ══════════════════════════════════════════════════════════ -->
-    <div class="nihss-group">
-      <div class="group-header-bar qol-bar">
-        <span class="group-icon">❤️</span>
-        <span class="group-label-text"
-          >生活品質域 QoL Impact Domain（Q7–Q9）</span
-        >
-        <span class="group-sub-text"
-          >日常影響 + 思緒佔據 + 整體生活品質 · 最高 12 分</span
-        >
-        <span
-          class="group-score-tally"
-          :class="cpsi_qolScore !== null ? 'tally-qol' : 'tally-nd'"
-        >
-          {{ cpsi_qolScore !== null ? cpsi_qolScore + " / 12" : "—" }}
-        </span>
-      </div>
-
-      <!-- Q7 Interference with activities -->
-      <div
-        class="cpsi-item"
-        :class="
-          q7 !== null
-            ? q7 >= 2
-              ? 'item-high'
-              : q7 >= 1
-                ? 'item-mid'
-                : 'item-low'
-            : ''
-        "
-      >
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-qol">Q7</span>
-          </div>
-          <div class="item-name-block">
-            <span class="item-name"
-              >過去一週，您的症狀有多少程度妨礙了您的日常活動？</span
-            >
-            <span class="item-sub"
-              >How much have your symptoms kept you from doing the kinds of
-              things you would usually do, over the last week?</span
-            >
-          </div>
-          <span
-            class="item-val"
-            :class="
-              q7 !== null
-                ? q7 >= 2
-                  ? 'val-high'
-                  : q7 >= 1
-                    ? 'val-mid'
-                    : 'val-low'
-                : 'val-nd'
-            "
+      <div class="nihss-group">
+        <div class="group-header-bar qol-bar">
+          <span class="group-icon">❤️</span>
+          <span class="group-label-text"
+            >生活品質域 QoL Impact Domain（Q7–Q9）</span
           >
-            {{ q7 !== null ? q7 : "—" }}
+          <span class="group-sub-text"
+            >日常影響 + 思緒佔據 + 整體生活品質 · 最高 12 分</span
+          >
+          <span
+            class="group-score-tally"
+            :class="cpsi_qolScore !== null ? 'tally-qol' : 'tally-nd'"
+          >
+            {{ cpsi_qolScore !== null ? cpsi_qolScore + " / 12" : "—" }}
           </span>
         </div>
-        <div class="sec-options">
+
+        <!-- Q7 Interference with activities -->
+        <div
+          class="cpsi-item"
+          :class="
+            q7 !== null
+              ? q7 >= 2
+                ? 'item-high'
+                : q7 >= 1
+                  ? 'item-mid'
+                  : 'item-low'
+              : ''
+          "
+        >
+          <div class="item-header">
+            <div class="item-meta-row">
+              <span class="item-qnum q-qol">Q7</span>
+            </div>
+            <div class="item-name-block">
+              <span class="item-name"
+                >過去一週，您的症狀有多少程度妨礙了您的日常活動？</span
+              >
+              <span class="item-sub"
+                >How much have your symptoms kept you from doing the kinds of
+                things you would usually do, over the last week?</span
+              >
+            </div>
+            <span
+              class="item-val"
+              :class="
+                q7 !== null
+                  ? q7 >= 2
+                    ? 'val-high'
+                    : q7 >= 1
+                      ? 'val-mid'
+                      : 'val-low'
+                  : 'val-nd'
+              "
+            >
+              {{ q7 !== null ? q7 : "—" }}
+            </span>
+          </div>
+          <div class="sec-options">
             <div
               v-for="opt in q7Labels"
               :key="opt.val"
@@ -1262,48 +1329,50 @@ function cpsi_reset() {
               </div>
             </div>
           </div>
-      </div>
-
-      <!-- Q8 Thoughts about symptoms -->
-      <div
-        class="cpsi-item"
-        :class="
-          q8 !== null
-            ? q8 >= 2
-              ? 'item-high'
-              : q8 >= 1
-                ? 'item-mid'
-                : 'item-low'
-            : ''
-        "
-      >
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-qol">Q8</span>
-          </div>
-          <div class="item-name-block">
-            <span class="item-name">過去一週，您有多頻繁思考著您的症狀？</span>
-            <span class="item-sub"
-              >How much did you think about your symptoms, over the last
-              week?</span
-            >
-          </div>
-          <span
-            class="item-val"
-            :class="
-              q8 !== null
-                ? q8 >= 2
-                  ? 'val-high'
-                  : q8 >= 1
-                    ? 'val-mid'
-                    : 'val-low'
-                : 'val-nd'
-            "
-          >
-            {{ q8 !== null ? q8 : "—" }}
-          </span>
         </div>
-        <div class="sec-options">
+
+        <!-- Q8 Thoughts about symptoms -->
+        <div
+          class="cpsi-item"
+          :class="
+            q8 !== null
+              ? q8 >= 2
+                ? 'item-high'
+                : q8 >= 1
+                  ? 'item-mid'
+                  : 'item-low'
+              : ''
+          "
+        >
+          <div class="item-header">
+            <div class="item-meta-row">
+              <span class="item-qnum q-qol">Q8</span>
+            </div>
+            <div class="item-name-block">
+              <span class="item-name"
+                >過去一週，您有多頻繁思考著您的症狀？</span
+              >
+              <span class="item-sub"
+                >How much did you think about your symptoms, over the last
+                week?</span
+              >
+            </div>
+            <span
+              class="item-val"
+              :class="
+                q8 !== null
+                  ? q8 >= 2
+                    ? 'val-high'
+                    : q8 >= 1
+                      ? 'val-mid'
+                      : 'val-low'
+                  : 'val-nd'
+              "
+            >
+              {{ q8 !== null ? q8 : "—" }}
+            </span>
+          </div>
+          <div class="sec-options">
             <div
               v-for="opt in q7Labels"
               :key="opt.val"
@@ -1320,51 +1389,51 @@ function cpsi_reset() {
               </div>
             </div>
           </div>
-      </div>
-
-      <!-- Q9 QoL overall -->
-      <div
-        class="cpsi-item"
-        :class="
-          q9 !== null
-            ? q9 >= 4
-              ? 'item-high'
-              : q9 >= 2
-                ? 'item-mid'
-                : 'item-low'
-            : ''
-        "
-      >
-        <div class="item-header">
-          <div class="item-meta-row">
-            <span class="item-qnum q-qol">Q9</span>
-          </div>
-          <div class="item-name-block">
-            <span class="item-name"
-              >如果您必須在餘生中都保持過去一週的症狀，您的感受如何？</span
-            >
-            <span class="item-sub"
-              >If you were to spend the rest of your life with your symptoms
-              just the way they have been during the last week, how would you
-              feel about that?</span
-            >
-          </div>
-          <span
-            class="item-val"
-            :class="
-              q9 !== null
-                ? q9 >= 4
-                  ? 'val-high'
-                  : q9 >= 2
-                    ? 'val-mid'
-                    : 'val-low'
-                : 'val-nd'
-            "
-          >
-            {{ q9 !== null ? q9 : "—" }}
-          </span>
         </div>
-        <div class="sec-options">
+
+        <!-- Q9 QoL overall -->
+        <div
+          class="cpsi-item"
+          :class="
+            q9 !== null
+              ? q9 >= 4
+                ? 'item-high'
+                : q9 >= 2
+                  ? 'item-mid'
+                  : 'item-low'
+              : ''
+          "
+        >
+          <div class="item-header">
+            <div class="item-meta-row">
+              <span class="item-qnum q-qol">Q9</span>
+            </div>
+            <div class="item-name-block">
+              <span class="item-name"
+                >如果您必須在餘生中都保持過去一週的症狀，您的感受如何？</span
+              >
+              <span class="item-sub"
+                >If you were to spend the rest of your life with your symptoms
+                just the way they have been during the last week, how would you
+                feel about that?</span
+              >
+            </div>
+            <span
+              class="item-val"
+              :class="
+                q9 !== null
+                  ? q9 >= 4
+                    ? 'val-high'
+                    : q9 >= 2
+                      ? 'val-mid'
+                      : 'val-low'
+                  : 'val-nd'
+              "
+            >
+              {{ q9 !== null ? q9 : "—" }}
+            </span>
+          </div>
+          <div class="sec-options">
             <div
               v-for="opt in q9Labels"
               :key="opt.val"
@@ -1381,265 +1450,308 @@ function cpsi_reset() {
               </div>
             </div>
           </div>
+        </div>
       </div>
-    </div>
 
-    <!-- ── Domain sub-score row ───────────────────────────────── -->
-    <div v-if="answeredSections > 0" class="sub-score-row">
-      <div
-        class="sub-score-card"
-        :class="
-          painScore !== null
-            ? painScore >= 14
-              ? 'ss-high'
-              : painScore >= 8
-                ? 'ss-mid'
-                : 'ss-low'
-            : 'ss-nd'
-        "
-      >
-        <span class="ss-label">🔴 疼痛</span>
-        <div class="ss-score-row">
-          <span class="ss-val">{{ painScore ?? "—" }}</span>
-          <span class="ss-max">/ 21</span>
-        </div>
-      </div>
-      <div
-        class="sub-score-card"
-        :class="
-          urinaryScore !== null
-            ? urinaryScore >= 6
-              ? 'ss-high'
-              : urinaryScore >= 3
-                ? 'ss-mid'
-                : 'ss-low'
-            : 'ss-nd'
-        "
-      >
-        <span class="ss-label">💧 排尿</span>
-        <div class="ss-score-row">
-          <span class="ss-val">{{ urinaryScore ?? "—" }}</span>
-          <span class="ss-max">/ 10</span>
-        </div>
-      </div>
-      <div
-        class="sub-score-card"
-        :class="
-          cpsi_qolScore !== null
-            ? cpsi_qolScore >= 8
-              ? 'ss-high'
-              : cpsi_qolScore >= 4
-                ? 'ss-mid'
-                : 'ss-low'
-            : 'ss-nd'
-        "
-      >
-        <span class="ss-label">❤️ 生活品質</span>
-        <div class="ss-score-row">
-          <span class="ss-val">{{ cpsi_qolScore ?? "—" }}</span>
-          <span class="ss-max">/ 12</span>
-        </div>
-      </div>
-      <div
-        class="sub-score-card ss-total"
-        :class="cpsi_isComplete ? cpsi_severity.color : 'ss-nd'"
-      >
-        <span class="ss-label">總分</span>
-        <div class="ss-score-row">
-          <span class="ss-val">{{ cpsi_totalScore ?? "—" }}</span>
-          <span class="ss-max">/ 43</span>
-        </div>
-        <span class="ss-note">{{
-          cpsi_totalScore !== null ? cpsi_severity.level : ""
-        }}</span>
-      </div>
-    </div>
-
-    <!-- ── Result card ────────────────────────────────────────── -->
-    <div class="cpsi-result" :class="cpsi_severity.color">
-      <div class="result-left">
-        <span class="result-number">{{ cpsi_totalScore ?? "—" }}</span>
-        <span class="result-max">/ 43</span>
-      </div>
-      <div class="result-right">
-        <span class="result-level">{{ cpsi_severity.level }}</span>
-        <span class="result-advice">{{ cpsi_severity.advice }}</span>
-      </div>
-    </div>
-
-    <!-- ── Results detail ─────────────────────────────────────── -->
-    <div v-if="cpsi_showResults && cpsi_isComplete" class="results-detail">
-      <div class="results-header">評估明細</div>
-      <div class="detail-row">
-        <span class="detail-qnum">Q1</span>
-        <span class="detail-domain">疼痛部位</span>
-        <span class="detail-score ds-mid">{{ q1Score }}</span>
-        <span class="detail-desc">/ 4</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-qnum">Q2</span>
-        <span class="detail-domain">射精疼痛</span>
-        <span class="detail-score" :class="q2 === 1 ? 'ds-high' : 'ds-low'">{{
-          q2
-        }}</span>
-        <span class="detail-desc">/ 1</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-qnum">Q3</span>
-        <span class="detail-domain">疼痛頻率</span>
-        <span
-          class="detail-score"
+      <!-- ── Domain sub-score row ───────────────────────────────── -->
+      <div v-if="answeredSections > 0" class="sub-score-row">
+        <div
+          class="sub-score-card"
           :class="
-            (q3 ?? 0) >= 3 ? 'ds-high' : (q3 ?? 0) >= 1 ? 'ds-mid' : 'ds-low'
+            painScore !== null
+              ? painScore >= 14
+                ? 'ss-high'
+                : painScore >= 8
+                  ? 'ss-mid'
+                  : 'ss-low'
+              : 'ss-nd'
           "
-          >{{ q3 }}</span
         >
-        <span class="detail-desc">/ 4</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-qnum">Q4</span>
-        <span class="detail-domain">疼痛程度（NRS）</span>
-        <span
-          class="detail-score"
+          <span class="ss-label">🔴 疼痛</span>
+          <div class="ss-score-row">
+            <span class="ss-val">{{ painScore ?? "—" }}</span>
+            <span class="ss-max">/ 21</span>
+          </div>
+        </div>
+        <div
+          class="sub-score-card"
           :class="
-            (q4 ?? 0) >= 7 ? 'ds-high' : (q4 ?? 0) >= 4 ? 'ds-mid' : 'ds-low'
+            urinaryScore !== null
+              ? urinaryScore >= 6
+                ? 'ss-high'
+                : urinaryScore >= 3
+                  ? 'ss-mid'
+                  : 'ss-low'
+              : 'ss-nd'
           "
-          >{{ q4 }}</span
         >
-        <span class="detail-desc">/ 10</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-qnum">Pain</span>
-        <span class="detail-domain">疼痛域小計</span>
-        <span class="detail-score ds-brand">{{ painScore }}</span>
-        <span class="detail-desc">/ 21 · {{ painSeverityLabel }}</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-qnum">Q5</span>
-        <span class="detail-domain">排尿不盡感</span>
-        <span
-          class="detail-score"
+          <span class="ss-label">💧 排尿</span>
+          <div class="ss-score-row">
+            <span class="ss-val">{{ urinaryScore ?? "—" }}</span>
+            <span class="ss-max">/ 10</span>
+          </div>
+        </div>
+        <div
+          class="sub-score-card"
           :class="
-            (q5 ?? 0) >= 4 ? 'ds-high' : (q5 ?? 0) >= 2 ? 'ds-mid' : 'ds-low'
+            cpsi_qolScore !== null
+              ? cpsi_qolScore >= 8
+                ? 'ss-high'
+                : cpsi_qolScore >= 4
+                  ? 'ss-mid'
+                  : 'ss-low'
+              : 'ss-nd'
           "
-          >{{ q5 }}</span
         >
-        <span class="detail-desc">/ 5</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-qnum">Q6</span>
-        <span class="detail-domain">排尿頻率</span>
-        <span
-          class="detail-score"
-          :class="
-            (q6 ?? 0) >= 4 ? 'ds-high' : (q6 ?? 0) >= 2 ? 'ds-mid' : 'ds-low'
-          "
-          >{{ q6 }}</span
+          <span class="ss-label">❤️ 生活品質</span>
+          <div class="ss-score-row">
+            <span class="ss-val">{{ cpsi_qolScore ?? "—" }}</span>
+            <span class="ss-max">/ 12</span>
+          </div>
+        </div>
+        <div
+          class="sub-score-card ss-total"
+          :class="cpsi_isComplete ? cpsi_severity.color : 'ss-nd'"
         >
-        <span class="detail-desc">/ 5</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-qnum">Q7</span>
-        <span class="detail-domain">日常活動影響</span>
-        <span
-          class="detail-score"
-          :class="(q7 ?? 0) >= 2 ? 'ds-high' : 'ds-mid'"
-          >{{ q7 }}</span
-        >
-        <span class="detail-desc">/ 3</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-qnum">Q8</span>
-        <span class="detail-domain">症狀佔據思緒</span>
-        <span
-          class="detail-score"
-          :class="(q8 ?? 0) >= 2 ? 'ds-high' : 'ds-mid'"
-          >{{ q8 }}</span
-        >
-        <span class="detail-desc">/ 3</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-qnum">Q9</span>
-        <span class="detail-domain">生活品質</span>
-        <span
-          class="detail-score"
-          :class="(q9 ?? 0) >= 4 ? 'ds-high' : 'ds-mid'"
-          >{{ q9 }}</span
-        >
-        <span class="detail-desc">/ 6</span>
-      </div>
-      <div class="detail-row detail-total">
-        <span class="detail-qnum">∑</span>
-        <span class="detail-domain">NIH-CPSI 總分</span>
-        <span class="detail-score detail-score-brand">{{ cpsi_totalScore }}</span>
-        <div class="detail-desc detail-desc-block">
-          <span class="detail-desc-unit">/ 43</span>
-          <span class="detail-desc-label">{{ cpsi_severity.level }}</span>
+          <span class="ss-label">總分</span>
+          <div class="ss-score-row">
+            <span class="ss-val">{{ cpsi_totalScore ?? "—" }}</span>
+            <span class="ss-max">/ 43</span>
+          </div>
+          <span class="ss-note">{{
+            cpsi_totalScore !== null ? cpsi_severity.level : ""
+          }}</span>
         </div>
       </div>
-    </div>
 
-    <!-- ── Alert ──────────────────────────────────────────────── -->
-    <div
-      v-if="cpsi_isComplete && cpsi_severity.screen"
-      class="cpsi-alert"
-      :class="`alert-${cpsi_severity.color}`"
-    >
-      <span class="alert-icon">⚠</span>
-      <span
-        ><strong>NIH-CPSI {{ cpsi_totalScore }} 分（{{ cpsi_severity.level }}）：</strong
-        >{{ cpsi_severity.advice }}</span
+      <!-- ── Result card ────────────────────────────────────────── -->
+      <div class="cpsi-result" :class="cpsi_severity.color">
+        <div class="result-left">
+          <span class="result-number">{{ cpsi_totalScore ?? "—" }}</span>
+          <span class="result-max">/ 43</span>
+        </div>
+        <div class="result-right">
+          <span class="result-level">{{ cpsi_severity.level }}</span>
+          <span class="result-advice">{{ cpsi_severity.advice }}</span>
+        </div>
+      </div>
+
+      <!-- ── Results detail ─────────────────────────────────────── -->
+      <div v-if="cpsi_showResults && cpsi_isComplete" class="results-detail">
+        <div class="results-header">評估明細</div>
+        <div class="detail-row">
+          <span class="detail-qnum">Q1</span>
+          <span class="detail-domain">疼痛部位</span>
+          <span class="detail-score ds-mid">{{ q1Score }}</span>
+          <span class="detail-desc">/ 4</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Q2</span>
+          <span class="detail-domain">射精疼痛</span>
+          <span class="detail-score" :class="q2 === 1 ? 'ds-high' : 'ds-low'">{{
+            q2
+          }}</span>
+          <span class="detail-desc">/ 1</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Q3</span>
+          <span class="detail-domain">疼痛頻率</span>
+          <span
+            class="detail-score"
+            :class="
+              (q3 ?? 0) >= 3 ? 'ds-high' : (q3 ?? 0) >= 1 ? 'ds-mid' : 'ds-low'
+            "
+            >{{ q3 }}</span
+          >
+          <span class="detail-desc">/ 4</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Q4</span>
+          <span class="detail-domain">疼痛程度（NRS）</span>
+          <span
+            class="detail-score"
+            :class="
+              (q4 ?? 0) >= 7 ? 'ds-high' : (q4 ?? 0) >= 4 ? 'ds-mid' : 'ds-low'
+            "
+            >{{ q4 }}</span
+          >
+          <span class="detail-desc">/ 10</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Pain</span>
+          <span class="detail-domain">疼痛域小計</span>
+          <span class="detail-score ds-brand">{{ painScore }}</span>
+          <span class="detail-desc">/ 21 · {{ painSeverityLabel }}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Q5</span>
+          <span class="detail-domain">排尿不盡感</span>
+          <span
+            class="detail-score"
+            :class="
+              (q5 ?? 0) >= 4 ? 'ds-high' : (q5 ?? 0) >= 2 ? 'ds-mid' : 'ds-low'
+            "
+            >{{ q5 }}</span
+          >
+          <span class="detail-desc">/ 5</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Q6</span>
+          <span class="detail-domain">排尿頻率</span>
+          <span
+            class="detail-score"
+            :class="
+              (q6 ?? 0) >= 4 ? 'ds-high' : (q6 ?? 0) >= 2 ? 'ds-mid' : 'ds-low'
+            "
+            >{{ q6 }}</span
+          >
+          <span class="detail-desc">/ 5</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Q7</span>
+          <span class="detail-domain">日常活動影響</span>
+          <span
+            class="detail-score"
+            :class="(q7 ?? 0) >= 2 ? 'ds-high' : 'ds-mid'"
+            >{{ q7 }}</span
+          >
+          <span class="detail-desc">/ 3</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Q8</span>
+          <span class="detail-domain">症狀佔據思緒</span>
+          <span
+            class="detail-score"
+            :class="(q8 ?? 0) >= 2 ? 'ds-high' : 'ds-mid'"
+            >{{ q8 }}</span
+          >
+          <span class="detail-desc">/ 3</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-qnum">Q9</span>
+          <span class="detail-domain">生活品質</span>
+          <span
+            class="detail-score"
+            :class="(q9 ?? 0) >= 4 ? 'ds-high' : 'ds-mid'"
+            >{{ q9 }}</span
+          >
+          <span class="detail-desc">/ 6</span>
+        </div>
+        <div class="detail-row detail-total">
+          <span class="detail-qnum">∑</span>
+          <span class="detail-domain">NIH-CPSI 總分</span>
+          <span class="detail-score detail-score-brand">{{
+            cpsi_totalScore
+          }}</span>
+          <div class="detail-desc detail-desc-block">
+            <span class="detail-desc-unit">/ 43</span>
+            <span class="detail-desc-label">{{ cpsi_severity.level }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Alert ──────────────────────────────────────────────── -->
+      <div
+        v-if="cpsi_isComplete && cpsi_severity.screen"
+        class="cpsi-alert"
+        :class="`alert-${cpsi_severity.color}`"
       >
-    </div>
+        <span class="alert-icon">⚠</span>
+        <span
+          ><strong
+            >NIH-CPSI {{ cpsi_totalScore }} 分（{{
+              cpsi_severity.level
+            }}）：</strong
+          >{{ cpsi_severity.advice }}</span
+        >
+      </div>
 
-    <!-- ── Clinical note ──────────────────────────────────────── -->
-    <div class="warn-box">
-      <span class="warn-icon">⚠</span>
-      <span
-        >NIH-CPSI
-        適用於評估慢性攝護腺炎／慢性骨盆疼痛症候群（CP/CPPS），不能取代完整泌尿科評估。疼痛域對生活品質的影響（r=0.678）顯著高於排尿域（r=0.320）。治療反應評估時，總分下降
-        ≥ 6 分（或疼痛域下降 ≥ 25%）視為有臨床意義的改善。</span
-      >
-    </div>
+      <!-- ── Clinical note ──────────────────────────────────────── -->
+      <div class="warn-box">
+        <span class="warn-icon">⚠</span>
+        <span
+          >NIH-CPSI
+          適用於評估慢性攝護腺炎／慢性骨盆疼痛症候群（CP/CPPS），不能取代完整泌尿科評估。疼痛域對生活品質的影響（r=0.678）顯著高於排尿域（r=0.320）。治療反應評估時，總分下降
+          ≥ 6 分（或疼痛域下降 ≥ 25%）視為有臨床意義的改善。</span
+        >
+      </div>
 
-    <!-- ── Actions ────────────────────────────────────────────── -->
-    <div class="cpsi-actions">
-      <button class="btn-view" @click="cpsi_showResults = !cpsi_showResults">
-        {{ cpsi_showResults ? "收起明細" : "查看評估結果" }}
-      </button>
-      <button class="btn-copy" :disabled="!cpsi_isComplete" @click="cpsi_copyOutput">
-        {{ cpsi_copied ? "已複製 ✓" : "複製 Markdown 結果" }}
-      </button>
-      <button class="btn-reset" @click="cpsi_reset">重置</button>
+      <!-- ── Actions ────────────────────────────────────────────── -->
+      <div class="cpsi-actions">
+        <button class="btn-view" @click="cpsi_showResults = !cpsi_showResults">
+          {{ cpsi_showResults ? "收起明細" : "查看評估結果" }}
+        </button>
+        <button
+          class="btn-copy"
+          :disabled="!cpsi_isComplete"
+          @click="cpsi_copyOutput"
+        >
+          {{ cpsi_copied ? "已複製 ✓" : "複製 Markdown 結果" }}
+        </button>
+        <button class="btn-reset" @click="cpsi_reset">重置</button>
+      </div>
+      <p v-if="!cpsi_isComplete" class="progress-hint">
+        已完成 {{ answeredSections }}/3 域，疼痛域需完成 Q2–Q4，排尿域需完成
+        Q5–Q6，生活品質域需完成 Q7–Q9
+      </p>
     </div>
-    <p v-if="!cpsi_isComplete" class="progress-hint">
-      已完成 {{ answeredSections }}/3 域，疼痛域需完成 Q2–Q4，排尿域需完成
-      Q5–Q6，生活品質域需完成 Q7–Q9
-    </p>
-  </div>
   </div>
 </template>
 
 <style scoped>
-.prostateassess { max-width: 820px; margin: 0 auto; }
+.prostateassess {
+  max-width: 820px;
+  margin: 0 auto;
+}
 
 .prostateassess > .tab-bar {
-  display: flex; gap: 0.5rem; margin-bottom: 1.5rem; background: var(--vp-c-bg-mute);
-  padding: 4px; border-radius: 10px; border: 1px solid var(--vp-c-divider);
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
 }
 .prostateassess > .tab-bar .tab-btn {
-  flex: 1; padding: 0.65rem 1rem; background: transparent; border: 1.5px solid transparent;
-  cursor: pointer; font-family: inherit; color: var(--vp-c-text-3); border-radius: 8px; transition: all 0.2s;
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
 }
-.prostateassess > .tab-bar .tab-btn:hover { color: var(--vp-c-text-1); border-color: var(--vp-c-divider); }
+.prostateassess > .tab-bar .tab-btn:hover {
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}
 .prostateassess > .tab-bar .tab-btn.active {
-  color: var(--vp-c-brand-1); background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
   border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
 }
-.prostateassess > .tab-bar .tab-label { display: block; font-size: 1rem; font-weight: 800; line-height: 1.3; letter-spacing: 0.02em; }
-.prostateassess > .tab-bar .tab-sub { display: block; font-size: 0.78rem; font-weight: 600; color: var(--vp-c-text-3); margin-top: 2px; }
-.prostateassess > .tab-bar .tab-btn.active .tab-sub { color: var(--vp-c-brand-1); opacity: 0.85; }
+.prostateassess > .tab-bar .tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.prostateassess > .tab-bar .tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+}
+.prostateassess > .tab-bar .tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
+}
 
 /* ══ IPSS 攝護腺症狀評分 ══ */
 
@@ -2611,24 +2723,24 @@ function cpsi_reset() {
 }
 
 @media (max-width: 640px) {
-.ipss .ipss-header {
+  .ipss .ipss-header {
     flex-wrap: wrap;
   }
-.ipss .score-badge {
+  .ipss .score-badge {
     align-self: flex-start;
   }
-.ipss .score-number {
+  .ipss .score-number {
     font-size: 1.5rem;
   }
-.ipss .ipss-result {
+  .ipss .ipss-result {
     flex-direction: column;
     gap: 0.75rem;
     height: auto;
   }
-.ipss .option-row {
+  .ipss .option-row {
     grid-template-columns: repeat(3, 1fr);
   }
-.ipss .sub-score-row {
+  .ipss .sub-score-row {
     gap: 0.3rem;
   }
 }
@@ -3745,35 +3857,35 @@ function cpsi_reset() {
 }
 
 @media (max-width: 640px) {
-.cpsi .cpsi-header {
+  .cpsi .cpsi-header {
     flex-wrap: wrap;
   }
-.cpsi .score-badge {
+  .cpsi .score-badge {
     align-self: flex-start;
   }
-.cpsi .score-number {
+  .cpsi .score-number {
     font-size: 1.5rem;
   }
-.cpsi .cpsi-result {
+  .cpsi .cpsi-result {
     flex-direction: column;
     gap: 0.5rem;
   }
-.cpsi .result-number {
+  .cpsi .result-number {
     font-size: 2rem;
   }
-.cpsi .checkbox-grid {
+  .cpsi .checkbox-grid {
     grid-template-columns: 1fr;
   }
-.cpsi .option-row {
+  .cpsi .option-row {
     grid-template-columns: repeat(3, 1fr);
   }
-.cpsi .option-row.q3-row {
+  .cpsi .option-row.q3-row {
     grid-template-columns: repeat(3, 1fr);
   }
-.cpsi .option-row.qol-row {
+  .cpsi .option-row.qol-row {
     grid-template-columns: repeat(4, 1fr);
   }
-.cpsi .nrs-grid {
+  .cpsi .nrs-grid {
     grid-template-columns: repeat(6, 1fr);
   }
 }
@@ -4031,10 +4143,68 @@ function cpsi_reset() {
   padding: 0.5rem 0.9rem 0.7rem;
 }
 .cpsi .field-slider {
+  position: relative;
   width: 100%;
-  accent-color: var(--vp-c-brand-1);
+  -webkit-appearance: none;
+  appearance: none;
+  height: 32px;
+  background: transparent;
   cursor: pointer;
-  height: 6px;
+  z-index: 1;
+}
+.cpsi .field-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.cpsi .field-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+}
+.cpsi .field-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.cpsi .slider-track-wrap {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+.cpsi .slider-track {
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  right: 11px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--vp-c-bg-mute);
+  transform: translateY(-50%);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+.cpsi .slider-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition:
+    width 0.15s ease,
+    background 0.3s;
+}
+.cpsi .slider-fill.fill-q4 {
+  background: linear-gradient(90deg, #ef4444, #f97316);
 }
 .cpsi .slider-col {
   flex: 1;
@@ -4048,7 +4218,8 @@ function cpsi_reset() {
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--vp-c-text-2);
-  padding: 0 8px;
+  padding: 0 11px;
+  margin-top: 2px;
 }
 .cpsi .field-ticks span {
   width: 0;

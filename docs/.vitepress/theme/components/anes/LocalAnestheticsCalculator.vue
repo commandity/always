@@ -1056,8 +1056,8 @@ function reset() {
   gap: 4px;
 }
 .result-divider-v {
-  width: 100px;
-  height: 1px;
+  width: 120px;
+  height: 2.5px;
   background: var(--vp-c-divider);
 }
 .result-number {

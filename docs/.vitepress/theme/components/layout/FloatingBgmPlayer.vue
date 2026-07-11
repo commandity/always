@@ -2,6 +2,7 @@
 import { ref, watch, onMounted, onUnmounted, nextTick } from "vue";
 
 const playlist = [
+  { name: "Relax House", id: "36YnV9STBqc" },
   { name: "Chill Synthwave", id: "4xDzrJKXOOY" },
   { name: "Lofi Girl", id: "X4VbdwhkE10" },
   { name: "Chill Out Music Mix", id: "m52ynxt1mOo" },

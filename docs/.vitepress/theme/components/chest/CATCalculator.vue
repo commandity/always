@@ -166,9 +166,9 @@ async function copyMarkdown() {
       <div class="intro-bar">
         <span class="intro-dot">◆</span>
         <span
-          >每項描述請依當前狀況於 <strong>0–5</strong> 之間評分（0
-          為完全沒有、5
-          為極嚴重），共 8 題。CAT 反映 COPD 對日常生活的整體影響，適合門診追蹤症狀變化與治療反應。</span
+          >每項描述請依當前狀況於 <strong>0–5</strong> 之間評分（0 為完全沒有、5
+          為極嚴重），共 8 題。CAT 反映 COPD
+          對日常生活的整體影響，適合門診追蹤症狀變化與治療反應。</span
         >
       </div>
 
@@ -210,10 +210,55 @@ async function copyMarkdown() {
                   <span class="anchor-left">{{ q.left }}</span>
                   <span class="anchor-right">{{ q.right }}</span>
                 </div>
-                <input type="range" min="0" max="5" step="1" class="field-slider" :value="sel[q.key] >= 0 ? sel[q.key] : 0" @input="sel[q.key] = parseInt(($event.target as HTMLInputElement).value)" />
-                <div class="field-ticks"><span v-for="n in 6" :key="n">{{ n - 1 }}</span></div>
+                <div class="slider-track-wrap">
+                  <div class="slider-track">
+                    <div
+                      class="slider-fill"
+                      :class="'fill-' + (idx + 1)"
+                      :style="{
+                        width:
+                          ((sel[q.key] >= 0 ? sel[q.key] : 0) / 5) * 100 + '%',
+                      }"
+                    />
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="5"
+                    step="1"
+                    class="field-slider"
+                    :value="sel[q.key] >= 0 ? sel[q.key] : 0"
+                    @input="
+                      sel[q.key] = parseInt(
+                        ($event.target as HTMLInputElement).value,
+                      )
+                    "
+                  />
+                </div>
+                <div class="field-ticks">
+                  <span v-for="n in 6" :key="n">{{ n - 1 }}</span>
+                </div>
               </div>
-              <input type="number" min="0" max="5" class="field-number" placeholder="—" :value="sel[q.key] >= 0 ? sel[q.key] : ''" @input="sel[q.key] = ($event.target as HTMLInputElement).value === '' ? -1 : Math.max(0, Math.min(5, parseInt(($event.target as HTMLInputElement).value)))" />
+              <input
+                type="number"
+                min="0"
+                max="5"
+                class="field-number"
+                placeholder="—"
+                :value="sel[q.key] >= 0 ? sel[q.key] : ''"
+                @input="
+                  sel[q.key] =
+                    ($event.target as HTMLInputElement).value === ''
+                      ? -1
+                      : Math.max(
+                          0,
+                          Math.min(
+                            5,
+                            parseInt(($event.target as HTMLInputElement).value),
+                          ),
+                        )
+                "
+              />
             </div>
           </div>
         </div>
@@ -922,10 +967,89 @@ async function copyMarkdown() {
   padding: 0.5rem 0.9rem 0.7rem;
 }
 .field-slider {
+  position: relative;
   width: 100%;
-  accent-color: var(--vp-c-brand-1);
+  -webkit-appearance: none;
+  appearance: none;
+  height: 32px;
+  background: transparent;
   cursor: pointer;
-  height: 6px;
+  z-index: 1;
+}
+.field-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.field-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+}
+.field-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.slider-track-wrap {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+.slider-track {
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  right: 11px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--vp-c-bg-mute);
+  transform: translateY(-50%);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+.slider-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition:
+    width 0.15s ease,
+    background 0.3s;
+}
+.slider-fill.fill-1 {
+  background: linear-gradient(90deg, #22c55e, #84cc16);
+}
+.slider-fill.fill-2 {
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+}
+.slider-fill.fill-3 {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+}
+.slider-fill.fill-4 {
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+}
+.slider-fill.fill-5 {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+.slider-fill.fill-6 {
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
+}
+.slider-fill.fill-7 {
+  background: linear-gradient(90deg, #14b8a6, #2dd4bf);
+}
+.slider-fill.fill-8 {
+  background: linear-gradient(90deg, #f43f5e, #fb7185);
 }
 .slider-col {
   flex: 1;
@@ -939,7 +1063,8 @@ async function copyMarkdown() {
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--vp-c-text-2);
-  padding: 0 8px;
+  padding: 0 11px;
+  margin-top: 2px;
 }
 .field-ticks span {
   width: 0;

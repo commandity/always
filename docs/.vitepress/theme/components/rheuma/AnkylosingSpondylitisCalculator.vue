@@ -223,339 +223,395 @@ const domainOrder = ["GS", "MS"] as const;
       </button>
     </div>
 
-  <div v-show="activeTab === 'basdai'" class="basdai">
-    <!-- Header -->
-    <div class="basdai-header">
-      <div class="header-title">
-        <h2 class="title">BASDAI 疾病活動指數</h2>
-        <p class="subtitle">
-          Bath Ankylosing Spondylitis Disease Activity Index · 患者自填 ·
-          過去一週症狀評估
-        </p>
-      </div>
-      <div class="score-badge" :class="severity.color">
-        <span class="score-number">{{ basdai ?? "—" }}</span>
-        <span class="score-label">{{ severity.tag }}</span>
-      </div>
-    </div>
-
-    <!-- Severity bar -->
-    <div class="severity-bar-wrap">
-      <div class="severity-bar">
-        <div
-          class="severity-fill"
-          :class="severity.color"
-          :style="{
-            width:
-              basdai !== null ? Math.min((basdai / 10) * 100, 100) + '%' : '0%',
-          }"
-        />
-      </div>
-      <div class="severity-ticks">
-        <span>0</span>
-        <span class="tick-y">2</span>
-        <span class="tick-o">4</span>
-        <span class="tick-r">6</span>
-        <span>10</span>
-      </div>
-    </div>
-
-    <!-- Risk strip -->
-    <div class="risk-strip">
-      <div
-        class="risk-pill"
-        :class="{ 'risk-active': basdai !== null && basdai < 2 }"
-      >
-        <span class="risk-score">&lt; 2</span>
-        <span class="risk-rate normal-risk">良好控制</span>
-        <span class="risk-tag">Controlled</span>
-      </div>
-      <div
-        class="risk-pill"
-        :class="{ 'risk-active': basdai !== null && basdai >= 2 && basdai < 4 }"
-      >
-        <span class="risk-score">2–4</span>
-        <span class="risk-rate mild-risk">輕中度</span>
-        <span class="risk-tag">Low-Moderate</span>
-      </div>
-      <div
-        class="risk-pill"
-        :class="{ 'risk-active': basdai !== null && basdai >= 4 && basdai < 6 }"
-      >
-        <span class="risk-score">4–6</span>
-        <span class="risk-rate moderate-risk">高活動度</span>
-        <span class="risk-tag">High Activity</span>
-      </div>
-      <div
-        class="risk-pill"
-        :class="{ 'risk-active': basdai !== null && basdai >= 6 }"
-      >
-        <span class="risk-score">≥ 6</span>
-        <span class="risk-rate severe-risk">極高活動</span>
-        <span class="risk-tag">Very High</span>
-      </div>
-    </div>
-
-    <!-- Sub-scores -->
-    <div class="sub-scores">
-      <div class="sub-pill gs-pill">
-        <span class="sub-label">全身症狀（Q1–Q4）</span>
-        <span class="sub-val">{{ gsSum.toFixed(1) }}</span>
-      </div>
-      <div class="sub-pill ms-pill">
-        <span class="sub-label">晨間僵硬平均（(Q5+Q6)÷2）</span>
-        <span class="sub-val">{{
-          morningStiffnessAvg !== null ? morningStiffnessAvg.toFixed(2) : "—"
-        }}</span>
-      </div>
-    </div>
-
-    <!-- Intro -->
-    <div class="intro-bar">
-      <span class="intro-dot">◉</span>
-      <span
-        >請根據您<strong>過去一週</strong>的症狀，在每個問題的滑桿上選擇 0–10
-        的分數。0 = 無症狀，10 = 症狀最嚴重。Q5 與 Q6
-        的分數將取平均後納入計算。</span
-      >
-    </div>
-
-    <!-- ── Question groups ─────────────────────────────────────── -->
-    <div v-for="dk in domainOrder" :key="dk" class="basdai-group">
-      <div class="group-header" :class="domainDefs[dk].color + '-header'">
-        <div class="group-label-block">
-          <span class="group-label">{{ domainDefs[dk].name }}</span>
-          <span class="group-sub">{{ domainDefs[dk].sub }}</span>
+    <div v-show="activeTab === 'basdai'" class="basdai">
+      <!-- Header -->
+      <div class="basdai-header">
+        <div class="header-title">
+          <h2 class="title">BASDAI 疾病活動指數</h2>
+          <p class="subtitle">
+            Bath Ankylosing Spondylitis Disease Activity Index · 患者自填 ·
+            過去一週症狀評估
+          </p>
         </div>
-        <div class="group-score-pill" :class="domainDefs[dk].color + '-pill'">
-          {{
-            dk === "GS"
-              ? gsSum.toFixed(1)
-              : morningStiffnessAvg !== null
-                ? morningStiffnessAvg.toFixed(2)
-                : "—"
-          }}
+        <div class="score-badge" :class="severity.color">
+          <span class="score-number">{{ basdai ?? "—" }}</span>
+          <span class="score-label">{{ severity.tag }}</span>
         </div>
       </div>
 
-      <div class="item-list">
+      <!-- Severity bar -->
+      <div class="severity-bar-wrap">
+        <div class="severity-bar">
+          <div
+            class="severity-fill"
+            :class="severity.color"
+            :style="{
+              width:
+                basdai !== null
+                  ? Math.min((basdai / 10) * 100, 100) + '%'
+                  : '0%',
+            }"
+          />
+        </div>
+        <div class="severity-ticks">
+          <span>0</span>
+          <span class="tick-y">2</span>
+          <span class="tick-o">4</span>
+          <span class="tick-r">6</span>
+          <span>10</span>
+        </div>
+      </div>
+
+      <!-- Risk strip -->
+      <div class="risk-strip">
         <div
-          v-for="item in questions.filter((q) => q.sub === dk)"
-          :key="item.key"
-          class="basdai-item"
+          class="risk-pill"
+          :class="{ 'risk-active': basdai !== null && basdai < 2 }"
+        >
+          <span class="risk-score">&lt; 2</span>
+          <span class="risk-rate normal-risk">良好控制</span>
+          <span class="risk-tag">Controlled</span>
+        </div>
+        <div
+          class="risk-pill"
           :class="{
-            answered: scores[item.key] !== null,
-            flagged: scores[item.key] !== null && scores[item.key]! >= 4,
-            [domainDefs[dk].color + '-active']:
-              scores[item.key] !== null && scores[item.key]! > 0,
+            'risk-active': basdai !== null && basdai >= 2 && basdai < 4,
           }"
         >
-          <!-- Item header -->
-          <div class="item-header">
-            <div class="item-meta-row">
-              <span class="item-qnum" :class="domainDefs[dk].color + '-qnum'"
-                >Q{{ item.num }}</span
+          <span class="risk-score">2–4</span>
+          <span class="risk-rate mild-risk">輕中度</span>
+          <span class="risk-tag">Low-Moderate</span>
+        </div>
+        <div
+          class="risk-pill"
+          :class="{
+            'risk-active': basdai !== null && basdai >= 4 && basdai < 6,
+          }"
+        >
+          <span class="risk-score">4–6</span>
+          <span class="risk-rate moderate-risk">高活動度</span>
+          <span class="risk-tag">High Activity</span>
+        </div>
+        <div
+          class="risk-pill"
+          :class="{ 'risk-active': basdai !== null && basdai >= 6 }"
+        >
+          <span class="risk-score">≥ 6</span>
+          <span class="risk-rate severe-risk">極高活動</span>
+          <span class="risk-tag">Very High</span>
+        </div>
+      </div>
+
+      <!-- Sub-scores -->
+      <div class="sub-scores">
+        <div class="sub-pill gs-pill">
+          <span class="sub-label">全身症狀（Q1–Q4）</span>
+          <span class="sub-val">{{ gsSum.toFixed(1) }}</span>
+        </div>
+        <div class="sub-pill ms-pill">
+          <span class="sub-label">晨間僵硬平均（(Q5+Q6)÷2）</span>
+          <span class="sub-val">{{
+            morningStiffnessAvg !== null ? morningStiffnessAvg.toFixed(2) : "—"
+          }}</span>
+        </div>
+      </div>
+
+      <!-- Intro -->
+      <div class="intro-bar">
+        <span class="intro-dot">◉</span>
+        <span
+          >請根據您<strong>過去一週</strong>的症狀，在每個問題的滑桿上選擇 0–10
+          的分數。0 = 無症狀，10 = 症狀最嚴重。Q5 與 Q6
+          的分數將取平均後納入計算。</span
+        >
+      </div>
+
+      <!-- ── Question groups ─────────────────────────────────────── -->
+      <div v-for="dk in domainOrder" :key="dk" class="basdai-group">
+        <div class="group-header" :class="domainDefs[dk].color + '-header'">
+          <div class="group-label-block">
+            <span class="group-label">{{ domainDefs[dk].name }}</span>
+            <span class="group-sub">{{ domainDefs[dk].sub }}</span>
+          </div>
+          <div class="group-score-pill" :class="domainDefs[dk].color + '-pill'">
+            {{
+              dk === "GS"
+                ? gsSum.toFixed(1)
+                : morningStiffnessAvg !== null
+                  ? morningStiffnessAvg.toFixed(2)
+                  : "—"
+            }}
+          </div>
+        </div>
+
+        <div class="item-list">
+          <div
+            v-for="item in questions.filter((q) => q.sub === dk)"
+            :key="item.key"
+            class="basdai-item"
+            :class="{
+              answered: scores[item.key] !== null,
+              flagged: scores[item.key] !== null && scores[item.key]! >= 4,
+              [domainDefs[dk].color + '-active']:
+                scores[item.key] !== null && scores[item.key]! > 0,
+            }"
+          >
+            <!-- Item header -->
+            <div class="item-header">
+              <div class="item-meta-row">
+                <span class="item-qnum" :class="domainDefs[dk].color + '-qnum'"
+                  >Q{{ item.num }}</span
+                >
+              </div>
+              <div class="item-name-block">
+                <span class="item-name">{{ item.name }}</span>
+                <span class="item-sub">{{ item.en }}</span>
+                <span class="item-hint">{{ item.hint }}</span>
+              </div>
+              <span
+                class="item-score"
+                :class="{
+                  'score-null': scores[item.key] === null,
+                  'score-zero': scores[item.key] === 0,
+                  'score-mid':
+                    scores[item.key] !== null &&
+                    scores[item.key]! > 0 &&
+                    scores[item.key]! < 4,
+                  'score-flagged':
+                    scores[item.key] !== null && scores[item.key]! >= 4,
+                }"
               >
+                {{ scores[item.key] !== null ? scores[item.key] : "—" }}
+              </span>
             </div>
-            <div class="item-name-block">
-              <span class="item-name">{{ item.name }}</span>
-              <span class="item-sub">{{ item.en }}</span>
-              <span class="item-hint">{{ item.hint }}</span>
+
+            <!-- VAS slider row -->
+            <div class="field-input-wrap">
+              <div class="slider-col">
+                <div class="item-anchor-row">
+                  <span class="anchor-left">{{ item.anchorL }}</span>
+                  <span class="anchor-right">{{ item.anchorR }}</span>
+                </div>
+                <div class="slider-track-wrap">
+                  <div class="slider-track">
+                    <div
+                      class="slider-fill"
+                      :class="'fill-' + item.num"
+                      :style="{
+                        width: ((getScore(item.key) || 0) / 10) * 100 + '%',
+                      }"
+                    />
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    step="0.5"
+                    class="field-slider"
+                    :value="getScore(item.key)"
+                    @input="
+                      setScore(
+                        item.key,
+                        parseFloat(($event.target as HTMLInputElement).value),
+                      )
+                    "
+                  />
+                </div>
+                <div class="field-ticks">
+                  <span v-for="n in 11" :key="n">{{ n - 1 }}</span>
+                </div>
+              </div>
+              <input
+                type="number"
+                min="0"
+                max="10"
+                step="0.5"
+                class="field-number"
+                placeholder="—"
+                :value="scores[item.key] ?? ''"
+                @input="
+                  scores[item.key] =
+                    ($event.target as HTMLInputElement).value === ''
+                      ? null
+                      : Math.max(
+                          0,
+                          Math.min(
+                            10,
+                            parseFloat(
+                              ($event.target as HTMLInputElement).value,
+                            ),
+                          ),
+                        )
+                "
+              />
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MS average note -->
+      <div class="ms-avg-space">
+        <div v-if="morningStiffnessAvg !== null" class="ms-avg-note">
+          <span class="ms-avg-label">晨間僵硬平均分（計入公式）：</span>
+          <span class="ms-avg-val">
+            ({{ scores["q5"] }} + {{ scores["q6"] }}) ÷ 2 =
+            {{ morningStiffnessAvg.toFixed(2) }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Formula card -->
+      <div class="formula-card">
+        <div class="formula-header">
+          BASDAI = ( Q1 + Q2 + Q3 + Q4 + [(Q5+Q6)÷2] ) ÷ 5
+        </div>
+        <div class="formula-body">
+          <div class="formula-parts">
+            <div class="fp" :class="{ 'fp-on': scores['q1'] !== null }">
+              <span class="fp-n">{{ scores["q1"] ?? "?" }}</span
+              ><span class="fp-l">Q1</span>
+            </div>
+            <span class="fp-op">+</span>
+            <div class="fp" :class="{ 'fp-on': scores['q2'] !== null }">
+              <span class="fp-n">{{ scores["q2"] ?? "?" }}</span
+              ><span class="fp-l">Q2</span>
+            </div>
+            <span class="fp-op">+</span>
+            <div class="fp" :class="{ 'fp-on': scores['q3'] !== null }">
+              <span class="fp-n">{{ scores["q3"] ?? "?" }}</span
+              ><span class="fp-l">Q3</span>
+            </div>
+            <span class="fp-op">+</span>
+            <div class="fp" :class="{ 'fp-on': scores['q4'] !== null }">
+              <span class="fp-n">{{ scores["q4"] ?? "?" }}</span
+              ><span class="fp-l">Q4</span>
+            </div>
+            <span class="fp-op">+</span>
+            <div
+              class="fp ms-fp"
+              :class="{ 'fp-on': morningStiffnessAvg !== null }"
+            >
+              <span class="fp-n">{{
+                morningStiffnessAvg !== null
+                  ? morningStiffnessAvg.toFixed(2)
+                  : "?"
+              }}</span>
+              <span class="fp-l">MS avg</span>
+            </div>
+            <span class="fp-op">÷ 5 =</span>
+            <div class="fp fp-result" :class="severity.color">
+              <span class="fp-n">{{ basdai ?? "—" }}</span
+              ><span class="fp-l">BASDAI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Biologic eligibility note -->
+      <div
+        class="biologic-bar"
+        :class="biologicEligible ? 'bio-eligible' : 'bio-not'"
+      >
+        <span class="bio-icon">{{ biologicEligible ? "⚠" : "ℹ" }}</span>
+        <div class="bio-text">
+          <strong>生物製劑評估：</strong>
+          <span v-if="biologicEligible">
+            BASDAI ≥ 4，符合生物製劑適應症評估門檻。需同時確認：已充分使用 ≥ 2
+            種 NSAIDs 且療效不佳，及影像學骶髂關節炎或 HLA-B27 陽性。
+          </span>
+          <span v-else>
+            BASDAI &lt; 4，目前未達生物製劑適應症評估閾值。建議優化 NSAIDs
+            治療並定期追蹤。
+          </span>
+        </div>
+      </div>
+
+      <!-- Result card -->
+      <div class="basdai-result" :class="severity.color">
+        <div class="result-left">
+          <span class="result-number">{{ basdai ?? "—" }}</span>
+          <span class="result-max">/ 10</span>
+        </div>
+        <div class="result-right">
+          <span class="result-level">{{ severity.level }}</span>
+          <span class="result-advice">{{ severity.advice }}</span>
+          <div class="result-breakdown">
+            <span class="breakdown-pill gs-pill-sm"
+              >全身症狀：{{ gsSum.toFixed(1) }}</span
+            >
+            <span class="breakdown-pill ms-pill-sm"
+              >晨間僵硬avg：{{
+                morningStiffnessAvg !== null
+                  ? morningStiffnessAvg.toFixed(2)
+                  : "—"
+              }}</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Results detail -->
+      <div v-if="showResults" class="results-detail">
+        <div class="results-header">評估明細</div>
+        <div v-for="dk in domainOrder" :key="dk">
+          <div
+            class="detail-section-title"
+            :class="domainDefs[dk].color + '-section'"
+          >
+            {{ domainDefs[dk].name }}
+          </div>
+          <div
+            v-for="item in questions.filter((q) => q.sub === dk)"
+            :key="item.key"
+            class="detail-row"
+          >
+            <span class="detail-qnum">Q{{ item.num }}</span>
+            <span class="detail-domain">{{ item.name }}</span>
             <span
-              class="item-score"
+              class="detail-score"
               :class="{
-                'score-null': scores[item.key] === null,
-                'score-zero': scores[item.key] === 0,
-                'score-mid':
-                  scores[item.key] !== null &&
-                  scores[item.key]! > 0 &&
-                  scores[item.key]! < 4,
-                'score-flagged':
-                  scores[item.key] !== null && scores[item.key]! >= 4,
+                brand: scores[item.key] !== null && scores[item.key]! > 0,
+                flagged: scores[item.key] !== null && scores[item.key]! >= 4,
+                zero: scores[item.key] === 0,
               }"
             >
               {{ scores[item.key] !== null ? scores[item.key] : "—" }}
             </span>
+            <span class="detail-desc">/ 10</span>
           </div>
-
-          <!-- VAS slider row -->
-          <div class="field-input-wrap">
-            <div class="slider-col">
-              <div class="item-anchor-row">
-                <span class="anchor-left">{{ item.anchorL }}</span>
-                <span class="anchor-right">{{ item.anchorR }}</span>
-              </div>
-              <input type="range" min="0" max="10" step="0.5" class="field-slider" :value="getScore(item.key)" @input="setScore(item.key, parseFloat(($event.target as HTMLInputElement).value))" />
-              <div class="field-ticks"><span v-for="n in 11" :key="n">{{ n - 1 }}</span></div>
-            </div>
-            <input type="number" min="0" max="10" step="0.5" class="field-number" placeholder="—" :value="scores[item.key] ?? ''" @input="scores[item.key] = ($event.target as HTMLInputElement).value === '' ? null : Math.max(0, Math.min(10, parseFloat(($event.target as HTMLInputElement).value)))" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MS average note -->
-    <div class="ms-avg-space">
-      <div v-if="morningStiffnessAvg !== null" class="ms-avg-note">
-        <span class="ms-avg-label">晨間僵硬平均分（計入公式）：</span>
-        <span class="ms-avg-val">
-          ({{ scores["q5"] }} + {{ scores["q6"] }}) ÷ 2 =
-          {{ morningStiffnessAvg.toFixed(2) }}
-        </span>
-      </div>
-    </div>
-
-    <!-- Formula card -->
-    <div class="formula-card">
-      <div class="formula-header">
-        BASDAI = ( Q1 + Q2 + Q3 + Q4 + [(Q5+Q6)÷2] ) ÷ 5
-      </div>
-      <div class="formula-body">
-        <div class="formula-parts">
-          <div class="fp" :class="{ 'fp-on': scores['q1'] !== null }">
-            <span class="fp-n">{{ scores["q1"] ?? "?" }}</span
-            ><span class="fp-l">Q1</span>
-          </div>
-          <span class="fp-op">+</span>
-          <div class="fp" :class="{ 'fp-on': scores['q2'] !== null }">
-            <span class="fp-n">{{ scores["q2"] ?? "?" }}</span
-            ><span class="fp-l">Q2</span>
-          </div>
-          <span class="fp-op">+</span>
-          <div class="fp" :class="{ 'fp-on': scores['q3'] !== null }">
-            <span class="fp-n">{{ scores["q3"] ?? "?" }}</span
-            ><span class="fp-l">Q3</span>
-          </div>
-          <span class="fp-op">+</span>
-          <div class="fp" :class="{ 'fp-on': scores['q4'] !== null }">
-            <span class="fp-n">{{ scores["q4"] ?? "?" }}</span
-            ><span class="fp-l">Q4</span>
-          </div>
-          <span class="fp-op">+</span>
-          <div
-            class="fp ms-fp"
-            :class="{ 'fp-on': morningStiffnessAvg !== null }"
-          >
-            <span class="fp-n">{{
-              morningStiffnessAvg !== null
-                ? morningStiffnessAvg.toFixed(2)
-                : "?"
-            }}</span>
-            <span class="fp-l">MS avg</span>
-          </div>
-          <span class="fp-op">÷ 5 =</span>
-          <div class="fp fp-result" :class="severity.color">
-            <span class="fp-n">{{ basdai ?? "—" }}</span
-            ><span class="fp-l">BASDAI</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Biologic eligibility note -->
-    <div
-      class="biologic-bar"
-      :class="biologicEligible ? 'bio-eligible' : 'bio-not'"
-    >
-      <span class="bio-icon">{{ biologicEligible ? "⚠" : "ℹ" }}</span>
-      <div class="bio-text">
-        <strong>生物製劑評估：</strong>
-        <span v-if="biologicEligible">
-          BASDAI ≥ 4，符合生物製劑適應症評估門檻。需同時確認：已充分使用 ≥ 2 種
-          NSAIDs 且療效不佳，及影像學骶髂關節炎或 HLA-B27 陽性。
-        </span>
-        <span v-else>
-          BASDAI &lt; 4，目前未達生物製劑適應症評估閾值。建議優化 NSAIDs
-          治療並定期追蹤。
-        </span>
-      </div>
-    </div>
-
-    <!-- Result card -->
-    <div class="basdai-result" :class="severity.color">
-      <div class="result-left">
-        <span class="result-number">{{ basdai ?? "—" }}</span>
-        <span class="result-max">/ 10</span>
-      </div>
-      <div class="result-right">
-        <span class="result-level">{{ severity.level }}</span>
-        <span class="result-advice">{{ severity.advice }}</span>
-        <div class="result-breakdown">
-          <span class="breakdown-pill gs-pill-sm"
-            >全身症狀：{{ gsSum.toFixed(1) }}</span
-          >
-          <span class="breakdown-pill ms-pill-sm"
-            >晨間僵硬avg：{{
+          <div v-if="dk === 'MS'" class="detail-row detail-avg">
+            <span class="detail-qnum">avg</span>
+            <span class="detail-domain">晨間僵硬平均（(Q5+Q6)÷2）</span>
+            <span class="detail-score brand">{{
               morningStiffnessAvg !== null
                 ? morningStiffnessAvg.toFixed(2)
                 : "—"
-            }}</span
-          >
+            }}</span>
+            <span class="detail-desc">/ 10</span>
+          </div>
+        </div>
+        <div class="detail-row total-row">
+          <span class="detail-qnum">∑</span>
+          <span class="detail-domain">BASDAI 總分</span>
+          <span class="detail-score brand">{{ basdai ?? "—" }}</span>
+          <span class="detail-desc">{{ severity.tag }}</span>
         </div>
       </div>
-    </div>
 
-    <!-- Results detail -->
-    <div v-if="showResults" class="results-detail">
-      <div class="results-header">評估明細</div>
-      <div v-for="dk in domainOrder" :key="dk">
-        <div
-          class="detail-section-title"
-          :class="domainDefs[dk].color + '-section'"
-        >
-          {{ domainDefs[dk].name }}
-        </div>
-        <div
-          v-for="item in questions.filter((q) => q.sub === dk)"
-          :key="item.key"
-          class="detail-row"
-        >
-          <span class="detail-qnum">Q{{ item.num }}</span>
-          <span class="detail-domain">{{ item.name }}</span>
-          <span
-            class="detail-score"
-            :class="{
-              brand: scores[item.key] !== null && scores[item.key]! > 0,
-              flagged: scores[item.key] !== null && scores[item.key]! >= 4,
-              zero: scores[item.key] === 0,
-            }"
-          >
-            {{ scores[item.key] !== null ? scores[item.key] : "—" }}
-          </span>
-          <span class="detail-desc">/ 10</span>
-        </div>
-        <div v-if="dk === 'MS'" class="detail-row detail-avg">
-          <span class="detail-qnum">avg</span>
-          <span class="detail-domain">晨間僵硬平均（(Q5+Q6)÷2）</span>
-          <span class="detail-score brand">{{
-            morningStiffnessAvg !== null ? morningStiffnessAvg.toFixed(2) : "—"
-          }}</span>
-          <span class="detail-desc">/ 10</span>
-        </div>
+      <!-- Actions -->
+      <div class="basdai-actions">
+        <button class="btn-view" @click="showResults = !showResults">
+          {{ showResults ? "收起明細" : "查看評估結果" }}
+        </button>
+        <button class="btn-copy" :disabled="!isComplete" @click="copyMarkdown">
+          {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
+        </button>
+        <button class="btn-reset" @click="reset">重置</button>
       </div>
-      <div class="detail-row total-row">
-        <span class="detail-qnum">∑</span>
-        <span class="detail-domain">BASDAI 總分</span>
-        <span class="detail-score brand">{{ basdai ?? "—" }}</span>
-        <span class="detail-desc">{{ severity.tag }}</span>
-      </div>
+      <p class="progress-hint" v-if="answeredCount > 0 && !isComplete">
+        已完成 {{ answeredCount }} / 6 題
+      </p>
     </div>
-
-    <!-- Actions -->
-    <div class="basdai-actions">
-      <button class="btn-view" @click="showResults = !showResults">
-        {{ showResults ? "收起明細" : "查看評估結果" }}
-      </button>
-      <button class="btn-copy" :disabled="!isComplete" @click="copyMarkdown">
-        {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
-      </button>
-      <button class="btn-reset" @click="reset">重置</button>
-    </div>
-    <p class="progress-hint" v-if="answeredCount > 0 && !isComplete">
-      已完成 {{ answeredCount }} / 6 題
-    </p>
-  </div>
   </div>
 </template>
 
@@ -1631,37 +1687,37 @@ const domainOrder = ["GS", "MS"] as const;
 }
 
 @media (max-width: 640px) {
-.basdai .basdai-header {
+  .basdai .basdai-header {
     flex-direction: column;
   }
-.basdai .score-badge {
+  .basdai .score-badge {
     flex-direction: row;
     gap: 0.5rem;
     align-self: flex-start;
   }
-.basdai .score-number {
+  .basdai .score-number {
     font-size: 1.5rem;
   }
-.basdai .risk-strip {
+  .basdai .risk-strip {
     grid-template-columns: repeat(2, 1fr);
   }
-.basdai .basdai-result {
+  .basdai .basdai-result {
     flex-direction: column;
     gap: 0.75rem;
   }
-.basdai .vas-anchor-l,
-.basdai .vas-anchor-r {
+  .basdai .vas-anchor-l,
+  .basdai .vas-anchor-r {
     width: 38px;
     font-size: 0.58rem;
   }
-.basdai .formula-parts {
+  .basdai .formula-parts {
     gap: 0.25rem;
   }
-.basdai .fp {
+  .basdai .fp {
     min-width: 38px;
     padding: 0.35rem 0.4rem;
   }
-.basdai .fp-n {
+  .basdai .fp-n {
     font-size: 1rem;
   }
 }
@@ -1706,10 +1762,83 @@ const domainOrder = ["GS", "MS"] as const;
   padding: 0.5rem 0.9rem 0.7rem;
 }
 .basdai .field-slider {
+  position: relative;
   width: 100%;
-  accent-color: var(--vp-c-brand-1);
+  -webkit-appearance: none;
+  appearance: none;
+  height: 32px;
+  background: transparent;
   cursor: pointer;
-  height: 6px;
+  z-index: 1;
+}
+.basdai .field-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.basdai .field-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+}
+.basdai .field-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.basdai .slider-track-wrap {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+.basdai .slider-track {
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  right: 11px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--vp-c-bg-mute);
+  transform: translateY(-50%);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+.basdai .slider-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition:
+    width 0.15s ease,
+    background 0.3s;
+}
+.basdai .slider-fill.fill-1 {
+  background: linear-gradient(90deg, #22c55e, #84cc16);
+}
+.basdai .slider-fill.fill-2 {
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+}
+.basdai .slider-fill.fill-3 {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+}
+.basdai .slider-fill.fill-4 {
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+}
+.basdai .slider-fill.fill-5 {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+.basdai .slider-fill.fill-6 {
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
 }
 .basdai .slider-col {
   flex: 1;
@@ -1723,7 +1852,8 @@ const domainOrder = ["GS", "MS"] as const;
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--vp-c-text-2);
-  padding: 0 8px;
+  padding: 0 11px;
+  margin-top: 2px;
 }
 .basdai .field-ticks span {
   width: 0;

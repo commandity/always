@@ -739,11 +739,9 @@ function tfiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span
-          ><span class="tick-threshold">16</span
+          <span class="tk-normal">0</span><span class="tick-threshold">16</span
           ><span class="tk-mild">36</span><span class="tk-moderate">56</span
-          ><span class="tk-severe">76</span
-          ><span class="tk-critical">100</span>
+          ><span class="tk-severe">76</span><span class="tk-critical">100</span>
         </div>
       </div>
 
@@ -950,8 +948,7 @@ function tfiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span
-          ><span class="tick-threshold">25</span
+          <span class="tk-normal">0</span><span class="tick-threshold">25</span
           ><span class="tk-mild">50</span><span class="tk-moderate">75</span
           ><span class="tk-severe">100</span>
         </div>
@@ -1042,10 +1039,62 @@ function tfiReset() {
                   <span class="anchor-left">{{ q.anchor_lo }}</span>
                   <span class="anchor-right">{{ q.anchor_hi }}</span>
                 </div>
-                <input type="range" min="0" max="10" step="1" class="field-slider" :value="tfiSelections[q.key] >= 0 ? tfiSelections[q.key] : 0" @input="tfiSelections[q.key] = parseInt(($event.target as HTMLInputElement).value)" />
-                <div class="field-ticks"><span v-for="n in 11" :key="n">{{ n - 1 }}</span></div>
+                <div class="slider-track-wrap">
+                  <div class="slider-track">
+                    <div
+                      class="slider-fill"
+                      :class="'fill-' + tfiQIndex[q.key]"
+                      :style="{
+                        width:
+                          ((tfiSelections[q.key] >= 0
+                            ? tfiSelections[q.key]
+                            : 0) /
+                            10) *
+                            100 +
+                          '%',
+                      }"
+                    />
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    step="1"
+                    class="field-slider"
+                    :value="
+                      tfiSelections[q.key] >= 0 ? tfiSelections[q.key] : 0
+                    "
+                    @input="
+                      tfiSelections[q.key] = parseInt(
+                        ($event.target as HTMLInputElement).value,
+                      )
+                    "
+                  />
+                </div>
+                <div class="field-ticks">
+                  <span v-for="n in 11" :key="n">{{ n - 1 }}</span>
+                </div>
               </div>
-              <input type="number" min="0" max="10" class="field-number" placeholder="—" :value="tfiSelections[q.key] >= 0 ? tfiSelections[q.key] : ''" @input="tfiSelections[q.key] = ($event.target as HTMLInputElement).value === '' ? -1 : Math.max(0, Math.min(10, parseInt(($event.target as HTMLInputElement).value)))" />
+              <input
+                type="number"
+                min="0"
+                max="10"
+                class="field-number"
+                placeholder="—"
+                :value="tfiSelections[q.key] >= 0 ? tfiSelections[q.key] : ''"
+                @input="
+                  tfiSelections[q.key] =
+                    ($event.target as HTMLInputElement).value === ''
+                      ? -1
+                      : Math.max(
+                          0,
+                          Math.min(
+                            10,
+                            parseInt(($event.target as HTMLInputElement).value),
+                          ),
+                        )
+                "
+              />
             </div>
           </div>
         </div>
@@ -2843,10 +2892,95 @@ function tfiReset() {
   padding: 0.5rem 0.9rem 0.7rem;
 }
 .tfi .field-slider {
+  position: relative;
   width: 100%;
-  accent-color: var(--vp-c-brand-1);
+  -webkit-appearance: none;
+  appearance: none;
+  height: 32px;
+  background: transparent;
   cursor: pointer;
-  height: 6px;
+  z-index: 1;
+}
+.tfi .field-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.tfi .field-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+}
+.tfi .field-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.tfi .slider-track-wrap {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+.tfi .slider-track {
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  right: 11px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--vp-c-bg-mute);
+  transform: translateY(-50%);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+.tfi .slider-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition:
+    width 0.15s ease,
+    background 0.3s;
+}
+.tfi .slider-fill.fill-1 {
+  background: linear-gradient(90deg, #22c55e, #84cc16);
+}
+.tfi .slider-fill.fill-2 {
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+}
+.tfi .slider-fill.fill-3 {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+}
+.tfi .slider-fill.fill-4 {
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+}
+.tfi .slider-fill.fill-5 {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+.tfi .slider-fill.fill-6 {
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
+}
+.tfi .slider-fill.fill-7 {
+  background: linear-gradient(90deg, #14b8a6, #2dd4bf);
+}
+.tfi .slider-fill.fill-8 {
+  background: linear-gradient(90deg, #f43f5e, #fb7185);
+}
+.tfi .slider-fill.fill-9 {
+  background: linear-gradient(90deg, #eab308, #facc15);
+}
+.tfi .slider-fill.fill-10 {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
 }
 .tfi .slider-col {
   flex: 1;
@@ -2860,7 +2994,8 @@ function tfiReset() {
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--vp-c-text-2);
-  padding: 0 8px;
+  padding: 0 11px;
+  margin-top: 2px;
 }
 .tfi .field-ticks span {
   width: 0;

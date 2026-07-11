@@ -601,750 +601,841 @@ async function prevent_copyMarkdown() {
       </button>
     </div>
 
-  <div v-show="activeTab === 'cha'" class="cha">
-    <!-- Header -->
-    <div class="cha-header">
-      <div class="header-title">
-        <h2 class="title">CHA₂DS₂-VA 評分</h2>
-        <p class="subtitle">
-          Atrial Fibrillation Stroke Risk · 心房顫動中風風險評估（2024 ESC
-          指引）
-        </p>
+    <div v-show="activeTab === 'cha'" class="cha">
+      <!-- Header -->
+      <div class="cha-header">
+        <div class="header-title">
+          <h2 class="title">CHA₂DS₂-VA 評分</h2>
+          <p class="subtitle">
+            Atrial Fibrillation Stroke Risk · 心房顫動中風風險評估（2024 ESC
+            指引）
+          </p>
+        </div>
+        <div class="score-badge" :class="severity.color">
+          <span class="score-number">{{ totalScore }}</span>
+          <span class="score-label">{{ severity.tag }}</span>
+        </div>
       </div>
-      <div class="score-badge" :class="severity.color">
-        <span class="score-number">{{ totalScore }}</span>
-        <span class="score-label">{{ severity.tag }}</span>
-      </div>
-    </div>
 
-    <!-- Severity bar — max meaningful is 9 -->
-    <div class="severity-bar-wrap">
-      <div class="severity-bar">
+      <!-- Severity bar — max meaningful is 9 -->
+      <div class="severity-bar-wrap">
+        <div class="severity-bar">
+          <div
+            class="severity-fill"
+            :class="severity.color"
+            :style="{ width: Math.min((totalScore / 9) * 100, 100) + '%' }"
+          />
+        </div>
+        <div class="severity-ticks">
+          <span>0</span>
+          <span class="tick-threshold">1</span>
+          <span>2</span>
+          <span>4</span>
+          <span>6</span>
+          <span>9</span>
+        </div>
+      </div>
+
+      <!-- Risk strip -->
+      <div class="risk-strip">
+        <div class="risk-pill" :class="{ 'risk-active': totalScore === 0 }">
+          <span class="risk-score">0 分</span>
+          <span class="risk-rate normal-risk">年中風率：0%</span>
+          <span class="risk-tag">無需抗凝</span>
+        </div>
+        <div class="risk-pill" :class="{ 'risk-active': totalScore === 1 }">
+          <span class="risk-score">1 分</span>
+          <span class="risk-rate mild-risk">年中風率：0.7%</span>
+          <span class="risk-tag">考慮抗凝</span>
+        </div>
         <div
-          class="severity-fill"
-          :class="severity.color"
-          :style="{ width: Math.min((totalScore / 9) * 100, 100) + '%' }"
-        />
+          class="risk-pill"
+          :class="{ 'risk-active': totalScore >= 2 && totalScore <= 4 }"
+        >
+          <span class="risk-score">2–4 分</span>
+          <span class="risk-rate moderate-risk">年中風率：1.6–5.7%</span>
+          <span class="risk-tag">建議抗凝</span>
+        </div>
+        <div class="risk-pill" :class="{ 'risk-active': totalScore >= 5 }">
+          <span class="risk-score">≥ 5 分</span>
+          <span class="risk-rate severe-risk">年中風率：> 9%</span>
+          <span class="risk-tag">積極抗凝</span>
+        </div>
       </div>
-      <div class="severity-ticks">
-        <span>0</span>
-        <span class="tick-threshold">1</span>
-        <span>2</span>
-        <span>4</span>
-        <span>6</span>
-        <span>9</span>
-      </div>
-    </div>
 
-    <!-- Risk strip -->
-    <div class="risk-strip">
-      <div class="risk-pill" :class="{ 'risk-active': totalScore === 0 }">
-        <span class="risk-score">0 分</span>
-        <span class="risk-rate normal-risk">年中風率：0%</span>
-        <span class="risk-tag">無需抗凝</span>
-      </div>
-      <div class="risk-pill" :class="{ 'risk-active': totalScore === 1 }">
-        <span class="risk-score">1 分</span>
-        <span class="risk-rate mild-risk">年中風率：0.7%</span>
-        <span class="risk-tag">考慮抗凝</span>
-      </div>
-      <div
-        class="risk-pill"
-        :class="{ 'risk-active': totalScore >= 2 && totalScore <= 4 }"
-      >
-        <span class="risk-score">2–4 分</span>
-        <span class="risk-rate moderate-risk">年中風率：1.6–5.7%</span>
-        <span class="risk-tag">建議抗凝</span>
-      </div>
-      <div class="risk-pill" :class="{ 'risk-active': totalScore >= 5 }">
-        <span class="risk-score">≥ 5 分</span>
-        <span class="risk-rate severe-risk">年中風率：> 9%</span>
-        <span class="risk-tag">積極抗凝</span>
-      </div>
-    </div>
-
-    <!-- Intro -->
-    <div class="intro-bar">
-      <span class="intro-dot">◉</span>
-      <span
-        >請評估患者的以下臨床因子。<strong>A₂</strong>（≥ 75 歲）與
-        <strong>S₂</strong>（中風史）各計 <strong>2 分</strong>，其餘各計
-        <strong>1 分</strong>，總分最高 <strong>9 分</strong>。年齡分組 A₂ 與 A
-        不重複計分，請擇一勾選。</span
-      >
-    </div>
-
-    <!-- ── Criteria group ──────────────────────────────────────── -->
-    <div class="cha-group">
-      <div class="group-header-bar criteria-bar">
-        <span class="group-icon">📋</span>
-        <span class="group-label-text">CHA₂DS₂-VA 評估因子</span>
-        <span class="group-sub-text">點擊勾選符合項目</span>
+      <!-- Intro -->
+      <div class="intro-bar">
+        <span class="intro-dot">◉</span>
         <span
-          class="group-score-tally"
-          :class="
-            totalScore === 0
-              ? 'tally-ok'
-              : totalScore >= 5
-                ? 'tally-abn'
-                : 'tally-mid'
-          "
+          >請評估患者的以下臨床因子。<strong>A₂</strong>（≥ 75 歲）與
+          <strong>S₂</strong>（中風史）各計 <strong>2 分</strong>，其餘各計
+          <strong>1 分</strong>，總分最高 <strong>9 分</strong>。年齡分組 A₂ 與
+          A 不重複計分，請擇一勾選。</span
         >
-          {{ totalScore }} / 9
-        </span>
       </div>
-      <div class="criteria-list">
-        <div
-          v-for="c in criteria"
-          :key="c.key"
-          class="criteria-card"
-          :class="{
-            selected: selections[c.key],
-            [c.color]: true,
-            'age-conflict':
-              (c.key === 'age65' && selections['age75']) ||
-              (c.key === 'age75' && selections['age65']),
-          }"
-          @click="toggle(c.key)"
-        >
-          <!-- Left: letter badge -->
-          <div class="criteria-badge" :class="c.color + '-badge'">
-            <span class="badge-letter">{{ c.letter }}</span>
-            <span
-              class="badge-pts"
-              :class="c.points === 2 ? 'pts-two' : 'pts-one'"
-              >{{ c.badge }}</span
-            >
-          </div>
 
-          <!-- Middle: content -->
-          <div class="criteria-content">
-            <div class="criteria-name">{{ c.name }}</div>
-            <div class="criteria-sub">{{ c.sub }}</div>
-            <div class="criteria-desc">{{ c.desc }}</div>
-            <div class="criteria-hint">{{ c.hint }}</div>
-          </div>
-
-          <!-- Right: toggle -->
-          <div class="criteria-toggle">
-            <div class="toggle-box" :class="{ 'toggle-on': selections[c.key] }">
-              <svg
-                v-if="selections[c.key]"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3.5"
+      <!-- ── Criteria group ──────────────────────────────────────── -->
+      <div class="cha-group">
+        <div class="group-header-bar criteria-bar">
+          <span class="group-icon">📋</span>
+          <span class="group-label-text">CHA₂DS₂-VA 評估因子</span>
+          <span class="group-sub-text">點擊勾選符合項目</span>
+          <span
+            class="group-score-tally"
+            :class="
+              totalScore === 0
+                ? 'tally-ok'
+                : totalScore >= 5
+                  ? 'tally-abn'
+                  : 'tally-mid'
+            "
+          >
+            {{ totalScore }} / 9
+          </span>
+        </div>
+        <div class="criteria-list">
+          <div
+            v-for="c in criteria"
+            :key="c.key"
+            class="criteria-card"
+            :class="{
+              selected: selections[c.key],
+              [c.color]: true,
+              'age-conflict':
+                (c.key === 'age65' && selections['age75']) ||
+                (c.key === 'age75' && selections['age65']),
+            }"
+            @click="toggle(c.key)"
+          >
+            <!-- Left: letter badge -->
+            <div class="criteria-badge" :class="c.color + '-badge'">
+              <span class="badge-letter">{{ c.letter }}</span>
+              <span
+                class="badge-pts"
+                :class="c.points === 2 ? 'pts-two' : 'pts-one'"
+                >{{ c.badge }}</span
               >
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
             </div>
-            <span
-              class="toggle-score"
-              :class="{ 'score-on': selections[c.key] }"
-            >
-              {{ selections[c.key] ? c.badge : "0" }}
-            </span>
+
+            <!-- Middle: content -->
+            <div class="criteria-content">
+              <div class="criteria-name">{{ c.name }}</div>
+              <div class="criteria-sub">{{ c.sub }}</div>
+              <div class="criteria-desc">{{ c.desc }}</div>
+              <div class="criteria-hint">{{ c.hint }}</div>
+            </div>
+
+            <!-- Right: toggle -->
+            <div class="criteria-toggle">
+              <div
+                class="toggle-box"
+                :class="{ 'toggle-on': selections[c.key] }"
+              >
+                <svg
+                  v-if="selections[c.key]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <span
+                class="toggle-score"
+                :class="{ 'score-on': selections[c.key] }"
+              >
+                {{ selections[c.key] ? c.badge : "0" }}
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Result card -->
-    <div class="cha-result" :class="severity.color">
-      <div class="result-left">
-        <span class="result-number">{{ totalScore }}</span>
-        <span class="result-max">/ 9</span>
-      </div>
-      <div class="result-right">
-        <div class="result-top">
-          <span class="result-level">{{ severity.level }}</span>
-          <span class="result-risk">年中風率：{{ strokeRisk }}</span>
+      <!-- Result card -->
+      <div class="cha-result" :class="severity.color">
+        <div class="result-left">
+          <span class="result-number">{{ totalScore }}</span>
+          <span class="result-max">/ 9</span>
         </div>
-        <span class="result-advice">{{ severity.advice }}</span>
-        <span class="result-management">{{ severity.management }}</span>
-      </div>
-    </div>
-
-    <!-- Anticoag recommendation bar -->
-    <div
-      class="anticoag-bar"
-      :class="{
-        'ac-yes': severity.anticoag === true,
-        'ac-maybe': severity.anticoag === null,
-        'ac-no': severity.anticoag === false,
-      }"
-    >
-      <span class="ac-icon">
-        {{
-          severity.anticoag === true
-            ? "✓"
-            : severity.anticoag === null
-              ? "△"
-              : "○"
-        }}
-      </span>
-      <div class="ac-text">
-        <strong>抗凝血治療建議（2024 ESC）：</strong>
-        <span v-if="severity.anticoag === true">
-          CHA₂DS₂-VA ≥ 2，<strong>建議使用口服抗凝藥（OAC）</strong>。優先選用
-          NOAC（Apixaban、Rivaroxaban、Dabigatran 或 Edoxaban）。
-        </span>
-        <span v-else-if="severity.anticoag === null">
-          CHA₂DS₂-VA =
-          1，需<strong>個別化評估</strong>出血風險（HAS-BLED）、患者偏好及合併症後決定。
-        </span>
-        <span v-else>
-          CHA₂DS₂-VA =
-          0，<strong>通常不建議常規抗凝治療</strong>，定期追蹤並每年重新評估。
-        </span>
-      </div>
-    </div>
-
-    <!-- Results detail -->
-    <div v-if="cha_showResults" class="results-detail">
-      <div class="results-header">評估明細</div>
-      <div v-for="c in criteria" :key="c.key" class="detail-row">
-        <span class="detail-letter" :class="c.color + '-letter'">{{
-          c.letter
-        }}</span>
-        <span class="detail-domain">{{ c.name }}</span>
-        <span class="detail-score" :class="{ positive: selections[c.key] }">
-          {{ selections[c.key] ? c.badge : "0" }}
-        </span>
-        <span class="detail-desc">{{
-          selections[c.key] ? "符合" : "不符合"
-        }}</span>
-      </div>
-      <div class="detail-row total-row">
-        <span class="detail-letter brand-ltr">∑</span>
-        <span class="detail-domain">CHA₂DS₂-VA 總分</span>
-        <span class="detail-score positive">{{ totalScore }}</span>
-        <span class="detail-desc">{{ strokeRisk }} / 年</span>
-      </div>
-    </div>
-
-    <!-- Actions -->
-    <div class="cha-actions">
-      <button class="btn-view" @click="cha_showResults = !cha_showResults">
-        {{ cha_showResults ? "收起明細" : "查看評估結果" }}
-      </button>
-      <button class="btn-copy" @click="cha_copyMarkdown">
-        {{ cha_copied ? "已複製 ✓" : "複製 Markdown 結果" }}
-      </button>
-      <button class="btn-reset" @click="cha_reset">重置</button>
-    </div>
-  </div>
-
-  <div v-show="activeTab === 'prevent'" class="prevent">
-    <!-- Header -->
-    <div class="prevent-header">
-      <div class="header-title">
-        <h2 class="title">PREVENT 心血管風險評估</h2>
-        <p class="subtitle">
-          Predicting Risk of cardiovascular disease EVENTs · ASCVD · CVD · HF 10
-          年風險預測（AHA 2024 / ACC 2026）
-        </p>
-        <!-- Model tabs -->
-        <div class="model-tabs">
-          <button
-            class="model-tab"
-            :class="{ active: model === 'ascvd' }"
-            @click="model = 'ascvd'"
-          >
-            ASCVD
-          </button>
-          <button
-            class="model-tab"
-            :class="{ active: model === 'cvd' }"
-            @click="model = 'cvd'"
-          >
-            Total CVD
-          </button>
-          <button
-            class="model-tab"
-            :class="{ active: model === 'hf' }"
-            @click="model = 'hf'"
-          >
-            HF
-          </button>
+        <div class="result-right">
+          <div class="result-top">
+            <span class="result-level">{{ severity.level }}</span>
+            <span class="result-risk">年中風率：{{ strokeRisk }}</span>
+          </div>
+          <span class="result-advice">{{ severity.advice }}</span>
+          <span class="result-management">{{ severity.management }}</span>
         </div>
       </div>
-      <div class="score-badge" :class="severityColor">
-        <span class="score-number">{{ activeRisk }}%</span>
-        <span class="score-label">{{ activeLabel }}</span>
+
+      <!-- Anticoag recommendation bar -->
+      <div
+        class="anticoag-bar"
+        :class="{
+          'ac-yes': severity.anticoag === true,
+          'ac-maybe': severity.anticoag === null,
+          'ac-no': severity.anticoag === false,
+        }"
+      >
+        <span class="ac-icon">
+          {{
+            severity.anticoag === true
+              ? "✓"
+              : severity.anticoag === null
+                ? "△"
+                : "○"
+          }}
+        </span>
+        <div class="ac-text">
+          <strong>抗凝血治療建議（2024 ESC）：</strong>
+          <span v-if="severity.anticoag === true">
+            CHA₂DS₂-VA ≥ 2，<strong>建議使用口服抗凝藥（OAC）</strong>。優先選用
+            NOAC（Apixaban、Rivaroxaban、Dabigatran 或 Edoxaban）。
+          </span>
+          <span v-else-if="severity.anticoag === null">
+            CHA₂DS₂-VA =
+            1，需<strong>個別化評估</strong>出血風險（HAS-BLED）、患者偏好及合併症後決定。
+          </span>
+          <span v-else>
+            CHA₂DS₂-VA =
+            0，<strong>通常不建議常規抗凝治療</strong>，定期追蹤並每年重新評估。
+          </span>
+        </div>
+      </div>
+
+      <!-- Results detail -->
+      <div v-if="cha_showResults" class="results-detail">
+        <div class="results-header">評估明細</div>
+        <div v-for="c in criteria" :key="c.key" class="detail-row">
+          <span class="detail-letter" :class="c.color + '-letter'">{{
+            c.letter
+          }}</span>
+          <span class="detail-domain">{{ c.name }}</span>
+          <span class="detail-score" :class="{ positive: selections[c.key] }">
+            {{ selections[c.key] ? c.badge : "0" }}
+          </span>
+          <span class="detail-desc">{{
+            selections[c.key] ? "符合" : "不符合"
+          }}</span>
+        </div>
+        <div class="detail-row total-row">
+          <span class="detail-letter brand-ltr">∑</span>
+          <span class="detail-domain">CHA₂DS₂-VA 總分</span>
+          <span class="detail-score positive">{{ totalScore }}</span>
+          <span class="detail-desc">{{ strokeRisk }} / 年</span>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="cha-actions">
+        <button class="btn-view" @click="cha_showResults = !cha_showResults">
+          {{ cha_showResults ? "收起明細" : "查看評估結果" }}
+        </button>
+        <button class="btn-copy" @click="cha_copyMarkdown">
+          {{ cha_copied ? "已複製 ✓" : "複製 Markdown 結果" }}
+        </button>
+        <button class="btn-reset" @click="cha_reset">重置</button>
       </div>
     </div>
 
-    <!-- Severity bar -->
-    <div class="severity-bar-wrap">
-      <div class="severity-bar">
+    <div v-show="activeTab === 'prevent'" class="prevent">
+      <!-- Header -->
+      <div class="prevent-header">
+        <div class="header-title">
+          <h2 class="title">PREVENT 心血管風險評估</h2>
+          <p class="subtitle">
+            Predicting Risk of cardiovascular disease EVENTs · ASCVD · CVD · HF
+            10 年風險預測（AHA 2024 / ACC 2026）
+          </p>
+          <!-- Model tabs -->
+          <div class="model-tabs">
+            <button
+              class="model-tab"
+              :class="{ active: model === 'ascvd' }"
+              @click="model = 'ascvd'"
+            >
+              ASCVD
+            </button>
+            <button
+              class="model-tab"
+              :class="{ active: model === 'cvd' }"
+              @click="model = 'cvd'"
+            >
+              Total CVD
+            </button>
+            <button
+              class="model-tab"
+              :class="{ active: model === 'hf' }"
+              @click="model = 'hf'"
+            >
+              HF
+            </button>
+          </div>
+        </div>
+        <div class="score-badge" :class="severityColor">
+          <span class="score-number">{{ activeRisk }}%</span>
+          <span class="score-label">{{ activeLabel }}</span>
+        </div>
+      </div>
+
+      <!-- Severity bar -->
+      <div class="severity-bar-wrap">
+        <div class="severity-bar">
+          <div
+            class="severity-fill"
+            :class="severityColor"
+            :style="{ width: Math.min((activeRisk / 30) * 100, 100) + '%' }"
+          />
+        </div>
+        <div class="severity-ticks">
+          <span>0%</span>
+          <span class="tick-threshold">3%</span>
+          <span>5%</span>
+          <span>10%</span>
+          <span>20%</span>
+          <span>≥30%</span>
+        </div>
+      </div>
+
+      <!-- Risk strip → 2026 ACC/AHA categories -->
+      <div class="risk-strip">
         <div
-          class="severity-fill"
-          :class="severityColor"
-          :style="{ width: Math.min((activeRisk / 30) * 100, 100) + '%' }"
-        />
-      </div>
-      <div class="severity-ticks">
-        <span>0%</span>
-        <span class="tick-threshold">3%</span>
-        <span>5%</span>
-        <span>10%</span>
-        <span>20%</span>
-        <span>≥30%</span>
-      </div>
-    </div>
-
-    <!-- Risk strip → 2026 ACC/AHA categories -->
-    <div class="risk-strip">
-      <div class="risk-pill" :class="{ 'risk-active': ascvdCat.key === 'low' }">
-        <span class="risk-score">&lt;3%</span>
-        <span class="risk-rate normal-risk">低風險</span>
-        <span class="risk-tag">生活方式諮詢</span>
-      </div>
-      <div
-        class="risk-pill"
-        :class="{ 'risk-active': ascvdCat.key === 'borderline' }"
-      >
-        <span class="risk-score">3–&lt;5%</span>
-        <span class="risk-rate mild-risk">邊界風險</span>
-        <span class="risk-tag">考慮用藥</span>
-      </div>
-      <div
-        class="risk-pill"
-        :class="{ 'risk-active': ascvdCat.key === 'intermediate' }"
-      >
-        <span class="risk-score">5–&lt;10%</span>
-        <span class="risk-rate moderate-risk">中度風險</span>
-        <span class="risk-tag">建議用藥</span>
-      </div>
-      <div
-        class="risk-pill"
-        :class="{ 'risk-active': ascvdCat.key === 'high' }"
-      >
-        <span class="risk-score">≥10%</span>
-        <span class="risk-rate severe-risk">高度風險</span>
-        <span class="risk-tag">積極治療</span>
-      </div>
-    </div>
-
-    <!-- CPR Model -->
-    <div class="intro-bar">
-      <span class="intro-dot">CPR</span>
-      <div class="cpr-list">
-        <span v-for="(s, idx) in cprSteps" :key="idx" class="cpr-item">
-          <strong>{{ s.letter }}</strong
-          >：{{ s.detail }}
-        </span>
-        <div class="cpr-note">
-          <span
-            ><strong>CAC</strong>（冠狀動脈鈣化積分，Coronary Artery
-            Calcium）：以低劑量心臟電腦斷層測量冠狀動脈鈣化的 Agatston
-            分數，用於風險落在中間 /
-            不確定時重新分層——CAC = 0 多屬低風險、可考慮暫緩 statin；分數愈高風險愈高。</span
-          >
-          <span
-            ><strong>生殖風險標誌</strong>（reproductive risk
-            markers）：與女性心血管風險相關的病史，如子癇前症、妊娠高血壓、妊娠糖尿病、早發停經與多囊性卵巢症候群（PCOS）等，屬風險增強因子。</span
-          >
-        </div>
-      </div>
-    </div>
-
-    <!-- Input fields group -->
-    <div class="prevent-group">
-      <div class="group-header-bar">
-        <span class="group-icon">📊</span>
-        <span class="group-label-text">臨床變數輸入</span>
-        <span class="group-sub-text">於範圍內填寫數值</span>
-        <span class="group-score-tally" :class="severityColor">
-          {{ activeRisk }}%
-        </span>
-      </div>
-
-      <div class="field-list">
-        <!-- Age -->
-        <div class="field-card">
-          <div class="field-label">
-            <span class="field-name">年齡</span>
-            <span class="field-unit">歲</span>
-          </div>
-          <div class="field-input-wrap">
-            <input
-              v-model.number="inputs.age"
-              type="range"
-              min="30"
-              max="79"
-              step="1"
-              class="field-slider"
-            />
-            <input
-              v-model.number="inputs.age"
-              type="number"
-              min="30"
-              max="79"
-              class="field-number"
-            />
-          </div>
-          <div class="field-range">30–79 歲</div>
-        </div>
-
-        <!-- Sex -->
-        <div class="field-card">
-          <div class="field-label">
-            <span class="field-name">性別</span>
-            <span class="field-unit">出生性別</span>
-          </div>
-          <div class="field-btn-group">
-            <button
-              class="field-btn"
-              :class="{ active: inputs.sex === 'female' }"
-              @click="inputs.sex = 'female'"
-            >
-              女性
-            </button>
-            <button
-              class="field-btn"
-              :class="{ active: inputs.sex === 'male' }"
-              @click="inputs.sex = 'male'"
-            >
-              男性
-            </button>
-          </div>
-        </div>
-
-        <!-- TC -->
-        <div class="field-card">
-          <div class="field-label">
-            <span class="field-name">總膽固醇 TC</span>
-            <span class="field-unit">mg/dL</span>
-          </div>
-          <div class="field-input-wrap">
-            <input
-              v-model.number="inputs.tc"
-              type="range"
-              min="130"
-              max="320"
-              step="1"
-              class="field-slider"
-            />
-            <input
-              v-model.number="inputs.tc"
-              type="number"
-              min="130"
-              max="320"
-              class="field-number"
-            />
-          </div>
-          <div class="field-range">130–320 mg/dL</div>
-        </div>
-
-        <!-- HDL -->
-        <div class="field-card">
-          <div class="field-label">
-            <span class="field-name">HDL 膽固醇</span>
-            <span class="field-unit">mg/dL</span>
-          </div>
-          <div class="field-input-wrap">
-            <input
-              v-model.number="inputs.hdl"
-              type="range"
-              min="20"
-              max="100"
-              step="1"
-              class="field-slider"
-            />
-            <input
-              v-model.number="inputs.hdl"
-              type="number"
-              min="20"
-              max="100"
-              class="field-number"
-            />
-          </div>
-          <div class="field-range">20–100 mg/dL</div>
-        </div>
-
-        <!-- SBP -->
-        <div class="field-card">
-          <div class="field-label">
-            <span class="field-name">收縮壓 SBP</span>
-            <span class="field-unit">mmHg</span>
-          </div>
-          <div class="field-input-wrap">
-            <input
-              v-model.number="inputs.sbp"
-              type="range"
-              min="90"
-              max="200"
-              step="1"
-              class="field-slider"
-            />
-            <input
-              v-model.number="inputs.sbp"
-              type="number"
-              min="90"
-              max="200"
-              class="field-number"
-            />
-          </div>
-          <div class="field-range">90–200 mmHg</div>
-        </div>
-
-        <!-- eGFR -->
-        <div class="field-card">
-          <div class="field-label">
-            <span class="field-name">eGFR</span>
-            <span class="field-unit">mL/min/1.73m²</span>
-          </div>
-          <div class="field-input-wrap">
-            <input
-              v-model.number="inputs.egfr"
-              type="range"
-              min="15"
-              max="150"
-              step="1"
-              class="field-slider"
-            />
-            <input
-              v-model.number="inputs.egfr"
-              type="number"
-              min="15"
-              max="150"
-              class="field-number"
-            />
-          </div>
-          <div class="field-range">15–150 mL/min/1.73m²</div>
-        </div>
-
-        <!-- BMI -->
-        <div class="field-card">
-          <div class="field-label">
-            <span class="field-name">BMI</span>
-            <span class="field-unit">kg/m²</span>
-          </div>
-          <div class="field-input-wrap">
-            <input
-              v-model.number="inputs.bmi"
-              type="range"
-              min="18.5"
-              max="45"
-              step="0.1"
-              class="field-slider"
-            />
-            <input
-              v-model.number="inputs.bmi"
-              type="number"
-              min="18.5"
-              max="45"
-              step="0.1"
-              class="field-number"
-            />
-          </div>
-          <div class="field-range">18.5–45 kg/m²</div>
-        </div>
-
-        <!-- Binary toggles -->
-        <div class="field-card toggle-card">
-          <div class="field-label">
-            <span class="field-name">吸菸</span>
-            <span class="field-unit">過去 30 天內吸菸</span>
-          </div>
-          <div class="field-btn-group">
-            <button
-              class="field-btn"
-              :class="{ active: !inputs.smoking }"
-              @click="inputs.smoking = false"
-            >
-              否
-            </button>
-            <button
-              class="field-btn"
-              :class="{ active: inputs.smoking }"
-              @click="inputs.smoking = true"
-            >
-              是
-            </button>
-          </div>
-        </div>
-
-        <div class="field-card toggle-card">
-          <div class="field-label">
-            <span class="field-name">糖尿病</span>
-            <span class="field-unit">確診第 1 或 2 型糖尿病</span>
-          </div>
-          <div class="field-btn-group">
-            <button
-              class="field-btn"
-              :class="{ active: !inputs.diabetes }"
-              @click="inputs.diabetes = false"
-            >
-              否
-            </button>
-            <button
-              class="field-btn"
-              :class="{ active: inputs.diabetes }"
-              @click="inputs.diabetes = true"
-            >
-              是
-            </button>
-          </div>
-        </div>
-
-        <div class="field-card toggle-card">
-          <div class="field-label">
-            <span class="field-name">降壓藥</span>
-            <span class="field-unit">正在服用抗高血壓藥物</span>
-          </div>
-          <div class="field-btn-group">
-            <button
-              class="field-btn"
-              :class="{ active: !inputs.antihtn }"
-              @click="inputs.antihtn = false"
-            >
-              否
-            </button>
-            <button
-              class="field-btn"
-              :class="{ active: inputs.antihtn }"
-              @click="inputs.antihtn = true"
-            >
-              是
-            </button>
-          </div>
-        </div>
-
-        <div class="field-card toggle-card">
-          <div class="field-label">
-            <span class="field-name">史達汀</span>
-            <span class="field-unit">正在服用史達汀類藥物</span>
-          </div>
-          <div class="field-btn-group">
-            <button
-              class="field-btn"
-              :class="{ active: !inputs.statin }"
-              @click="inputs.statin = false"
-            >
-              否
-            </button>
-            <button
-              class="field-btn"
-              :class="{ active: inputs.statin }"
-              @click="inputs.statin = true"
-            >
-              是
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Result card -->
-    <div class="prevent-result" :class="severityColor">
-      <div class="result-left">
-        <span class="result-number">{{ activeRisk }}</span>
-        <span class="result-unit">%</span>
-      </div>
-      <div class="result-right">
-        <div class="result-top">
-          <span class="result-level">{{ ascvdCat.label }}</span>
-          <span class="result-en">({{ ascvdCat.en }})</span>
-        </div>
-        <span class="result-advice">{{ management.advice }}</span>
-        <span class="result-detail">{{ management.detail }}</span>
-      </div>
-    </div>
-
-    <!-- Management bar -->
-    <div
-      class="mgmt-bar"
-      :class="{
-        'mgmt-low': ascvdCat.key === 'low',
-        'mgmt-border': ascvdCat.key === 'borderline',
-        'mgmt-mid': ascvdCat.key === 'intermediate',
-        'mgmt-high': ascvdCat.key === 'high',
-      }"
-    >
-      <span class="mgmt-icon">
-        {{
-          ascvdCat.key === "low"
-            ? "○"
-            : ascvdCat.key === "borderline"
-              ? "△"
-              : "●"
-        }}
-      </span>
-      <div class="mgmt-text">
-        <strong>2026 ACC/AHA 指引建議：</strong>
-        <span>{{ management.tag }} — {{ management.detail }}</span>
-      </div>
-    </div>
-
-    <!-- Results detail -->
-    <div v-if="prevent_showResults" class="results-detail">
-      <div class="results-header">臨床變數明細</div>
-      <div v-for="r in detailRows" :key="r.label" class="detail-row">
-        <span class="detail-label">{{ r.label }}</span>
-        <span class="detail-value" :class="{ 'value-flag': r.flag }">{{
-          r.value
-        }}</span>
-      </div>
-      <div class="detail-row total-row">
-        <span class="detail-label brand-lbl">10 年 ASCVD 風險</span>
-        <span class="detail-value positive">{{ ascvdRisk }}%</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-label brand-lbl">10 年 Total CVD 風險</span>
-        <span class="detail-value positive">{{ cvdRisk }}%</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-label brand-lbl">10 年 HF 風險</span>
-        <span class="detail-value positive">{{ hfRisk }}%</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-label brand-lbl">ASCVD 風險類別</span>
-        <span class="detail-value positive"
-          >{{ ascvdCat.label }}（{{ ascvdCat.en }}）</span
+          class="risk-pill"
+          :class="{ 'risk-active': ascvdCat.key === 'low' }"
         >
+          <span class="risk-score">&lt;3%</span>
+          <span class="risk-rate normal-risk">低風險</span>
+          <span class="risk-tag">生活方式諮詢</span>
+        </div>
+        <div
+          class="risk-pill"
+          :class="{ 'risk-active': ascvdCat.key === 'borderline' }"
+        >
+          <span class="risk-score">3–&lt;5%</span>
+          <span class="risk-rate mild-risk">邊界風險</span>
+          <span class="risk-tag">考慮用藥</span>
+        </div>
+        <div
+          class="risk-pill"
+          :class="{ 'risk-active': ascvdCat.key === 'intermediate' }"
+        >
+          <span class="risk-score">5–&lt;10%</span>
+          <span class="risk-rate moderate-risk">中度風險</span>
+          <span class="risk-tag">建議用藥</span>
+        </div>
+        <div
+          class="risk-pill"
+          :class="{ 'risk-active': ascvdCat.key === 'high' }"
+        >
+          <span class="risk-score">≥10%</span>
+          <span class="risk-rate severe-risk">高度風險</span>
+          <span class="risk-tag">積極治療</span>
+        </div>
       </div>
-      <div class="detail-row">
-        <span class="detail-label brand-lbl">治療建議</span>
-        <span class="detail-value">{{ management.advice }}</span>
-      </div>
-    </div>
 
-    <!-- Actions -->
-    <div class="prevent-actions">
-      <button class="btn-view" @click="prevent_showResults = !prevent_showResults">
-        {{ prevent_showResults ? "收起明細" : "查看評估結果" }}
-      </button>
-      <button class="btn-copy" @click="prevent_copyMarkdown">
-        {{ prevent_copied ? "已複製 ✓" : "複製 Markdown 結果" }}
-      </button>
-      <button class="btn-reset" @click="prevent_reset">重置</button>
+      <!-- CPR Model -->
+      <div class="intro-bar">
+        <span class="intro-dot">CPR</span>
+        <div class="cpr-list">
+          <span v-for="(s, idx) in cprSteps" :key="idx" class="cpr-item">
+            <strong>{{ s.letter }}</strong
+            >：{{ s.detail }}
+          </span>
+          <div class="cpr-note">
+            <span
+              ><strong>CAC</strong>（冠狀動脈鈣化積分，Coronary Artery
+              Calcium）：以低劑量心臟電腦斷層測量冠狀動脈鈣化的 Agatston
+              分數，用於風險落在中間 / 不確定時重新分層——CAC = 0
+              多屬低風險、可考慮暫緩 statin；分數愈高風險愈高。</span
+            >
+            <span
+              ><strong>生殖風險標誌</strong>（reproductive risk
+              markers）：與女性心血管風險相關的病史，如子癇前症、妊娠高血壓、妊娠糖尿病、早發停經與多囊性卵巢症候群（PCOS）等，屬風險增強因子。</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Input fields group -->
+      <div class="prevent-group">
+        <div class="group-header-bar">
+          <span class="group-icon">📊</span>
+          <span class="group-label-text">臨床變數輸入</span>
+          <span class="group-sub-text">於範圍內填寫數值</span>
+          <span class="group-score-tally" :class="severityColor">
+            {{ activeRisk }}%
+          </span>
+        </div>
+
+        <div class="field-list">
+          <!-- Age -->
+          <div class="field-card">
+            <div class="field-label">
+              <span class="field-name">年齡</span>
+              <span class="field-unit">歲</span>
+            </div>
+            <div class="field-input-wrap">
+              <div class="slider-track-wrap">
+                <div class="slider-track">
+                  <div
+                    class="slider-fill fill-age"
+                    :style="{ width: ((inputs.age - 30) / 49) * 100 + '%' }"
+                  />
+                </div>
+                <input
+                  v-model.number="inputs.age"
+                  type="range"
+                  min="30"
+                  max="79"
+                  step="1"
+                  class="field-slider"
+                />
+              </div>
+              <input
+                v-model.number="inputs.age"
+                type="number"
+                min="30"
+                max="79"
+                class="field-number"
+              />
+            </div>
+            <div class="field-range">30–79 歲</div>
+          </div>
+
+          <!-- Sex -->
+          <div class="field-card">
+            <div class="field-label">
+              <span class="field-name">性別</span>
+              <span class="field-unit">出生性別</span>
+            </div>
+            <div class="field-btn-group">
+              <button
+                class="field-btn"
+                :class="{ active: inputs.sex === 'female' }"
+                @click="inputs.sex = 'female'"
+              >
+                女性
+              </button>
+              <button
+                class="field-btn"
+                :class="{ active: inputs.sex === 'male' }"
+                @click="inputs.sex = 'male'"
+              >
+                男性
+              </button>
+            </div>
+          </div>
+
+          <!-- TC -->
+          <div class="field-card">
+            <div class="field-label">
+              <span class="field-name">總膽固醇 TC</span>
+              <span class="field-unit">mg/dL</span>
+            </div>
+            <div class="field-input-wrap">
+              <div class="slider-track-wrap">
+                <div class="slider-track">
+                  <div
+                    class="slider-fill fill-tc"
+                    :style="{ width: ((inputs.tc - 130) / 190) * 100 + '%' }"
+                  />
+                </div>
+                <input
+                  v-model.number="inputs.tc"
+                  type="range"
+                  min="130"
+                  max="320"
+                  step="1"
+                  class="field-slider"
+                />
+              </div>
+              <input
+                v-model.number="inputs.tc"
+                type="number"
+                min="130"
+                max="320"
+                class="field-number"
+              />
+            </div>
+            <div class="field-range">130–320 mg/dL</div>
+          </div>
+
+          <!-- HDL -->
+          <div class="field-card">
+            <div class="field-label">
+              <span class="field-name">HDL 膽固醇</span>
+              <span class="field-unit">mg/dL</span>
+            </div>
+            <div class="field-input-wrap">
+              <div class="slider-track-wrap">
+                <div class="slider-track">
+                  <div
+                    class="slider-fill fill-hdl"
+                    :style="{ width: ((inputs.hdl - 20) / 80) * 100 + '%' }"
+                  />
+                </div>
+                <input
+                  v-model.number="inputs.hdl"
+                  type="range"
+                  min="20"
+                  max="100"
+                  step="1"
+                  class="field-slider"
+                />
+              </div>
+              <input
+                v-model.number="inputs.hdl"
+                type="number"
+                min="20"
+                max="100"
+                class="field-number"
+              />
+            </div>
+            <div class="field-range">20–100 mg/dL</div>
+          </div>
+
+          <!-- SBP -->
+          <div class="field-card">
+            <div class="field-label">
+              <span class="field-name">收縮壓 SBP</span>
+              <span class="field-unit">mmHg</span>
+            </div>
+            <div class="field-input-wrap">
+              <div class="slider-track-wrap">
+                <div class="slider-track">
+                  <div
+                    class="slider-fill fill-sbp"
+                    :style="{ width: ((inputs.sbp - 90) / 110) * 100 + '%' }"
+                  />
+                </div>
+                <input
+                  v-model.number="inputs.sbp"
+                  type="range"
+                  min="90"
+                  max="200"
+                  step="1"
+                  class="field-slider"
+                />
+              </div>
+              <input
+                v-model.number="inputs.sbp"
+                type="number"
+                min="90"
+                max="200"
+                class="field-number"
+              />
+            </div>
+            <div class="field-range">90–200 mmHg</div>
+          </div>
+
+          <!-- eGFR -->
+          <div class="field-card">
+            <div class="field-label">
+              <span class="field-name">eGFR</span>
+              <span class="field-unit">mL/min/1.73m²</span>
+            </div>
+            <div class="field-input-wrap">
+              <div class="slider-track-wrap">
+                <div class="slider-track">
+                  <div
+                    class="slider-fill fill-egfr"
+                    :style="{ width: ((inputs.egfr - 15) / 135) * 100 + '%' }"
+                  />
+                </div>
+                <input
+                  v-model.number="inputs.egfr"
+                  type="range"
+                  min="15"
+                  max="150"
+                  step="1"
+                  class="field-slider"
+                />
+              </div>
+              <input
+                v-model.number="inputs.egfr"
+                type="number"
+                min="15"
+                max="150"
+                class="field-number"
+              />
+            </div>
+            <div class="field-range">15–150 mL/min/1.73m²</div>
+          </div>
+
+          <!-- BMI -->
+          <div class="field-card">
+            <div class="field-label">
+              <span class="field-name">BMI</span>
+              <span class="field-unit">kg/m²</span>
+            </div>
+            <div class="field-input-wrap">
+              <div class="slider-track-wrap">
+                <div class="slider-track">
+                  <div
+                    class="slider-fill fill-bmi"
+                    :style="{ width: ((inputs.bmi - 18.5) / 26.5) * 100 + '%' }"
+                  />
+                </div>
+                <input
+                  v-model.number="inputs.bmi"
+                  type="range"
+                  min="18.5"
+                  max="45"
+                  step="0.1"
+                  class="field-slider"
+                />
+              </div>
+              <input
+                v-model.number="inputs.bmi"
+                type="number"
+                min="18.5"
+                max="45"
+                step="0.1"
+                class="field-number"
+              />
+            </div>
+            <div class="field-range">18.5–45 kg/m²</div>
+          </div>
+
+          <!-- Binary toggles -->
+          <div class="field-card toggle-card">
+            <div class="field-label">
+              <span class="field-name">吸菸</span>
+              <span class="field-unit">過去 30 天內吸菸</span>
+            </div>
+            <div class="field-btn-group">
+              <button
+                class="field-btn"
+                :class="{ active: !inputs.smoking }"
+                @click="inputs.smoking = false"
+              >
+                否
+              </button>
+              <button
+                class="field-btn"
+                :class="{ active: inputs.smoking }"
+                @click="inputs.smoking = true"
+              >
+                是
+              </button>
+            </div>
+          </div>
+
+          <div class="field-card toggle-card">
+            <div class="field-label">
+              <span class="field-name">糖尿病</span>
+              <span class="field-unit">確診第 1 或 2 型糖尿病</span>
+            </div>
+            <div class="field-btn-group">
+              <button
+                class="field-btn"
+                :class="{ active: !inputs.diabetes }"
+                @click="inputs.diabetes = false"
+              >
+                否
+              </button>
+              <button
+                class="field-btn"
+                :class="{ active: inputs.diabetes }"
+                @click="inputs.diabetes = true"
+              >
+                是
+              </button>
+            </div>
+          </div>
+
+          <div class="field-card toggle-card">
+            <div class="field-label">
+              <span class="field-name">降壓藥</span>
+              <span class="field-unit">正在服用抗高血壓藥物</span>
+            </div>
+            <div class="field-btn-group">
+              <button
+                class="field-btn"
+                :class="{ active: !inputs.antihtn }"
+                @click="inputs.antihtn = false"
+              >
+                否
+              </button>
+              <button
+                class="field-btn"
+                :class="{ active: inputs.antihtn }"
+                @click="inputs.antihtn = true"
+              >
+                是
+              </button>
+            </div>
+          </div>
+
+          <div class="field-card toggle-card">
+            <div class="field-label">
+              <span class="field-name">史達汀</span>
+              <span class="field-unit">正在服用史達汀類藥物</span>
+            </div>
+            <div class="field-btn-group">
+              <button
+                class="field-btn"
+                :class="{ active: !inputs.statin }"
+                @click="inputs.statin = false"
+              >
+                否
+              </button>
+              <button
+                class="field-btn"
+                :class="{ active: inputs.statin }"
+                @click="inputs.statin = true"
+              >
+                是
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result card -->
+      <div class="prevent-result" :class="severityColor">
+        <div class="result-left">
+          <span class="result-number">{{ activeRisk }}</span>
+          <span class="result-unit">%</span>
+        </div>
+        <div class="result-right">
+          <div class="result-top">
+            <span class="result-level">{{ ascvdCat.label }}</span>
+            <span class="result-en">({{ ascvdCat.en }})</span>
+          </div>
+          <span class="result-advice">{{ management.advice }}</span>
+          <span class="result-detail">{{ management.detail }}</span>
+        </div>
+      </div>
+
+      <!-- Management bar -->
+      <div
+        class="mgmt-bar"
+        :class="{
+          'mgmt-low': ascvdCat.key === 'low',
+          'mgmt-border': ascvdCat.key === 'borderline',
+          'mgmt-mid': ascvdCat.key === 'intermediate',
+          'mgmt-high': ascvdCat.key === 'high',
+        }"
+      >
+        <span class="mgmt-icon">
+          {{
+            ascvdCat.key === "low"
+              ? "○"
+              : ascvdCat.key === "borderline"
+                ? "△"
+                : "●"
+          }}
+        </span>
+        <div class="mgmt-text">
+          <strong>2026 ACC/AHA 指引建議：</strong>
+          <span>{{ management.tag }} — {{ management.detail }}</span>
+        </div>
+      </div>
+
+      <!-- Results detail -->
+      <div v-if="prevent_showResults" class="results-detail">
+        <div class="results-header">臨床變數明細</div>
+        <div v-for="r in detailRows" :key="r.label" class="detail-row">
+          <span class="detail-label">{{ r.label }}</span>
+          <span class="detail-value" :class="{ 'value-flag': r.flag }">{{
+            r.value
+          }}</span>
+        </div>
+        <div class="detail-row total-row">
+          <span class="detail-label brand-lbl">10 年 ASCVD 風險</span>
+          <span class="detail-value positive">{{ ascvdRisk }}%</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label brand-lbl">10 年 Total CVD 風險</span>
+          <span class="detail-value positive">{{ cvdRisk }}%</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label brand-lbl">10 年 HF 風險</span>
+          <span class="detail-value positive">{{ hfRisk }}%</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label brand-lbl">ASCVD 風險類別</span>
+          <span class="detail-value positive"
+            >{{ ascvdCat.label }}（{{ ascvdCat.en }}）</span
+          >
+        </div>
+        <div class="detail-row">
+          <span class="detail-label brand-lbl">治療建議</span>
+          <span class="detail-value">{{ management.advice }}</span>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="prevent-actions">
+        <button
+          class="btn-view"
+          @click="prevent_showResults = !prevent_showResults"
+        >
+          {{ prevent_showResults ? "收起明細" : "查看評估結果" }}
+        </button>
+        <button class="btn-copy" @click="prevent_copyMarkdown">
+          {{ prevent_copied ? "已複製 ✓" : "複製 Markdown 結果" }}
+        </button>
+        <button class="btn-reset" @click="prevent_reset">重置</button>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
 <style scoped>
-.cvriskassess { max-width: 820px; margin: 0 auto; }
+.cvriskassess {
+  max-width: 820px;
+  margin: 0 auto;
+}
 .cvriskassess > .tab-bar {
-  display: flex; gap: 0.5rem; margin-bottom: 1.5rem; background: var(--vp-c-bg-mute);
-  padding: 4px; border-radius: 10px; border: 1px solid var(--vp-c-divider);
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
 }
 .cvriskassess > .tab-bar .tab-btn {
-  flex: 1; padding: 0.65rem 1rem; background: transparent; border: 1.5px solid transparent;
-  cursor: pointer; font-family: inherit; color: var(--vp-c-text-3); border-radius: 8px; transition: all 0.2s;
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
 }
-.cvriskassess > .tab-bar .tab-btn:hover { color: var(--vp-c-text-1); border-color: var(--vp-c-divider); }
+.cvriskassess > .tab-bar .tab-btn:hover {
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}
 .cvriskassess > .tab-bar .tab-btn.active {
-  color: var(--vp-c-brand-1); background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
   border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
 }
-.cvriskassess > .tab-bar .tab-label { display: block; font-size: 1rem; font-weight: 800; line-height: 1.3; letter-spacing: 0.02em; }
-.cvriskassess > .tab-bar .tab-sub { display: block; font-size: 0.78rem; font-weight: 600; color: var(--vp-c-text-3); margin-top: 2px; }
-.cvriskassess > .tab-bar .tab-btn.active .tab-sub { color: var(--vp-c-brand-1); opacity: 0.85; }
+.cvriskassess > .tab-bar .tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.cvriskassess > .tab-bar .tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+}
+.cvriskassess > .tab-bar .tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
+}
 
 /* ══ CHA₂DS₂-VA 中風風險 ══ */
 
@@ -2059,19 +2150,19 @@ async function prevent_copyMarkdown() {
 }
 
 @media (max-width: 640px) {
-.cha .cha-header {
+  .cha .cha-header {
     flex-wrap: wrap;
   }
-.cha .score-badge {
+  .cha .score-badge {
     align-self: flex-start;
   }
-.cha .score-number {
+  .cha .score-number {
     font-size: 1.5rem;
   }
-.cha .risk-strip {
+  .cha .risk-strip {
     grid-template-columns: repeat(2, 1fr);
   }
-.cha .cha-result {
+  .cha .cha-result {
     flex-direction: column;
     gap: 0.75rem;
   }
@@ -2392,9 +2483,84 @@ async function prevent_copyMarkdown() {
   gap: 0.75rem;
 }
 .prevent .field-slider {
-  flex: 1;
-  accent-color: var(--vp-c-brand-1);
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 32px;
+  background: transparent;
   cursor: pointer;
+  z-index: 1;
+}
+.prevent .field-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.prevent .field-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+}
+.prevent .field-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-bg);
+  border: 2.5px solid var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.prevent .slider-track-wrap {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.prevent .slider-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--vp-c-bg-mute);
+  transform: translateY(-50%);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+.prevent .slider-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition:
+    width 0.15s ease,
+    background 0.3s;
+}
+.prevent .slider-fill.fill-age {
+  background: linear-gradient(90deg, #22c55e, #84cc16);
+}
+.prevent .slider-fill.fill-tc {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+}
+.prevent .slider-fill.fill-hdl {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+.prevent .slider-fill.fill-sbp {
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+}
+.prevent .slider-fill.fill-egfr {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+.prevent .slider-fill.fill-bmi {
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
 }
 .prevent .field-number {
   width: 72px;
@@ -2702,19 +2868,19 @@ async function prevent_copyMarkdown() {
 }
 
 @media (max-width: 640px) {
-.prevent .prevent-header {
+  .prevent .prevent-header {
     flex-wrap: wrap;
   }
-.prevent .score-badge {
+  .prevent .score-badge {
     align-self: flex-start;
   }
-.prevent .score-number {
+  .prevent .score-number {
     font-size: 1.5rem;
   }
-.prevent .risk-strip {
+  .prevent .risk-strip {
     grid-template-columns: repeat(2, 1fr);
   }
-.prevent .prevent-result {
+  .prevent .prevent-result {
     flex-direction: column;
     gap: 0.75rem;
   }
@@ -2796,16 +2962,43 @@ async function prevent_copyMarkdown() {
 }
 
 /* ══ Unified consensus font sizes ══ */
-.cvriskassess .subtitle { font-size: 0.82rem !important; color: var(--vp-c-text-2) !important; }
-.cvriskassess .group-label { font-size: 0.92rem !important; font-weight: 700 !important; }
-.cvriskassess .group-sub { font-size: 0.78rem !important; color: var(--vp-c-text-2) !important; }
-.cvriskassess .group-label-text { font-size: 0.92rem !important; font-weight: 800 !important; }
-.cvriskassess .item-qnum { font-size: 0.72rem !important; font-weight: 800 !important; }
-.cvriskassess .item-score { font-size: 1rem !important; font-weight: 800 !important; }
-.cvriskassess .results-header { font-size: 0.74rem !important; font-weight: 700 !important; }
-.cvriskassess .detail-qnum { font-size: 0.74rem !important; }
-.cvriskassess .detail-domain { font-size: 0.82rem !important; }
-.cvriskassess .detail-desc { font-size: 0.78rem !important; }
+.cvriskassess .subtitle {
+  font-size: 0.82rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.cvriskassess .group-label {
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+}
+.cvriskassess .group-sub {
+  font-size: 0.78rem !important;
+  color: var(--vp-c-text-2) !important;
+}
+.cvriskassess .group-label-text {
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+}
+.cvriskassess .item-qnum {
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+}
+.cvriskassess .item-score {
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+.cvriskassess .results-header {
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+}
+.cvriskassess .detail-qnum {
+  font-size: 0.74rem !important;
+}
+.cvriskassess .detail-domain {
+  font-size: 0.82rem !important;
+}
+.cvriskassess .detail-desc {
+  font-size: 0.78rem !important;
+}
 
 /* ══ Enlarged / rearranged score badge ══ */
 .cvriskassess .score-badge {

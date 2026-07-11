@@ -329,7 +329,7 @@ export default defineConfig({
           items: [
             { text: "ASA 麻醉風險分級", link: "/guide/anes/asa-calculator" },
             {
-              text: "Local Anesthetics 劑量計算",
+              text: "LA 局部麻醉劑量計算",
               link: "/guide/anes/local-anesthetics-calculator",
             },
           ],
@@ -480,11 +480,11 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "氣喘（診斷・評估・治療）",
+              text: "氣喘",
               link: "/reference/chest/asthma",
             },
             {
-              text: "肺阻塞 COPD（診斷・評估・治療）",
+              text: "慢性肺阻塞",
               link: "/reference/chest/copd",
             },
           ],
@@ -572,7 +572,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "CHOL 健保降血脂藥物給付判定",
+              text: "健保降血脂藥物給付判定",
               link: "/reference/lipid/lipid-protocol",
             },
           ],
@@ -582,11 +582,11 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "INSULIN 基礎胰島素劑量調整計算器",
+              text: "基礎胰島素劑量調整計算器",
               link: "/reference/dm/basal-insulin-titration",
             },
             {
-              text: "OHA 口服降血糖藥完整比較與選擇指引",
+              text: "口服降血糖藥完整比較與選擇指引",
               link: "/reference/dm/OHA-selection-guide",
             },
             {

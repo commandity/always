@@ -152,6 +152,8 @@ import FIB4Calculator from "./components/gi/FIB4Calculator.vue";
 // CHEST
 import PEFCalculator from "./components/chest/PEFCalculator.vue";
 import CATCalculator from "./components/chest/CATCalculator.vue";
+// PEDIATRIC
+import PediatricDrugDoseCalculator from "./components/pediatric/PediatricDrugDoseCalculator.vue";
 
 export default {
   ...DefaultTheme,
@@ -393,5 +395,7 @@ export default {
     // CHEST
     app.component("PEFCalculator", PEFCalculator);
     app.component("CATCalculator", CATCalculator);
+    // PEDIATRIC
+    app.component("PediatricDrugDoseCalculator", PediatricDrugDoseCalculator);
   },
 };

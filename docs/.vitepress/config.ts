@@ -428,6 +428,22 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: "兒童",
+          collapsed: true,
+          items: [
+            {
+              text: "藥物",
+              collapsed: false,
+              items: [
+                {
+                  text: "兒童藥物劑量計算（體重別）",
+                  link: "/guide/pediatric/pediatric-drug-dose-calculator",
+                },
+              ],
+            },
+          ],
+        },
       ],
 
       "/reference/": [

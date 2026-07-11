@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Eczema
+title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Eczema & Clinical Algorithm
 ---
 
 # 濕疹鑑別診斷與臨床思考流程

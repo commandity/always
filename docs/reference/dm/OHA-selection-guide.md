@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 口服降血糖藥（OHA）完整比較與選擇指引
+title: 口服降血糖藥（OHA）完整比較與選擇指引 — Oral Hypoglycemic Agents (OHA) — Comprehensive Comparison & Selection Guide
 ---
 
 # 口服降血糖藥（OHA）完整比較與選擇指引

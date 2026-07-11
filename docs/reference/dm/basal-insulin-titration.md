@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: T2DM 胰島素治療選擇與劑量調整 — Insulin Therapy Mode Selector & Titration Guide
+title: T2DM 胰島素治療選擇與劑量調整 — T2DM Insulin Therapy Selection & Dose Titration
 ---
 
 # T2DM 胰島素治療選擇與劑量調整

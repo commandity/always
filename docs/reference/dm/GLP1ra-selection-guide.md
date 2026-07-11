@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 如何為患者選擇合適的 GLP-1 促效劑？現有藥物與適應症全解析
+title: 如何為患者選擇合適的 GLP-1 促效劑？現有藥物與適應症全解析 — How to Choose the Right GLP-1 Agonist for Your Patient?
 ---
 
 # 如何為患者選擇合適的 GLP-1 促效劑？

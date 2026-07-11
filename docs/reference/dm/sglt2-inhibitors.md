@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: SGLT2 抑制劑（排糖藥）臺灣臨床應用與給付
+title: SGLT2 抑制劑（排糖藥）臺灣臨床應用與給付 — SGLT2 Inhibitors — Taiwan Clinical Application & Reimbursement
 ---
 
 # SGLT2 抑制劑（排糖藥）臺灣臨床應用與給付

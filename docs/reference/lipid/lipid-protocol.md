@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 健保降血脂藥物給付規定判定 — Taiwan NHI Lipid Protocol
+title: 健保降血脂藥物給付規定判定 — NHI Lipid-Lowering Drug Reimbursement Criteria
 ---
 
 # 健保降血脂藥物給付規定判定

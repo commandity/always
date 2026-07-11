@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 甲狀腺及頸部超音波 — 檢查規範與報告範本
+title: 甲狀腺及頸部超音波 — 檢查規範與報告範本 — Thyroid & Neck Sonography Report Template
 ---
 
 # 甲狀腺及頸部超音波檢查報告模板

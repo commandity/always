@@ -11,7 +11,7 @@ title: 健保降血脂藥物給付規定判定 — NHI Lipid-Lowering Drug Reimb
 
 <LipidProtocolCalculator />
 
-## 給付規定摘要
+## 給付規定摘要 Reimbursement Criteria Summary
 
 | 病人分類           | 起始藥物治療血脂值            | 血脂目標值                    | 非藥物治療   |
 | ------------------ | ----------------------------- | ----------------------------- | ------------ |
@@ -23,13 +23,13 @@ title: 健保降血脂藥物給付規定判定 — NHI Lipid-Lowering Drug Reimb
 
 > **非藥物治療**：需先進行 3–6 個月生活方式調整（飲食控制、運動、體重控制、禁菸酒），若仍未達標才給付藥物。ACS/PCI/CABG 及 CVD/DM 病人可與藥物並行。
 
-### 心血管疾病定義
+### 心血管疾病定義 Cardiovascular Disease Definitions
 
 - 冠狀動脈粥狀硬化患者：心絞痛，心導管證實或缺氧性 ECG 變化或負荷性試驗陽性
 - 缺血性腦血管疾病：腦梗塞、腦內出血、暫時性腦缺血（TIA）、有症狀之頸動脈狹窄
 - 周邊動脈疾病（PAD）：ABI < 0.9 或影像學確認之周邊血管阻塞
 
-### 危險因子定義
+### 危險因子定義 Risk Factor Definitions
 
 1. **高血壓**：BP ≥ 140/90 mmHg，或正在服用降血壓藥物（含列屬健保給付之慢性病範圍）
 2. **男性 ≥ 45 歲，女性 ≥ 55 歲或停經者**
@@ -52,7 +52,7 @@ title: 健保降血脂藥物給付規定判定 — NHI Lipid-Lowering Drug Reimb
 
 > 風險計算工具：https://tools.acc.org/ASCVD-Risk-Estimator-Plus/
 
-## 藥物治療建議（臨床參考）
+## 藥物治療建議（臨床參考） Pharmacotherapy Recommendations (Clinical Reference)
 
 ### ASCVD 治療決策流程
 
@@ -189,16 +189,16 @@ flowchart TD
 - **家族篩檢**：確診 FH 患者建議一等親進行血脂篩檢（Cascade screening）。
 - **兒童 FH**：LDL-C ≥ 190 mg/dL 或 ≥ 160 mg/dL 且合併 FH 家族史，可考慮從 8–10 歲起始 Statin。
 
-## 用藥安全與監測
+## 用藥安全與監測 Drug Safety & Monitoring
 
-### 肝功能監測
+### 肝功能監測 Liver Function Monitoring
 
 - 治療前檢測 baseline ALT/AST。
 - 若 ALT/AST 上升 < 3× ULN 且無症狀 → 不需常規停藥，持續監測。
 - 若 ALT/AST ≥ 3× ULN → 確認是否為 Statin 相關，可考慮減量、換藥（如 Pitavastatin/Rosuvastatin 肝臟代謝較少）、或暫停。
 - **不建議常規監測肝功能**（AHA/ACC 2018：僅 baseline 及臨床有必要時）。
 
-### 肌肉症狀監測
+### 肌肉症狀監測 Muscle Symptom Monitoring
 
 - 治療前檢測 baseline CK。
 - 肌肉症狀（酸痛、壓痛、無力）為 Statin 最常見副作用：
@@ -208,12 +208,12 @@ flowchart TD
 - **再挑戰策略**：症狀緩解後可嘗試：換藥（不同代謝途徑）、減量、或改用低強度 Statin。
 - **不可逆因素**：高齡（> 80 歲）、腎功能不全、甲狀腺低下、多重藥物、低體重。
 
-### 血糖影響
+### 血糖影響 Glycemic Effects
 
 - Statin（尤其高強度）可能輕度增加新發生糖尿病風險（～0.1–0.3% annually），但 CV 獲利遠大於風險。
 - 不需常規監測 HbA1c，但 baseline 糖尿病風險高者建議測空腹血糖。
 
-## 特殊族群
+## 特殊族群 Special Populations
 
 | 族群                  | 建議                                                                                                                                                                 |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -290,14 +290,14 @@ flowchart TD
   </div>
 </div>
 
-## 監測規定
+## 監測規定 Monitoring Requirements
 
 - 第一年每 3–6 個月抽血檢查一次
 - 第二年以後每 6–12 個月一次
 - 注意：肝功能異常、橫紋肌溶解症等副作用
 - 未達給付目標者：應嘗試 **Statin 升級** 或 **合併 Ezetimibe** 後才考慮 PCSK9i
 
-## 參考文獻
+## 參考文獻 References
 
 1. 2024 臺灣血脂指引 (Taiwan Lipid Guidelines)
 2. 2023 臺灣高血壓學會 ASCVD 風險評估共識

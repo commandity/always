@@ -10,13 +10,13 @@ aside: false
 
 ---
 
-## 鑑別診斷流程圖
+## 鑑別診斷流程圖 Differential Diagnosis Flowchart
 
 <img src="/images/dermatology-ddx.svg" alt="皮膚科鑑別診斷演算法" style="width:100%;max-width:1400px;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1);" />
     
 ---
 
-## 六大步驟總覽
+## 六大步驟總覽 Six-Step Overview
 
 | Step  | 步驟                                | 內容                                |
 | ----- | ----------------------------------- | ----------------------------------- |
@@ -170,7 +170,7 @@ aside: false
 
 ---
 
-## 注意事項
+## 注意事項 Precautions
 
 ::: warning 本圖譜為教育參考工具
 本頁內容整理自 Fitzpatrick's Dermatology、Andrews' Diseases of the Skin 及臨床皮膚科學指引，旨在提供系統性鑑別診斷思維框架。**不應作為唯一診斷依據**。
@@ -182,7 +182,7 @@ aside: false
 
 ---
 
-## 參考文獻
+## 參考文獻 References
 
 1. Bolognia JL, Schaffer JV, Cerroni L. _Dermatology_. 4th ed. Elsevier; 2018.
 2. James WD, Elston DM, Treat JR, et al. _Andrews' Diseases of the Skin: Clinical Dermatology_. 13th ed. Elsevier; 2020.

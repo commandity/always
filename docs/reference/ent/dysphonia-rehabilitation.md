@@ -7,7 +7,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 
 **Voice Rehabilitation — Assessment & Management of Functional and Organic Dysphonia**
 
-## 概論 Overview
+## 概述 Overview
 
 音聲障礙（dysphonia）指因聲帶結構、神經支配、或功能使用不當導致的聲音品質異常。依病因可分為**功能性**（muscle tension dysphonia, psychogenic）、**器質性**（聲帶結節、息肉、溝狀聲帶、單側聲帶麻痺、喉萎縮）及**神經性**（痙攣性發聲障礙、聲帶震顫）。嗓音復健透過**行為治療**、**手術矯正**及**藥物治療**三者相輔，目標為恢復有效且可持續的發聲功能。
 

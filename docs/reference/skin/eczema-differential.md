@@ -37,7 +37,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
           └─ 系統性疾病線索 ── 見第三步
 ```
 
-## 第三步：主要鑑別診斷分類
+## 第三步：主要鑑別診斷分類 Step 3: Major Differential Categories
 
 ### 一、原發性濕疹 Primary Eczema
 
@@ -137,7 +137,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 
 ## 第四步：診斷輔助工具 Diagnostic Workup
 
-### 基礎評估
+### 基礎評估 Basic Workup
 
 | 工具                                  | 適用情境                                          |
 | ------------------------------------- | ------------------------------------------------- |
@@ -147,7 +147,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | 皮膚活檢（Skin biopsy）               | 診斷不明確；懷疑 CTCL、Paget 病、自體免疫水疱疾病 |
 | 貼片試驗（Patch test）                | 懷疑過敏性接觸性皮膚炎；找出致敏原                |
 
-### 選擇性實驗室檢查
+### 選擇性實驗室檢查 Selective Laboratory Tests
 
 | 檢查                                       | 懷疑診斷                                 |
 | ------------------------------------------ | ---------------------------------------- |
@@ -162,7 +162,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | 直接及間接免疫螢光（DIF/IIF）              | 水疱性自體免疫疾病                       |
 | 抗 tTG IgA、抗 endomysial 抗體             | 皰疹樣皮炎（乳糜瀉篩查）                 |
 
-## 第五步：特殊情境的鑑別重點
+## 第五步：特殊情境的鑑別重點 Step 5: Key Differentials in Special Situations
 
 ### 成人新發嚴重濕疹 New-onset severe eczema in adult
 
@@ -182,7 +182,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
         └─► 皮膚活檢排除 CTCL（Mycosis fungoides）
 ```
 
-### 局部頑固不癒的「濕疹」
+### 局部頑固不癒的「濕疹」 Localized Treatment-Resistant "Eczema"
 
 ```
 單一部位長期不癒（> 3 個月）的「濕疹」

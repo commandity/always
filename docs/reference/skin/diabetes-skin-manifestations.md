@@ -7,7 +7,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 
 **糖尿病皮膚表現 Skin Manifestations of Diabetes Mellitus**
 
-## 概述
+## 概述 Overview
 
 - DM（type 1 & 2）患者 **30–70%** 一生中會出現皮膚併發症
 - 皮膚變化可反映 **血糖控制狀況**，有時甚至是未診斷 DM 的首發徵象

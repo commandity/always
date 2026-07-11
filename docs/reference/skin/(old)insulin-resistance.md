@@ -7,13 +7,13 @@ title: "胰島素阻抗的臨床表現與皮膚表徵 — Insulin Resistance: Cl
 
 **Insulin Resistance: Clinical & Cutaneous Manifestations**
 
-## 概述
+## 概述 Overview
 
 胰島素阻抗（insulin resistance, IR）是指細胞對胰島素的反應降低，身體需要分泌更多胰島素才能維持正常血糖的代償狀態。在胰島素阻抗的早期階段，空腹血糖與糖化血色素可能仍屬正常，因此臨床辨識依賴對身體表徵、生物標記及代謝症候群元件的綜合判斷。
 
 早期辨識胰島素阻抗至關重要——在 β 細胞功能尚未衰竭前介入生活型態調整，可有效預防或延緩第 2 型糖尿病及心血管疾病的發生。
 
-## 代謝症候群：胰島素阻抗的臨床框架
+## 代謝症候群：胰島素阻抗的臨床框架 Metabolic Syndrome: Clinical Framework of Insulin Resistance
 
 胰島素阻抗是代謝症候群的核心病理機制。根據我國衛生福利部國民健康署及國際共識，代謝症候群的診斷需符合以下五項中至少三項：
 
@@ -61,7 +61,7 @@ TyG = ln\[TG (mg/dL) × 空腹血糖 (mg/dL) ÷ 2\]
 
 值得注意的是，空腹胰島素受檢驗方法影響，不同實驗室之間變異大，建議在同一實驗室穩定追蹤。
 
-## 皮膚表徵：胰島素阻抗的視覺線索
+## 皮膚表徵：胰島素阻抗的視覺線索 Skin Manifestations: Visual Clues of Insulin Resistance
 
 胰島素對皮膚有多重生理作用，包括促進角質細胞與纖維母細胞增生。當循環中胰島素濃度升高（高胰島素血症），這些作用被過度活化，產生了可供臨床辨識的皮膚變化。許多患者在進展至糖尿病前，皮膚已先呈現了胰島素阻抗的訊號。
 
@@ -106,7 +106,7 @@ _Acrochordons（Skin Tags）— 頸部軟性有柄贅生物_
 ![Keratosis Pilaris](/reference/skin/skin-manifestations/Keratosis-pilaris.jpg)
 _Keratosis Pilaris — 上臂後側毛囊角化丘疹_
 
-### 其他相關皮膚表現
+### 其他相關皮膚表現 Other Related Skin Findings
 
 | 皮膚變化                                    | 說明                                                                       |
 | ------------------------------------------- | -------------------------------------------------------------------------- |
@@ -115,7 +115,7 @@ _Keratosis Pilaris — 上臂後側毛囊角化丘疹_
 | **黑色表皮（Dirty Neck 外觀）**             | 清潔後仍無法去除的灰褐色污垢樣外觀，實為黑色棘皮症的一種表現形式           |
 | **脛前色素斑（Pretibial Pigmented Spots）** | 糖尿病前期即可見的小腿前側萎縮性色素斑，與微血管病變有關                   |
 
-## 生殖內分泌表現
+## 生殖內分泌表現 Reproductive–Endocrine Manifestations
 
 ### 多囊性卵巢症候群 PCOS
 
@@ -127,9 +127,9 @@ _Keratosis Pilaris — 上臂後側毛囊角化丘疹_
 - 臨床表現：月經稀發或無月經、不孕、多毛症、痤瘡、雄性禿
 - 不論是否肥胖，PCOS 患者均應接受胰島素阻抗評估
 
-## 臨床綜合評估流程
+## 臨床綜合評估流程 Comprehensive Clinical Assessment
 
-### 高危險族群篩檢
+### 高危險族群篩檢 High-Risk Group Screening
 
 以下族群應考慮進行胰島素阻抗評估：
 
@@ -143,7 +143,7 @@ _Keratosis Pilaris — 上臂後側毛囊角化丘疹_
 - 非酒精性脂肪肝疾病（NAFLD / MASLD）
 - 特定族群：亞洲人在較低 BMI 即出現胰島素阻抗，應特別留意
 
-### 評估工具
+### 評估工具 Assessment Tools
 
 | 工具                           | 公式                                                | 切點                                        | 備註                             |
 | ------------------------------ | --------------------------------------------------- | ------------------------------------------- | -------------------------------- |
@@ -155,7 +155,7 @@ _Keratosis Pilaris — 上臂後側毛囊角化丘疹_
 | **McAuley Index**              | exp\[2.63 − 0.28 × ln(空腹胰島素) − 0.31 × ln(TG)\] | < 5.8                                       | 較少臨床使用                     |
 | **口服葡萄糖耐受試驗（OGTT）** | 75 g 葡萄糖負荷                                     | 2h ≥ 140 mg/dL 葡萄糖耐受不良／≥ 200 糖尿病 | 同時評估 glucose 及 insulin 反應 |
 
-### 臨床處置要點
+### 臨床處置要點 Clinical Management Points
 
 一旦辨識出胰島素阻抗，應立即啟動生活型態介入：
 
@@ -167,7 +167,7 @@ _Keratosis Pilaris — 上臂後側毛囊角化丘疹_
    - 若合併糖尿病或減重需求，可考慮 GLP-1 RA 或 SGLT2i
    - PCOS 合併胰島素阻抗者，metformin 可改善排卵功能及代謝指標
 
-## 注意事項
+## 注意事項 Precautions
 
 ::: warning 胰島素阻抗的異質性
 胰島素阻抗的表現具有個體差異——並非所有患者都會出現典型的皮膚表徵或血脂異常。缺乏黑色棘皮症或 TG/HDL 升高，不代表可以排除胰島素阻抗的存在。臨床判斷應綜合家族史、體型、代謝指標及身體檢查發現，而非依賴單一標記。
@@ -185,7 +185,7 @@ _Keratosis Pilaris — 上臂後側毛囊角化丘疹_
 本文僅供醫療專業人員教育參考，**不構成個別患者的治療建議**。胰島素阻抗的診斷與處置應依個別患者狀況及最新臨床指引決定。
 :::
 
-## 參考資料
+## 參考資料 References
 
 1. 衛生福利部國民健康署 — 代謝症候群判定標準
 2. González-González JG, et al. TG/HDL ratio as a marker of insulin resistance. _Metab Syndr Relat Disord_. 2023.

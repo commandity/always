@@ -9,7 +9,7 @@ title: 水疱性病灶鑑別診斷與治療 — Differential Diagnosis of Vesicu
 
 > **核心概念**：水疱（vesicle，< 0.5 cm）與大水疱（bulla，≥ 0.5 cm）的鑑別，需結合**分布形態、伴隨症狀、發病速度、年齡層**綜合判斷。本文以伴隨症狀為主軸，建立臨床思考路徑。
 
-## 第一步：水疱基本形態學分類
+## 第一步：水疱基本形態學分類 Step 1: Basic Morphologic Classification
 
 | 分類依據 | 類型 | 代表疾病 |
 |---|---|---|
@@ -23,7 +23,7 @@ title: 水疱性病灶鑑別診斷與治療 — Differential Diagnosis of Vesicu
 | | 環狀邊緣（annular/peripheral） | 環癬合併水疱、線狀IgA病 |
 
 
-## 第二步：依伴隨症狀分類的臨床演算法
+## 第二步：依伴隨症狀分類的臨床演算法 Step 2: Symptom-Based Clinical Algorithm
 
 <div style="margin:1.75rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -66,7 +66,7 @@ title: 水疱性病灶鑑別診斷與治療 — Differential Diagnosis of Vesicu
   </div>
 </div>
 
-### 依「最主要伴隨症狀」進一步分流
+### 依「最主要伴隨症狀」進一步分流 Further Triage by Predominant Symptom
 
 ```
 水疱 + 發燒/前驅症狀
@@ -98,7 +98,7 @@ title: 水疱性病灶鑑別診斷與治療 — Differential Diagnosis of Vesicu
     └─ 摩擦部位 + 近期穿新鞋/運動 → 摩擦性水疱
 ```
 
-## 第三步：依伴隨症狀詳細分類表
+## 第三步：依伴隨症狀詳細分類表 Step 3: Detailed Classification by Symptom
 
 ### A. 水疱 + 發燒／全身性前驅症狀
 
@@ -150,7 +150,7 @@ title: 水疱性病灶鑑別診斷與治療 — Differential Diagnosis of Vesicu
 | 免疫抑制患者 + 廣泛水痘樣皮疹 | 瀰漫性帶狀疱疹／原發水痘 | IV acyclovir，住院隔離 |
 | 水疱 + 呼吸道症狀 + 結膜炎 | 嚴重多形性紅斑、SJS前驅期 | 密切觀察黏膜進展 |
 
-## 第五步：基礎診斷工具對照
+## 第五步：基礎診斷工具對照 Step 5: Basic Diagnostic Tools
 
 | 工具 | 用途 |
 |---|---|
@@ -162,7 +162,7 @@ title: 水疱性病灶鑑別診斷與治療 — Differential Diagnosis of Vesicu
 | **血清自體抗體** | Anti-desmoglein 1/3（天皰瘡）；Anti-BP180/BP230（類天皰瘡） |
 | **抗 tTG IgA** | 篩查皰疹樣皮炎相關乳糜瀉 |
 
-## 速查摘要表
+## 速查摘要表 Quick Reference Summary
 
 | 主要伴隨症狀 | 優先考慮 | 第一線檢查 | 第一線治療思路 |
 |---|---|---|---|

@@ -472,6 +472,16 @@ export default defineConfig({
           ],
         },
         {
+          text: "胸腔",
+          collapsed: true,
+          items: [
+            {
+              text: "氣喘（診斷・評估・治療）",
+              link: "/reference/chest/asthma",
+            },
+          ],
+        },
+        {
           text: "超音波",
           collapsed: true,
           items: [

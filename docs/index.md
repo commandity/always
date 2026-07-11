@@ -6,8 +6,8 @@ hero:
   text: 凝淨齋 ⛩️
   tagline: 墨香養心 📝｜經卷明志 ✏️｜修心養性 🍵
   image:
-    light: /light-circle-hero.svg
-    dark: /dark-circle-hero.svg
+    light: /logo/light-circle-hero.svg
+    dark: /logo/dark-circle-hero.svg
     alt: background
   # actions:
   #   - theme: brand

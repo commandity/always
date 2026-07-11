@@ -1,8 +1,10 @@
 import { createContentLoader, defineConfig } from "vitepress";
 import { createHash } from "node:crypto";
 
+const base = "/always/";
+
 export default defineConfig({
-  base: "/always/",
+  base,
   appearance: true,
   ignoreDeadLinks: true,
   // ── Site metadata ──────────────────────────────────────────────
@@ -20,7 +22,7 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/head-1a1a1a-f0f0f0.svg",
+        href: `${base}logo/logo-1a1a1a.svg`,
       },
     ],
     // ✅ ADD THESE THREE BELOW THE ICON LINK
@@ -46,20 +48,12 @@ export default defineConfig({
         href: "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..900;1,200..900&display=swap",
       },
     ],
-    [
-      "link",
-      {
-        rel: "icon",
-        type: "image/svg+xml",
-        href: "/head-1a1a1a-f0f0f0.svg",
-      },
-    ],
   ],
 
   // ── Theme config ───────────────────────────────────────────────
   themeConfig: {
     // 1. Site logo (optional — replace with your own)
-    logo: "/logo-1a1a1a.svg",
+    logo: "/logo/logo-1a1a1a.svg",
 
     // 2. Top navigation bar with hyperlinks
     nav: [

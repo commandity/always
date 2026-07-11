@@ -275,13 +275,21 @@ const legend: { s: Severity }[] = [
    清除 button share the same height automatically. */
 .dxi.search {
   width: 100%;
+  margin: 0;
   padding: 8px 12px;
   font-size: 14px;
+  line-height: 1.5;
   color: var(--vp-c-text-1);
   background-color: var(--vp-c-bg);
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.dxi.search::-webkit-search-decoration,
+.dxi.search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
 .dxi.search:focus {
   outline: 2px solid var(--vp-c-brand-1);
@@ -316,12 +324,15 @@ const legend: { s: Severity }[] = [
 }
 /* Matches the 清除篩選 (reset) button in PregnancyCategoryTable. */
 .dxi.clear-btn {
+  margin: 0;
   padding: 8px 12px;
   font-size: 14px;
+  line-height: 1.5;
   color: var(--vp-c-text-2);
   background-color: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
+  box-sizing: border-box;
   cursor: pointer;
   white-space: nowrap;
 }

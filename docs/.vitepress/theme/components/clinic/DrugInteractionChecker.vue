@@ -271,24 +271,22 @@ const legend: { s: Severity }[] = [
   position: relative;
   flex: 1;
 }
+/* Padding-based sizing (matches PregnancyCategoryTable) so the input and
+   清除 button share the same height automatically. */
 .dxi.search {
   width: 100%;
-  height: 44px;
-  padding: 0 14px;
-  font-size: 15px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  background-color: var(--vp-c-bg);
+  padding: 8px 12px;
+  font-size: 14px;
   color: var(--vp-c-text-1);
+  background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
   box-sizing: border-box;
-  transition:
-    border-color 0.18s ease,
-    box-shadow 0.18s ease;
 }
 .dxi.search:focus {
-  outline: none;
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 1px;
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp-c-brand-1) 15%, transparent);
 }
 .dxi.suggest {
   position: absolute;
@@ -316,25 +314,16 @@ const legend: { s: Severity }[] = [
   background-color: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
 }
-/* Matches the 清除篩選 (reset) button in PregnancyCategoryTable,
-   kept at 44px so it lines up with the search input. */
+/* Matches the 清除篩選 (reset) button in PregnancyCategoryTable. */
 .dxi.clear-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 44px;
-  box-sizing: border-box;
-  padding: 0 14px;
+  padding: 8px 14px;
   font-size: 14px;
   color: var(--vp-c-text-2);
   background-color: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   white-space: nowrap;
-  transition:
-    color 0.18s ease,
-    border-color 0.18s ease;
 }
 .dxi.clear-btn:hover {
   color: var(--vp-c-text-1);

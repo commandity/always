@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 臨床工具總覽
+title: 臨床工具
 aside: false
 prev: false
 next: false

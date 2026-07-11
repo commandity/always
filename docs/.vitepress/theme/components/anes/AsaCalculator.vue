@@ -273,9 +273,7 @@ function reset() {
           <span class="result-advice">{{ selectedClass.desc }}</span>
           <div class="result-sub-scores">
             <span class="sub-pill-sm asa-sm">{{ selectedClass.sub }}</span>
-            <span
-              v-if="isEmergency === true"
-              class="sub-pill-sm high-sm"
+            <span v-if="isEmergency === true" class="sub-pill-sm high-sm"
               >⚠ 緊急手術（E）</span
             >
             <span
@@ -319,7 +317,11 @@ function reset() {
         >
           {{ showResults ? "收起明細" : "查看評估結果" }}
         </button>
-        <button class="btn-copy" :disabled="!selectedClass" @click="copyMarkdown">
+        <button
+          class="btn-copy"
+          :disabled="!selectedClass"
+          @click="copyMarkdown"
+        >
           {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
         </button>
         <button class="btn-reset" @click="reset">重置</button>
@@ -1033,13 +1035,16 @@ function reset() {
 }
 .btn-view {
   border: none;
-  background: var(--vp-c-brand-1);
+  background: linear-gradient(135deg, var(--vp-c-brand-1), #4f46e5);
   color: #fff;
   box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
 }
 .btn-view:hover:not(:disabled) {
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+.btn-view:active:not(:disabled) {
+  transform: translateY(0);
 }
 .btn-copy {
   border: 1.5px solid var(--vp-c-brand-1);

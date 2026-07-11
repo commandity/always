@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 衛教總覽
+title: 衛教
 aside: false
 prev: false
 next: false

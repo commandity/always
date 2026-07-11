@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Blog
+title: 部落格
 aside: false
 ---
 

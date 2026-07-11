@@ -22,6 +22,7 @@ import FloatingBgmPlayer from "./components/layout/FloatingBgmPlayer.vue";
 import PasswordGate from "./components/layout/PasswordGate.vue";
 // ANES
 import AsaCalculator from "./components/anes/AsaCalculator.vue";
+import LocalAnestheticsCalculator from "./components/anes/LocalAnestheticsCalculator.vue";
 // PSYCHOLOGY
 import Phq9Gad7Calculator from "./components/psy/Phq9Gad7Calculator.vue";
 import Sf36Calculator from "./components/psy/Sf36Calculator.vue";
@@ -235,6 +236,7 @@ export default {
     app.component("AboutPage", AboutPage);
     // ANES
     app.component("AsaCalculator", AsaCalculator);
+    app.component("LocalAnestheticsCalculator", LocalAnestheticsCalculator);
     // PSYCHOLOGY
     app.component("Phq9Gad7Calculator", Phq9Gad7Calculator);
     app.component("Sf36Calculator", Sf36Calculator);

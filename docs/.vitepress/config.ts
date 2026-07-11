@@ -328,6 +328,10 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: "ASA 麻醉風險分級", link: "/guide/anes/asa-calculator" },
+            {
+              text: "Local Anesthetics 劑量計算",
+              link: "/guide/anes/local-anesthetics-calculator",
+            },
           ],
         },
         {

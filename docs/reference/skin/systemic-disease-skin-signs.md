@@ -5,7 +5,7 @@ title: 全身性疾病的皮膚表徵 — Skin Signs of Systemic Disease
 
 # 全身性疾病的皮膚表徵
 
-**Skin Signs of Systemic Disease**
+**全身性疾病的皮膚表徵 Skin Signs of Systemic Disease**
 
 ## 內分泌與代謝疾病
 

@@ -5,7 +5,7 @@ title: 前庭復健 — 前庭功能障礙之評估與治療 — Vestibular Reha
 
 # 前庭復健 — 前庭功能障礙之評估與治療
 
-**Vestibular Rehabilitation — Assessment & Management of Vestibular Disorders**
+**前庭功能障礙之評估與治療 Vestibular Rehabilitation — Assessment & Management of Vestibular Disorders**
 
 ## 概論 Overview
 

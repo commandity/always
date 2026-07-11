@@ -5,7 +5,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 
 # 糖尿病皮膚表現
 
-**Skin Manifestations of Diabetes Mellitus**
+**糖尿病皮膚表現 Skin Manifestations of Diabetes Mellitus**
 
 ## 概述
 

@@ -5,7 +5,7 @@ title: "從糖尿病到體重管理及更多：GLP-1 受體促效劑適應症全
 
 # 從糖尿病到體重管理及更多：GLP-1 受體促效劑適應症全覽
 
-**From Diabetes to Weight Management & Beyond: GLP-1 RA Indications Overview**
+**從糖尿病到體重管理及更多：GLP-1 受體促效劑適應症全覽 From Diabetes to Weight Management & Beyond: GLP-1 RA Indications Overview**
 
 ## 概述
 

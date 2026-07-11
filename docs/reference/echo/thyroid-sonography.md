@@ -7,12 +7,6 @@ title: 甲狀腺及頸部超音波 — 檢查規範與報告範本
 
 **Thyroid & Neck Sonography Report Template**
 
-## 概述
-
-本工具提供結構化的甲狀腺及頸部超音波檢查報告模板，涵蓋甲狀腺本體測量、實質回音質地評估、結節描述（含 TI-RADS 分級）、血管分布評估、頸部淋巴結評估及最終印象結論。報告以 Markdown 格式輸出，可直接貼入病歷系統。
-
----
-
 <ThyroidSonographyReport />
 
 ## 使用說明

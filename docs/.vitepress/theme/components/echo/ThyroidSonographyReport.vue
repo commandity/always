@@ -337,12 +337,12 @@ function reset() {
 <template>
   <div class="thyro-report">
     <!-- Header -->
-    <div class="tr-header">
+    <!-- <div class="tr-header">
       <div class="header-title">
         <h2 class="title">甲狀腺及頸部超音波檢查報告</h2>
         <p class="subtitle">Thyroid &amp; Neck Sonography Report Template</p>
       </div>
-    </div>
+    </div> -->
 
     <!-- Intro -->
     <div class="intro-bar">

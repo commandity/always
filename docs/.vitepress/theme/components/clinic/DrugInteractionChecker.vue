@@ -110,34 +110,30 @@ const legend: { s: Severity }[] = [
   <div class="dxi">
     <!-- 搜尋列 -->
     <div class="dxi search-row">
-      <div class="dxi search-wrap">
-        <input
-          v-model="query"
-          class="dxi search"
-          type="search"
-          placeholder="輸入藥品學名（INN），可加入多個…"
-          aria-label="搜尋藥品"
-          autocomplete="off"
-          @keydown.enter.prevent="onEnter"
-          @keydown.down.prevent="onArrow(1)"
-          @keydown.up.prevent="onArrow(-1)"
-        />
-        <ul v-if="suggestions.length" class="dxi suggest">
-          <li
-            v-for="(s, i) in suggestions"
-            :key="s"
-            class="dxi suggest-item"
-            :class="{ active: i === activeSuggestion }"
-            @mousedown.prevent="addDrug(s)"
-            @mouseenter="activeSuggestion = i"
-          >
-            {{ displayDrug(s) }}
-          </li>
-        </ul>
-      </div>
-      <button class="dxi clear-btn" @click="clearAll">
-        清除
-      </button>
+      <input
+        v-model="query"
+        class="dxi search"
+        type="search"
+        placeholder="輸入藥品學名（INN），可加入多個…"
+        aria-label="搜尋藥品"
+        autocomplete="off"
+        @keydown.enter.prevent="onEnter"
+        @keydown.down.prevent="onArrow(1)"
+        @keydown.up.prevent="onArrow(-1)"
+      />
+      <button class="dxi clear-btn" @click="clearAll">清除</button>
+      <ul v-if="suggestions.length" class="dxi suggest">
+        <li
+          v-for="(s, i) in suggestions"
+          :key="s"
+          class="dxi suggest-item"
+          :class="{ active: i === activeSuggestion }"
+          @mousedown.prevent="addDrug(s)"
+          @mouseenter="activeSuggestion = i"
+        >
+          {{ displayDrug(s) }}
+        </li>
+      </ul>
     </div>
 
     <!-- 已選藥品 -->
@@ -262,21 +258,14 @@ const legend: { s: Severity }[] = [
 
 /* 搜尋列 */
 .dxi.search-row {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 12px;
 }
-.dxi.search-wrap {
-  position: relative;
-  display: flex;
-  flex: 1 1 240px;
-  min-width: 0;
-}
-/* Padding-based sizing (matches PregnancyCategoryTable) so the input and
-   清除 button share the same height automatically. */
 .dxi.search {
-  flex: 1;
+  flex: 1 1 240px;
   min-width: 0;
   padding: 8px 12px;
   font-size: 14px;
@@ -305,7 +294,7 @@ const legend: { s: Severity }[] = [
   z-index: 20;
   top: calc(100% + 4px);
   left: 0;
-  right: 0;
+  right: 80px;
   margin: 0;
   padding: 4px;
   list-style: none;

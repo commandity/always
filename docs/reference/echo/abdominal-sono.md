@@ -395,6 +395,8 @@ password: "516800"
 | **Lymph node (general)** | < 10 mm short axis       | Varies by location                         |
 | **Liver span**           | 15–20 cm (midclavicular) | —                                          |
 
+---
+
 ::: info Disclaimer
 This document summarizes key anatomy and ultrasound imaging points for abdominal sonography, compiled from standard radiology and anatomy references. It is intended for educational reference for medical professionals and should not replace original sources for clinical decision-making.
 :::

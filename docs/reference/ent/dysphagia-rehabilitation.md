@@ -173,7 +173,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 
 ### 復健訓練 Rehabilitation Exercises
 
-#### Oral Phase Exercises
+#### 口腔期運動 Oral Phase Exercises
 
 | 訓練                       | 方法                               | 目標                                          |
 | -------------------------- | ---------------------------------- | --------------------------------------------- |
@@ -183,7 +183,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **Chewing**                | 咀嚼橡皮管或特殊咀嚼器             | 改善咀嚼效能                                  |
 | **Bolus hold**             | 口腔含食團不流入咽（hold command） | 改善 oral containment                         |
 
-#### Pharyngeal Phase Exercises
+#### 咽期運動 Pharyngeal Phase Exercises
 
 | 訓練                                              | 方法                                                       | 目標                                           |
 | ------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------- |
@@ -219,7 +219,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
 | **Laryngectomy (total)**              | 不可逆的致命性 aspiration                             | 永久性咽喉分離，終止 aspiration                                       |
 | **PEG / PEJ（經皮胃造口）**           | 無法安全經口進食達營養需求                            | 長期腸道營養支持                                                      |
 
-## Common Conditions & Specific Protocols
+## 常見疾病與治療方案 Common Conditions & Specific Protocols
 
 ### 1. 中風後吞嚥障礙 Post-Stroke Dysphagia
 
@@ -232,7 +232,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
   - 若 6 個月未恢復 → 長期代償策略 ± PEG
 - **預後**：post-stroke dysphagia 與 aspiration pneumonia（RR 3.2）、死亡率（OR 2.4）顯著相關
 
-### 2. Parkinson's Disease Dysphagia
+### 2. 帕金森氏症吞嚥障礙 Parkinson's Disease Dysphagia
 
 - **發生率**：約 80%（disease duration-dependent），可發生於任何 Hoehn & Yahr stage
 - **特徵**：舌頭震顫、重複性吞嚥運動減少（hypokinetic swallow）、pharyngeal residue、piecemeal deglutition、aspiration（>50% silent）
@@ -280,7 +280,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療
   - 注射：BTX-A（肉毒桿菌素）注射至 cricopharyngeus（100U Botox / 50U Dysport），效果持續 3–6 個月
   - 手術：Cricopharyngeal myotomy（經口或開放式）
 
-### 6. Dementia-Related Dysphagia
+### 6. 失智症相關吞嚥障礙 Dementia-Related Dysphagia
 
 - **特徵**：progressively worsening、agnosia（無法辨識食物）、apraxia（無法執行吞嚥動作）、oral phase 受損明顯、late stage → pharyngeal phase 受損
 - **治療原則**：

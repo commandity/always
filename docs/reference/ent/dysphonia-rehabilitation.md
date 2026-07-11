@@ -199,9 +199,9 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 4. **Resonance training**：forward focus → 減輕喉部負擔
 5. **Progressive loading**：MPT → 音量 → 音高範圍 → 持續時間 → 日常對話
 
-## Common Conditions & Specific Protocols
+## 常見疾病與治療方案 Common Conditions & Specific Protocols
 
-### 1. Muscle Tension Dysphonia（MTD）
+### 1. 肌肉緊張性發聲障礙 Muscle Tension Dysphonia（MTD）
 
 - **特徵**：喉部過度緊張，聲帶內收過強，發聲費力
 - **Stroboscopy**：supraglottic hyperfunction（假聲帶內收、arytenoid 緊迫）、閉合過長或過短、黏膜波動正常
@@ -214,7 +214,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 - **治療**：第一線為行為治療（8–12 週）；若 >3mm、Fibrotic 或治療無效 → phonomicrosurgery
 - **預後**：兒童大多 6–12 個月保守治療改善；成人配合度高者治癒率 >85%
 
-### 3. Unilateral Vocal Fold Paralysis（UVFP）
+### 3. 單側聲帶麻痺 Unilateral Vocal Fold Paralysis（UVFP）
 
 - **病因**：甲狀腺術後（最常見）、thoracic surgery、插管、腫瘤、不明原因（idiopathic）
 - **聲音表現**：breathy dysphonia、MPT↓、S/Z↑、vocal fatigue、aspiration

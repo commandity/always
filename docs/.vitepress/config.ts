@@ -332,6 +332,10 @@ export default defineConfig({
               text: "LA 局部麻醉劑量計算",
               link: "/guide/anes/local-anesthetics-calculator",
             },
+            {
+              text: "區域麻醉完整指南",
+              link: "/guide/anes/regional-anesthesia",
+            },
           ],
         },
         {

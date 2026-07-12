@@ -77,7 +77,7 @@ const icaStatus = ref<{ right: string; left: string }>({
   left: "patent",
 });
 const icaStatusOptions = [
-  { v: "patent", l: "Patent — assess by PSV/ratio below" },
+  { v: "patent", l: "Patent — assess by PSV / ratio below" },
   { v: "pseudo", l: "Suspected pseudo-occlusion" },
   { v: "recent", l: "Recent total occlusion" },
   { v: "chronic", l: "Chronic total occlusion" },
@@ -1080,24 +1080,41 @@ function reset() {
         </label>
       </div>
       <div class="criteria-box">
-        <div class="criteria-title">Reference criteria（表三・表四）</div>
-        <p>
-          <strong>Pseudo-occlusion:</strong> B-mode thrombus with possibly
-          visible narrowed patent lumen; string-sign/punctate color flash;
-          markedly decreased velocity ± high resistance, slightly elevated
-          turbulent flow with prolonged acceleration time.
-        </p>
-        <p>
-          <strong>Total occlusion:</strong> B-mode thrombus filling whole lumen;
-          no color signal (low-flow/high-sensitivity setting); no Doppler
-          waveform.
-        </p>
-        <p>
-          <strong>Recent occlusion:</strong> Homogeneous fresh thrombus (may
-          move with pulsation), possible spontaneous echo contrast proximal to
-          occlusion, may be hypoechogenic; no color signal; no waveform, may
-          show back-and-forth pattern proximal to occlusion.
-        </p>
+        <div class="criteria-title">Reference criteria</div>
+        <div class="crit-item">
+          <span class="crit-label">Pseudo-occlusion</span>
+          <ul class="crit-list">
+            <li>B-mode thrombus with a possibly visible narrowed patent lumen</li>
+            <li>String-sign / punctate color flash</li>
+            <li>
+              Markedly decreased velocity ± high resistance; slightly elevated
+              turbulent flow with prolonged acceleration time
+            </li>
+          </ul>
+        </div>
+        <div class="crit-item">
+          <span class="crit-label">Total occlusion</span>
+          <ul class="crit-list">
+            <li>B-mode thrombus filling the whole lumen</li>
+            <li>No color signal (low-flow / high-sensitivity setting)</li>
+            <li>No Doppler waveform</li>
+          </ul>
+        </div>
+        <div class="crit-item">
+          <span class="crit-label">Recent occlusion</span>
+          <ul class="crit-list">
+            <li>Homogeneous fresh thrombus (may move with pulsation)</li>
+            <li>
+              Possible spontaneous echo contrast proximal to the occlusion; may
+              be hypoechogenic
+            </li>
+            <li>No color signal</li>
+            <li>
+              No waveform; may show a back-and-forth pattern proximal to the
+              occlusion
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -1664,8 +1681,27 @@ function reset() {
   margin-bottom: 0.4rem;
   font-size: 0.78rem;
 }
-.criteria-box p {
-  margin: 0.3rem 0;
+.crit-item + .crit-item {
+  margin-top: 0.55rem;
+  padding-top: 0.55rem;
+  border-top: 1px dashed var(--vp-c-divider);
+}
+.crit-label {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 0.76rem;
+  color: var(--vp-c-brand-1);
+  margin-bottom: 0.3rem;
+}
+.crit-list {
+  margin: 0;
+  padding-left: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+}
+.crit-list li {
+  line-height: 1.5;
 }
 
 /* Plaque cards */

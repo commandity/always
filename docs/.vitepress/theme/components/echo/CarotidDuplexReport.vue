@@ -985,50 +985,70 @@ function reset() {
       </div>
       <div class="ratio-grid">
         <div class="ratio-card">
-          <span class="ratio-title"
-            >MCA/ICA mean-V ratio <small>(NL &lt; 3.0)</small></span
-          >
-          <div class="ratio-values">
-            <span :class="['ratio-val', flagClass(mcaIcaRight, 0, 3)]"
-              >Rt {{ fmt(mcaIcaRight) }}</span
-            >
-            <span :class="['ratio-val', flagClass(mcaIcaLeft, 0, 3)]"
-              >Lt {{ fmt(mcaIcaLeft) }}</span
-            >
+          <div class="ratio-head">
+            <span class="ratio-name">MCA/ICA mean-V</span>
+            <span class="ratio-range">NL &lt; 3.0</span>
           </div>
-          <div class="ratio-sub">
-            Rt: {{ lindegaardClass(mcaIcaRight) }} · Lt:
+          <div class="ratio-tiles">
+            <div :class="['ratio-tile', flagClass(mcaIcaRight, 0, 3)]">
+              <span class="tile-side">Rt</span>
+              <span class="tile-val">{{ fmt(mcaIcaRight) }}</span>
+            </div>
+            <div :class="['ratio-tile', flagClass(mcaIcaLeft, 0, 3)]">
+              <span class="tile-side">Lt</span>
+              <span class="tile-val">{{ fmt(mcaIcaLeft) }}</span>
+            </div>
+          </div>
+          <div class="ratio-note">
+            Rt {{ lindegaardClass(mcaIcaRight) }} · Lt
             {{ lindegaardClass(mcaIcaLeft) }}
           </div>
         </div>
+
         <div class="ratio-card">
-          <span class="ratio-title"
-            >ICA/CCA PS ratio <small>(NL &lt; 1.5)</small></span
-          >
-          <div class="ratio-values">
-            <span :class="['ratio-val', flagClass(icaCcaRight, 0, 1.5)]"
-              >Rt {{ fmt(icaCcaRight) }}</span
-            >
-            <span :class="['ratio-val', flagClass(icaCcaLeft, 0, 1.5)]"
-              >Lt {{ fmt(icaCcaLeft) }}</span
-            >
+          <div class="ratio-head">
+            <span class="ratio-name">ICA/CCA PS</span>
+            <span class="ratio-range">NL &lt; 1.5</span>
+          </div>
+          <div class="ratio-tiles">
+            <div :class="['ratio-tile', flagClass(icaCcaRight, 0, 1.5)]">
+              <span class="tile-side">Rt</span>
+              <span class="tile-val">{{ fmt(icaCcaRight) }}</span>
+            </div>
+            <div :class="['ratio-tile', flagClass(icaCcaLeft, 0, 1.5)]">
+              <span class="tile-side">Lt</span>
+              <span class="tile-val">{{ fmt(icaCcaLeft) }}</span>
+            </div>
           </div>
         </div>
+
         <div class="ratio-card">
-          <span class="ratio-title"
-            >Bil CCA PS ratio <small>(NL 0.7-1.3)</small></span
-          >
-          <div class="ratio-values">
-            <span :class="['ratio-val', flagClass(bilCca, 0.7, 1.3)]">{{
-              fmt(bilCca, 2)
-            }}</span>
+          <div class="ratio-head">
+            <span class="ratio-name">Bil CCA PS</span>
+            <span class="ratio-range">NL 0.7–1.3</span>
+          </div>
+          <div class="ratio-tiles">
+            <div :class="['ratio-tile', flagClass(bilCca, 0.7, 1.3)]">
+              <span class="tile-side">R / L</span>
+              <span class="tile-val">{{ fmt(bilCca, 2) }}</span>
+            </div>
           </div>
         </div>
+
         <div class="ratio-card grade-card">
-          <span class="ratio-title">ICA Stenosis Grade</span>
-          <div class="ratio-values">
-            <span class="grade-badge">Rt: {{ gradeRight }}</span>
-            <span class="grade-badge">Lt: {{ gradeLeft }}</span>
+          <div class="ratio-head">
+            <span class="ratio-name">ICA Stenosis Grade</span>
+            <span class="ratio-range">NASCET</span>
+          </div>
+          <div class="ratio-tiles">
+            <div class="grade-tile">
+              <span class="tile-side">Rt</span>
+              <span class="grade-text">{{ gradeRight }}</span>
+            </div>
+            <div class="grade-tile">
+              <span class="tile-side">Lt</span>
+              <span class="grade-text">{{ gradeLeft }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1525,63 +1545,108 @@ function reset() {
 .ratio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.6rem;
+  gap: 0.7rem;
 }
 .ratio-card {
   border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem;
   background: var(--vp-c-bg-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
 }
-.ratio-title {
-  font-size: 0.78rem;
-  font-weight: 700;
+.ratio-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.ratio-name {
+  font-size: 0.82rem;
+  font-weight: 800;
   color: var(--vp-c-text-1);
-  display: block;
 }
-.ratio-title small {
-  font-weight: 500;
+.ratio-range {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--vp-c-text-3);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  padding: 1px 8px;
+  white-space: nowrap;
+}
+.ratio-tiles {
+  display: flex;
+  gap: 0.5rem;
+}
+.ratio-tile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 0.5rem 0.4rem;
+  border-radius: 9px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+}
+.tile-side {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--vp-c-text-3);
 }
-.ratio-values {
-  display: flex;
-  gap: 0.8rem;
-  margin-top: 0.4rem;
-  flex-wrap: wrap;
+.tile-val {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--vp-c-text-1);
 }
-.ratio-val {
-  font-size: 0.95rem;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 6px;
-}
-.ratio-val.flag-normal {
-  color: var(--vp-c-brand-1);
+.ratio-tile.flag-normal {
+  border-color: var(--vp-c-brand-1);
   background: var(--vp-c-brand-soft);
 }
-.ratio-val.flag-abnormal {
-  color: #ef4444;
+.ratio-tile.flag-normal .tile-val,
+.ratio-tile.flag-normal .tile-side {
+  color: var(--vp-c-brand-1);
+}
+.ratio-tile.flag-abnormal {
+  border-color: #ef4444;
   background: rgba(239, 68, 68, 0.1);
 }
-.ratio-sub {
+.ratio-tile.flag-abnormal .tile-val,
+.ratio-tile.flag-abnormal .tile-side {
+  color: #ef4444;
+}
+.ratio-note {
   font-size: 0.7rem;
   color: var(--vp-c-text-3);
-  margin-top: 0.4rem;
 }
 .grade-card {
   grid-column: span 2;
 }
-.grade-badge {
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 6px;
-  background: var(--vp-c-bg-mute);
+.grade-tile {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 9px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+}
+.grade-text {
+  font-size: 0.9rem;
+  font-weight: 800;
   color: var(--vp-c-brand-1);
 }
 
 /* Criteria reference box */
 .criteria-box {
+  margin-top: 1rem;
   border: 1px solid var(--vp-c-divider);
   border-radius: 8px;
   padding: 0.7rem 0.9rem;

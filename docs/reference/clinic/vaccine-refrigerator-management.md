@@ -70,8 +70,8 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
     <span style="font-size:0.8rem;opacity:0.8;">冷藏 2–8°C</span>
   </div>
   <div style="display:flex;">
-    <div style="width:54px;flex:none;background:linear-gradient(180deg,#f97316,#3b82f6);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:0.9rem 0;color:#fff;font-size:0.86rem;font-weight:700;writing-mode:vertical-rl;text-orientation:upright;">
-      <span>最高溫</span><span style="opacity:0.9;font-size:0.8rem;">溫度遞減 ↓</span><span>最低溫</span>
+    <div style="width:54px;flex:none;background:linear-gradient(180deg,#f97316,#3b82f6);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0.9rem 0;color:#fff;font-size:1.08rem;font-weight:800;writing-mode:vertical-rl;text-orientation:upright;letter-spacing:0.1em;">
+      <span>溫度遞減 ↓</span>
     </div>
     <div style="flex:1;">
       <div style="padding:0.6rem 0.85rem;background:#fff7ed;border-bottom:1px solid #e2e8f0;">

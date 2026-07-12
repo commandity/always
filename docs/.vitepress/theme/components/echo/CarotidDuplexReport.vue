@@ -601,59 +601,8 @@ function reset() {
       >
     </div>
 
-    <!-- ======================== SECTION: Patient ======================== -->
+    <!-- ======================== SECTION: Probe ======================== -->
     <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label">Patient Info（病患資料）</span>
-      </div>
-      <div class="patient-grid">
-        <label class="field"
-          ><span class="field-label">姓名 Name</span
-          ><input v-model="patient.name"
-        /></label>
-        <label class="field"
-          ><span class="field-label">病歷號 MRN</span
-          ><input v-model="patient.mrn"
-        /></label>
-        <label class="field"
-          ><span class="field-label">年齡 Age</span
-          ><input v-model="patient.age"
-        /></label>
-        <label class="field"
-          ><span class="field-label">性別 Sex</span>
-          <select v-model="patient.sex">
-            <option value="">—</option>
-            <option value="M">M</option>
-            <option value="F">F</option>
-          </select>
-        </label>
-        <label class="field"
-          ><span class="field-label">床號 Bed No</span
-          ><input v-model="patient.bedNo"
-        /></label>
-        <label class="field"
-          ><span class="field-label">電話 Tel</span
-          ><input v-model="patient.tel"
-        /></label>
-        <label class="field"
-          ><span class="field-label">Exam Date</span
-          ><input type="date" v-model="examDate"
-        /></label>
-        <label class="field"
-          ><span class="field-label">時間 Time</span
-          ><input v-model="examTime" placeholder="HH:MM"
-        /></label>
-        <label class="field wide"
-          ><span class="field-label">Clinical diagnosis</span
-          ><input
-            v-model="patient.clinicalDx"
-            placeholder="e.g. Right MCA territory infarct"
-        /></label>
-        <label class="field wide"
-          ><span class="field-label">住址 Address</span
-          ><input v-model="patient.address"
-        /></label>
-      </div>
       <div class="probe-note">Probe: Transcranial 2-3MHz / Carotid 5-10MHz</div>
     </div>
 

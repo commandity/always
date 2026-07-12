@@ -90,31 +90,36 @@ const _CAF = ["ps", "ed", "ri", "fv"];
 const diagramNodes = computed(() => {
   const t = tc.value;
   const c = ca.value;
+  const SC = 1.35,
+    TX = -175,
+    TY = -91;
+  const gx = (v) => TX + SC * v;
+  const gy = (v) => TY + SC * v;
   return [
     // Right side — clusters in the left margin (cx = 8)
-    { id: "a1r", label: "R A1", side: "r", cx: 6, cy: 24, nx: 455, ny: 130, fields: _TCF, m: t.a1.right },
-    { id: "oar", label: "R OA", side: "r", cx: 6, cy: 136, nx: 410, ny: 166, fields: _TCF, m: t.oa.right },
-    { id: "m1r", label: "R M1", side: "r", cx: 6, cy: 248, nx: 355, ny: 235, fields: _TCF, m: t.m1.right },
-    { id: "p1r", label: "R P1", side: "r", cx: 6, cy: 360, nx: 462, ny: 325, fields: _TCF, m: t.p1.right },
-    { id: "vir", label: "R VA intra", side: "r", cx: 6, cy: 472, nx: 468, ny: 430, fields: _TCF, m: t.vaIntra.right },
-    { id: "icar", label: "R ICA", side: "r", cx: 6, cy: 584, nx: 440, ny: 520, fields: _CAF, m: c.ica.right },
-    { id: "ecar", label: "R ECA", side: "r", cx: 6, cy: 696, nx: 486, ny: 556, fields: _CAF, m: c.eca.right },
-    { id: "bifr", label: "R BIF", side: "r", cx: 6, cy: 808, nx: 442, ny: 610, fields: _CAF, m: c.bif.right },
-    { id: "vexr", label: "R VA extra", side: "r", cx: 6, cy: 920, nx: 400, ny: 690, fields: _CAF, m: c.vaExtra.right },
-    { id: "ccar", label: "R CCA", side: "r", cx: 6, cy: 1032, nx: 447, ny: 715, fields: _CAF, m: c.cca.right },
+    { id: "a1r", label: "R A1", side: "r", cx: 6, cy: 24, nx: gx(455), ny: gy(130), fields: _TCF, m: t.a1.right },
+    { id: "oar", label: "R OA", side: "r", cx: 6, cy: 136, nx: gx(410), ny: gy(166), fields: _TCF, m: t.oa.right },
+    { id: "m1r", label: "R M1", side: "r", cx: 6, cy: 248, nx: gx(355), ny: gy(235), fields: _TCF, m: t.m1.right },
+    { id: "p1r", label: "R P1", side: "r", cx: 6, cy: 360, nx: gx(462), ny: gy(325), fields: _TCF, m: t.p1.right },
+    { id: "vir", label: "R VA intra", side: "r", cx: 6, cy: 472, nx: gx(468), ny: gy(430), fields: _TCF, m: t.vaIntra.right },
+    { id: "icar", label: "R ICA", side: "r", cx: 6, cy: 584, nx: gx(440), ny: gy(520), fields: _CAF, m: c.ica.right },
+    { id: "ecar", label: "R ECA", side: "r", cx: 6, cy: 696, nx: gx(486), ny: gy(556), fields: _CAF, m: c.eca.right },
+    { id: "bifr", label: "R BIF", side: "r", cx: 6, cy: 808, nx: gx(442), ny: gy(610), fields: _CAF, m: c.bif.right },
+    { id: "vexr", label: "R VA extra", side: "r", cx: 6, cy: 920, nx: gx(400), ny: gy(690), fields: _CAF, m: c.vaExtra.right },
+    { id: "ccar", label: "R CCA", side: "r", cx: 6, cy: 1032, nx: gx(447), ny: gy(715), fields: _CAF, m: c.cca.right },
     // Left side — clusters in the right margin (cx = 852)
-    { id: "a1l", label: "L A1", side: "l", cx: 818, cy: 24, nx: 545, ny: 130, fields: _TCF, m: t.a1.left },
-    { id: "oal", label: "L OA", side: "l", cx: 818, cy: 136, nx: 590, ny: 166, fields: _TCF, m: t.oa.left },
-    { id: "m1l", label: "L M1", side: "l", cx: 818, cy: 248, nx: 645, ny: 235, fields: _TCF, m: t.m1.left },
-    { id: "p1l", label: "L P1", side: "l", cx: 818, cy: 360, nx: 538, ny: 325, fields: _TCF, m: t.p1.left },
-    { id: "vil", label: "L VA intra", side: "l", cx: 818, cy: 472, nx: 532, ny: 430, fields: _TCF, m: t.vaIntra.left },
-    { id: "ical", label: "L ICA", side: "l", cx: 818, cy: 584, nx: 560, ny: 520, fields: _CAF, m: c.ica.left },
-    { id: "ecal", label: "L ECA", side: "l", cx: 818, cy: 696, nx: 514, ny: 556, fields: _CAF, m: c.eca.left },
-    { id: "bifl", label: "L BIF", side: "l", cx: 818, cy: 808, nx: 558, ny: 610, fields: _CAF, m: c.bif.left },
-    { id: "vexl", label: "L VA extra", side: "l", cx: 818, cy: 920, nx: 600, ny: 690, fields: _CAF, m: c.vaExtra.left },
-    { id: "ccal", label: "L CCA", side: "l", cx: 818, cy: 1032, nx: 553, ny: 715, fields: _CAF, m: c.cca.left },
+    { id: "a1l", label: "L A1", side: "l", cx: 818, cy: 24, nx: gx(545), ny: gy(130), fields: _TCF, m: t.a1.left },
+    { id: "oal", label: "L OA", side: "l", cx: 818, cy: 136, nx: gx(590), ny: gy(166), fields: _TCF, m: t.oa.left },
+    { id: "m1l", label: "L M1", side: "l", cx: 818, cy: 248, nx: gx(645), ny: gy(235), fields: _TCF, m: t.m1.left },
+    { id: "p1l", label: "L P1", side: "l", cx: 818, cy: 360, nx: gx(538), ny: gy(325), fields: _TCF, m: t.p1.left },
+    { id: "vil", label: "L VA intra", side: "l", cx: 818, cy: 472, nx: gx(532), ny: gy(430), fields: _TCF, m: t.vaIntra.left },
+    { id: "ical", label: "L ICA", side: "l", cx: 818, cy: 584, nx: gx(560), ny: gy(520), fields: _CAF, m: c.ica.left },
+    { id: "ecal", label: "L ECA", side: "l", cx: 818, cy: 696, nx: gx(514), ny: gy(556), fields: _CAF, m: c.eca.left },
+    { id: "bifl", label: "L BIF", side: "l", cx: 818, cy: 808, nx: gx(558), ny: gy(610), fields: _CAF, m: c.bif.left },
+    { id: "vexl", label: "L VA extra", side: "l", cx: 818, cy: 920, nx: gx(600), ny: gy(690), fields: _CAF, m: c.vaExtra.left },
+    { id: "ccal", label: "L CCA", side: "l", cx: 818, cy: 1032, nx: gx(553), ny: gy(715), fields: _CAF, m: c.cca.left },
     // Basilar — midline, cluster centred at the bottom
-    { id: "ba", label: "BA (midline)", side: "mid", cx: 412, cy: 852, nx: 500, ny: 388, fields: _TCF, m: t.ba },
+    { id: "ba", label: "BA (midline)", side: "mid", cx: 412, cy: 1000, nx: gx(500), ny: gy(388), fields: _TCF, m: t.ba },
   ];
 });
 
@@ -666,6 +671,7 @@ function reset() {
           class="ref-svg"
         >
           <!-- ===== Anatomy (schematic) ===== -->
+          <g transform="translate(-175,-91) scale(1.35)">
           <!-- Circle of Willis + basilar (brand) -->
           <path d="M 455 130 Q 500 108 545 130" class="dg-cow" />
           <path d="M 455 130 Q 438 178 432 240" class="dg-cow" />
@@ -694,6 +700,7 @@ function reset() {
           <path d="M 442 610 L 447 700 L 449 768" class="dg-vessel" />
           <path d="M 558 610 L 553 700 L 551 768" class="dg-vessel" />
 
+          </g>
           <!-- ===== Vessel nodes + linked input clusters ===== -->
           <template v-for="n in diagramNodes" :key="n.id">
             <line
@@ -1329,7 +1336,6 @@ function reset() {
 }
 .ref-svg {
   width: 100%;
-  min-width: 1000px;
   height: auto;
   display: block;
 }

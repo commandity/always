@@ -1273,6 +1273,9 @@ function reset() {
   align-items: center;
   justify-content: space-between;
 }
+.section-header-row .btn-add {
+  margin-top: 0;
+}
 .section-label {
   font-size: 0.85rem;
   font-weight: 700;

@@ -593,12 +593,17 @@ function reset() {
   <div class="carotid-report">
     <div class="intro-bar">
       <span class="intro-dot">◉</span>
-      <span
-        >輸入各血管 PS / ED / RI / MV(或FV)
-        四項數值，系統自動計算比值並產生解讀。Enter the 4 Doppler values
-        (PS/ED/RI/MV or FV) per vessel; ratios, stenosis grading, and
-        interpretation are generated automatically.</span
-      >
+      <span class="intro-text">
+        <span class="intro-zh"
+          >輸入各血管 PS / ED / RI / MV(或FV)
+          四項數值，系統自動計算比值並產生解讀。</span
+        >
+        <span class="intro-en"
+          >Enter the 4 Doppler values (PS/ED/RI/MV or FV) per vessel; ratios,
+          stenosis grading, and interpretation are generated
+          automatically.</span
+        >
+      </span>
     </div>
 
     <!-- ======================== SECTION: Probe ======================== -->
@@ -1222,9 +1227,26 @@ function reset() {
   margin: 0.75rem 0 0.4rem;
 }
 .probe-note {
-  font-size: 0.75rem;
-  color: var(--vp-c-text-3);
-  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  border: 1.5px solid var(--vp-c-brand-1);
+  border-left-width: 5px;
+  border-radius: 9px;
+  padding: 0.6rem 1rem;
+  margin-top: 0;
+}
+.intro-zh,
+.intro-en {
+  display: block;
+}
+.intro-en {
+  margin-top: 0.2rem;
 }
 
 .field {

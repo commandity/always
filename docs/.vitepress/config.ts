@@ -463,6 +463,10 @@ export default defineConfig({
               text: "藥物交互作用查詢（drug–drug・drug–food）",
               link: "/reference/clinic/drug-interaction-checker",
             },
+            {
+              text: "疫苗專用冰箱管理原則",
+              link: "/reference/clinic/vaccine-refrigerator-management",
+            },
           ],
         },
         {

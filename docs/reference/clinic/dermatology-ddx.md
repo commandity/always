@@ -1,7 +1,6 @@
 ---
 layout: doc
 title: 皮膚科鑑別診斷 — 系統性分類圖譜
-aside: false
 ---
 
 # 皮膚科鑑別診斷 — 系統性分類圖譜

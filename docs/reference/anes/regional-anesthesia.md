@@ -26,8 +26,8 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 **解剖 Anatomy**
 
 - 浅頸神經叢由 C1–C4 前支腹側支組成
-- 穿出胸鎖乳突肌（SCM）後緣中點（Erb's point）
-- 分布於頸前、頸側、耳廓、鎖骨上皮膚
+- 穿出sternocleidomastoid (SCM)後緣中點（Erb's point）
+- 分布於頸前、頸側、耳廓、鎖骨（clavicle）上皮膚
 
 **體表定位 Landmarks**
 
@@ -39,14 +39,14 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                                      |
-| -------- | --------------------------------------------------------- |
-| **探頭** | 高頻線性 10–15 MHz                                        |
-| **位置** | SCM 後緣中點，橫切面                                      |
-| **目標** | SCM 後緣深筋膜淺層（superficial to investing layer）      |
-| **進針** | 從後方向前方進針（lateral-to-medial），平面內（in-plane） |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 15–20 mL            |
-| **確認** | 藥物擴散於 SCM 後緣皮下，不應見深筋膜深層擴散             |
+| 項目     | 內容                                                 |
+| -------- | ---------------------------------------------------- |
+| **探頭** | 高頻線性 10–15 MHz                                   |
+| **位置** | SCM 後緣中點，橫切面                                 |
+| **目標** | SCM 後緣深筋膜淺層（superficial to investing layer） |
+| **進針** | 從後方向前方進針（lateral-to-medial），in-plane      |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 15–20 mL       |
+| **確認** | 藥物擴散於 SCM 後緣皮下，不應見深筋膜深層擴散        |
 
 **併發症 Complications**
 
@@ -66,20 +66,20 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **解剖 Anatomy**
 
-- C1–C4 前支，位於椎旁橫突溝內
-- 位於中斜角肌（posterior）與前斜角肌（anterior）之間
+- C1–C4 前支，位於椎旁橫突（transverse process）溝內
+- 位於中斜角肌（middle scalene）（posterior）與前斜角肌（anterior scalene）（anterior）之間
 - 深於 SCPB，覆蓋頸深筋膜
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                                   |
-| -------- | ------------------------------------------------------ |
-| **探頭** | 高頻線性 10–15 MHz                                     |
-| **位置** | SCM 後緣，C2–C4 水平橫切面                             |
-| **目標** | 中斜角肌深面、橫突溝內（prevertebral fascia 下）       |
-| **進針** | 後外側向內進針（posterior-to-anterior），平面內        |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 5–8 mL per level |
-| **確認** | 藥物擴散至中斜角肌深面，包圍神經根                     |
+| 項目     | 內容                                                                                     |
+| -------- | ---------------------------------------------------------------------------------------- |
+| **探頭** | 高頻線性 10–15 MHz                                                                       |
+| **位置** | SCM 後緣，C2–C4 水平橫切面                                                               |
+| **目標** | 中斜角肌（middle scalene）深面、橫突（transverse process）溝內（prevertebral fascia 下） |
+| **進針** | 後外側向內進針（posterior-to-anterior），in-plane                                        |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 5–8 mL per level                                   |
+| **確認** | 藥物擴散至中斜角肌（middle scalene）深面，包圍神經根                                     |
 
 **併發症 Complications**
 
@@ -105,7 +105,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **探頭** | 高頻線性 10–15 MHz                                            |
 | **位置** | 乳突與枕外隆凸連線中點後方                                    |
 | **目標** | 枕動脈旁（ Greater occipital nerve 與 occipital artery 伴行） |
-| **進針** | 從外側進針，平面內                                            |
+| **進針** | 從外側進針，in-plane                                          |
 | **藥物** | 1% Lidocaine 或 0.25% Bupivacaine 3–5 mL                      |
 
 ### 1.4 顎神經阻斷 Infraorbital Nerve Block
@@ -115,7 +115,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 上唇、上顎、鼻側皮膚手術
 - 上顎前牙拔牙
 
-**解剖**
+**解剖 Anatomy**
 
 - 顎神經（V2 分支）從 infraorbital foramen 穿出
 - Foramen 位於眶下緣下方約 0.5–1 cm
@@ -130,7 +130,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **進針** | 從外側向內進針                      |
 | **藥物** | 1% Lidocaine 2–3 mL                 |
 
-**注意**：避免注入眶內，不要穿入 foramen
+**注意 Notes**：避免注入眶內，不要穿入 foramen
 
 ## 2. 上肢 Upper Extremity
 
@@ -144,11 +144,11 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 肩關節疼痛
 - 肩袖修補術後 analgesia
 
-**解剖**
+**解剖 Anatomy**
 
 - 起自 C5–C6，從上幹分出
 - 經肩胛上切跡（suprascapular notch）進入肩胛上窩
-- 支配岡上肌、岡下肌、肩關節囊
+- 支配岡上肌（supraspinatus）、岡下肌（infraspinatus）、肩關節囊
 
 **超音波引導 Ultrasound-guided**
 
@@ -157,11 +157,11 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **探頭** | 高頻線性 10–15 MHz                            |
 | **位置** | 肩胛上切跡水平（supraspinatus fossa）         |
 | **目標** | 肩胛上切跡內，suprascapular artery 旁         |
-| **進針** | 從外側向內進針，平面內                        |
+| **進針** | 從外側向內進針，in-plane                      |
 | **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 5–10 mL |
 | **確認** | 藥物擴散包圍 notch 內神經                     |
 
-**併發症**
+**併發症 Complications**
 
 - 藥物誤入肩胛上動脈
 - 氣胸（針尖太深）
@@ -172,13 +172,13 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 **適應症 Indications**
 
 - 肩關節手術（rotator cuff repair、肩關節置換、肩關節脫臼復位）
-- 肱骨近端骨折
+- 肱骨（humerus）近端骨折
 - 肩關節疼痛管理
 
 **解剖 Anatomy**
 
 - C5–C6（有時 C4、C7）神經根
-- 位於前斜角肌與中斜角肌間溝內（interscalene groove）
+- 位於前斜角肌（anterior scalene）與中斜角肌（middle scalene）間溝內（interscalene groove）
 - 肩胛上神經（C5–C6）、腋神經（C5–C6）同由 ISB 涵蓋
 
 **體表定位 Landmarks**
@@ -191,16 +191,16 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                                      |
-| -------- | --------------------------------------------------------- |
-| **探頭** | 高頻線性 10–15 MHz                                        |
-| **位置** | 環狀軟骨水平（C6），SCM 後方                              |
-| **目標** | 前斜角肌與中斜角肌間，可見 C5–C6 神經根（圆形低回音結構） |
-| **進針** | 後外側向內進針（lateral-to-medial），平面內               |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 15–20 mL            |
-| **確認** | 藥物擴散包圍神經根，fill 位於兩斜角肌間                   |
+| 項目     | 內容                                                                                            |
+| -------- | ----------------------------------------------------------------------------------------------- |
+| **探頭** | 高頻線性 10–15 MHz                                                                              |
+| **位置** | 環狀軟骨水平（C6），SCM 後方                                                                    |
+| **目標** | 前斜角肌（anterior scalene）與中斜角肌（middle scalene）間，可見 C5–C6 神經根（圆形低回音結構） |
+| **進針** | 後外側向內進針（lateral-to-medial），in-plane                                                   |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 15–20 mL                                                  |
+| **確認** | 藥物擴散包圍神經根，fill 位於兩斜角肌間                                                         |
 
-**常用配方**
+**常用配方 Common Regimens**
 
 - 0.25% Bupivacaine 20 mL
 - 0.5% Ropivacaine 15–20 mL
@@ -227,36 +227,36 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 - 前臂及手部手術（"spinal of the arm"）
 - 肘部以下手術
-- 肱骨中遠端骨折
+- 肱骨（humerus）中遠端骨折
 - 手部外傷
 
 **解剖 Anatomy**
 
 - 臂神經叢的上、中、下幹（trunks/divisions）
-- 位於鎖骨上方，第一肋骨外側
-- 與鎖骨下動脈緊鄰（神經在動脈外上方）
+- 位於鎖骨（clavicle）上方，第一肋骨（rib）外側
+- 與鎖骨（clavicle）下動脈緊鄰（神經在動脈外上方）
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                           |
-| -------- | ---------------------------------------------- |
-| **探頭** | 高頻線性 10–15 MHz                             |
-| **位置** | 鎖骨上方窝，鎖骨中點上方                       |
-| **目標** | 鎖骨下動脈外上方，第一肋骨表面                 |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內    |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–25 mL |
-| **確認** | 藥物擴散包圍動脈外上方的神經束（呈"葡萄串"狀） |
+| 項目     | 內容                                              |
+| -------- | ------------------------------------------------- |
+| **探頭** | 高頻線性 10–15 MHz                                |
+| **位置** | 鎖骨（clavicle）上方窝，鎖骨（clavicle）中點上方  |
+| **目標** | 鎖骨（clavicle）下動脈外上方，第一肋骨（rib）表面 |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane     |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–25 mL    |
+| **確認** | 藥物擴散包圍動脈外上方的神經束（呈"葡萄串"狀）    |
 
-**關鍵解剖**
+**關鍵解剖 Key Anatomy**
 
-- 鎖骨下動脈為主要標記
-- 第一肋骨為深層標記
-- 胸膜頂位於第一肋骨內側（氣胸風險）
+- 鎖骨（clavicle）下動脈為主要標記
+- 第一肋骨（rib）為深層標記
+- 胸膜頂位於第一肋骨（rib）內側（氣胸風險）
 
 **併發症 Complications**
 
 - **氣胸**：最重要併發症，因針尖接近胸膜頂
-- 藥物誤入鎖骨下動脈
+- 藥物誤入鎖骨（clavicle）下動脈
 - 膈神經阻斷（30–50%）
 - 臂叢神經損傷
 - 血腫
@@ -273,7 +273,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 **解剖 Anatomy**
 
 - 臂神經叢的三束（lateral, medial, posterior cords）
-- 位於鎖骨下，胸大肌深面
+- 位於鎖骨（clavicle）下，胸大肌（pectoralis major）深面
 - 腋動脈為主要標記
 
 **超音波引導 Ultrasound-guided**
@@ -281,13 +281,13 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | 項目     | 內容                                             |
 | -------- | ------------------------------------------------ |
 | **探頭** | 高頻線性 10–15 MHz                               |
-| **位置** | 鎖骨下方，coracoid process 水平                  |
+| **位置** | 鎖骨（clavicle）下方，coracoid process 水平      |
 | **目標** | 腋動脈周圍（三束呈倒三角形包圍動脈）             |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內      |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane    |
 | **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL   |
 | **確認** | 藥物擴散包圍腋動脈，呈"甜甜圈"徵象（donut sign） |
 
-**併發症**
+**併發症 Complications**
 
 - 氣胸（較 supraclavicular 低但仍有可能）
 - 藥物誤入腋動脈
@@ -299,7 +299,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 **適應症 Indications**
 
 - 前臂及手部手術
-- 桓骨/尺骨骨折
+- 橈骨（radius）/尺骨（ulna）骨折
 - 手部外傷
 - 門診手術首選（安全性最高）
 
@@ -316,10 +316,10 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **探頭** | 高頻線性 10–15 MHz                                   |
 | **位置** | 腋窩，腋動脈最高搏動點                               |
 | **目標** | 腋動脈周圍四個象限內的神經                           |
-| **進針** | 多點注射（multi-injection），平面內                  |
+| **進針** | 多點注射（multi-injection），in-plane                |
 | **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL total |
 
-**神經分布**
+**神經分布 Nerve Distribution**
 
 | 神經         | 位置            | 支配                 |
 | ------------ | --------------- | -------------------- |
@@ -328,9 +328,9 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **橈神經**   | 腋動脈後方      | 伸肌群               |
 | **肌皮神經** | 腋鞘外，喙突旁  | 前臂外側皮膚         |
 
-**注意**：肌皮神經常位於腋鞘外，需單獨阻斷
+**注意 Notes**：肌皮神經常位於腋鞘外，需單獨阻斷
 
-**併發症**
+**併發症 Complications**
 
 - 藥物誤入腋動脈/腋靜脈
 - 血腫
@@ -344,17 +344,17 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 **適應症 Indications**
 
 - 乳房手術（mastectomy、lumpectomy）
-- 肋骨骨折
+- 肋骨（rib）骨折
 - 胸腔手術（VATS、thoracotomy）
 - 帶狀疱疹疼痛
 - 腹壁手術（單側）
 
 **解剖 Anatomy**
 
-- 椎體兩側的楔形空間（paravertebral space）
+- 椎體（vertebral body）兩側的楔形空間（paravertebral space）
 - 前界：壁層胸膜
 - 後界：肋間膜（ costo-transverse ligament）
-- 內側界：椎體及椎間盤
+- 內側界：椎體（vertebral body）及椎間盤（intervertebral disc）
 - 外側界：肋間後膜
 - 包含：脊神經前支、後支、交通支、交感神經鏈、肋間動靜脈
 
@@ -363,13 +363,13 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | 項目     | 內容                                                              |
 | -------- | ----------------------------------------------------------------- |
 | **探頭** | 高頻線性 10–15 MHz（深部可用低頻曲面）                            |
-| **位置** | 後正中線旁 2–3 cm，目標肋骨水平                                   |
-| **目標** | 肋橫突韌帶深面，paravertebral space                               |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內                       |
+| **位置** | 後正中線旁 2–3 cm，目標肋骨（rib）水平                            |
+| **目標** | 肋橫突（transverse process）韌帶深面，paravertebral space         |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane                     |
 | **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 3–5 mL/level                |
 | **確認** | 藥物擴散使胸膜下移（lifting sign），可見 paravertebral space 擴大 |
 
-**技術要點**
+**技術要點 Technical Tips**
 
 - 穿過 costotransverse ligament 後有"pop"感
 - 回抽確認無血液/腦脊液
@@ -387,14 +387,14 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **適應症 Indications**
 
-- 肋骨骨折
+- 肋骨（rib）骨折
 - 胸腔手術後止痛
 - 帶狀疱疹
 - 胸壁手術
 
 **解剖 Anatomy**
 
-- 肋間神經（T1–T11）位於肋骨下緣的肋溝內（costal groove）
+- 肋間神經（T1–T11）位於肋骨（rib）下緣的肋溝內（costal groove）
 - 在肋間內肌與肋間最內肌之間
 - 伴行肋間動靜脈
 
@@ -403,19 +403,19 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | 項目     | 內容                                               |
 | -------- | -------------------------------------------------- |
 | **探頭** | 高頻線性 10–15 MHz                                 |
-| **位置** | 目標肋骨水平，後外側                               |
-| **目標** | 肋骨下緣深面（costal groove 內）                   |
-| **進針** | 從內側向外側（medial-to-lateral），平面內          |
+| **位置** | 目標肋骨（rib）水平，後外側                        |
+| **目標** | 肋骨（rib）下緣深面（costal groove 內）            |
+| **進針** | 從內側向外側（medial-to-lateral），in-plane        |
 | **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 3–5 mL/level |
-| **確認** | 藥物擴散於肋骨下緣深面                             |
+| **確認** | 藥物擴散於肋骨（rib）下緣深面                      |
 
-**注意**
+**注意 Notes**
 
 - 每次最多阻斷 3–4 個肋間（藥物毒性風險）
 - 單側使用（避免雙側阻斷影響呼吸功能）
 - 藥物吸收快速（肋間血管豐富）
 
-**併發症**
+**併發症 Complications**
 
 - 氣胸
 - 血管內注射（肋間動脈/靜脈）
@@ -437,27 +437,27 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 - 胸外側神經（lateral pectoral nerve, C5–C7）
 - 胸內側神經（medial pectoral nerve, C8–T1）
-- 位於胸大肌深面，胸小肌淺面
+- 位於胸大肌（pectoralis major）深面，胸小肌（pectoralis minor）淺面
 
 **PECs II（加做）**
 
 - 胸外側神經（lateral pectoral nerve）
 - 肋間臂神經（intercostobrachial nerve, T2）
-- 位於胸小肌深面，前鋸肌淺面
+- 位於胸小肌（pectoralis minor）深面，前鋸肌（serratus anterior）淺面
 
 **超音波引導 Ultrasound-guided**
 
-| 項目                | 內容                                           |
-| ------------------- | ---------------------------------------------- |
-| **探頭**            | 高頻線性 10–15 MHz                             |
-| **位置（PECs I）**  | 鎖骨下方，胸大肌與胸小肌之間                   |
-| **目標（PECs I）**  | 胸大肌深面、胸小肌淺面                         |
-| **藥物（PECs I）**  | 0.25% Bupivacaine 或 0.5% Ropivacaine 10–15 mL |
-| **位置（PECs II）** | 胸小肌深面，前鋸肌淺面                         |
-| **目標（PECs II）** | 胸小肌與前鋸肌之間                             |
-| **藥物（PECs II）** | 0.25% Bupivacaine 或 0.5% Ropivacaine 10–15 mL |
+| 項目                | 內容                                                                             |
+| ------------------- | -------------------------------------------------------------------------------- |
+| **探頭**            | 高頻線性 10–15 MHz                                                               |
+| **位置（PECs I）**  | 鎖骨（clavicle）下方，胸大肌（pectoralis major）與胸小肌（pectoralis minor）之間 |
+| **目標（PECs I）**  | 胸大肌（pectoralis major）深面、胸小肌（pectoralis minor）淺面                   |
+| **藥物（PECs I）**  | 0.25% Bupivacaine 或 0.5% Ropivacaine 10–15 mL                                   |
+| **位置（PECs II）** | 胸小肌（pectoralis minor）深面，前鋸肌（serratus anterior）淺面                  |
+| **目標（PECs II）** | 胸小肌（pectoralis minor）與前鋸肌（serratus anterior）之間                      |
+| **藥物（PECs II）** | 0.25% Bupivacaine 或 0.5% Ropivacaine 10–15 mL                                   |
 
-**併發症**
+**併發症 Complications**
 
 - 血管內注射
 - 氣胸（罕見）
@@ -467,7 +467,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **適應症 Indications**
 
-- 肋骨骨折
+- 肋骨（rib）骨折
 - 連枷胸（flail chest）
 - 乳房手術
 - 胸腔手術（VATS）
@@ -477,21 +477,21 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 **解剖 Anatomy**
 
 - 前鋸肌（serratus anterior）位於胸壁外側
-- 深面為肋骨與肋間肌
-- 肋間神經的外側皮支（lateral cutaneous branch）穿過前鋸肌
+- 深面為肋骨（rib）與肋間肌
+- 肋間神經的外側皮支（lateral cutaneous branch）穿過前鋸肌（serratus anterior）
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                            |
-| -------- | ----------------------------------------------- |
-| **探頭** | 高頻線性 10–15 MHz                              |
-| **位置** | 腋中線，第 4–5 肋骨水平                         |
-| **目標** | 前鋸肌深面（deep plane）或淺面（shallow plane） |
-| **進針** | 從前向後（anterior-to-posterior），平面內       |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL  |
-| **確認** | 藥物擴散使前鋸肌與肋間肌分離                    |
+| 項目     | 內容                                                                 |
+| -------- | -------------------------------------------------------------------- |
+| **探頭** | 高頻線性 10–15 MHz                                                   |
+| **位置** | 腋中線，第 4–5 肋骨（rib）水平                                       |
+| **目標** | 前鋸肌（serratus anterior）深面（deep plane）或淺面（shallow plane） |
+| **進針** | 從前向後（anterior-to-posterior），in-plane                          |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL                       |
+| **確認** | 藥物擴散使前鋸肌（serratus anterior）與肋間肌分離                    |
 
-**併發症**
+**併發症 Complications**
 
 - 氣胸
 - 血管內注射
@@ -501,7 +501,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **適應症 Indications**
 
-- 肋骨骨折
+- 肋骨（rib）骨折
 - 連枷胸
 - 胸腔手術
 - 帶狀疱疹
@@ -509,22 +509,22 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **解剖 Anatomy**
 
-- 背伸肌（erector spinae）位於胸椎旁
-- 深面為肋骨與橫突
+- 背伸肌（erector spinae）（erector spinae）位於胸椎旁
+- 深面為肋骨（rib）與橫突（transverse process）
 - 藥物注入 ESP 後可沿筋膜平面擴散至多節段
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                                 |
-| -------- | ---------------------------------------------------- |
-| **探頭** | 低頻曲面 2–5 MHz（深部）或高頻線性 10–15 MHz（淺部） |
-| **位置** | 後正中線旁 2–3 cm，T5–T7 水平                        |
-| **目標** | 背伸肌深面、橫突表面                                 |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內          |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL       |
-| **確認** | 藥物擴散使背伸肌與橫突分離                           |
+| 項目     | 內容                                                               |
+| -------- | ------------------------------------------------------------------ |
+| **探頭** | 低頻曲面 2–5 MHz（深部）或高頻線性 10–15 MHz（淺部）               |
+| **位置** | 後正中線旁 2–3 cm，T5–T7 水平                                      |
+| **目標** | 背伸肌（erector spinae）深面、橫突（transverse process）表面       |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane                      |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL                     |
+| **確認** | 藥物擴散使背伸肌（erector spinae）與橫突（transverse process）分離 |
 
-**併發症**
+**併發症 Complications**
 
 - 氣胸（針尖過深）
 - 蛛網膜下腔注射（罕見）
@@ -533,7 +533,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 ## 4. 腹壁 Abdominal Wall
 
-### 4.1 腹橫肌平面阻斷 Transversus Abdominis Plane Block (TAP)
+### 4.1 腹橫肌（transversus abdominis）平面阻斷 Transversus Abdominis Plane Block (TAP)
 
 **適應症 Indications**
 
@@ -544,22 +544,22 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **解剖 Anatomy**
 
-- 腹內斜肌（internal oblique）與腹橫肌（transversus abdominis）之間的平面
+- 腹內斜肌（internal oblique）（internal oblique）與腹橫肌（transversus abdominis）（transversus abdominis）之間的平面
 - 肋間神經的前支（T7–L1）走行於此平面
-- 兩層肌肉在髂前上棘與肋骨之間的三角（Petit's triangle）
+- 兩層肌肉在髂前上棘與肋骨（rib）之間的三角（Petit's triangle）
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                             |
-| -------- | ------------------------------------------------ |
-| **探頭** | 高頻線性 10–15 MHz                               |
-| **位置** | 髂前上棘與肋骨之間（腋中線）                     |
-| **目標** | 腹內斜肌與腹橫肌之間                             |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內      |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20 mL/side |
-| **確認** | 藥物擴散使腹內斜肌與腹橫肌分離，呈"三明治"徵象   |
+| 項目     | 內容                                                                                        |
+| -------- | ------------------------------------------------------------------------------------------- |
+| **探頭** | 高頻線性 10–15 MHz                                                                          |
+| **位置** | 髂前上棘與肋骨（rib）之間（腋中線）                                                         |
+| **目標** | 腹內斜肌（internal oblique）與腹橫肌（transversus abdominis）之間                           |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane                                               |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20 mL/side                                            |
+| **確認** | 藥物擴散使腹內斜肌（internal oblique）與腹橫肌（transversus abdominis）分離，呈"三明治"徵象 |
 
-**併發症**
+**併發症 Complications**
 
 - 腹腔內穿刺（腸穿孔，罕見）
 - 肝/脾穿刺（上腹阻斷時）
@@ -570,29 +570,29 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **適應症 Indications**
 
-- 腹直肌切口疼痛
+- 腹直肌（rectus abdominis）切口疼痛
 - 臍部手術
 - 腹壁中線手術
 - 腹壁疼痛
 
 **解剖 Anatomy**
 
-- 腹直肌鞘由腹外斜肌、腹內斜肌、腹橫肌的腱膜組成
+- 腹直肌（rectus abdominis）鞘由腹外斜肌（external oblique）、腹內斜肌（internal oblique）、腹橫肌（transversus abdominis）的腱膜組成
 - 前鞘與後鞘在臍下融合
 - 第 9–12 肋間神經（T9–T12）及第一腰神經（L1）的前支走行於鞘內
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                                |
-| -------- | --------------------------------------------------- |
-| **探頭** | 高頻線性 10–15 MHz                                  |
-| **位置** | 腹直肌旁，臍水平或目標肋間水平                      |
-| **目標** | 腹直肌與後鞘之間（posterior rectus sheath plane）   |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內         |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 10–15 mL/side |
-| **確認** | 藥物擴散使腹直肌與後鞘分離                          |
+| 項目     | 內容                                                                  |
+| -------- | --------------------------------------------------------------------- |
+| **探頭** | 高頻線性 10–15 MHz                                                    |
+| **位置** | 腹直肌（rectus abdominis）旁，臍水平或目標肋間水平                    |
+| **目標** | 腹直肌（rectus abdominis）與後鞘之間（posterior rectus sheath plane） |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane                         |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 10–15 mL/side                   |
+| **確認** | 藥物擴散使腹直肌（rectus abdominis）與後鞘分離                        |
 
-**併發症**
+**併發症 Complications**
 
 - 腹壁上動脈穿刺
 - 腹腔內穿刺（罕見）
@@ -604,28 +604,28 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 - 腹股溝疝氣修補術
 - 陰囊手術
-- 髂骨取骨術
+- 髂骨（ilium）取骨術
 - 下腹壁手術
 
 **解剖 Anatomy**
 
 - 髂腹股溝神經（ilioinguinal nerve, L1）
 - 髂腹下神經（iliohypogastric nerve, L1）
-- 從外側腰方肌穿出，走行於腹內斜肌與腹橫肌之間
-- 穿過腹內斜肌至腹外斜肌深面
+- 從外側腰方肌（quadratus lumborum）穿出，走行於腹內斜肌（internal oblique）與腹橫肌（transversus abdominis）之間
+- 穿過腹內斜肌（internal oblique）至腹外斜肌（external oblique）深面
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                            |
-| -------- | ----------------------------------------------- |
-| **探頭** | 高頻線性 10–15 MHz                              |
-| **位置** | 髂前上棘內上方（anterior superior iliac spine） |
-| **目標** | 腹內斜肌與腹橫肌之間（TAP plane 內側）          |
-| **進針** | 從內側向外進針（medial-to-lateral），平面內     |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 10–15 mL  |
-| **確認** | 藥物擴散於腹內斜肌與腹橫肌之間，可見神經結構    |
+| 項目     | 內容                                                                                      |
+| -------- | ----------------------------------------------------------------------------------------- |
+| **探頭** | 高頻線性 10–15 MHz                                                                        |
+| **位置** | 髂前上棘內上方（anterior superior iliac spine）                                           |
+| **目標** | 腹內斜肌（internal oblique）與腹橫肌（transversus abdominis）之間（TAP plane 內側）       |
+| **進針** | 從內側向外進針（medial-to-lateral），in-plane                                             |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 10–15 mL                                            |
+| **確認** | 藥物擴散於腹內斜肌（internal oblique）與腹橫肌（transversus abdominis）之間，可見神經結構 |
 
-**併發症**
+**併發症 Complications**
 
 - 髂血管穿刺
 - 腹腔內穿刺（罕見）
@@ -638,7 +638,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **適應症 Indications**
 
-- 股骨骨折
+- 股骨（femur）骨折
 - 膝關節手術
 - 大腿前側手術
 - 股動脈導管
@@ -655,12 +655,12 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | -------- | ---------------------------------------------- |
 | **探頭** | 高頻線性 10–15 MHz                             |
 | **位置** | 腹股溝韌帶下方                                 |
-| **目標** | 股動脈外側，髂腰肌與股鞘之間                   |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內    |
+| **目標** | 股動脈外側，髂腰肌（iliopsoas）與股鞘之間      |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane  |
 | **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 15–20 mL |
 | **確認** | 藥物擴散包圍股神經（位於股動脈外側）           |
 
-**併發症**
+**併發症 Complications**
 
 - 股動脈穿刺
 - 藥物誤入股動脈
@@ -671,14 +671,14 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **適應症 Indications**
 
-- 股骨骨折（作為股神經阻斷的替代，操作更簡單）
+- 股骨（femur）骨折（作為股神經阻斷的替代，操作更簡單）
 - 髖關節骨折
 - 大腿疼痛
 
 **解剖 Anatomy**
 
 - 筋膜髂肌間隙（fascia iliaca compartment）
-- 由髂筋膜（iliac fascia）與髂腰肌筋膜包圍
+- 由髂筋膜（iliac fascia）與髂腰肌（iliopsoas）筋膜包圍
 - 股神經、股外側皮神經、閉孔神經均位於此間隙
 
 **超音波引導 Ultrasound-guided**
@@ -688,11 +688,11 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **探頭** | 高頻線性 10–15 MHz                             |
 | **位置** | 腹股溝韌帶下方，股動脈外側                     |
 | **目標** | 髂筋膜深面                                     |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內    |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane  |
 | **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL |
-| **確認** | 藥物擴散使髂筋膜抬離髂腰肌                     |
+| **確認** | 藥物擴散使髂筋膜抬離髂腰肌（iliopsoas）        |
 
-**併發症**
+**併發症 Complications**
 
 - 股動脈穿刺
 - 藥物誤入血管
@@ -704,31 +704,31 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 - 膝關節手術（TKA、ACL 重建）
 - 膝關節疼痛管理
-- 股骨遠端骨折
+- 股骨（femur）遠端骨折
 
 **解剖 Anatomy**
 
 - 收肌管（Hunter's canal / adductor canal）
 - 位於大腿中段內側
-- 前界：股薄肌（sartorius）
-- 後界：內收大肌（adductor magnus）
-- 外界：股內側肌（vastus medialis）
+- 前界：股薄肌（sartorius）（sartorius）
+- 後界：內收大肌（adductor magnus）（adductor magnus）
+- 外界：股內側肌（vastus medialis）（vastus medialis）
 - 內含：股動脈、隱神經（saphenous nerve）
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                           |
-| -------- | ---------------------------------------------- |
-| **探頭** | 高頻線性 10–15 MHz                             |
-| **位置** | 大腿中段內側，股內側肌與股薄肌之間             |
-| **目標** | 股動脈周圍（收肌管內）                         |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內    |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 15–20 mL |
-| **確認** | 藥物擴散包圍股動脈（位於管內）                 |
+| 項目     | 內容                                                               |
+| -------- | ------------------------------------------------------------------ |
+| **探頭** | 高頻線性 10–15 MHz                                                 |
+| **位置** | 大腿中段內側，股內側肌（vastus medialis）與股薄肌（sartorius）之間 |
+| **目標** | 股動脈周圍（收肌管內）                                             |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane                      |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 15–20 mL                     |
+| **確認** | 藥物擴散包圍股動脈（位於管內）                                     |
 
 **優點**：保留股四頭肌力量（與股神經阻斷相比）
 
-**併發症**
+**併發症 Complications**
 
 - 股動脈穿刺
 - 藥物誤入血管
@@ -746,34 +746,34 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **解剖 Anatomy**
 
-- 坐骨神經（L4–S3）
-- 經梨狀肌下孔（greater sciatic foramen）離開骨盆
-- 在梨狀肌下方穿出
+- 坐骨（ischium）神經（L4–S3）
+- 經梨狀肌（piriformis）下孔（greater sciatic foramen）離開骨盆
+- 在梨狀肌（piriformis）下方穿出
 - 在大腿後側走行，於膕窩上方分為脛神經與腓總神經
 
-**阻斷位置**
+**阻斷位置 Block Locations**
 
-| 位置                       | 描述                     | 適應症        |
-| -------------------------- | ------------------------ | ------------- |
-| **Gluteal (infragluteal)** | 臀大肌下方，臀橫紋水平   | 下肢手術      |
-| **Subgluteal**             | 臀大肌深面，坐骨結節旁   | 下肢手術      |
-| **Supragluteal**           | 臀大肌淺面，坐骨結節上方 | 較少使用      |
-| **Popliteal**              | 膕窩上方                 | 足部/腳踝手術 |
+| 位置                       | 描述                                                   | 適應症        |
+| -------------------------- | ------------------------------------------------------ | ------------- |
+| **Gluteal (infragluteal)** | 臀大肌（gluteus maximus）下方，臀橫紋水平              | 下肢手術      |
+| **Subgluteal**             | 臀大肌（gluteus maximus）深面，坐骨（ischium）結節旁   | 下肢手術      |
+| **Supragluteal**           | 臀大肌（gluteus maximus）淺面，坐骨（ischium）結節上方 | 較少使用      |
+| **Popliteal**              | 膕窩上方                                               | 足部/腳踝手術 |
 
 **超音波引導 Ultrasound-guided（Subgluteal approach）**
 
-| 項目     | 內容                                           |
-| -------- | ---------------------------------------------- |
-| **探頭** | 低頻曲面 2–5 MHz（深部）或高頻線性 10–15 MHz   |
-| **位置** | 坐骨結節外側，臀大肌深面                       |
-| **目標** | 坐骨神經（呈橢圓形，低回音束狀結構）           |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內    |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL |
-| **確認** | 藥物擴散包圍坐骨神經                           |
+| 項目     | 內容                                                   |
+| -------- | ------------------------------------------------------ |
+| **探頭** | 低頻曲面 2–5 MHz（深部）或高頻線性 10–15 MHz           |
+| **位置** | 坐骨（ischium）結節外側，臀大肌（gluteus maximus）深面 |
+| **目標** | 坐骨（ischium）神經（呈橢圓形，低回音束狀結構）        |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane          |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL         |
+| **確認** | 藥物擴散包圍坐骨（ischium）神經                        |
 
-**併發症**
+**併發症 Complications**
 
-- 坐骨神經損傷
+- 坐骨（ischium）神經損傷
 - 血管內注射
 - 局部血腫
 
@@ -787,16 +787,16 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **超音波引導 Ultrasound-guided**
 
-| 項目     | 內容                                             |
-| -------- | ------------------------------------------------ |
-| **探頭** | 高頻線性 10–15 MHz                               |
-| **位置** | 膕窩上方，膕動脈搏動外側                         |
-| **目標** | 膕動脈外上方，坐骨神經分叉處（脛神經與腓總神經） |
-| **進針** | 從外側向內進針（lateral-to-medial），平面內      |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–25 mL   |
-| **確認** | 藥物擴散包圍脛神經與腓總神經                     |
+| 項目     | 內容                                                        |
+| -------- | ----------------------------------------------------------- |
+| **探頭** | 高頻線性 10–15 MHz                                          |
+| **位置** | 膕窩上方，膕動脈搏動外側                                    |
+| **目標** | 膕動脈外上方，坐骨（ischium）神經分叉處（脛神經與腓總神經） |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane               |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–25 mL              |
+| **確認** | 藥物擴散包圍脛神經與腓總神經                                |
 
-**併發症**
+**併發症 Complications**
 
 - 膕動脈穿刺
 - 藥物誤入血管
@@ -813,15 +813,15 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **解剖 Anatomy**
 
-| 神經                                 | 位置                     | 支配         |
-| ------------------------------------ | ------------------------ | ------------ |
-| **脛神經（Tibial）**                 | 踝關節後方，脛後動脈內側 | 足底         |
-| **腓總神經（Deep peroneal）**        | 踝關節前方，脛前動脈外側 | 第一趾間皮膚 |
-| **腓淺神經（Superficial peroneal）** | 外踝上方，腓骨前方       | 足背         |
-| **隱神經（Saphenous）**              | 內踝前方，大隱靜脈旁     | 足內側       |
-| **腓腸神經（Sural）**                | 外踝下方，小隱靜脈旁     | 足外側       |
+| 神經                                 | 位置                         | 支配         |
+| ------------------------------------ | ---------------------------- | ------------ |
+| **脛神經（Tibial）**                 | 踝關節後方，脛後動脈內側     | 足底         |
+| **腓總神經（Deep peroneal）**        | 踝關節前方，脛前動脈外側     | 第一趾間皮膚 |
+| **腓淺神經（Superficial peroneal）** | 外踝上方，腓骨（fibula）前方 | 足背         |
+| **隱神經（Saphenous）**              | 內踝前方，大隱靜脈旁         | 足內側       |
+| **腓腸神經（Sural）**                | 外踝下方，小隱靜脈旁         | 足外側       |
 
-**注射方法**
+**注射方法 Injection Technique**
 
 | 神經         | 進針位置                 | 藥物量 |
 | ------------ | ------------------------ | ------ |
@@ -833,7 +833,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **總量**：0.25% Bupivacaine 或 0.5% Ropivacaine 15–25 mL total
 
-**併發症**
+**併發症 Complications**
 
 - 藥物誤入脛後/脛前動脈
 - 局部血腫
@@ -876,7 +876,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **藥物** | 0.25% Bupivacaine 15–25 mL         |
 | **確認** | 藥物擴散於骶管內                   |
 
-**併發症**
+**併發症 Complications**
 
 - 硬膜外腔/蛛網膜下腔擴散
 - 藥物誤入骶動脈
@@ -894,29 +894,29 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **解剖 Anatomy**
 
-- 陰部神經（S2–S4）經梨狀肌下孔離開骨盆
-- 繞坐骨棘（ischial spine）後進入 Alcock's canal
+- 陰部神經（S2–S4）經梨狀肌（piriformis）下孔離開骨盆
+- 繞坐骨（ischium）棘（ischial spine）後進入 Alcock's canal
 - 支配會陰、外生殖器、肛門
 
 **體表定位 Landmarks**
 
-| 標記           | 描述                |
-| -------------- | ------------------- |
-| **坐骨棘**     | 陰道/直腸指診可觸及 |
-| **骶結節韌帶** | 從骶骨至坐骨結節    |
+| 標記                  | 描述                                  |
+| --------------------- | ------------------------------------- |
+| **坐骨（ischium）棘** | 陰道/直腸指診可觸及                   |
+| **骶結節韌帶**        | 從骶骨（sacrum）至坐骨（ischium）結節 |
 
-**經陰道/經直腸注射**
+**經陰道/經直腸注射 Transvaginal/Transrectal Injection**
 
-| 項目     | 內容                             |
-| -------- | -------------------------------- |
-| **進針** | 經陰道後穹窿或經直腸，指向坐骨棘 |
-| **目標** | 坐骨棘上方，骶結節韌帶深面       |
-| **藥物** | 0.25% Bupivacaine 10–15 mL/side  |
-| **確認** | 回抽無血液                       |
+| 項目     | 內容                                        |
+| -------- | ------------------------------------------- |
+| **進針** | 經陰道後穹窿或經直腸，指向坐骨（ischium）棘 |
+| **目標** | 坐骨（ischium）棘上方，骶結節韌帶深面       |
+| **藥物** | 0.25% Bupivacaine 10–15 mL/side             |
+| **確認** | 回抽無血液                                  |
 
-**併發症**
+**併發症 Complications**
 
-- 坐骨神經損傷
+- 坐骨（ischium）神經損傷
 - 血管內注射
 - 局部血腫
 
@@ -939,7 +939,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 腰段：L1–L4（腰椎棘突較水平）
 - 骶段：骶管
 
-**穿刺位置**
+**穿刺位置 Puncture Site**
 
 | 位置     | 棘突方向         | 穿刺角度   |
 | -------- | ---------------- | ---------- |
@@ -947,7 +947,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **腰段** | 較水平（15–30°） | 較垂直     |
 | **骶段** | 骶裂孔           | 向頭側     |
 
-**穿刺技術**
+**穿刺技術 Puncture Technique**
 
 | 項目             | 內容                                        |
 | ---------------- | ------------------------------------------- |
@@ -955,7 +955,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **阻力消失**     | Loss of resistance（LOR）至空氣或生理食鹽水 |
 | **Confirmation** | 回抽無血液/腦脊液，負壓試驗陽性             |
 
-**常用藥物**
+**常用藥物 Common Drugs**
 
 | 藥物            | 濃度              | 起始時間  | 持續時間   |
 | --------------- | ----------------- | --------- | ---------- |
@@ -964,7 +964,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **Lidocaine**   | 2%                | 5–10 min  | 40–60 min  |
 | **Ropivacaine** | 0.5%              | 15–20 min | 1.5–2.5 hr |
 
-**併發症**
+**併發症 Complications**
 
 - 硬膜穿破後頭痛（post-dural puncture headache, PDPH）
 - 脊髓或神經根損傷
@@ -989,7 +989,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 含腦脊液（CSF）
 - 脊髓終止於 L1–L2（成人），故腰椎穿刺選 L3–L4 或 L4–L5
 
-**穿刺位置**
+**穿刺位置 Puncture Site**
 
 | 項目     | 內容                   |
 | -------- | ---------------------- |
@@ -997,7 +997,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **方向** | 正中法或旁正中法       |
 | **確認** | 腦脊液流出（清晰液體） |
 
-**常用藥物**
+**常用藥物 Common Drugs**
 
 | 藥物                         | 濃度/類型 | 劑量      | 起始時間  | 持續時間   |
 | ---------------------------- | --------- | --------- | --------- | ---------- |
@@ -1006,7 +1006,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **Lidocaine (hyperbaric)**   | 5%        | 50–100 mg | 1–2 min   | 45–60 min  |
 | **Tetracaine (hyperbaric)**  | 1%        | 5–10 mg   | 5–10 min  | 1.5–2 hr   |
 
-**併發症**
+**併發症 Complications**
 
 - 低血壓（最常見，交感神經阻斷）
 - 心搏過緩（迷走神經反射）
@@ -1024,7 +1024,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 產科鎮痛（early analgesia + continuous infusion）
 - 下腹部手術
 
-**技術**
+**技術 Technique**
 
 1. 先行硬膜外穿刺（loss of resistance 確認）
 2. 經硬膜外針插入腰椎穿刺針
@@ -1032,12 +1032,12 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 4. 退出腰椎穿刺針
 5. 留置硬膜外導管
 
-**常用配方**
+**常用配方 Common Regimens**
 
 - Spinal：0.5% hyperbaric Bupivacaine 7.5–12.5 mg + Fentanyl 10–25 mcg
 - Epidural：0.25% Bupivacaine or 0.2% Ropivacaine 3–5 mL initial dose，後 5–8 mL/hr infusion
 
-**併發症**
+**併發症 Complications**
 
 - 硬膜穿破後頭痛（PDPH）
 - 藥物誤入血管
@@ -1086,10 +1086,10 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 2. **Supraclavicular vs ISB**：supraclavicular 阻斷更完全且起效快，但氣胸風險較高
 3. **收肌管 vs 股神經**：收肌管阻斷保留股四頭肌力量，適合門診 TKA
 4. **TAP vs PVB**：PVB 提供更好的胸段止痛，TAP 適合下腹壁
-5. **臀部坐骨神經**：subgluteal approach 在超音波下最易辨認
+5. **臀部坐骨（ischium）神經**：subgluteal approach 在超音波下最易辨認
 6. **踝神經阻斷**：最後選擇，但若超音波導引得當可提供完全足部麻醉
 7. **CSE**：適合需要快速起效 + 長期止痛的剖腹產
-8. **ESP block**：新興技術，操作簡單且安全，適合多節段肋骨骨折
+8. **ESP block**：新興技術，操作簡單且安全，適合多節段肋骨（rib）骨折
 
 ## 參考文獻 References
 

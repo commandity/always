@@ -8,6 +8,7 @@ function taiwanToday() {
 }
 
 const patient = ref({ id: "", name: "", dob: "", refPhysician: "" });
+const patientOpen = ref(true);
 const examDate = ref(taiwanToday());
 
 // ── Gland measurements ───────────────────────────────────────────
@@ -352,10 +353,27 @@ function reset() {
 
     <!-- ======================== SECTION: Patient ======================== -->
     <div class="tr-section">
-      <div class="section-header">
+      <div
+        class="section-header section-header-row collapsible"
+        @click="patientOpen = !patientOpen"
+      >
         <span class="section-label">Patient Info（病患資料）</span>
+        <svg
+          class="collapse-chevron"
+          :class="{ open: patientOpen }"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
       </div>
-      <div class="patient-grid">
+      <div class="patient-grid" v-show="patientOpen">
         <label class="field">
           <span class="field-label">MRN（病歷號）</span>
           <input v-model="patient.id" placeholder="e.g. 123456" />
@@ -792,6 +810,19 @@ function reset() {
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   margin-bottom: 0.75rem;
+}
+.section-header.collapsible {
+  cursor: pointer;
+  user-select: none;
+}
+.collapse-chevron {
+  color: var(--vp-c-text-3);
+  transition: transform 0.2s ease;
+  transform: rotate(-90deg);
+  flex: none;
+}
+.collapse-chevron.open {
+  transform: rotate(0deg);
 }
 .section-header-row {
   display: flex;

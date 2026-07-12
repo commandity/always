@@ -26,6 +26,7 @@ function taiwanToday() {
 const patient = ref({
   name: "",
   mrn: "",
+  refPhysician: "",
   age: "",
   sex: "",
   bedNo: "",
@@ -35,6 +36,7 @@ const patient = ref({
 });
 const examDate = ref(taiwanToday());
 const examTime = ref("");
+const patientOpen = ref(true);
 
 // ── Vessel data models ───────────────────────────────────────────
 // Transcranial vessels: PS / ED / RI / MV (mean velocity)
@@ -428,6 +430,10 @@ function generateReport() {
   );
   if (patient.value.name) lines.push(`**姓名 (Name):** ${patient.value.name}`);
   if (patient.value.mrn) lines.push(`**病歷號 (MRN):** ${patient.value.mrn}`);
+  if (patient.value.refPhysician)
+    lines.push(
+      `**轉介醫師 (Referring Physician):** ${patient.value.refPhysician}`,
+    );
   if (patient.value.age) lines.push(`**年齡 (Age):** ${patient.value.age}`);
   if (patient.value.sex) lines.push(`**性別 (Sex):** ${patient.value.sex}`);
   if (patient.value.bedNo)
@@ -569,6 +575,7 @@ function reset() {
   patient.value = {
     name: "",
     mrn: "",
+    refPhysician: "",
     age: "",
     sex: "",
     bedNo: "",
@@ -617,6 +624,48 @@ function reset() {
           automatically.</span
         >
       </span>
+    </div>
+
+    <!-- ======================== SECTION: Patient ======================== -->
+    <div class="cr-section">
+      <div
+        class="section-header section-header-row collapsible"
+        @click="patientOpen = !patientOpen"
+      >
+        <span class="section-label">Patient Info（病患資料）</span>
+        <svg
+          class="collapse-chevron"
+          :class="{ open: patientOpen }"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </div>
+      <div class="patient-grid" v-show="patientOpen">
+        <label class="field">
+          <span class="field-label">MRN（病歷號）</span>
+          <input v-model="patient.mrn" placeholder="e.g. 123456" />
+        </label>
+        <label class="field">
+          <span class="field-label">Name（姓名）</span>
+          <input v-model="patient.name" placeholder="e.g. WANG, DA-MING" />
+        </label>
+        <label class="field">
+          <span class="field-label">Referring Physician（轉介醫師）</span>
+          <input v-model="patient.refPhysician" placeholder="e.g. Dr. Chen" />
+        </label>
+        <label class="field">
+          <span class="field-label">Exam Date（檢查日期）</span>
+          <input type="date" v-model="examDate" />
+        </label>
+      </div>
     </div>
 
     <!-- ======================== SECTION: Probe ======================== -->
@@ -1308,6 +1357,19 @@ function reset() {
   border: 1px solid var(--vp-c-divider);
   border-left: 4px solid var(--vp-c-brand-1);
   margin-bottom: 0.75rem;
+}
+.section-header.collapsible {
+  cursor: pointer;
+  user-select: none;
+}
+.collapse-chevron {
+  color: var(--vp-c-text-3);
+  transition: transform 0.2s ease;
+  transform: rotate(-90deg);
+  flex: none;
+}
+.collapse-chevron.open {
+  transform: rotate(0deg);
 }
 .section-header-row {
   display: flex;

@@ -1449,7 +1449,7 @@ function reset() {
   grid-column: span 2;
 }
 .field-label {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--vp-c-text-2);
   letter-spacing: 0.02em;
@@ -1479,7 +1479,7 @@ function reset() {
 
 .patient-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.6rem;
 }
 .field-row {

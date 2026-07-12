@@ -64,57 +64,57 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
 
 依「上層較溫、下層較冷」原則，**不活化疫苗（怕冷）放上層**，**活化疫苗（怕熱）放最底層**。下圖為一台疫苗冰箱的實際分層標示：
 
-<div style="max-width:540px;margin:1.5rem auto;border:1px solid #cbd5e1;border-radius:14px;overflow:hidden;background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,0.08);font-family:system-ui,-apple-system,sans-serif;">
+<div style="max-width:620px;margin:1.5rem auto;border:1px solid #cbd5e1;border-radius:14px;overflow:hidden;background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,0.08);font-family:system-ui,-apple-system,sans-serif;">
   <div style="display:flex;align-items:center;justify-content:space-between;padding:0.7rem 1rem;background:#0f172a;color:#fff;">
-    <span style="font-weight:800;font-size:0.9rem;">疫苗冰箱冷藏室分層擺放</span>
-    <span style="font-size:0.72rem;opacity:0.8;">冷藏 2–8°C</span>
+    <span style="font-weight:800;font-size:1.02rem;">疫苗冰箱冷藏室分層擺放</span>
+    <span style="font-size:0.8rem;opacity:0.8;">冷藏 2–8°C</span>
   </div>
   <div style="display:flex;">
-    <div style="width:34px;flex:none;background:linear-gradient(180deg,#f97316,#3b82f6);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:0.6rem 0;color:#fff;font-size:0.62rem;font-weight:700;writing-mode:vertical-rl;text-orientation:upright;letter-spacing:0.05em;">
-      <span>最高溫</span><span style="opacity:0.85;">↓ 溫度遞減 ↓</span><span>最低溫</span>
+    <div style="width:54px;flex:none;background:linear-gradient(180deg,#f97316,#3b82f6);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:0.9rem 0;color:#fff;font-size:0.86rem;font-weight:700;writing-mode:vertical-rl;text-orientation:upright;">
+      <span>最高溫</span><span style="opacity:0.9;font-size:0.8rem;">溫度遞減 ↓</span><span>最低溫</span>
     </div>
     <div style="flex:1;">
       <div style="padding:0.6rem 0.85rem;background:#fff7ed;border-bottom:1px solid #e2e8f0;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45rem;">
-          <span style="font-weight:800;color:#9a3412;font-size:0.82rem;">A 層</span>
-          <span style="font-size:0.68rem;font-weight:700;color:#b45309;background:#fef3c7;border-radius:999px;padding:2px 9px;">此層最高溫</span>
+          <span style="font-weight:800;color:#9a3412;font-size:0.94rem;">A 層</span>
+          <span style="font-size:0.78rem;font-weight:700;color:#b45309;background:#fef3c7;border-radius:999px;padding:2px 9px;">此層最高溫</span>
         </div>
         <div style="display:flex;gap:7px;flex-wrap:wrap;">
-          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:66px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.8rem;color:#1f2937;">A 肝</b><small style="font-size:0.6rem;color:#6b7280;">HAV</small></span>
-          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:66px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.8rem;color:#1f2937;">四合一</b><small style="font-size:0.6rem;color:#6b7280;">DTaP-IPV</small></span>
-          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:66px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.8rem;color:#1f2937;">B 肝</b><small style="font-size:0.6rem;color:#6b7280;">HBV</small></span>
+          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">A 肝</b><small style="font-size:0.72rem;color:#6b7280;">HAV</small></span>
+          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">四合一</b><small style="font-size:0.72rem;color:#6b7280;">DTaP-IPV</small></span>
+          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">B 肝</b><small style="font-size:0.72rem;color:#6b7280;">HBV</small></span>
         </div>
-        <div style="font-size:0.66rem;color:#9a3412;margin-top:0.45rem;">不活化疫苗（怕冷）</div>
+        <div style="font-size:0.76rem;color:#9a3412;margin-top:0.45rem;">不活化疫苗（怕冷）</div>
       </div>
       <div style="padding:0.6rem 0.85rem;background:#eff6ff;border-bottom:1px solid #e2e8f0;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45rem;">
-          <span style="font-weight:800;color:#1e40af;font-size:0.82rem;">B 層</span>
-          <span style="font-size:0.68rem;font-weight:700;color:#1d4ed8;background:#dbeafe;border-radius:999px;padding:2px 9px;">此層次低溫</span>
+          <span style="font-weight:800;color:#1e40af;font-size:0.94rem;">B 層</span>
+          <span style="font-size:0.78rem;font-weight:700;color:#1d4ed8;background:#dbeafe;border-radius:999px;padding:2px 9px;">此層次低溫</span>
         </div>
         <div style="display:flex;gap:7px;flex-wrap:wrap;">
-          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:66px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.8rem;color:#1f2937;">五合一</b><small style="font-size:0.6rem;color:#6b7280;">DTaP-Hib-IPV</small></span>
-          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:66px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.8rem;color:#1f2937;">13PCV</b><small style="font-size:0.6rem;color:#6b7280;">PCV13</small></span>
+          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">五合一</b><small style="font-size:0.72rem;color:#6b7280;">DTaP-Hib-IPV</small></span>
+          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">PCV13</b><small style="font-size:0.72rem;color:#6b7280;">13價肺炎鏈球菌</small></span>
         </div>
-        <div style="font-size:0.66rem;color:#1e40af;margin-top:0.45rem;">此層為<strong>不活化疫苗可放的最低溫層</strong></div>
+        <div style="font-size:0.76rem;color:#1e40af;margin-top:0.45rem;">此層為<strong>不活化疫苗可放的最低溫層</strong></div>
       </div>
       <div style="padding:0.6rem 0.85rem;background:#dbeafe;border-bottom:1px solid #e2e8f0;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45rem;">
-          <span style="font-weight:800;color:#1e3a8a;font-size:0.82rem;">C 層</span>
-          <span style="font-size:0.68rem;font-weight:700;color:#fff;background:#2563eb;border-radius:999px;padding:2px 9px;">此層最低溫</span>
+          <span style="font-weight:800;color:#1e3a8a;font-size:0.94rem;">C 層</span>
+          <span style="font-size:0.78rem;font-weight:700;color:#fff;background:#2563eb;border-radius:999px;padding:2px 9px;">此層最低溫</span>
         </div>
         <div style="display:flex;gap:7px;flex-wrap:wrap;">
-          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:66px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.8rem;color:#1f2937;">JE</b><small style="font-size:0.6rem;color:#6b7280;">日本腦炎</small></span>
-          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:66px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.8rem;color:#1f2937;">MMR</b><small style="font-size:0.6rem;color:#6b7280;">麻疹腮腺炎德國麻疹</small></span>
-          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:66px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.8rem;color:#1f2937;">VAR</b><small style="font-size:0.6rem;color:#6b7280;">水痘</small></span>
+          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">JE</b><small style="font-size:0.72rem;color:#6b7280;">日本腦炎</small></span>
+          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">MMR</b><small style="font-size:0.72rem;color:#6b7280;">麻疹腮腺炎德國麻疹</small></span>
+          <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">VAR</b><small style="font-size:0.72rem;color:#6b7280;">水痘</small></span>
         </div>
-        <div style="font-size:0.66rem;color:#1e3a8a;margin-top:0.45rem;">活化疫苗（怕熱）→ 放最低溫層</div>
+        <div style="font-size:0.76rem;color:#1e3a8a;margin-top:0.45rem;">活化疫苗（怕熱）→ 放最低溫層</div>
       </div>
       <div style="padding:0.6rem 0.85rem;background:#f1f5f9;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45rem;">
-          <span style="font-weight:800;color:#475569;font-size:0.82rem;">D 層（底層）</span>
-          <span style="font-size:0.68rem;font-weight:700;color:#475569;background:#e2e8f0;border-radius:999px;padding:2px 9px;">保冷 / 自訂</span>
+          <span style="font-weight:800;color:#475569;font-size:0.94rem;">D 層（底層）</span>
+          <span style="font-size:0.78rem;font-weight:700;color:#475569;background:#e2e8f0;border-radius:999px;padding:2px 9px;">保冷 / 自訂</span>
         </div>
-        <div style="font-size:0.7rem;color:#475569;">水寶／保冷瓶（停電備用），及自費或其他疫苗（依院所手寫標示）。</div>
+        <div style="font-size:0.82rem;color:#475569;">水寶／保冷瓶（停電備用），及自費或其他疫苗（依院所手寫標示）。</div>
       </div>
     </div>
   </div>

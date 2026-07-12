@@ -437,7 +437,7 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: "兒童藥物劑量計算（體重別）",
+                  text: "兒童藥物劑量計算",
                   link: "/guide/pediatric/pediatric-drug-dose-calculator",
                 },
               ],
@@ -512,6 +512,10 @@ export default defineConfig({
             {
               text: "甲狀腺及頸部超音波",
               link: "/reference/echo/thyroid-sonography",
+            },
+            {
+              text: "頸動脈雙功能暨經顱都卜勒超音波",
+              link: "/reference/echo/carotid-duplex",
             },
             {
               text: "消化系統",

@@ -87,6 +87,19 @@ const icaStatusOptions = [
 // Rebuilt as a computed so the references stay valid after reset().
 const _TCF = ["ps", "ed", "ri", "mv"];
 const _CAF = ["ps", "ed", "ri", "fv"];
+// Per-vessel colours for the schematic (paired L/R share a colour)
+const VC = {
+  oa: "#f97316",
+  a1: "#7c3aed",
+  m1: "#2563eb",
+  p1: "#db2777",
+  va: "#0d9488",
+  ba: "#16a34a",
+  ica: "#ca8a04",
+  eca: "#0891b2",
+  bif: "#64748b",
+  cca: "#dc2626",
+};
 const diagramNodes = computed(() => {
   const t = tc.value;
   const c = ca.value;
@@ -97,29 +110,29 @@ const diagramNodes = computed(() => {
   const gy = (v) => TY + SC * v;
   return [
     // Right side — clusters in the left margin (cx = 8)
-    { id: "a1r", label: "R A1", side: "r", cx: 6, cy: 24, nx: gx(455), ny: gy(130), fields: _TCF, m: t.a1.right },
-    { id: "oar", label: "R OA", side: "r", cx: 6, cy: 136, nx: gx(410), ny: gy(166), fields: _TCF, m: t.oa.right },
-    { id: "m1r", label: "R M1", side: "r", cx: 6, cy: 248, nx: gx(355), ny: gy(235), fields: _TCF, m: t.m1.right },
-    { id: "p1r", label: "R P1", side: "r", cx: 6, cy: 360, nx: gx(462), ny: gy(325), fields: _TCF, m: t.p1.right },
-    { id: "vir", label: "R VA intra", side: "r", cx: 6, cy: 472, nx: gx(468), ny: gy(430), fields: _TCF, m: t.vaIntra.right },
-    { id: "icar", label: "R ICA", side: "r", cx: 6, cy: 584, nx: gx(440), ny: gy(520), fields: _CAF, m: c.ica.right },
-    { id: "ecar", label: "R ECA", side: "r", cx: 6, cy: 696, nx: gx(479), ny: gy(556), fields: _CAF, m: c.eca.right },
-    { id: "bifr", label: "R BIF", side: "r", cx: 6, cy: 808, nx: gx(442), ny: gy(610), fields: _CAF, m: c.bif.right },
-    { id: "vexr", label: "R VA extra", side: "r", cx: 6, cy: 920, nx: gx(400), ny: gy(690), fields: _CAF, m: c.vaExtra.right },
-    { id: "ccar", label: "R CCA", side: "r", cx: 6, cy: 1032, nx: gx(447), ny: gy(715), fields: _CAF, m: c.cca.right },
+    { id: "a1r", label: "R A1", side: "r", cx: 6, cy: 24, nx: gx(455), ny: gy(130), fields: _TCF, m: t.a1.right, color: VC.a1 },
+    { id: "oar", label: "R OA", side: "r", cx: 6, cy: 136, nx: gx(410), ny: gy(166), fields: _TCF, m: t.oa.right, color: VC.oa },
+    { id: "m1r", label: "R M1", side: "r", cx: 6, cy: 248, nx: gx(355), ny: gy(235), fields: _TCF, m: t.m1.right, color: VC.m1 },
+    { id: "p1r", label: "R P1", side: "r", cx: 6, cy: 360, nx: gx(462), ny: gy(325), fields: _TCF, m: t.p1.right, color: VC.p1 },
+    { id: "vir", label: "R VA intra", side: "r", cx: 6, cy: 472, nx: gx(468), ny: gy(430), fields: _TCF, m: t.vaIntra.right, color: VC.va },
+    { id: "icar", label: "R ICA", side: "r", cx: 6, cy: 584, nx: gx(440), ny: gy(520), fields: _CAF, m: c.ica.right, color: VC.ica },
+    { id: "ecar", label: "R ECA", side: "r", cx: 6, cy: 696, nx: gx(479), ny: gy(556), fields: _CAF, m: c.eca.right, color: VC.eca },
+    { id: "bifr", label: "R BIF", side: "r", cx: 6, cy: 808, nx: gx(442), ny: gy(610), fields: _CAF, m: c.bif.right, color: VC.bif },
+    { id: "vexr", label: "R VA extra", side: "r", cx: 6, cy: 920, nx: gx(400), ny: gy(690), fields: _CAF, m: c.vaExtra.right, color: VC.va },
+    { id: "ccar", label: "R CCA", side: "r", cx: 6, cy: 1032, nx: gx(447), ny: gy(715), fields: _CAF, m: c.cca.right, color: VC.cca },
     // Left side — clusters in the right margin (cx = 852)
-    { id: "a1l", label: "L A1", side: "l", cx: 818, cy: 24, nx: gx(545), ny: gy(130), fields: _TCF, m: t.a1.left },
-    { id: "oal", label: "L OA", side: "l", cx: 818, cy: 136, nx: gx(590), ny: gy(166), fields: _TCF, m: t.oa.left },
-    { id: "m1l", label: "L M1", side: "l", cx: 818, cy: 248, nx: gx(645), ny: gy(235), fields: _TCF, m: t.m1.left },
-    { id: "p1l", label: "L P1", side: "l", cx: 818, cy: 360, nx: gx(538), ny: gy(325), fields: _TCF, m: t.p1.left },
-    { id: "vil", label: "L VA intra", side: "l", cx: 818, cy: 472, nx: gx(532), ny: gy(430), fields: _TCF, m: t.vaIntra.left },
-    { id: "ical", label: "L ICA", side: "l", cx: 818, cy: 584, nx: gx(560), ny: gy(520), fields: _CAF, m: c.ica.left },
-    { id: "ecal", label: "L ECA", side: "l", cx: 818, cy: 696, nx: gx(521), ny: gy(556), fields: _CAF, m: c.eca.left },
-    { id: "bifl", label: "L BIF", side: "l", cx: 818, cy: 808, nx: gx(558), ny: gy(610), fields: _CAF, m: c.bif.left },
-    { id: "vexl", label: "L VA extra", side: "l", cx: 818, cy: 920, nx: gx(600), ny: gy(690), fields: _CAF, m: c.vaExtra.left },
-    { id: "ccal", label: "L CCA", side: "l", cx: 818, cy: 1032, nx: gx(553), ny: gy(715), fields: _CAF, m: c.cca.left },
+    { id: "a1l", label: "L A1", side: "l", cx: 818, cy: 24, nx: gx(545), ny: gy(130), fields: _TCF, m: t.a1.left, color: VC.a1 },
+    { id: "oal", label: "L OA", side: "l", cx: 818, cy: 136, nx: gx(590), ny: gy(166), fields: _TCF, m: t.oa.left, color: VC.oa },
+    { id: "m1l", label: "L M1", side: "l", cx: 818, cy: 248, nx: gx(645), ny: gy(235), fields: _TCF, m: t.m1.left, color: VC.m1 },
+    { id: "p1l", label: "L P1", side: "l", cx: 818, cy: 360, nx: gx(538), ny: gy(325), fields: _TCF, m: t.p1.left, color: VC.p1 },
+    { id: "vil", label: "L VA intra", side: "l", cx: 818, cy: 472, nx: gx(532), ny: gy(430), fields: _TCF, m: t.vaIntra.left, color: VC.va },
+    { id: "ical", label: "L ICA", side: "l", cx: 818, cy: 584, nx: gx(560), ny: gy(520), fields: _CAF, m: c.ica.left, color: VC.ica },
+    { id: "ecal", label: "L ECA", side: "l", cx: 818, cy: 696, nx: gx(521), ny: gy(556), fields: _CAF, m: c.eca.left, color: VC.eca },
+    { id: "bifl", label: "L BIF", side: "l", cx: 818, cy: 808, nx: gx(558), ny: gy(610), fields: _CAF, m: c.bif.left, color: VC.bif },
+    { id: "vexl", label: "L VA extra", side: "l", cx: 818, cy: 920, nx: gx(600), ny: gy(690), fields: _CAF, m: c.vaExtra.left, color: VC.va },
+    { id: "ccal", label: "L CCA", side: "l", cx: 818, cy: 1032, nx: gx(553), ny: gy(715), fields: _CAF, m: c.cca.left, color: VC.cca },
     // Basilar — midline, cluster centred at the bottom
-    { id: "ba", label: "BA (midline)", side: "mid", cx: 412, cy: 1000, nx: gx(500), ny: gy(388), fields: _TCF, m: t.ba },
+    { id: "ba", label: "BA (midline)", side: "mid", cx: 412, cy: 1000, nx: gx(500), ny: gy(388), fields: _TCF, m: t.ba, color: VC.ba },
   ];
 });
 
@@ -665,32 +678,32 @@ function reset() {
           <!-- ===== Anatomy (schematic) ===== -->
           <g transform="translate(-175,-91) scale(1.35)">
           <!-- Circle of Willis + basilar (brand) -->
-          <path d="M 455 130 Q 500 108 545 130" class="dg-cow" />
-          <path d="M 455 130 Q 438 178 432 240" class="dg-cow" />
-          <path d="M 545 130 Q 562 178 568 240" class="dg-cow" />
-          <path d="M 432 240 Q 448 292 462 325 Q 482 342 500 348" class="dg-cow" />
-          <path d="M 568 240 Q 552 292 538 325 Q 518 342 500 348" class="dg-cow" />
-          <path d="M 500 348 L 500 410" class="dg-cow" />
+          <path d="M 455 130 Q 500 108 545 130" class="dg-vessel" style="stroke: #7c3aed" />
+          <path d="M 455 130 Q 438 178 432 240" class="dg-vessel" style="stroke: #7c3aed" />
+          <path d="M 545 130 Q 562 178 568 240" class="dg-vessel" style="stroke: #7c3aed" />
+          <path d="M 432 240 Q 448 292 462 325 Q 482 342 500 348" class="dg-vessel" style="stroke: #db2777" />
+          <path d="M 568 240 Q 552 292 538 325 Q 518 342 500 348" class="dg-vessel" style="stroke: #db2777" />
+          <path d="M 500 348 L 500 410" class="dg-vessel" style="stroke: #16a34a" />
           <!-- M1 (MCA) -->
-          <path d="M 432 240 Q 393 236 355 235" class="dg-vessel" />
-          <path d="M 568 240 Q 607 236 645 235" class="dg-vessel" />
+          <path d="M 432 240 Q 393 236 355 235" class="dg-vessel" style="stroke: #2563eb" />
+          <path d="M 568 240 Q 607 236 645 235" class="dg-vessel" style="stroke: #2563eb" />
           <!-- OA (ophthalmic) + orbit hint -->
-          <path d="M 432 240 Q 418 198 410 168" class="dg-vessel" />
-          <path d="M 568 240 Q 582 198 590 168" class="dg-vessel" />
+          <path d="M 432 240 Q 418 198 410 168" class="dg-vessel" style="stroke: #f97316" />
+          <path d="M 568 240 Q 582 198 590 168" class="dg-vessel" style="stroke: #f97316" />
           <circle cx="405" cy="156" r="7" class="dg-eye" />
           <circle cx="595" cy="156" r="7" class="dg-eye" />
           <!-- Vertebral artery: extracranial → intracranial → basilar confluence -->
-          <path d="M 500 410 Q 486 418 468 430 L 400 690" class="dg-vessel" />
-          <path d="M 500 410 Q 514 418 532 430 L 600 690" class="dg-vessel" />
+          <path d="M 500 410 Q 486 418 468 430 L 400 690" class="dg-vessel" style="stroke: #0d9488" />
+          <path d="M 500 410 Q 514 418 532 430 L 600 690" class="dg-vessel" style="stroke: #0d9488" />
           <!-- ICA (siphon → cervical → bifurcation) -->
-          <path d="M 432 240 L 440 520 L 442 610" class="dg-vessel" />
-          <path d="M 568 240 L 560 520 L 558 610" class="dg-vessel" />
+          <path d="M 432 240 L 440 520 L 442 610" class="dg-vessel" style="stroke: #ca8a04" />
+          <path d="M 568 240 L 560 520 L 558 610" class="dg-vessel" style="stroke: #ca8a04" />
           <!-- ECA (external carotid) -->
-          <path d="M 442 610 Q 462 585 478 560 Q 486 545 488 528" class="dg-vessel" />
-          <path d="M 558 610 Q 538 585 522 560 Q 514 545 512 528" class="dg-vessel" />
+          <path d="M 442 610 Q 462 585 478 560 Q 486 545 488 528" class="dg-vessel" style="stroke: #0891b2" />
+          <path d="M 558 610 Q 538 585 522 560 Q 514 545 512 528" class="dg-vessel" style="stroke: #0891b2" />
           <!-- CCA (common carotid trunk) -->
-          <path d="M 442 610 L 447 700 L 449 768" class="dg-vessel" />
-          <path d="M 558 610 L 553 700 L 551 768" class="dg-vessel" />
+          <path d="M 442 610 L 447 700 L 449 768" class="dg-vessel" style="stroke: #dc2626" />
+          <path d="M 558 610 L 553 700 L 551 768" class="dg-vessel" style="stroke: #dc2626" />
 
           </g>
           <!-- ===== Vessel nodes + linked input clusters ===== -->
@@ -701,10 +714,21 @@ function reset() {
               :x2="n.nx"
               :y2="n.ny"
               class="dg-leader"
+              :style="{ stroke: n.color }"
             />
-            <circle :cx="n.nx" :cy="n.ny" r="4.5" class="dg-node" />
+            <circle
+              :cx="n.nx"
+              :cy="n.ny"
+              r="5"
+              class="dg-node"
+              :style="{ fill: n.color }"
+            />
             <foreignObject :x="n.cx" :y="n.cy" width="176" height="104">
-              <div class="dg-cluster" xmlns="http://www.w3.org/1999/xhtml">
+              <div
+                class="dg-cluster"
+                xmlns="http://www.w3.org/1999/xhtml"
+                :style="{ borderLeftColor: n.color }"
+              >
                 <div class="dg-cluster-title">{{ n.label }}</div>
                 <div class="dg-inputs">
                   <label v-for="f in n.fields" :key="f">
@@ -1443,20 +1467,19 @@ function reset() {
   stroke-width: 1.5;
 }
 .dg-node {
-  fill: var(--vp-c-brand-1);
   stroke: var(--vp-c-bg);
   stroke-width: 1.5;
 }
 .dg-leader {
-  stroke: var(--vp-c-text-3);
-  stroke-width: 1;
+  stroke-width: 1.2;
   stroke-dasharray: 3 3;
-  opacity: 0.6;
+  opacity: 0.55;
 }
 .dg-cluster {
   box-sizing: border-box;
   height: 100%;
   border: 1px solid var(--vp-c-divider);
+  border-left-width: 4px;
   border-radius: 7px;
   background: var(--vp-c-bg);
   padding: 5px 6px;

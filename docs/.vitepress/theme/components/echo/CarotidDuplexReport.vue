@@ -92,29 +92,29 @@ const diagramNodes = computed(() => {
   const c = ca.value;
   return [
     // Right side — clusters in the left margin (cx = 8)
-    { id: "a1r", label: "R A1", side: "r", cx: 8, cy: 64, nx: 455, ny: 130, fields: _TCF, m: t.a1.right },
-    { id: "oar", label: "R OA", side: "r", cx: 8, cy: 142, nx: 410, ny: 166, fields: _TCF, m: t.oa.right },
-    { id: "m1r", label: "R M1", side: "r", cx: 8, cy: 220, nx: 355, ny: 235, fields: _TCF, m: t.m1.right },
-    { id: "p1r", label: "R P1", side: "r", cx: 8, cy: 298, nx: 462, ny: 325, fields: _TCF, m: t.p1.right },
-    { id: "vir", label: "R VA intra", side: "r", cx: 8, cy: 376, nx: 468, ny: 430, fields: _TCF, m: t.vaIntra.right },
-    { id: "icar", label: "R ICA", side: "r", cx: 8, cy: 454, nx: 440, ny: 520, fields: _CAF, m: c.ica.right },
-    { id: "ecar", label: "R ECA", side: "r", cx: 8, cy: 532, nx: 486, ny: 556, fields: _CAF, m: c.eca.right },
-    { id: "bifr", label: "R BIF", side: "r", cx: 8, cy: 610, nx: 442, ny: 610, fields: _CAF, m: c.bif.right },
-    { id: "vexr", label: "R VA extra", side: "r", cx: 8, cy: 688, nx: 400, ny: 690, fields: _CAF, m: c.vaExtra.right },
-    { id: "ccar", label: "R CCA", side: "r", cx: 8, cy: 766, nx: 447, ny: 715, fields: _CAF, m: c.cca.right },
+    { id: "a1r", label: "R A1", side: "r", cx: 6, cy: 64, nx: 455, ny: 130, fields: _TCF, m: t.a1.right },
+    { id: "oar", label: "R OA", side: "r", cx: 6, cy: 142, nx: 410, ny: 166, fields: _TCF, m: t.oa.right },
+    { id: "m1r", label: "R M1", side: "r", cx: 6, cy: 220, nx: 355, ny: 235, fields: _TCF, m: t.m1.right },
+    { id: "p1r", label: "R P1", side: "r", cx: 6, cy: 298, nx: 462, ny: 325, fields: _TCF, m: t.p1.right },
+    { id: "vir", label: "R VA intra", side: "r", cx: 6, cy: 376, nx: 468, ny: 430, fields: _TCF, m: t.vaIntra.right },
+    { id: "icar", label: "R ICA", side: "r", cx: 6, cy: 454, nx: 440, ny: 520, fields: _CAF, m: c.ica.right },
+    { id: "ecar", label: "R ECA", side: "r", cx: 6, cy: 532, nx: 486, ny: 556, fields: _CAF, m: c.eca.right },
+    { id: "bifr", label: "R BIF", side: "r", cx: 6, cy: 610, nx: 442, ny: 610, fields: _CAF, m: c.bif.right },
+    { id: "vexr", label: "R VA extra", side: "r", cx: 6, cy: 688, nx: 400, ny: 690, fields: _CAF, m: c.vaExtra.right },
+    { id: "ccar", label: "R CCA", side: "r", cx: 6, cy: 766, nx: 447, ny: 715, fields: _CAF, m: c.cca.right },
     // Left side — clusters in the right margin (cx = 852)
-    { id: "a1l", label: "L A1", side: "l", cx: 852, cy: 64, nx: 545, ny: 130, fields: _TCF, m: t.a1.left },
-    { id: "oal", label: "L OA", side: "l", cx: 852, cy: 142, nx: 590, ny: 166, fields: _TCF, m: t.oa.left },
-    { id: "m1l", label: "L M1", side: "l", cx: 852, cy: 220, nx: 645, ny: 235, fields: _TCF, m: t.m1.left },
-    { id: "p1l", label: "L P1", side: "l", cx: 852, cy: 298, nx: 538, ny: 325, fields: _TCF, m: t.p1.left },
-    { id: "vil", label: "L VA intra", side: "l", cx: 852, cy: 376, nx: 532, ny: 430, fields: _TCF, m: t.vaIntra.left },
-    { id: "ical", label: "L ICA", side: "l", cx: 852, cy: 454, nx: 560, ny: 520, fields: _CAF, m: c.ica.left },
-    { id: "ecal", label: "L ECA", side: "l", cx: 852, cy: 532, nx: 514, ny: 556, fields: _CAF, m: c.eca.left },
-    { id: "bifl", label: "L BIF", side: "l", cx: 852, cy: 610, nx: 558, ny: 610, fields: _CAF, m: c.bif.left },
-    { id: "vexl", label: "L VA extra", side: "l", cx: 852, cy: 688, nx: 600, ny: 690, fields: _CAF, m: c.vaExtra.left },
-    { id: "ccal", label: "L CCA", side: "l", cx: 852, cy: 766, nx: 553, ny: 715, fields: _CAF, m: c.cca.left },
+    { id: "a1l", label: "L A1", side: "l", cx: 844, cy: 64, nx: 545, ny: 130, fields: _TCF, m: t.a1.left },
+    { id: "oal", label: "L OA", side: "l", cx: 844, cy: 142, nx: 590, ny: 166, fields: _TCF, m: t.oa.left },
+    { id: "m1l", label: "L M1", side: "l", cx: 844, cy: 220, nx: 645, ny: 235, fields: _TCF, m: t.m1.left },
+    { id: "p1l", label: "L P1", side: "l", cx: 844, cy: 298, nx: 538, ny: 325, fields: _TCF, m: t.p1.left },
+    { id: "vil", label: "L VA intra", side: "l", cx: 844, cy: 376, nx: 532, ny: 430, fields: _TCF, m: t.vaIntra.left },
+    { id: "ical", label: "L ICA", side: "l", cx: 844, cy: 454, nx: 560, ny: 520, fields: _CAF, m: c.ica.left },
+    { id: "ecal", label: "L ECA", side: "l", cx: 844, cy: 532, nx: 514, ny: 556, fields: _CAF, m: c.eca.left },
+    { id: "bifl", label: "L BIF", side: "l", cx: 844, cy: 610, nx: 558, ny: 610, fields: _CAF, m: c.bif.left },
+    { id: "vexl", label: "L VA extra", side: "l", cx: 844, cy: 688, nx: 600, ny: 690, fields: _CAF, m: c.vaExtra.left },
+    { id: "ccal", label: "L CCA", side: "l", cx: 844, cy: 766, nx: 553, ny: 715, fields: _CAF, m: c.cca.left },
     // Basilar — midline, cluster centred at the bottom
-    { id: "ba", label: "BA (midline)", side: "mid", cx: 430, cy: 828, nx: 500, ny: 388, fields: _TCF, m: t.ba },
+    { id: "ba", label: "BA (midline)", side: "mid", cx: 425, cy: 832, nx: 500, ny: 388, fields: _TCF, m: t.ba },
   ];
 });
 
@@ -661,7 +661,7 @@ function reset() {
       </div>
       <div class="svg-wrap">
         <svg
-          viewBox="0 0 1000 900"
+          viewBox="0 0 1000 916"
           xmlns="http://www.w3.org/2000/svg"
           class="ref-svg"
         >
@@ -697,14 +697,14 @@ function reset() {
           <!-- ===== Vessel nodes + linked input clusters ===== -->
           <template v-for="n in diagramNodes" :key="n.id">
             <line
-              :x1="n.side === 'l' ? n.cx : n.side === 'mid' ? n.cx + 70 : n.cx + 140"
+              :x1="n.side === 'l' ? n.cx : n.side === 'mid' ? n.cx + 75 : n.cx + 150"
               :y1="n.side === 'mid' ? n.cy : n.cy + 28"
               :x2="n.nx"
               :y2="n.ny"
               class="dg-leader"
             />
             <circle :cx="n.nx" :cy="n.ny" r="4.5" class="dg-node" />
-            <foreignObject :x="n.cx" :y="n.cy" width="140" height="58">
+            <foreignObject :x="n.cx" :y="n.cy" width="150" height="74">
               <div class="dg-cluster" xmlns="http://www.w3.org/1999/xhtml">
                 <div class="dg-cluster-title">{{ n.label }}</div>
                 <div class="dg-inputs">
@@ -1329,7 +1329,6 @@ function reset() {
 }
 .ref-svg {
   width: 100%;
-  min-width: 940px;
   height: auto;
   display: block;
 }

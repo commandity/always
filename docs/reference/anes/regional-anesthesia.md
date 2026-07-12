@@ -13,16 +13,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 本指南僅供醫學教育與臨床參考，實際操作需由具備資格之麻醉專科醫師執行，並依據患者個別解剖變異、手術需求與機構protocol調整。
 :::
 
-## 目錄 Table of Contents
-
-1. [頭頸部 Head & Neck](#1-頭頸部-head--neck)
-2. [上肢 Upper Extremity](#2-上肢-upper-extremity)
-3. [胸壁與軀幹 Chest Wall & Trunk](#3-胸壁與軀幹-chest-wall--trunk)
-4. [腹壁 Abdominal Wall](#4-腹壁-abdominal-wall)
-5. [下肢 Lower Extremity](#5-下肢-lower-extremity)
-6. [骶尾部 Sacral & Perineal](#6-骶尾部-sacral--perineal)
-7. [椎管內 neuraxial](#7-椎管內-neuraxial)
-
 ## 1. 頸部 Head & Neck
 
 ### 1.1 浅頸神經叢阻斷 Superficial Cervical Plexus Block (SCPB)
@@ -67,8 +57,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 膈神經阻斷（同側膈肌麻痺）
 - 氣胸（極少見）
 
----
-
 ### 1.2 深頸神經叢阻斷 Deep Cervical Plexus Block (DCPB)
 
 **適應症 Indications**
@@ -102,8 +90,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 脊髓缺血（大量藥物）
 - 喉返神經阻斷
 
----
-
 ### 1.3 枕大/枕小神經阻斷 Greater/Lesser Occipital Nerve Block
 
 **適應症 Indications**
@@ -121,8 +107,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **目標** | 枕動脈旁（ Greater occipital nerve 與 occipital artery 伴行） |
 | **進針** | 從外側進針，平面內                                            |
 | **藥物** | 1% Lidocaine 或 0.25% Bupivacaine 3–5 mL                      |
-
----
 
 ### 1.4 顎神經阻斷 Infraorbital Nerve Block
 
@@ -147,8 +131,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **藥物** | 1% Lidocaine 2–3 mL                 |
 
 **注意**：避免注入眶內，不要穿入 foramen
-
----
 
 ## 2. 上肢 Upper Extremity
 
@@ -184,8 +166,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 藥物誤入肩胛上動脈
 - 氣胸（針尖太深）
 - 膈神經阻斷（若藥物向上擴散）
-
----
 
 #### 2.1.2 肋鎖臂神經叢阻斷 Interscalene Brachial Plexus Block (ISB)
 
@@ -241,8 +221,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 低容量（5 mL）精準注射至目標神經根
 - 減少膈神經阻斷發生率
 
----
-
 #### 2.1.3 鎖骨上阻斷 Supraclavicular Brachial Plexus Block
 
 **適應症 Indications**
@@ -283,8 +261,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 臂叢神經損傷
 - 血腫
 
----
-
 #### 2.1.4 鎖骨下阻斷 Infraclavicular Brachial Plexus Block
 
 **適應症 Indications**
@@ -317,8 +293,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 藥物誤入腋動脈
 - 膈神經阻斷（較 supraclavicular 低，約 30%）
 - 血腫
-
----
 
 #### 2.1.5 腋神經阻斷 Axillary Brachial Plexus Block
 
@@ -362,8 +336,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血腫
 - 神經損傷（發生率低）
 - 腋動脈瘤/假性動脈瘤（罕見）
-
----
 
 ## 3. 胸壁與軀幹 Chest Wall & Trunk
 
@@ -411,8 +383,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血管內注射
 - 低血壓（交感神經阻斷）
 
----
-
 ### 3.2 肋間神經阻斷 Intercostal Nerve Block
 
 **適應症 Indications**
@@ -451,8 +421,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血管內注射（肋間動脈/靜脈）
 - 藥物毒性（多節段阻斷時）
 - 局部血腫
-
----
 
 ### 3.3 胸肌神經阻斷 Pectoral Nerve Block (PECs I & II)
 
@@ -495,8 +463,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 氣胸（罕見）
 - 局部血腫
 
----
-
 ### 3.4 前鋸肌平面阻斷 Serratus Anterior Plane Block (SAPB)
 
 **適應症 Indications**
@@ -531,8 +497,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血管內注射
 - 局部血腫
 
----
-
 ### 3.5 背伸肌筋膜平面阻斷 Erector Spinae Plane Block (ESP)
 
 **適應症 Indications**
@@ -566,8 +530,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 蛛網膜下腔注射（罕見）
 - 血管內注射
 - 局部血腫
-
----
 
 ## 4. 腹壁 Abdominal Wall
 
@@ -604,8 +566,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血管內注射
 - 局部血腫
 
----
-
 ### 4.2 腹直肌鞘阻斷 Rectus Sheath Block
 
 **適應症 Indications**
@@ -637,8 +597,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 腹壁上動脈穿刺
 - 腹腔內穿刺（罕見）
 - 血管內注射
-
----
 
 ### 4.3 髂腹下/髂腹股溝神經阻斷 Ilioinguinal/Iliohypogastric Nerve Block
 
@@ -673,8 +631,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 腹腔內穿刺（罕見）
 - 藥物誤入血管
 - 局部血腫
-
----
 
 ## 5. 下肢 Lower Extremity
 
@@ -711,8 +667,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血腫
 - 神經損傷
 
----
-
 ### 5.2 筋膜髂肌阻斷 Fascia Iliaca Compartment Block (FICB)
 
 **適應症 Indications**
@@ -743,8 +697,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 股動脈穿刺
 - 藥物誤入血管
 - 血腫
-
----
 
 ### 5.3 收肌管阻斷 Adductor Canal Block (ACB)
 
@@ -781,8 +733,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 股動脈穿刺
 - 藥物誤入血管
 - 血腫
-
----
 
 ### 5.4 坐骨神經阻斷 Sciatic Nerve Block
 
@@ -827,8 +777,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血管內注射
 - 局部血腫
 
----
-
 ### 5.5 膕窩坐骨神經阻斷 Popliteal Sciatic Nerve Block
 
 **適應症 Indications**
@@ -853,8 +801,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 膕動脈穿刺
 - 藥物誤入血管
 - 血腫
-
----
 
 ### 5.6 踝神經阻斷 Ankle Block
 
@@ -892,8 +838,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 藥物誤入脛後/脛前動脈
 - 局部血腫
 - 腓總神經損傷（深腓神經注射時）
-
----
 
 ## 6. 骶尾部 Sacral & Perineal
 
@@ -939,8 +883,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 骨膜下注射
 - 感染（需嚴格無菌）
 
----
-
 ### 6.2 陰部神經阻斷 Pudendal Nerve Block
 
 **適應症 Indications**
@@ -977,8 +919,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 坐骨神經損傷
 - 血管內注射
 - 局部血腫
-
----
 
 ## 7. 椎管內 Neuraxial
 
@@ -1034,8 +974,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 全脊髓麻醉
 - 低血壓（交感神經阻斷）
 
----
-
 ### 7.2 蛛網膜下腔麻醉 Spinal Anesthesia (Subarachnoid Block)
 
 **適應症 Indications**
@@ -1078,8 +1016,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 馬尾症候群（cauda equina syndrome，罕見）
 - 感染
 
----
-
 ### 7.3 腰椎硬膜外聯合 Combined Spinal-Epidural (CSE)
 
 **適應症 Indications**
@@ -1107,8 +1043,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 藥物誤入血管
 - 低血壓
 - 背痛
-
----
 
 ## 附錄 Appendix
 
@@ -1156,8 +1090,6 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 6. **踝神經阻斷**：最後選擇，但若超音波導引得當可提供完全足部麻醉
 7. **CSE**：適合需要快速起效 + 長期止痛的剖腹產
 8. **ESP block**：新興技術，操作簡單且安全，適合多節段肋骨骨折
-
----
 
 ## 參考文獻 References
 

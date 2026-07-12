@@ -1398,7 +1398,8 @@ function reset() {
   gap: 5px 7px;
 }
 .dg-inputs label {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20px 1fr;
   align-items: center;
   gap: 4px;
   font-size: 13px;

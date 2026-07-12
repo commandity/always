@@ -608,7 +608,45 @@ function reset() {
 
     <!-- ======================== SECTION: Probe ======================== -->
     <div class="cr-section">
-      <div class="probe-note">Probe: Transcranial 2-3MHz / Carotid 5-10MHz</div>
+      <div class="probe-bar">
+        <span class="probe-tag">Probe</span>
+        <span class="probe-chip tcd">
+          <svg
+            class="probe-ico"
+            viewBox="0 0 24 24"
+            width="15"
+            height="15"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M4 12a8 8 0 0 1 8-8" />
+            <path d="M6.5 12a5.5 5.5 0 0 1 5.5-5.5" />
+            <path d="M9 12a3 3 0 0 1 3-3" />
+            <circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none" />
+          </svg>
+          <span>Transcranial <b>2–3 MHz</b></span>
+        </span>
+        <span class="probe-chip cca">
+          <svg
+            class="probe-ico"
+            viewBox="0 0 24 24"
+            width="15"
+            height="15"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M4 12a8 8 0 0 1 8-8" />
+            <path d="M6.5 12a5.5 5.5 0 0 1 5.5-5.5" />
+            <path d="M9 12a3 3 0 0 1 3-3" />
+            <circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none" />
+          </svg>
+          <span>Carotid <b>5–10 MHz</b></span>
+        </span>
+      </div>
     </div>
 
     <!-- ======================== SECTION: Reference Diagram ======================== -->
@@ -1226,20 +1264,47 @@ function reset() {
   color: var(--vp-c-text-2);
   margin: 0.75rem 0 0.4rem;
 }
-.probe-note {
-  display: inline-flex;
+.probe-bar {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.95rem;
+}
+.probe-tag {
+  font-size: 0.68rem;
   font-weight: 800;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+}
+.probe-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.34rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  white-space: nowrap;
+}
+.probe-chip b {
+  color: var(--vp-c-text-1);
+  font-weight: 800;
+}
+.probe-ico {
+  flex: none;
+}
+.probe-chip.tcd .probe-ico {
   color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
-  border: 1.5px solid var(--vp-c-brand-1);
-  border-left-width: 5px;
-  border-radius: 9px;
-  padding: 0.6rem 1rem;
-  margin-top: 0;
+}
+.probe-chip.cca .probe-ico {
+  color: #0d9488;
+}
+.dark .probe-chip.cca .probe-ico {
+  color: #2dd4bf;
 }
 .intro-zh,
 .intro-en {

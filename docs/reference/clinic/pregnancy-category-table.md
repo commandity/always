@@ -14,89 +14,86 @@ aside: false
 
 ## 妊娠期常見情境用藥建議 Drug Choices in Pregnancy by Condition
 
-依常見臨床情境整理「首選（Preferred）」與「避免（Avoid）」用藥原則。整理自衛教圖卡（IG: @thepharmadr）；實際處方仍須依個別病患狀況與最新指引判斷。
+依常見臨床情境整理「首選」與「避免」的用藥原則；解釋為中文，藥名保留原文。整理自衛教圖卡（IG: @thepharmadr），實際處方仍須依個別病患狀況與最新指引判斷。
+
+### 速查表 Quick Reference
+
+| 情境 | ✅ 首選 Preferred | ❌ 避免 Avoid |
+| --- | --- | --- |
+| 疼痛 Pain | Paracetamol | NSAIDs；近足月避免 opioids |
+| 高血壓 Hypertension | Labetalol、Nifedipine、Methyldopa | ACEi、ARB |
+| 抗凝血 Anticoagulation | LMWH（Enoxaparin 等） | Warfarin、DOACs |
+| 降血脂 Lipid-lowering | —（孕期停用） | Statins |
+| 抗生素 Antibiotics | Penicillins、Cephalosporins、Macrolides | Trimethoprim（第一孕期）、Tetracyclines、Fluoroquinolones、Nitrofurantoin（足月） |
+| 癲癇 Epilepsy | Lamotrigine、Levetiracetam | Sodium valproate |
 
 ### 疼痛控制 Pain Relief
 
-::: tip ✅ Preferred
-**Paracetamol** — the analgesic of choice throughout pregnancy. Established safety profile when used at the lowest effective dose for the shortest possible duration.
+::: tip ✅ 首選
+**Paracetamol** — 孕期止痛首選，安全性明確；以最低有效劑量、最短療程使用。
 :::
 
-::: danger ❌ Generally avoid
-**Ibuprofen, Naproxen, Diclofenac (NSAIDs)** — prostaglandin inhibition can cause fetal renal impairment, oligohydramnios (low amniotic fluid), and premature closure of the ductus arteriosus.
+::: danger ❌ 避免
+**NSAIDs（Ibuprofen、Naproxen、Diclofenac）** — 抑制前列腺素，可致胎兒腎功能損害、羊水過少，並使動脈導管提前關閉。
 :::
 
-::: warning ⚠️ Note on opioids
-**Codeine, Morphine, Tramadol** — use only if essential. Avoid near term due to the risk of neonatal respiratory depression and withdrawal.
+::: warning ⚠️ 鴉片類 Opioids
+**Codeine、Morphine、Tramadol** — 僅在必要時使用；接近足月應避免，以免新生兒呼吸抑制與戒斷。
 :::
 
 ### 高血壓 Hypertension
 
-::: tip ✅ Preferred
-**Labetalol, Nifedipine, Methyldopa** — the preferred antihypertensives in pregnancy due to their well-established maternal and foetal safety profiles.
+::: tip ✅ 首選
+**Labetalol、Nifedipine、Methyldopa** — 孕期抗高血壓首選，母體與胎兒安全性資料充分。
 :::
 
-::: danger ❌ Avoid
-**ACE inhibitors (e.g. Ramipril), ARBs (e.g. Losartan)** — avoid in pregnancy, particularly during the 2nd and 3rd trimesters, as they cross the placenta and can impair foetal renal development. Potential complications:
-
-- Oligohydramnios
-- Foetal renal dysgenesis
-- Skull hypoplasia
-- Neonatal renal failure
-- Foetal death in severe cases
+::: danger ❌ 避免
+**ACEi（如 Ramipril）、ARB（如 Losartan）** — 會通過胎盤，第二、三孕期尤其危險，損害胎兒腎臟發育。可能併發症：羊水過少、胎兒腎發育不良、顱骨發育不全、新生兒腎衰竭，嚴重者胎死腹中。
 :::
 
-### 抗凝血劑與降血脂藥 Anticoagulants & Lipid-lowering Drugs
+### 抗凝血劑與降血脂藥 Anticoagulants & Lipid-lowering
 
-::: tip ✅ Preferred
-**Low-molecular-weight heparin (LMWH) — Enoxaparin, Dalteparin, Tinzaparin** — LMWH does not cross the placenta, making it the anticoagulant of choice for most pregnant patients requiring anticoagulation.
+::: tip ✅ 首選
+**LMWH 低分子量肝素（Enoxaparin、Dalteparin、Tinzaparin）** — 不會通過胎盤，是孕期需抗凝時的首選。
 :::
 
-::: danger ❌ Avoid
-**Warfarin · DOACs (Rivaroxaban, Apixaban, Edoxaban) · Statins (Atorvastatin, Simvastatin)**
+::: danger ❌ 避免
 
-- **Warfarin:** crosses the placenta; causes fetal bleeding, miscarriage, and warfarin embryopathy (skeletal defects).
-- **DOACs:** lack of safety data.
-- **Statins:** discontinue 3 months before trying to conceive (cholesterol is essential for synthesis in the foetus).
+- **Warfarin** — 通過胎盤，造成胎兒出血、流產與 warfarin 胚胎病變（骨骼缺陷）。
+- **DOACs（Rivaroxaban、Apixaban、Edoxaban）** — 缺乏安全性資料。
+- **Statins（Atorvastatin、Simvastatin）** — 膽固醇為胎兒發育所需；建議計畫懷孕前 3 個月停用。
 :::
 
-### 抗生素（一）安全首選 Antibiotics (1) — First-line / Safe Options
+### 抗生素 Antibiotics
 
-::: tip ✅ Preferred (broad safety profile)
+::: tip ✅ 安全首選（安全性廣）
 
-- **Penicillins:** Amoxicillin, Phenoxymethylpenicillin, Co-amoxiclav.
-- **Cephalosporins:** Cefalexin, Cefuroxime.
-- **Macrolides:** Erythromycin (preferred if penicillin-allergic), Azithromycin.
+- **Penicillins** — Amoxicillin、Phenoxymethylpenicillin、Co-amoxiclav。
+- **Cephalosporins** — Cefalexin、Cefuroxime。
+- **Macrolides** — Erythromycin（對 penicillin 過敏者首選）、Azithromycin。
 :::
 
-::: warning ⚠️ The pregnancy exception — Nitrofurantoin
-Nitrofurantoin is highly effective for UTIs in pregnancy, **but it must be avoided at term (37+ weeks)** due to the risk of neonatal haemolytic anaemia.
+::: warning ⚠️ 特例 Nitrofurantoin
+治療孕期泌尿道感染很有效，但**足月（≥37 週）須避免**，以免新生兒溶血性貧血。
 :::
 
-### 抗生素（二）應避免者 Antibiotics (2) — Avoid Where Possible
+::: danger ❌ 避免
 
-::: danger ❌ Avoid — trimester-specific
-**Trimethoprim** — avoid in the 1st trimester. A folate antagonist that increases the risk of neural tube defects (e.g. spina bifida).
-:::
-
-::: danger ❌ Generally avoid throughout
-
-- **Tetracyclines** (Doxycycline, Lymecycline, Tetracycline) — impaired foetal bone growth and permanent staining of developing teeth.
-- **Fluoroquinolones** (Ciprofloxacin, Levofloxacin) — toxicity to developing foetal cartilage in animal studies.
+- **Trimethoprim** — 第一孕期避免；為葉酸拮抗劑，增加神經管缺陷（如脊柱裂）風險。
+- **Tetracyclines（Doxycycline、Lymecycline、Tetracycline）** — 影響胎兒骨骼生長並使牙齒永久染色。
+- **Fluoroquinolones（Ciprofloxacin、Levofloxacin）** — 動物實驗顯示對胎兒軟骨具毒性。
 :::
 
 ### 癲癇 Epilepsy
 
-::: tip ✅ Lower-risk options
-
-- **Lamotrigine & Levetiracetam (Keppra).**
-- Blood levels can drop significantly during pregnancy due to increased clearance — **monitoring is essential.**
+::: tip ✅ 低風險選擇
+**Lamotrigine、Levetiracetam（Keppra）** — 孕期血中濃度可能因清除率增加而顯著下降，須監測。
 :::
 
-::: danger ❌ Extremely high risk
-**Sodium Valproate** — high rate of neural tube defects, craniofacial malformations, and long-term neurodevelopmental / cognitive delays.
+::: danger ❌ 極高風險
+**Sodium valproate** — 高比例神經管缺陷、顱顏畸形，以及長期神經發育／認知遲緩。
 :::
 
-::: info 💡 Clinical pearl
-Never instruct a patient to abruptly stop an antiepileptic. Uncontrolled tonic-clonic seizures pose a massive hypoxia risk to both mother and foetus.
+::: info 💡 臨床重點
+切勿讓病人自行驟停抗癲癇藥；未控制的全身強直陣攣發作，會使母體與胎兒面臨嚴重缺氧風險。
 :::

@@ -10,7 +10,7 @@ export default defineConfig({
   // ── Site metadata ──────────────────────────────────────────────
   lang: "zh-TW",
   title: "Always Wonder",
-  description: "凝淨齋",
+  description: "Personal Blog",
   head: [
     [
       "script",
@@ -22,7 +22,7 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: `${base}logo/logo-1a1a1a.svg`,
+        href: `${base}logo/AW.svg`,
       },
     ],
     // ✅ ADD THESE THREE BELOW THE ICON LINK
@@ -53,7 +53,7 @@ export default defineConfig({
   // ── Theme config ───────────────────────────────────────────────
   themeConfig: {
     // 1. Site logo (optional — replace with your own)
-    logo: "/logo/logo-1a1a1a.svg",
+    logo: "/logo/AW.svg",
 
     // 2. Top navigation bar with hyperlinks
     nav: [

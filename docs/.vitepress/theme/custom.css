@@ -257,7 +257,7 @@ body {
   filter: invert(0);
 }
 .dark .VPNavBarTitle .logo {
-  filter: invert(1);
+  filter: invert(0);
 }
 
 /* ── Divider line (small/medium screens) ── */

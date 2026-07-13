@@ -72,10 +72,10 @@ watch(filteredPosts, detect);
     <div class="blog-hero">
       <h1>
         <span class="hero-icon">✦</span>
-        <span class="hero-text">靜心閣</span>
+        <span class="hero-text">Always Wonder</span>
         <span class="hero-icon">✦</span>
       </h1>
-      <p>心得 ✏️ | 日記 📒 | 分享 💡</p>
+      <p>保持好奇 ✦ 心得 ✏️ | 日記 📒 | 分享 💡</p>
       <div class="blog-hero__count">{{ posts.length }} 篇文章</div>
     </div>
 

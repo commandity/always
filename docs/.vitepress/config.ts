@@ -64,7 +64,7 @@ export default defineConfig({
         activeMatch: "^/(reference)/",
       },
       {
-        text: "靜心閣",
+        text: "Always Wonder",
         link: "/blog/index",
         activeMatch: "^/(blog)/",
       },

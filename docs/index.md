@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Always Wonder
-  text: 總是好奇 總是驚喜
-  tagline: 保持好奇心，人生總有驚喜
+  text: 總是好奇 🔍 總是驚喜 ✨
+  tagline: 保持好奇心，人生總有驚喜 🌱
   image:
     light: /logo/light-circle-hero.svg
     dark: /logo/dark-circle-hero.svg

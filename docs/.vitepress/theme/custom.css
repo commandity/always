@@ -102,6 +102,8 @@ body {
   height: 100%;
 }
 
+/* ── Home hero typography knobs — adjust size/weight/spacing here ──
+   font-size uses clamp(min, fluid, max) so it still scales on mobile. */
 .VPHero .name {
   background: linear-gradient(
     135deg,
@@ -111,6 +113,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-size: clamp(2.2rem, 6vw, 3.6rem); /* 主名稱字級 */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
 /* Solid colour (no gradient text-clip) so the emoji icons keep their
@@ -118,11 +124,17 @@ body {
 .VPHero .text {
   color: var(--vp-c-text-1);
   -webkit-text-fill-color: currentColor;
+  font-size: clamp(1.7rem, 4.6vw, 2.8rem); /* 標語字級 */
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
 }
 
 .VPHero .tagline {
   color: var(--vp-c-text-2);
   -webkit-text-fill-color: currentColor;
+  font-size: clamp(1rem, 2.4vw, 1.35rem); /* 副標字級 */
+  font-weight: 500;
 }
 
 .VPHero .image-container {

@@ -68,35 +68,105 @@ title: 水疱性病灶鑑別診斷與治療 — Differential Diagnosis of Vesicu
 
 ### 依「最主要伴隨症狀」進一步分流 Further Triage by Predominant Symptom
 
-```
-水疱 + 發燒/前驅症狀
-    │
-    ├─ 單側皮節分布 + 疼痛在先 → 帶狀疱疹
-    ├─ 全身散在 + 同心圓分布（向心性離心擴散）→ 水痘
-    ├─ 口腔潰瘍 + 手足水疱 → 手足口病
-    ├─ 黏膜大量受損 + 標靶病灶 → SJS/TEN、多形性紅斑
-    └─ 皮膚廣泛剝離 + Nikolsky徵 → SSSS（金黃色葡萄球菌燙傷樣皮膚症候群）
+<div style="margin:1.6rem 0;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.4rem;border-radius:999px;background:#e11d48;color:#fff;font-weight:700;text-align:center;letter-spacing:0.02em;">水疱 + 發燒／前驅症狀 Vesicles + fever / prodrome</span>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
+  <div style="display:flex;flex-direction:column;gap:0.6rem;">
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #e11d48;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;display:flex;align-items:center;">帶狀疱疹 Herpes zoster</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">單側皮節分布，疼痛在先</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #e11d48;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;display:flex;align-items:center;">水痘 Varicella</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">全身散在，向心性分布（離心擴散）</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #e11d48;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;display:flex;align-items:center;">手足口病 HFMD</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">口腔潰瘍 ＋ 手足水疱</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #e11d48;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;display:flex;align-items:center;">SJS/TEN、多形性紅斑</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">黏膜大量受損 ＋ 標靶病灶</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #e11d48;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;display:flex;align-items:center;">SSSS 燙傷樣皮膚症候群</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">皮膚廣泛剝離 ＋ Nikolsky 徵</div>
+    </div>
+  </div>
+</div>
 
-水疱 + 劇癢
-    │
-    ├─ 肘膝伸側群聚 + 腸胃症狀 → 皰疹樣皮炎（乳糜瀉）
-    ├─ 老年人 + 緊張性大水疱 → 大皰性類天皰瘡
-    ├─ 妊娠晚期 + 臍周開始 → 妊娠類天皰瘡
-    ├─ 手掌足底深部小水疱 → 汗皰疹
-    └─ 線狀排列 + 戶外活動史 → 接觸性皮膚炎（毒藤/蟲咬）
+<div style="margin:1.6rem 0;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.4rem;border-radius:999px;background:#d97706;color:#fff;font-weight:700;text-align:center;letter-spacing:0.02em;">水疱 + 劇癢 Vesicles + intense pruritus</span>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
+  <div style="display:flex;flex-direction:column;gap:0.6rem;">
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #d97706;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(217,119,6,0.10);font-weight:700;color:#b45309;font-size:0.82rem;display:flex;align-items:center;">皰疹樣皮炎（乳糜瀉）</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">肘膝伸側群聚 ＋ 腸胃症狀</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #d97706;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(217,119,6,0.10);font-weight:700;color:#b45309;font-size:0.82rem;display:flex;align-items:center;">大皰性類天皰瘡</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">老年人 ＋ 緊張性大水疱</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #d97706;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(217,119,6,0.10);font-weight:700;color:#b45309;font-size:0.82rem;display:flex;align-items:center;">妊娠類天皰瘡</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">妊娠晚期 ＋ 臍周開始</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #d97706;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(217,119,6,0.10);font-weight:700;color:#b45309;font-size:0.82rem;display:flex;align-items:center;">汗皰疹 Dyshidrotic eczema</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">手掌足底深部小水疱</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #d97706;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(217,119,6,0.10);font-weight:700;color:#b45309;font-size:0.82rem;display:flex;align-items:center;">接觸性皮膚炎（毒藤/蟲咬）</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">線狀排列 ＋ 戶外活動史</div>
+    </div>
+  </div>
+</div>
 
-水疱 + 黏膜侵犯（口腔/眼/生殖器）
-    │
-    ├─ 鬆弛性水疱 + 口腔糜爛在先 → 天皰瘡
-    ├─ 用藥史 + 標靶病灶 + 黏膜廣泛剝離 → SJS/TEN
-    └─ 反覆發作 + 生殖器或口唇 → 單純疱疹病毒（HSV）
+<div style="margin:1.6rem 0;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.4rem;border-radius:999px;background:#7c3aed;color:#fff;font-weight:700;text-align:center;letter-spacing:0.02em;">水疱 + 黏膜侵犯（口腔／眼／生殖器）</span>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
+  <div style="display:flex;flex-direction:column;gap:0.6rem;">
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #7c3aed;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(124,58,237,0.10);font-weight:700;color:#6d28d9;font-size:0.82rem;display:flex;align-items:center;">天皰瘡 Pemphigus</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">鬆弛性水疱 ＋ 口腔糜爛在先</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #7c3aed;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(124,58,237,0.10);font-weight:700;color:#6d28d9;font-size:0.82rem;display:flex;align-items:center;">SJS/TEN</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">用藥史 ＋ 標靶病灶 ＋ 黏膜廣泛剝離</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #7c3aed;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(124,58,237,0.10);font-weight:700;color:#6d28d9;font-size:0.82rem;display:flex;align-items:center;">單純疱疹病毒 HSV</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">反覆發作 ＋ 生殖器或口唇</div>
+    </div>
+  </div>
+</div>
 
-水疱 + 無痛/無癢，慢性病程
-    │
-    ├─ 糖尿病史 + 突發無痛水疱 → 糖尿病性水疱（bullosis diabeticorum）
-    ├─ 肝病/光敏感 + 手背 → 遲發性皮膚紫質症（PCT）
-    └─ 摩擦部位 + 近期穿新鞋/運動 → 摩擦性水疱
-```
+<div style="margin:1.6rem 0;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.4rem;border-radius:999px;background:#0d9488;color:#fff;font-weight:700;text-align:center;letter-spacing:0.02em;">水疱 + 無痛／無癢，慢性病程</span>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
+  <div style="display:flex;flex-direction:column;gap:0.6rem;">
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #0d9488;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(13,148,136,0.10);font-weight:700;color:#0f766e;font-size:0.82rem;display:flex;align-items:center;">糖尿病性水疱 Bullosis diabeticorum</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">糖尿病史 ＋ 突發無痛水疱</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #0d9488;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(13,148,136,0.10);font-weight:700;color:#0f766e;font-size:0.82rem;display:flex;align-items:center;">遲發性皮膚紫質症 PCT</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">肝病／光敏感 ＋ 手背</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #0d9488;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.75rem;background:rgba(13,148,136,0.10);font-weight:700;color:#0f766e;font-size:0.82rem;display:flex;align-items:center;">摩擦性水疱 Friction blister</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-size:0.82rem;color:var(--vp-c-text-2);line-height:1.55;display:flex;align-items:center;">摩擦部位 ＋ 近期穿新鞋／運動</div>
+    </div>
+  </div>
+</div>
 
 ## 第三步：依伴隨症狀詳細分類表 Step 3: Detailed Classification by Symptom
 

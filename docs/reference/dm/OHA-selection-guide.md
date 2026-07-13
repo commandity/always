@@ -19,25 +19,56 @@ T2DM 治療以 **Metformin 為第一線**，依據共病症、A1C 目標、患�
 
 ## 選藥決策流程 Drug Selection Algorithm
 
-```mermaid
-flowchart TD
-    A[T2DM 確診] --> B{eGFR ≥ 30?}
-    B -->|是| C[Metformin 第一線]
-    B -->|否| D[避免 Metformin]
-    C --> E{有 HF 或 CKD?}
-    E -->|是| F[加 SGLT2i]
-    E -->|否| G{有 ASCVD?}
-    G -->|是| H[加 GLP-1 RA 或 SGLT2i]
-    G -->|否| I{肥胖 BMI ≥ 30?}
-    I -->|是| J[加 GLP-1 RA]
-    I -->|否| K{老年 / 衰弱?}
-    K -->|是| L[加 DPP-4i]
-    K -->|否| M[A1C 缺口評估]
-    M -->|小缺口 < 7.5%| N[DPP-4i]
-    M -->|中缺口 7.5-9%| O[DPP-4i 或 SGLT2i]
-    M -->|大缺口 ≥ 9%| P[SU 或 SGLT2i]
-    M -->|≥ 10% + 症狀| Q[考慮 Insulin]
-```
+<div style="max-width:680px;margin:1.6rem auto;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.5rem;border-radius:999px;background:var(--vp-c-brand-1);color:#fff;font-weight:700;letter-spacing:0.02em;">T2DM 確診</span>
+  </div>
+<div style="text-align:center;color:var(--vp-c-text-3);font-size:1.15rem;line-height:1;margin:0.22rem 0;">↓</div>  <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #6366f1;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+    <div style="flex:0 0 46%;max-width:220px;padding:0.55rem 0.8rem;background:rgba(99,102,241,0.10);font-weight:700;color:#4f46e5;font-size:0.84rem;display:flex;align-items:center;">eGFR ≥ 30 ?</div>
+    <div style="flex:1;padding:0.5rem 0.85rem;display:flex;flex-direction:column;gap:0.3rem;justify-content:center;font-size:0.85rem;">
+      <div><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(16,185,129,0.15);color:#059669;font-weight:700;font-size:0.78rem;">是</span> → <b style="color:#059669;">Metformin 第一線</b></div>
+      <div><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(239,68,68,0.12);color:#dc2626;font-weight:700;font-size:0.78rem;">否</span> → <span style="color:#dc2626;font-weight:700;">避免 Metformin</span></div>
+    </div>
+  </div>
+  <div style="text-align:center;color:var(--vp-c-text-3);font-size:0.8rem;margin:0.3rem 0;">Metformin 後，依共病 → 肥胖 → 年齡 → A1C 逐步加藥 ↓</div>
+  <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #6366f1;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+    <div style="flex:0 0 46%;max-width:220px;padding:0.55rem 0.8rem;background:rgba(99,102,241,0.10);font-weight:700;color:#4f46e5;font-size:0.84rem;display:flex;align-items:center;">有 HF 或 CKD ?</div>
+    <div style="flex:1;padding:0.55rem 0.85rem;display:flex;align-items:center;gap:0.4rem;font-size:0.85rem;"><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(16,185,129,0.15);color:#059669;font-weight:700;font-size:0.78rem;">是</span> → <b style="color:var(--vp-c-text-1);">加 SGLT2i</b></div>
+  </div>
+<div style="text-align:center;font-size:0.85rem;margin:0.2rem 0;"><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(239,68,68,0.12);color:#dc2626;font-weight:700;font-size:0.78rem;">否</span> <span style="color:var(--vp-c-text-3);">↓ 續評估</span></div>  <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #6366f1;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+    <div style="flex:0 0 46%;max-width:220px;padding:0.55rem 0.8rem;background:rgba(99,102,241,0.10);font-weight:700;color:#4f46e5;font-size:0.84rem;display:flex;align-items:center;">有 ASCVD ?</div>
+    <div style="flex:1;padding:0.55rem 0.85rem;display:flex;align-items:center;gap:0.4rem;font-size:0.85rem;"><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(16,185,129,0.15);color:#059669;font-weight:700;font-size:0.78rem;">是</span> → <b style="color:var(--vp-c-text-1);">加 GLP-1 RA 或 SGLT2i</b></div>
+  </div>
+<div style="text-align:center;font-size:0.85rem;margin:0.2rem 0;"><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(239,68,68,0.12);color:#dc2626;font-weight:700;font-size:0.78rem;">否</span> <span style="color:var(--vp-c-text-3);">↓ 續評估</span></div>  <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #6366f1;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+    <div style="flex:0 0 46%;max-width:220px;padding:0.55rem 0.8rem;background:rgba(99,102,241,0.10);font-weight:700;color:#4f46e5;font-size:0.84rem;display:flex;align-items:center;">肥胖 BMI ≥ 30 ?</div>
+    <div style="flex:1;padding:0.55rem 0.85rem;display:flex;align-items:center;gap:0.4rem;font-size:0.85rem;"><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(16,185,129,0.15);color:#059669;font-weight:700;font-size:0.78rem;">是</span> → <b style="color:var(--vp-c-text-1);">加 GLP-1 RA</b></div>
+  </div>
+<div style="text-align:center;font-size:0.85rem;margin:0.2rem 0;"><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(239,68,68,0.12);color:#dc2626;font-weight:700;font-size:0.78rem;">否</span> <span style="color:var(--vp-c-text-3);">↓ 續評估</span></div>  <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #6366f1;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+    <div style="flex:0 0 46%;max-width:220px;padding:0.55rem 0.8rem;background:rgba(99,102,241,0.10);font-weight:700;color:#4f46e5;font-size:0.84rem;display:flex;align-items:center;">老年 / 衰弱 ?</div>
+    <div style="flex:1;padding:0.55rem 0.85rem;display:flex;align-items:center;gap:0.4rem;font-size:0.85rem;"><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(16,185,129,0.15);color:#059669;font-weight:700;font-size:0.78rem;">是</span> → <b style="color:var(--vp-c-text-1);">加 DPP-4i</b></div>
+  </div>
+<div style="text-align:center;font-size:0.85rem;margin:0.2rem 0;"><span style="display:inline-block;padding:0 0.45rem;border-radius:5px;background:rgba(239,68,68,0.12);color:#dc2626;font-weight:700;font-size:0.78rem;">否</span> <span style="color:var(--vp-c-text-3);">↓ 續評估</span></div>  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.4rem 1.2rem;border-radius:10px;border:1.5px solid #f59e0b;background:rgba(245,158,11,0.10);color:#b45309;font-weight:700;font-size:0.85rem;">A1C 缺口評估 Assess A1C gap</span>
+  </div>
+<div style="text-align:center;color:var(--vp-c-text-3);font-size:1.15rem;line-height:1;margin:0.22rem 0;">↓</div>  <div style="display:flex;flex-direction:column;gap:0.5rem;">
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #10b981;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.8rem;background:rgba(16,185,129,0.10);font-weight:700;color:#059669;font-size:0.83rem;display:flex;align-items:center;">小缺口 &lt; 7.5%</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-weight:700;color:var(--vp-c-text-1);font-size:0.85rem;display:flex;align-items:center;">DPP-4i</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #f59e0b;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.8rem;background:rgba(245,158,11,0.10);font-weight:700;color:#b45309;font-size:0.83rem;display:flex;align-items:center;">中缺口 7.5–9%</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-weight:700;color:var(--vp-c-text-1);font-size:0.85rem;display:flex;align-items:center;">DPP-4i 或 SGLT2i</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #ea580c;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.8rem;background:rgba(234,88,12,0.10);font-weight:700;color:#c2410c;font-size:0.83rem;display:flex;align-items:center;">大缺口 ≥ 9%</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-weight:700;color:var(--vp-c-text-1);font-size:0.85rem;display:flex;align-items:center;">SU 或 SGLT2i</div>
+    </div>
+    <div style="display:flex;border:1px solid var(--vp-c-divider);border-left:4px solid #dc2626;border-radius:8px;overflow:hidden;background:var(--vp-c-bg-soft);">
+      <div style="flex:0 0 46%;max-width:210px;padding:0.5rem 0.8rem;background:rgba(220,38,38,0.10);font-weight:700;color:#b91c1c;font-size:0.83rem;display:flex;align-items:center;">≥ 10% + 症狀</div>
+      <div style="flex:1;padding:0.5rem 0.85rem;font-weight:700;color:var(--vp-c-text-1);font-size:0.85rem;display:flex;align-items:center;">考慮 Insulin</div>
+    </div>
+  </div>
+</div>
 
 ## A1C 治療閾值與藥物啟動時機
 

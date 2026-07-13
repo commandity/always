@@ -224,7 +224,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
         </div>
         <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;">④ 系統性疾病篩查 Systemic screen</div>
-          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">搔癢為主 → TSH、LFT、腎功能、CBC<br>體重減輕＋B 症狀 → 淋巴瘤篩查（CBC、LDH、CT）</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;"><ul style="margin:0;padding-left:1.15rem;"><li>搔癢為主 → TSH、LFT、腎功能、CBC</li><li>體重減輕＋B 症狀 → 淋巴瘤篩查（CBC、LDH、CT）</li></ul></div>
         </div>
         <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;">⑤ 皮膚活檢排除 CTCL</div>

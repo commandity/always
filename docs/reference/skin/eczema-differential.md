@@ -24,18 +24,56 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 
 ## 第二步：臨床思考演算法 Clinical Algorithm
 
-```
-搔癢性濕疹樣皮疹
-  → [分布特徵 | 誘發因素 | 病史特徵]（三軸同步評估）
-    → 接觸史？
-      是 → 接觸性皮膚炎（刺激性 or 過敏性？）
-      否 → 異位體質？
-        是 → 異位性皮膚炎（排除繼發感染）
-        否 → 進一步形態學評估（部位 / 形狀 / 對稱性 / 邊界）
-          ├─ 部位特定 ── 脂漏性皮炎、汗皰疹、錢幣狀濕疹、鬱積性皮炎
-          ├─ 全身分布 ── 感染性濕疹、藥物疹
-          └─ 系統性疾病線索 ── 見第三步
-```
+<div style="margin:1.75rem 0;">
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.45rem 1.5rem;border-radius:999px;background:var(--vp-c-brand-1);color:#fff;font-weight:700;letter-spacing:0.02em;">搔癢性濕疹樣皮疹 Pruritic Eczematous Rash</span>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
+  <div style="display:flex;justify-content:center;">
+    <span style="display:inline-block;padding:0.4rem 1.2rem;border-radius:10px;border:1px solid var(--vp-c-divider);background:var(--vp-c-bg-soft);color:var(--vp-c-text-1);font-weight:700;font-size:0.86rem;text-align:center;">三軸同步評估：分布特徵 · 誘發因素 · 病史特徵</span>
+  </div>
+  <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
+  <div style="display:flex;flex-wrap:wrap;gap:1.1rem;align-items:flex-start;justify-content:center;">
+    <div style="flex:1 1 210px;display:flex;flex-direction:column;align-items:center;gap:0.4rem;">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #f59e0b;background:rgba(245,158,11,0.10);color:#d97706;font-weight:700;font-size:0.9rem;text-align:center;">① 接觸史（+）<br>Contact history</span>
+      <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.05rem 0;">↓</div>
+      <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:3px solid #f59e0b;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="padding:0.4rem 0.75rem;background:rgba(245,158,11,0.10);font-weight:700;color:#d97706;font-size:0.82rem;">接觸性皮膚炎 Contact dermatitis</div>
+        <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">刺激性 or 過敏性？（Irritant vs Allergic）</div>
+      </div>
+    </div>
+    <div style="flex:1 1 210px;display:flex;flex-direction:column;align-items:center;gap:0.4rem;">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #10b981;background:rgba(16,185,129,0.10);color:#059669;font-weight:700;font-size:0.9rem;text-align:center;">② 異位體質（+）<br>Atopic diathesis</span>
+      <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.05rem 0;">↓</div>
+      <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:3px solid #10b981;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="padding:0.4rem 0.75rem;background:rgba(16,185,129,0.10);font-weight:700;color:#059669;font-size:0.82rem;">異位性皮膚炎 Atopic dermatitis</div>
+        <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">排除繼發感染（secondary infection）</div>
+      </div>
+    </div>
+    <div style="flex:1.6 1 270px;display:flex;flex-direction:column;align-items:center;gap:0.4rem;">
+      <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #0ea5e9;background:rgba(14,165,233,0.09);color:#0284c7;font-weight:700;font-size:0.9rem;text-align:center;">③ 皆（−）→ 形態學評估<br>部位 / 形狀 / 對稱性 / 邊界</span>
+      <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.1rem;line-height:1;margin:0.05rem 0;">↓</div>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;width:100%;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0ea5e9;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.4rem 0.75rem;background:rgba(14,165,233,0.09);font-weight:700;color:#0284c7;font-size:0.82rem;">部位特定 Site-specific</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">脂漏性皮炎、汗皰疹、錢幣狀濕疹、鬱積性皮炎</div>
+        </div>
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0ea5e9;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.4rem 0.75rem;background:rgba(14,165,233,0.09);font-weight:700;color:#0284c7;font-size:0.82rem;">全身分布 Generalized</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">感染性濕疹、藥物疹</div>
+        </div>
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0ea5e9;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+          <div style="padding:0.4rem 0.75rem;background:rgba(14,165,233,0.09);font-weight:700;color:#0284c7;font-size:0.82rem;">系統性疾病線索 Systemic clues</div>
+          <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">見第三步 → 系統性疾病相關濕疹</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+::: tip 判讀順序 Sequential logic
+依序評估：先問**接觸史**（陽性 → 接觸性皮膚炎）；否則問**異位體質**（陽性 → 異位性皮膚炎，並排除繼發感染）；兩者皆陰性，再進入**形態學評估**（部位／形狀／對稱性／邊界）分流。
+:::
 
 ## 第三步：主要鑑別診斷分類 Step 3: Major Differential Categories
 

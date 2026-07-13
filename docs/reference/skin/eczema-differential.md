@@ -209,24 +209,24 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
     <span style="display:inline-block;padding:0.45rem 1.4rem;border-radius:999px;background:#e11d48;color:#fff;font-weight:700;text-align:center;letter-spacing:0.02em;">成人新發難治性全身濕疹 New-onset refractory generalized eczema</span>
   </div>
   <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
-  <div style="display:flex;flex-wrap:wrap;gap:0.7rem;">
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+  <div style="display:flex;flex-direction:column;gap:0.6rem;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;">① 排除藥物疹 Drug eruption</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">近 3 個月內是否有新藥？</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;">② 排除接觸性皮膚炎 Contact</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">職業史、新產品？→ 貼片試驗（patch test）</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;">③ 排除感染誘發 Infection</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">疥瘡？繼發感染？</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;">④ 系統性疾病篩查 Systemic screen</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;"><ul style="margin:0;padding-left:1.15rem;"><li>搔癢為主 → TSH、LFT、腎功能、CBC</li><li>體重減輕＋B 症狀 → 淋巴瘤篩查（CBC、LDH、CT）</li></ul></div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #e11d48;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(225,29,72,0.08);font-weight:700;color:#be123c;font-size:0.82rem;">⑤ 皮膚活檢排除 CTCL</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">Mycosis fungoides（蕈狀肉芽腫）</div>
         </div>
@@ -240,20 +240,20 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
     <span style="display:inline-block;padding:0.45rem 1.4rem;border-radius:999px;background:#d97706;color:#fff;font-weight:700;text-align:center;letter-spacing:0.02em;">單一部位長期不癒（> 3 個月）的「濕疹」</span>
   </div>
   <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
-  <div style="display:flex;flex-wrap:wrap;gap:0.7rem;">
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #d97706;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+  <div style="display:flex;flex-direction:column;gap:0.6rem;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #d97706;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(217,119,6,0.10);font-weight:700;color:#b45309;font-size:0.82rem;">乳頭 Nipple</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">Paget 病（乳腺管癌）</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #d97706;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #d97706;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(217,119,6,0.10);font-weight:700;color:#b45309;font-size:0.82rem;">肛門生殖器 Anogenital</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">Extramammary Paget 病、Bowen 病</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #d97706;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #d97706;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(217,119,6,0.10);font-weight:700;color:#b45309;font-size:0.82rem;">頭皮單側 Unilateral scalp</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">Discoid lupus、脂漏性皮炎、CTCL</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #d97706;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #d97706;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(217,119,6,0.10);font-weight:700;color:#b45309;font-size:0.82rem;">對類固醇無反應 Steroid-refractory</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">任何部位 → 活檢必做（biopsy）</div>
         </div>
@@ -267,32 +267,32 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
     <span style="display:inline-block;padding:0.45rem 1.4rem;border-radius:999px;background:#0284c7;color:#fff;font-weight:700;text-align:center;letter-spacing:0.02em;">全身搔癢但皮疹不明顯 Generalized pruritus without rash</span>
   </div>
   <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
-  <div style="display:flex;flex-wrap:wrap;gap:0.7rem;">
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+  <div style="display:flex;flex-direction:column;gap:0.6rem;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(2,132,199,0.09);font-weight:700;color:#0369a1;font-size:0.82rem;">皮膚 Skin</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">乾燥症（xerosis）、疥瘡（nocturnal itch）</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(2,132,199,0.09);font-weight:700;color:#0369a1;font-size:0.82rem;">腎臟 Renal</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">BUN/Cr → 尿毒症搔癢</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(2,132,199,0.09);font-weight:700;color:#0369a1;font-size:0.82rem;">肝臟 Hepatic</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">LFT、膽汁酸 → 膽汁鬱積性搔癢</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(2,132,199,0.09);font-weight:700;color:#0369a1;font-size:0.82rem;">血液 Hematologic</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">CBC → 真性紅血球增多症（aquagenic pruritus）、何杰金氏淋巴瘤</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(2,132,199,0.09);font-weight:700;color:#0369a1;font-size:0.82rem;">甲狀腺 Thyroid</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">TSH → 甲亢（warm, moist）／甲低（dry）</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(2,132,199,0.09);font-weight:700;color:#0369a1;font-size:0.82rem;">神經性 Neuropathic</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">纖維肌痛、帶狀疱疹後神經痛</div>
         </div>
-        <div style="flex:1 1 240px;border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
+        <div style="border:1px solid var(--vp-c-divider);border-top:3px solid #0284c7;border-radius:10px;background:var(--vp-c-bg-soft);overflow:hidden;">
           <div style="padding:0.4rem 0.75rem;background:rgba(2,132,199,0.09);font-weight:700;color:#0369a1;font-size:0.82rem;">心因性 Psychogenic</div>
           <div style="padding:0.45rem 0.75rem;font-size:0.8rem;color:var(--vp-c-text-2);line-height:1.5;">排除器質性病因後診斷</div>
         </div>

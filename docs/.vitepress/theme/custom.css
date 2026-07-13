@@ -1388,17 +1388,19 @@ html {
    (the .nav-hide class is toggled by a scroll-direction script in config.ts)
    ══════════════════════════════════════════════════════════════════ */
 @media (max-width: 959px) {
+  /* !important needed to beat VitePress's scoped .VPNav[data-v-*] rules */
   .VPNav {
-    position: sticky;
-    top: 0;
+    position: sticky !important;
+    top: 0 !important;
     transition:
       transform 0.3s ease,
-      background-color 0.5s;
+      background-color 0.5s !important;
+    will-change: transform;
   }
   /* keep the local-nav (menu / outline) bar just below the top nav while shown */
   .VPLocalNav {
-    top: var(--vp-nav-height);
-    transition: top 0.3s ease;
+    top: var(--vp-nav-height) !important;
+    transition: top 0.3s ease !important;
   }
   /* give the revealed bar a solid background once scrolled off the very top */
   .VPNavBar.home:not(.top) {
@@ -1406,9 +1408,9 @@ html {
   }
   /* hidden state: slide the top nav up; local-nav reclaims the top edge */
   html.nav-hide .VPNav {
-    transform: translateY(-100%);
+    transform: translateY(-100%) !important;
   }
   html.nav-hide .VPLocalNav {
-    top: 0;
+    top: 0 !important;
   }
 }

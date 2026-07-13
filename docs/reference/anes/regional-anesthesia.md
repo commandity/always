@@ -710,9 +710,9 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 - 收肌管（Hunter's canal / adductor canal）
 - 位於大腿中段內側
-- 前界：股薄肌（sartorius）（sartorius）
-- 後界：內收大肌（adductor magnus）（adductor magnus）
-- 外界：股內側肌（vastus medialis）（vastus medialis）
+- 前界：股薄肌（sartorius）
+- 後界：內收大肌（adductor magnus）
+- 外界：股內側肌（vastus medialis）
 - 內含：股動脈、隱神經（saphenous nerve）
 
 **超音波引導 Ultrasound-guided**
@@ -738,44 +738,176 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **適應症 Indications**
 
-- 膝關節以下手術
-- 足部手術
-- 腳踝手術
-- 下肢後側手術
+- 膝關節以下手術（knee, lower leg, ankle, foot）
 - 與股神經阻斷聯合用於全下肢手術
+- 下肢截肢術（尤其適合 continuous catheter）
+- 慢性疼痛管理
+
+**禁忌症 Contraindications**
+
+- 局部感染或褥瘡
+- 凝血功能異常
+- 已有中樞或周邊神經系統病變
+- 局部麻醉藥物過敏
 
 **解剖 Anatomy**
 
-- 坐骨（ischium）神經（L4–S3）
-- 經梨狀肌（piriformis）下孔（greater sciatic foramen）離開骨盆
-- 在梨狀肌（piriformis）下方穿出
-- 在大腿後側走行，於膕窩上方分為脛神經與腓總神經
+- 坐骨神經（L4–S3）為人體最大周邊神經，直徑 > 1 cm
+- 起自腰骶叢（lumbosacral trunk + S1–S3），梨狀肌（piriformis）前方形成
+- 經坐骨大孔（greater sciatic foramen）離開骨盆，梨狀肌下方穿出
+- 於大腿後側走行，大轉子（greater trochanter）與坐骨結節（ischial tuberosity）之間下降
+- 於股骨下 1/3 分為脛神經（tibial）與腓總神經（common peroneal）；此分叉可能發生於任何近端水平
+- 15% 個案中，腓總神經與脛神經自 sacral plexus 即分開，腓總神經常穿過梨狀肌
+- 脛神經與腓總神經各有獨立神經外膜（epineurium），外覆一層緻密結締組織稱為「paraneural sheath」，注射於此鞘內（epineurium 外）可快速起效且阻斷完全
 
-**阻斷位置 Block Locations**
+**阻斷位置比較 Block Location Comparison**
 
-| 位置                       | 描述                                                   | 適應症        |
-| -------------------------- | ------------------------------------------------------ | ------------- |
-| **Gluteal (infragluteal)** | 臀大肌（gluteus maximus）下方，臀橫紋水平              | 下肢手術      |
-| **Subgluteal**             | 臀大肌（gluteus maximus）深面，坐骨（ischium）結節旁   | 下肢手術      |
-| **Supragluteal**           | 臀大肌（gluteus maximus）淺面，坐骨（ischium）結節上方 | 較少使用      |
-| **Popliteal**              | 膕窩上方                                               | 足部/腳踝手術 |
+| 位置                          | 深度    | 適應症                           | 特點                                                  |
+| ----------------------------- | ------- | -------------------------------- | ----------------------------------------------------- |
+| **Classic posterior (Labat)** | 5–8 cm  | 下肢手術                         | 最經典，技術成熟                                      |
+| **Parasacral**                | 6–8 cm  | 膝/下肢手術，continuous catheter | 類似 plexus block，可影響 obturator nerve；成功率 94% |
+| **Subgluteal**                | 較淺    | 下肢手術                         | 患者不適感較少，超音波引導最常用                      |
+| **Anterior**                  | 8–12 cm | 膝下/踝/足手術（無法翻身時）     | 仰臥位，技術難度高，不適合 catheter                   |
+| **Popliteal**                 | 較淺    | 足部/腳踝手術                    | 保留股四頭肌，門診首選                                |
 
-**超音波引導 Ultrasound-guided（Subgluteal approach）**
+**神經分佈 Anesthesia Distribution**
 
-| 項目     | 內容                                                   |
-| -------- | ------------------------------------------------------ |
-| **探頭** | 低頻曲面 2–5 MHz（深部）或高頻線性 10–15 MHz           |
-| **位置** | 坐骨（ischium）結節外側，臀大肌（gluteus maximus）深面 |
-| **目標** | 坐骨（ischium）神經（呈橢圓形，低回音束狀結構）        |
-| **進針** | 從外側向內進針（lateral-to-medial），in-plane          |
-| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL         |
-| **確認** | 藥物擴散包圍坐骨（ischium）神經                        |
+坐骨神經阻斷提供：大腿後側皮膚、膕繩肌（hamstrings）、二頭肌（biceps femoris）、部分髖膝關節、膝以下全部皮膚（除內側隱神經 saphenous nerve 支配區域）。若需全下肢麻醉，需加做股神經（femoral）或腰叢（lumbar plexus）阻斷。
 
-**併發症 Complications**
+**局部麻醉藥物選擇 Local Anesthetic Choices**
 
-- 坐骨（ischium）神經損傷
-- 血管內注射
-- 局部血腫
+| 藥物                    | 起效時間  | 麻醉時間 | 止痛時間 |
+| ----------------------- | --------- | -------- | -------- |
+| **3% 2-Chloroprocaine** | 10–15 min | 2 hr     | 2.5 hr   |
+| **1.5% Mepivacaine**    | 10–15 min | 4–5 hr   | 5–8 hr   |
+| **2% Lidocaine**        | 10–20 min | 5–6 hr   | 5–8 hr   |
+| **0.5% Ropivacaine**    | 15–20 min | 6–12 hr  | 6–24 hr  |
+| **0.75% Ropivacaine**   | 10–15 min | 8–12 hr  | 8–24 hr  |
+| **0.5% Bupivacaine**    | 15–30 min | 8–16 hr  | 10–48 hr |
+
+- 一般總量：20–25 mL 即足夠（即便神經粗大）
+- 截肢術可加 Epinephrine 延長止痛
+
+#### 5.4.1 經典後路 Classic Posterior Approach (Labat/Winnie)
+
+**體表定位 Landmarks**
+
+1. 大轉子（greater trochanter）
+2. 後上髂棘（PSIS, posterior superior iliac spine）
+3. 兩標記連線中點，向尾側 4 cm 為進針點
+
+**技術 Technique**
+
+| 項目         | 內容                                                                     |
+| ------------ | ------------------------------------------------------------------------ |
+| **患者姿勢** | 側臥位，阻斷側在上，稍向前傾斜；阻斷側腳置於對側腳上（方便觀察腳趾抽動） |
+| **觸診**     | 觸診手手指用力按壓臀大肌，減少皮膚-神經距離並穩定解剖                    |
+| **進針**     | 垂直皮膚進針，神經刺激器初始設 1.0–1.5 mA                                |
+| **目標反應** | 膕繩肌（hamstrings）、小腿、腳或腳趾抽動（0.3–0.5 mA）                   |
+| **深度**     | 通常 5–8 cm                                                              |
+| **藥物**     | 15–25 mL 局部麻醉藥物                                                    |
+| **確認**     | 回抽無血後緩慢注射；任何阻力應退針 1 mm 再嘗試                           |
+
+**神經刺激反應解讀 Interpreting Responses**
+
+| 反應                        | 解讀                             | 處理                   |
+| --------------------------- | -------------------------------- | ---------------------- |
+| **臀大肌抽動**              | 針太淺                           | 繼續推進               |
+| **觸及骨頭但無臀肌抽動**    | 針太內側（薦骨）或太外側（髂骨） | 稍向尾外側重新定位     |
+| **膕繩肌抽動**              | 坐骨神經主幹刺激（可接受）       | 注射藥物               |
+| **腳/腳趾抽動**             | 坐骨神經刺激（最佳）             | 注射藥物               |
+| **針深 10 cm 無反應無骨頭** | 針穿過坐骨切跡                   | 退針稍向外上方重新定位 |
+| **生殖器感覺異常**          | 陰部神經刺激（太內側太尾側）     | 退針稍向頭外側重新定位 |
+
+#### 5.4.2 旁薦骨路 Parasacral Approach
+
+Mansour (1993) 描述，具 plexus block 特性，可影響整個 sacral plexus 及 obturator nerve。Ripart 報告 400 例成功率 94%。特別適合 continuous catheter。
+
+**體表定位 Landmarks**
+
+1. 後上髂棘（PSIS）
+2. 坐骨結節（ischial tuberosity, IT）
+3. PSIS 至 IT 連線，距 PSIS 尾側 6 cm 為進針點
+
+**技術 Technique**
+
+| 項目         | 內容                                                       |
+| ------------ | ---------------------------------------------------------- |
+| **患者姿勢** | 側臥位，阻斷側在上，髖膝彎曲                               |
+| **進針**     | 垂直皮膚進針，緩慢推進                                     |
+| **觸及骨頭** | 通常為薦骨翼或髂骨（坐骨切跡上方）；退針後向尾外側重新定位 |
+| **深度限制** | 觸及骨頭後，不應再推進 > 2 cm（避免穿入骨盆）              |
+| **目標反應** | 膕繩肌、小腿、腳或腳趾抽動（0.3–0.5 mA）                   |
+| **藥物**     | 20–25 mL 局部麻醉藥物                                      |
+
+**Continuous Parasacral Technique**
+
+- 使用 continuous block 針（8–10 cm，Tuohy tip），針口朝向尾側
+- 抽到運動反應（0.3–0.5 mA）後注射 20 mL bolus
+- 將 catheter 推入針尖前方 3–5 cm
+- 固定 catheter，持續輸注 Ropivacaine 0.2%（5 mL/hr + PCA 5 mL/q60min）
+
+#### 5.4.3 臀下路 Subgluteal Approach
+
+Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻斷技術之一。
+
+**體表定位 Landmarks**
+
+| 方法             | 標記                            | 進針點                           |
+| ---------------- | ------------------------------- | -------------------------------- |
+| **Di Benedetto** | 大轉子 + 坐骨結節，連線中點     | 中點向尾側 4 cm（垂直線）        |
+| **Franco**       | 臀溝（intergluteal sulcus）中線 | 中線向外側 10 cm（不論臀部曲度） |
+
+**超音波引導 Ultrasound-guided**
+
+| 項目     | 內容                                           |
+| -------- | ---------------------------------------------- |
+| **探頭** | 低頻曲面 2–5 MHz（深部）或高頻線性 10–15 MHz   |
+| **位置** | 坐骨結節外側，臀大肌深面                       |
+| **目標** | 坐骨神經（呈橢圓形，低回音束狀結構）           |
+| **進針** | 從外側向內進針（lateral-to-medial），in-plane  |
+| **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL |
+| **確認** | 藥物擴散包圍坐骨神經                           |
+
+#### 5.4.4 前路 Anterior Approach
+
+適用於無法翻身之患者（脊髓損傷、全身麻醉中）。技術難度最高，不適合 catheter。
+
+**體表定位 Landmarks**
+
+1. 股動脈搏動（femoral crease）
+2. 經股動脈搏動做垂直線，距股褶 4–5 cm 為進針點
+
+**技術 Technique**
+
+| 項目         | 內容                                                     |
+| ------------ | -------------------------------------------------------- |
+| **患者姿勢** | 仰臥，下肢完全伸直                                       |
+| **觸診**     | 觸診手用力按壓股四頭肌，減少皮膚-神經距離                |
+| **進針**     | 垂直皮膚進針，神經刺激器初始設 1.5 mA                    |
+| **深度**     | 通常 8–12 cm                                             |
+| **目標反應** | 小腿、腳或腳趾抽動（0.3–0.5 mA）                         |
+| **藥物**     | 20 mL 局部麻醉藥物                                       |
+| **觸及骨頭** | 通常為股骨（小轉子）；將腳外旋後再嘗試，或稍向內重新定位 |
+
+**注意 Notes**
+
+- 股四頭肌抽動常見，應繼續推進
+- 膕繩肌抽動不可靠（因 hamstring 分支可能在此水平已分出）
+- 腳跟置於床面可能掩蓋腳部抽動；應將腳踝置於腳踏板或請助手觸診跟腱
+
+#### 5.4.5 併發症 Complications
+
+| 併發症               | 預防                                                                                                 |
+| -------------------- | ---------------------------------------------------------------------------------------------------- |
+| **感染**             | 嚴格無菌技術                                                                                         |
+| **血腫**             | 避免多次穿刺（尤其抗凝患者）                                                                         |
+| **血管穿刺**         | 避免過深穿刺（骨盆血管）                                                                             |
+| **局部麻醉藥物中毒** | 避免大體積/大劑量；緩慢注射並頻繁回抽                                                                |
+| **神經損傷**         | 慢速進針；抽到運動反應後電流 < 0.2 mA 時退針至 > 0.2 mA 再注射；患者抱怨疼痛或注射阻力異常時立即停止 |
+| **骨盆器官穿刺**     | 避免針向內側偏移                                                                                     |
+| **陰部神經阻斷**     | 旁薦骨路可能因藥物擴散影響；告知患者為暫時性                                                         |
+| **止血帶相關缺血**   | 避免鞘內注射 + epinephrine + 止血帶同時使用                                                          |
 
 ### 5.5 膕窩坐骨神經阻斷 Popliteal Sciatic Nerve Block
 
@@ -806,38 +938,110 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 **適應症 Indications**
 
-- 足部手術
-- 腳趾手術
-- 足底手術
-- 最後選擇（其他阻斷失敗或禁忌時）
+- 所有足部手術（bunionectomy、前足重建、關節置換、截骨術、截趾術）
+- 足部/腳趾骨折與軟組織損傷
+- 痛風性關節炎
+- 診斷與治療用途（spastic equinovarus、交感神經維持性疼痛）
+- 可避免全身麻醉風險（重症患者足部手術之首選）
 
-**解剖 Anatomy**
+**相對優勢 Advantages**
 
-| 神經                                 | 位置                         | 支配         |
-| ------------------------------------ | ---------------------------- | ------------ |
-| **脛神經（Tibial）**                 | 踝關節後方，脛後動脈內側     | 足底         |
-| **腓總神經（Deep peroneal）**        | 踝關節前方，脛前動脈外側     | 第一趾間皮膚 |
-| **腓淺神經（Superficial peroneal）** | 外踝上方，腓骨（fibula）前方 | 足背         |
-| **隱神經（Saphenous）**              | 內踝前方，大隱靜脈旁         | 足內側       |
-| **腓腸神經（Sural）**                | 外踝下方，小隱靜脈旁         | 足外側       |
+- 不影響小腿及足踝以上運動功能，保留步行能力（與 sciatic/popliteal block 相比）
+- 門診手術首選：患者術後可拄拐行走
+- 長效局部麻醉藥物可提供優異術後止痛
 
-**注射方法 Injection Technique**
+**禁忌症 Contraindications**
 
-| 神經         | 進針位置                 | 藥物量 |
-| ------------ | ------------------------ | ------ |
-| **脛神經**   | 內踝後方，脛後動脈內側   | 3–5 mL |
-| **深腓神經** | 踝關節前方，脛前動脈外側 | 2–3 mL |
-| **腓淺神經** | 外踝上方皮下             | 3–5 mL |
-| **隱神經**   | 內踝前方皮下             | 3–5 mL |
-| **腓腸神經** | 外踝下方皮下             | 3–5 mL |
+- 局部感染、蜂窩組織炎
+- 嚴重水腫、燒傷、軟組織外傷
+- 解剖變異或瘢痕
 
-**總量**：0.25% Bupivacaine 或 0.5% Ropivacaine 15–25 mL total
+**解剖 Anatomy — 五條支配足部的神經**
+
+足部由五條神經支配。在踝關節水平，隱神經（saphenous）、腓淺神經（superficial peroneal）和腓腸神經（sural）已位於皮下淺層；脛神經（posterior tibial）和深腓神經（deep peroneal）則分別位於屈肌支持帶（flexor retinaculum）與伸肌支持帶（extensor retinaculum）深面。
+
+| 神經                              | 來源                                                         | 支配區域                                                     | 踝關節水平深度       |
+| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------------- |
+| **隱神經 Saphenous**              | 股神經（femoral nerve）終末分支                              | 足部內側皮膚                                                 | 淺層（皮下）         |
+| **腓淺神經 Superficial peroneal** | 腓總神經（common peroneal division）                         | 足背皮膚（除第一趾間 web space）                             | 淺層（皮下）         |
+| **腓腸神經 Sural**                | 脛神經（tibial）與腓淺神經（superficial peroneal）交通支合成 | 足部外側皮膚                                                 | 淺層（皮下）         |
+| **脛神經 Posterior tibial**       | 脛神經（tibial division of sciatic）                         | 足底深層結構、肌肉、足底皮膚；分出 calcaneal branch 支配足跟 | 深層（屈肌支持帶下） |
+| **深腓神經 Deep peroneal**        | 腓總神經（common peroneal division）                         | 足背深層結構、第一趾間 web space                             | 深層（伸肌支持帶下） |
+
+**各神經精確位置與注射站點 Detailed Nerve Positions & Injection Sites**
+
+| 神經                              | 精確解剖位置                                                                                                                                                                                                     | 注射站點                                                                                | 進針深度                             | 藥物量 |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------ | ------ |
+| **隱神經 Saphenous**              | 內踝（medial malleolus）水平，大隱靜脈（great saphenous vein）旁皮下                                                                                                                                             | 內踝前方皮下，沿大隱靜脈旁                                                              | 皮下（subcutaneous）                 | 3–5 mL |
+| **腓淺神經 Superficial peroneal** | 外踝（lateral malleolus）上方，腓骨（fibula）前方皮下穿出，於伸肌支持帶（extensor retinaculum）遠端淺出至皮下                                                                                                    | 外踝上方皮下，腓骨前方                                                                  | 皮下（subcutaneous）                 | 3–5 mL |
+| **腓腸神經 Sural**                | 外踝（lateral malleolus）下方，小隱靜脈（small saphenous vein）旁皮下；由脛神經內側交通支與腓淺神經交通支合成                                                                                                    | 外踝下方皮下，小隱靜脈旁                                                                | 皮下（subcutaneous）                 | 3–5 mL |
+| **脛神經 Posterior tibial**       | 內踝（medial malleolus）後方，脛後動脈（posterior tibial artery）內側，屈肌支持帶（flexor retinaculum）深面；經過跟骨載距突（sustentaculum tali）下方後分為內側與外側足底神經（medial & lateral plantar nerves） | 內踝後方，脛後動脈搏動點內側；若動脈不可觸及，取跟腱（Achilles tendon）與內踝後緣之中點 | 深層，直至觸及骨頭（45° 向脛骨方向） | 5 mL   |
+| **深腓神經 Deep peroneal**        | 踝關節前方，伸拇長肌腱（extensor hallucis longus）外側，脛前動脈（anterior tibial artery）外側，伸肌支持帶（extensor retinaculum）深面                                                                           | 踝關節前方，伸拇長肌腱正外側；請患者背屈（extend）大拇趾以辨識肌腱                      | 深層，直至觸及骨頭                   | 5 mL   |
+
+**技術方案 Technique**
+
+**A. 淺層神經環形阻斷（隱神經 + 腓淺神經 + 腓腸神經）**
+
+三條淺層神經可一次環形皮下注射完成：
+
+1. 患者仰臥，小腿下墊枕頭
+2. 從跟腱（Achilles tendon）前方開始，沿踝關節上方環形線（proximal to malleoli）向前內側注射
+3. 1.5 inch, 25G 針頭皮下注入 10–15 mL
+4. 緩慢注射，邊注射邊將針頭推進至先前注入區域（減少穿刺次數）
+5. 繞踝一周完成環形阻斷
+
+此環形注射同時麻醉踝止血帶區域，降低止血帶疼痛。
+
+**B. 深腓神經阻斷 Deep Peroneal Nerve Block**
+
+1. 請患者背屈（extend）大拇趾，辨識伸拇長肌腱（extensor hallucis longus tendon）
+2. 1.5 inch, 25G 針頭從肌腱正外側垂直脛骨進針
+3. 進針直至觸及骨頭（contact bone）
+4. 退針數毫米，回抽確認無血
+5. 注入 5 mL 局部麻醉藥物
+
+**C. 脛神經阻斷 Posterior Tibial Nerve Block**
+
+1. 觸診脛後動脈（posterior tibial artery）搏動點（內踝後方）
+2. 1.5 inch, 25G 針頭從動脈搏動點內側進針
+3. 以 45° 角向脛骨方向進針，直至觸及骨頭
+4. 退針數毫米，回抽確認無血
+5. 注入 5 mL 局部麻醉藥物
+
+**替代標記**：跟骨載距突（sustentaculum tali）位於內踝下方 2–3 cm 之骨性突起，較脛後動脈更為恆定可靠。若動脈不可觸及，可改用此標記。
+
+**D. 總量與藥物**
+
+- 總量：0.25% Bupivacaine 或 0.5% Ropivacaine 15–25 mL
+- 短時間手術：Lidocaine 2%
+- 術後長效止痛：Bupivacaine 0.25% 或 Ropivacaine 0.75%（阻斷後需等待 30 分鐘再手術）
+
+**止血帶管理 Tourniquet Management**
+
+| 項目           | 建議                                                                                            |
+| -------------- | ----------------------------------------------------------------------------------------------- |
+| **類型**       | 氣動踝部止血帶（pneumatic ankle tourniquet），避免 Esmarch bandage（壓力不可控，可達 380 mmHg） |
+| **壓力**       | 200–250 mmHg（踝部上方）                                                                        |
+| **襯墊**       | 需有軟墊（padded），提升耐受性                                                                  |
+| **止血帶疼痛** | 1000 例統計：僅 3.1% 患者抱怨止血帶疼痛；危險因子為年齡 > 70 歲與止血帶時間 > 30 分鐘           |
 
 **併發症 Complications**
 
-- 藥物誤入脛後/脛前動脈
-- 局部血腫
-- 腓總神經損傷（深腓神經注射時）
+| 併發症                 | 發生率/備註                                    |
+| ---------------------- | ---------------------------------------------- |
+| **短暫性感覺異常**     | < 1%，多數自發緩解（4–6 週）                   |
+| **局部麻醉藥物中毒**   | 極罕見（血中濃度遠低於中毒水平）               |
+| **止血帶相關神經損傷** | 0.1%（3027 例中 3 例 posttourniquet syndrome） |
+| **血管穿刺**           | 脛後/脛前動脈                                  |
+| **跟腱損傷**           | 罕見文獻報告（有解剖異常者）                   |
+| **筋膜室症候群**       | 罕見（有瘢痕者）                               |
+
+**預防要點 Prevention**
+
+- 注射前確認解剖正常，避免在瘢痕或水腫區域注射
+- 總量不超過 30 mL
+- 注射時不應有阻力，若有阻力則退針重新定位
+- 使用 Bupivacaine/Ropivacaine 時，阻斷後至少等待 30 分鐘再手術
 
 ## 6. 骶尾部 Sacral & Perineal
 
@@ -919,6 +1123,150 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 坐骨（ischium）神經損傷
 - 血管內注射
 - 局部血腫
+
+### 6.3 超音波引導骨盆疼痛阻斷 Ultrasound-Guided Blocks for Pelvic Pain
+
+慢性骨盆疼痛（Chronic pelvic pain, CPP）定義為非週期性疼痛 ≥ 6 個月，嚴重程度足以造成失能或促使就醫，位置包含骨盆、臍下前腹壁、下背或臀部。病因可能包含泌尿、婦科、肛門直腸內臟病變，以及神經肌肉病變（pudendal neuralgia、piriformis syndrome）。治療需多科合作，其中神經阻斷與肌肉注射兼具診斷與治療角色。
+
+超音波引導之優勢：直接可視化神經及周圍血管、骨骼、肌肉、內臟結構；精準投藥；即時引導進針，降低誤傷周邊神經血管結構之風險；可辨識血管內與神經內注射；無輻射暴露。
+
+#### 6.3.1 髂腹下/髂腹股溝/生殖股神經阻斷 II/IH/GF Nerve Block
+
+**解剖 Anatomy**
+
+- **髂腹下神經（Iliohypogastric, IH）**：L1（含 T12 貢獻），從腰大肌（psoas major）上外側緣穿出，越過腰方肌（quadratus lumborum）至髂骨（ilium） crest，於 ASIS 上方 12th rib 與髂 crest 中點穿過腹橫肌（transversus abdominis, TA），再穿過腹內斜肌（internal oblique, IO），走行於 IO 與腹外斜肌（external oblique, EO）之間
+- **髂腹股溝神經（Ilioinguinal, II）**：L1（含 T12），於 IH 下方平行走行，穿過 IO 下緣，經腹股溝淺環（superficial inguinal ring）前方，支配陰莖/陰囊（或陰唇）皮膚及大腿內側
+- **生殖股神經（Genitofemoral, GF）**：L1–L2，穿過腰大肌（psoas muscle），於腹膜下走行，分為生殖支（genital branch）與股支（femoral branch）。生殖支經深腹股溝環（deep inguinal ring）進入腹股溝管，支配提睾肌（cremaster muscle）與陰囊/陰唇皮膚；股支支配股三角皮膚
+
+**關鍵解剖特點 Key Anatomy**
+
+- II 與 IH 神經最恆定位置（>90%）：ASIS 上方後方，髂 crest 旁 1.5 cm 內，位於 IO 與 TA 之間的筋膜分裂面
+- 深環腰動脈（deep circumflex iliac artery）與兩神經位於同一筋膜層，可用 color Doppler 辨識
+- II 與 IH 解剖變異大，傳統體表定位法失敗率 10–45%
+
+**超音波引導技術 Ultrasound-Guided Technique**
+
+| 項目         | 內容                                                                                                            |
+| ------------ | --------------------------------------------------------------------------------------------------------------- |
+| **探頭**     | 高頻線性 6–13 MHz                                                                                               |
+| **患者姿勢** | 仰臥                                                                                                            |
+| **探頭位置** | ASIS 上方後方，垂直於 II/IH 神經走行方向（通常平行於腹股溝韌帶），外側緣置於髂 crest 上                         |
+| **辨識結構** | 由外至內：EO、IO、TA 三層肌肉；髂 crest 為 hyperechoic 結構；II 與 IH 神經位於 IO 與 TA 之間的 fascial split 內 |
+| **神經位置** | 距髂 crest < 1.5 cm，II 較靠近髂 crest，兩神經通常緊鄰（有時相距約 1 cm）                                       |
+| **鑑別**     | IO/TA 交接 flat portion 可見 subcostal nerve（T12），若誤認為 II/IH 導致麻醉範圍異常                            |
+| **進針**     | 22G 針頭，out-of-plane 技術，針尖至 IO 與 TA 之間的 fascial split，靠近 II/IH 神經                              |
+| **確認**     | Hydrodissection（生理食鹽水）確認針尖位置與筋膜面擴散                                                           |
+| **藥物**     | Bupivacaine 0.5% 6–8 mL ± Depo-Medrol 40 mg                                                                     |
+| **確認擴散** | 藥物於 fascial split 內擴散，包圍 II 與 IH 神經                                                                 |
+
+**生殖股神經生殖支阻斷 Genital Branch of GF Nerve Block**
+
+| 項目         | 內容                                                                                                                              |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| **探頭**     | 高頻線性 6–13 MHz                                                                                                                 |
+| **患者姿勢** | 仰臥                                                                                                                              |
+| **探頭位置** | 先置於腹股溝韌帶下方橫切面辨識股動脈（femoral artery），旋轉探頭使動脈呈縱切面，向頭側追蹤至外髂動脈（external iliac artery）深處 |
+| **辨識結構** | 股動脈/外髂動脈上方可見腹股溝管（inguinal canal），內含精索（男性）或圓韌帶（女性）                                               |
+| **精索辨識** | 男性可見 testicular artery 與 vas deferens 搏動（可用 color Doppler 確認）；Valsalva maneuver 可使 pampiniform plexus 血流增加    |
+| **進針**     | 22G 針頭，out-of-plane，從探頭外側進針，穿過深腹壁筋膜進入腹股溝管                                                                |
+| **確認**     | Hydrodissection 確認腹股溝管內擴散                                                                                                |
+| **藥物**     | 男性：4 mL 於精索外 + 4 mL 於精索內（因解剖變異）；女性：8 mL 於腹股溝管內                                                        |
+| **注意**     | 不可含 epinephrine（有 testicular artery 收縮風險）                                                                               |
+
+**適應症 Indications**
+
+- 慢性腹股溝疼痛（疝氣修補術後疼痛，發生率可達 54%）
+- 腹股溝區域手術後神經痛（II/IH 神經損傷、neuroma、scarring）
+- 診斷性阻斷：確認疼痛來源
+- 治療性阻斷：慢性疼痛管理（加用 steroid）
+
+**併發症 Complications**
+
+- 股神經阻斷（針尖太深/太內側）
+- 腸穿孔（針尖太深）
+- 骨盆血腫
+- 血管內注射
+
+#### 6.3.2 梨狀肌注射 Piriformis Muscle Injection
+
+**適應症 Indications**
+
+- 梨狀肌症候群（piriformis syndrome）：臀部疼痛放射至同側大腿/小腿，類似坐骨神經痛
+- 走路、彎腰、提重物時加劇
+- 物理治療與簡單止痛藥無效時
+- 診斷性注射：若治療成功可確認診斷
+
+**解剖 Anatomy**
+
+- 梨狀肌（piriformis）起自 S2–S4 前面，經坐骨大孔（greater sciatic foramen）離開骨盆，止於股骨大轉子（greater trochanter）上緣
+- 坐骨神經（sciatic nerve）與梨狀肌關係變異：78–84% 神經經梨狀肌下方通過；12–21% 神經分裂，分別經梨狀肌上方與下方通過
+- 梨狀肌上方：臀上神經（superior gluteal nerve）與動脈
+- 梨狀肌下方：臀下神經/動脈、陰部神經/動脈、閉孔內肌神經、股後皮神經、坐骨神經
+
+**超音波引導技術 Ultrasound-Guided Technique**
+
+| 項目           | 內容                                                                                                                                         |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **探頭**       | 低頻曲面 2–5 MHz                                                                                                                             |
+| **患者姿勢**   | 俯臥                                                                                                                                         |
+| **探頭位置**   | 先置於 PSIS（posterior superior iliac spine）橫切面，向外側移動至髂骨（ilium）可見 hyperechoic 斜線，再向尾側移動至坐骨切跡（sciatic notch） |
+| **辨識結構**   | 坐骨切跡處可見兩層肌肉：淺層為臀大肌（gluteus maximus），深層為梨狀肌（piriformis）                                                          |
+| **確認梨狀肌** | 請助手以膝蓋彎曲姿勢做髖關節內外旋轉，梨狀肌會在超音波下左右滑動                                                                             |
+| **進針**       | 22G, 120 mm 神經刺激針，in-plane 技術，從探頭內側向外側進針至梨狀肌肌腹                                                                      |
+| **確認**       | 神經刺激器可見梨狀肌收縮（排除坐骨神經刺激）；注入 0.5 mL 生理食鹽水確認肌肉內位置                                                           |
+| **藥物**       | 0.5% Bupivacaine 1 mL + Depo-Medrol 40 mg，或 Botulinum toxin A 50 units 溶於 1 mL 生理食鹽水                                                |
+| **注射體積**   | 1–2 mL（肌肉內注射）                                                                                                                         |
+
+**併發症 Complications**
+
+- 坐骨神經損傷（最嚴重，因坐骨神經與梨狀肌關係變異）
+- 臀部血腫
+- 感染
+
+#### 6.3.3 陰部神經阻斷（超音波引導）Pudendal Nerve Block (Ultrasound-Guided)
+
+**適應症 Indications**
+
+- 陰部神經痛（pudendal neuralgia）：會陰部疼痛，坐姿加劇，躺臥/站立減輕
+- 鑑別診斷：排除腰椎、髖關節、薦髂關節病變
+- 風險因子：騎自行車、陰道分娩、骨盆外傷、激烈運動
+
+**解剖 Anatomy**
+
+- 陰部神經（pudendal nerve）：S2–S4 前支，經坐骨大孔（greater sciatic foramen）離開骨盆
+- 走行於薦棘韌帶（sacrospinous ligament）與薦結節韌帶（sacrotuberous ligament）之間的 interligamentous plane，在坐骨（ischium）棘（ischial spine）水平
+- 隨後進入 Alcock's canal（由閉孔內肌 obturator internus 筋膜形成）
+- 分支：直腸下神經（inferior rectal nerve）、會陰神經（perineal nerve）、陰莖/陰蒂背神經（dorsal nerve of penis/clitoris）
+- 陰部動脈（pudendal artery）位於神經外側（90%）
+- 神經直徑：0.6–6.8 mm，位於深部脂肪組織中
+
+**壓迫位置 Entrapment Sites**
+
+| 位置                       | 描述                                                                |
+| -------------------------- | ------------------------------------------------------------------- |
+| **Interligamentous plane** | 薦棘韌帶與薦結節韌帶之間，坐骨棘水平                                |
+| **Alcock's canal**         | 閉孔內肌筋膜內，薦結節韌帶鐮狀突起（falciform process）可能造成壓迫 |
+
+**超音波引導技術 Ultrasound-Guided Technique（經臀部 transgluteal approach）**
+
+| 項目                    | 內容                                                                                                                                         |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **探頭**                | 低頻曲面 2–5 MHz（因深度）                                                                                                                   |
+| **患者姿勢**            | 俯臥                                                                                                                                         |
+| **探頭位置**            | 先置於 PSIS 橫切面，向外側移動辨識髂骨，再向尾側移動至坐骨切跡                                                                               |
+| **辨識結構**            | 臀大肌（gluteus maximus）深面可見梨狀肌（piriformis）；梨狀肌深面可見薦棘韌帶（sacrospinous ligament）與薦結節韌帶（sacrotuberous ligament） |
+| **陰部神經位置**        | 兩韌帶之間的 interligamentous plane，坐骨棘內側；陰部動脈（pudendal artery）可用 color Doppler 辨識（位於神經外側）                          |
+| **進針**                | 22G 針頭，in-plane 技術，從探頭外側向內側進針至 interligamentous plane                                                                       |
+| **確認**                | Hydrodissection 確認藥物擴散至 interligamentous plane 內                                                                                     |
+| **藥物**                | 0.5% Bupivacaine 5–10 mL ± Depo-Medrol 40 mg                                                                                                 |
+| **Alcock's canal 阻斷** | 針尖繼續向前進入 Alcock's canal，注入 5 mL                                                                                                   |
+
+**併發症 Complications**
+
+- 坐骨神經損傷（因深度及鄰近關係）
+- 陰部動脈穿刺
+- 骶前血腫
+- 感染
 
 ## 7. 椎管內 Neuraxial
 
@@ -1079,6 +1427,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **TAP**             | 8–12 hr           | 6–10 hr          |
 | **Femoral**         | 10–16 hr          | 8–14 hr          |
 | **Sciatic**         | 12–18 hr          | 10–16 hr         |
+| **Ankle Block**     | 8–16 hr           | 6–14 hr          |
 
 ### D. 臨床小提示 Clinical Pearls
 
@@ -1087,9 +1436,104 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 3. **收肌管 vs 股神經**：收肌管阻斷保留股四頭肌力量，適合門診 TKA
 4. **TAP vs PVB**：PVB 提供更好的胸段止痛，TAP 適合下腹壁
 5. **臀部坐骨（ischium）神經**：subgluteal approach 在超音波下最易辨認
-6. **踝神經阻斷**：最後選擇，但若超音波導引得當可提供完全足部麻醉
+6. **踝神經阻斷**：門診足部手術首選，不影響小腿運動功能；載距突（sustentaculum tali）為脛神經阻斷較脛後動脈更恆定的標記
 7. **CSE**：適合需要快速起效 + 長期止痛的剖腹產
 8. **ESP block**：新興技術，操作簡單且安全，適合多節段肋骨（rib）骨折
+
+## 各部位手術建議阻斷組合 Procedure-Specific Nerve Block Selection by Region
+
+### 1. 頸部 Head & Neck
+
+| 手術部位/術式                                  | 建議阻斷                               | 備註                           |
+| ---------------------------------------------- | -------------------------------------- | ------------------------------ |
+| **頸動脈內膜切除術 Carotid endarterectomy**    | SCPB 或 SCPB + DCPB                    | SCPB 足夠；DCPB 可加強深部止痛 |
+| **甲狀腺手術 Thyroidectomy**                   | SCPB + superficial cervical ring block | 輔助局部浸潤，減少 opioid      |
+| **頸部淋巴結切片/切除 Neck lymph node biopsy** | SCPB at Erb's point                    | 單次注射即可                   |
+| **後頭部手術 Posterior scalp surgery**         | Greater/Lesser occipital nerve block   | 超音波引導，枕動脈旁注射       |
+| **上顎前牙拔牙/上唇手術**                      | Infraorbital nerve block               | 避免穿入 infraorbital foramen  |
+
+### 2. 上肢 Upper Extremity
+
+| 手術部位/術式                                    | 建議阻斷                                                             | 備註                                                        |
+| ------------------------------------------------ | -------------------------------------------------------------------- | ----------------------------------------------------------- |
+| **肩關節手術 Rotator cuff repair, arthroplasty** | ISB（首选）；肩胛上神經（nerve-sparing 選擇）                        | ISB 膈神經麻痺率 100%；nerve-sparing 低容量可減低           |
+| **肱骨近端骨折 Proximal humerus fracture**       | ISB                                                                  |                                                             |
+| **肩關節疼痛管理**                               | 肩胛上神經 block                                                     | 疼痛門診常用                                                |
+| **肘部以下手術 Forearm, wrist, hand**            | Supraclavicular（"spinal of the arm"）或 Infraclavicular 或 Axillary | Supraclavicular 起效最快最完全；Axillary 最安全（門診首選） |
+| **前臂骨折 Radius/ulna fracture**                | Axillary block + musculocutaneous block                              | 肌皮神經常在腋鞘外，需單獨阻斷                              |
+| **手部外傷/手術 Hand surgery**                   | Axillary block                                                       | 門診首選，安全性最高                                        |
+| **肘部手術 Elbow surgery**                       | Infraclavicular 或 Supraclavicular                                   | Infraclavicular 止血帶耐受較好                              |
+| **肩部小手術（如拆除鋼板）**                     | 肩胛上神經 block                                                     | 最小侵入性                                                  |
+
+### 3. 胸壁與軀幹 Chest Wall & Trunk
+
+| 手術部位/術式                                       | 建議阻斷                                   | 備註                                            |
+| --------------------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
+| **乳房手術 Mastectomy, lumpectomy, reconstruction** | PECs I + II（或加 ESP）；若胸壁側面加 SAPB | PECs II 需覆蓋前鋸肌淺面                        |
+| **腋窩淋巴結清創 Axillary lymph node dissection**   | PECs II + SAPB                             | 肋間臂神經（intercostobrachial）由 PECs II 覆蓋 |
+| **肋骨骨折 Rib fractures（≤3 根）**                 | PVB or SAPB or ESP（單節段/少節段）        | PVB 止痛最完全但氣胸風險 1–2%                   |
+| **連枷胸 Flail chest（多根肋骨）**                  | Epidural（首選）或 ESP multi-level         | Epidural 止痛最完全但有低血壓風險               |
+| **胸腔手術 VATS/Thoracotomy**                       | Epidural or PVB                            | Thoracic epidural 為金標準；PVB 為替代          |
+| **胸壁手術（非肋骨）**                              | SAPB or ESP                                | SAPB 覆蓋前鋸肌區域                             |
+| **帶狀疱疹疼痛 Herpetic pain**                      | Epidural or PVB or SAPB                    | 多節段阻斷                                      |
+
+### 4. 腹壁 Abdominal Wall
+
+| 手術部位/術式                                             | 建議阻斷                                                     | 備註                                        |
+| --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
+| **上腹手術（膽囊切除 Cholecystectomy, 上腹疝氣）**        | TAP（subcostal approach）或 PVB                              | Subcostal TAP 覆蓋 T7–T10                   |
+| **下腹手術（Appendectomy, hernia repair, hysterectomy）** | TAP（lateral approach）或 Ilioinguinal/iliohypogastric block | TAP 覆蓋 T7–L1（lateral）；II/IH 覆蓋腹股溝 |
+| **剖腹產 Caesarean section**                              | TAP + PVB 或 Epidural（首選）                                | 若已有 epidural catheter，可追加            |
+| **臍部手術 Umbilical surgery**                            | Rectus sheath block                                          | 阻斷 T9–T12 前支                            |
+| **腹壁中線手術 Midline abdominal surgery**                | Bilateral TAP + Rectus sheath block                          | 需雙側                                      |
+| **腹股溝疝氣修補 Inguinal hernia repair**                 | Ilioinguinal/iliohypogastric block 或 TAP                    | II/IH 為傳統首選；TAP 覆蓋更廣              |
+| **陰囊/睪丸手術 Scrotal/testicular surgery**              | II/IH block + ilioinguinal nerve（經腹股溝管）               |                                             |
+
+### 5. 下肢 Lower Extremity
+
+| 手術部位/術式                              | 建議阻斷                                        | 備註                                   |
+| ------------------------------------------ | ----------------------------------------------- | -------------------------------------- |
+| **全膝關節置換 TKA**                       | 收肌管阻斷 ACB（首選）+ Sciatic block（選用）   | ACB 保留股四頭肌力量，利於術後行走     |
+| **膝關節鏡 Arthroscopy**                   | ACB + iPACK（若後囊止痛需要）                   | iPACK 避免 popliteal 神經麻痺          |
+| **ACL 重建**                               | ACB + Sciatic（popliteal approach）             | 需完全止痛                             |
+| **股骨骨折 Femur fracture**                | FICB（最簡便）或 Femoral nerve block            | FICB 可在急診床邊執行                  |
+| **髖關節骨折 Hip fracture**                | FICB + Sciatic block                            | 雙重阻斷覆蓋整個下肢                   |
+| **膝關節以下手術 Below-knee surgery**      | Popliteal sciatic block                         | 保留股四頭肌，可拄拐                   |
+| **足部/腳踝手術 Foot/ankle surgery**       | Ankle block（門診首選）或 Popliteal sciatic     | Ankle block 保留小腿運動功能           |
+| **前足手術 Forefoot surgery**              | Midtarsal ankle block                           | 深層神經更淺表，成功率高               |
+| **足跟/跟骨手術 Calcaneal surgery**        | Popliteal sciatic + Ankle block（脛神經為關鍵） | 足跟感覺由脛神經 calcaneal branch 支配 |
+| **趾甲手術 Ingrown toenail**               | Digital nerve ring block                        | 1% Lidocaine 2–3 mL per toe            |
+| **糖尿病足清創 Diabetic foot debridement** | Ankle block                                     | 避免全身麻醉；保留行走功能             |
+
+### 6. 骶尾部 Sacral & Perineal
+
+| 手術部位/術式                          | 建議阻斷                                     | 備註             |
+| -------------------------------------- | -------------------------------------------- | ---------------- |
+| **肛門手術 Hemorrhoidectomy, fistula** | Caudal epidural block                        | 骶管阻斷 S2–S4   |
+| **會陰部手術 Perineal surgery**        | Pudendal nerve block（經陰道/經直腸）        | 坐骨棘為關鍵標記 |
+| **產科手術 Episiotomy**                | Caudal epidural 或 Pudendal nerve block      |                  |
+| **膀胱鏡檢查 Cystoscopy**              | Caudal epidural（輕度）或 topical anesthesia |                  |
+
+### 7. 椎管內 Neuraxial
+
+| 手術部位/術式                                          | 建議阻斷                                         | 備註                               |
+| ------------------------------------------------------ | ------------------------------------------------ | ---------------------------------- |
+| **下腹手術 Appendectomy, hernia repair, hysterectomy** | Spinal（短手術）或 Epidural（長手術/需術後止痛） | Spinal 起效快；Epidural 可持續輸注 |
+| **剖腹產 Caesarean section**                           | CSE（首選）或 Spinal                             | CSE 兼具快速起效與長期止痛         |
+| **下肢手術 Lower extremity surgery**                   | Spinal（short）或 Epidural（long）               |                                    |
+| **產科鎮痛 Labor analgesia**                           | Epidural（首選）或 CSE                           | CSE 可早期提供鎮痛                 |
+| **胸腔手術 Thoracic surgery**                          | Thoracic epidural                                | T4–T10 水平                        |
+| **肛門手術 Anorectal surgery**                         | Spinal（low dose）或 Caudal                      |                                    |
+
+### 阻斷選擇原則 General Selection Principles
+
+- **門診手術**：優先選擇保留運動功能的阻斷（ACB > Femoral; Ankle block > Popliteal sciatic; Axillary > Supraclavicular）
+- **住院手術/長時間手術**：Epidural 或 continuous catheter technique 提供持續止痛
+- **急診/床邊**：FICB（股骨骨折）、SCPB（頸動脈）最便於執行
+- **多部位手術**：聯合阻斷（如 PECs I + II + SAPB; FICB + Sciatic）
+- **全身麻醉高風險患者**：區域阻斷可避免氣道操作（如重症患者足部手術用 ankle block）
+- **術後止痛為首要目標**：Epidural > PVB > TAP > 單次 peripheral block
+- **早期活動/復健為目標**：ACB（TKA）、Ankle block（足部）、Axillary（手部）
 
 ## 參考文獻 References
 

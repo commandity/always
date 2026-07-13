@@ -22,7 +22,7 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: `${base}logo/AW.svg`,
+        href: `${base}logo/AW.svg?v=2`,
       },
     ],
     // ✅ ADD THESE THREE BELOW THE ICON LINK

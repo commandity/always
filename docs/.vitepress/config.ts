@@ -18,6 +18,11 @@ export default defineConfig({
       `(function(){var e=localStorage;e.removeItem("vitepress-theme-appearance");var m=window.matchMedia("(prefers-color-scheme:dark)");function u(){document.documentElement.classList.toggle("dark",m.matches)}u();m.addEventListener("change",u)})()`,
     ],
     [
+      "script",
+      { id: "mobile-nav-reveal" },
+      `(function(){var last=0,ticking=false;function upd(){var y=window.scrollY||document.documentElement.scrollTop||0,r=document.documentElement;if(window.innerWidth>=960){r.classList.remove("nav-hide");last=y;ticking=false;return;}if(y<64){r.classList.remove("nav-hide");}else if(y>last+4){r.classList.add("nav-hide");}else if(y<last-4){r.classList.remove("nav-hide");}last=y;ticking=false;}window.addEventListener("scroll",function(){if(!ticking){requestAnimationFrame(upd);ticking=true;}},{passive:true});window.addEventListener("resize",upd);})()`,
+    ],
+    [
       "link",
       {
         rel: "icon",

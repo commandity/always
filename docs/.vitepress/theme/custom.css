@@ -115,7 +115,7 @@ body {
   background-clip: text;
   font-size: clamp(2.2rem, 6vw, 3.6rem); /* 主名稱字級 */
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0em;
   line-height: 1.15;
 }
 
@@ -125,8 +125,8 @@ body {
   color: var(--vp-c-text-1);
   -webkit-text-fill-color: currentColor;
   font-size: clamp(1.7rem, 4.6vw, 2.8rem); /* 標語字級 */
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  letter-spacing: -0em;
   line-height: 1.05;
 }
 
@@ -1381,4 +1381,34 @@ html {
   box-shadow:
     0 0 0 1px rgba(239, 68, 68, 0.18),
     0 1px 4px rgba(239, 68, 68, 0.18);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   MOBILE — auto-hiding top nav: reveal on scroll-up, hide on scroll-down
+   (the .nav-hide class is toggled by a scroll-direction script in config.ts)
+   ══════════════════════════════════════════════════════════════════ */
+@media (max-width: 959px) {
+  .VPNav {
+    position: sticky;
+    top: 0;
+    transition:
+      transform 0.3s ease,
+      background-color 0.5s;
+  }
+  /* keep the local-nav (menu / outline) bar just below the top nav while shown */
+  .VPLocalNav {
+    top: var(--vp-nav-height);
+    transition: top 0.3s ease;
+  }
+  /* give the revealed bar a solid background once scrolled off the very top */
+  .VPNavBar.home:not(.top) {
+    background-color: var(--vp-nav-bg-color);
+  }
+  /* hidden state: slide the top nav up; local-nav reclaims the top edge */
+  html.nav-hide .VPNav {
+    transform: translateY(-100%);
+  }
+  html.nav-hide .VPLocalNav {
+    top: 0;
+  }
 }

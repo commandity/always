@@ -1382,3 +1382,16 @@ html {
     0 0 0 1px rgba(239, 68, 68, 0.18),
     0 1px 4px rgba(239, 68, 68, 0.18);
 }
+
+/* ── Navbar site title — gradient text fill (matches the hero name) ── */
+.VPNavBarTitle .title span {
+  background: linear-gradient(
+    135deg,
+    var(--vp-c-brand-1),
+    var(--vp-c-brand-2, var(--vp-c-text-1))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}

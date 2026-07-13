@@ -9,7 +9,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   // ── Site metadata ──────────────────────────────────────────────
   lang: "zh-TW",
-  title: "neo jerzy",
+  title: "Always Wonder",
   description: "凝淨齋",
   head: [
     [
@@ -64,7 +64,7 @@ export default defineConfig({
         activeMatch: "^/(reference)/",
       },
       {
-        text: "Always Wonder",
+        text: "靜心閣",
         link: "/blog/index",
         activeMatch: "^/(blog)/",
       },

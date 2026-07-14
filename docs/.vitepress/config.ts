@@ -18,6 +18,11 @@ export default defineConfig({
       `(function(){var e=localStorage;e.removeItem("vitepress-theme-appearance");var m=window.matchMedia("(prefers-color-scheme:dark)");function u(){document.documentElement.classList.toggle("dark",m.matches)}u();m.addEventListener("change",u)})()`,
     ],
     [
+      "script",
+      { id: "tab-bar-drag-scroll" },
+      `(function(){var el=null,down=false,drag=false,sx=0,sl=0,suppress=false;function bar(t){return t&&t.closest?t.closest(".tab-bar"):null;}document.addEventListener("pointerdown",function(e){if(e.pointerType!=="mouse")return;var t=bar(e.target);if(!t)return;el=t;down=true;drag=false;sx=e.clientX;sl=t.scrollLeft;},true);document.addEventListener("pointermove",function(e){if(!down||!el)return;var dx=e.clientX-sx;if(!drag&&Math.abs(dx)>4){drag=true;try{el.setPointerCapture(e.pointerId);}catch(_){}}if(drag){el.scrollLeft=sl-dx;}},true);function up(){if(drag)suppress=true;down=false;drag=false;el=null;}document.addEventListener("pointerup",up,true);document.addEventListener("pointercancel",up,true);document.addEventListener("click",function(e){if(suppress){suppress=false;if(bar(e.target)){e.stopPropagation();e.preventDefault();}}},true);})()`,
+    ],
+    [
       "link",
       {
         rel: "icon",
@@ -608,6 +613,16 @@ export default defineConfig({
             {
               text: "健保降血脂藥物給付判定",
               link: "/reference/lipid/lipid-protocol",
+            },
+          ],
+        },
+        {
+          text: "減重",
+          collapsed: true,
+          items: [
+            {
+              text: "減重完整指引",
+              link: "/reference/bw/weight-management",
             },
           ],
         },

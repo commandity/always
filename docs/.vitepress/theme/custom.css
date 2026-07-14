@@ -1395,3 +1395,37 @@ html {
   background-clip: text;
   font-weight: 800;
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   CALCULATOR TAB BARS — single scrollable row + drag-to-scroll
+   Applies to every .vue tool's .tab-bar (the drag handler lives in
+   config.ts head). Tabs keep their width and overflow → horizontal scroll.
+   ══════════════════════════════════════════════════════════════════ */
+.tab-bar {
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--vp-c-text-3) transparent;
+  cursor: grab;
+  scroll-behavior: smooth;
+}
+.tab-bar:active {
+  cursor: grabbing;
+}
+/* keep each tab at its content width so the row overflows and scrolls
+   (overrides per-component flex:1 that would otherwise squish them) */
+.tab-bar > * {
+  flex: 0 0 auto !important;
+}
+.tab-bar::-webkit-scrollbar {
+  height: 6px;
+}
+.tab-bar::-webkit-scrollbar-thumb {
+  background: var(--vp-c-text-3);
+  border-radius: 3px;
+}
+.tab-bar::-webkit-scrollbar-track {
+  background: transparent;
+}

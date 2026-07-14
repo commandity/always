@@ -1,16 +1,15 @@
 ---
 layout: doc
-title: 兒童皮疹鑑別診斷 — Pediatric Rash Differential Diagnosis
+title: 兒童皮疹鑑別診斷 Pediatric Rash Differential Diagnosis
 password: "516800"
 ---
 
 # 兒童皮疹鑑別診斷
-
 **Pediatric Rash Differential Diagnosis**
 
 > **核心概念**：兒童皮疹原因廣泛，從自限性病毒感染到致命性敗血症皆有可能。**最重要的第一步是評估孩子是否 toxic（病懨懨／中毒樣）**，而非急著判斷皮疹形態。Toxic appearance + 皮疹 = 緊急情況，需立刻處理。
 
-## 第一步：快速分診 Rapid Triage
+## 第一步：快速分診
 
 ### Red Flags — 需緊急評估
 
@@ -25,7 +24,7 @@ password: "516800"
 | 呼吸窘迫                           | 肺炎併發敗血症、麻疹重度肺炎                       |
 | 黏膜侵犯（口腔、眼、生殖器）       | SJS/TEN、EM major、Kawasaki、HSV                   |
 
-## 第二步：發燒有無 → 鑑別方向 Step 2: Fever? → Differential Direction
+## 第二步：發燒有無 → 鑑別方向
 
 <div style="margin:1.75rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -86,9 +85,10 @@ password: "516800"
 **永遠先評估 toxic appearance**（病懨懨／中毒樣）——不論皮疹形態，toxic + 皮疹即為急症（敗血症、腦膜炎球菌血症、TSS、SSSS），須立即處理，不待確診。非 toxic 者再依**有無發燒**及**疹子與發燒的時序**分流。
 :::
 
-## 第三步：皮疹形態分類 Morphology Approach
+## 第三步：皮疹形態分類
 
-### 一、發燒 + 斑丘疹 Maculopapular / Morbilliform ± Fever
+### 一、發燒 + 斑丘疹 
+**Maculopapular / Morbilliform ± Fever**
 
 | 疾病                                                    | 發燒特徵                               | 皮疹特徵                                                                         | 關鍵鑑別點                                                                                    | 治療原則                                                    |
 | ------------------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -104,7 +104,8 @@ password: "516800"
 | **非特異性病毒疹**（Viral exanthem, nonspecific）       | 低-中度發燒                            | 全身散在粉紅色斑丘疹，非特異分布                                                 | 排除以上特徵性疾病後診斷；自限性                                                              | 支持療法；退燒；自限性                                      |
 | **DRESS 症候群**（藥物過敏）                            | 高燒，皮疹在用藥後 2–6 週出現          | 廣泛濕疹樣斑丘疹，可進展為紅皮症                                                 | 嗜酸性球↑、淋巴腺腫大、肝功能異常；特定藥物（AEDs、allopurinol、磺胺類）                      | 立即停藥；全身類固醇；住院支持療法；監測器官功能            |
 
-### 二、發燒 + 水疱 Vesiculobullous ± Fever
+### 二、發燒 + 水疱
+**Vesiculobullous ± Fever**
 
 | 疾病                                                              | 發燒特徵                | 皮疹特徵                                                                                   | 關鍵鑑別點                                                               | 治療原則                                                      |
 | ----------------------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------- |
@@ -114,7 +115,8 @@ password: "516800"
 | **葡萄球菌燙傷樣皮膚症候群**（SSSS, Staph scalded skin syndrome） | 中度發燒                | 廣泛紅斑 → 大水疱 → 大片脫皮（燙傷樣）                                                     | Nikolsky sign +；**黏膜不受侵犯**（與 SJS/TEN 鑑別）；好發 <5 歲兒童     | 住院；IV 抗葡萄球菌抗生素（oxacillin、clindamycin）；皮膚護理 |
 | **毒性休克症候群**（TSS, Staph / Strep）                          | 高燒（>39°C）           | 瀰漫性日燒樣紅斑（sunburn-like diffuse erythroderma）→ 後期脫屑（手掌腳掌）                | 低血壓、意識改變、多器官功能不全；黏膜充血、草莓舌                       | 住院；IV 抗生素；升壓劑、大量輸液；感染源清除（引流、清創）   |
 
-### 三、發燒 + 紫斑／瘀點 Petechiae / Purpura ± Fever
+### 三、發燒 + 紫斑／瘀點
+**Petechiae / Purpura ± Fever**
 
 | 疾病                                                        | 發燒特徵                       | 皮疹特徵                                                                            | 關鍵鑑別點                                                                    | 治療原則                                                    |
 | ----------------------------------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -126,7 +128,8 @@ password: "516800"
 | **瀰漫性血管內凝血**（DIC）                                 | 視原發疾病                     | 廣泛紫斑、瘀斑、穿刺處出血                                                          | 血小板↓、PT/PTT↑、D-dimer↑、fibrinogen↓；潛在敗血症或器官衰竭                 | 治療原發病因；支持療法（血小板、FFP、cryoprecipitate 補充） |
 | **新生兒狼瘡**（Neonatal lupus）                            | 不一定發燒                     | 環形紅斑性脫屑斑塊（母體 anti-Ro/La 抗體通過胎盤）                                  | anti-Ro/La 陽性（母體及嬰兒）；心臟傳導阻滯（CHB，不可逆）；皮疹數月自癒      | 皮疹觀察（自限性）；防曬；CHB 需 pacemaker；心臟科長期追蹤  |
 
-### 四、發燒 + 蕁麻疹樣 Urticarial ± Fever
+### 四、發燒 + 蕁麻疹樣
+**Urticarial ± Fever**
 
 | 疾病                                                 | 特徵                                                                     | 鑑別要點                                                                     | 治療原則                                                      |
 | ---------------------------------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -135,9 +138,10 @@ password: "516800"
 | **血清病樣反應**（Serum sickness-like reaction）     | 用藥後（常見 cefaclor）7–14 天出現蕁麻疹樣皮疹 + 發燒 + 關節痛           | 良性自限；無血管炎或腎臟侵犯（與 HSP 鑑別）                                  | 停藥；抗組織胺；嚴重者類固醇短期療程                          |
 | **史迪爾氏症**（Still's disease, AOSD）              | 間歇高燒 + 褪色性鮭魚紅疹（evanescent salmon-pink rash）伴隨發燒高峰出現 | 關節痛、咽喉痛、血清 ferritin 顯著升高                                       | NSAIDs；全身類固醇；IL-1/IL-6 抑制劑（anakinra、tocilizumab） |
 
-## 第四步：無發燒（或微燒）皮疹鑑別 Step 4: Afebrile (or Low-Grade) Rash Differential
+## 第四步：無發燒（或微燒）皮疹鑑別
 
-### 五、無發燒 — 搔癢性皮疹 Afebrile — Pruritic Rash
+### 五、無發燒 — 搔癢性皮疹
+**Afebrile — Pruritic Rash**
 
 | 疾病                                                | 皮疹特徵                                                         | 鑑別要點                                                                 | 治療原則                                                 |
 | --------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------- |
@@ -150,7 +154,7 @@ password: "516800"
 | **汗疹**（Miliaria／Heat rash）                     | 細小透明水疱（miliaria crystallina）或紅色丘疹（miliaria rubra） | 悶熱環境、過度穿衣；頸部、胸部、皮膚皺褶處常見                           | 降溫通風、減少衣物                                       |
 | **白色糠疹**（Pityriasis alba）                     | 臉頰境界不清的淺白斑、輕度脫屑                                   | 與皮膚乾燥、日曬相關；常見於異位性體質兒童；非黴菌                       | 保濕；局部低效類固醇（發炎期）                           |
 
-### 六、無發燒 — 非搔癢性／無症狀皮疹 Afebrile — Non-Pruritic / Asymptomatic Rash
+### 六、無發燒 — 非搔癢性／無症狀皮疹
 
 | 疾病                                                      | 皮疹特徵                                                       | 鑑別要點                                                                 | 治療原則                                                      |
 | --------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------- |
@@ -166,9 +170,9 @@ password: "516800"
 | **新生兒頭部膿疱病**（Neonatal cephalic pustulosis）      | 額頭、臉頰、下巴紅色丘疹膿疱（新生兒痤瘡）                     | 出生後 2–4 週出現；數月內自癒；不需治療                                  | 觀察（自限性）；嚴重者局部抗黴菌（ketoconazole 乳膏）         |
 | **嬰兒脂漏性皮膚炎**（Seborrheic dermatitis／Cradle cap） | 頭皮油膩黃色脫屑（乳痂）；可延伸至臉、耳後、腋下               | 出生後數月常見；自限性；與 Malassezia 相關                               | 頭皮軟化（嬰兒油）＋溫水清洗；抗黴菌洗劑（ketoconazole）      |
 
-## 第五步：診斷輔助工具 Diagnostic Workup
+## 第五步：診斷輔助工具
 
-### 基礎評估 Basic Workup
+### 基礎評估
 
 | 工具                                          | 適用情境                                                                           |
 | --------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -185,7 +189,7 @@ password: "516800"
 | PCR／病毒培養                                 | 懷疑特定病毒（HSV、VZV、Enterovirus 71、Measles）                                  |
 | 心臟超音波（Echocardiogram）                  | 川崎病 → 排除冠狀動脈瘤                                                            |
 
-## 第六步：年齡層特殊考量 Step 6: Age-Specific Considerations
+## 第六步：年齡層特殊考量
 
 | 年齡層                  | 好發診斷                                                                            |
 | ----------------------- | ----------------------------------------------------------------------------------- |
@@ -195,7 +199,7 @@ password: "516800"
 | **學齡兒童（5–12 歲）** | Parvovirus B19、猩紅熱、川崎病、ITP、HSP、傳染性軟疣、玫瑰糠疹                      |
 | **青少年**              | EBV、多形性紅斑、藥物疹、DRESS、膿瘍性痤瘡、STI 相關皮疹（HIV、梅毒、HSV）          |
 
-## 速查摘要表 Quick Reference Summary
+## 速查摘要
 
 | 發燒 | 皮疹形態             | 最常見診斷                                |
 | ---- | -------------------- | ----------------------------------------- |
@@ -211,7 +215,7 @@ password: "516800"
 | 無   | 水疱／結痂           | 膿痂疹、軟疣、體癬                        |
 | 無   | 無症狀               | 病毒疹恢復期、玫瑰糠疹、血管瘤            |
 
-## 關鍵鑑別要點 Key Diff Tips
+## 關鍵鑑別要點
 
 1. **Toxic appearance = 敗血症／Meningococcemia，先救命再診斷**
 2. **玫瑰疹經典：高燒 3–5 天→退燒→出疹（other way around）**
@@ -224,11 +228,12 @@ password: "516800"
 9. **異位性皮膚炎：慢性復發 + 劇癢 + 過敏家族史 + 特定分布**
 10. **疥瘡：夜間搔癢 + 家庭群聚 + 指縫隧道**
 
-## 附錄：臨床影像速查 Photo Grid
+## 附錄：臨床影像
 
 > 以下影像整理自兒童常見皮疹與類似病灶，僅供形態學比對參考。
 
-### 一、新生兒暫時性 / 良性疹 Neonatal Transient & Benign
+### 一、新生兒暫時性 / 良性疹 
+**Neonatal Transient & Benign**
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/ped-rash/erythema-toxicum-neonatorum.jpeg" alt="Erythema Toxicum Neonatorum" loading="lazy"/><figcaption>Erythema Toxicum Neonatorum</figcaption></figure>
@@ -239,7 +244,8 @@ password: "516800"
   <figure><img src="/reference/skin/ped-rash/lupus-neon.jpg" alt="Neonatal Lupus" loading="lazy"/><figcaption>Neonatal Lupus</figcaption></figure>
 </div>
 
-### 二、血管性胎記 Vascular Birthmarks
+### 二、血管性胎記
+**Vascular Birthmarks**
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/ped-rash/infantile-hemangioma.jpeg" alt="Infantile Hemangioma" loading="lazy"/><figcaption>Infantile Hemangioma</figcaption></figure>
@@ -247,7 +253,8 @@ password: "516800"
   <figure><img src="/reference/skin/ped-rash/nevus-flammeus.jpeg" alt="Nevus Flammeus (Port-wine Stain)" loading="lazy"/><figcaption>Nevus Flammeus (Port-wine Stain)</figcaption></figure>
 </div>
 
-### 三、病毒疹 Viral Exanthems
+### 三、病毒疹
+**Viral Exanthems**
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/ped-rash/measles.png" alt="Measles" loading="lazy"/><figcaption>Measles</figcaption></figure>
@@ -258,7 +265,8 @@ password: "516800"
   <figure><img src="/reference/skin/ped-rash/molluscum-contagiosum.png.jpg" alt="Molluscum Contagiosum" loading="lazy"/><figcaption>Molluscum Contagiosum</figcaption></figure>
 </div>
 
-### 四、細菌與黴菌感染 Bacterial & Fungal
+### 四、細菌與黴菌感染
+**Bacterial & Fungal**
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/ped-rash/scarlet-fever.jpg" alt="Scarlet Fever" loading="lazy"/><figcaption>Scarlet Fever</figcaption></figure>
@@ -266,7 +274,8 @@ password: "516800"
   <figure><img src="/reference/skin/ped-rash/tinea-corporis.jpg" alt="Tinea Corporis" loading="lazy"/><figcaption>Tinea Corporis</figcaption></figure>
 </div>
 
-### 五、發炎、過敏與全身性 Inflammatory / Hypersensitivity / Systemic
+### 五、發炎、過敏與全身性
+**Inflammatory / Hypersensitivity / Systemic**
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/ped-rash/Kawaskaki.png" alt="Kawasaki Disease" loading="lazy"/><figcaption>Kawasaki Disease</figcaption></figure>
@@ -277,7 +286,8 @@ password: "516800"
   <figure><img src="/reference/skin/ped-rash/dengue-hemorrhagic-fever.jpg" alt="Dengue Hemorrhagic Fever" loading="lazy"/><figcaption>Dengue Hemorrhagic Fever</figcaption></figure>
 </div>
 
-### 六、丘疹鱗屑 Papulosquamous
+### 六、丘疹鱗屑
+**Papulosquamous**
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/ped-rash/pityriasis-rosea.jpeg" alt="Pityriasis Rosea" loading="lazy"/><figcaption>Pityriasis Rosea</figcaption></figure>

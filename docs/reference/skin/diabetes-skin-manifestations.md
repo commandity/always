@@ -178,7 +178,7 @@ title: 糖尿病皮膚表現 Skin Manifestations of Diabetes Mellitus
 9. **Scleredema diabeticorum** 緩慢進展、治療棘手；2024 EDF 指引：一線 UVA1/PUVA
 10. **多重皮膚表現同時出現** → 應全面評估血糖控制及 DM 併發症
 
-## 附錄：臨床影像速查
+## 附錄：臨床影像
 
 > 以下影像整理自各類糖尿病相關皮膚表現，僅供形態學比對參考。
 

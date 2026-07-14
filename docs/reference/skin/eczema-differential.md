@@ -1,14 +1,14 @@
 ---
 layout: doc
-title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Eczema & Clinical Algorithm
+title: 濕疹鑑別診斷 Differential Diagnosis of Eczema
 ---
 
-# 濕疹鑑別診斷與臨床思考流程
+# 濕疹鑑別診斷
 **Differential Diagnosis of Eczema**
 
 > **核心概念**：「濕疹（eczema）」非獨立疾病，而是一組以**搔癢、紅斑、滲出、脫屑**為共同表現的皮膚炎症候群。臨床上須系統性排除各種原因，才能確立診斷與治療方向。
 
-## 第一步：確認是否為濕疹樣形態
+## 第一步：確認是否為濕疹
 
 在進入鑑別診斷前，先確認病灶符合濕疹樣形態：
 
@@ -21,7 +21,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 
 若形態吻合，進入以下鑑別流程。
 
-## 第二步：臨床思考演算法 Clinical Algorithm
+## 第二步：臨床思考
 
 <div style="margin:1.75rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -74,9 +74,9 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 依序評估：先問**接觸史**（陽性 → 接觸性皮膚炎）；否則問**異位體質**（陽性 → 異位性皮膚炎，並排除繼發感染）；兩者皆陰性，再進入**形態學評估**（部位／形狀／對稱性／邊界）分流。
 :::
 
-## 第三步：主要鑑別診斷分類 Step 3: Major Differential Categories
+## 第三步：主要鑑別診斷分類
 
-### 一、原發性濕疹 Primary Eczema
+### 一、原發性濕疹
 
 | 疾病                                                          | 好發部位                                                   | 特徵性表現                                                                     | 關鍵鑑別點                                                         | 治療原則                                                 |
 | ------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------ | -------------------------------------------------------- |
@@ -90,7 +90,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | **神經性皮炎**（Lichen simplex chronicus, LSC）               | 頸後、踝部、外陰、頭皮（容易搔抓的部位）                   | 苔蘚化斑塊（lichenified plaque）、明顯皮溝皮嵴（skin markings）、搔癢–搔抓循環 | 搔抓行為為核心；心理壓力誘發                                       | 打破搔抓循環；局部強效類固醇；抗組織胺                   |
 | **結節性癢疹**（Prurigo nodularis）                           | 四肢伸側（手臂、小腿）                                     | 多個堅硬的結節（firm nodules）、表面脫皮結痂                                   | 慢性搔抓所致；頑固難治                                             | 局部強效類固醇；抗組織胺；UVB；thalidomide               |
 
-### 二、感染性及感染誘發 Infectious & Infection-related
+### 二、感染性及感染誘發
 
 | 疾病                                                     | 特徵                                                                               | 鑑別線索                                                                      | 治療原則                                      |
 | -------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------- |
@@ -99,7 +99,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | **疥瘡**（Scabies）                                      | 指間、腕部屈側、乳暈、陰囊等；隧道（burrows）                                      | 夜間劇癢；家庭群聚；皮膚鏡（dermoscopy）見疥蟲                                | Permethrin 5% 乳膏（全身塗抹）；全家同時治療  |
 | **膿皰病**（Impetigo）                                   | 面部、鼻周、口周                                                                   | 蜂蜜色結痂（honey-colored crusts）；細菌繼發感染                              | 局部抗生素（mupirocin）；廣泛者口服抗生素     |
 
-### 三、系統性疾病相關濕疹 Systemic Disease-related
+### 三、系統性疾病相關
 
 | 疾病                                                           | 皮膚表現                                                                     | 系統性線索                                                           | 治療原則                                                      |
 | -------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -114,7 +114,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | **自體免疫黃體素皮膚炎**（Autoimmune progesterone dermatitis） | 月經週期前後規律發作的濕疹樣丘疹水疱、蕁麻疹、多形紅斑樣病灶                 | 黃體期（luteal phase）反覆發作；對自體黃體素過敏；卵巢抑制治療有效   | NSAIDs、抗組織胺；嚴重者卵巢抑制或抗黃體素治療                |
 | **成人史迪爾氏症**（Adult-onset Still's disease, AOSD）        | 短暫橙紅色斑丘疹（evanescent salmon-pink rash），伴隨發燒高峰出現            | 間歇高燒、關節痛、咽喉痛；鐵蛋白（ferritin）顯著升高；皮疹隨發燒消退 | NSAIDs；全身類固醇；IL-1/IL-6 抑制劑（anakinra、tocilizumab） |
 
-### 四、副腫瘤性及血液疾病相關 Paraneoplastic
+### 四、副腫瘤性及血液疾病相關
 
 | 疾病                                                             | 特徵                                                              | 警示線索（Red flags）                                                     | 治療原則                                                       |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -128,7 +128,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | **成人T細胞白血病／淋巴瘤**（ATLL）                              | 廣泛性濕疹樣紅斑丘疹、可進展為紅皮症（erythroderma）              | 來自 HTLV-1 流行區；淋巴腺腫大、高血鈣、LDH 升高；皮膚活檢見捲曲核淋巴球  | 化療（CHOP）；抗病毒（zidovudine＋IFN-α）；莫努匹克（限局部）  |
 | **白血病皮膚浸潤**（Leukemia cutis）                             | 單發或多發紅褐色丘疹結節；可呈廣泛濕疹樣斑塊（罕見）              | 周邊血液抹片異常；依白血病類型不同（CLL、AML 最常見皮膚表現）             | 治療原發白血病（化療、標靶治療）；局部放射治療                 |
 
-### 五、藥物疹 Drug Reactions
+### 五、藥物疹
 
 | 類型                                                      | 特徵                                      | 常見致因藥物                                              | 治療原則                                             |
 | --------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------- |
@@ -151,7 +151,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | **Thiazide 利尿劑**                                   | 光敏感性藥疹、Lichenoid 藥疹                 | 潛伏期可長達數月                                           |
 | **Piperacillin-Tazobactam**                           | Morbilliform（住院患者最常見）               | 常被誤認為感染本身惡化                                     |
 
-### 六、需排除的類濕疹疾病 Eczema Mimics
+### 六、類濕疹
 
 | 疾病                                                       | 外觀相似點                             | 鑑別要點                                                                                     | 治療原則                                                                            |
 | ---------------------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -172,9 +172,9 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | **Bowen 病**（Bowen disease／in situ SCC）                 | 界線清楚脫屑性紅斑斑塊                 | 緩慢擴大、對局部類固醇無反應；活檢確診                                                       | 手術切除；冷凍治療；局部 5-FU／imiquimod                                            |
 | **皮膚T細胞淋巴瘤**（CTCL／Mycosis fungoides）             | 慢性濕疹樣斑塊、頑固搔癢               | 對標準治療無反應；皮膚活檢多次才確診；Sézary cells                                           | 局部類固醇、氮芥、UVB（早期）；全身治療（晚期）：干擾素、brentuximab、mogamulizumab |
 
-## 第四步：診斷輔助工具 Diagnostic Workup
+## 第四步：診斷輔助工具
 
-### 基礎評估 Basic Workup
+### 基礎評估
 
 | 工具                                  | 適用情境                                          |
 | ------------------------------------- | ------------------------------------------------- |
@@ -184,7 +184,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | 皮膚活檢（Skin biopsy）               | 診斷不明確；懷疑 CTCL、Paget 病、自體免疫水疱疾病 |
 | 貼片試驗（Patch test）                | 懷疑過敏性接觸性皮膚炎；找出致敏原                |
 
-### 選擇性實驗室檢查 Selective Laboratory Tests
+### 實驗室檢查
 
 | 檢查                                       | 懷疑診斷                                 |
 | ------------------------------------------ | ---------------------------------------- |
@@ -199,9 +199,9 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | 直接及間接免疫螢光（DIF/IIF）              | 水疱性自體免疫疾病                       |
 | 抗 tTG IgA、抗 endomysial 抗體             | 皰疹樣皮炎（乳糜瀉篩查）                 |
 
-## 第五步：特殊情境的鑑別重點 Step 5: Key Differentials in Special Situations
+## 第五步：特殊情境的鑑別重點
 
-### 成人新發嚴重濕疹 New-onset severe eczema in adult
+### 成人新發濕疹
 
 <div style="margin:1.6rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -232,7 +232,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
   </div>
 </div>
 
-### 局部頑固不癒的「濕疹」 Localized Treatment-Resistant "Eczema"
+### 局部頑固「濕疹」
 
 <div style="margin:1.6rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -259,7 +259,8 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
   </div>
 </div>
 
-### 搔癢為主、皮膚病灶不明顯 Pruritus sine materia
+### 搔癢為主、皮膚病灶不明顯 
+**Pruritus sine materia**
 
 <div style="margin:1.6rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -298,7 +299,8 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
   </div>
 </div>
 
-## 第六步：異位性皮膚炎診斷準則 Hanifin-Rajka Criteria
+## 第六步：異位性皮膚炎診斷準則
+**Hanifin-Rajka Criteria**
 
 **主要準則（Major criteria）— 需符合 3 項以上：**
 
@@ -320,7 +322,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 - 眼周濕疹（periorbital darkening／Dennie-Morgan folds）
 - 白色皮膚劃紋症（white dermographism）
 
-## 速查摘要表 Quick Reference Summary
+## 速查摘要
 
 | 分類       | 代表疾病                                                                 | 首要排除工具             |
 | ---------- | ------------------------------------------------------------------------ | ------------------------ |
@@ -331,7 +333,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | 藥物疹     | DRESS、光敏感性藥疹                                                      | 用藥史、停藥觀察         |
 | 類濕疹疾病 | 牛皮癬、扁平苔癬、DLE、SCLE、環狀肉芽腫、多形紅斑、肉瘤病、天皰瘡、Paget | 皮膚活檢、DIF、自體抗體  |
 
-## 第七步：環狀（環形）病灶鑑別診斷 Annular / Ring-form Lesions
+## 第七步：環形病灶鑑別診斷
 
 > 多種皮膚疾病皆可呈現環形病灶，正確鑑別需注意：**邊緣活性（scaly border vs. smooth border）、中央變化（clearing vs. intact vs. atrophy）、分布部位及伴隨症狀**。以下依臨床常見度整理。
 
@@ -348,11 +350,11 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 | **環狀乾癬**（Annular psoriasis）                   | 環形斑塊，銀白色脫屑邊緣                           | 多見於兒童；肘膝／頭皮伴典型乾癬病灶            | 外觀；必要時活檢                           | 局部類固醇／維生素D衍生物；UVB；生物製劑     |
 | **離心性環狀紅斑**（Erythema annulare centrifugum） | 環形紅斑，邊緣脫屑（trailing scale），向心性擴大   | 中央完全消退；輕癢或無症狀                      | 需排除潛在原因（真菌感染、藥物、惡性腫瘤） | 針對潛在原因；局部類固醇緩解症狀             |
 
-## 附錄：臨床影像速查 Photo Grid
+## 附錄：臨床影像
 
 > 以下影像整理自各類濕疹及類濕疹疾病，僅供形態學比對參考。
 
-### 一、原發性濕疹 Primary Eczema
+### 一、原發性濕疹
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/eczema-ddx/atopic-dermatitis.jpg" alt="Atopic dermatitis" loading="lazy"/><figcaption>Atopic Dermatitis</figcaption></figure>
@@ -366,7 +368,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
   <figure><img src="/reference/skin/eczema-ddx/nodular-prurigo.jpg" alt="Prurigo nodularis" loading="lazy"/><figcaption>Prurigo Nodularis</figcaption></figure>
 </div>
 
-### 二、感染性及感染誘發 Infectious & Infection-related
+### 二、感染性及感染誘發
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/eczema-ddx/dermatophytide-reaction.jpg" alt="Dermatophytid reaction" loading="lazy"/><figcaption>Dermatophytid (Id Reaction)</figcaption></figure>
@@ -375,7 +377,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
   <figure><img src="/reference/skin/eczema-ddx/tinea-corporis.jpeg" alt="Tinea corporis" loading="lazy"/><figcaption>Tinea Corporis</figcaption></figure>
 </div>
 
-### 三、系統性疾病相關 Systemic Disease-related
+### 三、系統性疾病相關
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/eczema-ddx/dermatitis-herpetiformis.jpg" alt="Dermatitis herpetiformis" loading="lazy"/><figcaption>Dermatitis Herpetiformis</figcaption></figure>
@@ -387,7 +389,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
   <figure><img src="/reference/skin/eczema-ddx/hodgkin-lymphoma.jpg" alt="Hodgkin lymphoma pruritus" loading="lazy"/><figcaption>Hodgkin Lymphoma Pruritus</figcaption></figure>
 </div>
 
-### 四、藥物疹 Drug Reactions
+### 四、藥物疹
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/eczema-ddx/drug-eruption.jpg" alt="Drug eruption" loading="lazy"/><figcaption>Drug Eruption</figcaption></figure>
@@ -395,7 +397,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
   <figure><img src="/reference/skin/eczema-ddx/fix-drug-eruption.jpg" alt="Fixed drug eruption" loading="lazy"/><figcaption>Fixed Drug Eruption</figcaption></figure>
 </div>
 
-### 五、類濕疹疾病 Eczema Mimics
+### 五、類濕疹
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/eczema-ddx/psoriasis.webp" alt="Psoriasis" loading="lazy"/><figcaption>Psoriasis</figcaption></figure>
@@ -410,7 +412,7 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
   <figure><img src="/reference/skin/eczema-ddx/lichen-sclerosus.png" alt="Lichen sclerosus" loading="lazy"/><figcaption>Lichen Sclerosus</figcaption></figure>
 </div>
 
-### 六、環狀病灶 Annular / Ring-form Lesions
+### 六、環形病灶
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/eczema-ddx/tinea-corporis.jpeg" alt="Tinea corporis" loading="lazy"/><figcaption>Tinea Corporis</figcaption></figure>

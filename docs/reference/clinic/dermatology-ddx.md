@@ -4,10 +4,9 @@ title: 皮膚科鑑別診斷
 ---
 
 # 皮膚科鑑別診斷
-
 **Dermatology Differential**
 
-## 鑑別診斷流程圖 Differential Diagnosis Flowchart
+## 鑑別診斷流程圖
 
 <img src="/images/dermatology-ddx.svg" alt="皮膚科鑑別診斷演算法" style="width:100%;max-width:1400px;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1);" />
 

@@ -4,7 +4,6 @@ title: 妊娠用藥分級 Pregnancy Drug Risk Category
 ---
 
 # 妊娠用藥分級
-
 **Pregnancy Drug Risk Category (FDA A / B / C / D / X)**
 
 <PregnancyCategoryTable />

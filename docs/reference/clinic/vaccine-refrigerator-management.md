@@ -4,7 +4,6 @@ title: 疫苗專用冰箱管理 Vaccine Refrigerator Management
 ---
 
 # 疫苗專用冰箱管理
-
 **Vaccine Refrigerator Management**
 
 > **【疫苗事用冰箱管理原則】**

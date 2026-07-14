@@ -1,11 +1,10 @@
 ---
 layout: doc
-title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
+title: 區域麻醉 Regional Anesthesia
 ---
 
-# 區域麻醉完整指南
-
-**Regional Anesthesia Comprehensive Guide · 區域阻斷麻醉全身各部位完整參考**
+# 區域麻醉
+**Regional Anesthesia**
 
 ---
 

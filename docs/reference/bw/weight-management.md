@@ -1,10 +1,10 @@
 ---
 layout: doc
-title: 減重完整指引 Comprehensive Weight Management Guide
+title: 減重指引 Weight Management Guide
 ---
 
-# 減重完整指引
-**Comprehensive Weight Management Guide**
+# 減重指引
+**Weight Management Guide**
 
 ## 概述
 

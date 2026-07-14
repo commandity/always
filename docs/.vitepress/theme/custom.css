@@ -1414,10 +1414,11 @@ html {
 .tab-bar:active {
   cursor: grabbing;
 }
-/* keep each tab at its content width so the row overflows and scrolls
-   (overrides per-component flex:1 that would otherwise squish them) */
+/* Tabs stretch to fill the bar when they fit (grow:1), but never shrink
+   below their content width (shrink:0, basis:auto) — so once there are too
+   many to fit in one row, the bar overflows and scrolls instead of squishing. */
 .tab-bar > * {
-  flex: 0 0 auto !important;
+  flex: 1 0 auto !important;
 }
 .tab-bar::-webkit-scrollbar {
   height: 6px;

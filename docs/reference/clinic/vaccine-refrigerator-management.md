@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidelines
+title: 疫苗專用冰箱管理 Vaccine Refrigerator Management
 ---
 
-# 疫苗專用冰箱管理原則
+# 疫苗專用冰箱管理
 
-**Vaccine Refrigerator Management Guidelines**
+**Vaccine Refrigerator Management**
 
 > **【疫苗事用冰箱管理原則】**
 >
@@ -24,7 +24,7 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
 > 13. 冰箱要離牆壁或冰箱與冰箱間距至少10公分，以利熱空氣散熱。
 > 14. 冰箱使用之電源插座為專用插座，冰箱之插頭應用適當的謬布妥善固定於插座上，以防脫落。
 
-## 1. 溫度管理 Temperature Management
+## 1. 溫度管理
 
 | 項目         | 要求                                   |
 | ------------ | -------------------------------------- |
@@ -33,9 +33,9 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
 | **記錄頻率** | 每天早、晚各查核一次，確實記錄冰箱溫度 |
 | **設備**     | 使用經認證之高低溫度計                 |
 
-## 2. 疫苗存放原則 Storage Principles
+## 2. 疫苗存放原則
 
-### 2.1 專用冰箱 Dedicated Refrigerator
+### 2.1 專用冰箱
 
 - 疫苗貯存應有**專用冰箱**，**不可**將食物、飲料或疫苗以外之藥物、檢體等與疫苗一起存放。
 
@@ -44,7 +44,7 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
 - 新進疫苗放置於冰箱**右邊或後面**
 - 使用時由**左邊或前面**開始拿取
 
-### 2.3 標示與排列 Labeling & Arrangement
+### 2.3 標示與排列
 
 | 項目           | 要求                                 |
 | -------------- | ------------------------------------ |
@@ -53,14 +53,14 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
 | **排列方式**   | 排列整齊，疫苗間應留空隙以利空氣流通 |
 | **目的**       | 避免影響疫苗效價                     |
 
-### 2.4 溫度分層存放 Temperature Zoning
+### 2.4 溫度分層
 
 | 疫苗類型       | 存放位置                         | 說明                 | 範例                                                                |
 | -------------- | -------------------------------- | -------------------- | ------------------------------------------------------------------- |
 | **活化疫苗**   | 冰箱冷藏室**最底層**（溫度最低） | 對高溫較敏感（怕熱） | MMR（麻疹德國麻疹腮腺炎）、Var（水痘）                              |
 | **不活化疫苗** | 冰箱冷藏室**較上層**（溫度較高） | 對低溫較敏感（怕冷） | HBV（B型肝炎）、HBIG（B型肝炎免疫球蛋白）、Flu（流感）、PPV（肺炎） |
 
-### 2.5 冰箱分層擺放實例 Shelf Layout Example
+### 2.5 分層實例
 
 依「上層較溫、下層較冷」原則，**不活化疫苗（怕冷）放上層**，**活化疫苗（怕熱）放最底層**。下圖為一台疫苗冰箱的實際分層標示：
 
@@ -77,7 +77,7 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
       <div style="padding:0.6rem 0.85rem;background:#fff7ed;border-bottom:1px solid #e2e8f0;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45rem;">
           <span style="font-weight:800;color:#9a3412;font-size:0.94rem;">A 層</span>
-          <span style="font-size:0.78rem;font-weight:700;color:#b45309;background:#fef3c7;border-radius:999px;padding:2px 9px;">此層最高溫</span>
+          <span style="font-size:0.78rem;font-weight:700;color:#b45309;background:#fef3c7;border-radius:999px;padding:2px 9px;">最高溫</span>
         </div>
         <div style="display:flex;gap:7px;flex-wrap:wrap;">
           <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">A 肝</b><small style="font-size:0.72rem;color:#6b7280;">HAV</small></span>
@@ -89,7 +89,7 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
       <div style="padding:0.6rem 0.85rem;background:#eff6ff;border-bottom:1px solid #e2e8f0;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45rem;">
           <span style="font-weight:800;color:#1e40af;font-size:0.94rem;">B 層</span>
-          <span style="font-size:0.78rem;font-weight:700;color:#1d4ed8;background:#dbeafe;border-radius:999px;padding:2px 9px;">此層次低溫</span>
+          <span style="font-size:0.78rem;font-weight:700;color:#1d4ed8;background:#dbeafe;border-radius:999px;padding:2px 9px;">次低溫</span>
         </div>
         <div style="display:flex;gap:7px;flex-wrap:wrap;">
           <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">五合一</b><small style="font-size:0.72rem;color:#6b7280;">DTaP-Hib-IPV</small></span>
@@ -100,7 +100,7 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
       <div style="padding:0.6rem 0.85rem;background:#dbeafe;border-bottom:1px solid #e2e8f0;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45rem;">
           <span style="font-weight:800;color:#1e3a8a;font-size:0.94rem;">C 層</span>
-          <span style="font-size:0.78rem;font-weight:700;color:#fff;background:#2563eb;border-radius:999px;padding:2px 9px;">此層最低溫</span>
+          <span style="font-size:0.78rem;font-weight:700;color:#fff;background:#2563eb;border-radius:999px;padding:2px 9px;">最低溫</span>
         </div>
         <div style="display:flex;gap:7px;flex-wrap:wrap;">
           <span style="display:inline-flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;"><b style="font-size:0.98rem;color:#1f2937;">JE</b><small style="font-size:0.72rem;color:#6b7280;">日本腦炎</small></span>
@@ -122,7 +122,7 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
 
 > **判讀重點**：由上而下溫度遞減。**不活化疫苗**（A 肝、B 肝、四合一、五合一、13PCV）怕冷，放**上層**；**活化疫苗**（JE、MMR、VAR）怕熱，放**最低溫層**。B 層標示「不活化疫苗的最低溫」，即不活化疫苗最多只能放到此層，再往下（C 層）過冷可能損及不活化疫苗效價。
 
-## 3. 冰箱環境要求 Environmental Requirements
+## 3. 冰箱環境要求
 
 | 項目           | 要求                                                             |
 | -------------- | ---------------------------------------------------------------- |
@@ -132,7 +132,7 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
 | **插頭固定**   | 冰箱之插頭應用適當之膠布妥善固定於插座上，以防脫落               |
 | **溫度計位置** | **勿**將疫苗或高低溫度計放置於冰箱門（因冰箱門散熱快，溫度不穩） |
 
-## 4. 停電應變措施 Power Outage Response
+## 4. 停電應變措施
 
 ### 4.1 冷凍室保冷準備
 
@@ -150,19 +150,19 @@ title: 疫苗專用冰箱管理原則 — Vaccine Refrigerator Management Guidel
 | **處理方式**                              | 聯繫衛生所主辦人，並將疫苗送至衛生所存放 |
 | **目的**                                  | 維護疫苗品質                             |
 
-## 5. 溫度異常處理 Temperature Abomaly Response
+## 5. 溫度異常處理
 
 - 疫苗冰箱若發生溫度異常，**無法立即處理**時：
   1. **立即**與轄區衛生所預注主辦人連絡
   2. 將疫苗送至衛生所存放
   3. 維護疫苗品質
 
-## 6. 管理責任 Management Responsibility
+## 6. 管理責任
 
 - 需指定**專人負責**管理疫苗
 - 每次使用後均確認冰箱門需**緊閉**
 
-## 快速檢查表 Quick Checklist
+## 快速檢查表
 
 | 檢查項目                                   | ✓   |
 | ------------------------------------------ | --- |

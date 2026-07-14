@@ -1,14 +1,13 @@
 ---
 layout: doc
-title: Digestive System Sonography — Diagnosis & Echo Findings
+title: Digestive System Sonography 消化系統超音波
 password: "516800"
 ---
 
-# Digestive System Sonography — Diagnosis & Echo Findings
+# Digestive System Sonography
+**消化系統超音波**
 
-**消化系統超音波 — 疾病診斷與回音特徵**
-
-## 概述
+## Overview
 
 The digestive system encompasses the GI tract from the oral cavity to the anus, along with accessory organs — the liver, gallbladder, biliary tree, and pancreas. Abdominal ultrasound is the first-line imaging modality due to its wide availability, real-time capability, and lack of ionizing radiation, complemented by CT, MRI, and EUS for higher-resolution evaluation.
 

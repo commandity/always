@@ -1,17 +1,16 @@
 ---
 layout: doc
-title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
+title: 嗓音復健 Voice Rehabilitation
 ---
 
-# 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
+# 嗓音復健
+**Voice Rehabilitation**
 
-**Voice Rehabilitation — Assessment & Management of Functional and Organic Dysphonia**
-
-## 概述 Overview
+## 概述
 
 音聲障礙（dysphonia）指因聲帶結構、神經支配、或功能使用不當導致的聲音品質異常。依病因可分為**功能性**（muscle tension dysphonia, psychogenic）、**器質性**（聲帶結節、息肉、溝狀聲帶、單側聲帶麻痺、喉萎縮）及**神經性**（痙攣性發聲障礙、聲帶震顫）。嗓音復健透過**行為治療**、**手術矯正**及**藥物治療**三者相輔，目標為恢復有效且可持續的發聲功能。
 
-## 復健流程 Rehabilitation Flowchart
+## 復健流程
 
 <div style="margin:1.75rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -81,7 +80,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
   </div>
 </div>
 
-## 發聲機能與生物力學 Vocal Function & Biomechanics
+## 發聲機能與生物力學
 
 | 機制                 | 描述                                                                 |
 | -------------------- | -------------------------------------------------------------------- |
@@ -91,7 +90,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 | **Resonance**        | 咽腔、口腔、鼻腔共鳴調整音色                                         |
 | **Breath support**   | 橫膈膜及腹肌協調 — 穩定呼氣流                                        |
 
-## 病因分類 Etiology & Classification
+## 病因分類
 
 | 類別                 | 常見病因                                                                                   |
 | -------------------- | ------------------------------------------------------------------------------------------ |
@@ -101,22 +100,22 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 | **Organic — Neo**    | 喉白斑（leukoplakia）、喉癌（SCC）、乳突瘤（papillomatosis）                               |
 | **Iatrogenic**       | 甲狀腺術後喉返神經損傷、插管後杓狀軟骨脫位／肉芽腫、放療後纖維化                           |
 
-## 臨床評估 Clinical Evaluation
+## 臨床評估
 
-### 病史 History
+### 病史
 
 - **發病模式**：急性（感冒後、過度使用）vs 漸進性（數月∼數年）vs 間歇性（MTD）
 - **聲音特徵**：沙啞（hoarseness）、費力（effortful）、氣息聲（breathy）、粗糙（rough）、音高異常（pitch break）
 - **誘發因子**：長時間說話、打電話、唱歌、吵雜環境、喉嚨清痰（throat clearing）
 - **伴隨症狀**：喉嚨痛（odynophonia）、異物感（globus）、胃食道逆流（GERD/LPR）、過敏性鼻炎、抽菸、職業聲帶使用者
 
-### 身體檢查 Physical Examination
+### 身體檢查
 
 - **External neck palpation**：甲狀軟骨高度、喉部上抬、舌骨上肌群張力、環甲間隙
 - **Laryngeal palpation**：甲狀軟骨壓迫測試（laryngeal compression test）— 用於評估 MTD
 - **Ear, nose, throat**：鼻腔、口咽、下咽黏膜檢查（排除腫瘤、LPR 徵象）
 
-### 儀器評估 Instrumental Assessment
+### 評估
 
 | 檢查                               | 目的                                                                               | 關鍵發現                                                                   |
 | ---------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -144,9 +143,10 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 
 > **Scoring**：總分 0–40，>11 表示自覺障礙顯著；治療前後對比評估療效。
 
-## 治療策略 Treatment Approaches
+## 治療策略
 
-### 行為治療 — 第一線 Behavioral Voice Therapy
+### 行為嗓音治療 — 第一線
+**Behavioral Voice Therapy**
 
 | 技術                                      | 適應症                                       | 方法                                                         |
 | ----------------------------------------- | -------------------------------------------- | ------------------------------------------------------------ |
@@ -160,7 +160,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 | **Manual laryngeal therapy**              | MTD（喉部張力增高）                          | 甲狀軟骨減壓按摩、環甲間隙放鬆、舌骨鬆動術                   |
 | **Conversation training therapy**         | MTD（實際溝通困難）                          | 直接在日常對話情境中應用技巧（非僅在診間練習）               |
 
-### 藥物治療 Medical Treatment
+### 藥物治療
 
 | 情況                    | 藥物                                                       |
 | ----------------------- | ---------------------------------------------------------- |
@@ -169,7 +169,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 | **Muscle tension**      | Anticholinergics（glycopyrrolate）— 減少 throat clearing   |
 | **Spasmodic dysphonia** | **BTX-A（肉毒桿菌素）** 注射至甲杓肌（TA）—可維持 3–6 個月 |
 
-### 手術治療 Surgical Treatment
+### 手術治療
 
 | 術式                                     | 適應症                                       | 說明                                                               |
 | ---------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------ |
@@ -181,7 +181,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 | **Scar lysis / injection laryngoplasty** | Vocal fold scar / sulcus vocalis             | Steroid injection ± 微穿孔 ± fat/fascia 注射補充容積               |
 | **Laryngectomy**                         | T3–T4 喉癌                                   | Total / partial laryngectomy → 術後需 alaryngeal 發聲訓練          |
 
-### Common Phonosurgery & Voice Therapy 對應
+### 嗓音手術
 
 | 病灶                     | 預設方案                                | 術後嗓音治療重點                                   |
 | ------------------------ | --------------------------------------- | -------------------------------------------------- |
@@ -191,7 +191,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 | **Sulcus vocalis**       | Injection laryngoplasty ± scar lysis    | 術後黏膜波動訓練 → 長期頻率追蹤                    |
 | **Unilateral paralysis** | Medialization laryngoplasty             | 術後 2–4 週 → 閉合加強 + breath support → 頻率控制 |
 
-### 術後嗓音治療原則 Post-op Voice Therapy
+### 術後嗓音治療原則
 
 1. **Vocal rest**：絕對休息 24–72h → 相對休息（減少說話量、勿耳語）— 依病灶大小及範圍
 2. **Gentle onset**：以 /h/ 引導母音 → 減少聲帶撞擊力
@@ -199,22 +199,25 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 4. **Resonance training**：forward focus → 減輕喉部負擔
 5. **Progressive loading**：MPT → 音量 → 音高範圍 → 持續時間 → 日常對話
 
-## 常見疾病與治療方案 Common Conditions & Specific Protocols
+## 常見疾病與治療方案
 
-### 1. 肌肉緊張性發聲障礙 Muscle Tension Dysphonia（MTD）
+### 1. 肌肉緊張性發聲障礙
+**Muscle Tension Dysphonia（MTD）**
 
 - **特徵**：喉部過度緊張，聲帶內收過強，發聲費力
 - **Stroboscopy**：supraglottic hyperfunction（假聲帶內收、arytenoid 緊迫）、閉合過長或過短、黏膜波動正常
 - **治療**：Manual laryngeal therapy + SOVT + resonant voice therapy → 矯正不良發聲習慣
 
-### 2. 聲帶結節 Vocal Nodules
+### 2. 聲帶結節
+**Vocal Nodules**
 
 - **好發**：職業聲帶使用者（教師、業務、歌手）、兒童（boys 6–10y）
 - **Stroboscopy**：mid-membranous zone bilateral symmetric swelling、VPD 消失、閉合不全
 - **治療**：第一線為行為治療（8–12 週）；若 >3mm、Fibrotic 或治療無效 → phonomicrosurgery
 - **預後**：兒童大多 6–12 個月保守治療改善；成人配合度高者治癒率 >85%
 
-### 3. 單側聲帶麻痺 Unilateral Vocal Fold Paralysis（UVFP）
+### 3. 單側聲帶麻痺
+**Unilateral Vocal Fold Paralysis（UVFP）**
 
 - **病因**：甲狀腺術後（最常見）、thoracic surgery、插管、腫瘤、不明原因（idiopathic）
 - **聲音表現**：breathy dysphonia、MPT↓、S/Z↑、vocal fatigue、aspiration
@@ -224,25 +227,28 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
   2. Voice therapy（閉合加強、breath support、expiratory muscle training）
   3. 若無恢復 → medialization laryngoplasty（thyroplasty type I ± arytenoid adduction）
 
-### 4. 老年喉 Presbylaryngis
+### 4. 老年喉
+**Presbylaryngis**
 
 - **特徵**：雙側聲帶萎縮、bowing、閉合不全 → breathy voice、MPT↓、vocal effort↑
 - **Stroboscopy**：聲帶邊緣凹陷（bowing）、閉合不全（fusiform gap）、黏膜波動正常 ∼ 減少
 - **治療**：Vocal function exercises + SOVT ± injection laryngoplasty（hyaluronic acid／fat）
 
-### 5. 痙攣性發聲障礙 Spasmodic Dysphonia
+### 5. 痙攣性發聲障礙
+**Spasmodic Dysphonia**
 
 | 型態         | 特徵                                                                 | 治療                                                       |
 | ------------ | -------------------------------------------------------------------- | ---------------------------------------------------------- |
 | **Adductor** | 發聲時聲帶過度內收 → strain-strangled voice，語音中斷（voice break） | BTX-A 注射至 TA（每側 0.5–2.5U）                           |
 | **Abductor** | 發聲時聲帶間歇性外展 → breathy voice break                           | BTX-A 注射至 posterior cricoarytenoid（PCA）— 效果較不穩定 |
 
-### 6. 變聲期假聲 Puberphonia
+### 6. 變聲期假聲
+**Puberphonia**
 
 - **特徵**：男性持續使用青春期前高頻假聲，頸部肌肉緊張
 - **治療**：Digital laryngeal manipulation + yawn-sigh technique + 咳嗽引導自然低頻
 
-## 療效評估 Outcome Measures
+## 療效評估
 
 | 工具                    | 頻率      | 目標                                         |
 | ----------------------- | --------- | -------------------------------------------- |
@@ -251,7 +257,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 | **VHI-10**              | 每 4–8 週 | 自覺障礙降低（減分 ≥6 才有臨床意義）         |
 | **Voice range profile** | 治療前後  | 音高及音量動態範圍增加                       |
 
-## 特殊族群 Special Populations
+## 特殊族群
 
 | 族群                   | 考量                                                                      |
 | ---------------------- | ------------------------------------------------------------------------- |
@@ -260,7 +266,7 @@ title: 嗓音復健 — 功能性及器質性音聲障礙之評估與治療
 | **Elderly**            | 考量萎縮、bowing + 併存疾病；注射 laryngoplasty 比開放性手術更合適        |
 | **Post-laryngectomy**  | Esophageal speech → TEP（tracheoesophageal puncture）→ electrolarynx 選擇 |
 
-## 參考文獻 References
+## 參考文獻
 
 1. Stachler RJ, Francis DO, Schwartz SR, et al. Clinical Practice Guideline: Hoarseness (Dysphonia) (Update). _Otolaryngol Head Neck Surg_. 2018;158(1_suppl):S1-S42.
 2. Patel RR, Awan SN, Barkmeier-Kraemer J, et al. Recommended Protocols for Instrumental Assessment of Voice. _Am J Speech Lang Pathol_. 2018;27(3):887-905.

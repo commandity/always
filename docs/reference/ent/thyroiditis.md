@@ -1,13 +1,12 @@
 ---
 layout: doc
-title: 甲狀腺炎 — 急性／亞急性／慢性／Hashimoto 鑑別診斷與治療
+title: 甲狀腺炎 Thyroiditis
 ---
 
-# 甲狀腺炎 — 完整鑑別診斷與治療指引
+# 甲狀腺炎
+**Thyroiditis**
 
-**Thyroiditis — Comprehensive Differential Diagnosis & Treatment Guide**
-
-## 概述 Overview
+## 概述
 
 甲狀腺炎泛指甲狀腺的發炎性疾病，病因涵蓋感染、自體免疫、藥物、放射線及不明原因。臨床上依**病程長短**與**病理特徵**分為四大類：
 

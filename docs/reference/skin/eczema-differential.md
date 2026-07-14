@@ -4,12 +4,11 @@ title: 濕疹鑑別診斷與臨床思考流程 — Differential Diagnosis of Ecz
 ---
 
 # 濕疹鑑別診斷與臨床思考流程
-
-**濕疹鑑別診斷與臨床思考流程 Differential Diagnosis of Eczema & Clinical Algorithm**
+**Differential Diagnosis of Eczema**
 
 > **核心概念**：「濕疹（eczema）」非獨立疾病，而是一組以**搔癢、紅斑、滲出、脫屑**為共同表現的皮膚炎症候群。臨床上須系統性排除各種原因，才能確立診斷與治療方向。
 
-## 第一步：確認是否為濕疹樣形態 Eczematous Morphology
+## 第一步：確認是否為濕疹樣形態
 
 在進入鑑別診斷前，先確認病灶符合濕疹樣形態：
 

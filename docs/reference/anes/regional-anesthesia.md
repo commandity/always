@@ -13,9 +13,9 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 本指南僅供醫學教育與臨床參考，實際操作需由具備資格之麻醉專科醫師執行，並依據患者個別解剖變異、手術需求與機構protocol調整。
 :::
 
-## 1. 頸部 Head & Neck
+## 1. Head & Neck
 
-### 1.1 浅頸神經叢阻斷 Superficial Cervical Plexus Block (SCPB)
+### 1.1 Superficial Cervical Plexus Block (SCPB)
 
 **適應症 Indications**
 
@@ -57,7 +57,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 膈神經阻斷（同側膈肌麻痺）
 - 氣胸（極少見）
 
-### 1.2 深頸神經叢阻斷 Deep Cervical Plexus Block (DCPB)
+### 1.2 Deep Cervical Plexus Block (DCPB)
 
 **適應症 Indications**
 
@@ -90,7 +90,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 脊髓缺血（大量藥物）
 - 喉返神經阻斷
 
-### 1.3 枕大/枕小神經阻斷 Greater/Lesser Occipital Nerve Block
+### 1.3 Greater/Lesser Occipital Nerve Block
 
 **適應症 Indications**
 
@@ -108,7 +108,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **進針** | 從外側進針，in-plane                                          |
 | **藥物** | 1% Lidocaine 或 0.25% Bupivacaine 3–5 mL                      |
 
-### 1.4 顎神經阻斷 Infraorbital Nerve Block
+### 1.4 Infraorbital Nerve Block
 
 **適應症 Indications**
 
@@ -134,9 +134,9 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 
 ## 2. 上肢 Upper Extremity
 
-### 2.1 臂神經叢阻斷 Brachial Plexus Blocks
+### 2.1 Brachial Plexus Blocks
 
-#### 2.1.1 肩胛上神經阻斷 Suprascapular Nerve Block
+#### 2.1.1 Suprascapular Nerve Block
 
 **適應症 Indications**
 
@@ -167,7 +167,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 氣胸（針尖太深）
 - 膈神經阻斷（若藥物向上擴散）
 
-#### 2.1.2 肋鎖臂神經叢阻斷 Interscalene Brachial Plexus Block (ISB)
+#### 2.1.2 Interscalene Brachial Plexus Block (ISB)
 
 **適應症 Indications**
 
@@ -221,7 +221,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 低容量（5 mL）精準注射至目標神經根
 - 減少膈神經阻斷發生率
 
-#### 2.1.3 鎖骨上阻斷 Supraclavicular Brachial Plexus Block
+#### 2.1.3 Supraclavicular Brachial Plexus Block
 
 **適應症 Indications**
 
@@ -261,7 +261,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 臂叢神經損傷
 - 血腫
 
-#### 2.1.4 鎖骨下阻斷 Infraclavicular Brachial Plexus Block
+#### 2.1.4 Infraclavicular Brachial Plexus Block
 
 **適應症 Indications**
 
@@ -294,7 +294,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 膈神經阻斷（較 supraclavicular 低，約 30%）
 - 血腫
 
-#### 2.1.5 腋神經阻斷 Axillary Brachial Plexus Block
+#### 2.1.5 Axillary Brachial Plexus Block
 
 **適應症 Indications**
 
@@ -337,9 +337,9 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 神經損傷（發生率低）
 - 腋動脈瘤/假性動脈瘤（罕見）
 
-## 3. 胸壁與軀幹 Chest Wall & Trunk
+## 3. Chest Wall & Trunk
 
-### 3.1 椎旁阻斷 Paravertebral Block (PVB)
+### 3.1 Paravertebral Block (PVB)
 
 **適應症 Indications**
 
@@ -383,7 +383,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血管內注射
 - 低血壓（交感神經阻斷）
 
-### 3.2 肋間神經阻斷 Intercostal Nerve Block
+### 3.2 Intercostal Nerve Block
 
 **適應症 Indications**
 
@@ -422,7 +422,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 藥物毒性（多節段阻斷時）
 - 局部血腫
 
-### 3.3 胸肌神經阻斷 Pectoral Nerve Block (PECs I & II)
+### 3.3 Pectoral Nerve Block (PECs I & II)
 
 **適應症 Indications**
 
@@ -463,7 +463,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 氣胸（罕見）
 - 局部血腫
 
-### 3.4 前鋸肌平面阻斷 Serratus Anterior Plane Block (SAPB)
+### 3.4 Serratus Anterior Plane Block (SAPB)
 
 **適應症 Indications**
 
@@ -497,7 +497,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血管內注射
 - 局部血腫
 
-### 3.5 背伸肌筋膜平面阻斷 Erector Spinae Plane Block (ESP)
+### 3.5 Erector Spinae Plane Block (ESP)
 
 **適應症 Indications**
 
@@ -531,9 +531,9 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血管內注射
 - 局部血腫
 
-## 4. 腹壁 Abdominal Wall
+## 4. Abdominal Wall
 
-### 4.1 腹橫肌（transversus abdominis）平面阻斷 Transversus Abdominis Plane Block (TAP)
+### 4.1 Transversus Abdominis Plane Block (TAP)
 
 **適應症 Indications**
 
@@ -566,7 +566,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血管內注射
 - 局部血腫
 
-### 4.2 腹直肌鞘阻斷 Rectus Sheath Block
+### 4.2 Rectus Sheath Block
 
 **適應症 Indications**
 
@@ -598,7 +598,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 腹腔內穿刺（罕見）
 - 血管內注射
 
-### 4.3 髂腹下/髂腹股溝神經阻斷 Ilioinguinal/Iliohypogastric Nerve Block
+### 4.3 Ilioinguinal/Iliohypogastric Nerve Block
 
 **適應症 Indications**
 
@@ -632,9 +632,9 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 藥物誤入血管
 - 局部血腫
 
-## 5. 下肢 Lower Extremity
+## 5. Lower Extremity
 
-### 5.1 股神經阻斷 Femoral Nerve Block
+### 5.1 Femoral Nerve Block
 
 **適應症 Indications**
 
@@ -667,7 +667,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 血腫
 - 神經損傷
 
-### 5.2 筋膜髂肌阻斷 Fascia Iliaca Compartment Block (FICB)
+### 5.2 Fascia Iliaca Compartment Block (FICB)
 
 **適應症 Indications**
 
@@ -698,7 +698,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 藥物誤入血管
 - 血腫
 
-### 5.3 收肌管阻斷 Adductor Canal Block (ACB)
+### 5.3 Adductor Canal Block (ACB)
 
 **適應症 Indications**
 
@@ -734,7 +734,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 藥物誤入血管
 - 血腫
 
-### 5.4 坐骨神經阻斷 Sciatic Nerve Block
+### 5.4 Sciatic Nerve Block
 
 **適應症 Indications**
 
@@ -788,7 +788,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 - 一般總量：20–25 mL 即足夠（即便神經粗大）
 - 截肢術可加 Epinephrine 延長止痛
 
-#### 5.4.1 經典後路 Classic Posterior Approach (Labat/Winnie)
+#### 5.4.1 Classic Posterior Approach (Labat/Winnie)
 
 **體表定位 Landmarks**
 
@@ -819,7 +819,7 @@ title: 區域麻醉完整指南 — Regional Anesthesia Comprehensive Guide
 | **針深 10 cm 無反應無骨頭** | 針穿過坐骨切跡                   | 退針稍向外上方重新定位 |
 | **生殖器感覺異常**          | 陰部神經刺激（太內側太尾側）     | 退針稍向頭外側重新定位 |
 
-#### 5.4.2 旁薦骨路 Parasacral Approach
+#### 5.4.2 Parasacral Approach
 
 Mansour (1993) 描述，具 plexus block 特性，可影響整個 sacral plexus 及 obturator nerve。Ripart 報告 400 例成功率 94%。特別適合 continuous catheter。
 
@@ -847,7 +847,7 @@ Mansour (1993) 描述，具 plexus block 特性，可影響整個 sacral plexus 
 - 將 catheter 推入針尖前方 3–5 cm
 - 固定 catheter，持續輸注 Ropivacaine 0.2%（5 mL/hr + PCA 5 mL/q60min）
 
-#### 5.4.3 臀下路 Subgluteal Approach
+#### 5.4.3 Subgluteal Approach
 
 Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻斷技術之一。
 
@@ -869,7 +869,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **藥物** | 0.25% Bupivacaine 或 0.5% Ropivacaine 20–30 mL |
 | **確認** | 藥物擴散包圍坐骨神經                           |
 
-#### 5.4.4 前路 Anterior Approach
+#### 5.4.4 Anterior Approach
 
 適用於無法翻身之患者（脊髓損傷、全身麻醉中）。技術難度最高，不適合 catheter。
 
@@ -896,7 +896,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 膕繩肌抽動不可靠（因 hamstring 分支可能在此水平已分出）
 - 腳跟置於床面可能掩蓋腳部抽動；應將腳踝置於腳踏板或請助手觸診跟腱
 
-#### 5.4.5 併發症 Complications
+#### 5.4.5 Complications
 
 | 併發症               | 預防                                                                                                 |
 | -------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -909,7 +909,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **陰部神經阻斷**     | 旁薦骨路可能因藥物擴散影響；告知患者為暫時性                                                         |
 | **止血帶相關缺血**   | 避免鞘內注射 + epinephrine + 止血帶同時使用                                                          |
 
-### 5.5 膕窩坐骨神經阻斷 Popliteal Sciatic Nerve Block
+### 5.5 Popliteal Sciatic Nerve Block
 
 **適應症 Indications**
 
@@ -934,7 +934,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 藥物誤入血管
 - 血腫
 
-### 5.6 踝神經阻斷 Ankle Block
+### 5.6 Ankle Block
 
 **適應症 Indications**
 
@@ -1043,9 +1043,9 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 注射時不應有阻力，若有阻力則退針重新定位
 - 使用 Bupivacaine/Ropivacaine 時，阻斷後至少等待 30 分鐘再手術
 
-## 6. 骶尾部 Sacral & Perineal
+## 6. Sacral & Perineal
 
-### 6.1 骶神經阻斷 Sacral Nerve Block
+### 6.1 Sacral Nerve Block
 
 **適應症 Indications**
 
@@ -1087,7 +1087,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 骨膜下注射
 - 感染（需嚴格無菌）
 
-### 6.2 陰部神經阻斷 Pudendal Nerve Block
+### 6.2 Pudendal Nerve Block
 
 **適應症 Indications**
 
@@ -1124,13 +1124,13 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 血管內注射
 - 局部血腫
 
-### 6.3 超音波引導骨盆疼痛阻斷 Ultrasound-Guided Blocks for Pelvic Pain
+### 6.3 Ultrasound-Guided Blocks for Pelvic Pain
 
 慢性骨盆疼痛（Chronic pelvic pain, CPP）定義為非週期性疼痛 ≥ 6 個月，嚴重程度足以造成失能或促使就醫，位置包含骨盆、臍下前腹壁、下背或臀部。病因可能包含泌尿、婦科、肛門直腸內臟病變，以及神經肌肉病變（pudendal neuralgia、piriformis syndrome）。治療需多科合作，其中神經阻斷與肌肉注射兼具診斷與治療角色。
 
 超音波引導之優勢：直接可視化神經及周圍血管、骨骼、肌肉、內臟結構；精準投藥；即時引導進針，降低誤傷周邊神經血管結構之風險；可辨識血管內與神經內注射；無輻射暴露。
 
-#### 6.3.1 髂腹下/髂腹股溝/生殖股神經阻斷 II/IH/GF Nerve Block
+#### 6.3.1 II/IH/GF Nerve Block
 
 **解剖 Anatomy**
 
@@ -1187,7 +1187,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 骨盆血腫
 - 血管內注射
 
-#### 6.3.2 梨狀肌注射 Piriformis Muscle Injection
+#### 6.3.2 Piriformis Muscle Injection
 
 **適應症 Indications**
 
@@ -1223,7 +1223,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 臀部血腫
 - 感染
 
-#### 6.3.3 陰部神經阻斷（超音波引導）Pudendal Nerve Block (Ultrasound-Guided)
+#### 6.3.3 Pudendal Nerve Block
 
 **適應症 Indications**
 
@@ -1268,9 +1268,9 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 骶前血腫
 - 感染
 
-## 7. 椎管內 Neuraxial
+## 7. Neuraxial
 
-### 7.1 硬膜外麻醉 Epidural Anesthesia
+### 7.1 Epidural Anesthesia
 
 **適應症 Indications**
 
@@ -1322,7 +1322,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 全脊髓麻醉
 - 低血壓（交感神經阻斷）
 
-### 7.2 蛛網膜下腔麻醉 Spinal Anesthesia (Subarachnoid Block)
+### 7.2 Spinal Anesthesia (Subarachnoid Block)
 
 **適應症 Indications**
 
@@ -1364,7 +1364,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 馬尾症候群（cauda equina syndrome，罕見）
 - 感染
 
-### 7.3 腰椎硬膜外聯合 Combined Spinal-Epidural (CSE)
+### 7.3 Combined Spinal-Epidural (CSE)
 
 **適應症 Indications**
 
@@ -1392,9 +1392,9 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - 低血壓
 - 背痛
 
-## 附錄 Appendix
+## 附錄
 
-### A. 局部麻醉藥物 Maximum Dose Quick Reference
+### A. RA Maximum Dose
 
 | 藥物            | 無 Epi (mg/kg) | 有 Epi (mg/kg) |
 | --------------- | -------------- | -------------- |
@@ -1403,7 +1403,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **Mepivacaine** | 4.5            | 7              |
 | **Ropivacaine** | 3.0            | 3              |
 
-### B. 常用 Regional Anesthesia 物品清單
+### B. 常用 Regional Anesthesia
 
 | 物品             | 規格                                                            |
 | ---------------- | --------------------------------------------------------------- |
@@ -1415,7 +1415,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **皮膚消毒**     | Chlorhexidine 2% 或 Povidone-iodine 10%                         |
 | **敷料**         | 無菌紗布、膠帶                                                  |
 
-### C. 疼痛持續時間估計
+### C. Block Duration
 
 | 阻斷類型            | Bupivacaine 0.25% | Ropivacaine 0.5% |
 | ------------------- | ----------------- | ---------------- |
@@ -1429,7 +1429,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **Sciatic**         | 12–18 hr          | 10–16 hr         |
 | **Ankle Block**     | 8–16 hr           | 6–14 hr          |
 
-### D. 臨床小提示 Clinical Pearls
+### D. Clinical Pearls
 
 1. **ISB 高容量 vs 低容量**：高容量（20 mL）提供完全阻斷但膈神經麻痺率 100%；低容量（5 mL）可保留膈功能但可能不完全
 2. **Supraclavicular vs ISB**：supraclavicular 阻斷更完全且起效快，但氣胸風險較高
@@ -1440,9 +1440,9 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 7. **CSE**：適合需要快速起效 + 長期止痛的剖腹產
 8. **ESP block**：新興技術，操作簡單且安全，適合多節段肋骨（rib）骨折
 
-## 各部位手術建議阻斷組合 Procedure-Specific Nerve Block Selection by Region
+## Procedure-Specific Nerve Block Selection by Region
 
-### 1. 頸部 Head & Neck
+### 1. Head & Neck
 
 | 手術部位/術式                                  | 建議阻斷                               | 備註                           |
 | ---------------------------------------------- | -------------------------------------- | ------------------------------ |
@@ -1452,7 +1452,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **後頭部手術 Posterior scalp surgery**         | Greater/Lesser occipital nerve block   | 超音波引導，枕動脈旁注射       |
 | **上顎前牙拔牙/上唇手術**                      | Infraorbital nerve block               | 避免穿入 infraorbital foramen  |
 
-### 2. 上肢 Upper Extremity
+### 2. Upper Extremity
 
 | 手術部位/術式                                    | 建議阻斷                                                             | 備註                                                        |
 | ------------------------------------------------ | -------------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -1465,7 +1465,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **肘部手術 Elbow surgery**                       | Infraclavicular 或 Supraclavicular                                   | Infraclavicular 止血帶耐受較好                              |
 | **肩部小手術（如拆除鋼板）**                     | 肩胛上神經 block                                                     | 最小侵入性                                                  |
 
-### 3. 胸壁與軀幹 Chest Wall & Trunk
+### 3. Chest Wall & Trunk
 
 | 手術部位/術式                                       | 建議阻斷                                   | 備註                                            |
 | --------------------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
@@ -1477,7 +1477,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **胸壁手術（非肋骨）**                              | SAPB or ESP                                | SAPB 覆蓋前鋸肌區域                             |
 | **帶狀疱疹疼痛 Herpetic pain**                      | Epidural or PVB or SAPB                    | 多節段阻斷                                      |
 
-### 4. 腹壁 Abdominal Wall
+### 4. Abdominal Wall
 
 | 手術部位/術式                                             | 建議阻斷                                                     | 備註                                        |
 | --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------- |
@@ -1489,7 +1489,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **腹股溝疝氣修補 Inguinal hernia repair**                 | Ilioinguinal/iliohypogastric block 或 TAP                    | II/IH 為傳統首選；TAP 覆蓋更廣              |
 | **陰囊/睪丸手術 Scrotal/testicular surgery**              | II/IH block + ilioinguinal nerve（經腹股溝管）               |                                             |
 
-### 5. 下肢 Lower Extremity
+### 5. Lower Extremity
 
 | 手術部位/術式                              | 建議阻斷                                        | 備註                                   |
 | ------------------------------------------ | ----------------------------------------------- | -------------------------------------- |
@@ -1505,7 +1505,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **趾甲手術 Ingrown toenail**               | Digital nerve ring block                        | 1% Lidocaine 2–3 mL per toe            |
 | **糖尿病足清創 Diabetic foot debridement** | Ankle block                                     | 避免全身麻醉；保留行走功能             |
 
-### 6. 骶尾部 Sacral & Perineal
+### 6. Sacral & Perineal
 
 | 手術部位/術式                          | 建議阻斷                                     | 備註             |
 | -------------------------------------- | -------------------------------------------- | ---------------- |
@@ -1514,7 +1514,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **產科手術 Episiotomy**                | Caudal epidural 或 Pudendal nerve block      |                  |
 | **膀胱鏡檢查 Cystoscopy**              | Caudal epidural（輕度）或 topical anesthesia |                  |
 
-### 7. 椎管內 Neuraxial
+### 7. Neuraxial
 
 | 手術部位/術式                                          | 建議阻斷                                         | 備註                               |
 | ------------------------------------------------------ | ------------------------------------------------ | ---------------------------------- |
@@ -1525,7 +1525,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 | **胸腔手術 Thoracic surgery**                          | Thoracic epidural                                | T4–T10 水平                        |
 | **肛門手術 Anorectal surgery**                         | Spinal（low dose）或 Caudal                      |                                    |
 
-### 阻斷選擇原則 General Selection Principles
+### General Selection Principles
 
 - **門診手術**：優先選擇保留運動功能的阻斷（ACB > Femoral; Ankle block > Popliteal sciatic; Axillary > Supraclavicular）
 - **住院手術/長時間手術**：Epidural 或 continuous catheter technique 提供持續止痛
@@ -1535,7 +1535,7 @@ Di Benedetto (2002) 描述，超音波引導下已成為最常用坐骨神經阻
 - **術後止痛為首要目標**：Epidural > PVB > TAP > 單次 peripheral block
 - **早期活動/復健為目標**：ACB（TKA）、Ankle block（足部）、Axillary（手部）
 
-## 參考文獻 References
+## References
 
 1. Hadzic A. _Textbook of Regional Anesthesia and Acute Pain Management_. 2nd ed. McGraw-Hill; 2019.
 2. Barash PG, Cullen BF, Stoelting RK, et al. _Clinical Anesthesia_. 8th ed. Wolters Kluwer; 2017.

@@ -1,15 +1,15 @@
 ---
 layout: doc
-title: 甲狀腺及頸部超音波 — 檢查規範與報告範本 — Thyroid & Neck Sonography Report Template
+title: 甲狀腺及頸部超音波 Thyroid & Neck Sonography
 ---
 
-# 甲狀腺及頸部超音波檢查報告模板
+# 甲狀腺及頸部超音波檢查
 
-**甲狀腺及頸部超音波檢查報告模板 Thyroid & Neck Sonography Report Template**
+**Thyroid & Neck Sonography**
 
 <ThyroidSonographyReport />
 
-## 使用說明 Instructions
+## 使用說明
 
 | 區塊                     | 內容                                                                                         |
 | ------------------------ | -------------------------------------------------------------------------------------------- |
@@ -21,21 +21,21 @@ title: 甲狀腺及頸部超音波 — 檢查規範與報告範本 — Thyroid &
 | **Other Findings**       | 氣管偏移、周圍軟組織、唾液腺、副甲狀腺等其他發現                                             |
 | **Impression**           | 綜合印象與臨床建議                                                                           |
 
-## 標準檢查流程 Standard Examination Protocol
+## 標準檢查流程
 
-### 探頭與擺位 Transducer & Positioning
+### 探頭與擺位
 
 - **線性探頭（Linear probe）**：7–15 MHz，高頻率解析表淺結構
 - **擺位**：患者平躺，頸部輕度伸展（枕頭墊肩），必要時側頭檢查外側區
 - **彩色都卜勒（Color Doppler）**：評估實質及結節血流
 
-### 掃描範圍 Scanning Coverage
+### 掃描範圍
 
 1. **甲狀腺本體**：雙葉（縱切＋橫切）＋峽部
 2. **頸部淋巴結**：Level I–VII（以甲狀腺癌患者為重點）
 3. **周圍軟組織**：氣管、食道、頸動鞘、唾液腺（必要時）
 
-## 正常參考值 Normal Reference Values
+## 正常參考值
 
 | 參數                  | 正常範圍                                                  |
 | --------------------- | --------------------------------------------------------- |
@@ -45,7 +45,7 @@ title: 甲狀腺及頸部超音波 — 檢查規範與報告範本 — Thyroid &
 | **Total volume**      | 男 <19 mL, 女 <14 mL（每葉體積 = L × W × H × 0.524）      |
 | **Echogenicity**      | 高於或等於周圍肌肉（sternothyroid / sternocleidomastoid） |
 
-## 結節報告 Nodule Reporting
+## 結節報告
 
 | 項目              | 描述選項                                                                     |
 | ----------------- | ---------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ title: 甲狀腺及頸部超音波 — 檢查規範與報告範本 — Thyroid &
 | **TR4** | Moderately suspicious | 5–20%    | ≥1.5 cm 考慮 FNA |
 | **TR5** | Highly suspicious     | >20%     | ≥1 cm 考慮 FNA   |
 
-## 頸部淋巴結報告 Cervical Lymph Node Reporting
+## 頸部淋巴結報告
 
 | 項目                    | 描述選項                                           |
 | ----------------------- | -------------------------------------------------- |
@@ -82,7 +82,7 @@ title: 甲狀腺及頸部超音波 — 檢查規範與報告範本 — Thyroid &
 | **Calcification**       | None / Micro / Macro / Peripheral                  |
 | **Vascularity**         | Normal (hilar) / Peripheral / Mixed / Absent       |
 
-## 甲狀腺炎超音波特徵回顧 Thyroiditis Sonographic Features Review
+## 甲狀腺炎超音波特徵
 
 | Type                  | Echogenicity        | Texture                     | Vascularity                       | Special signs                     |
 | --------------------- | ------------------- | --------------------------- | --------------------------------- | --------------------------------- |
@@ -92,7 +92,7 @@ title: 甲狀腺及頸部超音波 — 檢查規範與報告範本 — Thyroid &
 | **Acute suppurative** | Hypoechoic          | Heterogeneous               | Peripheral ↑, central ↓ (abscess) | Abscess cavity, soft tissue edema |
 | **Riedel's**          | Hypoechoic          | Structure effaced           | ↓                                 | Invasive, tracheal compression    |
 
-## 注意事項 Precautions
+## 注意事項
 
 ::: warning 本工具為報告模板參考
 此模板提供結構化指引，不應取代完整的超音波檢查與臨床判斷。最終報告需由執行檢查之醫師根據實際影像所見判斷並簽署。
@@ -102,7 +102,7 @@ title: 甲狀腺及頸部超音波 — 檢查規範與報告範本 — Thyroid &
 TI-RADS 分級應依據 ACR TI-RADS 計分系統：組成、回音度、形狀、邊緣、鈣化 5 大項加總後對應分級。本模板提供快速選擇，但仍建議完整計分確認。
 :::
 
-## 參考文獻 References
+## 參考文獻
 
 1. Tessler FN, Middleton WD, Grant EG, et al. ACR Thyroid Imaging, Reporting and Data System (TI-RADS): White Paper of the ACR TI-RADS Committee. _J Am Coll Radiol_. 2017;14(5):587-595.
 2. Haugen BR, Alexander EK, Bible KC, et al. 2015 American Thyroid Association Management Guidelines for Adult Patients with Thyroid Nodules and Differentiated Thyroid Cancer. _Thyroid_. 2016;26(1):1-133.

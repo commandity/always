@@ -1,21 +1,17 @@
 ---
 layout: doc
-title: 皮膚科鑑別診斷 — 系統性分類圖譜
+title: 皮膚科鑑別診斷
 ---
 
-# 皮膚科鑑別診斷 — 系統性分類圖譜
+# 皮膚科鑑別診斷
 
-**Dermatology Differential Diagnosis — Systematic Classification Atlas**
-
----
+**Dermatology Differential**
 
 ## 鑑別診斷流程圖 Differential Diagnosis Flowchart
 
 <img src="/images/dermatology-ddx.svg" alt="皮膚科鑑別診斷演算法" style="width:100%;max-width:1400px;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1);" />
-    
----
 
-## 六大步驟總覽 Six-Step Overview
+## 六大步驟總覽
 
 | Step  | 步驟                                | 內容                                |
 | ----- | ----------------------------------- | ----------------------------------- |
@@ -26,11 +22,9 @@ title: 皮膚科鑑別診斷 — 系統性分類圖譜
 | **5** | Diagnostic Tools（輔助檢查）        | 皮膚鏡、KOH、伍氏燈、切片、貼膚測試 |
 | **6** | Systemic Correlation（全身關聯）    | 發燒、關節痛、黏膜受累              |
 
----
+## 原發病灶分類
 
-## 原發病灶分類 Primary Lesion Classification
-
-### 平坦病灶 Flat Lesions
+### 平坦病灶
 
 | 類型       | 尺寸  | 常見鑑別診斷                                       |
 | ---------- | ----- | -------------------------------------------------- |
@@ -43,9 +37,7 @@ title: 皮膚科鑑別診斷 — 系統性分類圖譜
 
 **Erythematous**: Drug eruption (morbilliform), Viral exanthem, Early cutaneous T-cell lymphoma, Pityriasis rosea (herald patch)
 
----
-
-### 隆起實質病灶 Raised / Solid Lesions
+### 隆起實質病灶
 
 | 類型       | 尺寸                | 常見鑑別診斷                                   |
 | ---------- | ------------------- | ---------------------------------------------- |
@@ -71,9 +63,7 @@ title: 皮膚科鑑別診斷 — 系統性分類圖譜
 - Neurofibroma (NF1)
 - Kaposi sarcoma (HHV-8, HIV-associated)
 
----
-
-### 液體填充病灶 Fluid-filled Lesions
+### 液體填充病灶
 
 | 類型        | 內容物               | 常見鑑別診斷                                     |
 | ----------- | -------------------- | ------------------------------------------------ |
@@ -103,9 +93,7 @@ title: 皮膚科鑑別診斷 — 系統性分類圖譜
 - **Pustular psoriasis**: Sterile pustules, ± generalized (von Zumbusch)
 - **Impetigo**: Honey-colored crust, contagious, children
 
----
-
-### 水腫性病灶 Edematous Lesions
+### 水腫性病灶
 
 | 病灶           | 特徵                                  | 鑑別診斷                                                     |
 | -------------- | ------------------------------------- | ------------------------------------------------------------ |
@@ -121,9 +109,7 @@ title: 皮膚科鑑別診斷 — 系統性分類圖譜
 - **Stasis dermatitis**: Lower legs, venous insufficiency, edema
 - **Lichen simplex chronicus**: Localized lichenification from scratching
 
----
-
-### 續發性病灶 Secondary Lesions
+### 續發性病灶
 
 | 類型                | 定義                                  | 鑑別診斷                                                        |
 | ------------------- | ------------------------------------- | --------------------------------------------------------------- |
@@ -134,9 +120,7 @@ title: 皮膚科鑑別診斷 — 系統性分類圖譜
 | **Fissure**         | Linear crack                          | Athlete's foot, hand eczema, angular cheilitis                  |
 | **Lichenification** | Thickened skin + accentuated markings | Chronic atopic dermatitis                                       |
 
----
-
-## 分布型態參考 Distribution Pattern Reference
+## 分布型態參考
 
 | Pattern                                 | Think of                                    |
 | --------------------------------------- | ------------------------------------------- |
@@ -153,9 +137,7 @@ title: 皮膚科鑑別診斷 — 系統性分類圖譜
 | **Koebner phenomenon** (trauma-induced) | Psoriasis, lichen planus, vitiligo          |
 | **Linear**                              | Contact dermatitis, lichen striatus         |
 
----
-
-## 輔助工具速查 Diagnostic Tools Quick Reference
+## 輔助工具速查
 
 | Tool                     | Use                                                 | Positive Finding                                                            |
 | ------------------------ | --------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -167,9 +149,7 @@ title: 皮膚科鑑別診斷 — 系統性分類圖譜
 | **Tzanck smear**         | Herpes virus infection                              | Multinucleated giant cells                                                  |
 | **CBC, CRP, ANA**        | Systemic involvement                                | Leukocytosis, elevated CRP, positive ANA                                    |
 
----
-
-## 注意事項 Precautions
+## 注意事項
 
 ::: warning 本圖譜為教育參考工具
 本頁內容整理自 Fitzpatrick's Dermatology、Andrews' Diseases of the Skin 及臨床皮膚科學指引，旨在提供系統性鑑別診斷思維框架。**不應作為唯一診斷依據**。
@@ -179,9 +159,7 @@ title: 皮膚科鑑別診斷 — 系統性分類圖譜
 建議使用流程：先從原發病灶形態切入（Step 1），再依序評估分布、症狀、病程，最後以輔助工具確認。兩步驟之間交叉比對可大幅縮小鑑別診斷範圍。
 :::
 
----
-
-## 參考文獻 References
+## 參考文獻
 
 1. Bolognia JL, Schaffer JV, Cerroni L. _Dermatology_. 4th ed. Elsevier; 2018.
 2. James WD, Elston DM, Treat JR, et al. _Andrews' Diseases of the Skin: Clinical Dermatology_. 13th ed. Elsevier; 2020.

@@ -1,19 +1,19 @@
 ---
 layout: doc
-title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
+title: 糖尿病皮膚表現 Skin Manifestations of Diabetes Mellitus
 ---
 
 # 糖尿病皮膚表現
 
-**糖尿病皮膚表現 Skin Manifestations of Diabetes Mellitus**
+**Skin Manifestations of Diabetes Mellitus**
 
-## 概述 Overview
+## 概述
 
 - DM（type 1 & 2）患者 **30–70%** 一生中會出現皮膚併發症
 - 皮膚變化可反映 **血糖控制狀況**，有時甚至是未診斷 DM 的首發徵象
 - 五大類：① 強相關皮膚表現 ② 非特異性徵象 ③ 相關皮膚病 ④ 常見感染 ⑤ 藥物相關變化
 
-## 一、與糖尿病密切相關的皮膚表現 Skin Manifestations Strongly Associated with DM
+## 一、與糖尿病密切相關的皮膚表現
 
 ### 黑色棘皮症 Acanthosis Nigricans
 
@@ -23,7 +23,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 - **臨床意義**：胰島素阻抗的皮膚標誌；出現時應篩檢 DM 及相關內分泌疾病
 - **治療**：首重生活型態調整（飲食、運動、減重）＋ metformin；局部可用 retinoid、vitamin D 類似物、keratolytic
 
-### 糖尿病皮病變／脛前斑 Diabetic Dermopathy
+### 糖尿病脛前斑 Diabetic Dermopathy
 
 - **盛行率**：高達 **50%** — 最常見的 DM 皮膚表現
 - **表現**：圓形紅丘疹 → 1–2 週內演變為萎縮性棕色斑，表面細鱗屑
@@ -46,14 +46,14 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 
 ### 糖尿病厚皮 Diabetic Thick Skin
 
-#### 類硬皮症變化 Scleroderma-like Skin Changes
+#### 類硬皮症變化 Scleroderma-like Changes
 
 - **盛行率**：10–50% DM 患者，type 1 > type 2
 - **表現**：無痛、硬結、蠟樣皮膚增厚，對稱分布於手指背側（sclerodactyly）
 - **特殊徵象**：**Prayer sign**（雙手無法平貼）；易與 Dupuytren contracture、trigger finger 合併出現
 - **治療**：嚴格血糖控制可能改善；物理治療維持關節活動度
 
-#### Limited Joint Mobility（LJM，糖尿病性關節病變）
+#### 糖尿病性關節病變 Limited Joint Mobility
 
 - **盛行率**：DM 患者 8–58%
 - **表現**：手指 MCP、PIP 關節屈曲攣縮，由第五指開始向外擴散
@@ -83,7 +83,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 - **預後**：2–6 週自癒，但易復發
 - **治療**：無需治療 — 保護皮膚、避免感染；大水泡可穿刺減壓
 
-## 二、非特異性皮膚徵象與症狀 Nonspecific Dermatologic Signs and Symptoms
+## 二、非特異性皮膚徵象與症狀
 
 | 徵象                                      | 表現                           | 好發部位                | 備註                                            |
 | ----------------------------------------- | ------------------------------ | ----------------------- | ----------------------------------------------- |
@@ -102,7 +102,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 | **Yellow Skin & Nails**                   | 無症狀黃色變                   | 手掌、腳掌、臉、趾甲    | 可能與 carotene、glycosylated proteins 堆積有關 |
 | **Onychocryptosis**                       | 嵌甲                           | 大腳趾                  | type 2 DM 相關；與 BMI、創傷、血管供應有關      |
 
-## 三、與糖尿病相關的皮膚疾病 Dermatologic Diseases Associated with DM
+## 三、與糖尿病相關皮膚疾病
 
 - **Generalized Granuloma Annulare（GGA）** — 膚色／紅色環狀丘疹或斑塊，中央消退、邊緣隆起；軀幹＋四肢對稱分布；10–15% GGA 患者有 DM
 
@@ -116,11 +116,11 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 
 - **Melanoma** — type 2 DM 雖不增加發生率，但診斷時分期更晚、更易出現 ulceration
 
-## 四、糖尿病常見皮膚感染 Common Skin Infections in DM
+## 四、糖尿病常見皮膚感染
 
 - DM 患者皮膚感染盛行率約 **20%**；易反覆感染
 
-### 細菌性感染 Bacterial
+### 細菌性感染
 
 | 感染                              | 特徵                                                                          | 治療                               |
 | --------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------- |
@@ -130,7 +130,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 | **Erythrasma（C. minutissimum）** | 紅棕色細鱗屑斑塊；Wood's light 下呈 **coral-red fluorescence**                | 局部 erythromycin／clindamycin     |
 | **Malignant Otitis Externa**      | 罕見但致命（未治療死亡率 ~50%）；P. aeruginosa                                | 長期 anti-pseudomonal 抗生素＋HBOT |
 
-### 黴菌性感染 Fungal
+### 黴菌性感染
 
 | 感染                             | 特徵                                                       | 治療                         |
 | -------------------------------- | ---------------------------------------------------------- | ---------------------------- |
@@ -138,7 +138,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 | **Dermatophytes（Tinea pedis）** | 最常見之黴菌感染；可續發細菌感染、fungemia                 | 局部／全身抗真菌藥           |
 | **Mucormycosis**                 | type 1 DM＋DKA 重大風險；**Rhino-orbital-cerebral** 最常見 | 緊急清創＋IV amphotericin B  |
 
-## 五、糖尿病藥物相關皮膚變化 Cutaneous Changes Associated with DM Medications
+## 五、糖尿病藥物相關皮膚變化
 
 - **Insulin**：Lipohypertrophy（最常見，~30%）→ 延遲吸收、血糖起伏不定。Lipoatrophy（現代胰島素已少見）。過敏反應罕見（全身性 0.01%）
 - **DPP-4 inhibitors**（vildagliptin 等）：**Bullous pemphigoid**、Stevens-Johnson syndrome、angioedema
@@ -147,7 +147,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 - **GLP-1 receptor agonists** (semaglutide, liraglutide etc)：高劑量 → 感覺異常、落髮；快速減重 → **"GLP-1 face"**（面部脂肪流失、皺紋、眼窩凹陷）；但可 off-label 用於 psoriasis、HS、acanthosis nigricans
 - **Diabetes Devices**（CGM／CSII）：接觸性皮膚炎；CSII 有胰島素相關皮膚變化風險
 
-## 六、總結表 Summary Table
+## 六、總結
 
 | 疾病                         | 關鍵特徵                       | 備註                                         |
 | ---------------------------- | ------------------------------ | -------------------------------------------- |
@@ -165,7 +165,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 | **GGA**                      | 環狀隆起丘疹／斑塊             | 10–15% 伴 DM                                 |
 | **Bullous Pemphigoid**       | DPP-4i 相關水疱                | 考慮停藥                                     |
 
-## 七、臨床重點 Clinical Key Points
+## 七、臨床重點
 
 1. **Acanthosis nigricans** + **acrochordons** → 胰島素阻抗標誌 → 應篩檢 DM
 2. **Diabetic dermopathy** 為最常見皮膚表現 — 不需治療，但提示 microvascular disease，需加強併發症篩檢
@@ -178,11 +178,11 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
 9. **Scleredema diabeticorum** 緩慢進展、治療棘手；2024 EDF 指引：一線 UVA1/PUVA
 10. **多重皮膚表現同時出現** → 應全面評估血糖控制及 DM 併發症
 
-## 附錄：臨床影像速查 Photo Grid
+## 附錄：臨床影像速查
 
 > 以下影像整理自各類糖尿病相關皮膚表現，僅供形態學比對參考。
 
-### 一、與糖尿病密切相關的皮膚表現 Skin Manifestations Strongly Associated with DM
+### 一、與糖尿病密切相關的皮膚表現
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/skin-manifestations/Acanthosis-nigricans.jpg" alt="Acanthosis nigricans" loading="lazy"/><figcaption>Acanthosis Nigricans</figcaption></figure>
@@ -192,7 +192,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
   <figure><img src="/reference/skin/skin-manifestations/Bullosis-Diabeticorum.jpg" alt="Bullosis diabeticorum" loading="lazy"/><figcaption>Bullosis Diabeticorum</figcaption></figure>
 </div>
 
-### 二、非特異性皮膚徵象 Nonspecific Dermatologic Signs
+### 二、非特異性皮膚徵象
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/skin-manifestations/Acquired-ichthyosiform-changes.jpg" alt="Ichthyosiform changes" loading="lazy"/><figcaption>Ichthyosiform Changes</figcaption></figure>
@@ -203,7 +203,7 @@ title: 糖尿病皮膚表現 — Skin Manifestations of Diabetes Mellitus
   <figure><img src="/reference/skin/skin-manifestations/Palmar-erythema.jpg" alt="Palmar erythema" loading="lazy"/><figcaption>Palmar Erythema</figcaption></figure>
 </div>
 
-### 三、與糖尿病相關的皮膚疾病 Dermatologic Diseases Associated with DM
+### 三、與糖尿病相關的皮膚疾病
 
 <div class="eczema-grid">
   <figure><img src="/reference/skin/skin-manifestations/Generalized-granuloma-annulare.jpg" alt="Generalized granuloma annulare" loading="lazy"/><figcaption>Granuloma Annulare</figcaption></figure>

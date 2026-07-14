@@ -1,16 +1,15 @@
 ---
 layout: doc
-title: Abdominal Ultrasound Anatomy — Key Points
+title: Abdominal Ultrasound Anatomy 腹部超音波解剖學
 password: "516800"
 ---
 
-# Abdominal Ultrasound Anatomy — Key Points
-
-**腹部超音波解剖學精要**
+# Abdominal Ultrasound Anatomy
+**腹部超音波解剖學**
 
 ## 1. Liver
 
-### Normal Anatomy & Segmental Division (Couinaud)
+### Normal Anatomy & Segmental Division
 
 | Lobe           | Segments                                                                                     |
 | -------------- | -------------------------------------------------------------------------------------------- |

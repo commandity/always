@@ -1,12 +1,11 @@
 ---
 layout: doc
-title: Urological System Diseases — Clinical Overview and Ultrasound Findings
+title: Urological System Diseases 泌尿系統超音波
 password: "516800"
 ---
 
-# Urological System Diseases — Clinical Overview and Ultrasound Findings
-
-**泌尿系統超音波 — 疾病診斷與回音特徵**
+# Urological System Diseases
+**泌尿系統超音波**
 
 ## Introduction
 

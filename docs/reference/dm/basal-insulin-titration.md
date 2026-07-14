@@ -1,27 +1,26 @@
 ---
 layout: doc
-title: T2DM 胰島素治療選擇與劑量調整 — T2DM Insulin Therapy Selection & Dose Titration
+title: T2DM 胰島素治療選擇與劑量調整 T2DM Insulin Therapy Selection & Dose Titration
 ---
 
 # T2DM 胰島素治療選擇與劑量調整
-
-**T2DM 胰島素治療選擇與劑量調整 T2DM Insulin Therapy Selection & Dose Titration**
+**T2DM Insulin Therapy Selection & Dose Titration**
 
 ---
 
 <BasalInsulinTitrationCalculator />
 
-## 治療模式說明 Treatment Modes
+## 治療模式
 
 ### 一、基礎胰島素 OADs+BI Basal-Only
 
-#### 起始時機 When to Initiate
+#### 起始時機
 
 - OADs 治療效果未能滿意時，OADs 加上一次 BI 注射是較容易被病人接受的治療方法
 - 但 **GLP-1 RA 是 ADA 2022 優先選擇之注射型藥物**，可依照臺灣健保規範優先使用
 - 以下情況胰島素仍是優先選擇：① A1C ≥ 10%（86 mmol/mol）或 BG > 300 mg/dL ② 有體重減少、多尿、多喝水等高代謝狀態症狀 ③ 疑似第 1 型糖尿病
 
-#### 起始劑量（兩種方法） Starting Dose (Two Methods)
+#### 起始劑量
 
 | 方法       | 起始劑量                             | 調整方式                                   | 頻率    |
 | ---------- | ------------------------------------ | ------------------------------------------ | ------- |
@@ -31,7 +30,7 @@ title: T2DM 胰島素治療選擇與劑量調整 — T2DM Insulin Therapy Select
 - **血糖目標**：空腹 FBG 80–130 mg/dL
 - **低血糖處理**：< 70 mg/dL 時減少 4 units 或 10–20%，並查明原因
 
-#### 合併 OADs 建議
+#### 合併 OADs
 
 | 口服藥             | 建議                                                                |
 | ------------------ | ------------------------------------------------------------------- |
@@ -42,7 +41,7 @@ title: T2DM 胰島素治療選擇與劑量調整 — T2DM Insulin Therapy Select
 | **SGLT2i**         | 可持續使用；心腎共病或減重可考慮加上；注意 euglycemic DKA           |
 | **GLP-1 RA**       | ADA 優先選擇之注射藥物；可考慮 OADs+GLP-1 RA 或 OADs+BI+GLP-1 RA    |
 
-#### 何時停止增加基礎胰島素 Overbasalization
+#### 何時停止增加基礎胰島素
 
 - FBG 持續在 80–130 mg/dL（已達標）
 - 發生低血糖（< 70 mg/dL）
@@ -52,7 +51,7 @@ title: T2DM 胰島素治療選擇與劑量調整 — T2DM Insulin Therapy Select
 
 Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量差異：
 
-#### 濃度與體積 Concentration & Volume
+#### 濃度與體積
 
 | 參數            | U-100（Lantus / 一般胰島素） | U-300（Toujeo）           |
 | --------------- | ---------------------------- | ------------------------- |
@@ -61,19 +60,19 @@ Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量
 | 1 mL 對應單位數 | 100 units                    | 300 units                 |
 | 劑型            | 筆型、 vial                  | **僅有預填筆**（無 vial） |
 
-#### 臨床換算原則 Clinical Conversion Principles
+#### 臨床換算原則
 
 - **從 U-100 Glargine（Lantus）轉換至 Toujeo**：說明書建議 1:1 單位轉換，但由於 Toujeo 藥物動力學更平緩、作用時間更長（可達 24–36 小時），部分病人需增加 10–20% 劑量方能達到相同空腹血糖控制
 - **從其他基礎胰島素轉換**：建議個別化調整，通常以原劑量的 80% 起始後依 FBG 滴定
 - **Toujeo Max SoloStar**：每支筆含 900 units（3 mL），最高單次注射量 160 units，適合高劑量患者
 
-#### 安全警示 Safety Alerts
+#### 安全警示
 
 - **不可使用 U-100 空針抽取 Toujeo**：因濃度不同，用 U-100 空針抽取會導致實際注射劑量僅為預期的 1/3（或反推時造成 3 倍 overdose）
 - **Toujeo 僅能使用專用預填筆**：SoloStar（1–80 units/次）或 Max SoloStar（1–160 units/次）
 - **與其他胰島素不可混合注射**（同所有 Glargine 製劑）
 
-### 二、Basal-Plus 療法（基礎 + 1 次餐前）
+### 二、Basal-Plus（基礎 + 1 次餐前）
 
 #### 何時開始 Basal-Plus
 
@@ -81,13 +80,13 @@ Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量
 2. 使用高劑量 BI（> 0.5 units/kg）仍未能達標
 3. 增加 BI 劑量產生夜間低血糖
 
-#### 選擇主餐原則 Choosing the Main Meal
+#### 選擇主餐原則
 
 - 需 2–3 天記錄三餐前後血糖值
 - 餐後血糖值增加最多的餐次作為第一次加打餐前胰島素的時間點
 - 亦可在 Basal Insulin 後選擇 **Ryzodeg**（70% Degludec + 30% Aspart），BID 早晚餐前各一次隨主餐注射
 
-#### 餐前胰島素起始劑量選項 Prandial Insulin Starting Dose Options
+#### 餐前胰島素起始劑量
 
 - 0.1–0.15 units/kg/餐
 - 固定 4 units 起跳
@@ -95,7 +94,7 @@ Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量
 - 基礎胰島素劑量 × 10%
 - 每 1 unit 涵蓋 10–15 g 醣類估算
 
-#### 餐前胰島素調整 Prandial Insulin Titration
+#### 餐前胰島素調整
 
 - 每週調整 1–2 次，每次 1–2 units 或 10–15%
 - 依餐後 2h 血糖（< 180 mg/dL）或下一餐前血糖調整
@@ -106,7 +105,7 @@ Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量
 - 需加打第 2 針（+2）時：停用 SUs/Glinides，DPP-4i 視情況停用
 - 仍無法達標可考慮改為 Premixed Insulin 或 Basal-Bolus
 
-### 三、預混型胰島素（Pre-mixed）— 臺灣可用藥物
+### 三、預混型胰島素（Pre-mixed）
 
 | 藥物               | 速效成分   | 長效成分             | 注射時機                  |
 | ------------------ | ---------- | -------------------- | ------------------------- |
@@ -119,7 +118,7 @@ Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量
 - **調整**：每週 1–2 次，每次 1–2 units 或 10–15%
 - 可每日 1–3 次注射；無法彈性調整劑量來因應餐前高血糖與攝取醣類分量不一
 
-### 四、分次混合療法 Split-Mixed Regimen
+### 四、分次混合 Split-Mixed
 
 傳統 NPH（中效）＋ Regular（短效）胰島素分次混合。
 
@@ -128,19 +127,19 @@ Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量
 | 早餐前   | 2/3 TDD | 1:1 或 1:2    | Regular → 午餐前血糖；NPH → 晚餐前血糖 |
 | 晚餐前   | 1/3 TDD | 1:1 或 1:2    | Regular → 睡前血糖；NPH → 空腹血糖     |
 
-#### 胰島素混合注意事項 Insulin Mixing Precautions
+#### 胰島素混合注意事項
 
 - 抽藥順序：先抽速效或短效（澄清），再抽中效 NPH（混濁）
 - Glargine（U-100/U-300）、Detemir、Degludec：**不可**與其他胰島素混合
 - Glargine U-300 不可用傳統 U-100 空針抽取，以免劑量錯誤
 
-### 五、Basal-Bolus 療法（積極胰島素治療）
+### 五、Basal-Bolus（積極胰島素治療）
 
 - **比率**：基礎 50% : 餐食 50%
 - 長效胰島素（Glargine/Detemir/Degludec）睡前注射
 - 速效（Lispro/Aspart/Glulisine）三餐前注射
 
-#### 關鍵計算公式 Key Calculation Formulas
+#### 關鍵計算公式
 
 | 參數                      | 速效胰島素               | 短效 Regular |
 | ------------------------- | ------------------------ | ------------ |
@@ -150,20 +149,20 @@ Toujeo（U-300，300 U/mL）與傳統 U-100 胰島素有顯著的濃度與劑量
 
 > ISF 及碳水化合物比值主要用於第 1 型糖尿病；第 2 型糖尿病因尚有內源性胰島素分泌，計算僅供參考。
 
-#### 校正劑量（Correction Dose）步驟
+#### 校正劑量
 
 1. 測餐前血糖值
 2. 測得血糖值 − 目標血糖值 = 相差血糖值
 3. 相差血糖值 ÷ ISF = 校正胰島素劑量
 
-### 固定劑型合併藥物 Fixed-Ratio Combination
+### 固定劑型合併藥物
 
 - **iDegLira**：Degludec + Liraglutide
 - **iGlarLixi**：Glargine + Lixisenatide
 
 可考慮用於 Basal Insulin 仍未能達標時作為替代強化方案。
 
-## 調整通則 General Titration Principles
+## 調整通則
 
 - 低血糖定義：血糖 < 70 mg/dL，嚴重低血糖需立即處理
 - 空腹血糖目標：80–130 mg/dL（ADA）

@@ -1,46 +1,29 @@
 ---
 layout: doc
-title: 頸動脈雙功能暨經顱都卜勒超音波 — Carotid Duplex & Transcranial Doppler Ultrasound 
+title: 頸動脈雙功能暨經顱都卜勒超音波 Carotid Duplex & Transcranial Doppler Ultrasound 
 ---
 
 # 頸動脈雙功能暨經顱都卜勒超音波
-
 **Carotid Duplex & Transcranial Doppler Ultrasound**
 
 <CarotidDuplexReport />
 
-## 使用說明 Instructions
+## 標準檢查流程
 
-| 區塊                               | 內容                                                                                                |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------- |
-| **Patient Info**                   | 姓名、病歷號、年齡、性別、床號、電話、住址、臨床診斷、檢查日期                                      |
-| **Vessel Reference Diagram**       | Circle of Willis 血管示意圖，標示 OA / A1 / M1 / P1 / BA / VA / ICA / CCA 等位置                    |
-| **Ophthalmic Artery**              | 眼動脈 PS/ED/RI/MV，血流方向（Antegrade / Retrograde）                                              |
-| **A1 / M1 / P1**                   | 前大腦動脈（ACA）、中大腦動脈（MCA）、後大腦動脈（PCA） PS/ED/RI/MV                                 |
-| **Vertebrobasilar (intracranial)** | 顱內椎動脈及基底動脈 PS/ED/RI/MV                                                                    |
-| **Extracranial Carotid**           | CCA / BIF / ICA / ECA 及顱外椎動脈 PS/ED/RI/FV                                                      |
-| **Computed Ratios & Grading**      | 自動計算 MCA/ICA mean-V ratio（Lindegaard）、ICA/CCA PS ratio、Bilateral CCA PS ratio、ICA 狹窄分級 |
-| **ICA Occlusion Assessment**       | ICA 阻塞 / 類阻塞狀態選擇及參考標準                                                                 |
-| **B-mode Plaque Findings**         | 可新增多個斑塊，記錄側別、位置、分布、內部結構、外觀、直徑、狹窄百分比                              |
-| **Auto-generated Interpretation**  | 根據輸入數據自動產生解讀，可一鍵複製至 Impression                                                   |
-| **Impression**                     | 編輯最終印象與結論                                                                                  |
-
-## 標準檢查流程 Standard Examination Protocol
-
-### 探頭與擺位 Transducer & Positioning
+### 探頭與擺位
 
 - **經顱探頭（TCD probe）**：2–3 MHz，顱窗（temporal / suboccipital / orbit / foraminal）
 - **頸動脈探頭（Carotid probe）**：5–10 MHz，線性陣列
 - **彩色都卜勒（Color Doppler）**：評估各血管血流方向及型態
 - **脈衝都卜勒（Pulsed-wave Doppler）**：取得 PS / ED / RI / MV 或 FV
 
-### 掃描範圍 Scanning Coverage
+### 掃描範圍
 
 1. **經顱**：OA、A1（ACA）、M1（MCA）、P1（PCA）、VA（intracranial）、BA
 2. **顱外頸動脈**：CCA、BIF、ICA、ECA、VA（extracranial）
 3. **OA 血流方向**：Antegrade（正常）或 Retrograde（逆流，提示近端 ICA/CCA 病變）
 
-## 正常參考值 Normal Reference Values
+## 正常參考值
 
 ### 經顱 Doppler 參考值
 
@@ -63,7 +46,7 @@ title: 頸動脈雙功能暨經顱都卜勒超音波 — Carotid Duplex & Transc
 | **BIF**               | 80–130    | 15–35     | 0.60–0.75 |
 | **VA (extracranial)** | 30–70     | 10–25     | 0.60–0.75 |
 
-## 核心計算公式 Core Calculation Formulas
+## 核心計算公式
 
 ### Lindegaard Ratio（MCA/ICA mean-V ratio）
 
@@ -110,29 +93,29 @@ Bil CCA = PSV(Rt CCA) / PSV(Lt CCA)
 
 取 PSV 與 ratio 兩者中較嚴重之分級。
 
-## ICA Occlusion Assessment（阻塞評估）
+## ICA 阻塞評估
 
-### Pseudo-occlusion（類阻塞）
+### Pseudo-occlusion
 
 - B-mode 可見血栓，可能仍有狹窄管腔
 - String-sign / punctate color flash
 - 顯著降低的流速 ± 高阻抗
 - 稍微升高的湍流，伴隨延長的加速時間
 
-### Total Occlusion（完全阻塞）
+### Total Occlusion
 
 - B-mode 血栓充滿整個管腔
 - 無 color signal（需以 low-flow / high-sensitivity 設定確認）
 - 無 Doppler waveform
 
-### Recent Occlusion（近期阻塞）
+### Recent Occlusion
 
 - 均勻的新鮮血栓（可能隨脈動移動）
 - 近端可能出現自发性 echo contrast
 - 可能為低回音（hypoechogenic）
 - 無 color signal，無 waveform
 
-## B-mode Plaque Findings（斑塊分類）
+## B-mode Plaque Findings
 
 | 項目                    | 描述選項                                                                           |
 | ----------------------- | ---------------------------------------------------------------------------------- |
@@ -141,7 +124,7 @@ Bil CCA = PSV(Rt CCA) / PSV(Lt CCA)
 | **Appearance**          | Homogeneous / Heterogeneous / Ulcerated / Intraplaque hemorrhage / Moving-floating |
 | **Area Stenosis Grade** | < 75% → 0–49%; 75–90% → 50–69%; > 90% → 70–99% (area)                              |
 
-## 注意事項 Precautions
+## 注意事項
 
 ::: warning 本工具為報告模板參考
 此模板提供結構化指引，不應取代完整的超音波檢查與臨床判斷。最終報告需由執行檢查之醫師根據實際影像所見判斷並簽署。
@@ -155,7 +138,7 @@ ICA 狹窄分級應同時參考 PSV 絕對值與 ICA/CCA ratio，取較嚴重者
 Lindegaard ratio 用於區分 MCA 流速升高之原因：若 ratio < 3，MCA 流速升高可能為全身性因素（如心輸出量增加）；若 ratio ≥ 3，則高度懷疑局部血管痙攣（vasospasm），常見於蛛網膜下腔出血（SAH）患者。
 :::
 
-## 參考文獻 References
+## 參考文獻
 
 1. Grant EG, Benson CB, Moneta GL, et al. Carotid artery stenosis: gray-scale and Doppler ultrasound diagnosis — Society of Radiologists in Ultrasound consensus conference. _Ultrasound Q_. 2003;19(4):190-198.
 2. Alexandrov AV, Sloan MA, Tegeler CH, et al. Transcranial Doppler (TCD) for intracranial vasospasm: clinical findings and future directions. _Stroke_. 2002;33(12):2850-2856.

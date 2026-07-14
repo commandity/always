@@ -1,21 +1,20 @@
 ---
 layout: doc
-title: 妊娠用藥分級查詢表
+title: 妊娠用藥分級 Pregnancy Drug Risk Category
 ---
 
-# 妊娠用藥分級查詢表
+# 妊娠用藥分級
 
-**Pregnancy Drug Risk Category Reference (FDA A / B / C / D / X)**
+**Pregnancy Drug Risk Category (FDA A / B / C / D / X)**
 
 <PregnancyCategoryTable />
 
----
 
-## 妊娠期常見情境用藥建議 Drug Choices in Pregnancy by Condition
+## 妊娠期常見情境用藥建議
 
 依常見臨床情境整理「首選」與「避免」的用藥原則；解釋為中文，藥名保留原文。整理自衛教圖卡（IG: @thepharmadr），實際處方仍須依個別病患狀況與最新指引判斷。
 
-### 速查表 Quick Reference
+### 速查表
 
 | 情境 | ✅ 首選 Preferred | ❌ 避免 Avoid |
 | --- | --- | --- |

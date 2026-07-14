@@ -1,17 +1,16 @@
 ---
 layout: doc
-title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitation — Assessment & Management of Swallowing Disorders
+title: 吞嚥復健 Dysphagia Rehabilitation
 ---
 
-# 吞嚥復健 — 吞嚥障礙之評估與治療
+# 吞嚥復健
+**Dysphagia Rehabilitation**
 
-**吞嚥障礙之評估與治療 Dysphagia Rehabilitation — Assessment & Management of Swallowing Disorders**
-
-## 概論 Overview
+## 概述
 
 吞嚥障礙（dysphagia）指食物或液體從口腔到胃部運輸過程中任一階段發生困難，可分為**口咽性（oropharyngeal）**及**食道性（esophageal）**。口咽性吞嚥障礙最為常見，與吸入性肺炎、營養不良、脫水、生活品質下降及死亡率增加密切相關。吞嚥復健整合代償策略、行為治療、神經肌肉訓練及手術介入，目標為恢復安全且足夠的經口進食。
 
-## 復健流程 Rehabilitation Flowchart
+## 復健流程
 
 <div style="margin:1.75rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -69,7 +68,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
   </div>
 </div>
 
-## 吞嚥四期 Phases of Swallowing
+## 吞嚥四期
 
 | 期別                 | 時間       | 關鍵事件                                                  | 神經控制                                 |
 | -------------------- | ---------- | --------------------------------------------------------- | ---------------------------------------- |
@@ -78,7 +77,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **Pharyngeal**       | **反射性** | 軟顎關閉→喉部上抬＋前移→聲帶閉合＋會厭反折→UES鬆弛→咽收縮 | CN IX, CN X, medullary swallowing center |
 | **Esophageal**       | 反射性     | 食道蠕動→LES鬆弛→食團進入胃部                             | CN X, enteric nervous system             |
 
-## 病因分類 Etiology
+## 病因分類
 
 | 類別                     | 常見原因                                                                                                                      |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -89,9 +88,9 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **Aging (presbyphagia)** | 吞嚥肌肉萎縮、感覺閾值上升、hyolaryngeal elevation 下降、UES compliance↓                                                      |
 | **Psychogenic**          | Globus hystericus、phagophobia、functional dysphagia                                                                          |
 
-## 臨床評估 Clinical Evaluation
+## 臨床評估
 
-### 床邊篩檢 Bedside Screening
+### 床邊篩檢
 
 | 工具                                   | 說明                                              | 備註                          |
 | -------------------------------------- | ------------------------------------------------- | ----------------------------- |
@@ -100,14 +99,15 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **Yale Swallow Protocol**              | 簡短問卷＋意識評估＋口服水測試                    | 標準化篩檢，適用 acute stroke |
 | **Eating Assessment Tool-10 (EAT-10)** | 10 題自評問卷（0–40）                             | ≥3 → 需進一步評估             |
 
-### Clinical Swallow Evaluation（臨床吞嚥評估，CSE）
+### 臨床吞嚥評估
+**Clinical Swallow Evaluation，CSE**
 
 - **Oral motor exam**：唇閉合力量、舌頭活動度（前伸、側推、上抬）、軟顎上抬、喉部上抬幅度
 - **Trial swallows**：不同濃度（thin liquid, nectar, honey, pudding）及不同體積（3mL, 5mL, 10mL, 杯飲）
 - **Signs of aspiration**：吞嚥前／中／後咳嗽、choking、聲音潮濕（wet voice）、血氧飽和度↓≥3%、呼吸窘迫
 - **Cervical auscultation**：吞嚥聲音異常（clicking, gurgling）
 
-### 儀器評估 Instrumental Assessment
+### 儀器評估
 
 | 檢查                                                     | 原理                           | 優點                                                         | 限制                                                                     |
 | -------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -116,7 +116,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **HRM（High-Resolution Manometry）**                     | 記錄咽部收縮壓力及 UES 鬆弛    | 量化咽收縮力、UES 鬆弛比例、pharyngeal contractile integral  | 無法直接觀察 aspiration、需專業判讀                                      |
 | **Pulse oximetry**                                       | 連續血氧監測                   | 簡便、輔助篩檢                                               | 敏感度不理想，不可單獨用來診斷                                           |
 
-### 透視吞嚥關鍵參數 VFSS Key Parameters
+### 透視吞嚥關鍵參數
 
 | 參數                                   | 正常值                           | 異常意義                                       |
 | -------------------------------------- | -------------------------------- | ---------------------------------------------- |
@@ -141,9 +141,9 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **7** | 進入氣道，通過聲帶，儘管嘗試清除仍未清除       |
 | **8** | 進入氣道，通過聲帶，無清除嘗試                 |
 
-## 治療策略 Treatment Approaches
+## 治療策略
 
-### 代償策略—立即改善安全 Compensatory Strategies
+### 代償策略—立即改善安全
 
 | 策略                       | 方法                                                               | 適應症                                                      |
 | -------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -158,7 +158,8 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **Volume/rate control**    | 小口（3–5mL）、慢速（間隔≥5s）、交替固液                           | Reduced pharyngeal clearance                                |
 | **Bolus modification**     | 調整食團溫度（冰水刺激）、酸味（增加感覺輸入）                     | Delayed swallow reflex                                      |
 
-### IDDSI Framework（International Dysphagia Diet Standardisation Initiative）
+### IDDSI Framework
+**International Dysphagia Diet Standardisation Initiative**
 
 | 分級  | 名稱              | 描述                   |
 | ----- | ----------------- | ---------------------- |
@@ -171,9 +172,9 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **6** | Soft & bite-sized | 柔軟一口大小           |
 | **7** | Regular           | 一般質地               |
 
-### 復健訓練 Rehabilitation Exercises
+### 復健訓練
 
-#### 口腔期運動 Oral Phase Exercises
+#### 口腔期運動
 
 | 訓練                       | 方法                               | 目標                                          |
 | -------------------------- | ---------------------------------- | --------------------------------------------- |
@@ -183,7 +184,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **Chewing**                | 咀嚼橡皮管或特殊咀嚼器             | 改善咀嚼效能                                  |
 | **Bolus hold**             | 口腔含食團不流入咽（hold command） | 改善 oral containment                         |
 
-#### 咽期運動 Pharyngeal Phase Exercises
+#### 咽期運動
 
 | 訓練                                              | 方法                                                       | 目標                                           |
 | ------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------- |
@@ -196,7 +197,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **Respiratory-swallow coordination**              | 練習吞嚥後立即呼氣→咳嗽 secures airway                     | 改善 aspiration 患者的喉部保護                 |
 | **Semi-occluded vocal tract (SOVT) with swallow** | 使用 straw 或 Lax Vox 在水中吹泡後吞嚥                     | 促進喉部上抬及閉合協調                         |
 
-#### 感覺刺激 Sensory Stimulation Techniques
+#### 感覺刺激
 
 | 技術                                            | 方法                                            | 適應症                         |
 | ----------------------------------------------- | ----------------------------------------------- | ------------------------------ |
@@ -206,7 +207,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **Taste-enhanced bolus**                        | 明顯味道（如鹽、甜、苦）強化                    | Dementia 伴 dysphagia          |
 | **Neuromuscular electrical stimulation (NMES)** | 表面電極置於 hyolaryngeal區域，感應性收縮刺激   | Reduced hyolaryngeal elevation |
 
-### 手術及程序介入 Surgical & Procedural Interventions
+### 手術處置介入
 
 | 術式                                  | 適應症                                                | 說明                                                                  |
 | ------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------- |
@@ -219,9 +220,9 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **Laryngectomy (total)**              | 不可逆的致命性 aspiration                             | 永久性咽喉分離，終止 aspiration                                       |
 | **PEG / PEJ（經皮胃造口）**           | 無法安全經口進食達營養需求                            | 長期腸道營養支持                                                      |
 
-## 常見疾病與治療方案 Common Conditions & Specific Protocols
+## 常見疾病與治療方針
 
-### 1. 中風後吞嚥障礙 Post-Stroke Dysphagia
+### 1. 中風後吞嚥障礙
 
 - **發生率**：急性中風約 37–78%，其中 50% 在 6 個月內恢復
 - **危險因子**：brainstem stroke（尤其是 medullary lateral syndrome / Wallenberg syndrome）、bilateral hemispheric stroke、NIHSS >10、年齡 >70
@@ -232,7 +233,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
   - 若 6 個月未恢復 → 長期代償策略 ± PEG
 - **預後**：post-stroke dysphagia 與 aspiration pneumonia（RR 3.2）、死亡率（OR 2.4）顯著相關
 
-### 2. 帕金森氏症吞嚥障礙 Parkinson's Disease Dysphagia
+### 2. 帕金森氏症吞嚥障礙
 
 - **發生率**：約 80%（disease duration-dependent），可發生於任何 Hoehn & Yahr stage
 - **特徵**：舌頭震顫、重複性吞嚥運動減少（hypokinetic swallow）、pharyngeal residue、piecemeal deglutition、aspiration（>50% silent）
@@ -244,7 +245,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
   - **深腦刺激術（DBS）**：對吞嚥效果不一致，部分患者可能有負面影響
 - **Monitor**：定期 FEES（因 silent aspiration 比例高）+ 營養評估 + 肺炎預防
 
-### 3. 頭頸癌吞嚥障礙 Head & Neck Cancer Dysphagia
+### 3. 頭頸癌吞嚥障礙
 
 - **成因**：腫瘤本身（結構破壞）、手術（切除範圍）、放療（纖維化、唾液減少、trismus）、化療（黏膜炎）
 - **特色**：multi-factorial — oral phase（舌缺損、trismus）+ pharyngeal phase（咽縮肌 fibrosis、laryngeal edema）+ UES（fibrosis stenosis）
@@ -256,7 +257,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
   - **IDDSI diet progression**：依功能逐步升級
 - **長期追蹤**：dysphagia 可持續數年（RT 後 fibrosis 持續進展—late effect）
 
-### 4. 老年吞嚥變化 Presbyphagia
+### 4. 老年吞嚥變化
 
 - **生理改變**：肌肉萎縮（sarcopenia）、感覺閾值↑、hyolaryngeal excursion↓、UES compliance↓、唾液分泌↓
 - **特徵**：吞嚥速度變慢、pharyngeal residue 比例↑、silent aspiration 風險↑
@@ -267,7 +268,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
   - 營養補充（蛋白質 + vitamin D）— 改善 sarcopenia
   - 環境調整：充足時間、減少 distractions
 
-### 5. 環咽肌功能障礙 Cricopharyngeal Dysfunction
+### 5. 環咽肌功能障礙
 
 - **生理**：UES（upper esophageal sphincter）由 cricopharyngeus 肌肉形成，平時保持張力性收縮，吞嚥時完全鬆弛至少 0.5–1.0s
 - **異常形式**：
@@ -280,7 +281,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
   - 注射：BTX-A（肉毒桿菌素）注射至 cricopharyngeus（100U Botox / 50U Dysport），效果持續 3–6 個月
   - 手術：Cricopharyngeal myotomy（經口或開放式）
 
-### 6. 失智症相關吞嚥障礙 Dementia-Related Dysphagia
+### 6. 失智症相關吞嚥障礙
 
 - **特徵**：progressively worsening、agnosia（無法辨識食物）、apraxia（無法執行吞嚥動作）、oral phase 受損明顯、late stage → pharyngeal phase 受損
 - **治療原則**：
@@ -289,7 +290,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
   - 晚期：comfort feeding、PEG 討論（倫理考量→需權衡生活品質）
   - 避免：強迫進食、behavioral dysphagia 惡化
 
-## 療效評估 Outcome Measures
+## 療效評估
 
 | 工具                                                    | 頻率        | 目標                                                    |
 | ------------------------------------------------------- | ----------- | ------------------------------------------------------- |
@@ -313,7 +314,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **6** | 完全經口進食（無特殊準備，但需避免特定食物） |
 | **7** | 完全經口進食（無限制）                       |
 
-## 特殊族群 Special Populations
+## 特殊族群
 
 | 族群                                | 考量                                                                                                                                                |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -323,7 +324,7 @@ title: 吞嚥復健 — 吞嚥障礙之評估與治療 — Dysphagia Rehabilitat
 | **Dementia**                        | 人權倫理議題：comfort feeding vs PEG、避免 physical restraint、尊重患者意願                                                                         |
 | **Post-laryngectomy**               | Total laryngectomy → 咽部重建後可能仍有 aspiration（neoglottic incompetence）、需 TEP 復健                                                          |
 
-## 參考文獻 References
+## 參考文獻
 
 1. Steele CM, Alsanei WA, Ayanikalath S, et al. The Influence of Food Texture and Liquid Consistency Modification on Swallowing Physiology and Function: A Systematic Review. _Dysphagia_. 2015;30(1):2-26.
 2. Clavé P, Shaker R. Dysphagia: Current Reality and Future Perspectives. _Nat Rev Gastroenterol Hepatol_. 2015;12(5):259-270.

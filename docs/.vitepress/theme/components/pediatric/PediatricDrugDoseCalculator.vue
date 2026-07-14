@@ -1343,7 +1343,7 @@ const drugs = [
     maxDailyUnit: "mg/dose",
     route: "IV/IM/IN",
     interval: 2,
-    notes: "阿片類過量；可滴定，避免戒斷症狀",
+    notes: "鴉片類過量；可微調，避免戒斷症狀",
     color: "emer",
   },
   {

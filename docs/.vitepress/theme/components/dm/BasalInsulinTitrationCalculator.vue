@@ -962,7 +962,7 @@ async function copyMarkdown() {
         </details>
 
         <div v-if="!avgFBG" class="progress-hint" style="margin-top: 0.5rem">
-          請輸入平均空腹血糖以查看滴定建議
+          請輸入平均空腹血糖以查看注射建議
         </div>
         <template v-if="basalCurrentDose && avgFBG">
           <div class="algo-list">

@@ -621,7 +621,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "減重完整指引",
+              text: "減重指引",
               link: "/reference/bw/weight-management",
             },
           ],

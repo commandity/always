@@ -2877,7 +2877,7 @@ function reset() {
     font-size: 1.8rem;
   }
   .weight-card {
-    padding: 0.65rem 0.75rem;
+    padding: 0.65rem 0.75rem 2rem;
   }
   .compare-header,
   .compare-row {

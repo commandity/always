@@ -457,19 +457,19 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "外籍門診詢問單（多國語言）",
+              text: "外籍門診詢問單",
               link: "/reference/clinic/foreigner-inquiry",
             },
             {
-              text: "妊娠用藥分級查詢表（FDA A/B/C/D/X）",
+              text: "妊娠用藥分級",
               link: "/reference/clinic/pregnancy-category-table",
             },
             {
-              text: "藥物交互作用查詢（drug–drug・drug–food）",
+              text: "藥物食物交互作用查詢",
               link: "/reference/clinic/drug-interaction-checker",
             },
             {
-              text: "疫苗專用冰箱管理原則",
+              text: "疫苗專用冰箱管理",
               link: "/reference/clinic/vaccine-refrigerator-management",
             },
           ],
@@ -493,10 +493,6 @@ export default defineConfig({
             {
               text: "吞嚥復健",
               link: "/reference/ent/dysphagia-rehabilitation",
-            },
-            {
-              text: "前庭復健",
-              link: "/reference/ent/vestibular-rehabilitation",
             },
           ],
         },
@@ -523,33 +519,43 @@ export default defineConfig({
               link: "/reference/echo/thyroid-sonography",
             },
             {
-              text: "頸動脈雙功能暨經顱都卜勒超音波",
+              text: "頸動脈暨經顱都卜勒超音波",
               link: "/reference/echo/carotid-duplex",
             },
             {
-              text: "消化系統",
+              text: "消化系統超音波",
               link: "/reference/echo/digestive-sono",
             },
             {
-              text: "泌尿系統",
+              text: "泌尿系統超音波",
               link: "/reference/echo/urology-sono",
             },
             {
-              text: "腹部超音波解剖學精要",
+              text: "腹部超音波解剖學",
               link: "/reference/echo/abdominal-sono",
             },
           ],
         },
         {
-          text: "物理治療",
+          text: "復健",
           collapsed: true,
           items: [
+            {
+              text: "平衡",
+              collapsed: true,
+              items: [
+                {
+                  text: "前庭復健",
+                  link: "/reference/pt/balance/vestibular-rehabilitation",
+                },
+              ],
+            },
             {
               text: "肩",
               collapsed: true,
               items: [
                 {
-                  text: "肩關節分期復健運動",
+                  text: "肩關節復健運動",
                   link: "/reference/pt/shoulder/shoulder-rehab",
                 },
               ],
@@ -561,7 +567,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "區域麻醉完整指南",
+              text: "區域麻醉",
               link: "/reference/anes/regional-anesthesia",
             },
           ],
@@ -583,15 +589,15 @@ export default defineConfig({
               link: "/reference/skin/eczema-differential",
             },
             {
-              text: "兒童皮疹鑑別診斷（有無發燒）",
+              text: "兒童皮疹鑑別診斷",
               link: "/reference/skin/pediatric-rash-differential",
             },
             {
-              text: "全身性疾病的皮膚表徵",
+              text: "全身性疾病的皮膚表現",
               link: "/reference/skin/systemic-disease-skin-signs",
             },
             {
-              text: "水疱性病灶鑑別診斷",
+              text: "水疱疾病鑑別診斷",
               link: "/reference/skin/vesicular-lesions-differential",
             },
           ],
@@ -601,7 +607,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "神經疼痛：能否合併使用garbapentin與pregabalin",
+              text: "Garbapentin 與 Pregabalin 聯合用藥",
               link: "/reference/pain/garbapentinoid",
             },
           ],
@@ -611,7 +617,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "健保降血脂藥物給付判定",
+              text: "降血脂藥物",
               link: "/reference/lipid/lipid-protocol",
             },
           ],
@@ -635,11 +641,11 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "基礎胰島素劑量調整計算器",
+              text: "基礎胰島素計算器",
               link: "/reference/dm/basal-insulin-titration",
             },
             {
-              text: "口服降血糖藥完整比較與選擇指引",
+              text: "口服降血糖藥（OHA）",
               link: "/reference/dm/OHA-selection-guide",
             },
             {
@@ -647,11 +653,11 @@ export default defineConfig({
               link: "/reference/dm/GLP1ra-indication",
             },
             {
-              text: "如何為患者選擇合適的 GLP-1 促效劑",
+              text: "GLP-1 RA 選擇指引",
               link: "/reference/dm/GLP1ra-selection-guide",
             },
             {
-              text: "SGLT2 抑制劑（排糖藥）適應症與給付",
+              text: "SGLT2 抑制劑（排糖藥）",
               link: "/reference/dm/sglt2-inhibitors",
             },
           ],

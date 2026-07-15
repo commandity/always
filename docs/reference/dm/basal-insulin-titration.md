@@ -1,10 +1,10 @@
 ---
 layout: doc
-title: T2DM 胰島素治療選擇與劑量調整 T2DM Insulin Therapy Selection & Dose Titration
+title: T2DM 胰島素劑量調整 T2DM Insulin Dose Titration
 ---
 
-# T2DM 胰島素治療選擇與劑量調整
-**T2DM Insulin Therapy Selection & Dose Titration**
+# T2DM 胰島素劑量調整
+**T2DM Insulin Dose Titration**
 
 ---
 

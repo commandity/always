@@ -4,7 +4,7 @@ title: 妊娠用藥分級 Pregnancy Drug Risk Category
 ---
 
 # 妊娠用藥分級
-**Pregnancy Drug Risk Category (FDA A / B / C / D / X)**
+**Pregnancy Drug Risk Category**
 
 <PregnancyCategoryTable />
 
@@ -15,14 +15,14 @@ title: 妊娠用藥分級 Pregnancy Drug Risk Category
 
 ### 速查表
 
-| 情境 | ✅ 首選 Preferred | ❌ 避免 Avoid |
-| --- | --- | --- |
-| 疼痛 Pain | Paracetamol | NSAIDs；近足月避免 opioids |
-| 高血壓 Hypertension | Labetalol、Nifedipine、Methyldopa | ACEi、ARB |
-| 抗凝血 Anticoagulation | LMWH（Enoxaparin 等） | Warfarin、DOACs |
-| 降血脂 Lipid-lowering | —（孕期停用） | Statins |
-| 抗生素 Antibiotics | Penicillins、Cephalosporins、Macrolides | Trimethoprim（第一孕期）、Tetracyclines、Fluoroquinolones、Nitrofurantoin（足月） |
-| 癲癇 Epilepsy | Lamotrigine、Levetiracetam | Sodium valproate |
+| 情境                   | ✅ 首選 Preferred                        | ❌ 避免 Avoid                                                                      |
+| ---------------------- | --------------------------------------- | --------------------------------------------------------------------------------- |
+| 疼痛 Pain              | Paracetamol                             | NSAIDs；近足月避免 opioids                                                        |
+| 高血壓 Hypertension    | Labetalol、Nifedipine、Methyldopa       | ACEi、ARB                                                                         |
+| 抗凝血 Anticoagulation | LMWH（Enoxaparin 等）                   | Warfarin、DOACs                                                                   |
+| 降血脂 Lipid-lowering  | —（孕期停用）                           | Statins                                                                           |
+| 抗生素 Antibiotics     | Penicillins、Cephalosporins、Macrolides | Trimethoprim（第一孕期）、Tetracyclines、Fluoroquinolones、Nitrofurantoin（足月） |
+| 癲癇 Epilepsy          | Lamotrigine、Levetiracetam              | Sodium valproate                                                                  |
 
 ### 疼痛控制 Pain Relief
 

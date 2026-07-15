@@ -1,26 +1,10 @@
 ---
 layout: doc
-title: 氣喘 — 診斷、評估與治療完整臨床指引 — Asthma — Comprehensive Clinical Guide to Diagnosis, Assessment & Management
+title: 氣喘 Asthma
 ---
 
-# 氣喘 — 診斷、評估與治療完整臨床指引
-
-**Asthma — Comprehensive Clinical Guide to Diagnosis, Assessment & Management**
-
-> 整理來源：全民健康保險氣喘醫療給付改善方案教育訓練核心教材（共 8 冊）
->
-> 1. 氣喘致病機轉與氣道變形
-> 2. 台灣成人氣喘診療指引（2022 台灣成人氣喘照護指引，台灣胸腔暨重症加護醫學會）
-> 3. 台灣兒童氣喘診療指引
-> 4. 氣喘的診斷與臨床監測
-> 5. 氣喘的藥物與非藥物治療
-> 6. 氣喘的慢性照護
-> 7. 氣喘病急性發作的處置
-> 8. 特殊情況下的氣喘治療
->
-> 主要依據：GINA（Global Initiative for Asthma）2017–2022 Report、2022 台灣成人氣喘臨床照護指引、BTS/SIGN 2016 Guideline
-> 用途：醫療專業人員（醫師／藥師／衛教師）臨床複習參考
-> 整理日期：2026 年 7 月
+# 氣喘
+**Asthma**
 
 ## 1. 總論與流行病學
 

@@ -1,9 +1,9 @@
 ---
 layout: doc
-title: 水疱性病灶鑑別診斷 Differential Diagnosis of Vesicular Lesions
+title: 水疱疾病鑑別診斷 Differential Diagnosis of Vesicular Lesions
 ---
 
-# 水疱性病灶鑑別診斷與治療
+# 水疱疾病鑑別診斷
 
 **Differential Diagnosis of Vesicular Lesions**
 

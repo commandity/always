@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: Gabapentin 與 Pregabalin 聯合用藥於神經病理性疼痛 Gabapentin & Pregabalin Combination for Neuropathic Pain
+title: Gabapentin 與 Pregabalin 聯合用藥 Gabapentin & Pregabalin Combination
 ---
 
-# Gabapentin 與 Pregabalin 聯合用藥於神經病理性疼痛
+# Gabapentin 與 Pregabalin 聯合用藥
 
-**Gabapentin & Pregabalin Combination for Neuropathic Pain**
+**Gabapentin & Pregabalin Combination**
 
 ## 概述
 

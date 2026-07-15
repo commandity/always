@@ -21,6 +21,8 @@ AACE 最新指引以「併發症為中心」照護模式，GLP-1 RA 為肥胖症
 | **SRMA**（Berg et al., Obesity Rev 2025）8 項 RCT，n=2372，BMI ≥27         | Semaglutide / Tirzepatide | +9.69 kg（95% CI 5.78–13.60, P<0.00001）                                       |
 | **NMR**（Budini et al., 2026）6 項 RCT，n=3236，追蹤至停藥後 104 週        | GLP-1 RA（整體）          | 1 年回升已減體重之 60%；估計平台期回升 75.3%（95% CI 68.9–81.6），半衰期 23 週 |
 
+> SRMA = Systematic Review and Meta-Analysis；NMR = Nonlinear Meta-Regression；RCT = Randomized Controlled Trial
+
 ## 生物機制：為何體重必然回升
 
 AACE 2025 指引（Nadolsky 等人）指出**脂肪量受生物機制保護**。停藥後：

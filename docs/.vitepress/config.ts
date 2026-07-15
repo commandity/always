@@ -644,7 +644,7 @@ export default defineConfig({
             },
             {
               text: "停用 GLP-1 RA 後的體重維持",
-              link: "/reference/dm/GLP1ra-weight-maintenance",
+              link: "/reference/bw/GLP1ra-weight-maintenance",
             },
             {
               text: "如何為患者選擇合適的 GLP-1 促效劑",

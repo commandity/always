@@ -241,9 +241,13 @@ body {
 }
 .VPNavBarSearch {
   margin-left: 0 !important;
+  margin-right: 8px !important;
   padding-left: 0 !important;
-  padding-right: 20px !important;
+  padding-right: 0 !important;
   flex-grow: 0 !important;
+}
+.DocSearch-Button {
+  margin-right: 0px !important;
 }
 
 @media (max-width: 767px) {
@@ -1251,7 +1255,11 @@ html {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 .yn-btn:hover {
-  border-color: color-mix(in srgb, var(--vp-c-brand-1) 40%, var(--vp-c-divider));
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-brand-1) 40%,
+    var(--vp-c-divider)
+  );
   background: var(--vp-c-bg-soft);
 }
 .yn-btn:active {
@@ -1346,7 +1354,11 @@ html {
     color 0.15s;
 }
 .sec-opt:hover .opt-score-badge {
-  border-color: color-mix(in srgb, var(--vp-c-brand-1) 40%, var(--vp-c-divider));
+  border-color: color-mix(
+    in srgb,
+    var(--vp-c-brand-1) 40%,
+    var(--vp-c-divider)
+  );
 }
 .sec-opt.opt-selected .opt-score-badge {
   color: #fff;

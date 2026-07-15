@@ -624,6 +624,10 @@ export default defineConfig({
               text: "減重指引",
               link: "/reference/bw/weight-management",
             },
+            {
+              text: "停用 GLP-1 RA 後的體重維持",
+              link: "/reference/bw/GLP1ra-weight-maintenance",
+            },
           ],
         },
         {
@@ -641,10 +645,6 @@ export default defineConfig({
             {
               text: "GLP-1 受體促效劑適應症",
               link: "/reference/dm/GLP1ra-indication",
-            },
-            {
-              text: "停用 GLP-1 RA 後的體重維持",
-              link: "/reference/bw/GLP1ra-weight-maintenance",
             },
             {
               text: "如何為患者選擇合適的 GLP-1 促效劑",

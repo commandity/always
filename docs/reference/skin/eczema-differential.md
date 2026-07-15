@@ -87,7 +87,7 @@ title: 濕疹鑑別診斷 Differential Diagnosis of Eczema
 | **汗皰疹**（Dyshidrotic eczema／pompholyx）                   | 手掌、手指側面、腳掌                                       | 深層小水疱群（tapioca-like vesicles）、劇癢、水疱破後脫皮                      | 夏季好發；與金屬過敏（鎳）、真菌感染（遠端id reaction）相關        | 局部類固醇；乾燥療法；避免金屬過敏原                     |
 | **錢幣狀濕疹**（Nummular eczema／discoid eczema）             | 小腿伸側、手背、軀幹                                       | 界線明顯的圓形或橢圓形（錢幣狀）濕疹性斑塊                                     | 常伴皮膚乾燥；冬季好發；易誤診為環癬（tinea corporis）→ KOH 鏡檢   | 局部類固醇＋保濕；避免乾燥刺激                           |
 | **鬱積性皮炎**（Stasis dermatitis／venous eczema）            | 雙側小腿下 1/3，內踝附近                                   | 紅褐色含鐵血黃素沉著、靜脈曲張、水腫                                           | 靜脈功能不全為基礎；可進展為脂肪皮膚硬化症（lipodermatosclerosis） | 壓迫治療＋抬高患肢；局部類固醇                           |
-| **神經性皮炎**（Lichen simplex chronicus, LSC）               | 頸後、踝部、外陰、頭皮（容易搔抓的部位）                   | 苔蘚化斑塊（lichenified plaque）、明顯皮溝皮嵴（skin markings）、搔癢–搔抓循環 | 搔抓行為為核心；心理壓力誘發                                       | 打破搔抓循環；局部強效類固醇；抗組織胺                   |
+| **神經性皮炎**，俗稱牛皮蘚（Lichen simplex chronicus, LSC）   | 頸後、踝部、外陰、頭皮（容易搔抓的部位）                   | 苔蘚化斑塊（lichenified plaque）、明顯皮溝皮嵴（skin markings）、搔癢–搔抓循環 | 搔抓行為為核心；心理壓力誘發                                       | 打破搔抓循環；局部強效類固醇；抗組織胺                   |
 | **結節性癢疹**（Prurigo nodularis）                           | 四肢伸側（手臂、小腿）                                     | 多個堅硬的結節（firm nodules）、表面脫皮結痂                                   | 慢性搔抓所致；頑固難治                                             | 局部強效類固醇；抗組織胺；UVB；thalidomide               |
 
 ### 二、感染性及感染誘發

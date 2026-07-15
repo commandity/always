@@ -660,6 +660,10 @@ export default defineConfig({
               text: "SGLT2 抑制劑（排糖藥）",
               link: "/reference/dm/sglt2-inhibitors",
             },
+            {
+              text: "腦小血管疾病的代謝抽血警訊",
+              link: "/reference/dm/small-vessel-disease-lab-markers",
+            },
           ],
         },
         // {

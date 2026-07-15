@@ -2982,6 +2982,51 @@ function tfiReset() {
 .tfi .slider-fill.fill-10 {
   background: linear-gradient(90deg, #3b82f6, #60a5fa);
 }
+.tfi .slider-fill.fill-11 {
+  background: linear-gradient(90deg, #22c55e, #84cc16);
+}
+.tfi .slider-fill.fill-12 {
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+}
+.tfi .slider-fill.fill-13 {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+}
+.tfi .slider-fill.fill-14 {
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+}
+.tfi .slider-fill.fill-15 {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+.tfi .slider-fill.fill-16 {
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
+}
+.tfi .slider-fill.fill-17 {
+  background: linear-gradient(90deg, #14b8a6, #2dd4bf);
+}
+.tfi .slider-fill.fill-18 {
+  background: linear-gradient(90deg, #f43f5e, #fb7185);
+}
+.tfi .slider-fill.fill-19 {
+  background: linear-gradient(90deg, #eab308, #facc15);
+}
+.tfi .slider-fill.fill-20 {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+.tfi .slider-fill.fill-21 {
+  background: linear-gradient(90deg, #22c55e, #84cc16);
+}
+.tfi .slider-fill.fill-22 {
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+}
+.tfi .slider-fill.fill-23 {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+}
+.tfi .slider-fill.fill-24 {
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+}
+.tfi .slider-fill.fill-25 {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
 .tfi .slider-col {
   flex: 1;
   display: flex;

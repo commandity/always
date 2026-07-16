@@ -1,86 +1,71 @@
 <script setup lang="ts">
-import { ref, computed, nextTick } from "vue";
+import { ref, computed } from "vue";
 
-const display = ref("");
+const input = ref("");
 const result = ref<string | null>(null);
 const error = ref(false);
 const copied = ref(false);
 const showDetail = ref(false);
 
 const keys = [
-  "7",
-  "8",
-  "9",
-  "÷",
-  "4",
-  "5",
-  "6",
-  "×",
-  "1",
-  "2",
-  "3",
-  "−",
-  "C",
-  "0",
-  ".",
-  "+",
-  "⌫",
-  "(",
-  ")",
-  "=",
+  { label: "C", type: "action" },
+  { label: "(", type: "func" },
+  { label: ")", type: "func" },
+  { label: "⌫", type: "action" },
+  { label: "7", type: "num" },
+  { label: "8", type: "num" },
+  { label: "9", type: "num" },
+  { label: "÷", type: "op" },
+  { label: "4", type: "num" },
+  { label: "5", type: "num" },
+  { label: "6", type: "num" },
+  { label: "×", type: "op" },
+  { label: "1", type: "num" },
+  { label: "2", type: "num" },
+  { label: "3", type: "num" },
+  { label: "−", type: "op" },
+  { label: ".", type: "num" },
+  { label: "0", type: "num" },
+  { label: "±", type: "func" },
+  { label: "+", type: "op" },
 ];
 
 const displayFormatted = computed(() => {
-  return display.value
-    .replace(/\*/g, "×")
-    .replace(/\//g, "÷")
-    .replace(/-/g, "−");
+  return input.value.replace(/\*/g, "×").replace(/\//g, "÷").replace(/-/g, "−");
 });
 
-function input(key: string) {
+function press(key: string) {
   error.value = false;
-  if (key === "=") {
-    calc();
-    return;
-  }
   if (key === "C") {
-    display.value = "";
+    input.value = "";
     result.value = null;
-    error.value = false;
     return;
   }
   if (key === "⌫") {
-    display.value = display.value.slice(0, -1);
+    input.value = input.value.slice(0, -1);
+    return;
+  }
+  if (key === "±") {
+    if (input.value.startsWith("-")) {
+      input.value = input.value.slice(1);
+    } else {
+      input.value = "-" + input.value;
+    }
     return;
   }
   const op = key === "×" ? "*" : key === "÷" ? "/" : key === "−" ? "-" : key;
-  display.value += op;
-}
-
-function onKeydown(e: KeyboardEvent) {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    calc();
-  }
-  if (e.key === "Escape") {
-    display.value = "";
-    result.value = null;
-    error.value = false;
-  }
-  if (e.key === "Backspace") {
-    display.value = display.value.slice(0, -1);
-  }
+  input.value += op;
 }
 
 function calc() {
-  if (!display.value.trim()) return;
+  if (!input.value.trim()) return;
   try {
-    const expr = display.value
+    const expr = input.value
       .replace(/×/g, "*")
       .replace(/÷/g, "/")
       .replace(/−/g, "-");
     const safe = expr.replace(/[^0-9+\-*/.() ]/g, "");
-    if (!safe || /[+\-*/.]{2,}/.test(safe.replace(/\s/g, ""))) {
+    if (!safe) {
       error.value = true;
       result.value = null;
       return;
@@ -99,11 +84,23 @@ function calc() {
   }
 }
 
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    calc();
+  }
+  if (e.key === "Escape") {
+    input.value = "";
+    result.value = null;
+    error.value = false;
+  }
+}
+
 function generateMarkdown() {
-  const expr = displayFormatted.value;
-  const res = result.value ?? "—";
   return (
-    `# 計算結果\n\n` + `- **算式**: ${expr}\n` + `- **結果**: **${res}**\n`
+    `# 計算結果\n\n` +
+    `- **算式**: ${displayFormatted.value || "—"}\n` +
+    `- **結果**: **${result.value ?? "—"}**\n`
   );
 }
 
@@ -114,7 +111,7 @@ async function copyMarkdown() {
 }
 
 function reset() {
-  display.value = "";
+  input.value = "";
   result.value = null;
   error.value = false;
   showDetail.value = false;
@@ -146,44 +143,41 @@ function reset() {
         >
       </div>
 
-      <div class="input-wrap">
+      <div class="calc-body">
+        <div class="display-card">
+          <div class="display-expr">{{ displayFormatted || "&nbsp;" }}</div>
+          <div
+            class="display-result"
+            :class="{ 'is-error': error, 'has-val': result !== null }"
+          >
+            <template v-if="error">算式有誤</template>
+            <template v-else-if="result !== null">= {{ result }}</template>
+            <template v-else>&nbsp;</template>
+          </div>
+        </div>
+
         <input
-          v-model="display"
+          :value="input"
           type="text"
           class="calc-input"
-          :class="{ 'has-result': result !== null, 'is-error': error }"
           placeholder="輸入算式，如 25 * 3 / 8"
+          @input="(e) => (input = (e.target as HTMLInputElement).value)"
           @keydown="onKeydown"
           autofocus
         />
-      </div>
 
-      <div class="keypad">
-        <button
-          v-for="k in keys"
-          :key="k"
-          class="key"
-          :class="{
-            'key-op': ['+', '−', '×', '÷'].includes(k),
-            'key-eq': k === '=',
-            'key-clear': k === 'C',
-            'key-del': k === '⌫',
-            'key-paren': ['(', ')'].includes(k),
-          }"
-          @click="input(k)"
-        >
-          {{ k }}
-        </button>
-      </div>
-
-      <div class="result-bar" :class="{ 'result-error': error }">
-        <span v-if="error" class="result-text error-text"
-          >算式有誤，請重新輸入</span
-        >
-        <span v-else-if="result !== null" class="result-text">
-          = <strong class="result-num">{{ result }}</strong>
-        </span>
-        <span v-else class="result-placeholder">等待輸入...</span>
+        <div class="keypad">
+          <button
+            v-for="k in keys"
+            :key="k.label"
+            class="key"
+            :class="'key-' + k.type"
+            @click="press(k.label)"
+          >
+            {{ k.label }}
+          </button>
+          <button class="key key-eq" @click="calc">=</button>
+        </div>
       </div>
 
       <div v-if="showDetail" class="results-detail">
@@ -215,12 +209,13 @@ function reset() {
 
 <style scoped>
 .calc {
-  max-width: 820px;
+  max-width: 480px;
   margin: 0 auto;
 }
+
+/* ── Tab bar ─────────────────────────────────── */
 .tab-bar {
   display: flex;
-  gap: 0.5rem;
   margin-bottom: 1.5rem;
   background: var(--vp-c-bg-mute);
   padding: 4px;
@@ -229,7 +224,7 @@ function reset() {
 }
 .tab-btn {
   flex: 1;
-  padding: 0.65rem 1rem;
+  padding: 0.6rem 1rem;
   background: transparent;
   border: 1.5px solid transparent;
   cursor: pointer;
@@ -245,13 +240,13 @@ function reset() {
 }
 .tab-label {
   display: block;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 800;
   line-height: 1.3;
 }
 .tab-sub {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--vp-c-text-3);
   margin-top: 2px;
@@ -261,30 +256,24 @@ function reset() {
   opacity: 0.85;
 }
 
+/* ── Panel ───────────────────────────────────── */
 .panel {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 2rem 0 3rem;
+  padding: 0 0 2rem;
   font-size: 0.9rem;
 }
 .sb-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 .title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--vp-c-text-1);
-  margin: 0 0 0.2rem;
+  margin: 0 0 0.15rem;
   border: none !important;
   padding: 0 !important;
 }
 .subtitle {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: var(--vp-c-text-3);
   margin: 0;
 }
@@ -292,143 +281,156 @@ function reset() {
 .intro-bar {
   display: flex;
   align-items: flex-start;
-  gap: 0.6rem;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   border-left: 3px solid var(--vp-c-brand-1);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: var(--vp-c-text-2);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
 }
 .intro-dot {
   color: var(--vp-c-brand-1);
   flex-shrink: 0;
 }
 
-.input-wrap {
-  margin-bottom: 0.75rem;
+/* ── Calculator body ─────────────────────────── */
+.calc-body {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+  overflow: hidden;
 }
+
+/* ── Display ─────────────────────────────────── */
+.display-card {
+  padding: 1.2rem 1.25rem 0.9rem;
+  background: var(--vp-c-bg-mute);
+  border-bottom: 1px solid var(--vp-c-divider);
+  min-height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.display-expr {
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  word-break: break-all;
+  line-height: 1.4;
+  min-height: 1.4em;
+  overflow-y: auto;
+  max-height: 5.6em;
+}
+.display-result {
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--vp-c-text-1);
+  line-height: 1.2;
+  margin-top: 0.4rem;
+  text-align: right;
+  transition: color 0.2s;
+}
+.display-result.has-val {
+  color: #22c55e;
+}
+.display-result.is-error {
+  color: #ef4444;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 .calc-input {
   width: 100%;
-  padding: 0.85rem 1rem;
-  border: 1.5px solid var(--vp-c-divider);
-  border-radius: 10px;
-  background: var(--vp-c-bg-soft);
-  font-size: 1.15rem;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  font-size: 0.85rem;
   font-family: "SF Mono", "Fira Code", monospace;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
+  font-weight: 500;
+  color: var(--vp-c-text-2);
   outline: none;
-  transition: border-color 0.2s;
   box-sizing: border-box;
-  letter-spacing: 0.03em;
-}
-.calc-input:focus {
-  border-color: var(--vp-c-brand-1);
-}
-.calc-input.has-result {
-  border-color: color-mix(in srgb, #22c55e 50%, var(--vp-c-divider));
-}
-.calc-input.is-error {
-  border-color: #ef4444;
 }
 .calc-input::placeholder {
   color: var(--vp-c-text-3);
   font-weight: 400;
 }
 
+/* ── Keypad ──────────────────────────────────── */
 .keypad {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  margin-bottom: 0.75rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  padding: 1px;
+  background: var(--vp-c-divider);
 }
 .key {
-  padding: 0.7rem 0;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
+  padding: 0.85rem 0;
+  border: none;
   background: var(--vp-c-bg-soft);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 600;
   font-family: "SF Mono", "Fira Code", monospace;
   color: var(--vp-c-text-1);
   cursor: pointer;
-  transition: all 0.12s;
+  transition: background 0.1s;
   user-select: none;
 }
 .key:hover {
   background: var(--vp-c-bg-mute);
-  border-color: var(--vp-c-brand-1);
 }
 .key:active {
-  transform: scale(0.95);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 15%, var(--vp-c-bg-soft));
+}
+
+.key-num {
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 .key-op {
   color: var(--vp-c-brand-1);
   font-size: 1.15rem;
+  font-weight: 700;
+}
+.key-func {
+  color: var(--vp-c-text-2);
+  font-size: 0.95rem;
+}
+.key-action {
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 0.95rem;
 }
 .key-eq {
   background: linear-gradient(135deg, var(--vp-c-brand-1), #4f46e5);
   color: #fff;
-  border-color: transparent;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  font-weight: 800;
 }
 .key-eq:hover {
-  opacity: 0.9;
-}
-.key-clear {
-  color: #ef4444;
-}
-.key-del {
-  color: var(--vp-c-text-2);
-}
-.key-paren {
-  color: var(--vp-c-text-2);
-  font-size: 1.1rem;
+  background: linear-gradient(135deg, #4f46e5, var(--vp-c-brand-1));
 }
 
-.result-bar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  background: var(--vp-c-bg-soft);
-  margin-bottom: 1rem;
-  min-height: 3rem;
-}
-.result-text {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--vp-c-text-2);
-}
-.result-num {
-  font-size: 1.4rem;
-  color: #22c55e;
-  font-family: "SF Mono", "Fira Code", monospace;
-}
-.error-text {
-  color: #ef4444;
-}
-.result-placeholder {
-  color: var(--vp-c-text-3);
-  font-size: 0.85rem;
-}
-
+/* ── Detail panel ────────────────────────────── */
 .results-detail {
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
 }
 .results-header {
-  padding: 0.6rem 1rem;
+  padding: 0.55rem 0.85rem;
   background: var(--vp-c-bg-mute);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 800;
   color: var(--vp-c-text-1);
   border-bottom: 1px solid var(--vp-c-divider);
@@ -436,16 +438,16 @@ function reset() {
 .detail-row {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.45rem 1rem;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
   border-top: 1px solid var(--vp-c-divider);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
 }
 .detail-letter {
   flex-shrink: 0;
-  width: 22px;
+  width: 20px;
   text-align: center;
-  font-size: 0.74rem;
+  font-size: 0.7rem;
   font-weight: 800;
   color: var(--vp-c-text-3);
 }
@@ -454,12 +456,13 @@ function reset() {
   color: var(--vp-c-text-2);
 }
 .detail-score {
-  font-weight: 800;
+  font-weight: 700;
   color: var(--vp-c-text-1);
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 0.82rem;
 }
 .total-row {
   background: var(--vp-c-bg-mute);
-  font-weight: 700;
 }
 .positive {
   color: #22c55e;
@@ -468,21 +471,22 @@ function reset() {
   color: var(--vp-c-brand-1);
 }
 
+/* ── Action buttons ──────────────────────────── */
 .sb-actions {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 .btn-view,
 .btn-copy,
 .btn-reset {
-  padding: 9px 22px;
+  padding: 8px 18px;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
 .btn-view {
   border: none;
@@ -517,19 +521,31 @@ function reset() {
 }
 
 @media (max-width: 640px) {
+  .calc {
+    max-width: 100%;
+  }
   .tab-label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .tab-sub {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
+  }
+  .display-expr {
+    font-size: 0.95rem;
+  }
+  .display-result {
+    font-size: 1.7rem;
+  }
+  .display-card {
+    padding: 1rem 1rem 0.75rem;
+    min-height: 5rem;
   }
   .key {
-    padding: 0.6rem 0;
-    font-size: 0.92rem;
-  }
-  .calc-input {
+    padding: 0.75rem 0;
     font-size: 1rem;
-    padding: 0.75rem 0.85rem;
+  }
+  .key-eq {
+    font-size: 1.1rem;
   }
 }
 </style>

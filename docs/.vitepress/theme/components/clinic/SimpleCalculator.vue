@@ -4,8 +4,6 @@ import { ref, computed } from "vue";
 const input = ref("");
 const result = ref<string | null>(null);
 const error = ref(false);
-const copied = ref(false);
-const showDetail = ref(false);
 
 const keys = [
   { label: "C", type: "action" },
@@ -95,27 +93,6 @@ function onKeydown(e: KeyboardEvent) {
     error.value = false;
   }
 }
-
-function generateMarkdown() {
-  return (
-    `# 計算結果\n\n` +
-    `- **算式**: ${displayFormatted.value || "—"}\n` +
-    `- **結果**: **${result.value ?? "—"}**\n`
-  );
-}
-
-async function copyMarkdown() {
-  await navigator.clipboard.writeText(generateMarkdown());
-  copied.value = true;
-  setTimeout(() => (copied.value = false), 2000);
-}
-
-function reset() {
-  input.value = "";
-  result.value = null;
-  error.value = false;
-  showDetail.value = false;
-}
 </script>
 
 <template>
@@ -178,30 +155,6 @@ function reset() {
           </button>
           <button class="key key-eq" @click="calc">=</button>
         </div>
-      </div>
-
-      <div v-if="showDetail" class="results-detail">
-        <div class="results-header">計算明細</div>
-        <div class="detail-row">
-          <span class="detail-letter">◆</span>
-          <span class="detail-domain">算式</span>
-          <span class="detail-score">{{ displayFormatted || "—" }}</span>
-        </div>
-        <div class="detail-row total-row">
-          <span class="detail-letter brand-sm">∑</span>
-          <span class="detail-domain">結果</span>
-          <span class="detail-score positive">{{ result ?? "—" }}</span>
-        </div>
-      </div>
-
-      <div class="sb-actions">
-        <button class="btn-view" @click="showDetail = !showDetail">
-          {{ showDetail ? "收起明細" : "查看評估結果" }}
-        </button>
-        <button class="btn-copy" @click="copyMarkdown">
-          {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
-        </button>
-        <button class="btn-reset" @click="reset">重置</button>
       </div>
     </div>
   </div>
@@ -417,107 +370,6 @@ function reset() {
 }
 .key-eq:hover {
   background: linear-gradient(135deg, #4f46e5, var(--vp-c-brand-1));
-}
-
-/* ── Detail panel ────────────────────────────── */
-.results-detail {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
-  overflow: hidden;
-  margin-top: 1rem;
-  margin-bottom: 0.75rem;
-}
-.results-header {
-  padding: 0.55rem 0.85rem;
-  background: var(--vp-c-bg-mute);
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-  border-bottom: 1px solid var(--vp-c-divider);
-}
-.detail-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.85rem;
-  border-top: 1px solid var(--vp-c-divider);
-  font-size: 0.8rem;
-}
-.detail-letter {
-  flex-shrink: 0;
-  width: 20px;
-  text-align: center;
-  font-size: 0.7rem;
-  font-weight: 800;
-  color: var(--vp-c-text-3);
-}
-.detail-domain {
-  flex: 1;
-  color: var(--vp-c-text-2);
-}
-.detail-score {
-  font-weight: 700;
-  color: var(--vp-c-text-1);
-  font-family: "SF Mono", "Fira Code", monospace;
-  font-size: 0.82rem;
-}
-.total-row {
-  background: var(--vp-c-bg-mute);
-}
-.positive {
-  color: #22c55e;
-}
-.brand-sm {
-  color: var(--vp-c-brand-1);
-}
-
-/* ── Action buttons ──────────────────────────── */
-.sb-actions {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-.btn-view,
-.btn-copy,
-.btn-reset {
-  padding: 8px 18px;
-  border-radius: 8px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: inherit;
-  transition: all 0.15s;
-}
-.btn-view {
-  border: none;
-  background: linear-gradient(135deg, var(--vp-c-brand-1), #4f46e5);
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
-}
-.btn-view:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
-}
-.btn-view:active {
-  transform: translateY(0);
-}
-.btn-copy {
-  border: 1.5px solid var(--vp-c-brand-1);
-  background: transparent;
-  color: var(--vp-c-brand-1);
-}
-.btn-copy:hover {
-  background: var(--vp-c-brand-soft);
-}
-.btn-reset {
-  border: 1px solid var(--vp-c-divider);
-  background: transparent;
-  color: var(--vp-c-text-2);
-}
-.btn-reset:hover {
-  border-color: #ef4444;
-  color: #ef4444;
-  background: rgba(239, 68, 68, 0.04);
 }
 
 @media (max-width: 640px) {

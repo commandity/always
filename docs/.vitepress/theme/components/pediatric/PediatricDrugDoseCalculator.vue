@@ -1780,24 +1780,17 @@ function setFreq(drugId: string, key: string) {
           <div class="result-top">
             <span class="result-level">{{ d.name }}</span>
           </div>
-          <span
-            v-if="isFreqCandidate(d) && selectedFreq[d.id]"
-            class="result-ahi"
-          >
-            {{ d.dosePerKg }} {{ d.doseUnit }} × {{ weight }} kg =
-            {{ getBaseDaily(d) }} mg/day → {{ getAdjustedResult(d).single }} mg
-            × {{ getAdjustedResult(d).perDay }}次/日
+          <span v-if="isFreqCandidate(d)" class="result-ahi">
+            每 {{ d.interval }}h × {{ doseFor(d).perDay }} 次/日 =
+            {{ getBaseDaily(d) }} mg/day
           </span>
-          <span v-else class="result-ahi">
+          <span class="result-ahi">
             {{ d.dosePerKg }} {{ d.doseUnit }} × {{ weight }} kg =
             {{ doseFor(d).single }} mg
-          </span>
-          <span
-            v-if="isFreqCandidate(d) && !selectedFreq[d.id]"
-            class="result-ahi"
-          >
-            每 {{ d.interval }}h × {{ doseFor(d).perDay }} 次/日 =
-            {{ doseFor(d).daily }} mg/day
+            <template v-if="isFreqCandidate(d) && selectedFreq[d.id]">
+              → {{ getAdjustedResult(d).single }} mg ×
+              {{ getAdjustedResult(d).perDay }}次/日
+            </template>
           </span>
           <div v-if="isFreqCandidate(d)" class="freq-btns">
             <button

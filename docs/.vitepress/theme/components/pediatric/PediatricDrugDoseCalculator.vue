@@ -1461,12 +1461,18 @@ const FREQ_ALL: { key: string; label: string; hours: number }[] = [
 ];
 
 // ── State ─────────────────────────────────────────────────────────
+const activeTab = ref<"drug" | "calc">("drug");
 const searchQuery = ref("");
 const selectedDrugs = ref<(typeof drugs)[number][]>([]);
 const weight = ref<number>(20);
 const showResults = ref(false);
 const copied = ref(false);
 const selectedFreq = ref<Record<string, string>>({});
+
+// ── Simple Calculator State ──────────────────────────────────────
+const calcInput = ref("");
+const calcResult = ref<string | null>(null);
+const calcError = ref(false);
 
 const filteredDrugs = computed(() => {
   const q = searchQuery.value.toLowerCase();
@@ -1618,18 +1624,89 @@ function setFreq(drugId: string, key: string) {
     [drugId]: cur === key ? "" : key,
   };
 }
+
+// ── Simple Calculator ────────────────────────────────────────────
+const calcDisplay = computed(() =>
+  calcInput.value.replace(/\*/g, "×").replace(/\//g, "÷").replace(/-/g, "−"),
+);
+
+function calcPress(key: string) {
+  calcError.value = false;
+  if (key === "C") {
+    calcInput.value = "";
+    calcResult.value = null;
+    return;
+  }
+  if (key === "⌫") {
+    calcInput.value = calcInput.value.slice(0, -1);
+    return;
+  }
+  const op = key === "×" ? "*" : key === "÷" ? "/" : key === "−" ? "-" : key;
+  calcInput.value += op;
+}
+
+function calcEval() {
+  if (!calcInput.value.trim()) return;
+  try {
+    const expr = calcInput.value
+      .replace(/×/g, "*")
+      .replace(/÷/g, "/")
+      .replace(/−/g, "-");
+    const safe = expr.replace(/[^0-9+\-*/.() ]/g, "");
+    if (!safe) {
+      calcError.value = true;
+      calcResult.value = null;
+      return;
+    }
+    const val = Function(`"use strict"; return (${safe})`)();
+    if (typeof val !== "number" || !isFinite(val)) {
+      calcError.value = true;
+      calcResult.value = null;
+      return;
+    }
+    calcResult.value = String(Math.round(val * 1e10) / 1e10);
+    calcError.value = false;
+  } catch {
+    calcError.value = true;
+    calcResult.value = null;
+  }
+}
+
+function calcOnKeydown(e: KeyboardEvent) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    calcEval();
+  }
+  if (e.key === "Escape") {
+    calcInput.value = "";
+    calcResult.value = null;
+    calcError.value = false;
+  }
+}
 </script>
 
 <template>
   <div class="pd-calc">
     <div class="tab-bar">
-      <button class="tab-btn active">
+      <button
+        class="tab-btn"
+        :class="{ active: activeTab === 'drug' }"
+        @click="activeTab = 'drug'"
+      >
         <span class="tab-label">Pediatric Drug Dose 劑量計算</span>
         <span class="tab-sub">兒童藥物劑量計算器</span>
       </button>
+      <button
+        class="tab-btn"
+        :class="{ active: activeTab === 'calc' }"
+        @click="activeTab = 'calc'"
+      >
+        <span class="tab-label">Simple Calculator 簡易計算機</span>
+        <span class="tab-sub">支援鍵盤輸入與點擊按鍵</span>
+      </button>
     </div>
 
-    <div class="panel">
+    <div v-show="activeTab === 'drug'" class="panel">
       <div class="sb-header">
         <div class="header-title">
           <h2 class="title">兒童體重別藥物劑量計算</h2>
@@ -1885,6 +1962,75 @@ function setFreq(drugId: string, key: string) {
           {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
         </button>
         <button class="btn-reset" @click="reset">重置</button>
+      </div>
+    </div>
+
+    <div v-show="activeTab === 'calc'" class="panel">
+      <div class="sb-header">
+        <div class="header-title">
+          <h2 class="title">簡易計算機</h2>
+          <p class="subtitle">Simple Calculator</p>
+        </div>
+      </div>
+
+      <div class="intro-bar">
+        <span class="intro-dot">◆</span>
+        <span
+          >直接<strong>鍵盤輸入</strong>算式，或點擊<strong>按鍵</strong>輸入，按
+          <strong>Enter</strong> 或 <strong>=</strong> 計算結果。</span
+        >
+      </div>
+
+      <div class="calc-body">
+        <div class="display-card">
+          <div class="display-expr">{{ calcDisplay || "\u00A0" }}</div>
+          <div
+            class="display-result"
+            :class="{ 'is-error': calcError, 'has-val': calcResult !== null }"
+          >
+            <template v-if="calcError">算式有誤</template>
+            <template v-else-if="calcResult !== null"
+              >= {{ calcResult }}</template
+            >
+            <template v-else>&nbsp;</template>
+          </div>
+        </div>
+
+        <input
+          :value="calcInput"
+          type="text"
+          class="calc-input"
+          placeholder="輸入算式，如 25 * 3 / 8"
+          @input="(e) => (calcInput = (e.target as HTMLInputElement).value)"
+          @keydown="calcOnKeydown"
+        />
+
+        <div class="keypad">
+          <button class="key key-func" @click="calcPress('(')">(</button>
+          <button class="key key-func" @click="calcPress(')')">)</button>
+          <button class="key key-action" @click="calcPress('C')">C</button>
+          <button class="key key-action" @click="calcPress('⌫')">⌫</button>
+
+          <button class="key key-num" @click="calcPress('7')">7</button>
+          <button class="key key-num" @click="calcPress('8')">8</button>
+          <button class="key key-num" @click="calcPress('9')">9</button>
+          <button class="key key-op" @click="calcPress('÷')">÷</button>
+
+          <button class="key key-num" @click="calcPress('4')">4</button>
+          <button class="key key-num" @click="calcPress('5')">5</button>
+          <button class="key key-num" @click="calcPress('6')">6</button>
+          <button class="key key-op" @click="calcPress('×')">×</button>
+
+          <button class="key key-num" @click="calcPress('1')">1</button>
+          <button class="key key-num" @click="calcPress('2')">2</button>
+          <button class="key key-num" @click="calcPress('3')">3</button>
+          <button class="key key-op" @click="calcPress('−')">−</button>
+
+          <button class="key key-num" @click="calcPress('.')">.</button>
+          <button class="key key-num" @click="calcPress('0')">0</button>
+          <button class="key key-eq" @click="calcEval">=</button>
+          <button class="key key-op" @click="calcPress('+')">+</button>
+        </div>
       </div>
     </div>
   </div>
@@ -3010,6 +3156,144 @@ function setFreq(drugId: string, key: string) {
   .compare-header,
   .compare-row {
     font-size: 0.72rem;
+  }
+}
+
+/* ── Simple Calculator ──────────────────────────────────────── */
+.calc-body {
+  max-width: 420px;
+  margin: 0 auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+  overflow: hidden;
+}
+.display-card {
+  padding: 1.2rem 1.25rem 0.9rem;
+  background: var(--vp-c-bg-mute);
+  border-bottom: 1px solid var(--vp-c-divider);
+  min-height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.display-expr {
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  word-break: break-all;
+  line-height: 1.4;
+  min-height: 1.4em;
+  overflow-y: auto;
+  max-height: 5.6em;
+}
+.display-result {
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--vp-c-text-1);
+  line-height: 1.2;
+  margin-top: 0.4rem;
+  text-align: right;
+  transition: color 0.2s;
+}
+.display-result.has-val {
+  color: #22c55e;
+}
+.display-result.is-error {
+  color: #ef4444;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+.calc-input {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-bottom: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  font-size: 0.85rem;
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  outline: none;
+  box-sizing: border-box;
+}
+.calc-input::placeholder {
+  color: var(--vp-c-text-3);
+  font-weight: 400;
+}
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  padding: 1px;
+  background: var(--vp-c-divider);
+}
+.key {
+  padding: 0.85rem 0;
+  border: none;
+  background: var(--vp-c-bg-soft);
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: "SF Mono", "Fira Code", monospace;
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  transition: background 0.1s;
+  user-select: none;
+}
+.key:hover {
+  background: var(--vp-c-bg-mute);
+}
+.key:active {
+  background: color-mix(in srgb, var(--vp-c-brand-1) 15%, var(--vp-c-bg-soft));
+}
+.key-num {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.key-op {
+  color: var(--vp-c-brand-1);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.key-func {
+  color: var(--vp-c-text-2);
+  font-size: 0.95rem;
+}
+.key-action {
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.key-eq {
+  background: #1e293b;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+.key-eq:hover {
+  background: #334155;
+}
+
+@media (max-width: 640px) {
+  .display-expr {
+    font-size: 0.95rem;
+  }
+  .display-result {
+    font-size: 1.7rem;
+  }
+  .display-card {
+    padding: 1rem 1rem 0.75rem;
+    min-height: 5rem;
+  }
+  .key {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+  }
+  .key-eq {
+    font-size: 1.1rem;
   }
 }
 </style>

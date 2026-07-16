@@ -155,8 +155,6 @@ import PEFCalculator from "./components/chest/PEFCalculator.vue";
 import CATCalculator from "./components/chest/CATCalculator.vue";
 // PEDIATRIC
 import PediatricDrugDoseCalculator from "./components/pediatric/PediatricDrugDoseCalculator.vue";
-// CLINIC
-import SimpleCalculator from "./components/clinic/SimpleCalculator.vue";
 
 export default {
   ...DefaultTheme,
@@ -401,7 +399,5 @@ export default {
     app.component("CATCalculator", CATCalculator);
     // PEDIATRIC
     app.component("PediatricDrugDoseCalculator", PediatricDrugDoseCalculator);
-    // CLINIC
-    app.component("SimpleCalculator", SimpleCalculator);
   },
 };

@@ -4,7 +4,12 @@ export default createContentLoader("blog/*.md", {
   render: true,
   transform(raw) {
     return raw
-      .filter((p) => p.frontmatter.title && p.url !== "/blog/")
+      .filter(
+        (p) =>
+          p.frontmatter.title &&
+          p.url !== "/blog/" &&
+          p.frontmatter.visibility !== "hide",
+      )
       .map((p) => ({
         url: p.url,
         title: p.frontmatter.title,

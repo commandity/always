@@ -17,6 +17,7 @@ export default createContentLoader('blog/*.md', {
     excerpt: true,
     transform(raw): Post[] {
         return raw
+            .filter(({ frontmatter }) => frontmatter.visibility !== 'hide')
             .map(({ url, frontmatter, excerpt }) => ({
                 title: frontmatter.title ?? '未命名文章',
                 url,

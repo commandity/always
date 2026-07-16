@@ -1451,12 +1451,30 @@ const drugs = [
   },
 ];
 
+// ── Frequency Options ────────────────────────────────────────────
+const FREQ_ALL: { key: string; label: string; hours: number }[] = [
+  { key: "q4h", label: "q4h 每4h", hours: 4 },
+  { key: "q6h", label: "q6h 每6h", hours: 6 },
+  { key: "q8h", label: "q8h 每8h", hours: 8 },
+  { key: "q12h", label: "q12h 每12h", hours: 12 },
+  { key: "daily", label: "daily 每日1次", hours: 24 },
+];
+
+const FREQ_PRN: { key: string; label: string; minutes: number }[] = [
+  { key: "q3min", label: "q3min 每3min", minutes: 3 },
+  { key: "q5min", label: "q5min 每5min", minutes: 5 },
+  { key: "q10min", label: "q10min 每10min", minutes: 10 },
+  { key: "q15min", label: "q15min 每15min", minutes: 15 },
+  { key: "q20min", label: "q20min 每20min", minutes: 20 },
+];
+
 // ── State ─────────────────────────────────────────────────────────
 const searchQuery = ref("");
 const selectedDrugs = ref<(typeof drugs)[number][]>([]);
 const weight = ref<number>(20);
 const showResults = ref(false);
 const copied = ref(false);
+const selectedFreq = ref<Record<string, string>>({});
 
 const filteredDrugs = computed(() => {
   const q = searchQuery.value.toLowerCase();
@@ -1493,6 +1511,56 @@ const firstDose = computed(() => {
   return doseFor(selectedDrugs.value[0]);
 });
 
+function isPrnDrug(d: (typeof drugs)[number]) {
+  const f = d.frequency.toLowerCase();
+  return (
+    f.includes("prn") ||
+    f.includes("single dose") ||
+    (d.interval <= 5 && d.interval > 0)
+  );
+}
+
+function getFreqOptions(d: (typeof drugs)[number]) {
+  return isPrnDrug(d) ? FREQ_PRN : FREQ_ALL;
+}
+
+function getFreqLabel(d: (typeof drugs)[number], key: string) {
+  const opt = getFreqOptions(d).find((o) => o.key === key);
+  return opt ? opt.label : key;
+}
+
+function getBaseDaily(d: (typeof drugs)[number]) {
+  const w = weight.value;
+  const single = Math.round(Math.min(w * d.dosePerKg, d.maxSingle));
+  const maxDailyMg = d.maxDailyUnit.includes("kg")
+    ? w * d.maxDaily
+    : d.maxDaily;
+  return Math.round(Math.min(single * (24 / d.interval), maxDailyMg));
+}
+
+function getAdjustedSingle(d: (typeof drugs)[number], freqKey: string): number {
+  if (!freqKey) return doseFor(d).single;
+  if (isPrnDrug(d)) return doseFor(d).single;
+  const baseDaily = getBaseDaily(d);
+  const opt = FREQ_ALL.find((o) => o.key === freqKey);
+  if (!opt) return doseFor(d).single;
+  const perDay = 24 / opt.hours;
+  return Math.round((baseDaily / perDay) * 10) / 10;
+}
+
+function getAdjustedResult(d: (typeof drugs)[number]) {
+  const base = doseFor(d);
+  const freqKey = selectedFreq.value[d.id] || "";
+  if (!freqKey || isPrnDrug(d)) return base;
+  const opt = FREQ_ALL.find((o) => o.key === freqKey);
+  if (!opt) return base;
+  const single = getAdjustedSingle(d, freqKey);
+  const perDay = 24 / opt.hours;
+  const daily = getBaseDaily(d);
+  const risk = single < 100 ? "low" : single < 400 ? "moderate" : "high";
+  return { single, daily, perDay, risk };
+}
+
 const weightValColor = computed(() => {
   if (weight.value < 10) return "wt-light";
   if (weight.value < 30) return "wt-normal";
@@ -1514,12 +1582,14 @@ function isSelectedOrHover() {}
 function generateMarkdown() {
   const w = weight.value;
   const lines = selectedDrugs.value.map((d) => {
-    const r = doseFor(d);
+    const r = getAdjustedResult(d);
+    const freqKey = selectedFreq.value[d.id] || "";
+    const freqLabel = freqKey ? getFreqLabel(d, freqKey) : d.frequency;
     return (
       `### ${d.name}\n\n` +
       `- **Category**: ${d.category}\n` +
       `- **Route**: ${d.route}\n` +
-      `- **Frequency**: ${d.frequency}\n` +
+      `- **Frequency**: ${freqLabel}\n` +
       `- **Dose**: ${d.dosePerKg} ${d.doseUnit} × ${w} kg = **${r.single} mg**\n` +
       `- **Daily**: ${r.perDay} doses/day → **${r.daily} mg/day**\n` +
       `- **Note**: ${d.notes}\n`
@@ -1543,6 +1613,15 @@ function reset() {
   selectedDrugs.value = [];
   weight.value = 20;
   searchQuery.value = "";
+  selectedFreq.value = {};
+}
+
+function setFreq(drugId: string, key: string) {
+  const cur = selectedFreq.value[drugId];
+  selectedFreq.value = {
+    ...selectedFreq.value,
+    [drugId]: cur === key ? "" : key,
+  };
 }
 </script>
 
@@ -1687,16 +1766,18 @@ function reset() {
         v-for="d in selectedDrugs"
         :key="'result-' + d.id"
         class="sb-result"
-        :class="doseFor(d).risk"
+        :class="getAdjustedResult(d).risk"
       >
         <div class="result-left">
           <div class="result-vol">
-            <span class="result-number result-ml">{{ doseFor(d).single }}</span>
+            <span class="result-number result-ml">{{
+              getAdjustedResult(d).single
+            }}</span>
             <span class="result-unit">mg/次</span>
           </div>
           <div class="result-divider-v" />
           <div class="result-dose">
-            <span class="result-number">{{ doseFor(d).daily }}</span>
+            <span class="result-number">{{ getAdjustedResult(d).daily }}</span>
             <span class="result-unit">mg/day</span>
           </div>
         </div>
@@ -1704,20 +1785,39 @@ function reset() {
           <div class="result-top">
             <span class="result-level">{{ d.name }}</span>
           </div>
-          <span class="result-ahi">
+          <span v-if="!isPrnDrug(d) && selectedFreq[d.id]" class="result-ahi">
+            {{ d.dosePerKg }} {{ d.doseUnit }} × {{ weight }} kg =
+            {{ getBaseDaily(d) }} mg/day → {{ getAdjustedResult(d).single }} mg
+            × {{ getAdjustedResult(d).perDay }}次/日
+          </span>
+          <span v-else class="result-ahi">
             {{ d.dosePerKg }} {{ d.doseUnit }} × {{ weight }} kg =
             {{ doseFor(d).single }} mg
           </span>
-          <span class="result-ahi">
+          <span v-if="!isPrnDrug(d) && !selectedFreq[d.id]" class="result-ahi">
             每 {{ d.interval }}h × {{ doseFor(d).perDay }} 次/日 =
             {{ doseFor(d).daily }} mg/day
           </span>
+          <div class="freq-btns">
+            <button
+              v-for="opt in getFreqOptions(d)"
+              :key="opt.key"
+              class="freq-btn"
+              :class="{ 'freq-active': selectedFreq[d.id] === opt.key }"
+              @click="setFreq(d.id, opt.key)"
+            >
+              {{ opt.label }}
+            </button>
+          </div>
           <div class="result-sub-scores">
             <span class="sub-pill-sm pd-sm">
               {{ d.route }}
             </span>
             <span class="sub-pill-sm cat-sm">{{ d.category }}</span>
             <span class="sub-pill-sm freq-sm">{{ d.frequency }}</span>
+            <span v-if="selectedFreq[d.id]" class="sub-pill-sm freq-active-sm">
+              → {{ getFreqLabel(d, selectedFreq[d.id]) }}
+            </span>
           </div>
         </div>
       </div>
@@ -2851,6 +2951,40 @@ function reset() {
   border-color: #ef4444;
   color: #ef4444;
   background: rgba(239, 68, 68, 0.04);
+}
+
+.freq-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+.freq-btn {
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.freq-btn:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+.freq-btn.freq-active {
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  color: #fff;
+}
+.freq-active-sm {
+  background: color-mix(in srgb, #22c55e 12%, transparent);
+  color: #22c55e;
+  border: 1px solid color-mix(in srgb, #22c55e 30%, transparent);
 }
 
 @media (max-width: 640px) {

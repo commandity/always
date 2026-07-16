@@ -541,7 +541,35 @@ export default defineConfig({
           collapsed: true,
           items: [
             {
-              text: "平衡",
+              text: "上肢 Upper Extremity",
+              collapsed: true,
+              items: [
+                {
+                  text: "肩關節復健運動",
+                  link: "/reference/pt/shoulder/shoulder-rehab",
+                },
+                {
+                  text: "手部復健",
+                  link: "/reference/pt/hand/hand-rehab",
+                },
+              ],
+            },
+            {
+              text: "軀幹與骨盆 Trunk & Pelvis",
+              collapsed: true,
+              items: [
+                {
+                  text: "骨盆底復健",
+                  link: "/reference/pt/pelvic-floor/pelvic-floor-rehab",
+                },
+                {
+                  text: "淋巴水腫復健",
+                  link: "/reference/pt/lymphedema/lymphedema-rehab",
+                },
+              ],
+            },
+            {
+              text: "下肢與平衡 Balance & Lower Extremity",
               collapsed: true,
               items: [
                 {
@@ -551,12 +579,40 @@ export default defineConfig({
               ],
             },
             {
-              text: "肩",
+              text: "系統性復健 System-based",
               collapsed: true,
               items: [
                 {
-                  text: "肩關節復健運動",
-                  link: "/reference/pt/shoulder/shoulder-rehab",
+                  text: "神經復健",
+                  link: "/reference/pt/neuro/neuro-rehab",
+                },
+                {
+                  text: "心肺復健",
+                  link: "/reference/pt/cardiopulmonary/cardiopulmonary-rehab",
+                },
+                {
+                  text: "心臟復健",
+                  link: "/reference/pt/cardiac/cardiac-rehab",
+                },
+                {
+                  text: "截肢復健",
+                  link: "/reference/pt/amputee/amputee-rehab",
+                },
+                {
+                  text: "燒傷復健",
+                  link: "/reference/pt/burn/burn-rehab",
+                },
+                {
+                  text: "腫瘤復健",
+                  link: "/reference/pt/oncology/oncology-rehab",
+                },
+                {
+                  text: "老年復健",
+                  link: "/reference/pt/geriatric/geriatric-rehab",
+                },
+                {
+                  text: "兒童復健",
+                  link: "/reference/pt/pediatric/pediatric-rehab",
                 },
               ],
             },

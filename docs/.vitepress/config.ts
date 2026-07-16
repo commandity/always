@@ -7,6 +7,7 @@ export default defineConfig({
   base,
   appearance: true,
   ignoreDeadLinks: true,
+  vite: { server: { hmr: { overlay: false } } },
   // ── Site metadata ──────────────────────────────────────────────
   lang: "zh-TW",
   title: "Always Wonder",

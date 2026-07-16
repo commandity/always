@@ -355,13 +355,13 @@ function onKeydown(e: KeyboardEvent) {
   font-size: 0.95rem;
 }
 .key-eq {
-  background: var(--vp-c-brand-1);
+  background: #1e293b;
   color: #fff;
   font-size: 1.25rem;
   font-weight: 800;
 }
 .key-eq:hover {
-  opacity: 0.85;
+  background: #334155;
 }
 
 @media (max-width: 640px) {

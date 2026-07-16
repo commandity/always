@@ -94,6 +94,16 @@ export default defineConfig({
     sidebar: {
       "/guide/": [
         {
+          text: "工具",
+          collapsed: true,
+          items: [
+            {
+              text: "簡易計算機",
+              link: "/guide/calculator",
+            },
+          ],
+        },
+        {
           text: "耳鼻喉",
           collapsed: true,
           items: [

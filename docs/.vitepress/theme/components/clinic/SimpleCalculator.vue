@@ -5,29 +5,6 @@ const input = ref("");
 const result = ref<string | null>(null);
 const error = ref(false);
 
-const keys = [
-  { label: "C", type: "action" },
-  { label: "(", type: "func" },
-  { label: ")", type: "func" },
-  { label: "⌫", type: "action" },
-  { label: "7", type: "num" },
-  { label: "8", type: "num" },
-  { label: "9", type: "num" },
-  { label: "÷", type: "op" },
-  { label: "4", type: "num" },
-  { label: "5", type: "num" },
-  { label: "6", type: "num" },
-  { label: "×", type: "op" },
-  { label: "1", type: "num" },
-  { label: "2", type: "num" },
-  { label: "3", type: "num" },
-  { label: "−", type: "op" },
-  { label: ".", type: "num" },
-  { label: "0", type: "num" },
-  { label: "±", type: "func" },
-  { label: "+", type: "op" },
-];
-
 const displayFormatted = computed(() => {
   return input.value.replace(/\*/g, "×").replace(/\//g, "÷").replace(/-/g, "−");
 });
@@ -144,16 +121,30 @@ function onKeydown(e: KeyboardEvent) {
         />
 
         <div class="keypad">
-          <button
-            v-for="k in keys"
-            :key="k.label"
-            class="key"
-            :class="'key-' + k.type"
-            @click="press(k.label)"
-          >
-            {{ k.label }}
-          </button>
+          <button class="key key-func" @click="press('(')">(</button>
+          <button class="key key-func" @click="press(')')">)</button>
+          <button class="key key-action" @click="press('C')">C</button>
+          <button class="key key-action" @click="press('⌫')">⌫</button>
+
+          <button class="key key-num" @click="press('7')">7</button>
+          <button class="key key-num" @click="press('8')">8</button>
+          <button class="key key-num" @click="press('9')">9</button>
+          <button class="key key-op" @click="press('÷')">÷</button>
+
+          <button class="key key-num" @click="press('4')">4</button>
+          <button class="key key-num" @click="press('5')">5</button>
+          <button class="key key-num" @click="press('6')">6</button>
+          <button class="key key-op" @click="press('×')">×</button>
+
+          <button class="key key-num" @click="press('1')">1</button>
+          <button class="key key-num" @click="press('2')">2</button>
+          <button class="key key-num" @click="press('3')">3</button>
+          <button class="key key-op" @click="press('−')">−</button>
+
+          <button class="key key-num" @click="press('.')">.</button>
+          <button class="key key-num" @click="press('0')">0</button>
           <button class="key key-eq" @click="calc">=</button>
+          <button class="key key-op" @click="press('+')">+</button>
         </div>
       </div>
     </div>
@@ -321,7 +312,7 @@ function onKeydown(e: KeyboardEvent) {
 /* ── Keypad ──────────────────────────────────── */
 .keypad {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   padding: 1px;
   background: var(--vp-c-divider);

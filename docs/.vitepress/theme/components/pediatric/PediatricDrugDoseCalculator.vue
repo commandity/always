@@ -1453,19 +1453,11 @@ const drugs = [
 
 // ── Frequency Options ────────────────────────────────────────────
 const FREQ_ALL: { key: string; label: string; hours: number }[] = [
-  { key: "q4h", label: "q4h 每4h", hours: 4 },
-  { key: "q6h", label: "q6h 每6h", hours: 6 },
-  { key: "q8h", label: "q8h 每8h", hours: 8 },
-  { key: "q12h", label: "q12h 每12h", hours: 12 },
-  { key: "daily", label: "daily 每日1次", hours: 24 },
-];
-
-const FREQ_PRN: { key: string; label: string; minutes: number }[] = [
-  { key: "q3min", label: "q3min 每3min", minutes: 3 },
-  { key: "q5min", label: "q5min 每5min", minutes: 5 },
-  { key: "q10min", label: "q10min 每10min", minutes: 10 },
-  { key: "q15min", label: "q15min 每15min", minutes: 15 },
-  { key: "q20min", label: "q20min 每20min", minutes: 20 },
+  { key: "q4h", label: "q4h", hours: 4 },
+  { key: "q6h", label: "q6h", hours: 6 },
+  { key: "q8h", label: "q8h", hours: 8 },
+  { key: "q12h", label: "q12h", hours: 12 },
+  { key: "q24h", label: "q24h", hours: 24 },
 ];
 
 // ── State ─────────────────────────────────────────────────────────
@@ -1511,21 +1503,25 @@ const firstDose = computed(() => {
   return doseFor(selectedDrugs.value[0]);
 });
 
-function isPrnDrug(d: (typeof drugs)[number]) {
+function isFreqCandidate(d: (typeof drugs)[number]) {
   const f = d.frequency.toLowerCase();
   return (
-    f.includes("prn") ||
-    f.includes("single dose") ||
-    (d.interval <= 5 && d.interval > 0)
+    (f.includes("q4") ||
+      f.includes("q5") ||
+      f.includes("q6") ||
+      f.includes("q8") ||
+      f.includes("q12") ||
+      f.includes("q24") ||
+      f.includes("daily") ||
+      (d.interval >= 4 && d.interval <= 24)) &&
+    !f.includes("prn") &&
+    !f.includes("single dose") &&
+    d.interval > 5
   );
 }
 
-function getFreqOptions(d: (typeof drugs)[number]) {
-  return isPrnDrug(d) ? FREQ_PRN : FREQ_ALL;
-}
-
 function getFreqLabel(d: (typeof drugs)[number], key: string) {
-  const opt = getFreqOptions(d).find((o) => o.key === key);
+  const opt = FREQ_ALL.find((o) => o.key === key);
   return opt ? opt.label : key;
 }
 
@@ -1539,8 +1535,7 @@ function getBaseDaily(d: (typeof drugs)[number]) {
 }
 
 function getAdjustedSingle(d: (typeof drugs)[number], freqKey: string): number {
-  if (!freqKey) return doseFor(d).single;
-  if (isPrnDrug(d)) return doseFor(d).single;
+  if (!freqKey || !isFreqCandidate(d)) return doseFor(d).single;
   const baseDaily = getBaseDaily(d);
   const opt = FREQ_ALL.find((o) => o.key === freqKey);
   if (!opt) return doseFor(d).single;
@@ -1551,7 +1546,7 @@ function getAdjustedSingle(d: (typeof drugs)[number], freqKey: string): number {
 function getAdjustedResult(d: (typeof drugs)[number]) {
   const base = doseFor(d);
   const freqKey = selectedFreq.value[d.id] || "";
-  if (!freqKey || isPrnDrug(d)) return base;
+  if (!freqKey || !isFreqCandidate(d)) return base;
   const opt = FREQ_ALL.find((o) => o.key === freqKey);
   if (!opt) return base;
   const single = getAdjustedSingle(d, freqKey);
@@ -1785,7 +1780,10 @@ function setFreq(drugId: string, key: string) {
           <div class="result-top">
             <span class="result-level">{{ d.name }}</span>
           </div>
-          <span v-if="!isPrnDrug(d) && selectedFreq[d.id]" class="result-ahi">
+          <span
+            v-if="isFreqCandidate(d) && selectedFreq[d.id]"
+            class="result-ahi"
+          >
             {{ d.dosePerKg }} {{ d.doseUnit }} × {{ weight }} kg =
             {{ getBaseDaily(d) }} mg/day → {{ getAdjustedResult(d).single }} mg
             × {{ getAdjustedResult(d).perDay }}次/日
@@ -1794,13 +1792,16 @@ function setFreq(drugId: string, key: string) {
             {{ d.dosePerKg }} {{ d.doseUnit }} × {{ weight }} kg =
             {{ doseFor(d).single }} mg
           </span>
-          <span v-if="!isPrnDrug(d) && !selectedFreq[d.id]" class="result-ahi">
+          <span
+            v-if="isFreqCandidate(d) && !selectedFreq[d.id]"
+            class="result-ahi"
+          >
             每 {{ d.interval }}h × {{ doseFor(d).perDay }} 次/日 =
             {{ doseFor(d).daily }} mg/day
           </span>
-          <div class="freq-btns">
+          <div v-if="isFreqCandidate(d)" class="freq-btns">
             <button
-              v-for="opt in getFreqOptions(d)"
+              v-for="opt in FREQ_ALL"
               :key="opt.key"
               class="freq-btn"
               :class="{ 'freq-active': selectedFreq[d.id] === opt.key }"

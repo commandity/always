@@ -162,7 +162,6 @@ function onKeydown(e: KeyboardEvent) {
 
 <style scoped>
 .calc {
-  max-width: 480px;
   margin: 0 auto;
 }
 
@@ -252,6 +251,8 @@ function onKeydown(e: KeyboardEvent) {
 
 /* ── Calculator body ─────────────────────────── */
 .calc-body {
+  max-width: 420px;
+  margin: 0 auto;
   border: 1px solid var(--vp-c-divider);
   border-radius: 14px;
   background: var(--vp-c-bg-soft);

@@ -802,7 +802,7 @@ export default defineConfig({
 
     // ── Table of contents (right-side outline) ──────────────────
     outline: {
-      level: [2, 3],
+      level: [2, 2],
       label: "大綱",
     },
 

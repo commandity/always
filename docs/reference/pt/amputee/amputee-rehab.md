@@ -3,38 +3,14 @@ layout: doc
 title: "截肢復健 Amputee Rehabilitation"
 ---
 
-# 截肢復健 **Amputee Rehabilitation**
+# 截肢復健 
+**Amputee Rehabilitation**
 
+---
 ::: warning ⚠️ 臨床警語 Clinical Disclaimer
 本文件僅供教育與參考用途，不能取代專業醫療人員的個案評估與治療決策。治療計畫應根據個案功能狀態、合併症及團隊討論制定。
 This document is for educational and reference purposes only and does not replace professional clinical assessment and treatment planning by qualified healthcare providers.
 :::
-
----
-
-## 目錄 **Table of Contents**
-
-1. [概論 Overview](#概論-overview)
-2. [截肢層級分類 Amputation Levels](#截肢層級分類-amputation-levels)
-3. [術前照護 Pre-prosthetic Care](#術前照護-pre-prosthetic-care)
-4. [功能評估 Functional Assessment](#功能評估-functional-assessment)
-5. [第一階段：術後照護 Phase 1: Post-surgical Management](#第一階段術後照護-phase-1-post-surgical-management)
-6. [第二階段：義肢準備 Phase 2: Pre-prosthetic Training](#第二階段義肢準備-phase-2-pre-prosthetic-training)
-7. [第三階段：義肢訓練 Phase 3: Prosthetic Training](#第三階段義肢訓練-phase-3-prosthetic-training)
-8. [第四階段：社區回歸 Phase 4: Community Reintegration](#第四階段社區回歸-phase-4-community-reintegration)
-9. [幻肢痛管理 Phantom Limb Pain Management](#幻肢痛管理-phantom-limb-pain-management)
-10. [特定訓練運動 Specific Exercise Programs](#特定訓練運動-specific-exercise-programs)
-11. [義肢考量 Prosthetic Considerations](#義肢考量-prosthetic-considerations)
-12. [注意事項 Precautions](#注意事項-precautions)
-13. [實證基礎 Evidence Base](#實證基礎-evidence-base)
-
----
-
-## 概論 **Overview**
-
-截肢（amputation）是指因外傷、疾病或先天異常而進行的手術性肢體移除。全球每年約有數百萬人接受截肢手術，而復健介入在術後功能恢復中扮演核心角色。物理治療師在截肢者的恢復旅程中，需依循漸進式階段訓練模式，從術後傷口照護至社區功能回歸，全面協助個案重建生活品質與獨立性。
-
-Amputation refers to the surgical removal of a limb segment due to trauma, disease, or congenital abnormality. Millions of individuals undergo amputation surgery annually worldwide, and rehabilitation intervention plays a central role in post-surgical functional recovery. Physical therapists guide amputees through a progressive, phase-based training model—from post-surgical wound care to community reintegration—supporting independence and quality of life restoration.
 
 ### 常見截肢原因 **Common Causes**
 
@@ -48,11 +24,9 @@ Amputation refers to the surgical removal of a limb segment due to trauma, disea
 
 ---
 
-## 截肢層級分類 **Amputation Levels**
+## 截肢層級分類
 
 截肢層級直接影響後續義肢選配、步態模式與功能預後。治療師須熟悉各層級之生物力學特性。
-
-The amputation level directly influences prosthetic selection, gait patterns, and functional outcomes. Therapists must understand the biomechanical characteristics of each level.
 
 ### 下肢截肢 **Lower Limb Amputation**
 

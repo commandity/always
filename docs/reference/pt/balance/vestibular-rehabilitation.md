@@ -3,7 +3,9 @@ layout: doc
 title: 前庭復健 Vestibular Rehabilitation
 ---
 
-# 前庭復健 **Vestibular Rehabilitation**
+# 前庭復健 
+
+**Vestibular Rehabilitation**
 
 ## 概述
 

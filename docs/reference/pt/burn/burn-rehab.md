@@ -3,15 +3,15 @@ layout: doc
 title: "燒傷復健 Burn Rehabilitation"
 ---
 
-# 燒傷復健 **Burn Rehabilitation**
+# 燒傷復健 
 
-## 概述 Overview
+**Burn Rehabilitation**
+
+## 概述
 
 燒傷（burn）是由熱、電、化學物質或輻射線造成的組織損傷。燒傷復健的核心目標是**預防攣縮、維持功能、促進傷口癒合**，並協助患者重返日常生活與社會參與。
 
-Burn rehabilitation aims to **prevent contractures, maintain function, promote wound healing**, and facilitate return to daily living and social participation.
-
-### 燒傷病理生理 Pathophysiology
+### 燒傷病理生理
 
 - **局部反應 local response**：凝固性壞死（coagulation necrosis）形成焦痂（eschar）
 - **全身反應 systemic response**：大量細胞激素釋放（cytokine release），可導致代謝亢進、免疫抑制

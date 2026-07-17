@@ -18,9 +18,10 @@ title: 甲狀腺炎 Thyroiditis
 | **Chronic (Hashimoto's)**                  | 慢性（數月∼數年）   | 自體免疫               |
 | **Other (Riedel's, Silent, Drug-induced)** | 視類型而定          | 纖維化／自體免疫／藥物 |
 
-## 甲狀腺功能異常鑑別流程 TSH → RAIU
+## 甲狀腺功能異常鑑別流程
 
-**Thyroid Dysfunction Workup — by TSH & Radioactive Iodine Uptake (RAIU)**
+**TSH → RAIU**
+
 
 <div style="margin:1.75rem 0;">
   <div style="display:flex;justify-content:center;">
@@ -79,27 +80,28 @@ title: 甲狀腺炎 Thyroiditis
 **fT3/fT4 ratio**（RAIU 無法取得時的輔助鑑別）：Graves' disease → **> 0.4**（T3 優先分泌）；Destructive thyroiditis → **< 0.3**（T4 為主釋放）。
 :::
 
-## 1. 急性化膿性甲狀腺炎 Acute Suppurative Thyroiditis
+## 1. 急性化膿性甲狀腺炎
+**Acute Suppurative Thyroiditis**
 
-### 簡介 Introduction
+### 簡介
 
 少見但危急的甲狀腺細菌感染，通常由鄰近結構（咽喉、頸部）直接擴散或經血行感染。**最常見病原**：_Staphylococcus aureus_, _Streptococcus pyogenes_, _Streptococcus pneumoniae_。好發於兒童（常合併**梨狀窩瘻管**— piriform sinus fistula）及免疫不全成人。
 
-### 臨床表現 Clinical Presentation
+### 臨床表現
 
 - 急性發作：頸部前方紅、腫、熱、痛
 - 吞嚥痛（odynophagia）、頸部壓痛
 - 發燒、寒顫、全身不適
 - 甲狀腺功能通常**正常**（少數一過性輕微甲狀腺毒症）
 
-### 身體檢查 Examination
+### 身體檢查
 
 - 甲狀腺單側腫大、劇烈壓痛、皮膚紅熱
 - 侷限性波動感（膿瘍形成時）
 - 頸部活動受限、頸部淋巴結腫大
 - 咽喉鏡可能可見梨狀窩水腫
 
-### 實驗室檢查 Laboratory
+### 實驗室檢查
 
 | 項目                   | 結果           |
 | ---------------------- | -------------- |
@@ -109,7 +111,7 @@ title: 甲狀腺炎 Thyroiditis
 | **WBC**                | ↑ 嗜中性球為主 |
 | **Anti-TPO / Anti-Tg** | 正常           |
 
-### 影像學特徵 Imaging
+### 影像學特徵
 
 - **Thyroid ultrasound**（第一線）：
   - 單葉腫大、不均質低回音區域
@@ -118,7 +120,7 @@ title: 甲狀腺炎 Thyroiditis
   - 頸部軟組織水腫
 - **CT with contrast**：膿瘍範圍評估、確認梨狀窩瘻管（兒童）
 
-### 細針穿刺細胞學 FNAC
+### 細針穿刺細胞學
 
 - **Indication**：診斷確立＋病原鑑定（非鑑別惡性）
 - **Cellularity**：高（膿瘍液）
@@ -130,20 +132,21 @@ title: 甲狀腺炎 Thyroiditis
 - **Gram stain + culture**：確定病原及藥物敏感性
 - **Key role**：區分 acute suppurative vs 快速生長的 anaplastic carcinoma（後者細胞學可見明顯惡性細胞）
 
-### 治療 Treatment
+### 治療
 
 1. **Empiric antibiotics**：覆蓋 MSSA/MRSA + 鏈球菌（如 clindamycin + cefazolin 或 vancomycin）
 2. **Adjust by culture**：目標治療 2–4 週
 3. **Surgical drainage**：若有膿瘍形成（US 或 CT 確認）
 4. **Supportive care**：退燒、止痛、保持呼吸道通暢
 
-## 2. Subacute Granulomatous Thyroiditis（De Quervain's Thyroiditis）
+## 2. Subacute Granulomatous Thyroiditis
+**De Quervain's Thyroiditis**
 
-### 簡介 Introduction
+### 簡介
 
 也稱 De Quervain's thyroiditis，為最常見的**疼痛性甲狀腺炎**。被認為是由病毒感染（Coxsackie, mumps, influenza, adenovirus, EBV）後的發炎反應引起，而非直接感染。好發於**30–50 歲女性**，夏季／秋季較多，常在前驅上呼吸道感染後 2–4 週發生。
 
-### 臨床表現 Clinical Presentation
+### 臨床表現
 
 - **頸部疼痛**：單側或雙側，可放射至下頷、耳部、牙齒
 - 甲狀腺腫大、質地堅硬、觸痛明顯
@@ -151,7 +154,7 @@ title: 甲狀腺炎 Thyroiditis
 - 之後可能經歷**甲狀腺機能正常期** → **甲狀腺低下期**（數週∼數月）→ 多數恢復正常
 - 疼痛於吞嚥、轉頭、按壓時加劇
 
-### 檢查 Examination
+### 檢查
 
 - 甲狀腺瀰漫性或結節狀腫大，質地堅硬（hard）
 - 明顯壓痛（marked tenderness）
@@ -159,7 +162,7 @@ title: 甲狀腺炎 Thyroiditis
 - 無頸部淋巴結腫大（vs acute suppurative）
 - 觸診時疼痛往往非常顯著
 
-### 實驗室檢查 Laboratory
+### 實驗室檢查
 
 | Phase                   | TSH  | Free T4 | T3   | ESR           | Anti-TPO |
 | ----------------------- | ---- | ------- | ---- | ------------- | -------- |
@@ -181,7 +184,7 @@ title: 甲狀腺炎 Thyroiditis
 
 > This 3-phase pattern is **unique to destructive thyroiditis** (De Quervain's, silent, postpartum) and contrasts with Graves' disease where hyperthyroidism persists without spontaneous resolution.
 
-### 影像學特徵 Imaging
+### 影像學特徵
 
 - **Thyroid ultrasound**：
   - **關鍵特徵**：**ill-defined hypoechoic areas**（邊界不清的低回音區）
@@ -192,7 +195,7 @@ title: 甲狀腺炎 Thyroiditis
 - **RAIU scan（碘-123 或 Technetium-99m）**：攝取率極低（<1%），為**診斷金標準**
   - 注意：甲狀腺毒症期 RAIU 極低 vs Graves' disease RAIU 升高
 
-### 細針穿刺細胞學 FNAC
+### 細針穿刺細胞學
 
 - **Indication**：不典型表現（無痛、單側結節）或治療無反應時排除 malignancy
 - **Cellularity**：中度
@@ -205,13 +208,14 @@ title: 甲狀腺炎 Thyroiditis
 - **Background**：發炎性、顆粒狀
 - **Pitfall**：巨細胞可能被誤認為 Hürthle cells（oncocytes）→ 注意臨床關聯
 
-### 診斷標準 Diagnostic Criteria — 可記憶為「De Quervain's Triad」
+### 診斷標準
+**「De Quervain's Triad」**
 
 1. Painful nodular thyroid + marked tenderness
 2. Elevated ESR / CRP
 3. Low RAIU
 
-### 治療 Treatment
+### 治療
 
 1. **NSAIDs**（第一線）：ibuprofen 600–800 mg q6–8h 或 naproxen 500 mg BID，通常 2–4 週
 2. **Corticosteroids**（若 NSAID 無效或疼痛嚴重）：
@@ -223,19 +227,20 @@ title: 甲狀腺炎 Thyroiditis
 5. **Thyroxine**：僅在甲狀腺低下期持續 >3–6 個月時補充
 6. **定期追蹤 TSH**：每 4–6 週，直到恢復正常
 
-### 預後 Prognosis
+### 預後
 
 - 90% 患者在 2–6 個月內完全恢復正常甲狀腺功能
 - 約 5–10% 發展為永久性甲狀腺低下
 - 少數復發（約 2–4%）
 
-## 3. 橋本氏甲狀腺炎 Hashimoto's Thyroiditis — Chronic Lymphocytic Thyroiditis
+## 3. 橋本氏甲狀腺炎
+**Hashimoto's Thyroiditis — Chronic Lymphocytic Thyroiditis**
 
-### 簡介 Introduction
+### 簡介
 
 最常見的甲狀腺炎，也是**甲狀腺低下最常見的原因**（在碘充足地區）。自體免疫疾病：**Anti-TPO（甲狀腺過氧化酶抗體）** 與 **Anti-Tg（甲狀腺球蛋白抗體）** 攻擊甲狀腺組織。好發於 **30–50 歲女性**（女：男 ≈ 7–10:1），有家族聚集性，常合併其他自體免疫疾病（SLE、RA、Sjögren's、Addison's、T1DM、Celiac）。
 
-### 臨床表現 Clinical Presentation
+### 臨床表現
 
 - 最常見表現：**無症狀甲狀腺腫大**（routine check 或 US 意外發現）
 - **緩慢進行性的甲狀腺功能減退**：疲倦、不耐冷、便秘、體重增加、皮膚乾燥、落髮、記憶力減退、月經失調
@@ -243,7 +248,7 @@ title: 甲狀腺炎 Thyroiditis
 - 甲狀腺質地柔韌（firm / rubbery），表面**結節狀**（pseudonodular）
 - 部分患者初期有短暫甲狀腺毒症 — **Hashitoxicosis**（抗體破壞釋放 T4/T3）
 
-### 檢查 Examination
+### 檢查
 
 - 甲狀腺**瀰漫性腫大**，對稱或非對稱
 - 質地：**firm / rubbery**（橡皮樣堅實）
@@ -251,7 +256,7 @@ title: 甲狀腺炎 Thyroiditis
 - 無壓痛（vs subacute / acute）
 - 晚期可能萎縮（atrophic form → 甲狀腺縮小）
 
-### 實驗室檢查 Laboratory
+### 實驗室檢查
 
 | Stage                | TSH  | Free T4 | Anti-TPO | Anti-Tg    | Timeline                                        |
 | -------------------- | ---- | ------- | -------- | ---------- | ----------------------------------------------- |
@@ -264,7 +269,7 @@ title: 甲狀腺炎 Thyroiditis
 - **Anti-Tg**：陽性率 60–80%
 - **TSH**是疾病進展的最佳監測指標
 
-### 影像學特徵 Imaging
+### 影像學特徵
 
 - **Thyroid ultrasound**：
   - **實質回音度顯著降低**（markedly hypoechoic）— 典型特徵
@@ -276,7 +281,7 @@ title: 甲狀腺炎 Thyroiditis
   - 晚期：體積萎縮，實質更不均質
   - **注意**：Hashimoto's 患者發生**甲狀腺淋巴瘤**及**乳突癌 (PTC)** 的風險略增
 
-### 細針穿刺細胞學 FNAC
+### 細針穿刺細胞學
 
 - **Indication**：評估可疑結節（排除 PTC / lymphoma）、不典型表現
 - **Cellularity**：中∼高
@@ -291,7 +296,7 @@ title: 甲狀腺炎 Thyroiditis
   - **CK19 / HBME-1 / Galectin-3**（若懷疑 PTC 合併）
 - **Pitfall**：Hürthle cell 豐富時需鑑別 Hürthle cell neoplasm（Bethesda III/IV）
 
-### 超音波分級 Ultrasound Grading
+### 超音波分級
 
 | Grade   | 發現                                                  |
 | ------- | ----------------------------------------------------- |
@@ -300,7 +305,7 @@ title: 甲狀腺炎 Thyroiditis
 | **III** | Marked hypoechogenicity, micronodules, fibrotic bands |
 | **IV**  | Atrophic, end-stage                                   |
 
-### 治療 Treatment
+### 治療
 
 1. **Levothyroxine (LT4) 補充**：適用於 overt hypothyroidism（TSH ↑ + FT4 ↓）
 2. **Subclinical hypothyroidism**（TSH ↑, FT4 正常）：
@@ -310,32 +315,33 @@ title: 甲狀腺炎 Thyroiditis
 4. **目標**：TSH 0.5–2.5 mIU/L（一般成人）; 0.3–2.0（懷孕）
 5. **監測**：開始後 6–8 週追蹤 TSH，調整後 6 週再追蹤
 
-### 相關疾病 Associated Conditions
+### 相關疾病
 
 - **Thyroid lymphoma**：當快速增大、壓迫症狀 → US + FNA + flow cytometry
 - **Papillary thyroid carcinoma**：Hashimoto's 患者風險稍增，US 追蹤
 - **Other autoimmune diseases**：SLE, RA, T1DM, pernicious anemia, Addison's
 
-## 4. 纖維性甲狀腺炎 Riedel's Thyroiditis
+## 4. 纖維性甲狀腺炎
+**Riedel's Thyroiditis**
 
-### 簡介 Introduction
+### 簡介
 
 極罕見的慢性甲狀腺炎（佔 <0.1%），特徵為甲狀腺實質被**緻密纖維組織取代**，浸潤至周圍結構。可能是系統性 IgG4-related disease 的一部分。**發病年齡 30–60 歲**，女多於男。
 
-### 臨床特徵 Clinical
+### 臨床特徵
 
 - 甲狀腺**石頭樣堅硬（stony hard）**、無痛、固定
 - 明顯壓迫症狀：吞嚥困難、聲音沙啞、呼吸困難、喘鳴
 - 甲狀腺功能：多為正常（早期）→ 最終低下
 - 甲狀腺與周圍組織（氣管、頸部肌肉）沾黏固定
 
-### 實驗室檢查 Laboratory
+### 實驗室檢查
 
 - Anti-TPO / Anti-Tg：可能陽性（低效價）
 - ESR：正常∼輕微升高
 - IgG4：可能升高
 
-### 影像學特徵 Imaging
+### 影像學特徵
 
 - **Thyroid ultrasound**：
   - **Hypoechoic mass**（低回音團塊）
@@ -344,7 +350,7 @@ title: 甲狀腺炎 Thyroiditis
   - 甲狀腺正常結構消失
 - **CT**：甲狀腺低密度、軟組織浸潤、氣管受壓
 
-### 細針穿刺細胞學 FNAC
+### 細針穿刺細胞學
 
 - **Cellularity**：**通常 insufficient**（纖維化 → 細胞量極少）— FNA 診斷價值有限
 - **Cytology**：
@@ -356,35 +362,36 @@ title: 甲狀腺炎 Thyroiditis
   - 病理：緻密纖維組織取代甲狀腺實質，storiform pattern，IgG4+ plasma cells 浸潤
 - **Pitfall**：需與 anaplastic carcinoma、lymphoma（sclerosing variant）、fibrosarcoma 區分
 
-### 治療 Treatment
+### 治療
 
 1. **Corticosteroids**：prednisolone 40–60 mg/day → 逐漸減量（部分患者反應好）
 2. **Tamoxifen**：與 steroids 合併或單用
 3. **Surgery**：嚴重壓迫症狀（氣管狹窄）→ 峽部切除（isthmusectomy）或甲狀腺切除
 4. **LT4**：若發展為甲狀腺低下
 
-## 5. 無痛甲狀腺炎 ＆ 妊娠後甲狀腺炎 Silent (Painless) Thyroiditis & Postpartum Thyroiditis
+## 5. 無痛甲狀腺炎 ＆ 妊娠後甲狀腺炎 
+**Silent (Painless) Thyroiditis & Postpartum Thyroiditis**
 
-### 簡介 Introduction
+### 簡介
 
 **Silent thyroiditis**（無痛性甲狀腺炎）：與 Hashimoto's 同屬自體免疫，但臨床表現為**無痛**甲狀腺毒症，與 De Quervain's 類似有 3 期病程（toxic → euthyroid → hypothyroid）。
 
 **Postpartum thyroiditis**：產後 2–6 個月發生，本質上是 silent thyroiditis 的產後形式。
 
-### 臨床特徵 Clinical
+### 臨床特徵
 
 - 無痛性甲狀腺腫大（mild to moderate）
 - **甲狀腺毒症期**（4–8 週）：心悸、怕熱、體重減輕
 - 之後可能過渡到甲狀腺低下期（3–6 個月），多數恢復正常
 - Postpartum：母體產後免疫回彈（rebound immune activation）
 
-### 實驗室檢查 Laboratory
+### 實驗室檢查
 
 - **Anti-TPO**：**通常陽性**（**>90%** postpartum）
 - **ESR**：正常∼輕微升高（vs De Quervain's 顯著升高）
 - **RAIU**：顯著降低（與 De Quervain's 相似）
 
-### 影像學特徵 Imaging
+### 影像學特徵
 
 - **Thyroid ultrasound**：
   - 甲狀腺體積：正常至輕度增大
@@ -393,7 +400,7 @@ title: 甲狀腺炎 Thyroiditis
   - 無結節（vs Hashimoto's 的 pseudonodules）
   - 彩色都卜勒：血流正常至減少
 
-### 細針穿刺細胞學 FNAC
+### 細針穿刺細胞學
 
 - **Indication**：通常不須 FNA（臨床＋RAIU 即可診斷）；用於表現不典型時排除其他病因
 - **Cellularity**：低∼中度
@@ -406,13 +413,14 @@ title: 甲狀腺炎 Thyroiditis
   - 無惡性細胞
 - **Key feature**：細胞學與 Hashimoto's 類似但**程度較輕**，且臨床上有典型 thyrotoxicosis → hypothyroidism 雙相病程
 
-### 治療 Treatment
+### 治療
 
 - **甲狀腺毒症期**：β-blocker（propranolol）— 勿使用抗甲狀腺藥物
 - **甲狀腺低下期**：LT4（若症狀持續 >3–6 個月）
 - **產後**：可哺乳（LT4 安全），需監測嬰兒甲狀腺功能
 
-## 6. 藥物性甲狀腺炎 Drug-Induced Thyroiditis
+## 6. 藥物性甲狀腺炎 
+**Drug-Induced Thyroiditis**
 
 | 藥物                                                             | 機轉                                | 表現                         |
 | ---------------------------------------------------------------- | ----------------------------------- | ---------------------------- |
@@ -448,7 +456,7 @@ Amiodarone 為 class III 抗心律不整藥，每一分子含 37% 碘（200 mg =
 3. **Mixed form** 約 20% 患者兩型共存 → 需合併治療（antithyroid drugs + corticosteroids）
 4. **勿停用 amiodarone**：除非心律問題可控且替代藥物可行（半衰期長，停藥後效應持續數月）
 
-### 細針穿刺細胞學 FNAC
+### 細針穿刺細胞學
 
 - **Indication**：甲狀腺快速增大、有壓迫症狀、或 US 發現局部結節時排除惡性
 - **Cellularity**：視型態而異
@@ -464,7 +472,7 @@ Amiodarone 為 class III 抗心律不整藥，每一分子含 37% 碘（200 mg =
   - 類似 Hashimoto's：濾泡萎縮、纖維化、淋巴球浸潤
 - **Pitfall**：無特定細胞學標誌可區分 Type 1 vs Type 2 — 需仰賴臨床、US Doppler、IL-6
 
-## 鑑別診斷 Differential Diagnosis
+## 鑑別診斷
 
 | Feature             | **Acute Suppurative** | **Subacute (De Quervain's)** | **Hashimoto's**            | **Silent / Postpartum** | **Riedel's** |
 | ------------------- | --------------------- | ---------------------------- | -------------------------- | ----------------------- | ------------ |
@@ -480,7 +488,7 @@ Amiodarone 為 class III 抗心律不整藥，每一分子含 37% 碘（200 mg =
 | **US Doppler**      | 周邊充血              | 血流正常∼↓                   | 血流正常∼↑                 | 正常                    | 血流↓        |
 | **FNA**             | Neutrophils           | Granulomas (巨細胞)          | Lymphocytes, Hürthle cells | Lymphocytes             | Fibrosis     |
 
-## 甲狀腺超音波比較 Sonography Comparison
+## 甲狀腺超音波比較
 
 | Type                            | Echogenicity                | Texture      | Margins  | Vascularity                     | Special signs                      |
 | ------------------------------- | --------------------------- | ------------ | -------- | ------------------------------- | ---------------------------------- |
@@ -491,7 +499,7 @@ Amiodarone 為 class III 抗心律不整藥，每一分子含 37% 碘（200 mg =
 | **Riedel's**                    | 低回音                      | 結構消失     | 浸潤性   | 減少                            | 氣管受壓、周圍浸潤                 |
 | **Graves' disease**（鑑別需要） | 正常至低回音                | 均質         | 平滑     | **顯著增加（thyroid inferno）** | 體積增大                           |
 
-## 身體檢查比較 Examination Comparison
+## 身體檢查比較
 
 | Type                  | Palpation              | Tenderness | Skin     | LN  | Trachea        |
 | --------------------- | ---------------------- | ---------- | -------- | --- | -------------- |
@@ -501,7 +509,7 @@ Amiodarone 為 class III 抗心律不整藥，每一分子含 37% 碘（200 mg =
 | **Riedel's**          | Stony hard, fixed      | –          | Normal   | –   | **Compressed** |
 | **Silent**            | Mild enlargement       | –          | Normal   | –   | Normal         |
 
-## 治療總結 Treatment Summary
+## 治療總結
 
 | Type                    | Treatment                          | Key DON'Ts       |
 | ----------------------- | ---------------------------------- | ---------------- |
@@ -511,7 +519,7 @@ Amiodarone 為 class III 抗心律不整藥，每一分子含 37% 碘（200 mg =
 | **Silent / Postpartum** | β-blocker (toxic期) → LT4 (hypo期) | 勿用抗甲狀腺藥物 |
 | **Riedel's**            | Steroids ± Tamoxifen → Surgery     | 勿勉強完整切除   |
 
-## 注意事項 Precautions
+## 注意事項
 
 ::: warning 甲狀腺毒症者 RAIU 鑑別至關重要
 甲狀腺毒症（TSH ↓, fT4 ↑）時，**RAIU 是區分 Graves' disease（攝取↑）與破壞性甲狀腺炎（攝取↓）的關鍵檢查**。錯誤診斷可能導致不當使用抗甲狀腺藥物。
@@ -527,7 +535,7 @@ Amiodarone 為 class III 抗心律不整藥，每一分子含 37% 碘（200 mg =
 Hashimoto's 患者發生 **Papillary thyroid carcinoma**及**甲狀腺淋巴瘤**的風險略增。若 US 發現可疑結節（低回音、微鈣化、邊界不規則），應進行 FNA。
 :::
 
-## 參考文獻 References
+## 參考文獻
 
 1. Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism. _Thyroid_. 2016;26(10):1343-1421.
 2. Garber JR, Cobin RH, Gharib H, et al. Clinical practice guidelines for hypothyroidism in adults. _Endocr Pract_. 2012;18(6):988-1028.

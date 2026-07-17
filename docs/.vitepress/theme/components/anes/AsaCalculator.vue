@@ -680,6 +680,7 @@ function reset() {
 .radio-box {
   width: 22px;
   height: 22px;
+  box-sizing: border-box;
   border-radius: 50%;
   border: 2px solid var(--vp-c-divider);
   background: var(--vp-c-bg);
@@ -691,8 +692,10 @@ function reset() {
 .radio-dot {
   width: 10px;
   height: 10px;
+  box-sizing: border-box;
   border-radius: 50%;
   background: #fff;
+  flex-shrink: 0;
 }
 .toggle-score {
   font-size: 0.72rem;

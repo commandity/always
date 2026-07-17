@@ -3,7 +3,9 @@ layout: doc
 title: 氣喘 Asthma
 ---
 
-# 氣喘 **Asthma**
+# 氣喘
+
+**Asthma**
 
 ## 1. 總論與流行病學
 

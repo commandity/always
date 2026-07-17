@@ -267,12 +267,9 @@ const legend: { s: Severity }[] = [
 .dxi-wrap {
   max-width: 820px;
   margin: 0 auto;
-}
-.dxi {
   padding: 2rem 0 3rem;
   font-size: 0.9rem;
 }
-
 /* 搜尋列 */
 .dxi.search-row {
   position: relative;

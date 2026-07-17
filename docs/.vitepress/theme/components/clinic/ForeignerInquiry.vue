@@ -588,172 +588,182 @@ function checkboxId(s: Symptom) {
 </script>
 
 <template>
-  <div class="fi">
-    <div class="lang-tabs">
-      <button
-        v-for="l in langs"
-        :key="l.key"
-        class="lang-tab"
-        :class="{ active: currentLang === l.key }"
-        @click="currentLang = l.key"
-      >
-        {{ l.label }}
+  <div class="fi-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active">
+        <span class="tab-label">foreigner 問診單</span>
+        <span class="tab-sub">Foreigner Inquiry</span>
       </button>
     </div>
-
-    <div class="q-block q-symptom-grid">
-      <h3 class="q-title">
-        <span class="zh-ref">{{ zhRef(questions[0]) }}</span>
-        Q{{ questions[0].id }}. {{ t(questions[0]) }}
-      </h3>
-      <div class="symptom-grid">
-        <label
-          v-for="s in q1Symptoms"
-          :key="s.key"
-          class="symptom-card"
-          :class="{ checked: symptomSelections[s.key] }"
-          :for="checkboxId(s)"
+    <div class="fi">
+      <div class="lang-tabs">
+        <button
+          v-for="l in langs"
+          :key="l.key"
+          class="lang-tab"
+          :class="{ active: currentLang === l.key }"
+          @click="currentLang = l.key"
         >
-          <input
-            type="checkbox"
-            :id="checkboxId(s)"
-            v-model="symptomSelections[s.key]"
-            class="sym-checkbox"
-          />
-          <img
-            :src="imgPath(s.img)"
-            :alt="st(s)"
-            class="sym-img"
-            loading="lazy"
-          />
-          <span class="sym-zh-ref">{{ symptomZhRef(s) }}</span>
-          <span class="sym-label">{{ st(s) }}</span>
-        </label>
+          {{ l.label }}
+        </button>
       </div>
-    </div>
 
-    <div v-for="q in questions.slice(1)" :key="q.id" class="q-block">
-      <h3 class="q-title">
-        <span class="zh-ref">{{ zhRef(q) }}</span>
-        Q{{ q.id }}. {{ t(q) }}
-      </h3>
-
-      <div v-if="q.id === 4" class="yn-group">
-        <button
-          class="yn-btn"
-          :class="{ active: allergyYes === true }"
-          @click="allergyYes = true"
-        >
-          是
-        </button>
-        <button
-          class="yn-btn"
-          :class="{ active: allergyYes === false }"
-          @click="allergyYes = false"
-        >
-          否
-        </button>
-        <div v-if="allergyYes" class="detail-input">
-          <input
-            type="text"
-            v-model="allergyDetail"
-            placeholder="請記錄過敏原..."
-            class="text-input"
-          />
+      <div class="q-block q-symptom-grid">
+        <h3 class="q-title">
+          <span class="zh-ref">{{ zhRef(questions[0]) }}</span>
+          Q{{ questions[0].id }}. {{ t(questions[0]) }}
+        </h3>
+        <div class="symptom-grid">
+          <label
+            v-for="s in q1Symptoms"
+            :key="s.key"
+            class="symptom-card"
+            :class="{ checked: symptomSelections[s.key] }"
+            :for="checkboxId(s)"
+          >
+            <input
+              type="checkbox"
+              :id="checkboxId(s)"
+              v-model="symptomSelections[s.key]"
+              class="sym-checkbox"
+            />
+            <img
+              :src="imgPath(s.img)"
+              :alt="st(s)"
+              class="sym-img"
+              loading="lazy"
+            />
+            <span class="sym-zh-ref">{{ symptomZhRef(s) }}</span>
+            <span class="sym-label">{{ st(s) }}</span>
+          </label>
         </div>
       </div>
 
-      <div v-if="q.id === 5" class="yn-group">
-        <button
-          class="yn-btn"
-          :class="{ active: chronicYes === true }"
-          @click="chronicYes = true"
-        >
-          是
-        </button>
-        <button
-          class="yn-btn"
-          :class="{ active: chronicYes === false }"
-          @click="chronicYes = false"
-        >
-          否
-        </button>
-        <div v-if="chronicYes" class="detail-input">
-          <input
-            type="text"
-            v-model="chronicDetail"
-            placeholder="請記錄慢性病史..."
-            class="text-input"
-          />
+      <div v-for="q in questions.slice(1)" :key="q.id" class="q-block">
+        <h3 class="q-title">
+          <span class="zh-ref">{{ zhRef(q) }}</span>
+          Q{{ q.id }}. {{ t(q) }}
+        </h3>
+
+        <div v-if="q.id === 4" class="yn-group">
+          <button
+            class="yn-btn"
+            :class="{ active: allergyYes === true }"
+            @click="allergyYes = true"
+          >
+            是
+          </button>
+          <button
+            class="yn-btn"
+            :class="{ active: allergyYes === false }"
+            @click="allergyYes = false"
+          >
+            否
+          </button>
+          <div v-if="allergyYes" class="detail-input">
+            <input
+              type="text"
+              v-model="allergyDetail"
+              placeholder="請記錄過敏原..."
+              class="text-input"
+            />
+          </div>
+        </div>
+
+        <div v-if="q.id === 5" class="yn-group">
+          <button
+            class="yn-btn"
+            :class="{ active: chronicYes === true }"
+            @click="chronicYes = true"
+          >
+            是
+          </button>
+          <button
+            class="yn-btn"
+            :class="{ active: chronicYes === false }"
+            @click="chronicYes = false"
+          >
+            否
+          </button>
+          <div v-if="chronicYes" class="detail-input">
+            <input
+              type="text"
+              v-model="chronicDetail"
+              placeholder="請記錄慢性病史..."
+              class="text-input"
+            />
+          </div>
+        </div>
+
+        <div v-if="q.id === 6" class="yn-group">
+          <button
+            class="yn-btn"
+            :class="{ active: pregnancyYes === true }"
+            @click="pregnancyYes = true"
+          >
+            是
+          </button>
+          <button
+            class="yn-btn"
+            :class="{ active: pregnancyYes === false }"
+            @click="pregnancyYes = false"
+          >
+            否
+          </button>
+          <div v-if="pregnancyYes" class="month-input">
+            <input
+              type="number"
+              min="1"
+              max="9"
+              v-model.number="pregnancyMonth"
+              placeholder="月份"
+            />
+            <span>個月</span>
+          </div>
+        </div>
+
+        <div v-if="q.id === 7" class="yn-group">
+          <button
+            class="yn-btn"
+            :class="{ active: injectionYes === true }"
+            @click="injectionYes = true"
+          >
+            是
+          </button>
+          <button
+            class="yn-btn"
+            :class="{ active: injectionYes === false }"
+            @click="injectionYes = false"
+          >
+            否
+          </button>
         </div>
       </div>
 
-      <div v-if="q.id === 6" class="yn-group">
-        <button
-          class="yn-btn"
-          :class="{ active: pregnancyYes === true }"
-          @click="pregnancyYes = true"
-        >
-          是
+      <div class="fi-actions">
+        <button class="btn-view" @click="showExport = !showExport">
+          {{ showExport ? "收起" : "查看 Markdown 結果" }}
         </button>
-        <button
-          class="yn-btn"
-          :class="{ active: pregnancyYes === false }"
-          @click="pregnancyYes = false"
-        >
-          否
+        <button class="btn-copy" @click="copyMarkdown">
+          {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
         </button>
-        <div v-if="pregnancyYes" class="month-input">
-          <input
-            type="number"
-            min="1"
-            max="9"
-            v-model.number="pregnancyMonth"
-            placeholder="月份"
-          />
-          <span>個月</span>
-        </div>
+        <button class="btn-reset" @click="reset">重置</button>
       </div>
 
-      <div v-if="q.id === 7" class="yn-group">
-        <button
-          class="yn-btn"
-          :class="{ active: injectionYes === true }"
-          @click="injectionYes = true"
-        >
-          是
-        </button>
-        <button
-          class="yn-btn"
-          :class="{ active: injectionYes === false }"
-          @click="injectionYes = false"
-        >
-          否
-        </button>
+      <div v-if="showExport" class="export-box">
+        <pre class="export-pre">{{ generateMarkdown() }}</pre>
       </div>
-    </div>
-
-    <div class="fi-actions">
-      <button class="btn-view" @click="showExport = !showExport">
-        {{ showExport ? "收起" : "查看 Markdown 結果" }}
-      </button>
-      <button class="btn-copy" @click="copyMarkdown">
-        {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
-      </button>
-      <button class="btn-reset" @click="reset">重置</button>
-    </div>
-
-    <div v-if="showExport" class="export-box">
-      <pre class="export-pre">{{ generateMarkdown() }}</pre>
     </div>
   </div>
 </template>
 
 <style scoped>
-.fi {
+.fi-wrap {
   max-width: 860px;
   margin: 0 auto;
-  padding: 1.5rem 0 3rem;
+}
+.fi {
+  padding: 2rem 0 3rem;
   font-size: 1rem;
 }
 
@@ -1008,5 +1018,62 @@ function checkboxId(s: Symptom) {
   .q-block {
     padding: 0.75rem;
   }
+  .tab-label {
+    font-size: 0.9rem;
+  }
+  .tab-sub {
+    font-size: 0.72rem;
+  }
+}
+
+/* ── Tab bar ────────────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+.tab-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.tab-btn:hover {
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}
+.tab-btn.active {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+.tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
+.tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
 }
 </style>

@@ -3,8 +3,7 @@ layout: doc
 title: 嗓音復健 Voice Rehabilitation
 ---
 
-# 嗓音復健
-**Voice Rehabilitation**
+# 嗓音復健 **Voice Rehabilitation**
 
 ## 概述
 

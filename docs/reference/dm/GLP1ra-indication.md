@@ -3,9 +3,7 @@ layout: doc
 title: "GLP-1 受體促效劑適應症 GLP-1 RA Indications"
 ---
 
-# GLP-1 受體促效劑適應症
-
-**GLP-1 RA Indications**
+# GLP-1 受體促效劑適應症 **GLP-1 RA Indications**
 
 ## 概述
 

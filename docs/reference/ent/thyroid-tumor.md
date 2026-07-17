@@ -3,8 +3,7 @@ layout: doc
 title: 甲狀腺腫瘤 Thyroid Tumors
 ---
 
-# 甲狀腺腫瘤
-**Thyroid Tumors**
+# 甲狀腺腫瘤 **Thyroid Tumors**
 
 ## 概述
 

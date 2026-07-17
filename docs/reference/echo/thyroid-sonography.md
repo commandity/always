@@ -3,9 +3,7 @@ layout: doc
 title: 甲狀腺及頸部超音波 Thyroid & Neck Sonography
 ---
 
-# 甲狀腺及頸部超音波
-
-**Thyroid & Neck Sonography**
+# 甲狀腺及頸部超音波 **Thyroid & Neck Sonography**
 
 <ThyroidSonographyReport />
 

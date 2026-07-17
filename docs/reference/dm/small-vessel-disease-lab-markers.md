@@ -3,9 +3,7 @@ layout: doc
 title: 腦小血管疾病的代謝風險與抽血警訊 — Metabolic Lab Markers of Cerebral Small Vessel Disease Risk
 ---
 
-# 腦小血管疾病的代謝風險與抽血警訊
-
-**Cerebral Small Vessel Disease — Metabolic Lab Markers of Risk**
+# 腦小血管疾病的代謝風險與抽血警訊 **Cerebral Small Vessel Disease — Metabolic Lab Markers of Risk**
 
 ## 概述 Overview
 

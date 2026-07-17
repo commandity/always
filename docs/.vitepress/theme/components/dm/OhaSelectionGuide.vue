@@ -252,274 +252,340 @@ const stepOk = computed(() => {
 </script>
 
 <template>
-  <div class="oha">
-    <!-- Step indicator -->
-    <div class="step-bar">
-      <div
-        class="step-dot"
-        v-for="(s, i) in STEPS"
-        :key="i"
-        :class="{
-          active: step === i + 1,
-          done: step > i + 1,
-        }"
-        @click="step = i + 1"
-      >
-        <span class="step-num">{{ i + 1 }}</span>
-        <span class="step-label">{{ s }}</span>
-      </div>
-    </div>
-
-    <!-- ========== Step 1 ========== -->
-    <div class="section" v-show="step === 1">
-      <div class="group-header-bar demo-bar">
-        <span class="group-icon">👤</span>
-        <span class="group-label-text">Step 1 · 基本資料</span>
-        <span class="group-sub-text">年齡與腎功能影響藥物選擇</span>
-      </div>
-      <div class="oha-card">
-        <div class="oha-row">
-          <span class="item-name">年齡</span>
-          <input
-            v-model="age"
-            type="number"
-            min="18"
-            max="120"
-            placeholder="歲"
-            class="oha-input"
-          />
-          <span class="oha-hint" v-if="isElderly"
-            >≥ 75 歲 → 優先考慮低低血糖風險藥物</span
-          >
-        </div>
-        <div class="oha-row">
-          <span class="item-name">eGFR</span>
-          <input
-            v-model="egfr"
-            type="number"
-            min="0"
-            max="150"
-            placeholder="mL/min/1.73m²"
-            class="oha-input"
-          />
-          <span
-            class="oha-hint"
-            v-if="egfrLow"
-            style="color: #dc2626; font-weight: 700"
-            >eGFR < 30 → Metformin 禁忌，部分 SGLT2i 需調整</span
-          >
-        </div>
-      </div>
-    </div>
-
-    <!-- ========== Step 2 ========== -->
-    <div class="section" v-show="step === 2">
-      <div class="group-header-bar rf-bar">
-        <span class="group-icon">🫀</span>
-        <span class="group-label-text">Step 2 · 共病評估</span>
-        <span class="group-sub-text">勾選所有符合項目（決定 add-on 首選）</span>
-      </div>
-      <div class="oha-card">
-        <label class="oha-row oha-label" :class="{ active: hasHF }">
-          <input type="checkbox" v-model="hasHF" />
-          <div class="item-name-block">
-            <span class="item-name">心衰竭 HF</span>
-            <span class="item-sub">HFrEF / HFmrEF / HFpEF</span>
-          </div>
-          <span class="oha-cb-tag sglt2-tag">→ SGLT2i</span>
-        </label>
-        <label class="oha-row oha-label" :class="{ active: hasCKD }">
-          <input type="checkbox" v-model="hasCKD" />
-          <div class="item-name-block">
-            <span class="item-name">慢性腎臟病 CKD</span>
-            <span class="item-sub">eGFR 25–75 或 uACR ≥ 200</span>
-          </div>
-          <span class="oha-cb-tag sglt2-tag">→ SGLT2i</span>
-        </label>
-        <label class="oha-row oha-label" :class="{ active: hasASCVD }">
-          <input type="checkbox" v-model="hasASCVD" />
-          <div class="item-name-block">
-            <span class="item-name">ASCVD</span>
-            <span class="item-sub">CAD / CVA / PAD</span>
-          </div>
-          <span class="oha-cb-tag glp1-tag">→ GLP-1 RA / SGLT2i</span>
-        </label>
-        <label class="oha-row oha-label" :class="{ active: hasObesity }">
-          <input type="checkbox" v-model="hasObesity" />
-          <div class="item-name-block">
-            <span class="item-name">肥胖</span>
-            <span class="item-sub">BMI ≥ 30</span>
-          </div>
-          <span class="oha-cb-tag glp1-tag">→ GLP-1 RA</span>
-        </label>
-        <label class="oha-row oha-label" :class="{ active: isFrail }">
-          <input type="checkbox" v-model="isFrail" />
-          <div class="item-name-block">
-            <span class="item-name">老年衰弱 / 低血糖高風險</span>
-            <span class="item-sub">跌倒風險、多重疾病、需避免低血糖</span>
-          </div>
-          <span class="oha-cb-tag dpp4-tag">→ DPP-4i</span>
-        </label>
-      </div>
-    </div>
-
-    <!-- ========== Step 3 ========== -->
-    <div class="section" v-show="step === 3">
-      <div class="group-header-bar lab-bar">
-        <span class="group-icon">🧪</span>
-        <span class="group-label-text">Step 3 · 臨床參數</span>
-        <span class="group-sub-text">A1C 與目前用藥</span>
-      </div>
-      <div class="oha-card">
-        <div class="oha-row">
-          <span class="item-name">A1C</span>
-          <input
-            v-model="a1c"
-            type="number"
-            min="5"
-            max="15"
-            step="0.1"
-            placeholder="%"
-            class="oha-input"
-          />
-          <span class="oha-hint" v-if="isA1CHigh"
-            >≥ 9% → 需強效治療，考慮雙藥/三藥或胰島素</span
-          >
-        </div>
-        <div class="oha-row">
-          <span class="item-name">Metformin 使用狀態</span>
-          <div class="oha-opts">
-            <button
-              class="opt-btn"
-              :class="{ active: onMetformin === 'yes' }"
-              @click="onMetformin = 'yes'"
-            >
-              使用中
-            </button>
-            <button
-              class="opt-btn"
-              :class="{ active: onMetformin === 'no' }"
-              @click="onMetformin = 'no'"
-            >
-              未使用
-            </button>
-            <button
-              class="opt-btn"
-              :class="{ active: onMetformin === 'intolerant' }"
-              @click="onMetformin = 'intolerant'"
-            >
-              不耐受
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ========== Step 4: Results ========== -->
-    <div class="section" v-show="step === 4">
-      <div class="group-header-bar res-bar">
-        <span class="group-icon">💊</span>
-        <span class="group-label-text">Step 4 · 個人化用藥建議</span>
-        <span class="group-sub-text">依共病優先順序排列</span>
-      </div>
-
-      <div class="oha-result" v-if="recommendations.length">
-        <div
-          class="rec-card"
-          v-for="(r, i) in recommendations"
-          :key="i"
-          :class="r.priority"
-        >
-          <div class="rec-left">
-            <div class="rec-priority-badge">
-              {{
-                r.priority === "first"
-                  ? "第一線"
-                  : r.priority === "addon"
-                    ? "建議加用"
-                    : r.priority === "alternative"
-                      ? "替代方案"
-                      : "⚠ 避免/注意"
-              }}
-            </div>
-            <div class="rec-nhi-badge" :class="r.nhi">
-              {{
-                r.nhi === "nhi"
-                  ? "健保給付"
-                  : r.nhi === "conditional"
-                    ? "條件給付"
-                    : r.nhi === "selfpay"
-                      ? "自費"
-                      : "禁忌"
-              }}
-            </div>
-          </div>
-          <div class="rec-body">
-            <div class="rec-head">
-              <span class="rec-drug">{{ r.drug }}</span>
-              <span class="rec-category">{{ r.category }}</span>
-            </div>
-            <div class="rec-reason">{{ r.reason }}</div>
-            <details class="rec-nhi-detail">
-              <summary class="rec-nhi-summary">健保給付條件</summary>
-              <div class="rec-nhi-text">{{ r.nhiDetail }}</div>
-            </details>
-          </div>
-        </div>
-      </div>
-
-      <div class="oha-summary">
-        <div class="summary-title">📋 選藥原則摘要</div>
-        <ul class="summary-list">
-          <li><strong>第一線</strong>：Metformin（eGFR ≥ 30 且無禁忌）</li>
-          <li>
-            <strong>HF / CKD</strong> → 加
-            <strong>SGLT2i</strong>（器官保護優先）
-          </li>
-          <li>
-            <strong>ASCVD / 肥胖</strong> → 加 <strong>GLP-1 RA</strong>（CV
-            獲益 / 減重）
-          </li>
-          <li>
-            <strong>老年 / 衰弱</strong> → 加
-            <strong>DPP-4i</strong>（低血糖風險最低）
-          </li>
-          <li>
-            <strong>A1C ≥ 10% 伴症狀</strong> → 考慮 <strong>Insulin</strong>
-          </li>
-        </ul>
-      </div>
-
-      <div class="warn-box">
-        <span class="warn-icon">⚠</span>
-        <span
-          >健保給付條件依 2025 健保署規定摘要，實際給付以健保署核定為準。GLP-1
-          RA 需事前審查，SGLT2i
-          器官保護給付需專科（心臟/腎臟）開立。本工具僅供臨床參考。</span
-        >
-      </div>
-    </div>
-
-    <!-- Navigation buttons -->
-    <div class="oha-nav">
-      <button class="btn-nav" v-if="step > 1" @click="step--">← 上一步</button>
-      <button
-        class="btn-nav btn-primary"
-        v-if="step < 4"
-        :disabled="!stepOk"
-        @click="step++"
-      >
-        下一步 →
+  <div class="oha-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active">
+        <span class="tab-label">口服降血糖藥選擇</span>
+        <span class="tab-sub">OHA Selection Guide</span>
       </button>
-      <button class="btn-reset" @click="reset">重置</button>
+    </div>
+    <div class="oha">
+      <!-- Step indicator -->
+      <div class="step-bar">
+        <div
+          class="step-dot"
+          v-for="(s, i) in STEPS"
+          :key="i"
+          :class="{
+            active: step === i + 1,
+            done: step > i + 1,
+          }"
+          @click="step = i + 1"
+        >
+          <span class="step-num">{{ i + 1 }}</span>
+          <span class="step-label">{{ s }}</span>
+        </div>
+      </div>
+
+      <!-- ========== Step 1 ========== -->
+      <div class="section" v-show="step === 1">
+        <div class="group-header-bar demo-bar">
+          <span class="group-icon">👤</span>
+          <span class="group-label-text">Step 1 · 基本資料</span>
+          <span class="group-sub-text">年齡與腎功能影響藥物選擇</span>
+        </div>
+        <div class="oha-card">
+          <div class="oha-row">
+            <span class="item-name">年齡</span>
+            <input
+              v-model="age"
+              type="number"
+              min="18"
+              max="120"
+              placeholder="歲"
+              class="oha-input"
+            />
+            <span class="oha-hint" v-if="isElderly"
+              >≥ 75 歲 → 優先考慮低低血糖風險藥物</span
+            >
+          </div>
+          <div class="oha-row">
+            <span class="item-name">eGFR</span>
+            <input
+              v-model="egfr"
+              type="number"
+              min="0"
+              max="150"
+              placeholder="mL/min/1.73m²"
+              class="oha-input"
+            />
+            <span
+              class="oha-hint"
+              v-if="egfrLow"
+              style="color: #dc2626; font-weight: 700"
+              >eGFR < 30 → Metformin 禁忌，部分 SGLT2i 需調整</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== Step 2 ========== -->
+      <div class="section" v-show="step === 2">
+        <div class="group-header-bar rf-bar">
+          <span class="group-icon">🫀</span>
+          <span class="group-label-text">Step 2 · 共病評估</span>
+          <span class="group-sub-text"
+            >勾選所有符合項目（決定 add-on 首選）</span
+          >
+        </div>
+        <div class="oha-card">
+          <label class="oha-row oha-label" :class="{ active: hasHF }">
+            <input type="checkbox" v-model="hasHF" />
+            <div class="item-name-block">
+              <span class="item-name">心衰竭 HF</span>
+              <span class="item-sub">HFrEF / HFmrEF / HFpEF</span>
+            </div>
+            <span class="oha-cb-tag sglt2-tag">→ SGLT2i</span>
+          </label>
+          <label class="oha-row oha-label" :class="{ active: hasCKD }">
+            <input type="checkbox" v-model="hasCKD" />
+            <div class="item-name-block">
+              <span class="item-name">慢性腎臟病 CKD</span>
+              <span class="item-sub">eGFR 25–75 或 uACR ≥ 200</span>
+            </div>
+            <span class="oha-cb-tag sglt2-tag">→ SGLT2i</span>
+          </label>
+          <label class="oha-row oha-label" :class="{ active: hasASCVD }">
+            <input type="checkbox" v-model="hasASCVD" />
+            <div class="item-name-block">
+              <span class="item-name">ASCVD</span>
+              <span class="item-sub">CAD / CVA / PAD</span>
+            </div>
+            <span class="oha-cb-tag glp1-tag">→ GLP-1 RA / SGLT2i</span>
+          </label>
+          <label class="oha-row oha-label" :class="{ active: hasObesity }">
+            <input type="checkbox" v-model="hasObesity" />
+            <div class="item-name-block">
+              <span class="item-name">肥胖</span>
+              <span class="item-sub">BMI ≥ 30</span>
+            </div>
+            <span class="oha-cb-tag glp1-tag">→ GLP-1 RA</span>
+          </label>
+          <label class="oha-row oha-label" :class="{ active: isFrail }">
+            <input type="checkbox" v-model="isFrail" />
+            <div class="item-name-block">
+              <span class="item-name">老年衰弱 / 低血糖高風險</span>
+              <span class="item-sub">跌倒風險、多重疾病、需避免低血糖</span>
+            </div>
+            <span class="oha-cb-tag dpp4-tag">→ DPP-4i</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ========== Step 3 ========== -->
+      <div class="section" v-show="step === 3">
+        <div class="group-header-bar lab-bar">
+          <span class="group-icon">🧪</span>
+          <span class="group-label-text">Step 3 · 臨床參數</span>
+          <span class="group-sub-text">A1C 與目前用藥</span>
+        </div>
+        <div class="oha-card">
+          <div class="oha-row">
+            <span class="item-name">A1C</span>
+            <input
+              v-model="a1c"
+              type="number"
+              min="5"
+              max="15"
+              step="0.1"
+              placeholder="%"
+              class="oha-input"
+            />
+            <span class="oha-hint" v-if="isA1CHigh"
+              >≥ 9% → 需強效治療，考慮雙藥/三藥或胰島素</span
+            >
+          </div>
+          <div class="oha-row">
+            <span class="item-name">Metformin 使用狀態</span>
+            <div class="oha-opts">
+              <button
+                class="opt-btn"
+                :class="{ active: onMetformin === 'yes' }"
+                @click="onMetformin = 'yes'"
+              >
+                使用中
+              </button>
+              <button
+                class="opt-btn"
+                :class="{ active: onMetformin === 'no' }"
+                @click="onMetformin = 'no'"
+              >
+                未使用
+              </button>
+              <button
+                class="opt-btn"
+                :class="{ active: onMetformin === 'intolerant' }"
+                @click="onMetformin = 'intolerant'"
+              >
+                不耐受
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== Step 4: Results ========== -->
+      <div class="section" v-show="step === 4">
+        <div class="group-header-bar res-bar">
+          <span class="group-icon">💊</span>
+          <span class="group-label-text">Step 4 · 個人化用藥建議</span>
+          <span class="group-sub-text">依共病優先順序排列</span>
+        </div>
+
+        <div class="oha-result" v-if="recommendations.length">
+          <div
+            class="rec-card"
+            v-for="(r, i) in recommendations"
+            :key="i"
+            :class="r.priority"
+          >
+            <div class="rec-left">
+              <div class="rec-priority-badge">
+                {{
+                  r.priority === "first"
+                    ? "第一線"
+                    : r.priority === "addon"
+                      ? "建議加用"
+                      : r.priority === "alternative"
+                        ? "替代方案"
+                        : "⚠ 避免/注意"
+                }}
+              </div>
+              <div class="rec-nhi-badge" :class="r.nhi">
+                {{
+                  r.nhi === "nhi"
+                    ? "健保給付"
+                    : r.nhi === "conditional"
+                      ? "條件給付"
+                      : r.nhi === "selfpay"
+                        ? "自費"
+                        : "禁忌"
+                }}
+              </div>
+            </div>
+            <div class="rec-body">
+              <div class="rec-head">
+                <span class="rec-drug">{{ r.drug }}</span>
+                <span class="rec-category">{{ r.category }}</span>
+              </div>
+              <div class="rec-reason">{{ r.reason }}</div>
+              <details class="rec-nhi-detail">
+                <summary class="rec-nhi-summary">健保給付條件</summary>
+                <div class="rec-nhi-text">{{ r.nhiDetail }}</div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <div class="oha-summary">
+          <div class="summary-title">📋 選藥原則摘要</div>
+          <ul class="summary-list">
+            <li><strong>第一線</strong>：Metformin（eGFR ≥ 30 且無禁忌）</li>
+            <li>
+              <strong>HF / CKD</strong> → 加
+              <strong>SGLT2i</strong>（器官保護優先）
+            </li>
+            <li>
+              <strong>ASCVD / 肥胖</strong> → 加 <strong>GLP-1 RA</strong>（CV
+              獲益 / 減重）
+            </li>
+            <li>
+              <strong>老年 / 衰弱</strong> → 加
+              <strong>DPP-4i</strong>（低血糖風險最低）
+            </li>
+            <li>
+              <strong>A1C ≥ 10% 伴症狀</strong> → 考慮 <strong>Insulin</strong>
+            </li>
+          </ul>
+        </div>
+
+        <div class="warn-box">
+          <span class="warn-icon">⚠</span>
+          <span
+            >健保給付條件依 2025 健保署規定摘要，實際給付以健保署核定為準。GLP-1
+            RA 需事前審查，SGLT2i
+            器官保護給付需專科（心臟/腎臟）開立。本工具僅供臨床參考。</span
+          >
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="oha-nav">
+        <button class="btn-nav" v-if="step > 1" @click="step--">
+          ← 上一步
+        </button>
+        <button
+          class="btn-nav btn-primary"
+          v-if="step < 4"
+          :disabled="!stepOk"
+          @click="step++"
+        >
+          下一步 →
+        </button>
+        <button class="btn-reset" @click="reset">重置</button>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.oha-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+.tab-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.tab-btn:hover {
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}
+.tab-btn.active {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+.tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
+.tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
+}
 .oha {
   max-width: 820px;
   margin: 0 auto;
+  padding: 2rem 0 3rem;
   font-size: 0.9rem;
 }
 

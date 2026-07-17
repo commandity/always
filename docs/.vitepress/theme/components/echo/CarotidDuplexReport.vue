@@ -112,29 +112,260 @@ const diagramNodes = computed(() => {
   const gy = (v) => TY + SC * v;
   return [
     // Right side — clusters in the left margin (cx = 8)
-    { id: "a1r", label: "R A1", side: "r", cx: 6, cy: 24, nx: gx(455), ny: gy(130), fields: _TCF, m: t.a1.right, color: VC.a1 },
-    { id: "oar", label: "R OA", side: "r", cx: 6, cy: 136, nx: gx(410), ny: gy(166), fields: _TCF, m: t.oa.right, color: VC.oa },
-    { id: "m1r", label: "R M1", side: "r", cx: 6, cy: 248, nx: gx(355), ny: gy(235), fields: _TCF, m: t.m1.right, color: VC.m1 },
-    { id: "p1r", label: "R P1", side: "r", cx: 6, cy: 360, nx: gx(462), ny: gy(325), fields: _TCF, m: t.p1.right, color: VC.p1 },
-    { id: "vir", label: "R VA intra", side: "r", cx: 6, cy: 472, nx: gx(468), ny: gy(430), fields: _TCF, m: t.vaIntra.right, color: VC.va },
-    { id: "icar", label: "R ICA", side: "r", cx: 6, cy: 584, nx: gx(440), ny: gy(520), fields: _CAF, m: c.ica.right, color: VC.ica },
-    { id: "ecar", label: "R ECA", side: "r", cx: 6, cy: 696, nx: gx(479), ny: gy(556), fields: _CAF, m: c.eca.right, color: VC.eca },
-    { id: "bifr", label: "R BIF", side: "r", cx: 6, cy: 808, nx: gx(442), ny: gy(610), fields: _CAF, m: c.bif.right, color: VC.bif },
-    { id: "vexr", label: "R VA extra", side: "r", cx: 6, cy: 920, nx: gx(400), ny: gy(690), fields: _CAF, m: c.vaExtra.right, color: VC.va },
-    { id: "ccar", label: "R CCA", side: "r", cx: 6, cy: 1032, nx: gx(447), ny: gy(715), fields: _CAF, m: c.cca.right, color: VC.cca },
+    {
+      id: "a1r",
+      label: "R A1",
+      side: "r",
+      cx: 6,
+      cy: 24,
+      nx: gx(455),
+      ny: gy(130),
+      fields: _TCF,
+      m: t.a1.right,
+      color: VC.a1,
+    },
+    {
+      id: "oar",
+      label: "R OA",
+      side: "r",
+      cx: 6,
+      cy: 136,
+      nx: gx(410),
+      ny: gy(166),
+      fields: _TCF,
+      m: t.oa.right,
+      color: VC.oa,
+    },
+    {
+      id: "m1r",
+      label: "R M1",
+      side: "r",
+      cx: 6,
+      cy: 248,
+      nx: gx(355),
+      ny: gy(235),
+      fields: _TCF,
+      m: t.m1.right,
+      color: VC.m1,
+    },
+    {
+      id: "p1r",
+      label: "R P1",
+      side: "r",
+      cx: 6,
+      cy: 360,
+      nx: gx(462),
+      ny: gy(325),
+      fields: _TCF,
+      m: t.p1.right,
+      color: VC.p1,
+    },
+    {
+      id: "vir",
+      label: "R VA intra",
+      side: "r",
+      cx: 6,
+      cy: 472,
+      nx: gx(468),
+      ny: gy(430),
+      fields: _TCF,
+      m: t.vaIntra.right,
+      color: VC.va,
+    },
+    {
+      id: "icar",
+      label: "R ICA",
+      side: "r",
+      cx: 6,
+      cy: 584,
+      nx: gx(440),
+      ny: gy(520),
+      fields: _CAF,
+      m: c.ica.right,
+      color: VC.ica,
+    },
+    {
+      id: "ecar",
+      label: "R ECA",
+      side: "r",
+      cx: 6,
+      cy: 696,
+      nx: gx(479),
+      ny: gy(556),
+      fields: _CAF,
+      m: c.eca.right,
+      color: VC.eca,
+    },
+    {
+      id: "bifr",
+      label: "R BIF",
+      side: "r",
+      cx: 6,
+      cy: 808,
+      nx: gx(442),
+      ny: gy(610),
+      fields: _CAF,
+      m: c.bif.right,
+      color: VC.bif,
+    },
+    {
+      id: "vexr",
+      label: "R VA extra",
+      side: "r",
+      cx: 6,
+      cy: 920,
+      nx: gx(400),
+      ny: gy(690),
+      fields: _CAF,
+      m: c.vaExtra.right,
+      color: VC.va,
+    },
+    {
+      id: "ccar",
+      label: "R CCA",
+      side: "r",
+      cx: 6,
+      cy: 1032,
+      nx: gx(447),
+      ny: gy(715),
+      fields: _CAF,
+      m: c.cca.right,
+      color: VC.cca,
+    },
     // Left side — clusters in the right margin (cx = 852)
-    { id: "a1l", label: "L A1", side: "l", cx: 818, cy: 24, nx: gx(545), ny: gy(130), fields: _TCF, m: t.a1.left, color: VC.a1 },
-    { id: "oal", label: "L OA", side: "l", cx: 818, cy: 136, nx: gx(590), ny: gy(166), fields: _TCF, m: t.oa.left, color: VC.oa },
-    { id: "m1l", label: "L M1", side: "l", cx: 818, cy: 248, nx: gx(645), ny: gy(235), fields: _TCF, m: t.m1.left, color: VC.m1 },
-    { id: "p1l", label: "L P1", side: "l", cx: 818, cy: 360, nx: gx(538), ny: gy(325), fields: _TCF, m: t.p1.left, color: VC.p1 },
-    { id: "vil", label: "L VA intra", side: "l", cx: 818, cy: 472, nx: gx(532), ny: gy(430), fields: _TCF, m: t.vaIntra.left, color: VC.va },
-    { id: "ical", label: "L ICA", side: "l", cx: 818, cy: 584, nx: gx(560), ny: gy(520), fields: _CAF, m: c.ica.left, color: VC.ica },
-    { id: "ecal", label: "L ECA", side: "l", cx: 818, cy: 696, nx: gx(521), ny: gy(556), fields: _CAF, m: c.eca.left, color: VC.eca },
-    { id: "bifl", label: "L BIF", side: "l", cx: 818, cy: 808, nx: gx(558), ny: gy(610), fields: _CAF, m: c.bif.left, color: VC.bif },
-    { id: "vexl", label: "L VA extra", side: "l", cx: 818, cy: 920, nx: gx(600), ny: gy(690), fields: _CAF, m: c.vaExtra.left, color: VC.va },
-    { id: "ccal", label: "L CCA", side: "l", cx: 818, cy: 1032, nx: gx(553), ny: gy(715), fields: _CAF, m: c.cca.left, color: VC.cca },
+    {
+      id: "a1l",
+      label: "L A1",
+      side: "l",
+      cx: 818,
+      cy: 24,
+      nx: gx(545),
+      ny: gy(130),
+      fields: _TCF,
+      m: t.a1.left,
+      color: VC.a1,
+    },
+    {
+      id: "oal",
+      label: "L OA",
+      side: "l",
+      cx: 818,
+      cy: 136,
+      nx: gx(590),
+      ny: gy(166),
+      fields: _TCF,
+      m: t.oa.left,
+      color: VC.oa,
+    },
+    {
+      id: "m1l",
+      label: "L M1",
+      side: "l",
+      cx: 818,
+      cy: 248,
+      nx: gx(645),
+      ny: gy(235),
+      fields: _TCF,
+      m: t.m1.left,
+      color: VC.m1,
+    },
+    {
+      id: "p1l",
+      label: "L P1",
+      side: "l",
+      cx: 818,
+      cy: 360,
+      nx: gx(538),
+      ny: gy(325),
+      fields: _TCF,
+      m: t.p1.left,
+      color: VC.p1,
+    },
+    {
+      id: "vil",
+      label: "L VA intra",
+      side: "l",
+      cx: 818,
+      cy: 472,
+      nx: gx(532),
+      ny: gy(430),
+      fields: _TCF,
+      m: t.vaIntra.left,
+      color: VC.va,
+    },
+    {
+      id: "ical",
+      label: "L ICA",
+      side: "l",
+      cx: 818,
+      cy: 584,
+      nx: gx(560),
+      ny: gy(520),
+      fields: _CAF,
+      m: c.ica.left,
+      color: VC.ica,
+    },
+    {
+      id: "ecal",
+      label: "L ECA",
+      side: "l",
+      cx: 818,
+      cy: 696,
+      nx: gx(521),
+      ny: gy(556),
+      fields: _CAF,
+      m: c.eca.left,
+      color: VC.eca,
+    },
+    {
+      id: "bifl",
+      label: "L BIF",
+      side: "l",
+      cx: 818,
+      cy: 808,
+      nx: gx(558),
+      ny: gy(610),
+      fields: _CAF,
+      m: c.bif.left,
+      color: VC.bif,
+    },
+    {
+      id: "vexl",
+      label: "L VA extra",
+      side: "l",
+      cx: 818,
+      cy: 920,
+      nx: gx(600),
+      ny: gy(690),
+      fields: _CAF,
+      m: c.vaExtra.left,
+      color: VC.va,
+    },
+    {
+      id: "ccal",
+      label: "L CCA",
+      side: "l",
+      cx: 818,
+      cy: 1032,
+      nx: gx(553),
+      ny: gy(715),
+      fields: _CAF,
+      m: c.cca.left,
+      color: VC.cca,
+    },
     // Basilar — midline, cluster centred at the bottom
-    { id: "ba", label: "BA (midline)", side: "mid", cx: 412, cy: 1000, nx: gx(500), ny: gy(388), fields: _TCF, m: t.ba, color: VC.ba },
+    {
+      id: "ba",
+      label: "BA (midline)",
+      side: "mid",
+      cx: 412,
+      cy: 1000,
+      nx: gx(500),
+      ny: gy(388),
+      fields: _TCF,
+      m: t.ba,
+      color: VC.ba,
+    },
   ];
 });
 
@@ -610,721 +841,847 @@ function reset() {
 </script>
 
 <template>
-  <div class="carotid-report">
-    <div class="intro-bar">
-      <span class="intro-dot">◉</span>
-      <span class="intro-text">
-        <span class="intro-zh"
-          >輸入各血管 PS / ED / RI / MV(或FV)
-          四項數值，系統自動計算比值並產生解讀。</span
-        >
-        <span class="intro-en"
-          >Enter the 4 Doppler values (PS/ED/RI/MV or FV) per vessel; ratios,
-          stenosis grading, and interpretation are generated
-          automatically.</span
-        >
-      </span>
+  <div class="cdr-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active">
+        <span class="tab-label">頸動脈超音波報告</span>
+        <span class="tab-sub">Carotid Duplex Report</span>
+      </button>
     </div>
-
-    <!-- ======================== SECTION: Patient ======================== -->
-    <div class="cr-section">
-      <div
-        class="section-header section-header-row collapsible"
-        @click="patientOpen = !patientOpen"
-      >
-        <span class="section-label">Patient Info（病患資料）</span>
-        <svg
-          class="collapse-chevron"
-          :class="{ open: patientOpen }"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </div>
-      <div class="patient-grid" v-show="patientOpen">
-        <label class="field">
-          <span class="field-label">MRN（病歷號）</span>
-          <input v-model="patient.mrn" placeholder="e.g. 123456" />
-        </label>
-        <label class="field">
-          <span class="field-label">Name（姓名）</span>
-          <input v-model="patient.name" placeholder="e.g. WANG, DA-MING" />
-        </label>
-        <label class="field">
-          <span class="field-label">Referring Physician（轉介醫師）</span>
-          <input v-model="patient.refPhysician" placeholder="e.g. Dr. Chen" />
-        </label>
-        <label class="field">
-          <span class="field-label">Exam Date（檢查日期）</span>
-          <input type="date" v-model="examDate" />
-        </label>
-      </div>
-    </div>
-
-    <!-- ======================== SECTION: Probe ======================== -->
-    <div class="cr-section">
-      <div class="probe-bar">
-        <span class="probe-tag">Probe</span>
-        <span class="probe-chip tcd">
-          <svg
-            class="probe-ico"
-            viewBox="0 0 24 24"
-            width="15"
-            height="15"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
+    <div class="carotid-report">
+      <div class="intro-bar">
+        <span class="intro-dot">◉</span>
+        <span class="intro-text">
+          <span class="intro-zh"
+            >輸入各血管 PS / ED / RI / MV(或FV)
+            四項數值，系統自動計算比值並產生解讀。</span
           >
-            <path d="M4 12a8 8 0 0 1 8-8" />
-            <path d="M6.5 12a5.5 5.5 0 0 1 5.5-5.5" />
-            <path d="M9 12a3 3 0 0 1 3-3" />
-            <circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none" />
-          </svg>
-          <span>Transcranial <b>2–3 MHz</b></span>
-        </span>
-        <span class="probe-chip cca">
-          <svg
-            class="probe-ico"
-            viewBox="0 0 24 24"
-            width="15"
-            height="15"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
+          <span class="intro-en"
+            >Enter the 4 Doppler values (PS/ED/RI/MV or FV) per vessel; ratios,
+            stenosis grading, and interpretation are generated
+            automatically.</span
           >
-            <path d="M4 12a8 8 0 0 1 8-8" />
-            <path d="M6.5 12a5.5 5.5 0 0 1 5.5-5.5" />
-            <path d="M9 12a3 3 0 0 1 3-3" />
-            <circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none" />
-          </svg>
-          <span>Carotid <b>5–10 MHz</b></span>
         </span>
       </div>
-    </div>
 
-    <!-- ======================== SECTION: Reference Diagram ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label"
-          >Vessel Reference Diagram（血管示意圖）</span
+      <!-- ======================== SECTION: Patient ======================== -->
+      <div class="cr-section">
+        <div
+          class="section-header section-header-row collapsible"
+          @click="patientOpen = !patientOpen"
         >
+          <span class="section-label">Patient Info（病患資料）</span>
+          <svg
+            class="collapse-chevron"
+            :class="{ open: patientOpen }"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+        <div class="patient-grid" v-show="patientOpen">
+          <label class="field">
+            <span class="field-label">MRN（病歷號）</span>
+            <input v-model="patient.mrn" placeholder="e.g. 123456" />
+          </label>
+          <label class="field">
+            <span class="field-label">Name（姓名）</span>
+            <input v-model="patient.name" placeholder="e.g. WANG, DA-MING" />
+          </label>
+          <label class="field">
+            <span class="field-label">Referring Physician（轉介醫師）</span>
+            <input v-model="patient.refPhysician" placeholder="e.g. Dr. Chen" />
+          </label>
+          <label class="field">
+            <span class="field-label">Exam Date（檢查日期）</span>
+            <input type="date" v-model="examDate" />
+          </label>
+        </div>
       </div>
-      <div class="svg-wrap">
-        <svg
-          viewBox="0 0 1000 1180"
-          xmlns="http://www.w3.org/2000/svg"
-          class="ref-svg"
-        >
-          <!-- ===== Anatomy (schematic) ===== -->
-          <g transform="translate(-175,-91) scale(1.35)">
-          <!-- Circle of Willis + basilar (brand) -->
-          <path d="M 455 130 Q 500 108 545 130" class="dg-vessel" style="stroke: #7c3aed" />
-          <path d="M 455 130 Q 438 178 432 240" class="dg-vessel" style="stroke: #7c3aed" />
-          <path d="M 545 130 Q 562 178 568 240" class="dg-vessel" style="stroke: #7c3aed" />
-          <path d="M 432 240 Q 448 292 462 325 Q 482 342 500 348" class="dg-vessel" style="stroke: #db2777" />
-          <path d="M 568 240 Q 552 292 538 325 Q 518 342 500 348" class="dg-vessel" style="stroke: #db2777" />
-          <path d="M 500 348 L 500 410" class="dg-vessel" style="stroke: #16a34a" />
-          <!-- M1 (MCA) -->
-          <path d="M 432 240 Q 393 236 355 235" class="dg-vessel" style="stroke: #2563eb" />
-          <path d="M 568 240 Q 607 236 645 235" class="dg-vessel" style="stroke: #2563eb" />
-          <!-- OA (ophthalmic) + orbit hint -->
-          <path d="M 432 240 Q 418 198 410 168" class="dg-vessel" style="stroke: #f97316" />
-          <path d="M 568 240 Q 582 198 590 168" class="dg-vessel" style="stroke: #f97316" />
-          <circle cx="405" cy="156" r="7" class="dg-eye" />
-          <circle cx="595" cy="156" r="7" class="dg-eye" />
-          <!-- Vertebral artery: extracranial → intracranial → basilar confluence -->
-          <path d="M 500 410 Q 486 418 468 430 L 400 690" class="dg-vessel" style="stroke: #0d9488" />
-          <path d="M 500 410 Q 514 418 532 430 L 600 690" class="dg-vessel" style="stroke: #0d9488" />
-          <!-- ICA (siphon → cervical → bifurcation) -->
-          <path d="M 432 240 L 440 520 L 442 610" class="dg-vessel" style="stroke: #ca8a04" />
-          <path d="M 568 240 L 560 520 L 558 610" class="dg-vessel" style="stroke: #ca8a04" />
-          <!-- ECA (external carotid) -->
-          <path d="M 442 610 Q 462 585 478 560 Q 486 545 488 528" class="dg-vessel" style="stroke: #0891b2" />
-          <path d="M 558 610 Q 538 585 522 560 Q 514 545 512 528" class="dg-vessel" style="stroke: #0891b2" />
-          <!-- CCA (common carotid trunk) -->
-          <path d="M 442 610 L 447 700 L 449 768" class="dg-vessel" style="stroke: #dc2626" />
-          <path d="M 558 610 L 553 700 L 551 768" class="dg-vessel" style="stroke: #dc2626" />
 
-          </g>
-          <!-- ===== Vessel nodes + linked input clusters ===== -->
-          <template v-for="n in diagramNodes" :key="n.id">
-            <line
-              :x1="n.side === 'l' ? n.cx : n.side === 'mid' ? n.cx + 88 : n.cx + 176"
-              :y1="n.side === 'mid' ? n.cy : n.cy + 28"
-              :x2="n.nx"
-              :y2="n.ny"
-              class="dg-leader"
-              :style="{ stroke: n.color }"
-            />
-            <circle
-              :cx="n.nx"
-              :cy="n.ny"
-              r="5"
-              class="dg-node"
-              :style="{ fill: n.color }"
-            />
-            <foreignObject :x="n.cx" :y="n.cy" width="176" height="104">
-              <div
-                class="dg-cluster"
-                xmlns="http://www.w3.org/1999/xhtml"
-                :style="{ borderLeftColor: n.color }"
-              >
-                <div class="dg-cluster-title">{{ n.label }}</div>
-                <div class="dg-inputs">
-                  <label v-for="f in n.fields" :key="f">
-                    <span>{{ f.toUpperCase() }}</span>
-                    <input v-model="n.m[f]" inputmode="decimal" />
-                  </label>
+      <!-- ======================== SECTION: Probe ======================== -->
+      <div class="cr-section">
+        <div class="probe-bar">
+          <span class="probe-tag">Probe</span>
+          <span class="probe-chip tcd">
+            <svg
+              class="probe-ico"
+              viewBox="0 0 24 24"
+              width="15"
+              height="15"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path d="M4 12a8 8 0 0 1 8-8" />
+              <path d="M6.5 12a5.5 5.5 0 0 1 5.5-5.5" />
+              <path d="M9 12a3 3 0 0 1 3-3" />
+              <circle
+                cx="12"
+                cy="12"
+                r="1.3"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+            <span>Transcranial <b>2–3 MHz</b></span>
+          </span>
+          <span class="probe-chip cca">
+            <svg
+              class="probe-ico"
+              viewBox="0 0 24 24"
+              width="15"
+              height="15"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path d="M4 12a8 8 0 0 1 8-8" />
+              <path d="M6.5 12a5.5 5.5 0 0 1 5.5-5.5" />
+              <path d="M9 12a3 3 0 0 1 3-3" />
+              <circle
+                cx="12"
+                cy="12"
+                r="1.3"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+            <span>Carotid <b>5–10 MHz</b></span>
+          </span>
+        </div>
+      </div>
+
+      <!-- ======================== SECTION: Reference Diagram ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label"
+            >Vessel Reference Diagram（血管示意圖）</span
+          >
+        </div>
+        <div class="svg-wrap">
+          <svg
+            viewBox="0 0 1000 1180"
+            xmlns="http://www.w3.org/2000/svg"
+            class="ref-svg"
+          >
+            <!-- ===== Anatomy (schematic) ===== -->
+            <g transform="translate(-175,-91) scale(1.35)">
+              <!-- Circle of Willis + basilar (brand) -->
+              <path
+                d="M 455 130 Q 500 108 545 130"
+                class="dg-vessel"
+                style="stroke: #7c3aed"
+              />
+              <path
+                d="M 455 130 Q 438 178 432 240"
+                class="dg-vessel"
+                style="stroke: #7c3aed"
+              />
+              <path
+                d="M 545 130 Q 562 178 568 240"
+                class="dg-vessel"
+                style="stroke: #7c3aed"
+              />
+              <path
+                d="M 432 240 Q 448 292 462 325 Q 482 342 500 348"
+                class="dg-vessel"
+                style="stroke: #db2777"
+              />
+              <path
+                d="M 568 240 Q 552 292 538 325 Q 518 342 500 348"
+                class="dg-vessel"
+                style="stroke: #db2777"
+              />
+              <path
+                d="M 500 348 L 500 410"
+                class="dg-vessel"
+                style="stroke: #16a34a"
+              />
+              <!-- M1 (MCA) -->
+              <path
+                d="M 432 240 Q 393 236 355 235"
+                class="dg-vessel"
+                style="stroke: #2563eb"
+              />
+              <path
+                d="M 568 240 Q 607 236 645 235"
+                class="dg-vessel"
+                style="stroke: #2563eb"
+              />
+              <!-- OA (ophthalmic) + orbit hint -->
+              <path
+                d="M 432 240 Q 418 198 410 168"
+                class="dg-vessel"
+                style="stroke: #f97316"
+              />
+              <path
+                d="M 568 240 Q 582 198 590 168"
+                class="dg-vessel"
+                style="stroke: #f97316"
+              />
+              <circle cx="405" cy="156" r="7" class="dg-eye" />
+              <circle cx="595" cy="156" r="7" class="dg-eye" />
+              <!-- Vertebral artery: extracranial → intracranial → basilar confluence -->
+              <path
+                d="M 500 410 Q 486 418 468 430 L 400 690"
+                class="dg-vessel"
+                style="stroke: #0d9488"
+              />
+              <path
+                d="M 500 410 Q 514 418 532 430 L 600 690"
+                class="dg-vessel"
+                style="stroke: #0d9488"
+              />
+              <!-- ICA (siphon → cervical → bifurcation) -->
+              <path
+                d="M 432 240 L 440 520 L 442 610"
+                class="dg-vessel"
+                style="stroke: #ca8a04"
+              />
+              <path
+                d="M 568 240 L 560 520 L 558 610"
+                class="dg-vessel"
+                style="stroke: #ca8a04"
+              />
+              <!-- ECA (external carotid) -->
+              <path
+                d="M 442 610 Q 462 585 478 560 Q 486 545 488 528"
+                class="dg-vessel"
+                style="stroke: #0891b2"
+              />
+              <path
+                d="M 558 610 Q 538 585 522 560 Q 514 545 512 528"
+                class="dg-vessel"
+                style="stroke: #0891b2"
+              />
+              <!-- CCA (common carotid trunk) -->
+              <path
+                d="M 442 610 L 447 700 L 449 768"
+                class="dg-vessel"
+                style="stroke: #dc2626"
+              />
+              <path
+                d="M 558 610 L 553 700 L 551 768"
+                class="dg-vessel"
+                style="stroke: #dc2626"
+              />
+            </g>
+            <!-- ===== Vessel nodes + linked input clusters ===== -->
+            <template v-for="n in diagramNodes" :key="n.id">
+              <line
+                :x1="
+                  n.side === 'l'
+                    ? n.cx
+                    : n.side === 'mid'
+                      ? n.cx + 88
+                      : n.cx + 176
+                "
+                :y1="n.side === 'mid' ? n.cy : n.cy + 28"
+                :x2="n.nx"
+                :y2="n.ny"
+                class="dg-leader"
+                :style="{ stroke: n.color }"
+              />
+              <circle
+                :cx="n.nx"
+                :cy="n.ny"
+                r="5"
+                class="dg-node"
+                :style="{ fill: n.color }"
+              />
+              <foreignObject :x="n.cx" :y="n.cy" width="176" height="104">
+                <div
+                  class="dg-cluster"
+                  xmlns="http://www.w3.org/1999/xhtml"
+                  :style="{ borderLeftColor: n.color }"
+                >
+                  <div class="dg-cluster-title">{{ n.label }}</div>
+                  <div class="dg-inputs">
+                    <label v-for="f in n.fields" :key="f">
+                      <span>{{ f.toUpperCase() }}</span>
+                      <input v-model="n.m[f]" inputmode="decimal" />
+                    </label>
+                  </div>
                 </div>
+              </foreignObject>
+            </template>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ======================== SECTION: Ophthalmic ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label"
+            >Ophthalmic Artery（眼動脈）— PS/ED/RI/MV</span
+          >
+        </div>
+        <div class="vessel-grid">
+          <div class="vessel-block">
+            <span class="vessel-title">Right OA</span>
+            <div class="vessel-dims">
+              <label>PS <input v-model="tc.oa.right.ps" /></label>
+              <label>ED <input v-model="tc.oa.right.ed" /></label>
+              <label>RI <input v-model="tc.oa.right.ri" /></label>
+              <label>MV <input v-model="tc.oa.right.mv" /></label>
+            </div>
+            <label class="field small-field"
+              ><span class="field-label">Flow direction</span>
+              <select v-model="oaFlow.right">
+                <option v-for="o in flowOptions" :key="o.v" :value="o.v">
+                  {{ o.l }}
+                </option>
+              </select>
+            </label>
+            <label class="turb-check"
+              ><input type="checkbox" v-model="tc.oa.right.turb" />
+              Turbulent</label
+            >
+          </div>
+          <div class="vessel-block">
+            <span class="vessel-title">Left OA</span>
+            <div class="vessel-dims">
+              <label>PS <input v-model="tc.oa.left.ps" /></label>
+              <label>ED <input v-model="tc.oa.left.ed" /></label>
+              <label>RI <input v-model="tc.oa.left.ri" /></label>
+              <label>MV <input v-model="tc.oa.left.mv" /></label>
+            </div>
+            <label class="field small-field"
+              ><span class="field-label">Flow direction</span>
+              <select v-model="oaFlow.left">
+                <option v-for="o in flowOptions" :key="o.v" :value="o.v">
+                  {{ o.l }}
+                </option>
+              </select>
+            </label>
+            <label class="turb-check"
+              ><input type="checkbox" v-model="tc.oa.left.turb" />
+              Turbulent</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================== SECTION: A1/M1/P1 ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label"
+            >Anterior / Middle / Posterior Cerebral Arteries（A1・M1・P1）—
+            PS/ED/RI/MV</span
+          >
+        </div>
+        <div class="vessel-grid three-col">
+          <template
+            v-for="(vKey, idx) in [
+              ['a1', 'A1 (ACA)'],
+              ['m1', 'M1 (MCA)'],
+              ['p1', 'P1 (PCA)'],
+            ]"
+            :key="idx"
+          >
+            <div class="vessel-block">
+              <span class="vessel-title">Right {{ vKey[1] }}</span>
+              <div class="vessel-dims">
+                <label
+                  >PS <input v-model="(tc as any)[vKey[0]].right.ps"
+                /></label>
+                <label
+                  >ED <input v-model="(tc as any)[vKey[0]].right.ed"
+                /></label>
+                <label
+                  >RI <input v-model="(tc as any)[vKey[0]].right.ri"
+                /></label>
+                <label
+                  >MV <input v-model="(tc as any)[vKey[0]].right.mv"
+                /></label>
               </div>
-            </foreignObject>
+              <label class="turb-check"
+                ><input
+                  type="checkbox"
+                  v-model="(tc as any)[vKey[0]].right.turb"
+                />
+                Turbulent</label
+              >
+            </div>
+            <div class="vessel-block">
+              <span class="vessel-title">Left {{ vKey[1] }}</span>
+              <div class="vessel-dims">
+                <label
+                  >PS <input v-model="(tc as any)[vKey[0]].left.ps"
+                /></label>
+                <label
+                  >ED <input v-model="(tc as any)[vKey[0]].left.ed"
+                /></label>
+                <label
+                  >RI <input v-model="(tc as any)[vKey[0]].left.ri"
+                /></label>
+                <label
+                  >MV <input v-model="(tc as any)[vKey[0]].left.mv"
+                /></label>
+              </div>
+              <label class="turb-check"
+                ><input
+                  type="checkbox"
+                  v-model="(tc as any)[vKey[0]].left.turb"
+                />
+                Turbulent</label
+              >
+            </div>
           </template>
-        </svg>
-      </div>
-    </div>
-
-    <!-- ======================== SECTION: Ophthalmic ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label"
-          >Ophthalmic Artery（眼動脈）— PS/ED/RI/MV</span
-        >
-      </div>
-      <div class="vessel-grid">
-        <div class="vessel-block">
-          <span class="vessel-title">Right OA</span>
-          <div class="vessel-dims">
-            <label>PS <input v-model="tc.oa.right.ps" /></label>
-            <label>ED <input v-model="tc.oa.right.ed" /></label>
-            <label>RI <input v-model="tc.oa.right.ri" /></label>
-            <label>MV <input v-model="tc.oa.right.mv" /></label>
-          </div>
-          <label class="field small-field"
-            ><span class="field-label">Flow direction</span>
-            <select v-model="oaFlow.right">
-              <option v-for="o in flowOptions" :key="o.v" :value="o.v">
-                {{ o.l }}
-              </option>
-            </select>
-          </label>
-          <label class="turb-check"
-            ><input type="checkbox" v-model="tc.oa.right.turb" />
-            Turbulent</label
-          >
-        </div>
-        <div class="vessel-block">
-          <span class="vessel-title">Left OA</span>
-          <div class="vessel-dims">
-            <label>PS <input v-model="tc.oa.left.ps" /></label>
-            <label>ED <input v-model="tc.oa.left.ed" /></label>
-            <label>RI <input v-model="tc.oa.left.ri" /></label>
-            <label>MV <input v-model="tc.oa.left.mv" /></label>
-          </div>
-          <label class="field small-field"
-            ><span class="field-label">Flow direction</span>
-            <select v-model="oaFlow.left">
-              <option v-for="o in flowOptions" :key="o.v" :value="o.v">
-                {{ o.l }}
-              </option>
-            </select>
-          </label>
-          <label class="turb-check"
-            ><input type="checkbox" v-model="tc.oa.left.turb" />
-            Turbulent</label
-          >
         </div>
       </div>
-    </div>
 
-    <!-- ======================== SECTION: A1/M1/P1 ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label"
-          >Anterior / Middle / Posterior Cerebral Arteries（A1・M1・P1）—
-          PS/ED/RI/MV</span
-        >
-      </div>
-      <div class="vessel-grid three-col">
-        <template
-          v-for="(vKey, idx) in [
-            ['a1', 'A1 (ACA)'],
-            ['m1', 'M1 (MCA)'],
-            ['p1', 'P1 (PCA)'],
-          ]"
-          :key="idx"
-        >
+      <!-- ======================== SECTION: Vertebrobasilar (intracranial) ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label"
+            >Vertebrobasilar System — Intracranial（顱內椎基底動脈）—
+            PS/ED/RI/MV</span
+          >
+        </div>
+        <div class="vessel-grid">
           <div class="vessel-block">
-            <span class="vessel-title">Right {{ vKey[1] }}</span>
+            <span class="vessel-title">Right VA (intracranial)</span>
             <div class="vessel-dims">
-              <label
-                >PS <input v-model="(tc as any)[vKey[0]].right.ps"
-              /></label>
-              <label
-                >ED <input v-model="(tc as any)[vKey[0]].right.ed"
-              /></label>
-              <label
-                >RI <input v-model="(tc as any)[vKey[0]].right.ri"
-              /></label>
-              <label
-                >MV <input v-model="(tc as any)[vKey[0]].right.mv"
-              /></label>
+              <label>PS <input v-model="tc.vaIntra.right.ps" /></label>
+              <label>ED <input v-model="tc.vaIntra.right.ed" /></label>
+              <label>RI <input v-model="tc.vaIntra.right.ri" /></label>
+              <label>MV <input v-model="tc.vaIntra.right.mv" /></label>
             </div>
             <label class="turb-check"
-              ><input
-                type="checkbox"
-                v-model="(tc as any)[vKey[0]].right.turb"
-              />
+              ><input type="checkbox" v-model="tc.vaIntra.right.turb" />
               Turbulent</label
             >
           </div>
           <div class="vessel-block">
-            <span class="vessel-title">Left {{ vKey[1] }}</span>
+            <span class="vessel-title">Left VA (intracranial)</span>
             <div class="vessel-dims">
-              <label>PS <input v-model="(tc as any)[vKey[0]].left.ps" /></label>
-              <label>ED <input v-model="(tc as any)[vKey[0]].left.ed" /></label>
-              <label>RI <input v-model="(tc as any)[vKey[0]].left.ri" /></label>
-              <label>MV <input v-model="(tc as any)[vKey[0]].left.mv" /></label>
+              <label>PS <input v-model="tc.vaIntra.left.ps" /></label>
+              <label>ED <input v-model="tc.vaIntra.left.ed" /></label>
+              <label>RI <input v-model="tc.vaIntra.left.ri" /></label>
+              <label>MV <input v-model="tc.vaIntra.left.mv" /></label>
             </div>
             <label class="turb-check"
-              ><input
-                type="checkbox"
-                v-model="(tc as any)[vKey[0]].left.turb"
-              />
+              ><input type="checkbox" v-model="tc.vaIntra.left.turb" />
               Turbulent</label
             >
           </div>
-        </template>
+          <div class="vessel-block ba-block">
+            <span class="vessel-title">BA (Basilar, midline)</span>
+            <div class="vessel-dims">
+              <label>PS <input v-model="tc.ba.ps" /></label>
+              <label>ED <input v-model="tc.ba.ed" /></label>
+              <label>RI <input v-model="tc.ba.ri" /></label>
+              <label>MV <input v-model="tc.ba.mv" /></label>
+            </div>
+            <label class="turb-check"
+              ><input type="checkbox" v-model="tc.ba.turb" /> Turbulent</label
+            >
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- ======================== SECTION: Vertebrobasilar (intracranial) ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label"
-          >Vertebrobasilar System — Intracranial（顱內椎基底動脈）—
-          PS/ED/RI/MV</span
-        >
-      </div>
-      <div class="vessel-grid">
-        <div class="vessel-block">
-          <span class="vessel-title">Right VA (intracranial)</span>
-          <div class="vessel-dims">
-            <label>PS <input v-model="tc.vaIntra.right.ps" /></label>
-            <label>ED <input v-model="tc.vaIntra.right.ed" /></label>
-            <label>RI <input v-model="tc.vaIntra.right.ri" /></label>
-            <label>MV <input v-model="tc.vaIntra.right.mv" /></label>
-          </div>
-          <label class="turb-check"
-            ><input type="checkbox" v-model="tc.vaIntra.right.turb" />
-            Turbulent</label
+      <!-- ======================== SECTION: Extracranial Carotid ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label"
+            >Extracranial Carotid System（顱外頸動脈）— PS/ED/RI/FV</span
           >
         </div>
-        <div class="vessel-block">
-          <span class="vessel-title">Left VA (intracranial)</span>
-          <div class="vessel-dims">
-            <label>PS <input v-model="tc.vaIntra.left.ps" /></label>
-            <label>ED <input v-model="tc.vaIntra.left.ed" /></label>
-            <label>RI <input v-model="tc.vaIntra.left.ri" /></label>
-            <label>MV <input v-model="tc.vaIntra.left.mv" /></label>
-          </div>
-          <label class="turb-check"
-            ><input type="checkbox" v-model="tc.vaIntra.left.turb" />
-            Turbulent</label
+        <div class="vessel-grid">
+          <template
+            v-for="(vKey, idx) in [
+              ['cca', 'CCA'],
+              ['bif', 'BIF'],
+              ['ica', 'ICA'],
+              ['eca', 'ECA'],
+            ]"
+            :key="idx"
           >
+            <div class="vessel-block">
+              <span class="vessel-title">Right {{ vKey[1] }}</span>
+              <div class="vessel-dims">
+                <label
+                  >PS <input v-model="(ca as any)[vKey[0]].right.ps"
+                /></label>
+                <label
+                  >ED <input v-model="(ca as any)[vKey[0]].right.ed"
+                /></label>
+                <label
+                  >RI <input v-model="(ca as any)[vKey[0]].right.ri"
+                /></label>
+                <label
+                  >FV <input v-model="(ca as any)[vKey[0]].right.fv"
+                /></label>
+              </div>
+              <label class="turb-check"
+                ><input
+                  type="checkbox"
+                  v-model="(ca as any)[vKey[0]].right.turb"
+                />
+                Turbulent</label
+              >
+            </div>
+            <div class="vessel-block">
+              <span class="vessel-title">Left {{ vKey[1] }}</span>
+              <div class="vessel-dims">
+                <label
+                  >PS <input v-model="(ca as any)[vKey[0]].left.ps"
+                /></label>
+                <label
+                  >ED <input v-model="(ca as any)[vKey[0]].left.ed"
+                /></label>
+                <label
+                  >RI <input v-model="(ca as any)[vKey[0]].left.ri"
+                /></label>
+                <label
+                  >FV <input v-model="(ca as any)[vKey[0]].left.fv"
+                /></label>
+              </div>
+              <label class="turb-check"
+                ><input
+                  type="checkbox"
+                  v-model="(ca as any)[vKey[0]].left.turb"
+                />
+                Turbulent</label
+              >
+            </div>
+          </template>
         </div>
-        <div class="vessel-block ba-block">
-          <span class="vessel-title">BA (Basilar, midline)</span>
-          <div class="vessel-dims">
-            <label>PS <input v-model="tc.ba.ps" /></label>
-            <label>ED <input v-model="tc.ba.ed" /></label>
-            <label>RI <input v-model="tc.ba.ri" /></label>
-            <label>MV <input v-model="tc.ba.mv" /></label>
-          </div>
-          <label class="turb-check"
-            ><input type="checkbox" v-model="tc.ba.turb" /> Turbulent</label
-          >
-        </div>
-      </div>
-    </div>
 
-    <!-- ======================== SECTION: Extracranial Carotid ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label"
-          >Extracranial Carotid System（顱外頸動脈）— PS/ED/RI/FV</span
-        >
-      </div>
-      <div class="vessel-grid">
-        <template
-          v-for="(vKey, idx) in [
-            ['cca', 'CCA'],
-            ['bif', 'BIF'],
-            ['ica', 'ICA'],
-            ['eca', 'ECA'],
-          ]"
-          :key="idx"
-        >
+        <div class="sub-section-label">
+          Extracranial Vertebral Artery（顱外椎動脈）
+        </div>
+        <div class="vessel-grid">
           <div class="vessel-block">
-            <span class="vessel-title">Right {{ vKey[1] }}</span>
+            <span class="vessel-title">Right VA (extracranial)</span>
             <div class="vessel-dims">
-              <label
-                >PS <input v-model="(ca as any)[vKey[0]].right.ps"
-              /></label>
-              <label
-                >ED <input v-model="(ca as any)[vKey[0]].right.ed"
-              /></label>
-              <label
-                >RI <input v-model="(ca as any)[vKey[0]].right.ri"
-              /></label>
-              <label
-                >FV <input v-model="(ca as any)[vKey[0]].right.fv"
-              /></label>
+              <label>PS <input v-model="ca.vaExtra.right.ps" /></label>
+              <label>ED <input v-model="ca.vaExtra.right.ed" /></label>
+              <label>RI <input v-model="ca.vaExtra.right.ri" /></label>
+              <label>FV <input v-model="ca.vaExtra.right.fv" /></label>
             </div>
             <label class="turb-check"
-              ><input
-                type="checkbox"
-                v-model="(ca as any)[vKey[0]].right.turb"
-              />
+              ><input type="checkbox" v-model="ca.vaExtra.right.turb" />
               Turbulent</label
             >
           </div>
           <div class="vessel-block">
-            <span class="vessel-title">Left {{ vKey[1] }}</span>
+            <span class="vessel-title">Left VA (extracranial)</span>
             <div class="vessel-dims">
-              <label>PS <input v-model="(ca as any)[vKey[0]].left.ps" /></label>
-              <label>ED <input v-model="(ca as any)[vKey[0]].left.ed" /></label>
-              <label>RI <input v-model="(ca as any)[vKey[0]].left.ri" /></label>
-              <label>FV <input v-model="(ca as any)[vKey[0]].left.fv" /></label>
+              <label>PS <input v-model="ca.vaExtra.left.ps" /></label>
+              <label>ED <input v-model="ca.vaExtra.left.ed" /></label>
+              <label>RI <input v-model="ca.vaExtra.left.ri" /></label>
+              <label>FV <input v-model="ca.vaExtra.left.fv" /></label>
             </div>
             <label class="turb-check"
-              ><input
-                type="checkbox"
-                v-model="(ca as any)[vKey[0]].left.turb"
-              />
+              ><input type="checkbox" v-model="ca.vaExtra.left.turb" />
               Turbulent</label
             >
           </div>
-        </template>
+        </div>
       </div>
 
-      <div class="sub-section-label">
-        Extracranial Vertebral Artery（顱外椎動脈）
-      </div>
-      <div class="vessel-grid">
-        <div class="vessel-block">
-          <span class="vessel-title">Right VA (extracranial)</span>
-          <div class="vessel-dims">
-            <label>PS <input v-model="ca.vaExtra.right.ps" /></label>
-            <label>ED <input v-model="ca.vaExtra.right.ed" /></label>
-            <label>RI <input v-model="ca.vaExtra.right.ri" /></label>
-            <label>FV <input v-model="ca.vaExtra.right.fv" /></label>
-          </div>
-          <label class="turb-check"
-            ><input type="checkbox" v-model="ca.vaExtra.right.turb" />
-            Turbulent</label
+      <!-- ======================== SECTION: Computed Ratios ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label"
+            >Computed Ratios &amp; Grading（自動計算）</span
           >
         </div>
-        <div class="vessel-block">
-          <span class="vessel-title">Left VA (extracranial)</span>
-          <div class="vessel-dims">
-            <label>PS <input v-model="ca.vaExtra.left.ps" /></label>
-            <label>ED <input v-model="ca.vaExtra.left.ed" /></label>
-            <label>RI <input v-model="ca.vaExtra.left.ri" /></label>
-            <label>FV <input v-model="ca.vaExtra.left.fv" /></label>
+        <div class="ratio-grid">
+          <div class="ratio-card">
+            <div class="ratio-head">
+              <span class="ratio-name">MCA/ICA mean-V</span>
+              <span class="ratio-range">NL &lt; 3.0</span>
+            </div>
+            <div class="ratio-tiles">
+              <div :class="['ratio-tile', flagClass(mcaIcaRight, 0, 3)]">
+                <span class="tile-side">Rt</span>
+                <span class="tile-val">{{ fmt(mcaIcaRight) }}</span>
+              </div>
+              <div :class="['ratio-tile', flagClass(mcaIcaLeft, 0, 3)]">
+                <span class="tile-side">Lt</span>
+                <span class="tile-val">{{ fmt(mcaIcaLeft) }}</span>
+              </div>
+            </div>
+            <div class="ratio-note">
+              Rt {{ lindegaardClass(mcaIcaRight) }} · Lt
+              {{ lindegaardClass(mcaIcaLeft) }}
+            </div>
           </div>
-          <label class="turb-check"
-            ><input type="checkbox" v-model="ca.vaExtra.left.turb" />
-            Turbulent</label
+
+          <div class="ratio-card">
+            <div class="ratio-head">
+              <span class="ratio-name">ICA/CCA PS</span>
+              <span class="ratio-range">NL &lt; 1.5</span>
+            </div>
+            <div class="ratio-tiles">
+              <div :class="['ratio-tile', flagClass(icaCcaRight, 0, 1.5)]">
+                <span class="tile-side">Rt</span>
+                <span class="tile-val">{{ fmt(icaCcaRight) }}</span>
+              </div>
+              <div :class="['ratio-tile', flagClass(icaCcaLeft, 0, 1.5)]">
+                <span class="tile-side">Lt</span>
+                <span class="tile-val">{{ fmt(icaCcaLeft) }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ratio-card">
+            <div class="ratio-head">
+              <span class="ratio-name">Bil CCA PS</span>
+              <span class="ratio-range">NL 0.7–1.3</span>
+            </div>
+            <div class="ratio-tiles">
+              <div :class="['ratio-tile', flagClass(bilCca, 0.7, 1.3)]">
+                <span class="tile-side">R / L</span>
+                <span class="tile-val">{{ fmt(bilCca, 2) }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ratio-card grade-card">
+            <div class="ratio-head">
+              <span class="ratio-name">ICA Stenosis Grade</span>
+              <span class="ratio-range">NASCET</span>
+            </div>
+            <div class="ratio-tiles">
+              <div class="grade-tile">
+                <span class="tile-side">Rt</span>
+                <span class="grade-text">{{ gradeRight }}</span>
+              </div>
+              <div class="grade-tile">
+                <span class="tile-side">Lt</span>
+                <span class="grade-text">{{ gradeLeft }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================== SECTION: ICA Occlusion Assessment ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label"
+            >ICA Occlusion / Pseudo-occlusion Assessment（阻塞評估）</span
           >
         </div>
-      </div>
-    </div>
-
-    <!-- ======================== SECTION: Computed Ratios ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label"
-          >Computed Ratios &amp; Grading（自動計算）</span
-        >
-      </div>
-      <div class="ratio-grid">
-        <div class="ratio-card">
-          <div class="ratio-head">
-            <span class="ratio-name">MCA/ICA mean-V</span>
-            <span class="ratio-range">NL &lt; 3.0</span>
-          </div>
-          <div class="ratio-tiles">
-            <div :class="['ratio-tile', flagClass(mcaIcaRight, 0, 3)]">
-              <span class="tile-side">Rt</span>
-              <span class="tile-val">{{ fmt(mcaIcaRight) }}</span>
-            </div>
-            <div :class="['ratio-tile', flagClass(mcaIcaLeft, 0, 3)]">
-              <span class="tile-side">Lt</span>
-              <span class="tile-val">{{ fmt(mcaIcaLeft) }}</span>
-            </div>
-          </div>
-          <div class="ratio-note">
-            Rt {{ lindegaardClass(mcaIcaRight) }} · Lt
-            {{ lindegaardClass(mcaIcaLeft) }}
-          </div>
-        </div>
-
-        <div class="ratio-card">
-          <div class="ratio-head">
-            <span class="ratio-name">ICA/CCA PS</span>
-            <span class="ratio-range">NL &lt; 1.5</span>
-          </div>
-          <div class="ratio-tiles">
-            <div :class="['ratio-tile', flagClass(icaCcaRight, 0, 1.5)]">
-              <span class="tile-side">Rt</span>
-              <span class="tile-val">{{ fmt(icaCcaRight) }}</span>
-            </div>
-            <div :class="['ratio-tile', flagClass(icaCcaLeft, 0, 1.5)]">
-              <span class="tile-side">Lt</span>
-              <span class="tile-val">{{ fmt(icaCcaLeft) }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ratio-card">
-          <div class="ratio-head">
-            <span class="ratio-name">Bil CCA PS</span>
-            <span class="ratio-range">NL 0.7–1.3</span>
-          </div>
-          <div class="ratio-tiles">
-            <div :class="['ratio-tile', flagClass(bilCca, 0.7, 1.3)]">
-              <span class="tile-side">R / L</span>
-              <span class="tile-val">{{ fmt(bilCca, 2) }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="ratio-card grade-card">
-          <div class="ratio-head">
-            <span class="ratio-name">ICA Stenosis Grade</span>
-            <span class="ratio-range">NASCET</span>
-          </div>
-          <div class="ratio-tiles">
-            <div class="grade-tile">
-              <span class="tile-side">Rt</span>
-              <span class="grade-text">{{ gradeRight }}</span>
-            </div>
-            <div class="grade-tile">
-              <span class="tile-side">Lt</span>
-              <span class="grade-text">{{ gradeLeft }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ======================== SECTION: ICA Occlusion Assessment ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label"
-          >ICA Occlusion / Pseudo-occlusion Assessment（阻塞評估）</span
-        >
-      </div>
-      <div class="field-row">
-        <label class="field">
-          <span class="field-label">Right ICA status</span>
-          <select v-model="icaStatus.right">
-            <option v-for="o in icaStatusOptions" :key="o.v" :value="o.v">
-              {{ o.l }}
-            </option>
-          </select>
-        </label>
-        <label class="field">
-          <span class="field-label">Left ICA status</span>
-          <select v-model="icaStatus.left">
-            <option v-for="o in icaStatusOptions" :key="o.v" :value="o.v">
-              {{ o.l }}
-            </option>
-          </select>
-        </label>
-      </div>
-      <div class="criteria-box">
-        <div class="criteria-title">Reference criteria</div>
-        <div class="crit-item">
-          <span class="crit-label">Pseudo-occlusion</span>
-          <ul class="crit-list">
-            <li>B-mode thrombus with a possibly visible narrowed patent lumen</li>
-            <li>String-sign / punctate color flash</li>
-            <li>
-              Markedly decreased velocity ± high resistance; slightly elevated
-              turbulent flow with prolonged acceleration time
-            </li>
-          </ul>
-        </div>
-        <div class="crit-item">
-          <span class="crit-label">Total occlusion</span>
-          <ul class="crit-list">
-            <li>B-mode thrombus filling the whole lumen</li>
-            <li>No color signal (low-flow / high-sensitivity setting)</li>
-            <li>No Doppler waveform</li>
-          </ul>
-        </div>
-        <div class="crit-item">
-          <span class="crit-label">Recent occlusion</span>
-          <ul class="crit-list">
-            <li>Homogeneous fresh thrombus (may move with pulsation)</li>
-            <li>
-              Possible spontaneous echo contrast proximal to the occlusion; may
-              be hypoechogenic
-            </li>
-            <li>No color signal</li>
-            <li>
-              No waveform; may show a back-and-forth pattern proximal to the
-              occlusion
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- ======================== SECTION: B-mode Plaques ======================== -->
-    <div class="cr-section">
-      <div class="section-header section-header-row">
-        <span class="section-label">B-mode Plaque Findings（斑塊型態）</span>
-        <button class="btn-add" @click="addPlaque">+ Add Plaque</button>
-      </div>
-      <div v-for="p in plaques" :key="p.id" class="plaque-card">
-        <div class="plaque-header">
-          <span class="plaque-title">Plaque {{ plaques.indexOf(p) + 1 }}</span>
-          <button class="btn-remove" @click="removePlaque(p.id)">✕</button>
-        </div>
-        <div class="plaque-grid">
-          <label class="field"
-            ><span class="field-label">Side</span>
-            <select v-model="p.side">
-              <option value="right">Right</option>
-              <option value="left">Left</option>
-            </select>
-          </label>
-          <label class="field"
-            ><span class="field-label">Site</span>
-            <input v-model="p.site" placeholder="e.g. ICA bulb, BIF, mid CCA" />
-          </label>
-          <label class="field"
-            ><span class="field-label">Distribution</span>
-            <select v-model="p.distribution">
-              <option v-for="o in distributionOptions" :key="o.v" :value="o.v">
+        <div class="field-row">
+          <label class="field">
+            <span class="field-label">Right ICA status</span>
+            <select v-model="icaStatus.right">
+              <option v-for="o in icaStatusOptions" :key="o.v" :value="o.v">
                 {{ o.l }}
               </option>
             </select>
           </label>
-          <label class="field"
-            ><span class="field-label">Internal (內徑)</span>
-            <select v-model="p.internalPattern">
-              <option v-for="o in internalOptions" :key="o.v" :value="o.v">
+          <label class="field">
+            <span class="field-label">Left ICA status</span>
+            <select v-model="icaStatus.left">
+              <option v-for="o in icaStatusOptions" :key="o.v" :value="o.v">
                 {{ o.l }}
               </option>
             </select>
-          </label>
-          <label class="field"
-            ><span class="field-label">Appearance (外觀)</span>
-            <select v-model="p.appearance">
-              <option v-for="o in appearanceOptions" :key="o.v" :value="o.v">
-                {{ o.l }}
-              </option>
-            </select>
-          </label>
-          <label class="field"
-            ><span class="field-label">Diameter (mm)</span>
-            <input v-model="p.diameter" placeholder="e.g. 2.3" />
-          </label>
-          <label class="field"
-            ><span class="field-label">Stenosis (D) %</span>
-            <input v-model="p.stenosisD" placeholder="diameter %" />
-          </label>
-          <label class="field"
-            ><span class="field-label">Stenosis (A) %</span>
-            <input v-model="p.stenosisA" placeholder="area %" />
-          </label>
-          <label class="field"
-            ><span class="field-label">Grade (from Area %)</span>
-            <input
-              :value="areaStenosisGrade(p.stenosisA)"
-              readonly
-              class="grade-output"
-            />
           </label>
         </div>
+        <div class="criteria-box">
+          <div class="criteria-title">Reference criteria</div>
+          <div class="crit-item">
+            <span class="crit-label">Pseudo-occlusion</span>
+            <ul class="crit-list">
+              <li>
+                B-mode thrombus with a possibly visible narrowed patent lumen
+              </li>
+              <li>String-sign / punctate color flash</li>
+              <li>
+                Markedly decreased velocity ± high resistance; slightly elevated
+                turbulent flow with prolonged acceleration time
+              </li>
+            </ul>
+          </div>
+          <div class="crit-item">
+            <span class="crit-label">Total occlusion</span>
+            <ul class="crit-list">
+              <li>B-mode thrombus filling the whole lumen</li>
+              <li>No color signal (low-flow / high-sensitivity setting)</li>
+              <li>No Doppler waveform</li>
+            </ul>
+          </div>
+          <div class="crit-item">
+            <span class="crit-label">Recent occlusion</span>
+            <ul class="crit-list">
+              <li>Homogeneous fresh thrombus (may move with pulsation)</li>
+              <li>
+                Possible spontaneous echo contrast proximal to the occlusion;
+                may be hypoechogenic
+              </li>
+              <li>No color signal</li>
+              <li>
+                No waveform; may show a back-and-forth pattern proximal to the
+                occlusion
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- ======================== SECTION: Other Findings ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label">Other Findings（其他發現）</span>
+      <!-- ======================== SECTION: B-mode Plaques ======================== -->
+      <div class="cr-section">
+        <div class="section-header section-header-row">
+          <span class="section-label">B-mode Plaque Findings（斑塊型態）</span>
+          <button class="btn-add" @click="addPlaque">+ Add Plaque</button>
+        </div>
+        <div v-for="p in plaques" :key="p.id" class="plaque-card">
+          <div class="plaque-header">
+            <span class="plaque-title"
+              >Plaque {{ plaques.indexOf(p) + 1 }}</span
+            >
+            <button class="btn-remove" @click="removePlaque(p.id)">✕</button>
+          </div>
+          <div class="plaque-grid">
+            <label class="field"
+              ><span class="field-label">Side</span>
+              <select v-model="p.side">
+                <option value="right">Right</option>
+                <option value="left">Left</option>
+              </select>
+            </label>
+            <label class="field"
+              ><span class="field-label">Site</span>
+              <input
+                v-model="p.site"
+                placeholder="e.g. ICA bulb, BIF, mid CCA"
+              />
+            </label>
+            <label class="field"
+              ><span class="field-label">Distribution</span>
+              <select v-model="p.distribution">
+                <option
+                  v-for="o in distributionOptions"
+                  :key="o.v"
+                  :value="o.v"
+                >
+                  {{ o.l }}
+                </option>
+              </select>
+            </label>
+            <label class="field"
+              ><span class="field-label">Internal (內徑)</span>
+              <select v-model="p.internalPattern">
+                <option v-for="o in internalOptions" :key="o.v" :value="o.v">
+                  {{ o.l }}
+                </option>
+              </select>
+            </label>
+            <label class="field"
+              ><span class="field-label">Appearance (外觀)</span>
+              <select v-model="p.appearance">
+                <option v-for="o in appearanceOptions" :key="o.v" :value="o.v">
+                  {{ o.l }}
+                </option>
+              </select>
+            </label>
+            <label class="field"
+              ><span class="field-label">Diameter (mm)</span>
+              <input v-model="p.diameter" placeholder="e.g. 2.3" />
+            </label>
+            <label class="field"
+              ><span class="field-label">Stenosis (D) %</span>
+              <input v-model="p.stenosisD" placeholder="diameter %" />
+            </label>
+            <label class="field"
+              ><span class="field-label">Stenosis (A) %</span>
+              <input v-model="p.stenosisA" placeholder="area %" />
+            </label>
+            <label class="field"
+              ><span class="field-label">Grade (from Area %)</span>
+              <input
+                :value="areaStenosisGrade(p.stenosisA)"
+                readonly
+                class="grade-output"
+              />
+            </label>
+          </div>
+        </div>
       </div>
-      <textarea
-        v-model="otherFindings"
-        rows="3"
-        placeholder="Any additional findings..."
-      ></textarea>
-    </div>
 
-    <!-- ======================== SECTION: Auto Interpretation ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label"
-          >Auto-generated Interpretation（自動解讀）</span
-        >
+      <!-- ======================== SECTION: Other Findings ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label">Other Findings（其他發現）</span>
+        </div>
+        <textarea
+          v-model="otherFindings"
+          rows="3"
+          placeholder="Any additional findings..."
+        ></textarea>
       </div>
-      <ol class="interp-list">
-        <li v-for="(line, i) in interpretation" :key="i">
-          {{ line.replace(/^\d+\)\s*/, "") }}
-        </li>
-      </ol>
-      <button class="btn-add" @click="useAutoInterpretation">
-        ↓ Copy into Impression
-      </button>
-    </div>
 
-    <!-- ======================== SECTION: Impression ======================== -->
-    <div class="cr-section">
-      <div class="section-header">
-        <span class="section-label">Impression（印象／結論）</span>
+      <!-- ======================== SECTION: Auto Interpretation ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label"
+            >Auto-generated Interpretation（自動解讀）</span
+          >
+        </div>
+        <ol class="interp-list">
+          <li v-for="(line, i) in interpretation" :key="i">
+            {{ line.replace(/^\d+\)\s*/, "") }}
+          </li>
+        </ol>
+        <button class="btn-add" @click="useAutoInterpretation">
+          ↓ Copy into Impression
+        </button>
       </div>
-      <textarea
-        v-model="impression"
-        rows="5"
-        placeholder="Editable final impression — click 'Copy into Impression' above to prefill from the auto-generated interpretation."
-      ></textarea>
-    </div>
 
-    <!-- ======================== ACTIONS ======================== -->
-    <div class="cr-actions">
-      <button class="btn-view" @click="showResults = !showResults">
-        {{ showResults ? "收起報告" : "產生報告" }}
-      </button>
-      <button class="btn-copy" @click="copyReport">
-        {{ copied ? "已複製 ✓" : "複製 Markdown 報告" }}
-      </button>
-      <button class="btn-reset" @click="reset">重置</button>
-    </div>
+      <!-- ======================== SECTION: Impression ======================== -->
+      <div class="cr-section">
+        <div class="section-header">
+          <span class="section-label">Impression（印象／結論）</span>
+        </div>
+        <textarea
+          v-model="impression"
+          rows="5"
+          placeholder="Editable final impression — click 'Copy into Impression' above to prefill from the auto-generated interpretation."
+        ></textarea>
+      </div>
 
-    <div v-if="showResults" class="report-output">
-      <div class="output-header">報告內容 (Report Output)</div>
-      <pre class="output-body">{{ generateReport() }}</pre>
+      <!-- ======================== ACTIONS ======================== -->
+      <div class="cr-actions">
+        <button class="btn-view" @click="showResults = !showResults">
+          {{ showResults ? "收起報告" : "產生報告" }}
+        </button>
+        <button class="btn-copy" @click="copyReport">
+          {{ copied ? "已複製 ✓" : "複製 Markdown 報告" }}
+        </button>
+        <button class="btn-reset" @click="reset">重置</button>
+      </div>
+
+      <div v-if="showResults" class="report-output">
+        <div class="output-header">報告內容 (Report Output)</div>
+        <pre class="output-body">{{ generateReport() }}</pre>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.carotid-report {
+.cdr-wrap {
   max-width: 920px;
   margin: 0 auto;
+}
+.carotid-report {
   padding: 2rem 0 3rem;
   font-size: 0.9rem;
 }
@@ -1966,5 +2323,62 @@ textarea:focus {
   .grade-card {
     grid-column: span 1;
   }
+  .tab-label {
+    font-size: 0.9rem;
+  }
+  .tab-sub {
+    font-size: 0.72rem;
+  }
+}
+
+/* ── Tab bar ────────────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+.tab-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.tab-btn:hover {
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}
+.tab-btn.active {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+.tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
+.tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
 }
 </style>

@@ -3,8 +3,7 @@ layout: doc
 title: 濕疹鑑別診斷 Differential Diagnosis of Eczema
 ---
 
-# 濕疹鑑別診斷
-**Differential Diagnosis of Eczema**
+# 濕疹鑑別診斷 **Differential Diagnosis of Eczema**
 
 > **核心概念**：「濕疹（eczema）」非獨立疾病，而是一組以**搔癢、紅斑、滲出、脫屑**為共同表現的皮膚炎症候群。臨床上須系統性排除各種原因，才能確立診斷與治療方向。
 

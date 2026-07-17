@@ -3,9 +3,7 @@ layout: doc
 title: 水疱疾病鑑別診斷 Differential Diagnosis of Vesicular Lesions
 ---
 
-# 水疱疾病鑑別診斷
-
-**Differential Diagnosis of Vesicular Lesions**
+# 水疱疾病鑑別診斷 **Differential Diagnosis of Vesicular Lesions**
 
 > **核心概念**：水疱（vesicle，< 0.5 cm）與大水疱（bulla，≥ 0.5 cm）的鑑別，需結合**分布形態、伴隨症狀、發病速度、年齡層**綜合判斷。本文以伴隨症狀為主軸，建立臨床思考路徑。
 

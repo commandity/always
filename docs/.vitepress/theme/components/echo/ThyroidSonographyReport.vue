@@ -336,423 +336,437 @@ function reset() {
 </script>
 
 <template>
-  <div class="thyro-report">
-    <!-- Header -->
-    <!-- <div class="tr-header">
+  <div class="tsr-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active">
+        <span class="tab-label">甲狀腺超音波報告</span>
+        <span class="tab-sub">Thyroid Sonography Report</span>
+      </button>
+    </div>
+    <div class="thyro-report">
+      <!-- Header -->
+      <!-- <div class="tr-header">
       <div class="header-title">
         <h2 class="title">甲狀腺及頸部超音波檢查報告</h2>
         <p class="subtitle">Thyroid &amp; Neck Sonography Report Template</p>
       </div>
     </div> -->
 
-    <!-- Intro -->
-    <div class="intro-bar">
-      <span class="intro-dot">◉</span>
-      <span>填寫各項檢查所見，點擊「產生報告」生成結構化超音波報告。</span>
-    </div>
+      <!-- Intro -->
+      <div class="intro-bar">
+        <span class="intro-dot">◉</span>
+        <span>填寫各項檢查所見，點擊「產生報告」生成結構化超音波報告。</span>
+      </div>
 
-    <!-- ======================== SECTION: Patient ======================== -->
-    <div class="tr-section">
-      <div
-        class="section-header section-header-row collapsible"
-        @click="patientOpen = !patientOpen"
-      >
-        <span class="section-label">Patient Info（病患資料）</span>
-        <svg
-          class="collapse-chevron"
-          :class="{ open: patientOpen }"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+      <!-- ======================== SECTION: Patient ======================== -->
+      <div class="tr-section">
+        <div
+          class="section-header section-header-row collapsible"
+          @click="patientOpen = !patientOpen"
         >
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </div>
-      <div class="patient-grid" v-show="patientOpen">
-        <label class="field">
-          <span class="field-label">MRN（病歷號）</span>
-          <input v-model="patient.id" placeholder="e.g. 123456" />
-        </label>
-        <label class="field">
-          <span class="field-label">Name（姓名）</span>
-          <input v-model="patient.name" placeholder="e.g. WANG, DA-MING" />
-        </label>
-        <label class="field">
-          <span class="field-label">Referring Physician（轉介醫師）</span>
-          <input v-model="patient.refPhysician" placeholder="e.g. Dr. Chen" />
-        </label>
-        <label class="field">
-          <span class="field-label">Exam Date（檢查日期）</span>
-          <input type="date" v-model="examDate" />
-        </label>
-      </div>
-    </div>
-
-    <!-- ======================== SECTION: Gland ======================== -->
-    <div class="tr-section">
-      <div class="section-header">
-        <span class="section-label">Thyroid Gland（甲狀腺）</span>
-      </div>
-
-      <div class="field-row">
-        <label class="field">
-          <span class="field-label">Size（大小）</span>
-          <select v-model="glandOverall.size">
-            <option v-for="o in sizeOptions" :key="o.v" :value="o.v">
-              {{ o.l }}
-            </option>
-          </select>
-        </label>
-        <label class="field">
-          <span class="field-label">Echogenicity（回音度）</span>
-          <select v-model="glandOverall.echogenicity">
-            <option v-for="o in echoOptions" :key="o.v" :value="o.v">
-              {{ o.l }}
-            </option>
-          </select>
-        </label>
-        <label class="field">
-          <span class="field-label">Texture（質地）</span>
-          <select v-model="glandOverall.texture">
-            <option v-for="o in textureOptions" :key="o.v" :value="o.v">
-              {{ o.l }}
-            </option>
-          </select>
-        </label>
+          <span class="section-label">Patient Info（病患資料）</span>
+          <svg
+            class="collapse-chevron"
+            :class="{ open: patientOpen }"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+        <div class="patient-grid" v-show="patientOpen">
+          <label class="field">
+            <span class="field-label">MRN（病歷號）</span>
+            <input v-model="patient.id" placeholder="e.g. 123456" />
+          </label>
+          <label class="field">
+            <span class="field-label">Name（姓名）</span>
+            <input v-model="patient.name" placeholder="e.g. WANG, DA-MING" />
+          </label>
+          <label class="field">
+            <span class="field-label">Referring Physician（轉介醫師）</span>
+            <input v-model="patient.refPhysician" placeholder="e.g. Dr. Chen" />
+          </label>
+          <label class="field">
+            <span class="field-label">Exam Date（檢查日期）</span>
+            <input type="date" v-model="examDate" />
+          </label>
+        </div>
       </div>
 
-      <div class="sub-section-label">Lobe Measurements（各葉測量）</div>
-      <div class="lobe-grid">
-        <div class="lobe-block">
-          <span class="lobe-title">Right Lobe（右葉）</span>
-          <div class="lobe-dims">
-            <label
-              >L <input v-model="rightLobe.length" placeholder="cm"
-            /></label>
-            <label
-              >W <input v-model="rightLobe.width" placeholder="cm"
-            /></label>
-            <label
-              >H <input v-model="rightLobe.thickness" placeholder="cm"
-            /></label>
-            <label
-              >Vol
-              <input :value="calcVolume(rightLobe)" placeholder="mL" readonly
-            /></label>
+      <!-- ======================== SECTION: Gland ======================== -->
+      <div class="tr-section">
+        <div class="section-header">
+          <span class="section-label">Thyroid Gland（甲狀腺）</span>
+        </div>
+
+        <div class="field-row">
+          <label class="field">
+            <span class="field-label">Size（大小）</span>
+            <select v-model="glandOverall.size">
+              <option v-for="o in sizeOptions" :key="o.v" :value="o.v">
+                {{ o.l }}
+              </option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field-label">Echogenicity（回音度）</span>
+            <select v-model="glandOverall.echogenicity">
+              <option v-for="o in echoOptions" :key="o.v" :value="o.v">
+                {{ o.l }}
+              </option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field-label">Texture（質地）</span>
+            <select v-model="glandOverall.texture">
+              <option v-for="o in textureOptions" :key="o.v" :value="o.v">
+                {{ o.l }}
+              </option>
+            </select>
+          </label>
+        </div>
+
+        <div class="sub-section-label">Lobe Measurements（各葉測量）</div>
+        <div class="lobe-grid">
+          <div class="lobe-block">
+            <span class="lobe-title">Right Lobe（右葉）</span>
+            <div class="lobe-dims">
+              <label
+                >L <input v-model="rightLobe.length" placeholder="cm"
+              /></label>
+              <label
+                >W <input v-model="rightLobe.width" placeholder="cm"
+              /></label>
+              <label
+                >H <input v-model="rightLobe.thickness" placeholder="cm"
+              /></label>
+              <label
+                >Vol
+                <input :value="calcVolume(rightLobe)" placeholder="mL" readonly
+              /></label>
+            </div>
+          </div>
+          <div class="lobe-block">
+            <span class="lobe-title">Left Lobe（左葉）</span>
+            <div class="lobe-dims">
+              <label
+                >L <input v-model="leftLobe.length" placeholder="cm"
+              /></label>
+              <label
+                >W <input v-model="leftLobe.width" placeholder="cm"
+              /></label>
+              <label
+                >H <input v-model="leftLobe.thickness" placeholder="cm"
+              /></label>
+              <label
+                >Vol
+                <input :value="calcVolume(leftLobe)" placeholder="mL" readonly
+              /></label>
+            </div>
+          </div>
+          <div class="lobe-block isthmus-block">
+            <span class="lobe-title">Isthmus（峽部）</span>
+            <label class="isthmus-field">
+              Thickness <input v-model="isthmus.thickness" placeholder="cm" />
+            </label>
           </div>
         </div>
-        <div class="lobe-block">
-          <span class="lobe-title">Left Lobe（左葉）</span>
-          <div class="lobe-dims">
-            <label
-              >L <input v-model="leftLobe.length" placeholder="cm"
-            /></label>
-            <label>W <input v-model="leftLobe.width" placeholder="cm" /></label>
-            <label
-              >H <input v-model="leftLobe.thickness" placeholder="cm"
-            /></label>
-            <label
-              >Vol
-              <input :value="calcVolume(leftLobe)" placeholder="mL" readonly
-            /></label>
+      </div>
+
+      <!-- ======================== SECTION: Nodules ======================== -->
+      <div class="tr-section">
+        <div class="section-header section-header-row">
+          <span class="section-label">Nodules（結節）</span>
+          <button class="btn-add" @click="addNodule">+ Add Nodule</button>
+        </div>
+
+        <div v-for="n in nodules" :key="n.id" class="nodule-card">
+          <div class="nodule-header">
+            <span class="nodule-title"
+              >Nodule {{ nodules.indexOf(n) + 1 }}</span
+            >
+            <button class="btn-remove" @click="removeNodule(n.id)">✕</button>
+          </div>
+          <div class="nodule-grid">
+            <label class="field">
+              <span class="field-label">Lobe</span>
+              <select v-model="n.lobe">
+                <option value="right">Right</option>
+                <option value="left">Left</option>
+                <option value="isthmus">Isthmus</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Location</span>
+              <select v-model="n.location">
+                <option value="upper">Upper</option>
+                <option value="mid">Mid</option>
+                <option value="lower">Lower</option>
+                <option value="isthmus">Isthmus</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Size (cm) L</span>
+              <input v-model="n.size.l" placeholder="0.0" />
+            </label>
+            <label class="field">
+              <span class="field-label">W</span>
+              <input v-model="n.size.w" placeholder="0.0" />
+            </label>
+            <label class="field">
+              <span class="field-label">H</span>
+              <input v-model="n.size.h" placeholder="0.0" />
+            </label>
+            <label class="field">
+              <span class="field-label">Shape</span>
+              <select v-model="n.shape">
+                <option value="oval">Oval/wider-than-tall</option>
+                <option value="round">Round</option>
+                <option value="taller">Taller-than-wide</option>
+                <option value="irregular">Irregular</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Margin</span>
+              <select v-model="n.margin">
+                <option value="smooth">Smooth</option>
+                <option value="ill-defined">Ill-defined</option>
+                <option value="lobulated">Lobulated</option>
+                <option value="irregular">Irregular</option>
+                <option value="extrathyroidal">Extrathyroidal extension</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Echogenicity</span>
+              <select v-model="n.echogenicity">
+                <option value="isoechoic">Isoechoic</option>
+                <option value="hypoechoic">Hypoechoic</option>
+                <option value="hyperechoic">Hyperechoic</option>
+                <option value="marked">Marked hypoechoic</option>
+                <option value="mixed">Mixed</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Composition</span>
+              <select v-model="n.composition">
+                <option value="solid">Solid</option>
+                <option value="cystic">Cystic</option>
+                <option value="mixed-solid">Mixed (solid predominant)</option>
+                <option value="mixed-cystic">Mixed (cystic predominant)</option>
+                <option value="spongiform">Spongiform</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Calcification</span>
+              <select v-model="n.calcification">
+                <option value="none">None</option>
+                <option value="micro">Microcalcifications</option>
+                <option value="macro">Macrocalcifications</option>
+                <option value="peripheral">Peripheral/rim</option>
+                <option value="punctate">Punctate</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Halo</span>
+              <select v-model="n.halo">
+                <option value="none">None</option>
+                <option value="thin">Thin (<2mm)</option>
+                <option value="thick">Thick (≥2mm)</option>
+                <option value="irregular">Irregular</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Vascularity</span>
+              <select v-model="n.vascularity">
+                <option value="none">None</option>
+                <option value="peripheral">Peripheral only</option>
+                <option value="central">Central only</option>
+                <option value="mixed">Mixed (peripheral + central)</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">TI-RADS</span>
+              <input
+                :value="
+                  calcTirads(n).level + ' (' + calcTirads(n).score + ' pts)'
+                "
+                readonly
+                class="tirads-output"
+              />
+            </label>
           </div>
         </div>
-        <div class="lobe-block isthmus-block">
-          <span class="lobe-title">Isthmus（峽部）</span>
-          <label class="isthmus-field">
-            Thickness <input v-model="isthmus.thickness" placeholder="cm" />
-          </label>
+      </div>
+
+      <!-- ======================== SECTION: Vascularity ======================== -->
+      <div class="tr-section">
+        <div class="section-header">
+          <span class="section-label">Vascularity（血管分布）</span>
         </div>
-      </div>
-    </div>
-
-    <!-- ======================== SECTION: Nodules ======================== -->
-    <div class="tr-section">
-      <div class="section-header section-header-row">
-        <span class="section-label">Nodules（結節）</span>
-        <button class="btn-add" @click="addNodule">+ Add Nodule</button>
-      </div>
-
-      <div v-for="n in nodules" :key="n.id" class="nodule-card">
-        <div class="nodule-header">
-          <span class="nodule-title">Nodule {{ nodules.indexOf(n) + 1 }}</span>
-          <button class="btn-remove" @click="removeNodule(n.id)">✕</button>
-        </div>
-        <div class="nodule-grid">
+        <div class="field-row">
           <label class="field">
-            <span class="field-label">Lobe</span>
-            <select v-model="n.lobe">
-              <option value="right">Right</option>
-              <option value="left">Left</option>
-              <option value="isthmus">Isthmus</option>
+            <span class="field-label">Overall</span>
+            <select v-model="vascularity.overall">
+              <option v-for="o in vasOptions" :key="o.v" :value="o.v">
+                {{ o.l }}
+              </option>
             </select>
           </label>
           <label class="field">
-            <span class="field-label">Location</span>
-            <select v-model="n.location">
-              <option value="upper">Upper</option>
-              <option value="mid">Mid</option>
-              <option value="lower">Lower</option>
-              <option value="isthmus">Isthmus</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Size (cm) L</span>
-            <input v-model="n.size.l" placeholder="0.0" />
-          </label>
-          <label class="field">
-            <span class="field-label">W</span>
-            <input v-model="n.size.w" placeholder="0.0" />
-          </label>
-          <label class="field">
-            <span class="field-label">H</span>
-            <input v-model="n.size.h" placeholder="0.0" />
-          </label>
-          <label class="field">
-            <span class="field-label">Shape</span>
-            <select v-model="n.shape">
-              <option value="oval">Oval/wider-than-tall</option>
-              <option value="round">Round</option>
-              <option value="taller">Taller-than-wide</option>
-              <option value="irregular">Irregular</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Margin</span>
-            <select v-model="n.margin">
-              <option value="smooth">Smooth</option>
-              <option value="ill-defined">Ill-defined</option>
-              <option value="lobulated">Lobulated</option>
-              <option value="irregular">Irregular</option>
-              <option value="extrathyroidal">Extrathyroidal extension</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Echogenicity</span>
-            <select v-model="n.echogenicity">
-              <option value="isoechoic">Isoechoic</option>
-              <option value="hypoechoic">Hypoechoic</option>
-              <option value="hyperechoic">Hyperechoic</option>
-              <option value="marked">Marked hypoechoic</option>
-              <option value="mixed">Mixed</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Composition</span>
-            <select v-model="n.composition">
-              <option value="solid">Solid</option>
-              <option value="cystic">Cystic</option>
-              <option value="mixed-solid">Mixed (solid predominant)</option>
-              <option value="mixed-cystic">Mixed (cystic predominant)</option>
-              <option value="spongiform">Spongiform</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Calcification</span>
-            <select v-model="n.calcification">
-              <option value="none">None</option>
-              <option value="micro">Microcalcifications</option>
-              <option value="macro">Macrocalcifications</option>
-              <option value="peripheral">Peripheral/rim</option>
-              <option value="punctate">Punctate</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Halo</span>
-            <select v-model="n.halo">
-              <option value="none">None</option>
-              <option value="thin">Thin (<2mm)</option>
-              <option value="thick">Thick (≥2mm)</option>
-              <option value="irregular">Irregular</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Vascularity</span>
-            <select v-model="n.vascularity">
-              <option value="none">None</option>
-              <option value="peripheral">Peripheral only</option>
-              <option value="central">Central only</option>
-              <option value="mixed">Mixed (peripheral + central)</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">TI-RADS</span>
-            <input
-              :value="
-                calcTirads(n).level + ' (' + calcTirads(n).score + ' pts)'
-              "
-              readonly
-              class="tirads-output"
-            />
-          </label>
-        </div>
-      </div>
-    </div>
-
-    <!-- ======================== SECTION: Vascularity ======================== -->
-    <div class="tr-section">
-      <div class="section-header">
-        <span class="section-label">Vascularity（血管分布）</span>
-      </div>
-      <div class="field-row">
-        <label class="field">
-          <span class="field-label">Overall</span>
-          <select v-model="vascularity.overall">
-            <option v-for="o in vasOptions" :key="o.v" :value="o.v">
-              {{ o.l }}
-            </option>
-          </select>
-        </label>
-        <label class="field">
-          <span class="field-label">Pattern</span>
-          <select v-model="vascularity.pattern">
-            <option v-for="o in patternOptions" :key="o.v" :value="o.v">
-              {{ o.l }}
-            </option>
-          </select>
-        </label>
-      </div>
-    </div>
-
-    <!-- ======================== SECTION: Lymph Nodes ======================== -->
-    <div class="tr-section">
-      <div class="section-header section-header-row">
-        <span class="section-label">Cervical Lymph Nodes（頸部淋巴結）</span>
-        <button class="btn-add" @click="addLN">+ Add LN</button>
-      </div>
-
-      <div v-for="n in lymphNodes" :key="n.id" class="ln-card">
-        <div class="nodule-header">
-          <span class="nodule-title">LN {{ lymphNodes.indexOf(n) + 1 }}</span>
-          <button class="btn-remove" @click="removeLN(n.id)">✕</button>
-        </div>
-        <div class="ln-grid">
-          <label class="field">
-            <span class="field-label">Level</span>
-            <select v-model="n.level">
-              <option value="I">Level I (Submental/Submandibular)</option>
-              <option value="II">Level II (Upper jugular)</option>
-              <option value="III">Level III (Mid jugular)</option>
-              <option value="IV">Level IV (Lower jugular)</option>
-              <option value="V">Level V (Posterior triangle)</option>
-              <option value="VI">Level VI (Central/paratracheal)</option>
-              <option value="VII">Level VII (Superior mediastinal)</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Side</span>
-            <select v-model="n.side">
-              <option value="right">Right</option>
-              <option value="left">Left</option>
-              <option value="midline">Midline</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Size (cm)</span>
-            <input v-model="n.size" placeholder="0.0" />
-          </label>
-          <label class="field">
-            <span class="field-label">Shape</span>
-            <select v-model="n.shape">
-              <option value="oval">Oval (fusiform)</option>
-              <option value="round">Round</option>
-              <option value="irregular">Irregular</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Hilum</span>
-            <select v-model="n.hilum">
-              <option value="present">Present (preserved)</option>
-              <option value="absent">Absent (effaced)</option>
-              <option value="eccentric">Eccentric</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Cortical thickening</span>
-            <select v-model="n.cortical">
-              <option value="normal">Normal</option>
-              <option value="diffuse">Diffuse thickening</option>
-              <option value="focal">Focal thickening</option>
-              <option value="absent">Absent</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Calcification</span>
-            <select v-model="n.calcification">
-              <option value="none">None</option>
-              <option value="micro">Microcalcifications</option>
-              <option value="macro">Macrocalcifications</option>
-              <option value="peripheral">Peripheral</option>
-            </select>
-          </label>
-          <label class="field">
-            <span class="field-label">Vascularity</span>
-            <select v-model="n.vascularity">
-              <option value="normal">Normal (hilar)</option>
-              <option value="peripheral">Peripheral/mixed</option>
-              <option value="absent">Absent</option>
+            <span class="field-label">Pattern</span>
+            <select v-model="vascularity.pattern">
+              <option v-for="o in patternOptions" :key="o.v" :value="o.v">
+                {{ o.l }}
+              </option>
             </select>
           </label>
         </div>
       </div>
-    </div>
 
-    <!-- ======================== SECTION: Other Findings ======================== -->
-    <div class="tr-section">
-      <div class="section-header">
-        <span class="section-label">Other Findings（其他發現）</span>
+      <!-- ======================== SECTION: Lymph Nodes ======================== -->
+      <div class="tr-section">
+        <div class="section-header section-header-row">
+          <span class="section-label">Cervical Lymph Nodes（頸部淋巴結）</span>
+          <button class="btn-add" @click="addLN">+ Add LN</button>
+        </div>
+
+        <div v-for="n in lymphNodes" :key="n.id" class="ln-card">
+          <div class="nodule-header">
+            <span class="nodule-title">LN {{ lymphNodes.indexOf(n) + 1 }}</span>
+            <button class="btn-remove" @click="removeLN(n.id)">✕</button>
+          </div>
+          <div class="ln-grid">
+            <label class="field">
+              <span class="field-label">Level</span>
+              <select v-model="n.level">
+                <option value="I">Level I (Submental/Submandibular)</option>
+                <option value="II">Level II (Upper jugular)</option>
+                <option value="III">Level III (Mid jugular)</option>
+                <option value="IV">Level IV (Lower jugular)</option>
+                <option value="V">Level V (Posterior triangle)</option>
+                <option value="VI">Level VI (Central/paratracheal)</option>
+                <option value="VII">Level VII (Superior mediastinal)</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Side</span>
+              <select v-model="n.side">
+                <option value="right">Right</option>
+                <option value="left">Left</option>
+                <option value="midline">Midline</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Size (cm)</span>
+              <input v-model="n.size" placeholder="0.0" />
+            </label>
+            <label class="field">
+              <span class="field-label">Shape</span>
+              <select v-model="n.shape">
+                <option value="oval">Oval (fusiform)</option>
+                <option value="round">Round</option>
+                <option value="irregular">Irregular</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Hilum</span>
+              <select v-model="n.hilum">
+                <option value="present">Present (preserved)</option>
+                <option value="absent">Absent (effaced)</option>
+                <option value="eccentric">Eccentric</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Cortical thickening</span>
+              <select v-model="n.cortical">
+                <option value="normal">Normal</option>
+                <option value="diffuse">Diffuse thickening</option>
+                <option value="focal">Focal thickening</option>
+                <option value="absent">Absent</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Calcification</span>
+              <select v-model="n.calcification">
+                <option value="none">None</option>
+                <option value="micro">Microcalcifications</option>
+                <option value="macro">Macrocalcifications</option>
+                <option value="peripheral">Peripheral</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Vascularity</span>
+              <select v-model="n.vascularity">
+                <option value="normal">Normal (hilar)</option>
+                <option value="peripheral">Peripheral/mixed</option>
+                <option value="absent">Absent</option>
+              </select>
+            </label>
+          </div>
+        </div>
       </div>
-      <textarea
-        v-model="otherFindings"
-        placeholder="Any additional findings (e.g., trachea deviation, surrounding soft tissue, parathyroid glands, salivary glands)..."
-        rows="3"
-      ></textarea>
-    </div>
 
-    <!-- ======================== SECTION: Impression ======================== -->
-    <div class="tr-section">
-      <div class="section-header">
-        <span class="section-label">Impression（印象／結論）</span>
+      <!-- ======================== SECTION: Other Findings ======================== -->
+      <div class="tr-section">
+        <div class="section-header">
+          <span class="section-label">Other Findings（其他發現）</span>
+        </div>
+        <textarea
+          v-model="otherFindings"
+          placeholder="Any additional findings (e.g., trachea deviation, surrounding soft tissue, parathyroid glands, salivary glands)..."
+          rows="3"
+        ></textarea>
       </div>
-      <textarea
-        v-model="impression"
-        placeholder="e.g., 1. Diffuse hypoechoic thyroid parenchyma consistent with Hashimoto's thyroiditis. 2. TR3 nodule right mid lobe, 1.2 cm — recommend FNA..."
-        rows="4"
-      ></textarea>
-    </div>
 
-    <!-- ======================== ACTIONS ======================== -->
-    <div class="tr-actions">
-      <button class="btn-view" @click="showResults = !showResults">
-        {{ showResults ? "收起報告" : "產生報告" }}
-      </button>
-      <button
-        class="btn-copy"
-        @click="copyReport"
-        :disabled="!impression.trim()"
-      >
-        {{ copied ? "已複製 ✓" : "複製 Markdown 報告" }}
-      </button>
-      <button class="btn-reset" @click="reset">重置</button>
-    </div>
+      <!-- ======================== SECTION: Impression ======================== -->
+      <div class="tr-section">
+        <div class="section-header">
+          <span class="section-label">Impression（印象／結論）</span>
+        </div>
+        <textarea
+          v-model="impression"
+          placeholder="e.g., 1. Diffuse hypoechoic thyroid parenchyma consistent with Hashimoto's thyroiditis. 2. TR3 nodule right mid lobe, 1.2 cm — recommend FNA..."
+          rows="4"
+        ></textarea>
+      </div>
 
-    <!-- ======================== REPORT OUTPUT ======================== -->
-    <div v-if="showResults" class="report-output">
-      <div class="output-header">報告內容 (Report Output)</div>
-      <pre class="output-body">{{ generateReport() }}</pre>
+      <!-- ======================== ACTIONS ======================== -->
+      <div class="tr-actions">
+        <button class="btn-view" @click="showResults = !showResults">
+          {{ showResults ? "收起報告" : "產生報告" }}
+        </button>
+        <button
+          class="btn-copy"
+          @click="copyReport"
+          :disabled="!impression.trim()"
+        >
+          {{ copied ? "已複製 ✓" : "複製 Markdown 報告" }}
+        </button>
+        <button class="btn-reset" @click="reset">重置</button>
+      </div>
+
+      <!-- ======================== REPORT OUTPUT ======================== -->
+      <div v-if="showResults" class="report-output">
+        <div class="output-header">報告內容 (Report Output)</div>
+        <pre class="output-body">{{ generateReport() }}</pre>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.thyro-report {
+.tsr-wrap {
   max-width: 880px;
   margin: 0 auto;
+}
+.thyro-report {
   padding: 2rem 0 3rem;
   font-size: 0.9rem;
 }
@@ -1143,5 +1157,62 @@ textarea:focus {
   .ln-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .tab-label {
+    font-size: 0.9rem;
+  }
+  .tab-sub {
+    font-size: 0.72rem;
+  }
+}
+
+/* ── Tab bar ────────────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+.tab-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.tab-btn:hover {
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}
+.tab-btn.active {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+.tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
+.tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
 }
 </style>

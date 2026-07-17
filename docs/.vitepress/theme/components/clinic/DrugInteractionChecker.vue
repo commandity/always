@@ -107,153 +107,170 @@ const legend: { s: Severity }[] = [
 </script>
 
 <template>
-  <div class="dxi">
-    <!-- 搜尋列 -->
-    <div class="dxi search-row">
-      <input
-        v-model="query"
-        class="dxi search"
-        type="search"
-        placeholder="輸入藥品學名（INN），可加入多個…"
-        aria-label="搜尋藥品"
-        autocomplete="off"
-        @keydown.enter.prevent="onEnter"
-        @keydown.down.prevent="onArrow(1)"
-        @keydown.up.prevent="onArrow(-1)"
-      />
-      <button class="dxi clear-btn" @click="clearAll">清除</button>
-      <ul v-if="suggestions.length" class="dxi suggest">
-        <li
-          v-for="(s, i) in suggestions"
-          :key="s"
-          class="dxi suggest-item"
-          :class="{ active: i === activeSuggestion }"
-          @mousedown.prevent="addDrug(s)"
-          @mouseenter="activeSuggestion = i"
+  <div class="dxi-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active">
+        <span class="tab-label">藥品交互作用查詢</span>
+        <span class="tab-sub">Drug Interaction Checker</span>
+      </button>
+    </div>
+    <div class="dxi">
+      <!-- 搜尋列 -->
+      <div class="dxi search-row">
+        <input
+          v-model="query"
+          class="dxi search"
+          type="search"
+          placeholder="輸入藥品學名（INN），可加入多個…"
+          aria-label="搜尋藥品"
+          autocomplete="off"
+          @keydown.enter.prevent="onEnter"
+          @keydown.down.prevent="onArrow(1)"
+          @keydown.up.prevent="onArrow(-1)"
+        />
+        <button class="dxi clear-btn" @click="clearAll">清除</button>
+        <ul v-if="suggestions.length" class="dxi suggest">
+          <li
+            v-for="(s, i) in suggestions"
+            :key="s"
+            class="dxi suggest-item"
+            :class="{ active: i === activeSuggestion }"
+            @mousedown.prevent="addDrug(s)"
+            @mouseenter="activeSuggestion = i"
+          >
+            {{ displayDrug(s) }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- 已選藥品 -->
+      <div v-if="hasSelection" class="dxi chips">
+        <span v-for="d in selected" :key="d" class="dxi drug-chip">
+          {{ displayDrug(d) }}
+          <button
+            class="dxi chip-x"
+            :aria-label="`移除 ${displayDrug(d)}`"
+            @click="removeDrug(d)"
+          >
+            ×
+          </button>
+        </span>
+      </div>
+
+      <!-- 提示 -->
+      <p class="dxi hint">
+        <template v-if="!hasSelection"
+          >輸入一個藥品可查看其所有已知藥物與食物交互作用；輸入多個藥品可檢查彼此之間是否有交互作用。</template
         >
-          {{ displayDrug(s) }}
-        </li>
-      </ul>
-    </div>
-
-    <!-- 已選藥品 -->
-    <div v-if="hasSelection" class="dxi chips">
-      <span v-for="d in selected" :key="d" class="dxi drug-chip">
-        {{ displayDrug(d) }}
-        <button
-          class="dxi chip-x"
-          :aria-label="`移除 ${displayDrug(d)}`"
-          @click="removeDrug(d)"
+        <template v-else-if="single"
+          >顯示
+          <strong>{{ displayDrug(selected[0]) }}</strong>
+          的所有已知交互作用。</template
         >
-          ×
-        </button>
-      </span>
-    </div>
+        <template v-else
+          >檢查所選
+          {{ selected.length }} 種藥品之間及各自的食物交互作用。</template
+        >
+      </p>
 
-    <!-- 提示 -->
-    <p class="dxi hint">
-      <template v-if="!hasSelection"
-        >輸入一個藥品可查看其所有已知藥物與食物交互作用；輸入多個藥品可檢查彼此之間是否有交互作用。</template
-      >
-      <template v-else-if="single"
-        >顯示
-        <strong>{{ displayDrug(selected[0]) }}</strong>
-        的所有已知交互作用。</template
-      >
-      <template v-else
-        >檢查所選
-        {{ selected.length }} 種藥品之間及各自的食物交互作用。</template
-      >
-    </p>
-
-    <!-- 無結果 -->
-    <div v-if="noResults" class="dxi empty">
-      本清單未收錄所選藥品的交互作用。<br />
-      <span class="dxi empty-sub"
-        >「未收錄」不代表安全，請仍以完整交互作用資料庫與仿單確認。</span
-      >
-    </div>
-
-    <!-- 藥物–藥物 -->
-    <section v-if="ddiResults.length" class="dxi block">
-      <div class="dxi block-title">
-        <span class="dxi block-dot dd">◆</span>
-        <span class="dxi block-text">藥物–藥物交互作用</span>
-        <span class="dxi block-count">共 {{ ddiResults.length }} 項</span>
+      <!-- 無結果 -->
+      <div v-if="noResults" class="dxi empty">
+        本清單未收錄所選藥品的交互作用。<br />
+        <span class="dxi empty-sub"
+          >「未收錄」不代表安全，請仍以完整交互作用資料庫與仿單確認。</span
+        >
       </div>
-      <div
-        v-for="(d, i) in ddiResults"
-        :key="'dd' + i"
-        class="dxi card"
-        :class="sevClass(d.severity)"
-      >
-        <div class="dxi card-head">
-          <span class="dxi pair">
-            {{ displayDrug(d.a) }} <span class="dxi x">＋</span>
-            {{ displayDrug(d.b) }}
-          </span>
-          <span class="dxi badge" :class="sevClass(d.severity)">{{
-            sevLabel(d.severity)
-          }}</span>
+
+      <!-- 藥物–藥物 -->
+      <section v-if="ddiResults.length" class="dxi block">
+        <div class="dxi block-title">
+          <span class="dxi block-dot dd">◆</span>
+          <span class="dxi block-text">藥物–藥物交互作用</span>
+          <span class="dxi block-count">共 {{ ddiResults.length }} 項</span>
         </div>
-        <p class="dxi effect">
-          <span class="dxi lbl">後果</span>{{ d.effect }}
-        </p>
-        <p class="dxi mgmt"><span class="dxi lbl mg">處置</span>{{ d.mgmt }}</p>
-      </div>
-    </section>
-
-    <!-- 藥物–食物 -->
-    <section v-if="dfiResults.length" class="dxi block">
-      <div class="dxi block-title">
-        <span class="dxi block-dot df">◆</span>
-        <span class="dxi block-text">藥物–食物交互作用</span>
-        <span class="dxi block-count">共 {{ dfiResults.length }} 項</span>
-      </div>
-      <div
-        v-for="(d, i) in dfiResults"
-        :key="'df' + i"
-        class="dxi card"
-        :class="sevClass(d.severity)"
-      >
-        <div class="dxi card-head">
-          <span class="dxi pair">
-            {{ displayDrug(d.drug) }} <span class="dxi x">＋</span>
-            <span class="dxi food">{{ d.food }}</span>
-          </span>
-          <span class="dxi badge" :class="sevClass(d.severity)">{{
-            sevLabel(d.severity)
-          }}</span>
+        <div
+          v-for="(d, i) in ddiResults"
+          :key="'dd' + i"
+          class="dxi card"
+          :class="sevClass(d.severity)"
+        >
+          <div class="dxi card-head">
+            <span class="dxi pair">
+              {{ displayDrug(d.a) }} <span class="dxi x">＋</span>
+              {{ displayDrug(d.b) }}
+            </span>
+            <span class="dxi badge" :class="sevClass(d.severity)">{{
+              sevLabel(d.severity)
+            }}</span>
+          </div>
+          <p class="dxi effect">
+            <span class="dxi lbl">後果</span>{{ d.effect }}
+          </p>
+          <p class="dxi mgmt">
+            <span class="dxi lbl mg">處置</span>{{ d.mgmt }}
+          </p>
         </div>
-        <p class="dxi effect">
-          <span class="dxi lbl">後果</span>{{ d.effect }}
-        </p>
-        <p class="dxi mgmt"><span class="dxi lbl mg">處置</span>{{ d.mgmt }}</p>
+      </section>
+
+      <!-- 藥物–食物 -->
+      <section v-if="dfiResults.length" class="dxi block">
+        <div class="dxi block-title">
+          <span class="dxi block-dot df">◆</span>
+          <span class="dxi block-text">藥物–食物交互作用</span>
+          <span class="dxi block-count">共 {{ dfiResults.length }} 項</span>
+        </div>
+        <div
+          v-for="(d, i) in dfiResults"
+          :key="'df' + i"
+          class="dxi card"
+          :class="sevClass(d.severity)"
+        >
+          <div class="dxi card-head">
+            <span class="dxi pair">
+              {{ displayDrug(d.drug) }} <span class="dxi x">＋</span>
+              <span class="dxi food">{{ d.food }}</span>
+            </span>
+            <span class="dxi badge" :class="sevClass(d.severity)">{{
+              sevLabel(d.severity)
+            }}</span>
+          </div>
+          <p class="dxi effect">
+            <span class="dxi lbl">後果</span>{{ d.effect }}
+          </p>
+          <p class="dxi mgmt">
+            <span class="dxi lbl mg">處置</span>{{ d.mgmt }}
+          </p>
+        </div>
+      </section>
+
+      <!-- 圖例 -->
+      <div class="dxi legend">
+        <span class="dxi legend-title">嚴重度</span>
+        <span
+          v-for="l in legend"
+          :key="l.s"
+          class="dxi badge legend-badge"
+          :class="sevClass(l.s)"
+          >{{ sevLabel(l.s) }}</span
+        >
       </div>
-    </section>
 
-    <!-- 圖例 -->
-    <div class="dxi legend">
-      <span class="dxi legend-title">嚴重度</span>
-      <span
-        v-for="l in legend"
-        :key="l.s"
-        class="dxi badge legend-badge"
-        :class="sevClass(l.s)"
-        >{{ sevLabel(l.s) }}</span
-      >
+      <p class="dxi disclaimer">
+        本工具為教學參考之常見交互作用摘要，並非完整清單；學名以 INN
+        列示。實際處方請以最新仿單與專業交互作用資料庫為準。
+      </p>
     </div>
-
-    <p class="dxi disclaimer">
-      本工具為教學參考之常見交互作用摘要，並非完整清單；學名以 INN
-      列示。實際處方請以最新仿單與專業交互作用資料庫為準。
-    </p>
   </div>
 </template>
 
 <style scoped>
+.dxi-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+}
 .dxi {
-  margin: 8px 0 4px;
+  padding: 2rem 0 3rem;
+  font-size: 0.9rem;
 }
 
 /* 搜尋列 */
@@ -558,5 +575,62 @@ const legend: { s: Severity }[] = [
   .dxi.card-head {
     flex-wrap: wrap;
   }
+  .tab-label {
+    font-size: 0.9rem;
+  }
+  .tab-sub {
+    font-size: 0.72rem;
+  }
+}
+
+/* ── Tab bar ────────────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+.tab-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.tab-btn:hover {
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}
+.tab-btn.active {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+.tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
+.tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
 }
 </style>

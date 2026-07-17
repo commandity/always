@@ -587,830 +587,867 @@ async function copyMarkdown() {
 </script>
 
 <template>
-  <div class="ins">
-    <!-- Mode Selection -->
-    <div class="mode-section">
-      <div class="group-header-bar mode-bar">
-        <span class="group-icon">🎯</span>
-        <span class="group-label-text">Step 1 · 選擇胰島素治療模式</span>
-        <span class="group-sub-text">請選擇適合病人的 T2DM 胰島素方案</span>
-      </div>
-      <div class="mode-grid">
-        <button
-          v-for="opt in modeOpts"
-          :key="opt.value"
-          class="mode-card"
-          :class="{ active: mode === opt.value }"
-          @click="mode = opt.value"
-        >
-          <span class="mode-icon">{{ opt.icon }}</span>
-          <div class="item-name-block">
-            <span class="item-name">{{ opt.label }}</span>
-            <span class="item-sub">{{ opt.desc }}</span>
-          </div>
-        </button>
-      </div>
+  <div class="ins-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active">
+        <span class="tab-label">胰島素劑量調整</span>
+        <span class="tab-sub">Insulin Dose Titration</span>
+      </button>
     </div>
-
-    <!-- Step 2: Inputs -->
-    <div class="input-section">
-      <div class="group-header-bar input-bar">
-        <span class="group-icon">📝</span>
-        <span class="group-label-text">Step 2 · 病人參數輸入</span>
-        <span class="group-sub-text">依所選模式填寫對應資料</span>
-      </div>
-
-      <!-- Shared: Weight -->
-      <div class="input-row">
-        <label class="input-label">體重 Body Weight</label>
-        <div class="input-wrap" :class="{ 'input-filled': weightInput !== '' }">
-          <input
-            v-model="weightInput"
-            type="number"
-            min="20"
-            max="300"
-            step="0.1"
-            placeholder="例如：70"
-            class="num-input"
-          />
-          <span class="input-unit">kg</span>
+    <div class="ins">
+      <!-- Mode Selection -->
+      <div class="mode-section">
+        <div class="group-header-bar mode-bar">
+          <span class="group-icon">🎯</span>
+          <span class="group-label-text">Step 1 · 選擇胰島素治療模式</span>
+          <span class="group-sub-text">請選擇適合病人的 T2DM 胰島素方案</span>
+        </div>
+        <div class="mode-grid">
+          <button
+            v-for="opt in modeOpts"
+            :key="opt.value"
+            class="mode-card"
+            :class="{ active: mode === opt.value }"
+            @click="mode = opt.value"
+          >
+            <span class="mode-icon">{{ opt.icon }}</span>
+            <div class="item-name-block">
+              <span class="item-name">{{ opt.label }}</span>
+              <span class="item-sub">{{ opt.desc }}</span>
+            </div>
+          </button>
         </div>
       </div>
 
-      <!-- Basal-only -->
-      <template v-if="mode === 'basal-only'">
-        <div class="input-row">
-          <label class="input-label"
-            >目前劑量
-            <span class="opt-tag">選填 — 留空則以體重估算起始劑量</span></label
-          >
-          <div
-            class="input-wrap"
-            :class="{ 'input-filled': currentDoseInput !== '' }"
-          >
-            <input
-              v-model="currentDoseInput"
-              type="number"
-              min="0"
-              step="1"
-              placeholder="留空以體重估算"
-              class="num-input"
-            />
-            <span class="input-unit">units/day</span>
-          </div>
+      <!-- Step 2: Inputs -->
+      <div class="input-section">
+        <div class="group-header-bar input-bar">
+          <span class="group-icon">📝</span>
+          <span class="group-label-text">Step 2 · 病人參數輸入</span>
+          <span class="group-sub-text">依所選模式填寫對應資料</span>
         </div>
-        <div class="input-row">
-          <label class="input-label">平均空腹血糖（FBG）</label>
-          <div
-            class="input-wrap"
-            :class="{ 'input-filled': avgFBGInput !== '' }"
-          >
-            <input
-              v-model="avgFBGInput"
-              type="number"
-              min="0"
-              step="1"
-              placeholder="例如：145"
-              class="num-input"
-            />
-            <span class="input-unit">mg/dL</span>
-          </div>
-        </div>
-        <label class="hypo-check">
-          <input type="checkbox" v-model="hadHypo" />
-          <span>過去一週內曾發生低血糖（血糖 &lt; 70 mg/dL）或低血糖症狀</span>
-        </label>
-      </template>
 
-      <!-- Basal-bolus -->
-      <template v-if="mode === 'basal-bolus'">
+        <!-- Shared: Weight -->
         <div class="input-row">
-          <label class="input-label"
-            >目前基礎胰島素劑量
-            <span class="opt-tag">選填（已用藥者）</span></label
-          >
+          <label class="input-label">體重 Body Weight</label>
           <div
             class="input-wrap"
-            :class="{ 'input-filled': currentDoseInput !== '' }"
+            :class="{ 'input-filled': weightInput !== '' }"
           >
             <input
-              v-model="currentDoseInput"
+              v-model="weightInput"
               type="number"
-              min="0"
-              step="1"
-              placeholder="留空則以體重估算"
+              min="20"
+              max="300"
+              step="0.1"
+              placeholder="例如：70"
               class="num-input"
             />
-            <span class="input-unit">units/day</span>
+            <span class="input-unit">kg</span>
           </div>
         </div>
-        <div class="input-row">
-          <label class="input-label"
-            >餐前血糖 <span class="opt-tag">選填</span></label
-          >
-          <div
-            class="input-wrap"
-            :class="{ 'input-filled': preMealBGInput !== '' }"
-          >
-            <input
-              v-model="preMealBGInput"
-              type="number"
-              min="0"
-              step="1"
-              placeholder="例如：160"
-              class="num-input"
-            />
-            <span class="input-unit">mg/dL</span>
-          </div>
-        </div>
-        <div class="input-row">
-          <label class="input-label">餐前血糖目標</label>
-          <div class="input-wrap input-filled-shim">
-            <input
-              v-model="preMealTargetInput"
-              type="number"
-              min="80"
-              max="180"
-              step="5"
-              placeholder="140"
-              class="num-input"
-            />
-            <span class="input-unit">mg/dL</span>
-          </div>
-        </div>
-      </template>
 
-      <!-- Premixed -->
-      <template v-if="mode === 'premixed'">
-        <div class="premix-select">
-          <span
-            class="input-label"
-            style="margin-bottom: 0.4rem; display: block"
-            >選擇預混型胰島素</span
-          >
-          <div class="premix-grid">
-            <button
-              v-for="p in premixOpts"
-              :key="p.value"
-              class="premix-card"
-              :class="{ active: premixType === p.value }"
-              @click="premixType = p.value"
+        <!-- Basal-only -->
+        <template v-if="mode === 'basal-only'">
+          <div class="input-row">
+            <label class="input-label"
+              >目前劑量
+              <span class="opt-tag"
+                >選填 — 留空則以體重估算起始劑量</span
+              ></label
             >
-              <span class="premix-name">{{ p.label }}</span>
-              <span class="premix-composition"
-                >{{ p.rapid }} / {{ p.basal }}</span
-              >
-              <span class="premix-note">{{ p.note }}</span>
-            </button>
-          </div>
-        </div>
-        <div class="input-row">
-          <label class="input-label">平均空腹血糖（FBG）</label>
-          <div
-            class="input-wrap"
-            :class="{ 'input-filled': avgFBGInput !== '' }"
-          >
-            <input
-              v-model="avgFBGInput"
-              type="number"
-              min="0"
-              step="1"
-              placeholder="例如：145"
-              class="num-input"
-            />
-            <span class="input-unit">mg/dL</span>
-          </div>
-        </div>
-        <div class="input-row">
-          <label class="input-label"
-            >晚餐前血糖 <span class="opt-tag">選填</span></label
-          >
-          <div
-            class="input-wrap"
-            :class="{ 'input-filled': preDinnerBGInput !== '' }"
-          >
-            <input
-              v-model="preDinnerBGInput"
-              type="number"
-              min="0"
-              step="1"
-              placeholder="例如：160"
-              class="num-input"
-            />
-            <span class="input-unit">mg/dL</span>
-          </div>
-        </div>
-        <label class="hypo-check">
-          <input type="checkbox" v-model="hadHypo" />
-          <span>過去一週內曾發生低血糖（血糖 &lt; 70 mg/dL）</span>
-        </label>
-      </template>
-
-      <!-- Split-mixed -->
-      <template v-if="mode === 'split-mixed'">
-        <div class="input-row">
-          <label class="input-label">平均空腹血糖（FBG）</label>
-          <div
-            class="input-wrap"
-            :class="{ 'input-filled': avgFBGInput !== '' }"
-          >
-            <input
-              v-model="avgFBGInput"
-              type="number"
-              min="0"
-              step="1"
-              placeholder="例如：145"
-              class="num-input"
-            />
-            <span class="input-unit">mg/dL</span>
-          </div>
-        </div>
-        <div class="input-row">
-          <label class="input-label"
-            >午餐前血糖 <span class="opt-tag">選填</span></label
-          >
-          <div
-            class="input-wrap"
-            :class="{ 'input-filled': preLunchBGInput !== '' }"
-          >
-            <input
-              v-model="preLunchBGInput"
-              type="number"
-              min="0"
-              step="1"
-              placeholder="例如：150"
-              class="num-input"
-            />
-            <span class="input-unit">mg/dL</span>
-          </div>
-        </div>
-        <div class="input-row">
-          <label class="input-label"
-            >晚餐前血糖 <span class="opt-tag">選填</span></label
-          >
-          <div
-            class="input-wrap"
-            :class="{ 'input-filled': preDinnerBGInput !== '' }"
-          >
-            <input
-              v-model="preDinnerBGInput"
-              type="number"
-              min="0"
-              step="1"
-              placeholder="例如：160"
-              class="num-input"
-            />
-            <span class="input-unit">mg/dL</span>
-          </div>
-        </div>
-        <div class="input-row">
-          <label class="input-label"
-            >睡前血糖 <span class="opt-tag">選填</span></label
-          >
-          <div
-            class="input-wrap"
-            :class="{ 'input-filled': bedtimeBGInput !== '' }"
-          >
-            <input
-              v-model="bedtimeBGInput"
-              type="number"
-              min="0"
-              step="1"
-              placeholder="例如：140"
-              class="num-input"
-            />
-            <span class="input-unit">mg/dL</span>
-          </div>
-        </div>
-      </template>
-    </div>
-
-    <!-- Step 3: Results -->
-    <div class="results-section">
-      <div class="group-header-bar result-bar">
-        <span class="group-icon">💡</span>
-        <span class="group-label-text">Step 3 · 建議與調整指引</span>
-      </div>
-
-      <!-- Basal-only results -->
-      <template v-if="mode === 'basal-only'">
-        <div v-if="!weight" class="progress-hint">
-          請輸入體重以計算建議起始劑量
-        </div>
-        <div v-else class="bo-start-card">
-          <div class="bo-start-header">🌙 建議起始處方</div>
-          <div class="bo-start-body">
-            <div class="bo-start-stat">
-              <span class="bo-start-val">{{ basalStartDose }}</span>
-              <span class="bo-start-unit">units/day</span>
-            </div>
-            <div class="bo-start-detail">
-              <div>
-                體重 <strong>{{ weight }} kg</strong>，建議起始
-                <strong>{{ basalStartDose }} units/day</strong>（10 units 或 0.2
-                × {{ weight }} =
-                {{ Math.round(weight * 0.2) }} units，取較大值）
-              </div>
-              <div class="bo-start-sub">
-                亦可按 0.1–0.2 units/kg/day 起始（即
-                {{ Math.round(weight * 0.1) }}–{{ Math.round(weight * 0.2) }}
-                units/day）
-              </div>
-              <div class="bo-start-sub">
-                可選藥物：Glargine（U-100/U-300）、Detemir、Degludec（Tresiba），每日一次固定時間注射
-              </div>
-              <div class="bo-start-sub toujeo-note" v-if="basalStartDose">
-                ⚠ Toujeo（Glargine U-300）濃度 300 U/mL = U-100 的 3 倍。<br />
-                <strong>{{ basalStartDose }} units</strong> × 體積/unit：<br />
-                ・Toujeo（U-300）=
-                {{ (basalStartDose / 300).toFixed(3) }} mL（每 1 unit = 0.00333
-                mL）<br />
-                ・U-100 胰島素 = {{ (basalStartDose / 100).toFixed(3) }} mL（每
-                1 unit = 0.01 mL）<br />
-                → 相同單位數，Toujeo 注射體積僅 U-100 的
-                <strong>1/3</strong>，病人感覺「打更少」。<br />
-                轉換：建議 1:1 起始，未達標可調至
-                <strong
-                  >{{ Math.round(basalStartDose * 1.15) }}–{{
-                    Math.round(basalStartDose * 1.2)
-                  }}
-                  units/day</strong
-                >（+15–20%）。<br />
-                僅有預填筆（SoloStar / Max SoloStar），不可用 U-100
-                空針抽取（濃度不同會導致 3 倍 overdose）。
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- OADs co-administration -->
-        <details class="oad-ref">
-          <summary class="oad-ref-summary">💊 OADs 合併使用建議</summary>
-          <div class="oad-table">
-            <div class="oad-row oad-row-header">
-              <span class="oad-rowhead">口服藥</span>
-              <span class="oad-rowhead">建議</span>
-            </div>
-            <div class="oad-row" v-for="r in OAD_RECOMMEND" :key="r.drug">
-              <span class="oad-drug">{{ r.drug }}</span>
-              <span class="oad-rec">{{ r.rec }}</span>
-            </div>
-          </div>
-          <div class="ref-note">
-            參照 2022 ADA 指引、臺灣健保給付規範及糖尿病學會建議
-          </div>
-        </details>
-
-        <div v-if="!avgFBG" class="progress-hint" style="margin-top: 0.5rem">
-          請輸入平均空腹血糖以查看注射建議
-        </div>
-        <template v-if="basalCurrentDose && avgFBG">
-          <div class="algo-list">
             <div
-              v-for="a in algorithms"
-              :key="a.key"
-              class="algo-card"
-              :class="a.result?.status"
+              class="input-wrap"
+              :class="{ 'input-filled': currentDoseInput !== '' }"
             >
-              <div class="algo-header">
-                <div class="algo-name-block">
-                  <div class="algo-name">{{ a.name }}</div>
-                  <div class="algo-sub">{{ a.sub }}</div>
-                </div>
-                <div class="algo-freq">{{ a.frequency }}</div>
+              <input
+                v-model="currentDoseInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="留空以體重估算"
+                class="num-input"
+              />
+              <span class="input-unit">units/day</span>
+            </div>
+          </div>
+          <div class="input-row">
+            <label class="input-label">平均空腹血糖（FBG）</label>
+            <div
+              class="input-wrap"
+              :class="{ 'input-filled': avgFBGInput !== '' }"
+            >
+              <input
+                v-model="avgFBGInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="例如：145"
+                class="num-input"
+              />
+              <span class="input-unit">mg/dL</span>
+            </div>
+          </div>
+          <label class="hypo-check">
+            <input type="checkbox" v-model="hadHypo" />
+            <span
+              >過去一週內曾發生低血糖（血糖 &lt; 70 mg/dL）或低血糖症狀</span
+            >
+          </label>
+        </template>
+
+        <!-- Basal-bolus -->
+        <template v-if="mode === 'basal-bolus'">
+          <div class="input-row">
+            <label class="input-label"
+              >目前基礎胰島素劑量
+              <span class="opt-tag">選填（已用藥者）</span></label
+            >
+            <div
+              class="input-wrap"
+              :class="{ 'input-filled': currentDoseInput !== '' }"
+            >
+              <input
+                v-model="currentDoseInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="留空則以體重估算"
+                class="num-input"
+              />
+              <span class="input-unit">units/day</span>
+            </div>
+          </div>
+          <div class="input-row">
+            <label class="input-label"
+              >餐前血糖 <span class="opt-tag">選填</span></label
+            >
+            <div
+              class="input-wrap"
+              :class="{ 'input-filled': preMealBGInput !== '' }"
+            >
+              <input
+                v-model="preMealBGInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="例如：160"
+                class="num-input"
+              />
+              <span class="input-unit">mg/dL</span>
+            </div>
+          </div>
+          <div class="input-row">
+            <label class="input-label">餐前血糖目標</label>
+            <div class="input-wrap input-filled-shim">
+              <input
+                v-model="preMealTargetInput"
+                type="number"
+                min="80"
+                max="180"
+                step="5"
+                placeholder="140"
+                class="num-input"
+              />
+              <span class="input-unit">mg/dL</span>
+            </div>
+          </div>
+        </template>
+
+        <!-- Premixed -->
+        <template v-if="mode === 'premixed'">
+          <div class="premix-select">
+            <span
+              class="input-label"
+              style="margin-bottom: 0.4rem; display: block"
+              >選擇預混型胰島素</span
+            >
+            <div class="premix-grid">
+              <button
+                v-for="p in premixOpts"
+                :key="p.value"
+                class="premix-card"
+                :class="{ active: premixType === p.value }"
+                @click="premixType = p.value"
+              >
+                <span class="premix-name">{{ p.label }}</span>
+                <span class="premix-composition"
+                  >{{ p.rapid }} / {{ p.basal }}</span
+                >
+                <span class="premix-note">{{ p.note }}</span>
+              </button>
+            </div>
+          </div>
+          <div class="input-row">
+            <label class="input-label">平均空腹血糖（FBG）</label>
+            <div
+              class="input-wrap"
+              :class="{ 'input-filled': avgFBGInput !== '' }"
+            >
+              <input
+                v-model="avgFBGInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="例如：145"
+                class="num-input"
+              />
+              <span class="input-unit">mg/dL</span>
+            </div>
+          </div>
+          <div class="input-row">
+            <label class="input-label"
+              >晚餐前血糖 <span class="opt-tag">選填</span></label
+            >
+            <div
+              class="input-wrap"
+              :class="{ 'input-filled': preDinnerBGInput !== '' }"
+            >
+              <input
+                v-model="preDinnerBGInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="例如：160"
+                class="num-input"
+              />
+              <span class="input-unit">mg/dL</span>
+            </div>
+          </div>
+          <label class="hypo-check">
+            <input type="checkbox" v-model="hadHypo" />
+            <span>過去一週內曾發生低血糖（血糖 &lt; 70 mg/dL）</span>
+          </label>
+        </template>
+
+        <!-- Split-mixed -->
+        <template v-if="mode === 'split-mixed'">
+          <div class="input-row">
+            <label class="input-label">平均空腹血糖（FBG）</label>
+            <div
+              class="input-wrap"
+              :class="{ 'input-filled': avgFBGInput !== '' }"
+            >
+              <input
+                v-model="avgFBGInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="例如：145"
+                class="num-input"
+              />
+              <span class="input-unit">mg/dL</span>
+            </div>
+          </div>
+          <div class="input-row">
+            <label class="input-label"
+              >午餐前血糖 <span class="opt-tag">選填</span></label
+            >
+            <div
+              class="input-wrap"
+              :class="{ 'input-filled': preLunchBGInput !== '' }"
+            >
+              <input
+                v-model="preLunchBGInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="例如：150"
+                class="num-input"
+              />
+              <span class="input-unit">mg/dL</span>
+            </div>
+          </div>
+          <div class="input-row">
+            <label class="input-label"
+              >晚餐前血糖 <span class="opt-tag">選填</span></label
+            >
+            <div
+              class="input-wrap"
+              :class="{ 'input-filled': preDinnerBGInput !== '' }"
+            >
+              <input
+                v-model="preDinnerBGInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="例如：160"
+                class="num-input"
+              />
+              <span class="input-unit">mg/dL</span>
+            </div>
+          </div>
+          <div class="input-row">
+            <label class="input-label"
+              >睡前血糖 <span class="opt-tag">選填</span></label
+            >
+            <div
+              class="input-wrap"
+              :class="{ 'input-filled': bedtimeBGInput !== '' }"
+            >
+              <input
+                v-model="bedtimeBGInput"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="例如：140"
+                class="num-input"
+              />
+              <span class="input-unit">mg/dL</span>
+            </div>
+          </div>
+        </template>
+      </div>
+
+      <!-- Step 3: Results -->
+      <div class="results-section">
+        <div class="group-header-bar result-bar">
+          <span class="group-icon">💡</span>
+          <span class="group-label-text">Step 3 · 建議與調整指引</span>
+        </div>
+
+        <!-- Basal-only results -->
+        <template v-if="mode === 'basal-only'">
+          <div v-if="!weight" class="progress-hint">
+            請輸入體重以計算建議起始劑量
+          </div>
+          <div v-else class="bo-start-card">
+            <div class="bo-start-header">🌙 建議起始處方</div>
+            <div class="bo-start-body">
+              <div class="bo-start-stat">
+                <span class="bo-start-val">{{ basalStartDose }}</span>
+                <span class="bo-start-unit">units/day</span>
               </div>
-              <div class="algo-result" v-if="a.result">
-                <div class="algo-dose">
-                  <span class="dose-from">{{ basalCurrentDose }}</span>
-                  <span class="dose-arrow">→</span>
-                  <span class="dose-to" :class="a.result.status">{{
-                    a.result.newDose
-                  }}</span>
-                  <span class="dose-unit-label">units/day</span>
-                  <span class="dose-adj" :class="a.result.status"
-                    >({{ a.result.adjustment > 0 ? "+" : ""
-                    }}{{ a.result.adjustment }})</span
-                  >
+              <div class="bo-start-detail">
+                <div>
+                  體重 <strong>{{ weight }} kg</strong>，建議起始
+                  <strong>{{ basalStartDose }} units/day</strong>（10 units 或
+                  0.2 × {{ weight }} =
+                  {{ Math.round(weight * 0.2) }} units，取較大值）
                 </div>
-                <div class="algo-reason">{{ a.result.reason }}</div>
+                <div class="bo-start-sub">
+                  亦可按 0.1–0.2 units/kg/day 起始（即
+                  {{ Math.round(weight * 0.1) }}–{{ Math.round(weight * 0.2) }}
+                  units/day）
+                </div>
+                <div class="bo-start-sub">
+                  可選藥物：Glargine（U-100/U-300）、Detemir、Degludec（Tresiba），每日一次固定時間注射
+                </div>
+                <div class="bo-start-sub toujeo-note" v-if="basalStartDose">
+                  ⚠ Toujeo（Glargine U-300）濃度 300 U/mL = U-100 的 3 倍。<br />
+                  <strong>{{ basalStartDose }} units</strong> × 體積/unit：<br />
+                  ・Toujeo（U-300）=
+                  {{ (basalStartDose / 300).toFixed(3) }} mL（每 1 unit =
+                  0.00333 mL）<br />
+                  ・U-100 胰島素 =
+                  {{ (basalStartDose / 100).toFixed(3) }} mL（每 1 unit = 0.01
+                  mL）<br />
+                  → 相同單位數，Toujeo 注射體積僅 U-100 的
+                  <strong>1/3</strong>，病人感覺「打更少」。<br />
+                  轉換：建議 1:1 起始，未達標可調至
+                  <strong
+                    >{{ Math.round(basalStartDose * 1.15) }}–{{
+                      Math.round(basalStartDose * 1.2)
+                    }}
+                    units/day</strong
+                  >（+15–20%）。<br />
+                  僅有預填筆（SoloStar / Max SoloStar），不可用 U-100
+                  空針抽取（濃度不同會導致 3 倍 overdose）。
+                </div>
               </div>
             </div>
           </div>
-          <details class="algo-ref">
-            <summary class="algo-ref-summary">📊 兩種調整方法說明</summary>
-            <div class="ref-table">
-              <div class="ref-row ref-row-header">
-                <span class="ref-rowhead">項目</span>
-                <span
-                  v-for="a in algorithms"
-                  :key="a.key"
-                  class="ref-col-title"
-                  >{{ a.name }}</span
-                >
+
+          <!-- OADs co-administration -->
+          <details class="oad-ref">
+            <summary class="oad-ref-summary">💊 OADs 合併使用建議</summary>
+            <div class="oad-table">
+              <div class="oad-row oad-row-header">
+                <span class="oad-rowhead">口服藥</span>
+                <span class="oad-rowhead">建議</span>
               </div>
-              <div class="ref-row">
-                <span class="ref-rowhead">起始劑量</span>
-                <span>10 units 或 0.1–0.2 units/kg/day</span>
-                <span>同方法一</span>
-              </div>
-              <div class="ref-row">
-                <span class="ref-rowhead">調整頻率</span>
-                <span>每 3 天</span>
-                <span>每天</span>
-              </div>
-              <div class="ref-row">
-                <span class="ref-rowhead">血糖目標</span>
-                <span>FBG 80–130 mg/dL</span>
-                <span>FBG 80–130 mg/dL</span>
-              </div>
-              <div class="ref-row">
-                <span class="ref-rowhead">增量規則</span>
-                <span>FBG > 130：+10–15% 或 2–4 U</span>
-                <span>FBG > 130：+1 U/day</span>
-              </div>
-              <div class="ref-row">
-                <span class="ref-rowhead">低血糖處置</span>
-                <span>減 4 U 或 10–20%</span>
-                <span>減 4 U 或 10–20%</span>
+              <div class="oad-row" v-for="r in OAD_RECOMMEND" :key="r.drug">
+                <span class="oad-drug">{{ r.drug }}</span>
+                <span class="oad-rec">{{ r.rec }}</span>
               </div>
             </div>
             <div class="ref-note">
-              參考：2022 ADA 治療指引、臺灣糖尿病學會（2024）
+              參照 2022 ADA 指引、臺灣健保給付規範及糖尿病學會建議
             </div>
           </details>
 
-          <!-- Stop / intensify threshold -->
-          <div class="bo-threshold">
-            <div class="bo-thresh-header">🛑 何時停止增加基礎胰島素？</div>
-            <ul class="guide-list">
-              <li>
-                <strong>已達標：</strong>FBG 持續在 80–130 mg/dL，不需再調整
-              </li>
-              <li>
-                <strong>低血糖：</strong>發生低血糖（&lt; 70
-                mg/dL）時依演算法減量
-              </li>
-              <li>
-                <strong
-                  >基礎劑量 > {{ basalStopThreshold }} units/day（0.5
-                  units/kg/day）</strong
-                >
-                且 FBG 已達標但 A1C 仍未達標 → 應評估加入
-                <strong>餐時胰島素（Bolus）</strong> 或 GLP-1
-                RA，不應繼續增加基礎劑量
-              </li>
-            </ul>
+          <div v-if="!avgFBG" class="progress-hint" style="margin-top: 0.5rem">
+            請輸入平均空腹血糖以查看注射建議
           </div>
+          <template v-if="basalCurrentDose && avgFBG">
+            <div class="algo-list">
+              <div
+                v-for="a in algorithms"
+                :key="a.key"
+                class="algo-card"
+                :class="a.result?.status"
+              >
+                <div class="algo-header">
+                  <div class="algo-name-block">
+                    <div class="algo-name">{{ a.name }}</div>
+                    <div class="algo-sub">{{ a.sub }}</div>
+                  </div>
+                  <div class="algo-freq">{{ a.frequency }}</div>
+                </div>
+                <div class="algo-result" v-if="a.result">
+                  <div class="algo-dose">
+                    <span class="dose-from">{{ basalCurrentDose }}</span>
+                    <span class="dose-arrow">→</span>
+                    <span class="dose-to" :class="a.result.status">{{
+                      a.result.newDose
+                    }}</span>
+                    <span class="dose-unit-label">units/day</span>
+                    <span class="dose-adj" :class="a.result.status"
+                      >({{ a.result.adjustment > 0 ? "+" : ""
+                      }}{{ a.result.adjustment }})</span
+                    >
+                  </div>
+                  <div class="algo-reason">{{ a.result.reason }}</div>
+                </div>
+              </div>
+            </div>
+            <details class="algo-ref">
+              <summary class="algo-ref-summary">📊 兩種調整方法說明</summary>
+              <div class="ref-table">
+                <div class="ref-row ref-row-header">
+                  <span class="ref-rowhead">項目</span>
+                  <span
+                    v-for="a in algorithms"
+                    :key="a.key"
+                    class="ref-col-title"
+                    >{{ a.name }}</span
+                  >
+                </div>
+                <div class="ref-row">
+                  <span class="ref-rowhead">起始劑量</span>
+                  <span>10 units 或 0.1–0.2 units/kg/day</span>
+                  <span>同方法一</span>
+                </div>
+                <div class="ref-row">
+                  <span class="ref-rowhead">調整頻率</span>
+                  <span>每 3 天</span>
+                  <span>每天</span>
+                </div>
+                <div class="ref-row">
+                  <span class="ref-rowhead">血糖目標</span>
+                  <span>FBG 80–130 mg/dL</span>
+                  <span>FBG 80–130 mg/dL</span>
+                </div>
+                <div class="ref-row">
+                  <span class="ref-rowhead">增量規則</span>
+                  <span>FBG > 130：+10–15% 或 2–4 U</span>
+                  <span>FBG > 130：+1 U/day</span>
+                </div>
+                <div class="ref-row">
+                  <span class="ref-rowhead">低血糖處置</span>
+                  <span>減 4 U 或 10–20%</span>
+                  <span>減 4 U 或 10–20%</span>
+                </div>
+              </div>
+              <div class="ref-note">
+                參考：2022 ADA 治療指引、臺灣糖尿病學會（2024）
+              </div>
+            </details>
+
+            <!-- Stop / intensify threshold -->
+            <div class="bo-threshold">
+              <div class="bo-thresh-header">🛑 何時停止增加基礎胰島素？</div>
+              <ul class="guide-list">
+                <li>
+                  <strong>已達標：</strong>FBG 持續在 80–130 mg/dL，不需再調整
+                </li>
+                <li>
+                  <strong>低血糖：</strong>發生低血糖（&lt; 70
+                  mg/dL）時依演算法減量
+                </li>
+                <li>
+                  <strong
+                    >基礎劑量 > {{ basalStopThreshold }} units/day（0.5
+                    units/kg/day）</strong
+                  >
+                  且 FBG 已達標但 A1C 仍未達標 → 應評估加入
+                  <strong>餐時胰島素（Bolus）</strong> 或 GLP-1
+                  RA，不應繼續增加基礎劑量
+                </li>
+              </ul>
+            </div>
+          </template>
         </template>
-      </template>
 
-      <!-- Basal-bolus results -->
-      <template v-if="mode === 'basal-bolus'">
-        <p v-if="!weight" class="progress-hint">請輸入體重以開始計算</p>
-        <div v-else class="bb-results">
-          <div class="result-card">
-            <div class="rc-title">📐 建議處方參數</div>
-            <div class="bb-grid">
-              <div class="bb-stat">
-                <span class="bb-stat-val">{{ bbTDD }}</span>
-                <span class="bb-stat-label">TDD (units/day)</span>
-              </div>
-              <div class="bb-stat">
-                <span class="bb-stat-val basal-val">{{ bbBasal }}</span>
-                <span class="bb-stat-label">基礎胰島素 (units/day)</span>
-              </div>
-              <div class="bb-stat">
-                <span class="bb-stat-val bolus-val">{{
-                  bbBolusPerMealAdjusted
-                }}</span>
-                <span class="bb-stat-label">餐食胰島素 (units/餐)</span>
-                <span
-                  v-if="bbPreMealAdjustment && bbPreMealAdjustment > 0"
-                  class="bb-stat-sub"
-                  >基礎 {{ bbBolusPerMeal }} + 矯正
-                  {{ bbPreMealAdjustment }}</span
-                >
-              </div>
-              <div class="bb-stat">
-                <span class="bb-stat-val carb-val">{{ bbCarbRatio }}</span>
-                <span class="bb-stat-label">碳水化合物比值 (g/unit)</span>
-              </div>
-              <div class="bb-stat">
-                <span class="bb-stat-val isf-val">{{ bbISF }}</span>
-                <span class="bb-stat-label">ISF 速效 (mg/dL per unit)</span>
-              </div>
-              <div class="bb-stat" v-if="bbISFReg">
-                <span class="bb-stat-val isf-reg-val">{{ bbISFReg }}</span>
-                <span class="bb-stat-label">ISF 短效 (mg/dL per unit)</span>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="bb-correction"
-            v-if="preMealBG !== null && bbPreMealAdjustment !== null"
-          >
-            <span v-if="bbPreMealAdjustment > 0" class="corr-need">
-              ⚡ 餐前血糖 {{ preMealBG }} mg/dL（目標
-              {{ preMealTarget }} mg/dL）， 建議追加
-              <strong>+{{ bbPreMealAdjustment }} units</strong> 速效胰島素
-            </span>
-            <span v-else class="corr-ok">✅ 餐前血糖已達標，不需矯正追加</span>
-          </div>
-
-          <div class="guide-card">
-            <div class="guide-title">
-              📋 起始與 titration 指引（臺灣糖尿病學會）
-            </div>
-            <ul class="guide-list">
-              <li>
-                <strong>起始策略：</strong>需 2–3
-                天記錄三餐前後血糖，挑選餐後血糖增加最多的餐次作為第一次加打餐前胰島素的時間點（Basal-Plus
-                +1）
-              </li>
-              <li>
-                <strong>起始劑量選項：</strong>① 0.1–0.15 units/kg/餐 ② 固定 4
-                units 起 ③ 血糖值（mg/dL）÷ 36 ④ 基礎胰島素劑量 × 10% ⑤ 每 1
-                unit 涵蓋 10–15 g 醣類估算
-              </li>
-              <li>
-                <strong>基礎調整：</strong>每 2–3 天依 FBG 調整（目標 80–130
-                mg/dL），方法同 basal-only 模式
-              </li>
-              <li>
-                <strong>餐食調整：</strong>每週調整 1–2 次，每次 1–2 units 或
-                10–15%，依餐後 2h 血糖（目標 &lt; 180 mg/dL）或下一餐前血糖調整
-              </li>
-              <li>
-                <strong>ISF（1800 法則，速效）：</strong>1 unit &asymp;
-                {{ bbISF }} mg/dL；<span v-if="bbISFReg"
-                  ><strong>ISF（1500 法則，短效 Regular）：</strong>1 unit
-                  &asymp; {{ bbISFReg }} mg/dL</span
-                >
-              </li>
-              <li>
-                <strong>碳水化合物比值：</strong>速效用 500 法則 → 1 unit :
-                {{ bbCarbRatio }} g CHO；短效 Regular 用 450 法則
-              </li>
-              <li>
-                <strong>低血糖：</strong>&lt; 70 mg/dL 時減 2–4 units 或
-                10–20%，並查明原因
-              </li>
-              <li>
-                <strong>Basal-Plus 進階：</strong>需加打第 2
-                針餐前胰島素（+2）時，建議停用 SUs/Glinides，DPP-4i 視情況停用
-              </li>
-              <li>
-                <strong>替代方案：</strong>亦可選 Ryzodeg（70% Degludec + 30%
-                Aspart）於最大餐注射，必要時改 BID
-              </li>
-              <li>
-                <strong>固定劑型合併：</strong>iDegLira（Degludec +
-                Liraglutide）、iGlarLixi（Glargine + Lixisenatide）亦可考慮
-              </li>
-            </ul>
-          </div>
-        </div>
-      </template>
-
-      <!-- Premixed results -->
-      <template v-if="mode === 'premixed'">
-        <p v-if="!weight" class="progress-hint">請輸入體重以開始計算</p>
-        <div v-else class="pm-results">
-          <div class="result-card">
-            <div class="rc-title">
-              🔀 建議起始處方 —
-              {{ premixOpts.find((o) => o.value === premixType)?.label }}
-            </div>
-            <div class="bb-grid">
-              <div class="bb-stat">
-                <span class="bb-stat-val">{{ premixTDD }}</span>
-                <span class="bb-stat-label">TDD (units/day)</span>
-              </div>
-              <template v-if="premixType === 'ryzodeg'">
+        <!-- Basal-bolus results -->
+        <template v-if="mode === 'basal-bolus'">
+          <p v-if="!weight" class="progress-hint">請輸入體重以開始計算</p>
+          <div v-else class="bb-results">
+            <div class="result-card">
+              <div class="rc-title">📐 建議處方參數</div>
+              <div class="bb-grid">
                 <div class="bb-stat">
-                  <span class="bb-stat-val basal-val">{{ premixMorning }}</span>
-                  <span class="bb-stat-label">QD 最大餐 (units)</span>
-                </div>
-                <div class="bb-stat alt-bid">
-                  <span class="bb-stat-label alt-label">或 BID</span>
+                  <span class="bb-stat-val">{{ bbTDD }}</span>
+                  <span class="bb-stat-label">TDD (units/day)</span>
                 </div>
                 <div class="bb-stat">
-                  <span class="bb-stat-val basal-val">{{
-                    Math.round((premixTDD * 2) / 3)
-                  }}</span>
-                  <span class="bb-stat-label">早餐前 (units)</span>
+                  <span class="bb-stat-val basal-val">{{ bbBasal }}</span>
+                  <span class="bb-stat-label">基礎胰島素 (units/day)</span>
                 </div>
                 <div class="bb-stat">
                   <span class="bb-stat-val bolus-val">{{
-                    premixTDD - Math.round((premixTDD * 2) / 3)
+                    bbBolusPerMealAdjusted
                   }}</span>
-                  <span class="bb-stat-label">晚餐前 (units)</span>
+                  <span class="bb-stat-label">餐食胰島素 (units/餐)</span>
+                  <span
+                    v-if="bbPreMealAdjustment && bbPreMealAdjustment > 0"
+                    class="bb-stat-sub"
+                    >基礎 {{ bbBolusPerMeal }} + 矯正
+                    {{ bbPreMealAdjustment }}</span
+                  >
                 </div>
-              </template>
-              <template v-else>
                 <div class="bb-stat">
-                  <span class="bb-stat-val basal-val">{{ premixMorning }}</span>
-                  <span class="bb-stat-label">早餐前 (units)</span>
+                  <span class="bb-stat-val carb-val">{{ bbCarbRatio }}</span>
+                  <span class="bb-stat-label">碳水化合物比值 (g/unit)</span>
                 </div>
-                <div class="bb-stat" v-if="premixEvening !== null">
-                  <span class="bb-stat-val bolus-val">{{ premixEvening }}</span>
-                  <span class="bb-stat-label">晚餐前 (units)</span>
+                <div class="bb-stat">
+                  <span class="bb-stat-val isf-val">{{ bbISF }}</span>
+                  <span class="bb-stat-label">ISF 速效 (mg/dL per unit)</span>
                 </div>
-              </template>
+                <div class="bb-stat" v-if="bbISFReg">
+                  <span class="bb-stat-val isf-reg-val">{{ bbISFReg }}</span>
+                  <span class="bb-stat-label">ISF 短效 (mg/dL per unit)</span>
+                </div>
+              </div>
             </div>
-            <div class="pm-comp">
-              <span class="pm-comp-label">組成：</span>
-              <span class="pm-comp-val"
-                >{{ premixOpts.find((o) => o.value === premixType)?.rapid }} /
-                {{
-                  premixOpts.find((o) => o.value === premixType)?.basal
-                }}</span
+
+            <div
+              class="bb-correction"
+              v-if="preMealBG !== null && bbPreMealAdjustment !== null"
+            >
+              <span v-if="bbPreMealAdjustment > 0" class="corr-need">
+                ⚡ 餐前血糖 {{ preMealBG }} mg/dL（目標
+                {{ preMealTarget }} mg/dL）， 建議追加
+                <strong>+{{ bbPreMealAdjustment }} units</strong> 速效胰島素
+              </span>
+              <span v-else class="corr-ok"
+                >✅ 餐前血糖已達標，不需矯正追加</span
               >
             </div>
-          </div>
 
-          <div class="guide-card">
-            <div class="guide-title">📋 titration 指引（臺灣糖尿病學會）</div>
-            <ul class="guide-list">
-              <li v-if="premixTitrateMorning">
-                <strong>早餐前劑量调整：</strong
-                >{{ premixTitrateMorning.reason }}（建議 →
-                {{ premixTitrateMorning.newDose }} units）
-              </li>
-              <li v-if="premixTitrateEvening">
-                <strong>晚餐前劑量调整：</strong
-                >{{ premixTitrateEvening.reason }}（建議 →
-                {{ premixTitrateEvening.newDose }} units）
-              </li>
-              <li>
-                <strong>起始劑量：</strong>以基礎胰島素劑量分成 2/3 早餐前、1/3
-                晚餐前，或早晚餐前各一半；亦可以 0.2–0.4 units/kg/day 估算
-              </li>
-              <li>
-                <strong>調整頻率：</strong>每週調整 1–2 次，每次 1–2 units 或
-                10–15%
-              </li>
-              <li>
-                <strong>低血糖處理：</strong>血糖 &lt; 70 mg/dL 時減 2–4 units
-                或 10–20%，並查明原因
-              </li>
-              <li>
-                <strong>每日 3 次注射：</strong
-                >若早晚餐前預混仍無法達標，可考慮中午加打一針；仍無法達標則改
-                basal-bolus
-              </li>
-              <li>
-                <strong>NovoMix 30 / Humalog Mix 25：</strong>30%
-                速效成分，適合常規亞洲飲食
-              </li>
-              <li>
-                <strong>Humalog Mix 50：</strong>50%
-                速效成分，適合早餐/晚餐碳水化合物比例高的患者
-              </li>
-              <li>
-                <strong>Ryzodeg（70% Degludec + 30% Aspart）：</strong>QD
-                最大餐注射，方便或控制不佳可改 BID 早晚餐前
-              </li>
-            </ul>
-          </div>
-        </div>
-      </template>
-
-      <!-- Split-mixed results -->
-      <template v-if="mode === 'split-mixed'">
-        <p v-if="!weight" class="progress-hint">請輸入體重以開始計算</p>
-        <div v-else class="sm-results">
-          <div class="result-card">
-            <div class="rc-title">⚗ 建議處方 — NPH + Regular 分次混合</div>
-            <div class="sm-schedule">
-              <div class="sm-time">
-                <span class="sm-time-label">🌅 早餐前</span>
-                <span class="sm-dose"
-                  ><strong>{{ smMorningNPH }}</strong> units NPH</span
-                >
-                <span class="sm-plus">+</span>
-                <span class="sm-dose"
-                  ><strong>{{ smMorningReg }}</strong> units Regular</span
-                >
-                <span class="sm-ratio">(2:1)</span>
-                <span class="sm-unit">units</span>
+            <div class="guide-card">
+              <div class="guide-title">
+                📋 起始與 titration 指引（臺灣糖尿病學會）
               </div>
-              <div class="sm-time">
-                <span class="sm-time-label">🌆 晚餐前</span>
-                <span class="sm-dose"
-                  ><strong>{{ smEveningNPH }}</strong> units NPH</span
-                >
-                <span class="sm-plus">+</span>
-                <span class="sm-dose"
-                  ><strong>{{ smEveningReg }}</strong> units Regular</span
-                >
-                <span class="sm-ratio">(1:1)</span>
-                <span class="sm-unit">units</span>
-              </div>
-              <div class="sm-total">
-                <span
-                  >總計：<strong>{{ smTDD }}</strong> units/day</span
-                >
-                <span class="sm-isf"
-                  >ISF（Regular，1500 法則）：1 unit →
-                  <strong>{{ smISF }}</strong> mg/dL</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="guide-card">
-            <div class="guide-title">
-              📋 titration 指引（依血糖監測模式調整，臺灣糖尿病學會）
-            </div>
-            <ul class="guide-list">
-              <li>
-                <strong>早餐前 Regular</strong> → 依
-                <strong>午餐前血糖</strong>（目標 &lt; 140 mg/dL），每次 ±2
-                units
-              </li>
-              <li>
-                <strong>早餐前 NPH</strong> → 依
-                <strong>晚餐前血糖</strong>（目標 80–130 mg/dL），每次 ±2–4
-                units
-              </li>
-              <li>
-                <strong>晚餐前 Regular</strong> → 依
-                <strong>睡前血糖</strong>（目標 &lt; 140 mg/dL），每次 ±2 units
-              </li>
-              <li>
-                <strong>晚餐前 NPH</strong> → 依 <strong>空腹血糖</strong>（目標
-                80–130 mg/dL），每次 ±2–4 units
-              </li>
-              <li>
-                調整頻率：每週調整 1–2 次，每次 1–2 units 或
-                10–15%；僅調整一個時間點，避免同時多點調整
-              </li>
-              <li>
-                低血糖（&lt; 70 mg/dL）時減 2–4 units 或 10–20%，並查明原因
-              </li>
-            </ul>
-            <div
-              class="guide-sub"
-              style="
-                margin-top: 0.5rem;
-                padding-top: 0.5rem;
-                border-top: 1px solid var(--vp-c-divider);
-              "
-            >
-              <div class="guide-sub-title">⚠ 胰島素混合注意事項：</div>
               <ul class="guide-list">
-                <li>抽藥順序：先抽速效或短效（澄清），再抽中效 NPH（混濁）</li>
                 <li>
-                  Glargine（U-100/U-300）、Detemir、Degludec：不可與其他胰島素混合
+                  <strong>起始策略：</strong>需 2–3
+                  天記錄三餐前後血糖，挑選餐後血糖增加最多的餐次作為第一次加打餐前胰島素的時間點（Basal-Plus
+                  +1）
                 </li>
-                <li>Glargine U-300 不可用傳統 U-100 空針抽取，以免劑量錯誤</li>
+                <li>
+                  <strong>起始劑量選項：</strong>① 0.1–0.15 units/kg/餐 ② 固定 4
+                  units 起 ③ 血糖值（mg/dL）÷ 36 ④ 基礎胰島素劑量 × 10% ⑤ 每 1
+                  unit 涵蓋 10–15 g 醣類估算
+                </li>
+                <li>
+                  <strong>基礎調整：</strong>每 2–3 天依 FBG 調整（目標 80–130
+                  mg/dL），方法同 basal-only 模式
+                </li>
+                <li>
+                  <strong>餐食調整：</strong>每週調整 1–2 次，每次 1–2 units 或
+                  10–15%，依餐後 2h 血糖（目標 &lt; 180
+                  mg/dL）或下一餐前血糖調整
+                </li>
+                <li>
+                  <strong>ISF（1800 法則，速效）：</strong>1 unit &asymp;
+                  {{ bbISF }} mg/dL；<span v-if="bbISFReg"
+                    ><strong>ISF（1500 法則，短效 Regular）：</strong>1 unit
+                    &asymp; {{ bbISFReg }} mg/dL</span
+                  >
+                </li>
+                <li>
+                  <strong>碳水化合物比值：</strong>速效用 500 法則 → 1 unit :
+                  {{ bbCarbRatio }} g CHO；短效 Regular 用 450 法則
+                </li>
+                <li>
+                  <strong>低血糖：</strong>&lt; 70 mg/dL 時減 2–4 units 或
+                  10–20%，並查明原因
+                </li>
+                <li>
+                  <strong>Basal-Plus 進階：</strong>需加打第 2
+                  針餐前胰島素（+2）時，建議停用 SUs/Glinides，DPP-4i 視情況停用
+                </li>
+                <li>
+                  <strong>替代方案：</strong>亦可選 Ryzodeg（70% Degludec + 30%
+                  Aspart）於最大餐注射，必要時改 BID
+                </li>
+                <li>
+                  <strong>固定劑型合併：</strong>iDegLira（Degludec +
+                  Liraglutide）、iGlarLixi（Glargine + Lixisenatide）亦可考慮
+                </li>
               </ul>
             </div>
           </div>
-        </div>
-      </template>
-    </div>
+        </template>
 
-    <!-- Safety notes -->
-    <div class="safety-notes">
-      <div class="notes-header">⚠ 安全注意事項</div>
-      <ul class="note-list">
-        <li>低血糖定義：血糖 &lt; 70 mg/dL，嚴重低血糖需立即處理</li>
-        <li>
-          空腹血糖目標：80–130 mg/dL（ADA），餐後 2h 血糖目標 &lt; 180 mg/dL
-        </li>
-        <li>每次僅依一種演算法調整，避免重複疊加；調整頻率不應超過建議區間</li>
-        <li>
-          基礎胰島素劑量 &gt; 0.5 units/kg/day 但 FBG 已達標、A1C
-          仍未達標時，應評估加入餐時胰島素或 GLP-1RA
-        </li>
-        <li>
-          所有起始劑量建議均應減量 20–50%
-          用於老年人、腎功能不全或低血糖高風險族群
-        </li>
-      </ul>
-    </div>
+        <!-- Premixed results -->
+        <template v-if="mode === 'premixed'">
+          <p v-if="!weight" class="progress-hint">請輸入體重以開始計算</p>
+          <div v-else class="pm-results">
+            <div class="result-card">
+              <div class="rc-title">
+                🔀 建議起始處方 —
+                {{ premixOpts.find((o) => o.value === premixType)?.label }}
+              </div>
+              <div class="bb-grid">
+                <div class="bb-stat">
+                  <span class="bb-stat-val">{{ premixTDD }}</span>
+                  <span class="bb-stat-label">TDD (units/day)</span>
+                </div>
+                <template v-if="premixType === 'ryzodeg'">
+                  <div class="bb-stat">
+                    <span class="bb-stat-val basal-val">{{
+                      premixMorning
+                    }}</span>
+                    <span class="bb-stat-label">QD 最大餐 (units)</span>
+                  </div>
+                  <div class="bb-stat alt-bid">
+                    <span class="bb-stat-label alt-label">或 BID</span>
+                  </div>
+                  <div class="bb-stat">
+                    <span class="bb-stat-val basal-val">{{
+                      Math.round((premixTDD * 2) / 3)
+                    }}</span>
+                    <span class="bb-stat-label">早餐前 (units)</span>
+                  </div>
+                  <div class="bb-stat">
+                    <span class="bb-stat-val bolus-val">{{
+                      premixTDD - Math.round((premixTDD * 2) / 3)
+                    }}</span>
+                    <span class="bb-stat-label">晚餐前 (units)</span>
+                  </div>
+                </template>
+                <template v-else>
+                  <div class="bb-stat">
+                    <span class="bb-stat-val basal-val">{{
+                      premixMorning
+                    }}</span>
+                    <span class="bb-stat-label">早餐前 (units)</span>
+                  </div>
+                  <div class="bb-stat" v-if="premixEvening !== null">
+                    <span class="bb-stat-val bolus-val">{{
+                      premixEvening
+                    }}</span>
+                    <span class="bb-stat-label">晚餐前 (units)</span>
+                  </div>
+                </template>
+              </div>
+              <div class="pm-comp">
+                <span class="pm-comp-label">組成：</span>
+                <span class="pm-comp-val"
+                  >{{ premixOpts.find((o) => o.value === premixType)?.rapid }} /
+                  {{
+                    premixOpts.find((o) => o.value === premixType)?.basal
+                  }}</span
+                >
+              </div>
+            </div>
 
-    <!-- Actions -->
-    <div class="ins-actions">
-      <button
-        class="btn-copy"
-        @click="copyMarkdown"
-        :disabled="mode === 'basal-only' && (!weight || !avgFBG)"
-      >
-        {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
-      </button>
-      <button class="btn-reset" @click="reset">重置</button>
+            <div class="guide-card">
+              <div class="guide-title">📋 titration 指引（臺灣糖尿病學會）</div>
+              <ul class="guide-list">
+                <li v-if="premixTitrateMorning">
+                  <strong>早餐前劑量调整：</strong
+                  >{{ premixTitrateMorning.reason }}（建議 →
+                  {{ premixTitrateMorning.newDose }} units）
+                </li>
+                <li v-if="premixTitrateEvening">
+                  <strong>晚餐前劑量调整：</strong
+                  >{{ premixTitrateEvening.reason }}（建議 →
+                  {{ premixTitrateEvening.newDose }} units）
+                </li>
+                <li>
+                  <strong>起始劑量：</strong>以基礎胰島素劑量分成 2/3
+                  早餐前、1/3 晚餐前，或早晚餐前各一半；亦可以 0.2–0.4
+                  units/kg/day 估算
+                </li>
+                <li>
+                  <strong>調整頻率：</strong>每週調整 1–2 次，每次 1–2 units 或
+                  10–15%
+                </li>
+                <li>
+                  <strong>低血糖處理：</strong>血糖 &lt; 70 mg/dL 時減 2–4 units
+                  或 10–20%，並查明原因
+                </li>
+                <li>
+                  <strong>每日 3 次注射：</strong
+                  >若早晚餐前預混仍無法達標，可考慮中午加打一針；仍無法達標則改
+                  basal-bolus
+                </li>
+                <li>
+                  <strong>NovoMix 30 / Humalog Mix 25：</strong>30%
+                  速效成分，適合常規亞洲飲食
+                </li>
+                <li>
+                  <strong>Humalog Mix 50：</strong>50%
+                  速效成分，適合早餐/晚餐碳水化合物比例高的患者
+                </li>
+                <li>
+                  <strong>Ryzodeg（70% Degludec + 30% Aspart）：</strong>QD
+                  最大餐注射，方便或控制不佳可改 BID 早晚餐前
+                </li>
+              </ul>
+            </div>
+          </div>
+        </template>
+
+        <!-- Split-mixed results -->
+        <template v-if="mode === 'split-mixed'">
+          <p v-if="!weight" class="progress-hint">請輸入體重以開始計算</p>
+          <div v-else class="sm-results">
+            <div class="result-card">
+              <div class="rc-title">⚗ 建議處方 — NPH + Regular 分次混合</div>
+              <div class="sm-schedule">
+                <div class="sm-time">
+                  <span class="sm-time-label">🌅 早餐前</span>
+                  <span class="sm-dose"
+                    ><strong>{{ smMorningNPH }}</strong> units NPH</span
+                  >
+                  <span class="sm-plus">+</span>
+                  <span class="sm-dose"
+                    ><strong>{{ smMorningReg }}</strong> units Regular</span
+                  >
+                  <span class="sm-ratio">(2:1)</span>
+                  <span class="sm-unit">units</span>
+                </div>
+                <div class="sm-time">
+                  <span class="sm-time-label">🌆 晚餐前</span>
+                  <span class="sm-dose"
+                    ><strong>{{ smEveningNPH }}</strong> units NPH</span
+                  >
+                  <span class="sm-plus">+</span>
+                  <span class="sm-dose"
+                    ><strong>{{ smEveningReg }}</strong> units Regular</span
+                  >
+                  <span class="sm-ratio">(1:1)</span>
+                  <span class="sm-unit">units</span>
+                </div>
+                <div class="sm-total">
+                  <span
+                    >總計：<strong>{{ smTDD }}</strong> units/day</span
+                  >
+                  <span class="sm-isf"
+                    >ISF（Regular，1500 法則）：1 unit →
+                    <strong>{{ smISF }}</strong> mg/dL</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-card">
+              <div class="guide-title">
+                📋 titration 指引（依血糖監測模式調整，臺灣糖尿病學會）
+              </div>
+              <ul class="guide-list">
+                <li>
+                  <strong>早餐前 Regular</strong> → 依
+                  <strong>午餐前血糖</strong>（目標 &lt; 140 mg/dL），每次 ±2
+                  units
+                </li>
+                <li>
+                  <strong>早餐前 NPH</strong> → 依
+                  <strong>晚餐前血糖</strong>（目標 80–130 mg/dL），每次 ±2–4
+                  units
+                </li>
+                <li>
+                  <strong>晚餐前 Regular</strong> → 依
+                  <strong>睡前血糖</strong>（目標 &lt; 140 mg/dL），每次 ±2
+                  units
+                </li>
+                <li>
+                  <strong>晚餐前 NPH</strong> → 依
+                  <strong>空腹血糖</strong>（目標 80–130 mg/dL），每次 ±2–4
+                  units
+                </li>
+                <li>
+                  調整頻率：每週調整 1–2 次，每次 1–2 units 或
+                  10–15%；僅調整一個時間點，避免同時多點調整
+                </li>
+                <li>
+                  低血糖（&lt; 70 mg/dL）時減 2–4 units 或 10–20%，並查明原因
+                </li>
+              </ul>
+              <div
+                class="guide-sub"
+                style="
+                  margin-top: 0.5rem;
+                  padding-top: 0.5rem;
+                  border-top: 1px solid var(--vp-c-divider);
+                "
+              >
+                <div class="guide-sub-title">⚠ 胰島素混合注意事項：</div>
+                <ul class="guide-list">
+                  <li>
+                    抽藥順序：先抽速效或短效（澄清），再抽中效 NPH（混濁）
+                  </li>
+                  <li>
+                    Glargine（U-100/U-300）、Detemir、Degludec：不可與其他胰島素混合
+                  </li>
+                  <li>
+                    Glargine U-300 不可用傳統 U-100 空針抽取，以免劑量錯誤
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+
+      <!-- Safety notes -->
+      <div class="safety-notes">
+        <div class="notes-header">⚠ 安全注意事項</div>
+        <ul class="note-list">
+          <li>低血糖定義：血糖 &lt; 70 mg/dL，嚴重低血糖需立即處理</li>
+          <li>
+            空腹血糖目標：80–130 mg/dL（ADA），餐後 2h 血糖目標 &lt; 180 mg/dL
+          </li>
+          <li>
+            每次僅依一種演算法調整，避免重複疊加；調整頻率不應超過建議區間
+          </li>
+          <li>
+            基礎胰島素劑量 &gt; 0.5 units/kg/day 但 FBG 已達標、A1C
+            仍未達標時，應評估加入餐時胰島素或 GLP-1RA
+          </li>
+          <li>
+            所有起始劑量建議均應減量 20–50%
+            用於老年人、腎功能不全或低血糖高風險族群
+          </li>
+        </ul>
+      </div>
+
+      <!-- Actions -->
+      <div class="ins-actions">
+        <button
+          class="btn-copy"
+          @click="copyMarkdown"
+          :disabled="mode === 'basal-only' && (!weight || !avgFBG)"
+        >
+          {{ copied ? "已複製 ✓" : "複製 Markdown 結果" }}
+        </button>
+        <button class="btn-reset" @click="reset">重置</button>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.ins {
+.ins-wrap {
   max-width: 820px;
   margin: 0 auto;
+}
+.ins {
+  padding: 2rem 0 3rem;
   font-size: 0.9rem;
 }
 
@@ -2265,5 +2302,56 @@ async function copyMarkdown() {
   .ref-row {
     font-size: 0.78rem;
   }
+}
+
+/* ── Tab bar ────────────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+.tab-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.tab-btn:hover {
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}
+.tab-btn.active {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+.tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
+.tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
 }
 </style>

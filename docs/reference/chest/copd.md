@@ -3,8 +3,7 @@ layout: doc
 title: 慢性肺阻塞 COPD
 ---
 
-# 慢性肺阻塞
-**Chronic Obstructive Pulmonary Disease**
+# 慢性肺阻塞 **Chronic Obstructive Pulmonary Disease**
 
 ## 1. 總論：疾病衝擊與給付改善方案
 

@@ -4,8 +4,7 @@ title: Abdominal Ultrasound Anatomy 腹部超音波解剖學
 password: "516800"
 ---
 
-# Abdominal Ultrasound Anatomy
-**腹部超音波解剖學**
+# Abdominal Ultrasound Anatomy **腹部超音波解剖學**
 
 ## 1. Liver
 

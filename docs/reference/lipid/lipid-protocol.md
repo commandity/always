@@ -3,9 +3,7 @@ layout: doc
 title: 降血脂藥物 Lipid-Lowering Drugs
 ---
 
-# 降血脂藥物
-
-**Lipid-Lowering Drugs**
+# 降血脂藥物 **Lipid-Lowering Drugs**
 
 ---
 

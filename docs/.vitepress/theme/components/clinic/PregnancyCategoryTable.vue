@@ -107,121 +107,140 @@ const sortCatArrow = computed(() =>
 </script>
 
 <template>
-  <div class="preg-table">
-    <!-- 控制列 -->
-    <div class="preg-table controls">
-      <input
-        v-model="keyword"
-        class="preg-table search"
-        type="search"
-        placeholder="搜尋學名、藥理分類或備註…"
-        aria-label="搜尋藥品"
-      />
-      <select
-        v-model="activeSpecialty"
-        class="preg-table select"
-        aria-label="選擇科別"
-      >
-        <option v-for="opt in specialtyOptions" :key="opt.key" :value="opt.key">
-          {{ opt.label }}
-        </option>
-      </select>
-      <button class="preg-table reset" type="button" @click="resetFilters">
-        清除篩選
+  <div class="pt-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active">
+        <span class="tab-label">孕婦用藥分級</span>
+        <span class="tab-sub">Pregnancy Drug Category</span>
       </button>
     </div>
-
-    <!-- 分級篩選 chips -->
-    <div class="preg-table chips">
-      <button
-        v-for="cat in categoryOrder"
-        :key="cat"
-        type="button"
-        class="preg-table chip"
-        :class="[
-          categoryClassMap[cat],
-          { 'is-active': activeCategories.has(cat) },
-        ]"
-        :aria-pressed="activeCategories.has(cat)"
-        @click="toggleCategory(cat)"
-      >
-        {{ cat }}
-      </button>
-    </div>
-
-    <!-- 分級說明 -->
-    <details class="preg-table legend">
-      <summary class="preg-table legend-summary">分級含義說明</summary>
-      <dl class="preg-table legend-dl">
-        <div
-          v-for="(label, cat) in CATEGORY_LABELS"
-          :key="cat"
-          class="preg-table legend-item"
+    <div class="preg-table">
+      <!-- 控制列 -->
+      <div class="preg-table controls">
+        <input
+          v-model="keyword"
+          class="preg-table search"
+          type="search"
+          placeholder="搜尋學名、藥理分類或備註…"
+          aria-label="搜尋藥品"
+        />
+        <select
+          v-model="activeSpecialty"
+          class="preg-table select"
+          aria-label="選擇科別"
         >
-          <dt class="preg-table legend-cat" :class="categoryClassMap[cat]">
-            {{ cat }}
-          </dt>
-          <dd class="preg-table legend-desc">{{ label }}</dd>
-        </div>
-      </dl>
-    </details>
-
-    <p class="preg-table count">顯示 {{ resultCount }} / {{ total }} 項</p>
-
-    <!-- 桌面表格 -->
-    <table class="preg-table grid">
-      <thead>
-        <tr>
-          <th class="preg-table sortable" scope="col" @click="setSort('inn')">
-            學名 (INN) <span class="preg-table arrow">{{ sortInnArrow }}</span>
-          </th>
-          <th
-            class="preg-table sortable"
-            scope="col"
-            @click="setSort('category')"
+          <option
+            v-for="opt in specialtyOptions"
+            :key="opt.key"
+            :value="opt.key"
           >
-            分級 <span class="preg-table arrow">{{ sortCatArrow }}</span>
-          </th>
-          <th scope="col">藥理分類</th>
-          <th scope="col">科別</th>
-          <th scope="col">備註 / 孕期細節</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="row in rows" :key="row.inn">
-          <td class="preg-table inn">{{ row.inn }}</td>
-          <td>
-            <span class="preg-table badge" :class="row.badgeClass">{{
-              row.category
-            }}</span>
-          </td>
-          <td>{{ row.classZh }}</td>
-          <td class="preg-table spec">{{ row.specialtyLabels }}</td>
-          <td class="preg-table note">
-            <span v-if="row.categoryDetail" class="preg-table detail">{{
-              row.categoryDetail
-            }}</span>
-            <span>{{ row.noteZh }}</span>
-          </td>
-        </tr>
-        <tr v-if="resultCount === 0">
-          <td colspan="5" class="preg-table empty">
-            查無符合條件的藥品，請調整搜尋或篩選。
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            {{ opt.label }}
+          </option>
+        </select>
+        <button class="preg-table reset" type="button" @click="resetFilters">
+          清除篩選
+        </button>
+      </div>
 
-    <p class="preg-table disclaimer">
-      分級為歷史 FDA A/B/C/D/X 字母（FDA 已於 2015 年改採 PLLR
-      敘述式仿單），台灣仍廣泛沿用。 學名一律不譯；處方前請核對最新仿單。
-    </p>
+      <!-- 分級篩選 chips -->
+      <div class="preg-table chips">
+        <button
+          v-for="cat in categoryOrder"
+          :key="cat"
+          type="button"
+          class="preg-table chip"
+          :class="[
+            categoryClassMap[cat],
+            { 'is-active': activeCategories.has(cat) },
+          ]"
+          :aria-pressed="activeCategories.has(cat)"
+          @click="toggleCategory(cat)"
+        >
+          {{ cat }}
+        </button>
+      </div>
+
+      <!-- 分級說明 -->
+      <details class="preg-table legend">
+        <summary class="preg-table legend-summary">分級含義說明</summary>
+        <dl class="preg-table legend-dl">
+          <div
+            v-for="(label, cat) in CATEGORY_LABELS"
+            :key="cat"
+            class="preg-table legend-item"
+          >
+            <dt class="preg-table legend-cat" :class="categoryClassMap[cat]">
+              {{ cat }}
+            </dt>
+            <dd class="preg-table legend-desc">{{ label }}</dd>
+          </div>
+        </dl>
+      </details>
+
+      <p class="preg-table count">顯示 {{ resultCount }} / {{ total }} 項</p>
+
+      <!-- 桌面表格 -->
+      <table class="preg-table grid">
+        <thead>
+          <tr>
+            <th class="preg-table sortable" scope="col" @click="setSort('inn')">
+              學名 (INN)
+              <span class="preg-table arrow">{{ sortInnArrow }}</span>
+            </th>
+            <th
+              class="preg-table sortable"
+              scope="col"
+              @click="setSort('category')"
+            >
+              分級 <span class="preg-table arrow">{{ sortCatArrow }}</span>
+            </th>
+            <th scope="col">藥理分類</th>
+            <th scope="col">科別</th>
+            <th scope="col">備註 / 孕期細節</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="row in rows" :key="row.inn">
+            <td class="preg-table inn">{{ row.inn }}</td>
+            <td>
+              <span class="preg-table badge" :class="row.badgeClass">{{
+                row.category
+              }}</span>
+            </td>
+            <td>{{ row.classZh }}</td>
+            <td class="preg-table spec">{{ row.specialtyLabels }}</td>
+            <td class="preg-table note">
+              <span v-if="row.categoryDetail" class="preg-table detail">{{
+                row.categoryDetail
+              }}</span>
+              <span>{{ row.noteZh }}</span>
+            </td>
+          </tr>
+          <tr v-if="resultCount === 0">
+            <td colspan="5" class="preg-table empty">
+              查無符合條件的藥品，請調整搜尋或篩選。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="preg-table disclaimer">
+        分級為歷史 FDA A/B/C/D/X 字母（FDA 已於 2015 年改採 PLLR
+        敘述式仿單），台灣仍廣泛沿用。 學名一律不譯；處方前請核對最新仿單。
+      </p>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.pt-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+}
 .preg-table {
   --pt-radius: 8px;
+  padding: 2rem 0 3rem;
+  font-size: 0.9rem;
 }
 
 div.preg-table.controls {
@@ -593,5 +612,62 @@ p.preg-table.disclaimer {
   table.preg-table.grid td:last-child {
     border-bottom: none;
   }
+  .tab-label {
+    font-size: 0.9rem;
+  }
+  .tab-sub {
+    font-size: 0.72rem;
+  }
+}
+
+/* ── Tab bar ────────────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--vp-c-bg-mute);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+}
+.tab-btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--vp-c-text-3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.tab-btn:hover {
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
+}
+.tab-btn.active {
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 12%, transparent);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vp-c-brand-1) 8%, transparent);
+}
+.tab-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+.tab-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+}
+.tab-btn.active .tab-sub {
+  color: var(--vp-c-brand-1);
+  opacity: 0.85;
 }
 </style>

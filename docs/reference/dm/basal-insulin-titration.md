@@ -3,8 +3,7 @@ layout: doc
 title: T2DM 胰島素劑量調整 T2DM Insulin Dose Titration
 ---
 
-# T2DM 胰島素劑量調整
-**T2DM Insulin Dose Titration**
+# T2DM 胰島素劑量調整 **T2DM Insulin Dose Titration**
 
 ---
 

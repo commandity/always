@@ -3,8 +3,7 @@ layout: doc
 title: 區域麻醉 Regional Anesthesia
 ---
 
-# 區域麻醉
-**Regional Anesthesia**
+# 區域麻醉 **Regional Anesthesia**
 
 ---
 

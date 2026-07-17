@@ -3,8 +3,7 @@ layout: doc
 title: 吞嚥復健 Dysphagia Rehabilitation
 ---
 
-# 吞嚥復健
-**Dysphagia Rehabilitation**
+# 吞嚥復健 **Dysphagia Rehabilitation**
 
 ## 概述
 

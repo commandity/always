@@ -5,10 +5,6 @@ title: "截肢復健 Amputee Rehabilitation"
 
 # 截肢復健 **Amputee Rehabilitation**
 
----
-::: warning
-本文件僅供教育與參考用途，不能取代專業醫療人員的個案評估與治療決策。
-:::
 
 ## 常見截肢原因
 

@@ -3,8 +3,7 @@ layout: doc
 title: 甲狀腺炎 Thyroiditis
 ---
 
-# 甲狀腺炎
-**Thyroiditis**
+# 甲狀腺炎 **Thyroiditis**
 
 ## 概述
 

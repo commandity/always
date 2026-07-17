@@ -4,8 +4,7 @@ title: Digestive System Sonography 消化系統超音波
 password: "516800"
 ---
 
-# Digestive System Sonography
-**消化系統超音波**
+# Digestive System Sonography **消化系統超音波**
 
 ## Overview
 

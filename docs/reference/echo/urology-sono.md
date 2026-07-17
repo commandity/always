@@ -4,8 +4,7 @@ title: Urological System Diseases 泌尿系統超音波
 password: "516800"
 ---
 
-# Urological System Diseases
-**泌尿系統超音波**
+# Urological System Diseases **泌尿系統超音波**
 
 ## Introduction
 

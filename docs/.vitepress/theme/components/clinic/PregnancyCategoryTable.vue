@@ -234,13 +234,13 @@ const sortCatArrow = computed(() =>
 
 <style scoped>
 .pt-wrap {
-  max-width: 820px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 2rem 0 3rem;
+  font-size: 0.9rem;
 }
 .preg-table {
   --pt-radius: 8px;
-  padding: 2rem 0 3rem;
-  font-size: 0.9rem;
 }
 
 div.preg-table.controls {

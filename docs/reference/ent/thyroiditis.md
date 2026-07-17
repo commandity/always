@@ -19,6 +19,7 @@ title: 甲狀腺炎 Thyroiditis
 | **Other (Riedel's, Silent, Drug-induced)** | 視類型而定          | 纖維化／自體免疫／藥物 |
 
 ## 甲狀腺功能異常鑑別流程 TSH → RAIU
+
 **Thyroid Dysfunction Workup — by TSH & Radioactive Iodine Uptake (RAIU)**
 
 <div style="margin:1.75rem 0;">
@@ -55,7 +56,7 @@ title: 甲狀腺炎 Thyroiditis
         </div>
       </div>
     </div>
-    <div style="flex:1 1 220px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;border:1.5px dashed #6366f1;border-radius:14px;padding:0.9rem 0.85rem;background:rgba(99,102,241,0.04);">
       <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #6366f1;background:rgba(99,102,241,0.08);color:#6366f1;font-weight:700;font-size:0.9rem;text-align:center;">TSH ↑　甲狀腺低下 Hypothyroidism</span>
       <div style="color:var(--vp-c-text-3);font-size:0.8rem;line-height:1.25;text-align:center;">↓ 破壞終末・纖維化</div>
       <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #6366f1;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">

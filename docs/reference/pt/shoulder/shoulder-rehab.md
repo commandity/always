@@ -3,8 +3,7 @@ layout: doc
 title: 肩關節物理治療 Shoulder Physical Therapy
 ---
 
-# 肩關節物理治療
-**Shoulder Physical Therapy**
+# 肩關節物理治療 **Shoulder Physical Therapy**
 
 ## 概述
 

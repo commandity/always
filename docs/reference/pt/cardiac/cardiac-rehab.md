@@ -3,11 +3,11 @@ layout: doc
 title: "心臟復健 Cardiac Rehabilitation"
 ---
 
-# 心臟復健 Cardiac Rehabilitation
-
-**Cardiac Rehabilitation (CR) — A Comprehensive Evidence-Based Guide**
+# 心臟復健 **Cardiac Rehabilitation**
 
 ---
+
+## 概述
 
 ## 概述 Overview
 

@@ -20,154 +20,154 @@ title: 皮膚科鑑別診斷
 <!-- ===== STEP 1 HEADER ===== -->
 <div style="max-width:700px;margin:0 auto;border:1px solid var(--vp-c-divider);border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;text-align:center;">
   <div style="padding:0.65rem 1rem;background:#2c3e50;">
-    <div style="font-weight:700;color:#fff;font-size:1rem;">Step 1: Identify Primary Lesion（鑑別原發病灶）</div>
+    <div style="font-weight:700;color:#fff;font-size:1.05rem;">Step 1: Identify Primary Lesion（鑑別原發病灶）</div>
   </div>
-  <div style="padding:0.6rem 1rem;font-size:0.88rem;color:var(--vp-c-text-2);">先找出單一、最早出現的病灶形態，這是整個鑑別診斷的關鍵第一步</div>
+  <div style="padding:0.6rem 1rem;font-size:0.95rem;color:var(--vp-c-text-2);">先找出單一、最早出現的病灶形態，這是整個鑑別診斷的關鍵第一步</div>
 </div>
 
 <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
 
 <!-- ===== FIVE BRANCHES ===== -->
-<div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+<div style="display:flex;flex-wrap:wrap;gap:1rem;">
 
 <!-- ── Branch 1: Flat ── -->
-<div style="flex:1 1 180px;border:1px solid var(--vp-c-divider);border-top:4px solid #34495e;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
-  <div style="padding:0.55rem 0.85rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(44,62,80,0.08);">
+<div style="flex:1 1 220px;border:1px solid var(--vp-c-divider);border-top:4px solid #34495e;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+  <div style="padding:0.65rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(44,62,80,0.08);">
     <div style="font-weight:700;color:#2c3e50;">Flat Lesions</div>
-    <div style="font-size:0.76rem;color:var(--vp-c-text-3);">平坦病灶 · Macule / Patch</div>
+    <div style="font-size:0.82rem;color:var(--vp-c-text-3);">平坦病灶 · Macule / Patch</div>
   </div>
-  <div style="padding:0.6rem 0.8rem;">
-    <div style="font-size:0.85rem;font-weight:700;color:#34495e;margin-bottom:0.3rem;">Hypopigmented（色素減退）</div>
+  <div style="padding:0.7rem 0.9rem;">
+    <div style="font-size:0.95rem;font-weight:700;color:#34495e;margin-bottom:0.3rem;">Hypopigmented（色素減退）</div>
     <ul style="list-style:none;margin:0 0 0.5rem;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#34495e;flex:none;margin-top:0.42rem;"></span><span>Pityriasis versicolor</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#34495e;flex:none;margin-top:0.42rem;"></span><span>Vitiligo</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#34495e;flex:none;margin-top:0.42rem;"></span><span>Post-inflammatory hypopigmentation</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#34495e;flex:none;margin-top:0.42rem;"></span><span>Tuberous sclerosis (ash-leaf)</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#34495e;flex:none;margin-top:0.48rem;"></span><span>Pityriasis versicolor</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#34495e;flex:none;margin-top:0.48rem;"></span><span>Vitiligo</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#34495e;flex:none;margin-top:0.48rem;"></span><span>Post-inflammatory hypopigmentation</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#34495e;flex:none;margin-top:0.48rem;"></span><span>Tuberous sclerosis (ash-leaf)</span></li>
     </ul>
-    <div style="font-size:0.85rem;font-weight:700;color:#34495e;margin-bottom:0.3rem;">Hyperpigmented（色素沉著）</div>
+    <div style="font-size:0.95rem;font-weight:700;color:#34495e;margin-bottom:0.3rem;">Hyperpigmented（色素沉著）</div>
     <ul style="list-style:none;margin:0 0 0.5rem;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#34495e;flex:none;margin-top:0.42rem;"></span><span>Melasma</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#34495e;flex:none;margin-top:0.42rem;"></span><span>Freckles (ephelides)</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#34495e;flex:none;margin-top:0.42rem;"></span><span>Café-au-lait spots (NF1)</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#34495e;flex:none;margin-top:0.42rem;"></span><span>Lentigo</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#34495e;flex:none;margin-top:0.48rem;"></span><span>Melasma</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#34495e;flex:none;margin-top:0.48rem;"></span><span>Freckles (ephelides)</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#34495e;flex:none;margin-top:0.48rem;"></span><span>Café-au-lait spots (NF1)</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#34495e;flex:none;margin-top:0.48rem;"></span><span>Lentigo</span></li>
     </ul>
-    <div style="font-size:0.85rem;font-weight:700;color:#34495e;margin-bottom:0.3rem;">Erythematous（紅斑）</div>
+    <div style="font-size:0.95rem;font-weight:700;color:#34495e;margin-bottom:0.3rem;">Erythematous（紅斑）</div>
     <ul style="list-style:none;margin:0;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Drug eruption (morbilliform)</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Viral exanthem</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Early CTCL</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Pityriasis rosea (herald patch)</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Drug eruption (morbilliform)</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Viral exanthem</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Early CTCL</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Pityriasis rosea (herald patch)</span></li>
     </ul>
   </div>
 </div>
 
 <!-- ── Branch 2: Raised / Solid ── -->
-<div style="flex:1 1 180px;border:1px solid var(--vp-c-divider);border-top:4px solid #8e44ad;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
-  <div style="padding:0.55rem 0.85rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(142,68,173,0.08);">
+<div style="flex:1 1 220px;border:1px solid var(--vp-c-divider);border-top:4px solid #8e44ad;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+  <div style="padding:0.65rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(142,68,173,0.08);">
     <div style="font-weight:700;color:#8e44ad;">Raised / Solid</div>
-    <div style="font-size:0.76rem;color:var(--vp-c-text-3);">隆起實質病灶 · Papule / Plaque / Nodule</div>
+    <div style="font-size:0.82rem;color:var(--vp-c-text-3);">隆起實質病灶 · Papule / Plaque / Nodule</div>
   </div>
-  <div style="padding:0.6rem 0.8rem;">
-    <div style="font-size:0.85rem;font-weight:700;color:#8e44ad;margin-bottom:0.3rem;">Papulosquamous（丘疹鱗屑）</div>
+  <div style="padding:0.7rem 0.9rem;">
+    <div style="font-size:0.95rem;font-weight:700;color:#8e44ad;margin-bottom:0.3rem;">Papulosquamous（丘疹鱗屑）</div>
     <ul style="list-style:none;margin:0 0 0.5rem;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>Psoriasis — silvery scale, extensor</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>Lichen planus — purple, Wickham striae</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>Pityriasis rosea — Christmas tree</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>Seborrheic dermatitis — greasy scale</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>Secondary syphilis — palms &amp; soles</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>CTCL — chronic pruritic patches</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>Psoriasis — silvery scale, extensor</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>Lichen planus — purple, Wickham striae</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>Pityriasis rosea — Christmas tree</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>Seborrheic dermatitis — greasy scale</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>Secondary syphilis — palms &amp; soles</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>CTCL — chronic pruritic patches</span></li>
     </ul>
-    <div style="font-size:0.85rem;font-weight:700;color:#8e44ad;margin-bottom:0.3rem;">Nodular / Dermal（結節）</div>
+    <div style="font-size:0.95rem;font-weight:700;color:#8e44ad;margin-bottom:0.3rem;">Nodular / Dermal（結節）</div>
     <ul style="list-style:none;margin:0;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>Erythema nodosum — pretibial, tender</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>Dermatofibroma — dimple sign</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>Neurofibroma (NF1)</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.42rem;"></span><span>Kaposi sarcoma (HHV-8)</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span style="color:#e74c3c;font-weight:600;">⚠ BCC / SCC / Melanoma</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>Erythema nodosum — pretibial, tender</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>Dermatofibroma — dimple sign</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>Neurofibroma (NF1)</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#8e44ad;flex:none;margin-top:0.48rem;"></span><span>Kaposi sarcoma (HHV-8)</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span style="color:#e74c3c;font-weight:600;">⚠ BCC / SCC / Melanoma</span></li>
     </ul>
   </div>
 </div>
 
 <!-- ── Branch 3: Fluid-filled ── -->
-<div style="flex:1 1 180px;border:1px solid var(--vp-c-divider);border-top:4px solid #e74c3c;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
-  <div style="padding:0.55rem 0.85rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(231,76,60,0.08);">
+<div style="flex:1 1 220px;border:1px solid var(--vp-c-divider);border-top:4px solid #e74c3c;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+  <div style="padding:0.65rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(231,76,60,0.08);">
     <div style="font-weight:700;color:#e74c3c;">Fluid-filled</div>
-    <div style="font-size:0.76rem;color:var(--vp-c-text-3);">液體填充病灶 · Vesicle / Bulla / Pustule</div>
+    <div style="font-size:0.82rem;color:var(--vp-c-text-3);">液體填充病灶 · Vesicle / Bulla / Pustule</div>
   </div>
-  <div style="padding:0.6rem 0.8rem;">
-    <div style="font-size:0.85rem;font-weight:700;color:#e74c3c;margin-bottom:0.3rem;">Vesicular（水皰）</div>
+  <div style="padding:0.7rem 0.9rem;">
+    <div style="font-size:0.95rem;font-weight:700;color:#e74c3c;margin-bottom:0.3rem;">Vesicular（水皰）</div>
     <ul style="list-style:none;margin:0 0 0.5rem;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Herpes simplex — grouped, painful</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Herpes zoster — dermatomal, prodrome</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Varicella — dewdrop on rose petal</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Dyshidrotic eczema — hands/feet</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Contact dermatitis — linear pattern</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Herpes simplex — grouped, painful</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Herpes zoster — dermatomal, prodrome</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Varicella — dewdrop on rose petal</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Dyshidrotic eczema — hands/feet</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Contact dermatitis — linear pattern</span></li>
     </ul>
-    <div style="font-size:0.85rem;font-weight:700;color:#e74c3c;margin-bottom:0.3rem;">Bullous（大皰）</div>
+    <div style="font-size:0.95rem;font-weight:700;color:#e74c3c;margin-bottom:0.3rem;">Bullous（大皰）</div>
     <ul style="list-style:none;margin:0 0 0.5rem;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Pemphigus vulgaris — flaccid, Nikolsky+</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Bullous pemphigoid — tense, elderly</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>SJS / TEN — mucosal, emergency</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Erythema multiforme — target lesions</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Pemphigus vulgaris — flaccid, Nikolsky+</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Bullous pemphigoid — tense, elderly</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>SJS / TEN — mucosal, emergency</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Erythema multiforme — target lesions</span></li>
     </ul>
-    <div style="font-size:0.85rem;font-weight:700;color:#e74c3c;margin-bottom:0.3rem;">Pustular（膿皰）</div>
+    <div style="font-size:0.95rem;font-weight:700;color:#e74c3c;margin-bottom:0.3rem;">Pustular（膿皰）</div>
     <ul style="list-style:none;margin:0;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Folliculitis — hair follicle origin</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Acne vulgaris — comedones + pustules</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Pustular psoriasis — sterile pustules</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span>Impetigo — honey-colored crust</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Folliculitis — hair follicle origin</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Acne vulgaris — comedones + pustules</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Pustular psoriasis — sterile pustules</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span>Impetigo — honey-colored crust</span></li>
     </ul>
   </div>
 </div>
 
 <!-- ── Branch 4: Edematous ── -->
-<div style="flex:1 1 180px;border:1px solid var(--vp-c-divider);border-top:4px solid #e67e22;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
-  <div style="padding:0.55rem 0.85rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(230,126,34,0.08);">
+<div style="flex:1 1 220px;border:1px solid var(--vp-c-divider);border-top:4px solid #e67e22;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+  <div style="padding:0.65rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(230,126,34,0.08);">
     <div style="font-weight:700;color:#e67e22;">Edematous</div>
-    <div style="font-size:0.76rem;color:var(--vp-c-text-3);">水腫性病灶 · Wheal / Urticaria</div>
+    <div style="font-size:0.82rem;color:var(--vp-c-text-3);">水腫性病灶 · Wheal / Urticaria</div>
   </div>
-  <div style="padding:0.6rem 0.8rem;">
-    <div style="font-size:0.85rem;font-weight:700;color:#e67e22;margin-bottom:0.3rem;">Urticaria / Wheal（蕁麻疹）</div>
+  <div style="padding:0.7rem 0.9rem;">
+    <div style="font-size:0.95rem;font-weight:700;color:#e67e22;margin-bottom:0.3rem;">Urticaria / Wheal（蕁麻疹）</div>
     <ul style="list-style:none;margin:0 0 0.5rem;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Acute urticaria (&lt;6 wks) — allergic</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Chronic urticaria (&gt;6 wks)</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Physical urticaria (cold/heat/pressure)</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Dermographism</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Angioedema — deep dermis/subcutis</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Acute urticaria (&lt;6 wks) — allergic</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Chronic urticaria (&gt;6 wks)</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Physical urticaria (cold/heat/pressure)</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Dermographism</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Angioedema — deep dermis/subcutis</span></li>
     </ul>
-    <div style="font-size:0.85rem;font-weight:700;color:#e67e22;margin-bottom:0.3rem;">Eczematous / Dermatitis</div>
+    <div style="font-size:0.95rem;font-weight:700;color:#e67e22;margin-bottom:0.3rem;">Eczematous / Dermatitis</div>
     <ul style="list-style:none;margin:0;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Atopic dermatitis — flexural, itchy</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Contact dermatitis — geometric/linear</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Nummular eczema — coin-shaped</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Stasis dermatitis — lower legs</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.42rem;"></span><span>Lichen simplex chronicus</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Atopic dermatitis — flexural, itchy</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Contact dermatitis — geometric/linear</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Nummular eczema — coin-shaped</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Stasis dermatitis — lower legs</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e67e22;flex:none;margin-top:0.48rem;"></span><span>Lichen simplex chronicus</span></li>
     </ul>
   </div>
 </div>
 
 <!-- ── Branch 5: Secondary ── -->
-<div style="flex:1 1 180px;border:1px solid var(--vp-c-divider);border-top:4px solid #6c3483;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
-  <div style="padding:0.55rem 0.85rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(108,52,131,0.08);">
+<div style="flex:1 1 220px;border:1px solid var(--vp-c-divider);border-top:4px solid #6c3483;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
+  <div style="padding:0.65rem 0.9rem;text-align:center;border-bottom:1px solid var(--vp-c-divider);background:rgba(108,52,131,0.08);">
     <div style="font-weight:700;color:#6c3483;">Secondary</div>
-    <div style="font-size:0.76rem;color:var(--vp-c-text-3);">續發性病灶 · Scale / Erosion / Ulcer</div>
+    <div style="font-size:0.82rem;color:var(--vp-c-text-3);">續發性病灶 · Scale / Erosion / Ulcer</div>
   </div>
-  <div style="padding:0.6rem 0.8rem;">
-    <div style="font-size:0.85rem;font-weight:700;color:#6c3483;margin-bottom:0.3rem;">Scale / Crust（鱗屑／痂）</div>
+  <div style="padding:0.7rem 0.9rem;">
+    <div style="font-size:0.95rem;font-weight:700;color:#6c3483;margin-bottom:0.3rem;">Scale / Crust（鱗屑／痂）</div>
     <ul style="list-style:none;margin:0 0 0.5rem;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.42rem;"></span><span>Psoriasis — silvery scale</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.42rem;"></span><span>Seborrheic dermatitis — greasy yellow</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.42rem;"></span><span>Ichthyosis — fish-like scale</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.42rem;"></span><span>Actinic keratosis — premalignant</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.48rem;"></span><span>Psoriasis — silvery scale</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.48rem;"></span><span>Seborrheic dermatitis — greasy yellow</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.48rem;"></span><span>Ichthyosis — fish-like scale</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.48rem;"></span><span>Actinic keratosis — premalignant</span></li>
     </ul>
-    <div style="font-size:0.85rem;font-weight:700;color:#6c3483;margin-bottom:0.3rem;">Erosion / Ulcer（糜爛／潰瘍）</div>
+    <div style="font-size:0.95rem;font-weight:700;color:#6c3483;margin-bottom:0.3rem;">Erosion / Ulcer（糜爛／潰瘍）</div>
     <ul style="list-style:none;margin:0;padding:0;">
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.42rem;"></span><span>Pressure ulcer — bony prominence</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.42rem;"></span><span>Venous ulcer — medial malleolus</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.42rem;"></span><span>Arterial ulcer — toes, lateral leg</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.42rem;"></span><span>Diabetic foot ulcer</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.42rem;"></span><span style="color:#e74c3c;font-weight:600;">⚠ SCC / BCC — non-healing</span></li>
-      <li style="padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.85rem;"><span style="width:6px;height:6px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.42rem;"></span><span>Pyoderma gangrenosum</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.48rem;"></span><span>Pressure ulcer — bony prominence</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.48rem;"></span><span>Venous ulcer — medial malleolus</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.48rem;"></span><span>Arterial ulcer — toes, lateral leg</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.48rem;"></span><span>Diabetic foot ulcer</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#e74c3c;flex:none;margin-top:0.48rem;"></span><span style="color:#e74c3c;font-weight:600;">⚠ SCC / BCC — non-healing</span></li>
+      <li style="padding:0.25rem 0;display:flex;align-items:flex-start;gap:0.5rem;font-size:0.95rem;"><span style="width:7px;height:7px;border-radius:50%;background:#6c3483;flex:none;margin-top:0.48rem;"></span><span>Pyoderma gangrenosum</span></li>
     </ul>
   </div>
 </div>
@@ -180,21 +180,21 @@ title: 皮膚科鑑別診斷
 <!-- ===== STEP 2: DISTRIBUTION ===== -->
 <div style="max-width:900px;margin:0 auto;border:1px solid var(--vp-c-divider);border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
   <div style="padding:0.65rem 1rem;background:#1a5276;text-align:center;">
-    <div style="font-weight:700;color:#fff;font-size:1rem;">Step 2: Assess Distribution &amp; Configuration（評估分布與排列）</div>
+    <div style="font-weight:700;color:#fff;font-size:1.05rem;">Step 2: Assess Distribution &amp; Configuration（評估分布與排列）</div>
   </div>
   <div style="padding:0.75rem;display:flex;flex-wrap:wrap;gap:0.5rem;">
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Flexural</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Atopic dermatitis</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Extensor</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Psoriasis</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Seborrheic</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Seborrheic dermatitis</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Photo-distributed</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Lupus, drug eruption</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Dermatomal</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Herpes zoster</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Acral</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Dyshidrotic eczema</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Annular (ring)</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Tinea, granuloma annulare</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Target-shaped</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Erythema multiforme</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Intertriginous</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Candidiasis, inverse psoriasis</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Generalized</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Drug reaction, erythroderma</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Koebner (trauma)</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Psoriasis, lichen planus</div></div>
-    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.85rem;color:#1a5276;">Linear</div><div style="font-size:0.76rem;color:var(--vp-c-text-3);">Contact dermatitis</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Flexural</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Atopic dermatitis</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Extensor</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Psoriasis</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Seborrheic</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Seborrheic dermatitis</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Photo-distributed</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Lupus, drug eruption</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Dermatomal</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Herpes zoster</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Acral</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Dyshidrotic eczema</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Annular (ring)</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Tinea, granuloma annulare</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Target-shaped</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Erythema multiforme</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Intertriginous</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Candidiasis, inverse psoriasis</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Generalized</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Drug reaction, erythroderma</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Koebner (trauma)</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Psoriasis, lichen planus</div></div>
+    <div style="flex:1 1 130px;padding:0.5rem 0.7rem;border-radius:8px;background:rgba(41,128,185,0.06);border:1px solid rgba(41,128,185,0.15);text-align:center;"><div style="font-weight:700;font-size:0.95rem;color:#1a5276;">Linear</div><div style="font-size:0.82rem;color:var(--vp-c-text-3);">Contact dermatitis</div></div>
   </div>
 </div>
 
@@ -203,20 +203,20 @@ title: 皮膚科鑑別診斷
 <!-- ===== STEP 3: SYMPTOMS ===== -->
 <div style="max-width:900px;margin:0 auto;border:1px solid var(--vp-c-divider);border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
   <div style="padding:0.65rem 1rem;background:#1a5276;text-align:center;">
-    <div style="font-weight:700;color:#fff;font-size:1rem;">Step 3: Symptom Quality（症狀特質）— Itch vs Pain vs Asymptomatic</div>
+    <div style="font-weight:700;color:#fff;font-size:1.05rem;">Step 3: Symptom Quality（症狀特質）— Itch vs Pain vs Asymptomatic</div>
   </div>
   <div style="padding:0.75rem;display:flex;flex-wrap:wrap;gap:0.75rem;">
     <div style="flex:1 1 200px;border:1px solid #1abc9c;border-radius:10px;background:rgba(26,188,156,0.05);overflow:hidden;">
-      <div style="padding:0.5rem 0.75rem;text-align:center;background:rgba(26,188,156,0.08);border-bottom:1px solid #1abc9c;"><div style="font-weight:700;color:#0e6251;">Pruritus（搔癢）</div></div>
-      <div style="padding:0.6rem 0.8rem;font-size:0.85rem;color:var(--vp-c-text-2);">Atopic dermatitis, Urticaria, Scabies, Lichen planus, Psoriasis, Drug eruption</div>
+      <div style="padding:0.5rem 0.75rem;text-align:center;background:rgba(26,188,156,0.08);border-bottom:1px solid #1abc9c;"><div style="font-weight:700;color:#0e6251;font-size:1rem;">Pruritus（搔癢）</div></div>
+      <div style="padding:0.7rem 0.9rem;font-size:0.95rem;color:var(--vp-c-text-2);">Atopic dermatitis, Urticaria, Scabies, Lichen planus, Psoriasis, Drug eruption</div>
     </div>
     <div style="flex:1 1 200px;border:1px solid #e74c3c;border-radius:10px;background:rgba(231,76,60,0.05);overflow:hidden;">
-      <div style="padding:0.5rem 0.75rem;text-align:center;background:rgba(231,76,60,0.08);border-bottom:1px solid #e74c3c;"><div style="font-weight:700;color:#922b21;">Pain / Burning（疼痛／灼熱）</div></div>
-      <div style="padding:0.6rem 0.8rem;font-size:0.85rem;color:var(--vp-c-text-2);">Herpes zoster, Cellulitis, Ulcer, Erythema nodosum, Vasculitis</div>
+      <div style="padding:0.5rem 0.75rem;text-align:center;background:rgba(231,76,60,0.08);border-bottom:1px solid #e74c3c;"><div style="font-weight:700;color:#922b21;font-size:1rem;">Pain / Burning（疼痛／灼熱）</div></div>
+      <div style="padding:0.7rem 0.9rem;font-size:0.95rem;color:var(--vp-c-text-2);">Herpes zoster, Cellulitis, Ulcer, Erythema nodosum, Vasculitis</div>
     </div>
     <div style="flex:1 1 200px;border:1px solid #8e44ad;border-radius:10px;background:rgba(142,68,173,0.05);overflow:hidden;">
-      <div style="padding:0.5rem 0.75rem;text-align:center;background:rgba(142,68,173,0.08);border-bottom:1px solid #8e44ad;"><div style="font-weight:700;color:#6c3483;">Asymptomatic（無症狀）</div></div>
-      <div style="padding:0.6rem 0.8rem;font-size:0.85rem;color:var(--vp-c-text-2);">BCC, SCC, Melanoma, Syphilis, Molluscum, Warts, Xanthelasma</div>
+      <div style="padding:0.5rem 0.75rem;text-align:center;background:rgba(142,68,173,0.08);border-bottom:1px solid #8e44ad;"><div style="font-weight:700;color:#6c3483;font-size:1rem;">Asymptomatic（無症狀）</div></div>
+      <div style="padding:0.7rem 0.9rem;font-size:0.95rem;color:var(--vp-c-text-2);">BCC, SCC, Melanoma, Syphilis, Molluscum, Warts, Xanthelasma</div>
     </div>
   </div>
 </div>
@@ -226,16 +226,16 @@ title: 皮膚科鑑別診斷
 <!-- ===== STEP 4: TIME COURSE ===== -->
 <div style="max-width:900px;margin:0 auto;border:1px solid var(--vp-c-divider);border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
   <div style="padding:0.65rem 1rem;background:#1a5276;text-align:center;">
-    <div style="font-weight:700;color:#fff;font-size:1rem;">Step 4: Time Course（時間病程）— Acute vs Chronic</div>
+    <div style="font-weight:700;color:#fff;font-size:1.05rem;">Step 4: Time Course（時間病程）— Acute vs Chronic</div>
   </div>
   <div style="padding:0.75rem;display:flex;flex-wrap:wrap;gap:0.75rem;">
     <div style="flex:1 1 280px;border:1px solid #f1c40f;border-radius:10px;background:rgba(241,196,15,0.05);overflow:hidden;">
       <div style="padding:0.5rem 0.75rem;text-align:center;background:rgba(241,196,15,0.08);border-bottom:1px solid #f1c40f;"><div style="font-weight:700;color:#7d6608;">ACUTE（急性：hours–days）</div></div>
-      <div style="padding:0.6rem 0.8rem;font-size:0.85rem;color:var(--vp-c-text-2);">Urticaria, Contact dermatitis, Drug eruption, Viral exanthem, Herpes zoster, Cellulitis, Impetigo, SJS/TEN, Erythema multiforme</div>
+      <div style="padding:0.7rem 0.9rem;font-size:0.95rem;color:var(--vp-c-text-2);">Urticaria, Contact dermatitis, Drug eruption, Viral exanthem, Herpes zoster, Cellulitis, Impetigo, SJS/TEN, Erythema multiforme</div>
     </div>
     <div style="flex:1 1 280px;border:1px solid #3498db;border-radius:10px;background:rgba(52,152,219,0.05);overflow:hidden;">
       <div style="padding:0.5rem 0.75rem;text-align:center;background:rgba(52,152,219,0.08);border-bottom:1px solid #3498db;"><div style="font-weight:700;color:#1a5276;">CHRONIC（慢性：weeks–years）</div></div>
-      <div style="padding:0.6rem 0.8rem;font-size:0.85rem;color:var(--vp-c-text-2);">Psoriasis, Atopic dermatitis, Acne, CTCL (lymphoma), Lupus erythematosus, Chronic urticaria, Lichen planus</div>
+      <div style="padding:0.7rem 0.9rem;font-size:0.95rem;color:var(--vp-c-text-2);">Psoriasis, Atopic dermatitis, Acne, CTCL (lymphoma), Lupus erythematosus, Chronic urticaria, Lichen planus</div>
     </div>
   </div>
 </div>
@@ -245,15 +245,15 @@ title: 皮膚科鑑別診斷
 <!-- ===== STEP 5: DIAGNOSTIC TOOLS ===== -->
 <div style="max-width:900px;margin:0 auto;border:1px solid var(--vp-c-divider);border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
   <div style="padding:0.65rem 1rem;background:#1a5276;text-align:center;">
-    <div style="font-weight:700;color:#fff;font-size:1rem;">Step 5: Confirm with Diagnostic Tools（輔助工具確認）</div>
+    <div style="font-weight:700;color:#fff;font-size:1.05rem;">Step 5: Confirm with Diagnostic Tools（輔助工具確認）</div>
   </div>
   <div style="padding:0.75rem;display:flex;flex-wrap:wrap;gap:0.5rem;">
-    <div style="flex:1 1 200px;padding:0.6rem 0.8rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.88rem;color:#1e8449;">🔬 Dermoscopy（皮膚鏡）</div><div style="font-size:0.8rem;color:var(--vp-c-text-3);">Benign vs malignant pigmented lesions</div></div>
-    <div style="flex:1 1 200px;padding:0.6rem 0.8rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.88rem;color:#1e8449;">🧫 KOH Prep（氫氧化鉀）</div><div style="font-size:0.8rem;color:var(--vp-c-text-3);">Fungal hyphae, pseudohyphae, spores</div></div>
-    <div style="flex:1 1 200px;padding:0.6rem 0.8rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.88rem;color:#1e8449;">💡 Wood's Lamp（伍氏燈）</div><div style="font-size:0.8rem;color:var(--vp-c-text-3);">Erythrasma (coral red), Tinea (yellow-green)</div></div>
-    <div style="flex:1 1 200px;padding:0.6rem 0.8rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.88rem;color:#1e8449;">📋 Skin Biopsy（皮膚切片）</div><div style="font-size:0.8rem;color:var(--vp-c-text-3);">Gold standard — H&amp;E, special stains, IF</div></div>
-    <div style="flex:1 1 200px;padding:0.6rem 0.8rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.88rem;color:#1e8449;">🩹 Patch Test（貼膚測試）</div><div style="font-size:0.8rem;color:var(--vp-c-text-3);">Allergic contact dermatitis diagnosis</div></div>
-    <div style="flex:1 1 200px;padding:0.6rem 0.8rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.88rem;color:#1e8449;">🩸 Labs（抽血檢查）</div><div style="font-size:0.8rem;color:var(--vp-c-text-3);">CBC, CRP, ANA, Tzanck smear</div></div>
+    <div style="flex:1 1 200px;padding:0.7rem 0.9rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.95rem;color:#1e8449;">🔬 Dermoscopy（皮膚鏡）</div><div style="font-size:0.88rem;color:var(--vp-c-text-3);">Benign vs malignant pigmented lesions</div></div>
+    <div style="flex:1 1 200px;padding:0.7rem 0.9rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.95rem;color:#1e8449;">🧫 KOH Prep（氫氧化鉀）</div><div style="font-size:0.88rem;color:var(--vp-c-text-3);">Fungal hyphae, pseudohyphae, spores</div></div>
+    <div style="flex:1 1 200px;padding:0.7rem 0.9rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.95rem;color:#1e8449;">💡 Wood's Lamp（伍氏燈）</div><div style="font-size:0.88rem;color:var(--vp-c-text-3);">Erythrasma (coral red), Tinea (yellow-green)</div></div>
+    <div style="flex:1 1 200px;padding:0.7rem 0.9rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.95rem;color:#1e8449;">📋 Skin Biopsy（皮膚切片）</div><div style="font-size:0.88rem;color:var(--vp-c-text-3);">Gold standard — H&amp;E, special stains, IF</div></div>
+    <div style="flex:1 1 200px;padding:0.7rem 0.9rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.95rem;color:#1e8449;">🩹 Patch Test（貼膚測試）</div><div style="font-size:0.88rem;color:var(--vp-c-text-3);">Allergic contact dermatitis diagnosis</div></div>
+    <div style="flex:1 1 200px;padding:0.7rem 0.9rem;border:1px solid #27ae60;border-radius:8px;background:#fff;"><div style="font-weight:700;font-size:0.95rem;color:#1e8449;">🩸 Labs（抽血檢查）</div><div style="font-size:0.88rem;color:var(--vp-c-text-3);">CBC, CRP, ANA, Tzanck smear</div></div>
   </div>
 </div>
 
@@ -262,9 +262,9 @@ title: 皮膚科鑑別診斷
 <!-- ===== QUICK ALGORITHM ===== -->
 <div style="max-width:800px;margin:0 auto;border:1px solid var(--vp-c-divider);border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
   <div style="padding:0.65rem 1rem;background:var(--vp-c-brand-1);text-align:center;">
-    <div style="font-weight:700;color:#fff;font-size:1rem;">Quick Algorithm — 快速鑑別流程</div>
+    <div style="font-weight:700;color:#fff;font-size:1.05rem;">Quick Algorithm — 快速鑑別流程</div>
   </div>
-  <div style="padding:0.8rem 1rem;font-size:0.88rem;color:var(--vp-c-text-1);line-height:1.9;">
+  <div style="padding:0.8rem 1rem;font-size:0.95rem;color:var(--vp-c-text-1);line-height:1.9;">
     <div>1️⃣ Identify primary lesion morphology →</div>
     <div>2️⃣ Assess distribution &amp; configuration →</div>
     <div>3️⃣ Evaluate symptoms (itch / pain / asymptomatic) →</div>

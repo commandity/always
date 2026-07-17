@@ -370,7 +370,7 @@ const legend: { s: Severity }[] = [
   width: 18px;
   height: 18px;
   box-sizing: border-box;
-  transform: translateY(-3px);
+  transform: translateY(0px);
   border: none;
   border-radius: 50%;
   background-color: transparent;
@@ -500,15 +500,17 @@ const legend: { s: Severity }[] = [
 }
 .dxi.effect,
 .dxi.mgmt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 5px 0;
   font-size: 14.5px;
   line-height: 1.7;
   color: var(--vp-c-text-1);
 }
 .dxi.lbl {
-  display: inline-block;
+  flex-shrink: 0;
   min-width: 36px;
-  margin-right: 8px;
   padding: 1px 7px;
   font-size: 13px;
   font-weight: 700;

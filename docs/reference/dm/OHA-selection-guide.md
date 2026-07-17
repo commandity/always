@@ -3,9 +3,9 @@ layout: doc
 title: 口服降血糖藥（OHA） Oral Hypoglycemic Agents (OHA)
 ---
 
-# 口服降血糖藥（OHA） **Oral Hypoglycemic Agents (OHA)**
+# 口服降血糖藥（OHA）
 
----
+**Oral Hypoglycemic Agents (OHA)**
 
 <OhaSelectionGuide />
 

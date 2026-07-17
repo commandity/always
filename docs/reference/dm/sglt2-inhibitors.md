@@ -3,7 +3,9 @@ layout: doc
 title: SGLT2 抑制劑（排糖藥） SGLT2 Inhibitors
 ---
 
-# SGLT2 抑制劑（排糖藥） **SGLT2 Inhibitors**
+# SGLT2 抑制劑（排糖藥）
+
+**SGLT2 Inhibitors**
 
 ## 概述
 

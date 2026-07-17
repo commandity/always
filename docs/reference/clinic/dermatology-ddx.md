@@ -3,7 +3,7 @@ layout: doc
 title: 皮膚科鑑別診斷
 ---
 
-# 皮膚科鑑別診斷 
+# 皮膚科鑑別診斷
 
 **Dermatology Differential**
 

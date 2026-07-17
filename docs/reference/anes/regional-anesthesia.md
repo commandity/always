@@ -3,13 +3,11 @@ layout: doc
 title: 區域麻醉 Regional Anesthesia
 ---
 
-# 區域麻醉 
+# 區域麻醉
 
 **Regional Anesthesia**
 
----
-
-::: warning 臨床Disclaimer
+::: warning 臨床 Disclaimer
 本指南僅供醫學教育與臨床參考，實際操作需由具備資格之麻醉專科醫師執行，並依據患者個別解剖變異、手術需求與機構protocol調整。
 :::
 

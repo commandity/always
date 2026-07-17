@@ -856,11 +856,11 @@ function reset() {
             >輸入各血管 PS / ED / RI / MV(或FV)
             四項數值，系統自動計算比值並產生解讀。</span
           >
-          <span class="intro-en"
+          <!-- <span class="intro-en"
             >Enter the 4 Doppler values (PS/ED/RI/MV or FV) per vessel; ratios,
             stenosis grading, and interpretation are generated
             automatically.</span
-          >
+          > -->
         </span>
       </div>
 

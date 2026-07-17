@@ -4,7 +4,7 @@ title: 妊娠用藥分級 Pregnancy Drug Risk Category
 aside: false
 ---
 
-# 妊娠用藥分級 
+# 妊娠用藥分級
 
 **Pregnancy Drug Risk Category**
 

@@ -4,7 +4,9 @@ title: 兒童皮疹鑑別診斷 Pediatric Rash Differential Diagnosis
 password: "516800"
 ---
 
-# 兒童皮疹鑑別診斷 **Pediatric Rash Differential Diagnosis**
+# 兒童皮疹鑑別診斷
+
+**Pediatric Rash Differential Diagnosis**
 
 > **核心概念**：兒童皮疹原因廣泛，從自限性病毒感染到致命性敗血症皆有可能。**最重要的第一步是評估孩子是否 toxic（病懨懨／中毒樣）**，而非急著判斷皮疹形態。Toxic appearance + 皮疹 = 緊急情況，需立刻處理。
 

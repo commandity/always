@@ -3,7 +3,9 @@ layout: doc
 title: GLP-1 RA 選擇指引 How to Choose the Right GLP-1 Agonist
 ---
 
-# GLP-1 RA 選擇指引 **How to Choose the Right GLP-1 Agonist**
+# GLP-1 RA 選擇指引
+
+**How to Choose the Right GLP-1 Agonist**
 
 ## 概述
 

@@ -3,7 +3,9 @@ layout: doc
 title: Gabapentin 與 Pregabalin 聯合用藥 Gabapentin & Pregabalin Combination
 ---
 
-# Gabapentin 與 Pregabalin 聯合用藥 **Gabapentin & Pregabalin Combination**
+# Gabapentin 與 Pregabalin 聯合用藥
+
+**Gabapentin & Pregabalin Combination**
 
 ## 概述
 

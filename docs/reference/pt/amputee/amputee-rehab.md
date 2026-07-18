@@ -46,7 +46,7 @@ title: "截肢復健 Amputee Rehabilitation"
 
 ## 術後照護（0-4 週）
 
-::: warning
+::: warning 警告
 此階段重點：傷口保護優先，預防併發症。
 :::
 
@@ -161,7 +161,7 @@ title: "截肢復健 Amputee Rehabilitation"
 
 ## 義肢訓練期（8-16 週）
 
-::: warning
+::: warning 警告
 初次穿戴義肢應由義肢技師與治療師共同監督。穿戴時間由短漸增（最初 30 分鐘→逐步增加至全天）。
 :::
 
@@ -370,7 +370,7 @@ title: "截肢復健 Amputee Rehabilitation"
 <details>
 <summary>皮膚完整性 Skin Integrity</summary>
 
-::: warning
+::: warning 警告
 義肢穿戴者之殘肢皮膚損傷是最常見的併發症之一。任何皮膚發紅若持續 30 分鐘以上未消退，應立即脫除義肢並評估。
 :::
 
@@ -385,7 +385,7 @@ title: "截肢復健 Amputee Rehabilitation"
 <details>
 <summary>對側肢體照護 Contralateral Limb Care</summary>
 
-::: warning
+::: warning 警告
 下肢截肢者的對側肢體承受更高負荷與跌倒風險。任何傷口或問題可能完全剝奪行走能力。
 :::
 

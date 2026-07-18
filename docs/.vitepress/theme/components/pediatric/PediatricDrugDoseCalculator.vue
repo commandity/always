@@ -3268,13 +3268,13 @@ function calcOnKeydown(e: KeyboardEvent) {
   font-size: 0.95rem;
 }
 .key-eq {
-  background: #1e293b;
+  background: var(--vp-c-brand-1);
   color: #fff;
   font-size: 1.25rem;
   font-weight: 800;
 }
 .key-eq:hover {
-  background: #334155;
+  background: color-mix(in srgb, var(--vp-c-brand-1) 85%, #000);
 }
 
 @media (max-width: 640px) {

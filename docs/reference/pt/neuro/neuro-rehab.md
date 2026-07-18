@@ -9,7 +9,6 @@ title: "神經復健 Neurological Rehabilitation"
 
 神經復健是針對中樞神經系統損傷後所引起的運動、感覺、認知及功能障礙，以系統性介入策略促進功能恢復與社會參與之專業領域。
 
-**Neurological rehabilitation** encompasses a structured, evidence-based approach to restoring function, reducing disability, and maximizing independence following insult to the central nervous system (CNS). The three primary conditions addressed include:
 
 | 疾病 **Condition**                            | 病因 **Etiology**                                          | 常見障礙 **Common Deficits**                                                       |
 | --------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -18,7 +17,6 @@ title: "神經復健 Neurological Rehabilitation"
 | 脊髓損傷 **Spinal Cord Injury (SCI)**         | Traumatic or non-traumatic lesion to spinal cord           | Paraplegia/tetraplegia, autonomic dysreflexia, neurogenic bladder/bowel            |
 
 ::: warning 多學科團隊
-**重要提醒 Important Notice**
 神經復健需多學科團隊（physical therapist, occupational therapist, speech-language pathologist, physiatrist, neuropsychologist）協同介入。任何急性徵兆（意識改變、新發神經缺損、劇烈頭痛）應立即停止訓練並通報主治醫師。
 :::
 
@@ -99,7 +97,6 @@ title: "神經復健 Neurological Rehabilitation"
 此階段以預防併發症、維持關節活動度、促進神經恢復之早期刺激為核心目標。
 
 ::: warning 急性期注意
-**急性期注意事項 Acute Phase Precautions**
 
 - 監測血流動力學穩定性（BP ≥ 90/60 mmHg, HR 60–100 bpm, SpO₂ ≥ 94%）
 - 頭部外傷個案需排除顱內壓升高（ICP > 20 mmHg 為禁忌）
@@ -133,7 +130,6 @@ title: "神經復健 Neurological Rehabilitation"
 | 趾關節屈曲/伸展 **Toe flexion/extension**                | 輕柔屈伸所有趾關節                                                             | 10 次/組，2 組/日                      |
 
 ::: info PROM 注意
-**PROM 注意事項**
 
 - 動作應緩慢、平穩，避免快速牽張引發痙攣
 - 在終端感（end-feel）處停留 5–10 秒以進行靜態牽張
@@ -164,7 +160,6 @@ title: "神經復健 Neurological Rehabilitation"
 此階段為神經恢復之關鍵窗口期（**critical window of recovery**），以主動運動訓練、任務導向練習、平衡及步態訓練、ADL 訓練為核心。
 
 ::: info 訓練原則
-**亞急性期訓練原則 Subacute Training Principles**
 
 - 由被動 → 主動輔助 → 主動 → 抗阻逐步進階
 - 每次訓練至少 45–60 分鐘，建議每日 1–2 次
@@ -218,7 +213,6 @@ title: "神經復健 Neurological Rehabilitation"
 | 上下階梯 **Stair training**                                            | "好上壞下"（step-to pattern），扶手輔助          | 每次 2 層樓 × 3 組，每日 1 次 |
 
 ::: warning 步態訓練
-**步態訓練注意事項 Gait Training Precautions**
 
 - 進行 BWSTT 時需 2 名以上治療師協助（1 名在後提示骨盆，1 名在側保護）
 - 步態訓練中監測血壓（避免體位性低血壓）及心率
@@ -241,7 +235,6 @@ title: "神經復健 Neurological Rehabilitation"
 此階段聚焦社區參與、體能維持、代償策略強化及次級預防。
 
 ::: info 慢性期目標
-**慢性期目標 Chronic Phase Goals**
 
 - 維持或改善已恢復之功能
 - 代償策略的熟練度與效率提升
@@ -321,7 +314,6 @@ title: "神經復健 Neurological Rehabilitation"
 | 疼痛管理 **Pain management** | 冰敷、TENS、肌效貼、口服NSAIDs、關節腔內注射                                         |
 
 ::: warning 肩關節半脫位
-**肩關節半脫位注意事項 Shoulder Subluxation Precautions**
 
 - 避免使用環肩帶（shoulder sling），可能加重半脫位及肩手症候群
 - FES 需早期介入（發病 2 週內）效果最佳
@@ -360,7 +352,6 @@ title: "神經復健 Neurological Rehabilitation"
 | 電刺激 **Neuromuscular electrical stimulation (NMES)** | VitalStim / FlyPoint：雙側胸鎖乳突肌/舌骨上肌群 NMES 配合吞嚥訓練       | 中重度吞嚥障礙               |
 
 ::: warning 吞嚥障礙
-**吞嚥障礙注意事項 Dysphagia Precautions**
 
 - 所有 CVA/TBI 個案吞嚥功能篩檢前禁止經口進食
 - 使用增稠液需依製造商建議配比，避免過度增稠

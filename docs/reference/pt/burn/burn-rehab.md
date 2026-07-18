@@ -7,6 +7,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 **Burn Rehabilitation**
 
+<details open>
+
 ## 什麼是燒傷？
 
 燒傷（burn）是由熱、電、化學物質或輻射線造成的組織損傷。燒傷復健的核心目標是**預防攣縮（contracture）、維持功能、促進傷口癒合**，並協助患者重返日常生活。
@@ -29,6 +31,10 @@ title: "燒傷復健 Burn Rehabilitation"
 - 軀幹後 posterior trunk：18%
 - 下肢 lower extremity：各 18%（共 36%）
 - 會陰 perineum：1%
+
+</details>
+
+<details open>
 
 ## 第一期：急性期 （0-2 週）
 
@@ -69,6 +75,10 @@ title: "燒傷復健 Burn Rehabilitation"
 - 每日 2–3 次，每關節 5–10 次重複
 - 避免造成傷口撕裂
 - 在水療或換藥時進行
+
+</details>
+
+<details open>
 
 ## 第二期：癒合期 （2–6 週）
 
@@ -111,6 +121,10 @@ title: "燒傷復健 Burn Rehabilitation"
 脫敏訓練應在傷口完全癒合、無感染風險後開始。
 :::
 
+</details>
+
+<details open>
+
 ## 第三期：疤痕成熟期 (6 週 - 2 年)
 
 ### 疤痕重塑
@@ -145,6 +159,10 @@ title: "燒傷復健 Burn Rehabilitation"
 - 工作模擬訓練
 - 社會參與準備
 
+</details>
+
+<details open>
+
 ## 第四期：重建與復健期
 
 ### 攣縮鬆解術
@@ -163,9 +181,13 @@ title: "燒傷復健 Burn Rehabilitation"
 - **激光治療 laser therapy**：脈衝染料激光 PDL 或分段激光 fractional laser
 - 注射治療：類固醇注射 steroid injection、5-FU、博來霉素 bleomycin
 
+</details>
+
+<details open>
+
 ## 疤痕管理
 
-### 壓力治療 
+### 壓力治療
 
 **Pressure Therapy**
 
@@ -193,13 +215,17 @@ title: "燒傷復健 Burn Rehabilitation"
 - 方向：垂直於疤痕方向
 - 頻率：每日 2–3 次
 
-### 伸展 
+### 伸展
 
 **Stretching**
 
 - 主動伸展 active stretch
 - 被動伸展 passive stretch
 - 牽引夾板 traction splint 輔助
+
+</details>
+
+<details open>
 
 ## 特定關節運動
 
@@ -240,6 +266,10 @@ title: "燒傷復健 Burn Rehabilitation"
 - **踮腳尖 tiptoe standing** 預防馬蹄足 equinus
 - 使用夜間背屈夾板
 
+</details>
+
+<details open>
+
 ## 矯形器
 
 **Splinting**
@@ -276,6 +306,10 @@ title: "燒傷復健 Burn Rehabilitation"
 - 提供漸進、可調節的牽引力量
 - 適用於已有攣縮的關節
 
+</details>
+
+<details open>
+
 ## 水療 Hydrotherapy
 
 水療利用水的浮力、溫度與阻力特性促進復健。
@@ -300,6 +334,10 @@ title: "燒傷復健 Burn Rehabilitation"
 水療需在傷口完全癒合後開始。若仍有未癒合傷口，應使用防水敷料 waterproof dressing 保護，並避免長時間浸泡。
 :::
 
+</details>
+
+<details open>
+
 ## 疼痛管理
 
 ### 疼痛類型
@@ -315,6 +353,10 @@ title: "燒傷復健 Burn Rehabilitation"
 - **藥物治療 pharmacological**：鴉片類止痛藥 opioids、非鴉片類止痛藥、神經痛藥物（gabapentin、pregabalin）
 - **非藥物治療 non-pharmacological**：分散注意力 distraction、虛擬實境 VR（virtual reality）、催眠 hypnosis
 - **操作前止痛 pre-procedural**：換藥前 30 分鐘給予速效止痛藥或吸入性止痛藥 nitrous oxide
+
+</details>
+
+<details open>
 
 ## 注意事項
 
@@ -359,12 +401,20 @@ title: "燒傷復健 Burn Rehabilitation"
 心理支持應從急性期開始，貫穿整個復健過程。燒傷疤痕對外觀的影響可能造成嚴重的心理困擾。
 :::
 
+</details>
+
+<details open>
+
 ## 兒童燒傷注意事項
 
 - **生長板 growth plate**：燒傷可能影響骨骼生長
 - **皮膚面積比例**：兒童頭部佔比較大，需使用修正版 Lund-Browder 圖表
 - **心理發展**：遊戲治療 play therapy 是兒童復健的重要手段
 - **家長參與**：教育家長進行居家復健訓練
+
+</details>
+
+<details open>
 
 ## 何時就醫
 
@@ -378,6 +428,10 @@ title: "燒傷復健 Burn Rehabilitation"
 - 疤痕增生、影響外觀或功能
 - 出現心理困擾症狀
 
+</details>
+
+<details open>
+
 ## 日常照護要點
 
 1. **傷口護理 wound care**：保持清潔乾燥，按時換藥 dressing change
@@ -386,3 +440,5 @@ title: "燒傷復健 Burn Rehabilitation"
 4. **按摩 massage**：每日 2–3 次，配合乳液
 5. **運動 exercise**：每日至少 2 次關節活動與伸展
 6. **防曬 sun protection**：避免陽光直射傷口 6–12 個月
+
+</details>

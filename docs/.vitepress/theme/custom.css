@@ -1457,7 +1457,15 @@ details summary {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: color 0.2s;
+  background: linear-gradient(
+    135deg,
+    var(--vp-c-brand-1),
+    var(--vp-c-brand-2, var(--vp-c-text-1))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: filter 0.2s;
 }
 details summary::-webkit-details-marker {
   display: none;
@@ -1467,10 +1475,12 @@ details summary::before {
   font-size: 0.85em;
   transition: transform 0.2s;
   flex-shrink: 0;
+  -webkit-text-fill-color: initial;
+  color: var(--vp-c-text-2);
 }
 details[open] summary::before {
   transform: rotate(90deg);
 }
 details summary:hover {
-  color: var(--vp-c-brand-1);
+  filter: brightness(1.2);
 }

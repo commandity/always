@@ -3,9 +3,11 @@ layout: doc
 title: "截肢復健 Amputee Rehabilitation"
 ---
 
-# 截肢復健 
+# 截肢復健
 
 **Amputee Rehabilitation**
+
+<details open>
 
 ## 常見截肢原因
 
@@ -16,6 +18,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **腫瘤 Tumor**                      | 骨肉瘤、軟組織肉瘤                         |
 | **感染 Infection**                  | 壞死性筋膜炎、慢性骨髓炎                   |
 | **先天異常 Congenital abnormality** | 先天性肢體缺失                             |
+
+</details>
+
+<details open>
 
 ## 截肢層級與功能預後
 
@@ -37,6 +43,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **經腕截肢 Transradial (TR)**           | 前臂 Below-elbow | 保留肘關節與旋前旋後功能 |
 | **經肱截肢 Transhumeral (TH)**          | 上臂 Above-elbow | 失去肘關節與前臂功能     |
 | **肩關節離斷 Shoulder disarticulation** | 肩關節離斷       | 上肢功能幾乎全失         |
+
+</details>
+
+<details open>
 
 ## 術後照護（0-4 週）
 
@@ -91,6 +101,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - 鼓勵家屬參與復健
 - 連結支持團體
 
+</details>
+
+<details open>
+
 ## 義肢準備期（4-8 週）
 
 ### 治療目標
@@ -125,6 +139,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | :--------------------- | :--------- | :----------- |
 | **腘繩肌 Hamstrings**  | 俯臥屈膝   | 殘肢控制     |
 | **內收肌群 Adductors** | 彈力帶內收 | 義肢對線控制 |
+
+</details>
+
+<details open>
 
 ## 義肢訓練期（8-16 週）
 
@@ -179,6 +197,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **膝屈曲不穩 Knee flexion instability** | 膝屈曲力矩過大           | 繫鞍角度調整、股四頭肌強化 |
 | **軀幹側屈 Lateral trunk lean**         | 義肢過長或臀中肌無力     | 義肢長度修正、強化臀中肌   |
 
+</details>
+
+<details open>
+
 ## 社區回歸（>16 週）
 
 ### 治療目標
@@ -205,6 +227,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **久坐職業 Sedentary work**          | 坐姿人體工學、義肢適應     |
 | **輕度體力職業 Light physical work** | 站立耐力、功能性訓練       |
 | **重度體力職業 Heavy physical work** | 高強度肌力、平衡、安全策略 |
+
+</details>
+
+<details open>
 
 ## 幻肢痛管理
 
@@ -237,6 +263,10 @@ title: "截肢復健 Amputee Rehabilitation"
 5. **頻率**：每次 15-20 分鐘，每日 2-3 次
 6. **療程**：至少 4-12 週
 
+</details>
+
+<details open>
+
 ## 特定訓練運動
 
 ### 平衡進階訓練
@@ -268,6 +298,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **平衡訓練 Balance**       | 每日 1-2 回 | 每次 30-60 秒  | 進階性挑戰 |
 | **步行訓練 Gait training** | 每日 1 回   | 10-30 分鐘     | 功能性速度 |
 
+</details>
+
+<details open>
+
 ## 義肢考量
 
 ### 下肢義肢組件
@@ -286,6 +320,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - **職業 Occupation**：高體能需求者可能不使用義肢而依賴輔具
 - **美觀需求 Cosmesis**：部分個案優先考量外觀
 - **預算 Budget**：組件價格差異巨大，考慮更換與維護成本
+
+</details>
+
+<details open>
 
 ## 注意事項
 
@@ -320,6 +358,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - 穿戴穩固鞋具
 - 避免光滑地面、潮濕環境
 
+</details>
+
+<details open>
+
 ## 實證基礎
 
 ### Cochrane 系統回顧重點
@@ -337,9 +379,15 @@ title: "截肢復健 Amputee Rehabilitation"
 - **APTA**：功能為導向之復健、循證介入
 - **NICE**：義肢前復健、術後早期活動
 
+</details>
+
+<details open>
+
 ## 延伸閱讀
 
 - 請參閱：[物理治療總論](/docs/reference/pt/)
 - 相關章節：[步態分析](/docs/reference/pt/gait-analysis/)
 - 相關章節：[疼痛管理](/docs/reference/pt/pain-management/)
 - 相關章節：[平衡訓練](/docs/reference/pt/balance-training/)
+
+</details>

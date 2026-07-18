@@ -1442,3 +1442,35 @@ html {
 .tab-bar::-webkit-scrollbar-track {
   background: transparent;
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   DETAILS/SUMMARY — match ### heading style
+   ══════════════════════════════════════════════════════════════════ */
+details summary {
+  font-size: 1.17em;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 1.5rem 0 1rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary::before {
+  content: "▸";
+  font-size: 0.85em;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+details summary:hover {
+  color: var(--vp-c-brand-1);
+}

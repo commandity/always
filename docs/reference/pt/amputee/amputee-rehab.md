@@ -7,7 +7,6 @@ title: "截肢復健 Amputee Rehabilitation"
 
 **Amputee Rehabilitation**
 
-
 ## 常見截肢原因
 
 | 原因                                | 說明                                       |

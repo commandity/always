@@ -23,7 +23,8 @@ title: 甲狀腺腫瘤 Thyroid Tumors
 | **Thyroid Lymphoma**                   | 淋巴球（B 細胞為主）     | 常合併 Hashimoto's         |
 | **Metastatic Tumors**                  | 他處惡性轉移             | 腎細胞癌、肺癌、乳癌最常見 |
 
-## 甲狀腺惡性腫瘤鑑別流程 
+## 甲狀腺惡性腫瘤鑑別流程
+
 **Calcitonin → Anti-TPO → BRAF**
 
 <div style="margin:1.75rem 0;">
@@ -32,7 +33,7 @@ title: 甲狀腺腫瘤 Thyroid Tumors
   </div>
   <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.3rem 0;">↓</div>
   <div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;justify-content:center;">
-    <div style="flex:1 1 210px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;">
+    <div style="flex:1 1 210px;display:flex;flex-direction:column;align-items:center;gap:0.35rem;border:1.5px dashed #ef4444;border-radius:14px;padding:0.9rem 0.85rem;background:rgba(239,68,68,0.04);">
       <span style="display:inline-block;padding:0.4rem 1.1rem;border-radius:999px;border:1.5px solid #ef4444;background:rgba(239,68,68,0.08);color:#ef4444;font-weight:700;font-size:0.9rem;text-align:center;">Calcitonin ↑↑</span>
       <div style="display:flex;justify-content:center;color:var(--vp-c-text-3);font-size:1.2rem;line-height:1;margin:0.15rem 0;">↓</div>
       <div style="width:100%;border:1px solid var(--vp-c-divider);border-top:4px solid #ef4444;border-radius:12px;background:var(--vp-c-bg-soft);overflow:hidden;">
@@ -102,6 +103,7 @@ title: 甲狀腺腫瘤 Thyroid Tumors
 :::
 
 ## 1. 濾泡性腺瘤
+
 **Follicular Adenoma**
 
 ### 簡介
@@ -175,6 +177,7 @@ title: 甲狀腺腫瘤 Thyroid Tumors
 3. **Toxic adenoma**：放射碘（RAI）治療或手術
 
 ## 2. 乳突狀甲狀腺癌
+
 **Papillary Thyroid Carcinoma，PTC**
 
 ### 簡介
@@ -332,6 +335,7 @@ PTC 超音波特徵常可與 TI-RADS 高評分結合記憶：
 | **High**         | 顯著腺外浸潤、不完全切除、遠端轉移、高 Tg         | >20%        |
 
 ## 3. 濾泡狀甲狀腺癌
+
 **Follicular Thyroid Carcinoma，FTC**
 
 ### 簡介
@@ -399,6 +403,7 @@ PTC 超音波特徵常可與 TI-RADS 高評分結合記憶：
 5. **廣泛浸潤型進行性 FTC**：Lenvatinib、Sorafenib
 
 ## 4. 嗜酸性細胞癌
+
 **Hürthle Cell Carcinoma，HCC**
 
 ### 簡介
@@ -430,6 +435,7 @@ WHO 2022 已將其獨立分類（非 FTC 亞型），舊稱 Hürthle cell varian
 - 注意：Hashimoto's 之 Hürthle cells 為反應性，結合臨床脈絡鑑別
 
 ## 5. 未分化甲狀腺癌
+
 **Anaplastic Thyroid Carcinoma，ATC**
 
 ### 簡介
@@ -509,6 +515,7 @@ WHO 2022 已將其獨立分類（非 FTC 亞型），舊稱 Hürthle cell varian
 6. **緩和治療（palliative）**：大多數患者
 
 ## 6. 甲狀腺髓質癌
+
 **Medullary Thyroid Carcinoma，MTC**
 
 ### 簡介
@@ -598,6 +605,7 @@ WHO 2022 已將其獨立分類（非 FTC 亞型），舊稱 Hürthle cell varian
 6. **MEN 家族篩查**：基因型陽性者建議全家 RET 基因檢測
 
 ## 7. 甲狀腺淋巴瘤
+
 **Thyroid Lymphoma**
 
 ### 簡介
@@ -613,6 +621,7 @@ WHO 2022 已將其獨立分類（非 FTC 亞型），舊稱 Hürthle cell varian
 好發於**60–70 歲女性**（女：男 ≈ 3–4:1）。
 
 ### 臨床表現
+
 > Hashimoto's + 快速腫大
 
 - **在既存 Hashimoto's 甲狀腺腫基礎上，結節或甲狀腺迅速腫大**（數週內）
@@ -665,6 +674,7 @@ WHO 2022 已將其獨立分類（非 FTC 亞型），舊稱 Hürthle cell varian
 3. **緊急氣道處理**：嚴重壓迫時需立即介入（激素、氣切）
 
 ## 8. 甲狀腺轉移癌
+
 **Metastatic Tumors to Thyroid**
 
 ### 簡介

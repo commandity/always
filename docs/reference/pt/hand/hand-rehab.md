@@ -74,7 +74,7 @@ title: "手部復健 Hand Rehabilitation"
 | 第四階 Position 4 | 較寬     | 大型手掌                   |
 | 第五階 Position 5 | 最寬     | 特大手掌                   |
 
-::: warning
+::: warning 警告
 **注意**：測試時應採用標準姿勢——肩關節內收、肘關節屈曲 90 度、前臂中立位、腕關節中立位 0-30 度伸展。避免以「用力握」的口頭指示取代「盡可能用力擠壓」的標準化指令。
 :::
 
@@ -115,7 +115,7 @@ title: "手部復健 Hand Rehabilitation"
 - 分別評估雙手
 - 針對手部功能的特異性更高
 
-::: warning
+::: warning 警告
 **臨床提示**：建議同時使用通用量表 (DASH) 與疾病特異性量表 (MHQ)，以全面評估手部功能。初次評估應建立基線，並在治療過程中定期追蹤。
 :::
 
@@ -163,7 +163,7 @@ title: "手部復健 Hand Rehabilitation"
 3. **全拳 Full fist**：MP/PIP/DIP 全屈曲
 4. **桌面平放 Tabletop**：MP 伸直、PIP 屈曲 90°、DIP 伸直
 
-::: warning
+::: warning 警告
 **警告**：肌腱修復後前 3 週內，禁止進行抗阻主動屈曲動作，以避免肌腱斷裂風險。所有活動應在治療師指導下進行。
 :::
 
@@ -209,7 +209,7 @@ title: "手部復健 Hand Rehabilitation"
 3. 振動刺激
 4. 逐步增加接觸壓力
 
-::: warning
+::: warning 警告
 **臨床提示**：此階段應密切觀察肌腱修復的完整性。若出現突發性疼痛、腫脹加劇或主動活動度突然下降，應立即停止並重新評估。
 :::
 
@@ -249,7 +249,7 @@ title: "手部復健 Hand Rehabilitation"
 - 3D 列印物體操作練習
 - 手工艺活動
 
-::: warning
+::: warning 警告
 **進階提示**：強化期應以「無痛」為原則。若訓練後出現持續性疼痛或次日關節腫脹，應降低訓練強度。
 :::
 
@@ -353,7 +353,7 @@ title: "手部復健 Hand Rehabilitation"
 - **Coban 心型包紮法**：使用自黏彈性繃帶進行心型 (Figure-of-eight) 包紮
 - **手部壓力手套**：定制 20-30 mmHg 壓力手套
 
-::: warning
+::: warning 警告
 **禁忌症**：活動性感染、未控制的關節炎急性發作、深靜脈血栓、區域性疼痛症候群 (Complex regional pain syndrome, CRPS) 需謹慎使用加壓治療。
 :::
 
@@ -375,7 +375,7 @@ title: "手部復健 Hand Rehabilitation"
 | 動態夾板治療關節攣縮   | Level III | 中度建議 |
 | 脫敏訓練               | Level IV  | 建議使用 |
 
-::: warning
+::: warning 警告
 **循證實踐提醒**：手部復健的介入措施應基於最新證據、臨床專業判斷及患者偏好。治療計畫應個體化，並根據患者的反應與進展動態調整。
 :::
 
@@ -390,7 +390,7 @@ title: "手部復健 Hand Rehabilitation"
 | 瘢痕攣縮 Scar contracture  | 瘢痕增厚、皮膚緊繃、關節受限       | 壓力治療、矽膠、牽引、手術鬆解     |
 | 神經卡壓 Nerve entrapment  | 感覺異常、刺痛、肌肉無力           | 神經滑動練習、夾板、手術減壓       |
 
-::: warning
+::: warning 警告
 **警示**：出現以下情況應立即聯繫醫療團隊：修復部位突發劇痛、無法主動屈曲手指、手部顏色改變或溫度異常、感覺完全喪失。
 :::
 

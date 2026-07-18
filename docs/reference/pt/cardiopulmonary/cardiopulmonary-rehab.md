@@ -3,584 +3,596 @@ layout: doc
 title: "心肺復健 Cardiopulmonary Rehabilitation"
 ---
 
-# 心肺復健 **Cardiopulmonary Rehabilitation**
+# 心肺復健
 
-::: info
-**Scope of Practice**
-Cardiopulmonary rehabilitation (CR) is an evidence-based, multidisciplinary intervention for patients with chronic respiratory and cardiovascular diseases. This article provides a clinical reference for physical therapists working within CR programs.
-:::
+**Cardiopulmonary Rehabilitation**
 
----
+## 概述
 
-## Overview **概述**
+心肺復健（cardiopulmonary rehabilitation）是一套結合運動訓練、衛教與行為改變的計畫，專門幫助患有慢性心肺疾病的患者改善身體功能與生活品質。
 
-Cardiopulmonary rehabilitation integrates exercise training, education, and behavior change to improve the physical and psychological condition of individuals with chronic cardiopulmonary disease. The primary conditions targeted include:
+<details>
+<summary>適用疾病</summary>
 
-| Condition                                        | Chinese        | Key Pathophysiology                                                   |
-| ------------------------------------------------ | -------------- | --------------------------------------------------------------------- |
-| **Chronic Obstructive Pulmonary Disease (COPD)** | 慢性阻塞性肺病 | Airflow limitation, hyperinflation, systemic inflammation             |
-| **Post-Thoracic Surgery**                        | 胸腔術後       | Reduced chest wall compliance, atelectasis, pain-related splinting    |
-| **Interstitial Lung Disease (ILD)**              | 間質性肺病     | Restrictive physiology, impaired gas exchange, progressive fibrosis   |
-| **Pulmonary Hypertension (PH)**                  | 肺動脈高壓     | Elevated pulmonary vascular resistance, right ventricular dysfunction |
-| **Post-Transplant**                              | 器官移植術後   | Deconditioning, immunosuppression effects, graft function adaptation  |
+| 疾病                                      | 中文名稱            | 主要問題                                 |
+| ----------------------------------------- | ------------------- | ---------------------------------------- |
+| **Chronic Obstructive Pulmonary Disease** | 慢性阻塞性肺病 COPD | 氣流受限、肺部過度充氣、全身發炎         |
+| **Post-Thoracic Surgery**                 | 胸腔術後            | 胸廓彈性降低、肺塌陷、因疼痛而不敢深呼吸 |
+| **Interstitial Lung Disease**             | 間質性肺病 ILD      | 肺部纖維化、氣體交換障礙、呼吸越來越困難 |
+| **Pulmonary Hypertension**                | 肺動脈高壓 PH       | 肺部血管阻力增加、心臟右側負擔過大       |
+| **Post-Transplant**                       | 器官移植術後        | 身體虛弱、免疫力下降、需重新適應日常活動 |
 
-### Goals of Rehabilitation **復健目標**
+</details>
 
-1. Improve ventilatory efficiency (**通氣效率**)
-2. Enhance exercise tolerance (**運動耐受度**)
-3. Reverse peripheral muscle reconditioning (**周邊肌肉再適應**)
-4. Reduce dyspnea perception (**呼吸困難感**)
-5. Improve health-related quality of life (**健康相關生活品質**)
-6. Reduce hospital readmission rates (**再住院率**)
+<details>
+<summary>復健目標</summary>
 
----
+1. **改善通氣效率**：讓呼吸更有效率，吸到更多氧氣
+2. **提升運動耐受度**：能走更遠、做更多事而不喘
+3. **逆轉肌肉退化**：慢性病會讓四肢肌肉萎縮，運動可以恢復
+4. **減輕呼吸困難**：降低日常活動中的喘氣感
+5. **提升生活品質**：能更自由地參與社交與日常活動
+6. **減少再住院**：降低急性惡化與住院的次數
 
-## Mechanisms of Action **作用機轉**
+</details>
 
-### Ventilatory Efficiency **通氣效率**
+## 作用機轉
 
-Patients with chronic lung disease exhibit ventilation-perfusion (V/Q) mismatching, increased dead space ventilation, and reduced diffusing capacity. Rehabilitation improves:
+<details>
+<summary>為什麼心肺疾病會讓人喘？</summary>
 
-- **Breathing pattern optimization**: Reduced respiratory rate with increased tidal volume
-- **Diaphragm recruitment**: Improved strength and endurance of the primary muscle of inspiration
-- **Accessory muscle conditioning**: More efficient use of scalenes, sternocleidomastoid, and pectoralis muscles
-- **Reduced dynamic hyperinflation**: Pursed-lip breathing and pacing strategies decrease end-expiratory lung volume
+心肺疾病患者運動時特別容易喘，原因有三：
 
-### Exercise Tolerance **運動耐受度**
+**通氣效率下降**：肺部無法有效交換氧氣與二氧化碳，即使呼吸很快也吸不到足夠的氧氣。
 
-Central and peripheral factors contribute to exercise limitation:
+**肌肉退化**：長期活動量減少，四肢肌肉逐漸萎縮，稍微動一下就覺得累。
 
-| Factor                        | Mechanism                    | Rehabilitation Target                   |
-| ----------------------------- | ---------------------------- | --------------------------------------- |
-| Airflow limitation            | Increased work of breathing  | Breathing retraining, pacing            |
-| Pulmonary vascular limitation | Elevated PVR, RV dysfunction | Graded aerobic training                 |
-| Deconditioning                | Reduced VO₂ peak             | Progressive exercise prescription       |
-| Ventilatory limitation        | Reaching VE max early        | Breathing strategies, interval training |
-| Peripheral muscle dysfunction | Atrophy, fiber-type shift    | Resistance training, NMES               |
+**心臟功能受限**：心臟無法有效將含氧血液送到全身，運動時特別明顯。
 
-### Peripheral Muscle Reconditioning **周邊肌肉再適應**
+復健透過規律運動，可以同時改善這三個問題。
 
-Skeletal muscle dysfunction in COPD (and other chronic lung diseases) involves:
+</details>
 
-- **Type II fiber atrophy** (fast-twitch glycolytic fibers preferentially lost)
-- **Reduced capillary density** and oxidative enzyme activity
-- **Increased lactate production** at submaximal workloads
-- **Systemic inflammation** (elevated TNF-α, IL-6) contributing to muscle wasting
+<details>
+<summary>運動如何改善心肺功能？</summary>
 
-Rehabilitation reverses these changes through progressive overload, improving oxidative capacity and muscle endurance.
+| 問題         | 運動如何改善                                   |
+| ------------ | ---------------------------------------------- |
+| 呼吸肌無力   | 訓練橫膈膜與呼吸肌，讓呼吸更深更有效           |
+| 氣流受限     | 學習正確呼吸技巧（噘嘴呼吸），減少肺部過度充氣 |
+| 肌肉萎縮     | 漸進式阻力訓練，恢復肌肉力量與耐力             |
+| 心肺耐力下降 | 有氧訓練提升心臟泵血能力與血管彈性             |
+| 全身發炎     | 規律運動可降低發炎因子，減緩疾病進展           |
 
----
+</details>
 
-## Assessment **評估**
+## 評估
 
-### Functional Tests **功能性測試**
+<details>
+<summary>六分鐘行走試驗 Six-Minute Walk Test</summary>
 
-#### Six-Minute Walk Test (6MWT) **六分鐘行走試驗**
+**六分鐘行走試驗（6MWT）**是心肺復健中最常用的評估工具，測量患者在六分鐘內能走多遠。
 
-The 6MWT is the most widely used functional exercise test in pulmonary rehabilitation.
+**做法**：在至少 30 公尺的走廊中，患者以自己覺得舒適的速度來回走路六分鐘，治療師記錄行走距離、血氧、心跳與喘氣程度。
 
-- **Minimum clinically important difference (MCID)**: 30–35 meters
-- **Predicted equations**: Based on age, sex, height, weight (Holland et al.)
-- **Protocol**: Measured corridor ≥30 m, patients walk at self-selected pace, encouraged to stop and rest if needed
-- **Outcome measures**: Distance walked, SpO₂ nadir, heart rate recovery, dyspnea (Borg scale)
+| 指標              | 意義                                                |
+| ----------------- | --------------------------------------------------- |
+| 行走距離          | 越遠代表功能越好；治療後增加 30–35 公尺算有臨床意義 |
+| **SpO₂** 最低值   | 低於 80% 要特別注意，可能需要補充氧氣               |
+| 心跳恢復          | 走完後心跳下降的速度，反映心臟適應能力              |
+| **Borg** 喘氣量表 | 主觀的喘氣程度，0–10 分                             |
 
 ::: warning
-**SpO₂ Desaturation During 6MWT**
-Patients with ILD or PH may experience significant desaturation (<80% SpO₂). Have supplemental oxygen available and consider ambulatory oxygen titration during the test.
+患有**間質性肺病**或**肺動脈高壓**的患者在測試中可能出現嚴重缺氧（SpO₂ < 80%），應備有補充氧氣。
 :::
 
-#### Cardiopulmonary Exercise Testing (CPET) **心肺運動試驗**
+</details>
 
-CPET provides the most comprehensive assessment of exercise limitation:
+<details>
+<summary>心肺運動試驗 Cardiopulmonary Exercise Testing</summary>
 
-| Parameter             | What It Measures                 | Clinical Significance                    |
-| --------------------- | -------------------------------- | ---------------------------------------- |
-| **VO₂ peak**          | Aerobic capacity                 | Disease severity, prognosis              |
-| **VE/VCO₂ slope**     | Ventilatory efficiency           | Elevated in PH, heart failure            |
-| **VT/IC ratio**       | Ventilatory constraint           | >0.7 suggests expiratory flow limitation |
-| **O₂ pulse**          | Stroke volume × a-vO₂ difference | Cardiac limitation if low                |
-| **Breathing reserve** | VE max / MVV                     | <15–20% indicates ventilatory limitation |
-| **Lactate threshold** | Anaerobic metabolism onset       | Peripheral factors, deconditioning       |
+**心肺運動試驗（CPET）**是最全面的運動功能評估，能同時觀察心臟、肺部與肌肉在運動時的表現。
+
+| 參數              | 測量什麼                    | 臨床意義                           |
+| ----------------- | --------------------------- | ---------------------------------- |
+| **VO₂ peak**      | 最大攝氧量                  | 反映整體心肺適能，數值越低病情越重 |
+| **VE/VCO₂ slope** | 通氣效率                    | 肺動脈高壓或心衰竭時會明顯升高     |
+| **O₂ pulse**      | 每次心跳輸出的氧氣量        | 太低可能代表心臟功能受限           |
+| 呼吸儲備          | 最大通氣量 / 最大自願通氣量 | < 15–20% 表示呼吸是運動的限制因素  |
 
 ::: info
-**CPET Interpretation in Different Populations**
+**不同疾病的 CPET 特徵**
 
-- **COPD**: Ventilatory limitation is typically the primary mechanism (breathing reserve <15%, high VT/IC ratio)
-- **PH**: Cardiovascular limitation predominates (low O₂ pulse, elevated VE/VCO₂ slope)
-- **ILD**: Gas exchange impairment (desaturation, reduced breathing reserve)
-- **Post-surgery**: Variable; pain and chest wall mechanics may contribute
+- **COPD**：呼吸受限為主（呼吸儲備低、VT/IC 比值高）
+- **肺動脈高壓**：心血管受限為主（O₂ pulse 低、VE/VCO₂ slope 高）
+- **間質性肺病**：氣體交換障礙（運動中血氧下降明顯）
   :::
 
-### Dyspnea Scales **呼吸困難量表**
+</details>
 
-#### Modified Medical Research Council (mMRC) Dyspnea Scale **MRC呼吸困難量表**
+<details>
+<summary>呼吸困難量表 Dyspnea Scales</summary>
 
-| Grade | Description                                                                                                                                            |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0     | Breathless only with strenuous exercise                                                                                                                |
-| 1     | Short of breath when hurrying on level ground or walking up a slight hill                                                                              |
-| 2     | Walks slower than people of the same age on level ground because of breathlessness, or has to stop for breath when walking at own pace on level ground |
-| 3     | Stops for breath after walking about 100 meters or after a few minutes on level ground                                                                 |
-| 4     | Too breathless to leave the house, or breathless when dressing or washing                                                                              |
+**MRC 呼吸困難量表**用來評估喘氣對日常生活的影響程度：
 
-**BODE Index** incorporates mMRC with BMI, Obstruction (FEV₁), and Exercise tolerance (6MWD) for prognostic stratification in COPD (0–10 scale; higher = worse prognosis).
+| 等級 | 描述                                       |
+| ---- | ------------------------------------------ |
+| 0    | 只有在劇烈運動時才會喘                     |
+| 1    | 快走或走上小斜坡時會喘                     |
+| 2    | 因為喘，走得比同齡人慢，或需要停下来喘口氣 |
+| 3    | 走約 100 公尺或幾分鐘就必須停下來喘氣      |
+| 4    | 喘到無法出門，或穿衣服、洗臉時就開始喘     |
 
-### Pulmonary Function Testing **肺功能檢查**
+**BODE 指數**結合了呼吸困難程度、體重、肺功能與運動能力，用來預測 COPD 患者的預後（0–10 分，分數越高預後越差）。
 
-| Parameter | Normal            | COPD (Moderate)         | Restrictive (ILD) |
-| --------- | ----------------- | ----------------------- | ----------------- |
-| FEV₁/FVC  | >0.70             | <0.70                   | ≥0.70             |
-| TLC       | 80–120% predicted | >120% (hyperinflation)  | <80% predicted    |
-| DLCO      | 80–120% predicted | Variable, often reduced | Reduced           |
-| RV        | 80–120% predicted | Increased               | Normal or reduced |
+</details>
 
----
+<details>
+<summary>肺功能檢查 Pulmonary Function Testing</summary>
 
-## Indications for Rehabilitation **復健適應症**
+| 參數         | 正常值         | COPD（中度）           | 限制型（ILD） |
+| ------------ | -------------- | ---------------------- | ------------- |
+| **FEV₁/FVC** | > 0.70         | < 0.70                 | ≥ 0.70        |
+| **TLC**      | 80–120% 預測值 | > 120%（肺部過度充氣） | < 80% 預測值  |
+| **DLCO**     | 80–120% 預測值 | 不一定，常偏低         | 偏低          |
 
-| Condition                                       | Indication                            | Evidence Level               |
-| ----------------------------------------------- | ------------------------------------- | ---------------------------- |
-| COPD (FEV₁ <50%)                                | mMRC ≥2, frequent exacerbations       | **1A** (Cochrane 2023)       |
-| COPD (FEV₁ 50–80%)                              | Exercise intolerance, reduced QoL     | **1A** (ATS/ERS 2023)        |
-| Post-thoracic surgery (lobectomy/pneumonectomy) | Prehabilitation and post-operative CR | **2B** (RCTs, observational) |
-| ILD (all subtypes)                              | 6MWD <400 m or desaturation <88%      | **1B** (Cochrane 2021)       |
-| Pulmonary hypertension                          | WHO Functional Class II–III           | **1B** (ERS/ESC guidelines)  |
-| Post-lung transplant                            | All patients post-transplant          | **2B** (consensus)           |
-| Bronchiectasis                                  | Symptomatic, recurrent exacerbations  | **2B** (emerging evidence)   |
-| Lung cancer (pre/post resection)                | Prehabilitation candidates            | **2C** (growing evidence)    |
+</details>
 
-::: warning
-**Contraindications**
-Absolute contraindications include: unstable angina, uncontrolled arrhythmia, symptomatic aortic stenosis, recent MI (<48 hrs), acute pulmonary embolism, and uncontrolled systemic infection. Relative contraindications require individualized risk-benefit assessment.
-:::
+## 復健適應症
 
----
+<details>
+<summary>哪些人適合做心肺復健？</summary>
 
-## Phase 1: Inpatient Rehabilitation **第一期：住院復健**
+| 疾病                      | 適應症                          | 證據等級                |
+| ------------------------- | ------------------------------- | ----------------------- |
+| **COPD**（FEV₁ < 50%）    | 呼吸困難程度 ≥ 2 級、常急性惡化 | **1A**（Cochrane 2023） |
+| **COPD**（FEV₁ 50–80%）   | 運動耐受度下降、生活品質變差    | **1A**（ATS/ERS 2023）  |
+| 胸腔手術後（肺葉/肺切除） | 術前復健與術後復健              | **2B**                  |
+| **間質性肺病**            | 行走距離 < 400 公尺或血氧 < 88% | **1B**（Cochrane 2021） |
+| **肺動脈高壓**            | WHO 功能分級 II–III 級          | **1B**                  |
+| 肺移植後                  | 所有移植後患者                  | **2B**                  |
+| 支氣管擴張症              | 有症狀、反覆急性惡化            | **2B**                  |
+| 肺癌（手術前後）          | 準備接受手術的患者              | **2C**                  |
 
-### Overview **概述**
+</details>
 
-Phase 1 begins during the acute hospitalization period and focuses on preventing complications, initiating early mobilization, and establishing foundational breathing techniques. Duration varies but typically spans the length of the inpatient stay.
-
-### Breathing Exercises **呼吸訓練**
-
-#### Diaphragmatic Breathing **橫膈膜呼吸**
-
-**Position**: Semi-reclined (30–45°) or supine with knees bent
-
-**Technique**:
-
-1. Place one hand on the upper chest, one on the abdomen
-2. Inhale slowly through the nose for 4–6 seconds, directing the abdomen to rise
-3. The upper hand should remain relatively still
-4. Exhale slowly through pursed lips for 6–8 seconds
-5. The abdomen should fall gently during expiration
-6. Perform 2–3 sets of 10 repetitions, 3–4 times daily
-
-**Key Points**:
-
-- Avoid forceful exhalation; let the elastic recoil of the lungs drive passive expiration
-- Initially, 2–3 sessions of 5 minutes daily, progressing as tolerated
-- Patients may experience fatigue; short frequent sessions are preferred
+<details>
+<summary>禁忌症 Contraindications</summary>
 
 ::: warning
-**COPD Caution**
-Patients with severe hyperinflation may have a flattened diaphragm, making diaphragmatic breathing less effective. In these cases, combine with **pursed-lip breathing** and focus on prolonging expiration rather than maximizing diaphragmatic excursion.
+**絕對禁忌症**（不可進行復健運動）
+
+- 不穩定型心絞痛
+- 未控制的心律不整
+- 嚴重主動脈瓣狹窄
+- 近期心肌梗塞（48 小時內）
+- 急性肺栓塞
+- 未控制的全身性感染
+
+**相對禁忌症**（需個別評估風險與效益）
 :::
 
-#### Pursed-Lip Breathing **噘嘴呼吸**
+</details>
 
-**Technique**:
+## 第一期：住院復健
 
-1. Inhale slowly through the nose for 2 seconds
-2. Pucker or "pucker" the lips as if blowing out a candle
-3. Exhale slowly and gently through pursed lips for 4–6 seconds
-4. Expiration should be twice the duration of inspiration
+<details>
+<summary>概述 Overview</summary>
 
-**Mechanism**: Creates positive back-pressure in the airways, preventing premature airway collapse and reducing dynamic hyperinflation. Improves tidal volume and reduces respiratory rate.
+第一期在急性住院期間開始，重點是**預防併發症**、**早期下床活動**與**建立基本呼吸技巧**。時間長短取決於住院天數。
 
-#### Segmental Breathing **節段呼吸**
+</details>
 
-Targeted to areas of the lung with reduced ventilation (e.g., post-surgical patients with atelectasis):
+<details>
+<summary>呼吸訓練 Breathing Exercises</summary>
 
-1. Therapist places hands on the rib cage over the target segment
-2. Patient directs inhalation toward the therapist's hands
-3. Gentle pressure is applied at end-expiration to increase the stretch
-4. Useful for basilar atelectasis after thoracic surgery
+### 橫膈膜呼吸 Diaphragmatic Breathing
 
-### Inspiratory Muscle Training (IMT) **吸氣肌訓練**
+**做法**：半坐臥（30–45°）或平躺、膝蓋彎曲
 
-**Equipment**: Threshold IMT device (ResMed or similar) or POWERbreathe
+1. 一手放在胸口，一手放在腹部
+2. 用鼻子慢慢吸氣 4–6 秒，感覺腹部鼓起來
+3. 胸口的手盡量不動
+4. 用嘴巴慢慢吐氣 6–8 秒（噘嘴或像吹蠟燭）
+5. 腹部隨吐氣自然凹下去
+6. 每次做 2–3 組，每組 10 次，每天 3–4 次
 
-**Prescription**:
-
-| Parameter        | Starting Dose                             | Progression                       |
-| ---------------- | ----------------------------------------- | --------------------------------- |
-| Intensity        | 30% of maximal inspiratory pressure (MIP) | Increase by 5–10% every 1–2 weeks |
-| Repetitions      | 15–30 per set                             | Target 30 reps per set            |
-| Sets per session | 2                                         | Maintain at 2                     |
-| Sessions per day | 1–2                                       | 2 preferred                       |
-| Frequency        | Daily (inpatient)                         | Daily                             |
-| Target intensity | 50–80% of MIP                             | By discharge or end of Phase 1    |
-
-**Measurement of MIP**: Measured with a handheld manometer (Micro MIP), seated, after 3 maximal inspiratory efforts. Record the best of 3 attempts.
-
-::: info
-**Evidence for IMT in COPD**
-A 2023 Cochrane systematic review (n=1,234) found that IMT combined with general exercise training improved inspiratory muscle strength (MIP +14.5 cmH₂O, 95% CI 8.2–20.8), 6MWD (+30.2 m), and dyspnea scores compared to exercise alone. IMT should be considered as an adjunct to, not a replacement for, comprehensive pulmonary rehabilitation.
-:::
-
-### Early Ambulation **早期下床活動**
-
-| Milestone       | Target                               | Intervention                              |
-| --------------- | ------------------------------------ | ----------------------------------------- |
-| Day 0–1 post-op | Bed mobility, sitting on edge of bed | Incentive spirometry, gentle mobilization |
-| Day 1–2         | Standing, transfer to chair          | Breathing exercises with movement         |
-| Day 2–3         | Ambulation in room/corridor          | Progressive distance targets              |
-| Day 3–7         | Supervised corridor walks            | 6MWT when medically stable                |
-| Pre-discharge   | Independence with ADLs               | Education, discharge planning             |
-
-**Monitoring During Early Ambulation**:
-
-- Continuous pulse oximetry during initial mobilization sessions
-- Target SpO₂ >90% (or patient's baseline on supplemental O₂)
-- RPE (Borg 0–10) target: 3–5 (moderate)
-- Heart rate should not exceed 70% of age-predicted maximum (or 80% if on beta-blockers)
-
----
-
-## Phase 2: Outpatient Rehabilitation **第二期：門診復健**
-
-### Overview **概述**
-
-Phase 2 is the core of the pulmonary rehabilitation program, typically lasting **6–12 weeks** with **2–3 sessions per week**. Each session lasts 60–90 minutes and includes warm-up, aerobic training, resistance training, cool-down, and education.
-
-### Program Structure **課程結構**
-
-| Session Component         | Duration  | Frequency               |
-| ------------------------- | --------- | ----------------------- |
-| Warm-up (walking/cycling) | 10–15 min | Every session           |
-| Aerobic training          | 20–40 min | Every session           |
-| Resistance training       | 15–20 min | Every session (3×/week) |
-| Breathing exercises       | 10 min    | Every session           |
-| Education/self-management | 15–20 min | Weekly                  |
-| Cool-down & stretching    | 10 min    | Every session           |
-
-### Progressive Aerobic Training **漸進式有氧訓練**
-
-#### Modality Selection **訓練方式選擇**
-
-| Modality                     | Advantages                              | Considerations                           |
-| ---------------------------- | --------------------------------------- | ---------------------------------------- |
-| **Cycle ergometry**          | Standardized workload, measurable       | May be less functional than walking      |
-| **Treadmill walking**        | Functional, weight-bearing              | Requires SpO₂ monitoring, fall risk      |
-| **Arm ergometry**            | Upper limb endurance                    | Use after upper limb resistance training |
-| **NuStep/recumbent stepper** | Low impact, combined upper/lower        | May underestimate cardiovascular demand  |
-| **Outdoor walking**          | Most functional, psychological benefits | Weather, terrain variability             |
-
-#### Prescription Guidelines **運動處方指引**
-
-**Initial Intensity** (Weeks 1–4):
-
-- **Endurance training**: 60–80% of peak work rate from CPET, or 60–70% of peak cycle ergometer workload
-- **Alternative**: 60–80% of peak heart rate (if beta-blockers are not used)
-- **Perceived exertion**: Borg dyspnea 3–5 / fatigue 3–5
-- **Duration**: Start at 15–20 minutes, progress to 30–40 minutes
-
-**Progression** (Weeks 4–12):
-
-- Increase duration before intensity
-- Duration progression: Add 5 minutes every 1–2 weeks
-- Intensity progression: Increase by 5–10% of peak work rate every 2–4 weeks
-- Target: 30–60 minutes of moderate-to-high intensity training
+**要點**：不要用力吐氣，讓肺部自然回縮即可。一開始每次 5 分鐘就夠了，慢慢增加。
 
 ::: warning
-**Desaturation During Exercise**
-Patients with ILD or PH may desaturate below 88% during exercise. Supplemental oxygen should be titrated to maintain SpO₂ ≥88%. Ambulatory oxygen during treadmill or outdoor walking may require higher flow rates than during rest. Reassess oxygen needs as fitness improves.
+**COPD 患者注意**
+嚴重肺部過度充氣的患者，橫膈膜已經被壓平，橫膈膜呼吸效果有限。這時應搭配**噘嘴呼吸**，重點放在延長吐氣時間。
 :::
 
-#### Interval Training **間歇訓練**
+### 噘嘴呼吸 Pursed-Lip Breathing
 
-Interval training alternates periods of high-intensity work with recovery periods. Particularly useful for patients who cannot sustain continuous moderate-intensity exercise.
+1. 用鼻子慢慢吸氣 2 秒
+2. 嘴唇嘟起來，像在吹蠟燭
+3. 用嘴巴慢慢吐氣 4–6 秒
+4. **吐氣時間是吸氣的兩倍**
 
-| Interval Type            | Work Period    | Recovery Period | Intensity       | Repetitions |
-| ------------------------ | -------------- | --------------- | --------------- | ----------- |
-| **High-intensity**       | 30 sec – 2 min | 30 sec – 2 min  | 80–100% peak WR | 6–10        |
-| **Low-intensity**        | 1–3 min        | 1–2 min         | 50–60% peak WR  | 4–8         |
-| **High-intensity short** | 30 sec         | 30 sec          | 100% peak WR    | 10–15       |
+**原理**：噘嘴呼吸會在氣道內產生正壓，防止氣道塌陷，讓肺部有更多時間排出空氣，減少「空氣卡在肺裡」的感覺。
 
-**Protocol Example (High-Intensity Interval)**:
+### 節段呼吸 Segmental Breathing
 
-1. Warm-up: 5 min at 30% peak WR
-2. Cycle: 1 min at 100% peak WR, 1 min at 50% peak WR (repeat 10×)
-3. Cool-down: 5 min at 30% peak WR
-4. Total training time: 25 minutes
+針對肺部塌陷的區域（如術後肺塌陷），治療師將手放在目標區域的肋骨上，引導患者將空氣吸入那個區域，幫助肺部重新張開。
 
-**Advantages of Interval Training**:
+</details>
 
-- Allows higher total workload accumulation
-- Reduces ventilatory demand during work periods (brief intervals)
-- Better tolerated in patients with severe airflow limitation
-- Greater improvement in muscle oxidative capacity per unit time
+<details>
+<summary>吸氣肌訓練 Inspiratory Muscle Training</summary>
 
-### Upper Limb Training **上肢訓練**
+**設備**：**Threshold IMT** 或 **POWERbreathe**（阻力式吸氣訓練器）
 
-Upper limb dysfunction significantly contributes to dyspnea during activities of daily living (ADLs) such as dressing, grooming, and cooking. The shoulder girdle muscles share respiratory functions (pectoralis minor, serratus anterior), and sustained arm elevation increases the oxygen cost of breathing.
+| 參數     | 起始劑量                | 進階方式                 |
+| -------- | ----------------------- | ------------------------ |
+| 強度     | 最大吸氣壓（MIP）的 30% | 每 1–2 週增加 5–10%      |
+| 次數     | 每組 15–30 次           | 目標每組 30 次           |
+| 組數     | 2 組                    | 維持 2 組                |
+| 頻率     | 每天 1–2 次（住院期間） | 每天 2 次最佳            |
+| 目標強度 | MIP 的 50–80%           | 出院前或第一期結束時達標 |
 
-#### Unloaded Upper Limb Training **無負重上肢訓練**
-
-- Arm cycling (ergometry): 10–20 min at moderate intensity
-- Range-of-motion exercises with light resistance
-- Functional reaching and lifting tasks
-
-#### Loaded Upper Limb Training **負重上肢訓練**
-
-| Exercise         | Equipment       | Sets × Reps | Starting Load      | Progression         |
-| ---------------- | --------------- | ----------- | ------------------ | ------------------- |
-| Seated row       | Resistance band | 2 × 10–15   | Light (yellow/red) | Medium (green/blue) |
-| Chest press      | Resistance band | 2 × 10–15   | Light (yellow/red) | Medium (green/blue) |
-| Shoulder flexion | Light dumbbells | 2 × 10–12   | 0.5–1 kg           | 1–2 kg              |
-| Biceps curl      | Light dumbbells | 2 × 10–12   | 0.5–1 kg           | 1–2 kg              |
-| Overhead press   | Light dumbbells | 2 × 8–12    | 0.5–1 kg           | 1–1.5 kg            |
+**測量 MIP**：坐姿，使用手持壓力計，做 3 次最大吸氣，取最高值。
 
 ::: info
-**Upper Limb Training Evidence**
-A Cochrane review (2021) found that adding specific upper limb training to pulmonary rehabilitation programs improved arm endurance (mean difference +3.2 min on sustained arm elevation test) and reduced dyspnea during ADLs compared to pulmonary rehabilitation alone. Programs should include both loaded and unloaded upper limb components.
+**實證依據**
+2023 年 Cochrane 統合分析（n=1,234）發現，吸氣肌訓練搭配一般運動，比單獨運動更能改善吸氣肌力量（MIP +14.5 cmH₂O）、行走距離（+30.2 公尺）與呼吸困難程度。吸氣肌訓練應作為心肺復健的**輔助**，而非取代。
 :::
 
-### Lower Limb Resistance Training **下肢阻力訓練**
+</details>
 
-#### Equipment **設備**
+<details>
+<summary>早期下床活動 Early Ambulation</summary>
 
-- **Ankle weights**: 0.5–5 kg, adjustable
-- **Resistance bands**: Color-coded (yellow → red → green → blue → black)
-- **Weight machines**: Leg press, leg extension, leg curl
-- **Free weights**: Dumbbells, kettlebells (for advanced patients)
+| 時間點        | 目標               | 介入方式                     |
+| ------------- | ------------------ | ---------------------------- |
+| 術後第 0–1 天 | 床上翻身、坐在床邊 | 深呼吸訓練器、輕度活動       |
+| 術後第 1–2 天 | 站立、轉位到椅子   | 搭配呼吸訓練的活動           |
+| 術後第 2–3 天 | 在病房或走廊行走   | 漸進增加距離                 |
+| 術後第 3–7 天 | 有監督的走廊行走   | 醫學穩定後進行六分鐘行走試驗 |
+| 出院前        | 能獨立完成日常活動 | 衛教、出院規劃               |
 
-#### Prescription **運動處方**
+**監測標準**：
 
-| Exercise       | Sets × Reps     | Starting Intensity         | Progression Criteria                  |
-| -------------- | --------------- | -------------------------- | ------------------------------------- |
-| Leg press      | 2–3 × 10–15     | 30–40% of 1-RM             | When 15 reps completed with good form |
-| Knee extension | 2 × 10–15       | Light ankle weight or band | Add 0.5 kg or upgrade band            |
-| Hip abduction  | 2 × 10–15       | Light ankle weight or band | Add 0.5 kg or upgrade band            |
-| Sit-to-stand   | 2 × 10–15       | Body weight                | Add weight (2–5 kg)                   |
-| Step-ups       | 2 × 10 each leg | Low step (10–15 cm)        | Increase step height                  |
+- 初期活動時持續監測 **SpO₂**
+- 目標 SpO₂ > 90%（或患者使用氧氣時的基準值）
+- 自覺費力程度（**Borg** 0–10）目標：3–5（中等程度）
+- 心率不超過年齡預測最大值的 70%（若服用乙型交感神經阻斷劑則為 80%）
 
-**Progression Rules**:
+</details>
 
-1. Increase load by 5–10% when the patient can complete 15 reps with good form for 2 consecutive sessions
-2. Target: 60–70% of 1-RM for muscular endurance (8–15 reps)
-3. For strength: 70–80% of 1-RM (6–8 reps) — rarely needed in CR
-4. Rest between sets: 30–90 seconds
+## 第二期：門診復健
 
-### Education Component **衛教內容**
+<details>
+<summary>概述 Overview</summary>
 
-| Topic                   | Content                                      | Session        |
-| ----------------------- | -------------------------------------------- | -------------- |
-| Disease pathophysiology | COPD, ILD, PH mechanisms                     | Week 1–2       |
-| Medication management   | Inhaler technique, adherence, side effects   | Week 2–3       |
-| Energy conservation     | ADL pacing, joint protection                 | Week 3–4       |
-| Nutrition               | Weight management, protein intake            | Week 4–5       |
-| Psychosocial support    | Anxiety, depression, coping strategies       | Week 5–6       |
-| Exacerbation management | Action plans, when to seek help              | Week 6–8       |
-| Smoking cessation       | If applicable, referral to cessation program | Throughout     |
-| Advance care planning   | Discussion of goals of care                  | End of program |
+第二期是心肺復健的**核心階段**，通常持續 **6–12 週**，每週 **2–3 次**，每次 60–90 分鐘。每次課程包含暖身、有氧訓練、阻力訓練、呼吸訓練、衛教與收操。
 
----
+</details>
 
-## Phase 3: Maintenance **第三期：維持期**
+<details>
+<summary>課程結構 Program Structure</summary>
 
-### Overview **概述**
+| 課程組成            | 時間     | 頻率              |
+| ------------------- | -------- | ----------------- |
+| 暖身（走路/腳踏車） | 10–15 分 | 每次              |
+| 有氧訓練            | 20–40 分 | 每次              |
+| 阻力訓練            | 15–20 分 | 每次（每週 3 次） |
+| 呼吸訓練            | 10 分    | 每次              |
+| 衛教/自我管理       | 15–20 分 | 每週              |
+| 收操與伸展          | 10 分    | 每次              |
 
-Phase 3 focuses on long-term maintenance of gains achieved during Phase 2. Many patients experience deterioration in functional capacity within 6–12 months of completing supervised rehabilitation. Self-management and home-based strategies are essential.
+</details>
 
-### Home Exercise Program **居家運動計畫**
+<details>
+<summary>漸進式有氧訓練 Progressive Aerobic Training</summary>
 
-#### Walking Program **步行計畫**
+### 訓練方式選擇
 
-| Week | Target Duration | Intensity | Frequency |
-| ---- | --------------- | --------- | --------- |
-| 1–2  | 15–20 min       | RPE 3–4   | 5×/week   |
-| 3–4  | 20–30 min       | RPE 4–5   | 5×/week   |
-| 5–8  | 30–45 min       | RPE 4–6   | 5×/week   |
-| 9+   | 30–60 min       | RPE 4–6   | 5–7×/week |
+| 方式           | 優點                       | 注意事項                   |
+| -------------- | -------------------------- | -------------------------- |
+| **腳踏車**     | 強度可精確控制、可測量     | 可能不如走路實用           |
+| **跑步機走路** | 最接近日常活動、有負重效果 | 需監測血氧、有跌倒風險     |
+| **手搖車**     | 訓練上肢耐力               | 需先完成上肢阻力訓練再開始 |
+| **躺式踏步機** | 低衝擊、上下肢同時訓練     | 可能低估心肺需求           |
+| **戶外走路**   | 最實用、有心理放鬆效果     | 天氣、地形變化             |
 
-#### Resistance Training **阻力訓練 (居家)**
+### 運動處方指引
 
-- 2–3 sets of 10–15 reps for major muscle groups
-- Resistance bands or ankle weights (as prescribed)
-- Frequency: 2–3×/week on non-consecutive days
-- Progress load when 15 reps is achieved comfortably
+**起始強度**（第 1–4 週）：
 
-#### Breathing Exercises **呼吸訓練 (居家)**
+- **有氧訓練**：CPET 峰值功率的 60–80%，或峰值心跳的 60–70%
+- **自覺費力**：喘氣或疲勞 **Borg** 3–5 分
+- **時間**：從 15–20 分鐘開始，漸增至 30–40 分鐘
 
-- Diaphragmatic breathing: 2 sets × 10 reps, 2× daily
-- Pursed-lip breathing: Integrate into all daily activities and walking
-- Segmental breathing: As needed for residual atelectasis
+**進階**（第 4–12 週）：
 
-### Self-Management Strategies **自我管理策略**
+- 先增加時間，再增加強度
+- 每 1–2 週增加 5 分鐘
+- 每 2–4 週增加強度 5–10%
+- 目標：30–60 分鐘的中高強度訓練
+
+::: warning
+**運動中血氧下降**
+患有**間質性肺病**或**肺動脈高壓**的患者，運動中血氧可能降到 88% 以下。應補充氧氣維持 SpO₂ ≥ 88%。隨著體能改善，需重新評估氧氣需求。
+:::
+
+</details>
+
+<details>
+<summary>間歇訓練 Interval Training</summary>
+
+間歇訓練是**高強度運動與休息交替**的方式，特別適合無法持續中等強度運動的患者。
+
+| 類型             | 運動時間     | 休息時間     | 強度             | 次數  |
+| ---------------- | ------------ | ------------ | ---------------- | ----- |
+| **高強度**       | 30 秒 – 2 分 | 30 秒 – 2 分 | 峰值功率 80–100% | 6–10  |
+| **低強度**       | 1–3 分       | 1–2 分       | 峰值功率 50–60%  | 4–8   |
+| **高強度短間歇** | 30 秒        | 30 秒        | 峰值功率 100%    | 10–15 |
+
+**範例（高強度間歇）**：
+
+1. 暖身：30% 峰值功率 5 分鐘
+2. 循環：100% 峰值功率 1 分鐘 → 50% 峰值功率 1 分鐘（重複 10 次）
+3. 收操：30% 峰值功率 5 分鐘
+4. 總訓練時間：25 分鐘
+
+**間歇訓練的好處**：
+
+- 短時間內累積更多運動量
+- 高強度期間較短，呼吸負擔較小
+- 嚴重氣流受限的患者較能耐受
+- 肌肉氧化能力改善效果更好
+
+</details>
+
+<details>
+<summary>上肢訓練 Upper Limb Training</summary>
+
+上肢功能障礙會明顯影響日常活動（穿衣、煮飯、梳洗），因為肩帶肌肉同時負責呼吸與手臂動作，長時間舉手會增加呼吸負擔。
+
+### 無負重訓練
+
+- 手搖車：中等強度 10–20 分鐘
+- 關節活動度訓練搭配輕阻力
+- 功能性動作（伸手拿東西、舉手過頭）
+
+### 負重訓練
+
+| 動作     | 設備   | 組 × 次   | 起始強度    | 進階方式    |
+| -------- | ------ | --------- | ----------- | ----------- |
+| 坐姿划船 | 彈力帶 | 2 × 10–15 | 輕（黃/紅） | 中（綠/藍） |
+| 胸推     | 彈力帶 | 2 × 10–15 | 輕（黃/紅） | 中（綠/藍） |
+| 肩屈曲   | 輕啞鈴 | 2 × 10–12 | 0.5–1 公斤  | 1–2 公斤    |
+| 二頭彎舉 | 輕啞鈴 | 2 × 10–12 | 0.5–1 公斤  | 1–2 公斤    |
+| 過頭推舉 | 輕啞鈴 | 2 × 8–12  | 0.5–1 公斤  | 1–1.5 公斤  |
 
 ::: info
-**Self-Management Action Plan**
-Every patient should leave the program with a written action plan that includes:
+**實證依據**
+Cochrane 統合分析（2021）發現，在心肺復健中加入上肢訓練，能改善手臂耐力（持續舉手時間增加 3.2 分鐘）並減少日常活動中的喘氣感。
+:::
 
-1. Daily exercise targets and minimum weekly dose
-2. Medication adjustment protocols (if applicable)
-3. Recognition of exacerbation signs (increased dyspnea, sputum change, fever)
-4. Contact information for the rehabilitation team
-5. Follow-up schedule (ideally 3–6 monthly)
+</details>
+
+<details>
+<summary>下肢阻力訓練 Lower Limb Resistance Training</summary>
+
+### 設備
+
+- **腳踝沙袋**：0.5–5 公斤，可調節
+- **彈力帶**：依顏色分阻力（黃 → 紅 → 綠 → 藍 → 黑）
+- **腿部推蹬機**：可精確控制阻力
+- **啞鈴**：進階患者使用
+
+### 運動處方
+
+| 動作     | 組 × 次     | 起始強度             | 進階標準                  |
+| -------- | ----------- | -------------------- | ------------------------- |
+| 腿部推蹬 | 2–3 × 10–15 | 1-RM 的 30–40%       | 能做 15 次且姿勢正確      |
+| 膝伸展   | 2 × 10–15   | 輕沙袋或彈力帶       | 增加 0.5 公斤或升級彈力帶 |
+| 髖外展   | 2 × 10–15   | 輕沙袋或彈力帶       | 增加 0.5 公斤或升級彈力帶 |
+| 坐站訓練 | 2 × 10–15   | 自體重               | 增加重量（2–5 公斤）      |
+| 登階訓練 | 2 × 10 每腳 | 低階梯（10–15 公分） | 增加階梯高度              |
+
+**進階原則**：
+
+1. 能連續 2 次訓練都做到 15 次且姿勢正確，再增加 5–10% 阻力
+2. 肌耐力目標：1-RM 的 60–70%（8–15 次）
+3. 組間休息 30–90 秒
+
+</details>
+
+<details>
+<summary>衛教內容 Education</summary>
+
+| 主題         | 內容                             | 時間點    |
+| ------------ | -------------------------------- | --------- |
+| 疾病認知     | COPD、ILD、PH 的基本概念         | 第 1–2 週 |
+| 藥物管理     | 吸入器使用技巧、藥物作用與副作用 | 第 2–3 週 |
+| 節能技巧     | 日常活動中的 pacing 與關節保護   | 第 3–4 週 |
+| 營養         | 體重管理、蛋白質攝取             | 第 4–5 週 |
+| 心理支持     | 焦慮、憂鬱、因應策略             | 第 5–6 週 |
+| 急性惡化處理 | 行動計畫、何時就醫               | 第 6–8 週 |
+| 戒菦         | 如有需要，轉介戒菦計畫           | 全程      |
+| 預立醫療決定 | 討論照護目標                     | 結束前    |
+
+</details>
+
+## 第三期：維持期
+
+<details>
+<summary>概述 Overview</summary>
+
+第三期的重點是**維持第二期的成果**。許多患者在完成復健後 6–12 個月功能會退化，因此自我管理與居家運動非常重要。
+
+</details>
+
+<details>
+<summary>居家運動計畫 Home Exercise Program</summary>
+
+### 步行計畫
+
+| 週數 | 目標時間 | 強度    | 頻率        |
+| ---- | -------- | ------- | ----------- |
+| 1–2  | 15–20 分 | RPE 3–4 | 每週 5 次   |
+| 3–4  | 20–30 分 | RPE 4–5 | 每週 5 次   |
+| 5–8  | 30–45 分 | RPE 4–6 | 每週 5 次   |
+| 9+   | 30–60 分 | RPE 4–6 | 每週 5–7 次 |
+
+### 阻力訓練（居家）
+
+- 大肌群做 2–3 組，每組 10–15 次
+- 使用彈力帶或腳踝沙袋
+- 每週 2–3 次，非連續日
+- 能輕鬆做到 15 次時再增加阻力
+
+### 呼吸訓練（居家）
+
+- 橫膈膜呼吸：2 組 × 10 次，每天 2 次
+- 噘嘴呼吸：融入所有日常活動與步行中
+- 節段呼吸：有殘餘肺塌陷時使用
+
+</details>
+
+<details>
+<summary>自我管理策略 Self-Management</summary>
+
+::: info
+**自我管理行動計畫**
+每位患者都應帶著書面行動計畫出院，內容包括：
+
+1. 每日運動目標與每週最低運動量
+2. 藥物調整原則（如適用）
+3. 急性惡化徵兆的辨識（呼吸困難加劇、痰液變化、發燒）
+4. 復健團隊聯絡方式
+5. 追蹤時程（建議每 3–6 個月回診）
    :::
 
-### Telerehabilitation **遠距復健**
+</details>
 
-Telerehabilitation has emerged as a viable alternative, particularly post-COVID-19:
+<details>
+<summary>遠距復健 Telerehabilitation</summary>
 
-- **Advantages**: Accessible to rural/remote patients, no travel burden, real-time monitoring
-- **Components**: Video-supervised exercise sessions, wearable activity trackers, phone coaching
-- **Evidence**: Non-inferior to center-based rehabilitation for 6MWD (net difference -12 m, 95% CI -28 to +4 m) in a 2022 Cochrane review
+遠距復健是疫情後興起的替代方案，特別適合偏遠地區或行動不便的患者。
 
----
+- **優點**：不需出門、即時監測、交通零負擔
+- **方式**：視訊運動指導、穿戴式裝置追蹤活動量、電話教練
+- **實證**：2022 年 Cochrane 統合分析顯示，遠距復健在行走距離與生活品質上與到院復健效果相當（差距僅 -12 公尺）
 
-## Specific Exercises **特定運動處方**
+</details>
 
-### Exercise Prescription Summary **運動處方總覽**
+## 監測與安全
 
-| Component       | Frequency | Intensity                         | Time      | Type                       |
-| --------------- | --------- | --------------------------------- | --------- | -------------------------- |
-| **Aerobic**     | 3–5×/week | 60–80% peak WR or HRR             | 20–60 min | Cycling, walking, stepping |
-| **Resistance**  | 2–3×/week | 60–70% 1-RM (8–15 reps)           | 15–20 min | Upper and lower limb       |
-| **Flexibility** | Daily     | Gentle stretch to mild discomfort | 5–10 min  | All major joints           |
-| **Breathing**   | 2–3×/day  | Submaximal                        | 10–15 min | Diaphragmatic, PLB         |
+<details>
+<summary>血氧監測 SpO₂ Monitoring</summary>
 
-### Warm-Up Protocol **暖身計畫**
+| 情境     | 監測方式         | 處理標準                             |
+| -------- | ---------------- | ------------------------------------ |
+| 靜止時   | 每次課前測量     | < 88%：評估是否需補充氧氣            |
+| 運動中   | 持續脈搏血氧監測 | < 88% 超過 1 分鐘：降低強度或加氧    |
+| 運動後   | 5 分鐘恢復監測   | 5 分鐘後仍 < 90%：延長恢復、重新評估 |
+| 行走測試 | 測試期間持續監測 | < 80%：停止測試、提供氧氣            |
 
-1. Slow walking or cycling at 30–40% peak WR: 5 min
-2. Gentle upper limb stretching: 2 min
-3. Breathing exercises (3–5 cycles): 2 min
-4. Gradual intensity increase to training zone: 3 min
+</details>
 
-### Cool-Down Protocol **收操計畫**
+<details>
+<summary>停止運動的時機 When to Stop Exercise</summary>
 
-1. Gradual reduction of aerobic intensity over 5–10 min
-2. Seated or supine stretching (all major muscle groups): 5 min
-3. Breathing exercises to normalize respiratory rate: 3 min
-4. Reassessment: SpO₂, HR, RPE, symptoms
+### 絕對停止指標
 
----
+- **SpO₂ < 85%**（即使有補充氧氣）
+- 心率 > 年齡預測最大值的 90%
+- 收縮壓 > 200 mmHg 或 < 90 mmHg
+- 新出現或惡化的胸痛
+- 喘氣嚴重程度與運動強度不成比例（**Borg** > 8）
+- 頭暈、暈厥前兆
+- 新發生的心律不整或心電圖變化
+- 患者要求停止
 
-## Monitoring and Safety **監測與安全**
+### 相對停止指標（降低強度）
 
-### SpO₂ Monitoring **血氧監測**
+- **SpO₂ 85–88%**（降低強度、重新評估）
+- 過度喘氣（**Borg** 6–7）
+- 肌肉疲勞（**Borg** > 6）與訓練無關
+- 輕微頭暈
+- 運動中咳嗽加劇
 
-| Scenario             | Monitoring Protocol         | Action Threshold                                 |
-| -------------------- | --------------------------- | ------------------------------------------------ |
-| Resting SpO₂         | Before each session         | <88%: Assess, consider O₂ supplementation        |
-| During exercise      | Continuous pulse oximetry   | <88% for >1 min: Reduce intensity or add O₂      |
-| Post-exercise        | 5 min recovery monitoring   | <90% at 5 min: Extend recovery, reassess         |
-| Walking tests        | Continuous during test      | <80%: Stop test, provide O₂                      |
-| Desaturation pattern | Document nadir and recovery | Increasing desaturation: Reassess disease status |
+</details>
 
-### Desaturation Thresholds **去飽和閾值**
+<details>
+<summary>緊急處理流程 Emergency Protocol</summary>
 
-::: warning
-**Critical Desaturation Thresholds**
+1. 立即停止運動
+2. 協助患者坐起或半坐臥
+3. 若 SpO₂ < 90%，給予補充氧氣
+4. 持續監測生命徵象
+5. 評估症狀：胸痛、心悸、暈厥
+6. 若狀況不穩定，啟動緊急醫療反應
+7. 完整記錄事件經過
+8. 需醫師確認後才能恢復運動
 
-- **SpO₂ 88–90%**: Mild desaturation — continue exercise with monitoring, consider supplemental O₂
-- **SpO₂ 85–87%**: Moderate desaturation — reduce intensity, add supplemental O₂, reassess
-- **SpO₂ <85%**: Severe desaturation — STOP exercise, provide supplemental O₂ at 2–4 L/min via nasal cannula
-- **SpO₂ <80%**: Critical — STOP exercise, administer high-flow O₂, assess for medical emergency
-  :::
+</details>
 
-### When to Stop Exercise **停止運動的時機**
+## 實證與指引
 
-**Absolute Indications to Stop**:
+<details>
+<summary>考科藍統合分析 Cochrane Reviews</summary>
 
-- SpO₂ <85% despite supplemental oxygen
-- Heart rate >90% of age-predicted maximum
-- Systolic BP >200 mmHg or <90 mmHg
-- New or worsening chest pain
-- Severe dyspnea disproportionate to effort (Borg >8)
-- Dizziness, lightheadedness, or syncope symptoms
-- New arrhythmia or ECG changes
-- Patient request to stop
+| 研究主題               | 年份 | 對象            | 主要發現                                             |
+| ---------------------- | ---- | --------------- | ---------------------------------------------------- |
+| COPD 心肺復健          | 2023 | 所有嚴重度 COPD | 行走距離 +40 公尺、生活品質改善、減少住院（NNT = 4） |
+| ILD 心肺復健           | 2021 | IPF、NSIP 等    | 行走距離 +30 公尺、呼吸困難改善                      |
+| 運動訓練治療肺動脈高壓 | 2022 | WHO FC II–III   | 行走距離 +38 公尺、監督下安全                        |
+| 上肢訓練               | 2021 | COPD            | 手臂耐力改善、日常活動喘氣減少                       |
+| 遠距復健               | 2022 | COPD            | 與到院復健效果相當                                   |
 
-**Relative Indications to Reduce Intensity**:
+</details>
 
-- SpO₂ 85–88% (reduce intensity, reassess)
-- Excessive dyspnea (Borg 6–7)
-- Muscle fatigue (Borg >6) unrelated to training
-- Mild dizziness
-- Cough increasing during exercise
-
-### Emergency Protocol **緊急處理流程**
-
-1. Stop exercise immediately
-2. Assist patient to seated or semi-reclined position
-3. Apply supplemental oxygen if SpO₂ <90%
-4. Monitor vital signs continuously
-5. Assess symptoms: chest pain, palpitations, syncope
-6. Activate emergency medical response if unstable
-7. Document the event thoroughly
-8. Medical clearance required before resuming exercise
-
----
-
-## Evidence and Guidelines **實證與指引**
-
-### Key Cochrane Reviews **考科藍統合分析**
-
-| Review                            | Year | Population            | Key Findings                                                                                  |
-| --------------------------------- | ---- | --------------------- | --------------------------------------------------------------------------------------------- |
-| Pulmonary rehabilitation for COPD | 2023 | COPD (all severities) | Improved 6MWD (+40 m), QoL (SGRQ -3.5 units), dyspnea; NNT = 4 to prevent one hospitalization |
-| Pulmonary rehabilitation for ILD  | 2021 | IPF, NSIP, other ILD  | Improved 6MWD (+30 m), dyspnea, QoL; evidence quality moderate                                |
-| Exercise training for PH          | 2022 | WHO FC II–III         | Improved 6MWD (+38 m), peak VO₂; safe if supervised                                           |
-| Upper limb training in CR         | 2021 | COPD                  | Improved arm endurance, reduced ADL dyspnea                                                   |
-| Telerehabilitation in CR          | 2022 | COPD                  | Non-inferior to center-based for 6MWD and QoL                                                 |
-
-### ATS/ERS Guidelines **美國胸腔學會/歐洲呼吸學會指引**
+<details>
+<summary>ATS/ERS 指南 ATS/ERS Guidelines</summary>
 
 ::: info
-**2023 ATS/ERS Statement on Pulmonary Rehabilitation**
-Key recommendations (Grade of recommendation):
+**2023 ATS/ERS 心肺復健聲明**
 
-1. Pulmonary rehabilitation is recommended for symptomatic patients with COPD regardless of disease severity (**A**)
-2. Pulmonary rehabilitation should be initiated as early as possible during or after an acute exacerbation (**B**)
-3. Programs should include exercise training (aerobic and resistance) at moderate-to-high intensity (**A**)
-4. Program duration of at least 6–12 weeks is recommended (**A**)
-5. Maintenance strategies are encouraged to sustain benefits (**B**)
-6. Pulmonary rehabilitation should be considered for patients with ILD and PH (**B**)
+1. 有症狀的 COPD 患者不論疾病嚴重度都應接受心肺復健（**A 級建議**）
+2. 應在急性惡化期間或之後盡早開始復健（**B 級建議**）
+3. 計畫應包含中高強度的有氧與阻力訓練（**A 級建議**）
+4. 建議至少 6–12 週（**A 級建議**）
+5. 鼓勵維持策略以延續效果（**B 級建議**）
+6. ILD 與肺動脈高壓患者也應考慮心肺復健（**B 級建議**）
    :::
 
-### Outcome Measures and Response Criteria **成效評估**
+</details>
 
-| Outcome                     | Minimal Clinically Important Difference | Assessment Time          |
-| --------------------------- | --------------------------------------- | ------------------------ |
-| **6MWD**                    | 30–35 m                                 | Pre- and post-program    |
-| **SGRQ**                    | 4 units                                 | Pre- and post-program    |
-| **MRC Dyspnea Scale**       | 1 grade                                 | Pre- and post-program    |
-| **Peak VO₂ (CPET)**         | 1.0–1.5 mL/kg/min                       | Pre- and post-program    |
-| **Cycle ergometer peak WR** | 4–7 watts                               | Pre- and post-program    |
-| **MIP**                     | 8–10 cmH₂O                              | Pre- and post-program    |
-| **Hospital admissions**     | Binary (yes/no)                         | 6–12 months post-program |
+<details>
+<summary>成效評估 Outcome Measures</summary>
 
----
+| 指標                    | 最小臨床有意義差異 | 評估時間點       |
+| ----------------------- | ------------------ | ---------------- |
+| **6MWD** 六分鐘行走距離 | 30–35 公尺         | 計畫前後         |
+| **SGRQ** 生活品質問卷   | 4 單位             | 計畫前後         |
+| **MRC** 呼吸困難量表    | 1 級               | 計畫前後         |
+| **Peak VO₂** 最大攝氧量 | 1.0–1.5 mL/kg/min  | 計畫前後         |
+| **MIP** 最大吸氣壓      | 8–10 cmH₂O         | 計畫前後         |
+| 住院次數                | 有/無              | 計畫後 6–12 個月 |
 
-## Summary **總結**
+</details>
 
-Cardiopulmonary rehabilitation is a cornerstone of management for patients with chronic respiratory disease. The evidence base supports:
+## 總結
 
-1. **Phase 1** (inpatient) focuses on early mobilization, breathing retraining, and IMT
-2. **Phase 2** (outpatient, 6–12 weeks) provides comprehensive supervised exercise training, education, and psychosocial support
-3. **Phase 3** (maintenance) preserves gains through home-based programs and self-management
+心肺復健是慢性心肺疾病管理的**核心**。實證支持：
 
-The key to successful rehabilitation is **individualized prescription**, **progressive overload**, **multidisciplinary collaboration**, and **long-term follow-up**. Physical therapists play a central role in assessment, exercise prescription, monitoring, and education throughout all phases.
+1. **第一期**（住院）：早期活動、呼吸訓練、吸氣肌訓練
+2. **第二期**（門診，6–12 週）：全面的運動訓練、衛教與心理支持
+3. **第三期**（維持）：居家運動、自我管理、延續效果
+
+成功的關鍵在於**個別化處方**、**漸進式超負荷**、**跨專業合作**與**長期追蹤**。物理治療師在評估、運動處方、監測與衛教中扮演核心角色。
 
 ::: warning
-**Quality Assurance**
-Programs should aim for ≥70% completion rate, regular outcome measurement (pre/post 6MWD, QoL), and adherence to ATS/ERS guideline recommendations. Low completion rates may indicate barriers requiring programmatic modification (transportation, scheduling, fear of exercise, comorbidities).
+**品質指標**
+復健計畫的完成率應 ≥ 70%，並定期測量成效（治療前後的六分鐘行走距離與生活品質）。完成率過低可能代表需改善交通、排程、運動恐懼或共病等問題。
 :::
 
 ---
 
-_Last updated: 2026. Based on current evidence from Cochrane Library, ATS/ERS guidelines, and published randomized controlled trials. Clinical judgment should always guide individual patient management._
+_最後更新：2026 年。依據 Cochrane Library、ATS/ERS 指南與已發表的隨機對照試驗。臨床判斷應永遠引導個別患者的照護。_

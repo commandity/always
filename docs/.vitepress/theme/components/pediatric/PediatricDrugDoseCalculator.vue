@@ -1847,7 +1847,7 @@ function calcOnKeydown(e: KeyboardEvent) {
       <div v-if="!selectedDrugs.length" class="sb-empty">
         <span class="empty-icon">💊</span>
         <span class="empty-text"
-          >Select one or more drugs above to see dosing results</span
+          >從上方點選一或多種藥物</span
         >
       </div>
 

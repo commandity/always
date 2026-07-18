@@ -11,9 +11,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 燒傷（burn）是由熱、電、化學物質或輻射線造成的組織損傷。燒傷復健的核心目標是**預防攣縮（contracture）、維持功能、促進傷口癒合**，並協助患者重返日常生活。
 
-<details open>
-
-### 燒傷深度分類
+<details>
+<summary>燒傷深度分類</summary>
 
 | 分類                       | 特徵                       | 癒合時間              |
 | -------------------------- | -------------------------- | --------------------- |
@@ -23,9 +22,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 燒傷面積評估
+<details>
+<summary>燒傷面積評估</summary>
 
 使用**九則法（rule of nines）**估算燒傷面積 TBSA：
 
@@ -40,11 +38,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 第一期：急性期 （0-2 週）
 
-<details open>
-
-### 定位
-
-**Positioning**
+<details>
+<summary>定位 Positioning</summary>
 
 - **抗攣縮體位 anti-contracture positioning**
 - 頸部：中立或輕度伸展
@@ -57,11 +52,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 水腫管理
-
-**Edema Management**
+<details>
+<summary>水腫管理 Edema Management</summary>
 
 - **抬高患肢 elevation** 高於心臟水平
 - **加壓包紮 compression wrapping**
@@ -70,11 +62,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 矯形器
-
-**Splinting**
+<details>
+<summary>矯形器 Splinting</summary>
 
 - **靜息夾板 resting splint**：維持功能位 position of function
 - **動態夾板 dynamic splint**：提供漸進牽引
@@ -82,11 +71,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 被動關節活動度訓練
-
-**Passive ROM**
+<details>
+<summary>被動關節活動度訓練 Passive ROM</summary>
 
 - 每日 2–3 次，每關節 5–10 次重複
 - 避免造成傷口撕裂
@@ -96,11 +82,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 第二期：癒合期 （2–6 週）
 
-<details open>
-
-### 主動關節活動度訓練
-
-**Active ROM**
+<details>
+<summary>主動關節活動度訓練 Active ROM</summary>
 
 - 鼓勵患者主動活動所有未受傷關節
 - 受傷關節進行**輕柔主動協助活動 active-assisted ROM**
@@ -108,11 +91,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 疤痕管理
-
-**Scar Management**
+<details>
+<summary>疤痕管理 Scar Management</summary>
 
 - **壓力衣 pressure garment**：23–25 mmHg 持續配戴
 - **矽膠製品 silicone**：矽膠片 sheeting 或矽膠凝膠 gel，每日 12–23 小時
@@ -120,11 +100,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 壓力治療
-
-**Pressure Garment Therapy**
+<details>
+<summary>壓力治療 Pressure Garment Therapy</summary>
 
 - 定製壓力衣需在**癒合後 2 週內**取得
 - 持續配戴 **6–18 個月**
@@ -133,11 +110,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 脫敏訓練
-
-**Desensitization**
+<details>
+<summary>脫敏訓練 Desensitization</summary>
 
 針對觸覺過敏 hypersensitivity：
 
@@ -153,11 +127,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 第三期：疤痕成熟期 (6 週 - 2 年)
 
-<details open>
-
-### 疤痕重塑
-
-**Scar Remodeling**
+<details>
+<summary>疤痕重塑 Scar Remodeling</summary>
 
 - 疤痕由增生期進入成熟期，顏色變淡、柔軟度增加
 - 壓力衣與矽膠持續使用
@@ -165,11 +136,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 伸展訓練
-
-**Stretching**
+<details>
+<summary>伸展訓練 Stretching</summary>
 
 - 每日主動伸展所有受影響關節
 - 結合**長時間低負荷牽引 sustained low-load stretch**
@@ -177,11 +145,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 肌力強化
-
-**Strengthening**
+<details>
+<summary>肌力強化 Strengthening</summary>
 
 - 漸進式阻力訓練 progressive resistance training
 - 從等長收縮 isometric 開始，逐步進展至等張 isotonic 與功能性動作
@@ -189,11 +154,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 功能性訓練
-
-**Functional Training**
+<details>
+<summary>功能訓練 Functional Training</summary>
 
 - ADLs（日常活動）練習：穿衣、進食、如廁、洗澡
 - 工作模擬訓練
@@ -203,11 +165,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 第四期：重建與復健期
 
-<details open>
-
-### 攣縮鬆解術
-
-**Contracture Release**
+<details>
+<summary>攣縮鬆解術 Contracture Release</summary>
 
 - 若保守治療無法改善功能性攣縮
 - 手術方式：植皮 skin graft、皮瓣 flap、組織擴張 tissue expansion
@@ -215,11 +174,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 持續疤痕管理
-
-**Continued Scar Management**
+<details>
+<summary>持續疤痕管理 Continued Scar Management</summary>
 
 - 壓力衣與矽膠至少使用至傷後 18–24 個月
 - **激光治療 laser therapy**：脈衝染料激光 PDL 或分段激光 fractional laser
@@ -229,11 +185,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 疤痕管理
 
-<details open>
-
-### 壓力治療
-
-**Pressure Therapy**
+<details>
+<summary>壓力治療 Pressure Therapy</summary>
 
 | 項目                    | 說明                          |
 | ----------------------- | ----------------------------- |
@@ -244,11 +197,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 矽膠
-
-**Silicone**
+<details>
+<summary>矽膠 Silicone</summary>
 
 - **矽膠片 silicone sheeting**：可重複使用，每日 12–23 小時
 - **矽膠凝膠 silicone gel**：塗抹後形成薄膜
@@ -256,11 +206,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 按摩
-
-**Massage**
+<details>
+<summary>按摩 Massage</summary>
 
 - 配合保濕乳液或油
 - 力度：輕至中度壓力
@@ -269,11 +216,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 伸展
-
-**Stretching**
+<details>
+<summary>伸展 Stretching</summary>
 
 - 主動伸展 active stretch
 - 被動伸展 passive stretch
@@ -283,9 +227,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 特定關節運動
 
-<details open>
-
-### 頸部
+<details>
+<summary>頸部 Neck</summary>
 
 - 屈曲 flexion、伸展 extension、側彎 lateral flexion、旋轉 rotation
 - 壓力衣搭配頸部夾板
@@ -293,9 +236,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 腋窩
+<details>
+<summary>腋窩 Axilla</summary>
 
 - 外展 abduction、前屈 flexion、外旋 external rotation
 - 使用**腋下楔形夾板 axillary wedge splint**
@@ -303,9 +245,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 肘部
+<details>
+<summary>肘部 Elbow</summary>
 
 - 屈曲與伸展
 - 旋前 pronation 與旋後 supination
@@ -313,9 +254,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 手部
+<details>
+<summary>手部 Hand</summary>
 
 - 掌指關節 MCP 屈曲、指間關節 IP 伸展
 - 拇指外展與對掌 opposition
@@ -324,9 +264,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 膝部
+<details>
+<summary>膝部 Knee</summary>
 
 - 屈曲與伸展
 - 低姿坐位練習
@@ -334,9 +273,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 踝部
+<details>
+<summary>踝部 Ankle</summary>
 
 - 背屈 dorsiflexion 維持 90°
 - **踮腳尖 tiptoe standing** 預防馬蹄足 equinus
@@ -344,15 +282,10 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-## 矯形器
+## 矯形器 Splinting
 
-**Splinting**
-
-<details open>
-
-### 抗攣縮體位夾板
-
-**Anti-Contracture Positioning Splints**
+<details>
+<summary>抗攣縮體位夾板 Anti-Contracture Positioning Splints</summary>
 
 | 關節         | 建議體位                                    |
 | ------------ | ------------------------------------------- |
@@ -369,11 +302,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 靜息夾板
-
-**Resting Splints**
+<details>
+<summary>靜息夾板 Resting Splints</summary>
 
 - 維持功能位 position of function
 - 每天至少 22 小時配戴
@@ -381,11 +311,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 動態夾板
-
-**Dynamic Splints**
+<details>
+<summary>動態夾板 Dynamic Splints</summary>
 
 - 提供漸進、可調節的牽引力量
 - 適用於已有攣縮的關節
@@ -396,9 +323,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 水療利用水的浮力、溫度與阻力特性促進復健。
 
-<details open>
-
-### 益處
+<details>
+<summary>益處 Benefits</summary>
 
 - **浮力 buoyancy**：減少關節負荷，便於早期活動
 - **溫熱效應 thermal effect**：緩解疼痛、軟化疤痕、促進血液循環
@@ -407,9 +333,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 參數
+<details>
+<summary>參數 Parameters</summary>
 
 | 項目                   | 建議參數                   |
 | ---------------------- | -------------------------- |
@@ -426,9 +351,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 疼痛管理
 
-<details open>
-
-### 疼痛類型
+<details>
+<summary>疼痛類型 Pain Types</summary>
 
 | 類型                       | 特徵                             |
 | -------------------------- | -------------------------------- |
@@ -438,9 +362,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 疼痛緩解
+<details>
+<summary>疼痛緩解 Pain Relief</summary>
 
 - **藥物治療 pharmacological**：鴉片類止痛藥 opioids、非鴉片類止痛藥、神經痛藥物（gabapentin、pregabalin）
 - **非藥物治療 non-pharmacological**：分散注意力 distraction、虛擬實境 VR（virtual reality）、催眠 hypnosis
@@ -450,9 +373,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 注意事項
 
-<details open>
-
-### 傷口感染
+<details>
+<summary>傷口感染 Wound Infection</summary>
 
 ::: warning
 感染徵兆 signs of infection：紅腫加劇、滲出液增加或變色、發熱、異味。應立即通知醫療團隊。
@@ -464,9 +386,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 自體植皮照護
+<details>
+<summary>自體植皮照護 Autograft Care</summary>
 
 - 植皮後 5–7 天避免剪力與摩擦 shear and friction
 - 供皮區 donor site 保持清潔乾燥
@@ -475,11 +396,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 異位性骨化
-
-**Heterotopic Ossification (HO)**
+<details>
+<summary>異位性骨化 Heterotopic Ossification</summary>
 
 - 發生率：燒傷面積 > 30% TBSA 患者約 1–3%
 - 好發關節：肘部、肩部、髖部
@@ -488,9 +406,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 </details>
 
-<details open>
-
-### 心理社會支持
+<details>
+<summary>心理社會支持 Psychosocial Support</summary>
 
 - 燒傷倖存者**創傷後壓力症候群 PTSD（post-traumatic stress disorder）**發生率高達 30–45%
 - 常見心理問題：憂鬱 depression、焦慮 anxiety、身體形象障礙 body image disturbance、社交退縮 social withdrawal
@@ -509,7 +426,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 兒童燒傷注意事項
 
-<details open>
+<details>
+<summary>兒童特殊考量 Pediatric Considerations</summary>
 
 - **生長板 growth plate**：燒傷可能影響骨骼生長
 - **皮膚面積比例**：兒童頭部佔比較大，需使用修正版 Lund-Browder 圖表
@@ -520,7 +438,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 何時就醫
 
-<details open>
+<details>
+<summary>警示徵兆 Warning Signs</summary>
 
 ::: warning
 出現以下情況應立即就醫：
@@ -536,7 +455,8 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ## 日常照護要點
 
-<details open>
+<details>
+<summary>居家照護 Home Care</summary>
 
 1. **傷口護理 wound care**：保持清潔乾燥，按時換藥 dressing change
 2. **壓力衣配戴 pressure garment**：每日 23 小時，持續 6–18 個月

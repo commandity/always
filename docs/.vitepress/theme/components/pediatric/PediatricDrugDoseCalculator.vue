@@ -3255,17 +3255,17 @@ function calcOnKeydown(e: KeyboardEvent) {
 }
 .key-op {
   color: var(--vp-c-brand-1);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 .key-func {
   color: var(--vp-c-text-2);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 .key-action {
   color: #ef4444;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 .key-eq {
   background: var(--vp-c-brand-1);

@@ -2009,7 +2009,22 @@ function calcOnKeydown(e: KeyboardEvent) {
           <button class="key key-func" @click="calcPress('(')">(</button>
           <button class="key key-func" @click="calcPress(')')">)</button>
           <button class="key key-action" @click="calcPress('C')">C</button>
-          <button class="key key-action" @click="calcPress('⌫')">⌫</button>
+          <button class="key key-action key-del" @click="calcPress('⌫')">
+            <svg
+              width="1.15em"
+              height="1.15em"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 4H8l-7 8 7 8h13a2 2 0 002-2V6a2 2 0 00-2-2z" />
+              <line x1="18" y1="9" x2="12" y2="15" />
+              <line x1="12" y1="9" x2="18" y2="15" />
+            </svg>
+          </button>
 
           <button class="key key-num" @click="calcPress('7')">7</button>
           <button class="key key-num" @click="calcPress('8')">8</button>
@@ -3266,6 +3281,11 @@ function calcOnKeydown(e: KeyboardEvent) {
   color: #ef4444;
   font-weight: 700;
   font-size: 1.1rem;
+}
+.key-del {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .key-eq {
   background: var(--vp-c-brand-1);

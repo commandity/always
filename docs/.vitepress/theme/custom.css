@@ -1446,11 +1446,15 @@ html {
 /* ══════════════════════════════════════════════════════════════════
    DETAILS/SUMMARY — match ### heading style
    ══════════════════════════════════════════════════════════════════ */
+details {
+  margin: 0;
+  padding: 0;
+}
 details summary {
   font-size: 1.17em;
   font-weight: 600;
   line-height: 1.5;
-  margin: 1.5rem 0 1rem;
+  margin: 0.75rem 0 0.25rem;
   padding: 0.25rem 0;
   cursor: pointer;
   list-style: none;

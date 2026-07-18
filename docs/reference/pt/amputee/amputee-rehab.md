@@ -7,8 +7,6 @@ title: "截肢復健 Amputee Rehabilitation"
 
 **Amputee Rehabilitation**
 
-<details open>
-
 ## 常見截肢原因
 
 | 原因                                | 說明                                       |
@@ -19,13 +17,11 @@ title: "截肢復健 Amputee Rehabilitation"
 | **感染 Infection**                  | 壞死性筋膜炎、慢性骨髓炎                   |
 | **先天異常 Congenital abnormality** | 先天性肢體缺失                             |
 
-</details>
-
-<details open>
-
 ## 截肢層級與功能預後
 
 截肢位置越高，功能影響越大，義肢使用率越低。
+
+<details open>
 
 ### 下肢截肢
 
@@ -35,6 +31,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **經膝截肢 Knee disarticulation** | 膝關節離斷      | 保留股骨長度，承重面積佳                                |
 | **經股截肢 Transfemoral (TF)**    | 膝上 Above-knee | 失去膝關節，能量消耗增加 60-100%，約 50% 可恢復社區步行 |
 | **半骨盆截肢 Hemi-pelvectomy**    | 半側骨盆移除    | 挑戰性高，輪椅為主要移動方式                            |
+
+</details>
+
+<details open>
 
 ### 上肢截肢
 
@@ -46,13 +46,13 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 術後照護（0-4 週）
 
 ::: warning
 此階段重點：傷口保護優先，預防併發症。
 :::
+
+<details open>
 
 ### 殘肢照護
 
@@ -60,6 +60,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - **殘肢塑型 Residual limb shaping**：使用彈性繃帶或矽膠套筒促進錐形塑型
 - **關節活動度 ROM maintenance**：每日執行所有保留關節的全範圍活動
 - **水腫控制 Edema management**：加壓包紮、抬高、早期活動
+
+</details>
+
+<details open>
 
 ### 去敏感化訓練
 
@@ -70,11 +74,19 @@ title: "截肢復健 Amputee Rehabilitation"
 - **加壓按摩 Pressure massage**：由近端向遠端的漸進式壓力，每天 2 次，每次 10 分鐘
 - **敲擊 Tapping**：殘肢表面輕柔敲擊，每天 3 次
 
+</details>
+
+<details open>
+
 ### 水腫管理
 
 - **加壓繃帶 Compression bandaging**：術後初期使用多層彈性繃帶系統
 - **矽膠套筒 Silicone liner**：慢性水腫時使用定制加壓矯具
 - **抬高 Elevation**：急性腫脹時殘肢高於心臟水平
+
+</details>
+
+<details open>
 
 ### 攣縮預防
 
@@ -85,11 +97,19 @@ title: "截肢復健 Amputee Rehabilitation"
 - **經肱截肢 TH**：注意肩屈曲不足，需肩部全關節活動
 - **經腕截肢 TR**：注意肘屈曲，需肘伸展與旋前旋後練習
 
+</details>
+
+<details open>
+
 ### 疼痛管理
 
 - **殘肢痛 Residual limb pain**：NSAIDs 藥物、冷療、電刺激
 - **幻肢痛 Phantom limb pain**：見下方幻肢痛管理章節
 - **神經痛 Neuropathic pain**：gabapentin、pregabalin 藥物調整、TENS
+
+</details>
+
+<details open>
 
 ### 心理支持
 
@@ -103,9 +123,9 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 義肢準備期（4-8 週）
+
+<details open>
 
 ### 治療目標
 
@@ -113,6 +133,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - 開始站立平衡訓練
 - 提升日常生活活動能力
 - 為義肢穿戴做準備
+
+</details>
+
+<details open>
 
 ### 重點訓練
 
@@ -122,6 +146,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - **站立訓練 Standing training**：平行桿內站立、重心轉移
 - **轉位訓練 Transfer training**：床到輪椅、輪椅到馬桶
 - **日常生活活動 ADL training**：穿衣、如廁、衛浴
+
+</details>
+
+<details open>
 
 ### 進階肌力訓練
 
@@ -142,19 +170,23 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 義肢訓練期（8-16 週）
 
 ::: warning
 初次穿戴義肢應由義肢技師與治療師共同監督。穿戴時間由短漸增（最初 30 分鐘→逐步增加至全天）。
 :::
 
+<details open>
+
 ### 治療目標
 
 - 學習義肢穿脫技術
 - 達成安全、有效的義肢步行
 - 建立步態對稱性
+
+</details>
+
+<details open>
 
 ### 穿脫訓練
 
@@ -163,6 +195,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **吸著式懸掛 Suction suspension** | 殘肢塗滑石粉→穿襪→套入→釋放繃帶 | 確保無皺褶             |
 | **矽膠套筒+鎖 Pin lock**          | 矽膠套筒穿著→鎖入管柱           | 確實接合鎖入機制       |
 | **肌電義肢 Myoelectric**          | 穿戴→電極校準                   | 皮膚清潔、電極接觸良好 |
+
+</details>
+
+<details open>
 
 ### 步態訓練進階
 
@@ -188,6 +224,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - 樓梯
 - 功能性步行（購物、戶外）
 
+</details>
+
+<details open>
+
 ### 常見步態偏差矯正
 
 | 偏差                                    | 可能原因                 | 處理方式                   |
@@ -199,9 +239,9 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 社區回歸（>16 週）
+
+<details open>
 
 ### 治療目標
 
@@ -211,6 +251,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - 職業與運動回歸
 - 獨立社區參與
 
+</details>
+
+<details open>
+
 ### 進階訓練
 
 - **快速步行 Fast walking**：步速 1.0-1.4 m/s
@@ -219,6 +263,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - **斜坡訓練 Ramp training**：上坡/下坡、不同坡度
 - **障礙物跨越 Obstacle negotiation**：跨步、繞行、抬腿
 - **地面起立 Floor rising**：從地板安全站起
+
+</details>
+
+<details open>
 
 ### 職業回歸
 
@@ -230,17 +278,21 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 幻肢痛管理
 
 幻肢感（phantom sensation）是指截肢者感受到已不存在之肢體的感覺，發生率高達 90% 以上。幻肢痛（phantom limb pain）則是發生在幻肢部位的疼痛，約 50-80% 的截肢者會經歷。
+
+<details open>
 
 ### 機制
 
 - **周邊機制 Peripheral**：神經瘤形成、異位放電
 - **脊髓機制 Spinal**：背角重塑、失傳入性增強
 - **皮質機制 Cortical**：皮質重塑、感覺運動地圖失序
+
+</details>
+
+<details open>
 
 ### 治療策略
 
@@ -251,6 +303,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **漸進式運動想像 Graded motor imagery** | 左右辨識→運動想像→鏡像治療                   | 中       |
 | **虛擬實境 VR therapy**                 | 沉浸式虛擬環境中的肢體運動訓練               | 中       |
 | **藥物治療 Pharmacotherapy**            | gabapentin、pregabalin、duloxetine、tramadol | 中-強    |
+
+</details>
+
+<details open>
 
 ### 鏡像治療方案
 
@@ -265,9 +321,9 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 特定訓練運動
+
+<details open>
 
 ### 平衡進階訓練
 
@@ -279,6 +335,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **Level 4** | 步行中轉向、避障           | 快速反應                    |
 | **Level 5** | 不平坦地面步行、斜坡行走   | 視覺剝奪                    |
 
+</details>
+
+<details open>
+
 ### 踏步訓練
 
 | 訓練動作                        | 描述                   | 目的         |
@@ -288,6 +348,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **側向踏步 Lateral stepping**   | 側踏步、交叉步         | 側向穩定     |
 | **抬腿踏步 Step-ups**           | 低階梯（10-20 cm）上下 | 股四頭肌力量 |
 | **跨越踏步 Crossover stepping** | 跨過小障礙物           | 抬腿能力     |
+
+</details>
+
+<details open>
 
 ### 每日建議運動量
 
@@ -300,9 +364,9 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 義肢考量
+
+<details open>
 
 ### 下肢義肢組件
 
@@ -311,6 +375,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **膝關節 Knee (TF)** | 單軸機械膝 | 多軸氣壓膝     | 微處理器控制膝         |
 | **足部 Foot (TT)**   | 固定踝     | SACH 足/多軸足 | 儲能足                 |
 | **套筒 Socket**      | 傳統接受腔 | 矽膠襯裡+吸著  | CAD/CAM 定制、真空懸掛 |
+
+</details>
+
+<details open>
 
 ### 上肢義肢選配原則
 
@@ -323,9 +391,9 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 注意事項
+
+<details open>
 
 ### 皮膚完整性
 
@@ -339,6 +407,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - 定期義肢對線評估
 - 套筒內襯加墊覆蓋骨突處
 
+</details>
+
+<details open>
+
 ### 對側肢體照護
 
 ::: warning
@@ -350,6 +422,10 @@ title: "截肢復健 Amputee Rehabilitation"
 - 平衡訓練、環境改造、照明改善
 - 體重管理、低衝擊運動
 
+</details>
+
+<details open>
+
 ### 跌倒預防
 
 - 訓練跌倒安全策略（前倒、側倒）
@@ -360,9 +436,9 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 實證基礎
+
+<details open>
 
 ### Cochrane 系統回顧重點
 
@@ -373,6 +449,10 @@ title: "截肢復健 Amputee Rehabilitation"
 | **義肢類型對步態影響 Prosthetic types for lower-limb amputees** | 儲能足可改善步態對稱性與能量消耗         |
 | **截肢者物理治療 Rehabilitation of persons with amputation**    | 早期積極復健改善功能預後                 |
 
+</details>
+
+<details open>
+
 ### 臨床指引建議
 
 - **ISPO**：多學科團隊模式、個案中心照護模式
@@ -381,9 +461,9 @@ title: "截肢復健 Amputee Rehabilitation"
 
 </details>
 
-<details open>
-
 ## 延伸閱讀
+
+<details open>
 
 - 請參閱：[物理治療總論](/docs/reference/pt/)
 - 相關章節：[步態分析](/docs/reference/pt/gait-analysis/)

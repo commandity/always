@@ -1857,12 +1857,8 @@ function calcOnKeydown(e: KeyboardEvent) {
           <div class="result-top">
             <span class="result-level">{{ d.name }}</span>
           </div>
-          <span
-            v-if="isFreqCandidate(d) && selectedFreq[d.id]"
-            class="result-ahi"
-          >
-            每 {{ 24 / getAdjustedResult(d).perDay }}h ×
-            {{ getAdjustedResult(d).perDay }} 次/日 =
+          <span v-if="isFreqCandidate(d)" class="result-ahi">
+            每 {{ d.interval }}h × {{ doseFor(d).perDay }} 次/日 =
             {{ getBaseDaily(d) }} mg/day
           </span>
           <span class="result-ahi">

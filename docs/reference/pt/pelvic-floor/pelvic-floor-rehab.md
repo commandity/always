@@ -5,7 +5,7 @@ title: "骨盆底復健 Pelvic Floor Rehabilitation"
 
 # 骨盆底復健 **Pelvic Floor Rehabilitation**
 
-::: warning 警告
+::: warning 免責聲明
 This document is for educational and clinical reference purposes only. Individualized assessment and treatment by a qualified pelvic health physiotherapist is essential before initiating any pelvic floor rehabilitation program.
 :::
 
@@ -26,7 +26,7 @@ Pelvic floor dysfunction (PFD) encompasses a spectrum of conditions affecting th
 | Chronic Pelvic Pain               | 慢性骨盆腔疼痛     | 5–26% of women                            | Persistent pain in the pelvis lasting >6 months                  |
 | Postpartum Dysfunction            | 產後骨盆底功能障礙 | Up to 50% postpartum                      | Weakness, incontinence, organ descent following vaginal delivery |
 
-::: warning 警告
+::: warning 男性患者
 Pelvic floor dysfunction is not exclusively a female condition. Men following prostatectomy, individuals with chronic constipation, and those with neuromuscular disorders are also at significant risk.
 :::
 
@@ -73,7 +73,7 @@ The pelvic floor serves four primary functions:
 3. **Sexual function** — Controls vaginal and anal sphincter tone; contributes to arousal and orgasm
 4. **Postural stability** — Works synergistically with the deep trunk muscles for lumbopelvic stability
 
-::: warning 警告
+::: warning 整體評估
 Pelvic floor dysfunction often coexists with deep core dysfunction. A comprehensive approach addressing the entire lumbopelvic cylinder (diaphragm, transversus abdominis, multifidus, pelvic floor) is essential for optimal outcomes.
 :::
 
@@ -176,7 +176,7 @@ Internal assessment via digital palpation allows:
 - Detection of paradoxical (bearing down) activation
 - Assessment of pain or tenderness
 
-::: warning 警告
+::: warning 觸診注意
 Digital palpation should only be performed by trained pelvic health professionals with appropriate consent and in a safe, comfortable environment.
 :::
 
@@ -210,7 +210,7 @@ Digital palpation should only be performed by trained pelvic health professional
 | Diaphragmatic breathing with pelvic floor coordination | Inhale through nose, allowing pelvic floor to gently descend; exhale through mouth, allowing pelvic floor to gently lift | 5 minutes, 3×/day        |
 | Supine hook lying activation                           | Lying with knees bent, feet flat; focus on pelvic floor contraction without abdominal bracing                            | 10 reps × 3 sets, 2×/day |
 
-::: warning 警告
+::: warning 疼痛停止
 If the patient reports pain during internal examination or internal exercises, STOP. Reassess for hypertonic pelvic floor dysfunction. Kegel exercises are contraindicated in hypertonic conditions.
 :::
 
@@ -296,7 +296,7 @@ Begin integrating pelvic floor activation into daily activities:
 | Tennis        | Rotational forces, explosive movements           | Dynamic pelvic floor stabilization              |
 | Swimming      | Reduced gravitational load, breath-holding       | Breath-hold with pelvic floor activation        |
 
-::: warning 警告
+::: warning 進階標準
 Do not progress to high-load or high-impact activities if the patient has grade 3 or below on the Oxford scale or reports ongoing incontinence during basic functional tasks.
 :::
 
@@ -327,7 +327,7 @@ Do not progress to high-load or high-impact activities if the patient has grade 
 | Start at 20–30g | Progress in 10–15g increments | Insert for 1–2 minutes during upright activity |
 | Maximum weight  | 70–80g                        | Progressive loading over weeks to months       |
 
-::: warning 警告
+::: warning 陰道啞鈴禁忌
 Vaginal weights are contraindicated in the presence of prolapse > Stage II, active infection, or pelvic pain.
 :::
 
@@ -348,7 +348,7 @@ Vaginal weights are contraindicated in the presence of prolapse > Stage II, acti
 
 ### Overactive (Hypertonic) Pelvic Floor 過度活躍（高張力）骨盆底
 
-::: warning 警告
+::: warning 高張力禁忌
 **Do NOT perform Kegel exercises in patients with suspected hypertonic (overactive) pelvic floor dysfunction.** Strengthening an already overactive pelvic floor will worsen symptoms.
 :::
 
@@ -391,7 +391,7 @@ Vaginal weights are contraindicated in the presence of prolapse > Stage II, acti
 | Return to exercise | 3–6 months   | Gradual return to running, jumping, and impact activities |
 | Long-term          | 6–12+ months | Sport-specific training, ongoing maintenance              |
 
-::: warning 警告
+::: warning 產後評估
 All postpartum individuals should undergo pelvic floor assessment before returning to high-impact exercise, regardless of delivery mode (vaginal or cesarean).
 :::
 
@@ -413,7 +413,7 @@ All postpartum individuals should undergo pelvic floor assessment before returni
 | 3–6 months        | Functional integration, return to activity | Grade 3–4                                             |
 | 6–12 months       | Sport-specific, maintenance                | Continence recovery typically achieved by 6–12 months |
 
-::: warning 警告
+::: warning 前列腺術後
 Post-prostatectomy incontinence is primarily due to sphincter weakness. Early PFMT is strongly associated with faster continence recovery.
 :::
 
@@ -487,7 +487,7 @@ Post-prostatectomy incontinence is primarily due to sphincter weakness. Early PF
 | Deadlifts with co-contraction        |         |         | ✓       |
 | Impact activities (jumping, running) |         |         | ✓       |
 
-::: warning 警告
+::: warning 個別評估
 All patients should receive individualized assessment before beginning a pelvic floor rehabilitation program. Self-diagnosis and self-treatment without professional guidance may lead to worsening of symptoms.
 :::
 

@@ -119,7 +119,7 @@ title: "燒傷復健 Burn Rehabilitation"
 2. 從輕柔質地（棉花）漸進至粗糙質地（毛巾）
 3. 每日數次，每次 10–15 分鐘
 
-::: warning 警告
+::: warning 使用時機
 脫敏訓練應在傷口完全癒合、無感染風險後開始。
 :::
 
@@ -343,7 +343,7 @@ title: "燒傷復健 Burn Rehabilitation"
 | 頻率 frequency         | 每週 3–5 次                |
 | 深度 depth             | 依患者耐受度，通常胸部深度 |
 
-::: warning 警告
+::: warning 水療注意
 水療需在傷口完全癒合後開始。若仍有未癒合傷口，應使用防水敷料 waterproof dressing 保護，並避免長時間浸泡。
 :::
 
@@ -376,7 +376,7 @@ title: "燒傷復健 Burn Rehabilitation"
 <details>
 <summary>傷口感染 Wound Infection</summary>
 
-::: warning 警告
+::: warning 感染徵兆
 感染徵兆 signs of infection：紅腫加劇、滲出液增加或變色、發熱、異味。應立即通知醫療團隊。
 :::
 
@@ -418,7 +418,7 @@ title: "燒傷復健 Burn Rehabilitation"
   - 同儕支持 peer support
   - 職業復健 vocational rehabilitation
 
-::: warning 警告
+::: warning 心理支持
 心理支持應從急性期開始，貫穿整個復健過程。燒傷疤痕對外觀的影響可能造成嚴重的心理困擾。
 :::
 
@@ -441,7 +441,7 @@ title: "燒傷復健 Burn Rehabilitation"
 <details>
 <summary>警示徵兆 Warning Signs</summary>
 
-::: warning 警告
+::: warning 立即就醫
 出現以下情況應立即就醫：
 :::
 

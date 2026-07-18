@@ -21,7 +21,7 @@ Geriatric rehabilitation addresses functional decline in older adults resulting 
 | 跌倒 Falls            | 平衡障礙、恐懼跌倒         | 降低跌倒風險、改善平衡 |
 | 术后ICU復原 Post-ICU  | 肌無力、認知功能下降       | 逐步恢復功能獨立       |
 
-::: warning 警告
+::: warning 共病與用藥
 老年患者常有多重共病（multimorbidity）與多重用藥（polypharmacy），復健計畫必須個體化並定期重新評估。
 Older adults frequently present with multimorbidity and polypharmacy. Rehabilitation plans must be individualized and regularly reassessed.
 :::
@@ -46,7 +46,7 @@ The CGA is the foundation of geriatric rehabilitation. A multidisciplinary team 
 | 社會支持 Social support     | 居住環境、照顧者、經濟狀況       |
 | 環境因素 Environmental      | 居家安全、無障礙設施             |
 
-::: warning 警告
+::: warning CGA 介入
 CGA 的介入已被證實可降低老年住院患者的死亡率、減少機構化安置、並改善出院後的功能獨立性。
 CGA-based interventions have been shown to reduce mortality, decrease institutionalization, and improve functional independence in hospitalized older adults.
 :::
@@ -75,7 +75,7 @@ CGA-based interventions have been shown to reduce mortality, decrease institutio
 - **出院前 Pre-discharge**: 決定出院計畫
 - **出院後 Follow-up**: 評估社區適應
 
-::: warning 警告
+::: warning 認知障礙
 認知功能障礙的患者可能無法完成標準化自我報告量表，需結合觀察法與照顧者訪談。
 Patients with cognitive impairment may be unable to complete standardized self-report questionnaires. Combine observational methods with caregiver interviews.
 :::
@@ -106,7 +106,7 @@ Hip fracture is one of the most serious injuries in older adults. Post-surgical 
 | 術後第2-4週   | 助行器輔助行走、坐站轉移訓練   |
 | 術後第1-3個月 | 逐步增加步行距離、肌力訓練     |
 
-::: warning 警告
+::: warning 髖部骨折
 髖部骨折患者術後若未接受復健介入，一年內死亡率可達20-30%。早期復健介入是改善預後的關鍵。
 Without rehabilitation intervention, one-year mortality after hip fracture can reach 20-30%. Early rehabilitation is critical for improving outcomes.
 :::
@@ -133,7 +133,7 @@ Falls are the leading cause of accidental injury in adults over 65, with approxi
 - **視力矯正**: 定期眼科檢查
 - **足部照護**: 合適鞋具、趾甲照護
 
-::: warning 警告
+::: warning 跌倒預防
 Cochrane系統性回顧指出，以運動為基礎的多成分跌倒預防計畫可降低跌倒率約23%（RR 0.77, 95% CI 0.71-0.83）。
 Cochrane systematic reviews indicate that exercise-based multifactorial fall prevention programs can reduce fall rates by approximately 23% (RR 0.77, 95% CI 0.71-0.83).
 :::
@@ -220,7 +220,7 @@ Post-Intensive Care Syndrome (PICS) encompasses physical, cognitive, and psychol
 - 如廁 Toileting
 - 洗澡 Bathing（待穩定後）
 
-::: warning 警告
+::: warning 急性期安全
 急性期復健應避免過度劳累。若收縮壓下降>20mmHg、心率增加>20 bpm、或患者主訴嚴重疲勞，應立即停止活動。
 Acute phase rehabilitation should avoid overexertion. Immediately cease activity if systolic BP drops >20 mmHg, HR increases >20 bpm, or the patient reports severe fatigue.
 :::
@@ -275,7 +275,7 @@ Acute phase rehabilitation should avoid overexertion. Immediately cease activity
 - 定期視力檢查
 - 緊急通報系統
 
-::: warning 警告
+::: warning 持續運動
 社區階段的持續運動是維持功能改善的關鍵。研究顯示停止運動後，3-6個月內功能改善會逐漸消退。
 Ongoing exercise in the community phase is essential for maintaining functional gains. Research shows improvements diminish within 3-6 months of exercise cessation.
 :::
@@ -353,7 +353,7 @@ Geriatric rehabilitation emphasizes teamwork, with each member playing a unique 
 | **護理師 Nurse**                      | 日常照護、藥物管理、傷口護理、家屬衛教          |
 | **藥師 Pharmacist**                   | 藥物審查、多重用藥管理、跌倒藥物風險評估        |
 
-::: warning 警告
+::: warning 團隊會議
 團隊會議應至少每週召開，更新個案進展並調整復健計畫。家屬應納入討論以確保出院計畫的可行性。
 Team meetings should occur at least weekly to update patient progress and adjust rehabilitation plans. Family members should be included to ensure discharge plan feasibility.
 :::
@@ -373,7 +373,7 @@ Team meetings should occur at least weekly to update patient progress and adjust
   - 充足水分攝取
   - 避免餐後立即站立
 
-::: warning 警告
+::: warning 姿態性低血壓
 姿態性低血壓是老年患者復健早期最常見的障礙之一。每次改變體位時應監測血壓，若出現症狀應暫停活動。
 Orthostatic hypotension is one of the most common barriers in early geriatric rehabilitation. Monitor blood pressure with each position change and pause activity if symptoms occur.
 :::
@@ -409,7 +409,7 @@ Orthostatic hypotension is one of the most common barriers in early geriatric re
 - 避免安排過多活動於同一天
 - 教導患者辨識過度劳累訊號
 
-::: warning 警告
+::: warning 避免過度勞累
 老年患者恢復速度較慢，過度追求訓練強度可能導致反效果。應尊重患者的疲勞訊號，寧可保守也不要冒進。
 Older adults recover more slowly. Aggressively pushing training intensity may backfire. Respect fatigue signals and err on the side of caution.
 :::

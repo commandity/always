@@ -1450,6 +1450,7 @@ details {
   margin: 0;
   padding: 0;
 }
+.vp-doc details summary,
 details summary {
   font-size: 1.17em;
   font-weight: 600;

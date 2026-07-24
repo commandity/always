@@ -377,7 +377,7 @@ title: "燒傷復健 Burn Rehabilitation"
 <summary>傷口感染 Wound Infection</summary>
 
 ::: warning 感染徵兆
-感染徵兆 signs of infection：紅腫加劇、滲出液增加或變色、發熱、異味。應立即通知醫療團隊。
+紅腫加劇、滲出液增加或變色、發熱、異味。應立即通知醫療團隊。
 :::
 
 - 嚴格無菌換藥技術 sterile dressing technique
@@ -443,13 +443,15 @@ title: "燒傷復健 Burn Rehabilitation"
 
 ::: warning 立即就醫
 出現以下情況應立即就醫：
-:::
 
 - 傷口紅腫加劇、滲出液增加或變色
 - 發熱、異味
 - 傷口癒合後關節活動受限 limited ROM
 - 疤痕增生、影響外觀或功能
 - 出現心理困擾症狀
+
+:::
+
 
 </details>
 

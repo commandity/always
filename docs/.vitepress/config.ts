@@ -31,29 +31,6 @@ export default defineConfig({
         href: `${base}logo/AW.svg?v=2`,
       },
     ],
-    // ✅ ADD THESE THREE BELOW THE ICON LINK
-    [
-      "link",
-      {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossorigin: "",
-      },
-    ],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..900;1,200..900&display=swap",
-      },
-    ],
   ],
 
   // ── Theme config ───────────────────────────────────────────────

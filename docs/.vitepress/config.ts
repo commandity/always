@@ -817,6 +817,13 @@ export default defineConfig({
         pageData.frontmatter.password =
           "sha256:" + createHash("sha256").update(s).digest("hex");
       }
+      // Password-protected pages still ship their full content in the
+      // static HTML (only hidden client-side via CSS), so keep crawlers
+      // from indexing it even though we can't hide it from page source.
+      pageData.frontmatter.head = [
+        ...(pageData.frontmatter.head || []),
+        ["meta", { name: "robots", content: "noindex, nofollow" }],
+      ];
     }
     if (
       pageData.relativePath?.startsWith("blog/") &&

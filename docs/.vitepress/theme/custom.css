@@ -798,21 +798,27 @@ body.hide-sidebar-toggle .VPNavBarSidebarToggle {
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   SIDEBAR — start below VPNav, no curtain
+   SIDEBAR — start below VPNav (desktop only), no curtain
+   The mobile/tablet drawer (opened via the 目錄 button) is meant to
+   start from the window top as usual — only the bottom edge should
+   avoid the footer everywhere, desktop and mobile alike.
    ══════════════════════════════════════════════════════════════════ */
 @media (min-width: 960px) {
   .VPSidebar {
     top: var(--vp-nav-height) !important;
     padding-top: 0 !important;
-    /* bottom (not height) so the box shrinks only once the footer is
-       actually near the viewport — see theme/index.ts for the scroll-
-       driven --sidebar-bottom-offset calculation. */
-    bottom: var(--sidebar-bottom-offset, 0px) !important;
-    height: auto !important;
   }
-  .VPSidebar .curtain {
-    display: none !important;
-  }
+}
+
+/* bottom (not height) so the box shrinks only once the footer is
+   actually near the viewport — see theme/index.ts for the scroll-
+   driven --sidebar-bottom-offset calculation. Applies at every width. */
+.VPSidebar {
+  bottom: var(--sidebar-bottom-offset, 0px) !important;
+  height: auto !important;
+}
+.VPSidebar .curtain {
+  display: none !important;
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -848,34 +854,34 @@ html {
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   PASSWORD GATE
+   PASSWORD GATE — old-blog style: only the post body is blocked
+   PasswordGate.vue renders inline via VPDoc's "doc-before" slot, a
+   normal sibling of <main class="main"> within the same content
+   column. When locked, body.pwd-locked (toggled by the component)
+   hides just .main; the nav bar, sidebar, aside and footer are
+   ordinary page elements that were never touched, so they stay
+   visible and fully clickable without any offset math.
    ══════════════════════════════════════════════════════════════════ */
-.pwd-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--vp-c-bg);
+body.pwd-locked .VPDoc .main {
+  display: none !important;
 }
 
-.pwd-dialog {
+.pwd-box {
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   max-width: 400px;
-  width: 90%;
+  margin: 2rem auto;
   text-align: center;
 }
 
-.pwd-dialog h2 {
+.pwd-box h2 {
   margin-top: 0;
   font-size: 1.25rem;
 }
 
-.pwd-dialog input {
+.pwd-box input {
   display: block;
   width: 100%;
   padding: 10px 14px;
@@ -890,19 +896,19 @@ html {
   transition: border-color 0.2s;
 }
 
-.pwd-dialog input::-webkit-caps-lock-indicator {
+.pwd-box input::-webkit-caps-lock-indicator {
   display: none;
 }
 
-.pwd-dialog input:focus {
+.pwd-box input:focus {
   border-color: var(--vp-c-brand-1);
 }
 
-.pwd-dialog input.error {
+.pwd-box input.error {
   border-color: #e44;
 }
 
-.pwd-dialog button {
+.pwd-box button {
   display: inline-block;
   padding: 10px 24px;
   border: none;
@@ -914,7 +920,7 @@ html {
   transition: opacity 0.2s;
 }
 
-.pwd-dialog button:hover {
+.pwd-box button:hover {
   opacity: 0.85;
 }
 

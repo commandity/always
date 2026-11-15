@@ -308,21 +308,19 @@ export default {
 
       return () => [
         h(FloatingBgmPlayer),
-        h(PasswordGate, null, {
-          default: () =>
-            h(DefaultTheme.Layout, null, {
-              "nav-bar-content-before": () => h(VPNavBarSidebarToggle),
-              "nav-bar-content-after": () => h(VPNavBarAsideToggle),
-              "home-features-after": () =>
-                isHome.value
-                  ? h("div", null, [
-                      h(HomeBillboard),
-                      h(HomeCitation),
-                      h(HomeProfile),
-                    ])
-                  : null,
-              "layout-top": () => (isHome.value ? h(GlowBackground) : null),
-            }),
+        h(DefaultTheme.Layout, null, {
+          "nav-bar-content-before": () => h(VPNavBarSidebarToggle),
+          "nav-bar-content-after": () => h(VPNavBarAsideToggle),
+          "home-features-after": () =>
+            isHome.value
+              ? h("div", null, [
+                  h(HomeBillboard),
+                  h(HomeCitation),
+                  h(HomeProfile),
+                ])
+              : null,
+          "layout-top": () => (isHome.value ? h(GlowBackground) : null),
+          "doc-before": () => h(PasswordGate),
         }),
       ];
     },

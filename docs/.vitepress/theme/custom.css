@@ -5,6 +5,29 @@
 
 body {
   font-family: var(--vp-font-family-base);
+  font-size: 16px;
+}
+
+/* bump vitepress default 14px components to 16px (double class beats scoped [data-v-*]) */
+.VPNavBarMenuLink.VPNavBarMenuLink,
+.VPSidebarItem.VPSidebarItem,
+.VPFlyout.VPFlyout,
+.VPMenuLink.VPMenuLink,
+.VPFooter.VPFooter,
+.VPDocFooter.VPDocFooter,
+.VPDocOutlineItem.VPDocOutlineItem,
+.VPLocalNav.VPLocalNav,
+.VPMenuGroup.VPMenuGroup,
+.VPNavScreenMenuLink.VPNavScreenMenuLink,
+.VPNavScreenMenuGroup.VPNavScreenMenuGroup,
+.VPNavBarTranslations.VPNavBarTranslations,
+.VPNavBarExtra.VPNavBarExtra,
+.VPNavScreenMenuGroupLink.VPNavScreenMenuGroupLink,
+.VPLocalNavOutlineDropdown.VPLocalNavOutlineDropdown {
+  font-size: 16px;
+}
+:root {
+  --vp-custom-block-font-size: 16px;
 }
 
 /* ══════════════════════════════════════════════════════════════════

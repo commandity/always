@@ -6,6 +6,7 @@ import {
   showAside,
   originalAsideDisabled,
 } from "./components/layout/asideStore";
+import "@fontsource-variable/chiron-goround-tc";
 import "./custom.css";
 // LAYOUT
 import BlogIndex from "./components/layout/BlogIndex.vue";

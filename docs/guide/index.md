@@ -77,7 +77,7 @@ next: false
   padding: 0 !important;
 }
 .tw-subtitle {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--vp-c-text-3);
   margin: 0;
   letter-spacing: 0.03em;
@@ -122,7 +122,7 @@ next: false
 }
 
 .tw-card-body p {
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: var(--vp-c-text-2);
   line-height: 1.7;
   margin: 0 0 0.5rem;

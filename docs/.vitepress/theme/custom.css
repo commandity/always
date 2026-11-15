@@ -3,9 +3,19 @@
   --vp-font-family-base: "Nunito", sans-serif;
 }
 
+/* ══════════════════════════════════════════════════════════════════
+   FONT SIZE — site-wide 16px base
+   VitePress's default theme hardcodes 14px (sometimes 12px) on most
+   nav/sidebar/footer UI text. Everything below bumps that to a 16px
+   base to match the content font-size.
+   ══════════════════════════════════════════════════════════════════ */
 body {
   font-family: var(--vp-font-family-base);
   font-size: 16px;
+}
+
+:root {
+  --vp-custom-block-font-size: 16px;
 }
 
 /* bump vitepress default 14px components to 16px (double class beats scoped [data-v-*]) */
@@ -38,8 +48,16 @@ body {
 .VPNavScreenMenuGroup .button {
   font-size: 16px !important;
 }
-:root {
-  --vp-custom-block-font-size: 16px;
+
+/* Mobile hamburger menu's "主題" (dark/light mode) label is scoped at 12px. */
+.VPNavScreenAppearance .text {
+  font-size: 16px !important;
+}
+
+/* Desktop/tablet "其他" flyout's "主題" p.label is set via VPMenu's
+   :deep(.label) rule at 12px. */
+.VPMenu .label {
+  font-size: 16px !important;
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -262,6 +280,11 @@ body {
   .VPNavBarSearch {
     padding-right: 0 !important;
   }
+
+  /* pull the hamburger icon closer to the search icon on mobile */
+  #local-search {
+    margin-right: -6px;
+  }
 }
 
 /* ── Logo ── */
@@ -470,9 +493,16 @@ body {
 }
 
 /* VitePress hides the footer by default on any page with a sidebar;
-   force it to show everywhere for a consistent layout. */
+   force it to show everywhere for a consistent layout. The sidebar is
+   position:fixed and always spans the full viewport height, running
+   behind the footer — a transparent footer background would let the
+   sidebar's gray show straight through it regardless of z-index, so
+   give it a solid background that actually occludes the sidebar. */
 .VPFooter.has-sidebar {
   display: block !important;
+  position: relative;
+  z-index: 61;
+  background: var(--vp-c-bg) !important;
 }
 
 .dark .VPFooter {
@@ -774,7 +804,11 @@ body.hide-sidebar-toggle .VPNavBarSidebarToggle {
   .VPSidebar {
     top: var(--vp-nav-height) !important;
     padding-top: 0 !important;
-    height: calc(100vh - var(--vp-nav-height)) !important;
+    /* bottom (not height) so the box shrinks only once the footer is
+       actually near the viewport — see theme/index.ts for the scroll-
+       driven --sidebar-bottom-offset calculation. */
+    bottom: var(--sidebar-bottom-offset, 0px) !important;
+    height: auto !important;
   }
   .VPSidebar .curtain {
     display: none !important;

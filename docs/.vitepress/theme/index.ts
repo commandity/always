@@ -189,6 +189,81 @@ export default {
         observer.observe(document.body, { childList: true, subtree: true });
       });
 
+      onMounted(() => {
+        // VitePress's local search box corrupts document.body's scrollTop
+        // while it's open (it calls scrollIntoView on its own result list,
+        // which bubbles up to the real page because body is only visually
+        // locked via overflow:hidden, not actually frozen). Restore the
+        // scroll position we had right before the search box opened.
+        let preSearchScrollY: number | null = null;
+        const searchScrollObserver = new MutationObserver(() => {
+          const isOpen = !!document.querySelector(".VPLocalSearchBox");
+          if (isOpen) {
+            if (preSearchScrollY === null) preSearchScrollY = window.scrollY;
+          } else if (preSearchScrollY !== null) {
+            window.scrollTo(0, preSearchScrollY);
+            preSearchScrollY = null;
+          }
+        });
+        searchScrollObserver.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      });
+
+      onMounted(() => {
+        // .VPSidebar is position:fixed, so its box (and therefore its own
+        // overflow-y:auto scrollbar) always spans the full viewport height
+        // — occluding the footer visually doesn't change that, the native
+        // scrollbar still runs past the footer's top edge. Shrink the
+        // sidebar's bottom offset only once the footer actually enters the
+        // viewport, so normal scrolling elsewhere on long pages is
+        // unaffected (a static height subtraction would permanently eat
+        // into the sidebar's height on every page, footer visible or not).
+        let ticking = false;
+        const updateSidebarBottom = () => {
+          ticking = false;
+          const footer = document.querySelector(".VPFooter") as HTMLElement | null;
+          const footerHeight = footer ? footer.offsetHeight : 0;
+          const remaining = Math.max(
+            0,
+            document.documentElement.scrollHeight -
+              (window.scrollY + window.innerHeight),
+          );
+          const bottomOffset = Math.max(0, footerHeight - remaining);
+          document.documentElement.style.setProperty(
+            "--sidebar-bottom-offset",
+            `${bottomOffset}px`,
+          );
+        };
+        const scheduleUpdate = () => {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(updateSidebarBottom);
+        };
+
+        updateSidebarBottom();
+        window.addEventListener("scroll", scheduleUpdate, { passive: true });
+        window.addEventListener("resize", scheduleUpdate);
+
+        const footerResizeObserver = new ResizeObserver(scheduleUpdate);
+        let observedFooter: Element | null = null;
+        const attachToFooter = () => {
+          const footer = document.querySelector(".VPFooter");
+          if (footer === observedFooter) return;
+          if (observedFooter) footerResizeObserver.unobserve(observedFooter);
+          observedFooter = footer;
+          if (footer) footerResizeObserver.observe(footer);
+          scheduleUpdate();
+        };
+        attachToFooter();
+        const footerMutationObserver = new MutationObserver(attachToFooter);
+        footerMutationObserver.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      });
+
       watch(
         [() => showSidebar.value, () => showAside.value, () => route.path],
         ([, , path], [, , oldPath]) => {

@@ -339,7 +339,7 @@ watch(filteredPosts, detect);
 }
 
 .card-meta {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -365,7 +365,7 @@ watch(filteredPosts, detect);
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.6rem;
   line-height: 1.4;
   transition: color 0.2s;
 }
@@ -400,7 +400,7 @@ watch(filteredPosts, detect);
   flex: 1;
 }
 .card-body-abstract p {
-  margin: 0.6rem 0;
+  margin: 0 0 0.6rem;
   line-height: 1.7;
 }
 

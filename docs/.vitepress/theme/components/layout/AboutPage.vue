@@ -144,7 +144,7 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
           <span class="name-zh">{{ active().chineseName }}</span>
         </div>
         <p class="role-badge">{{ active().role }}</p>
-        <p class="location">◌ {{ active().location }}</p>
+        <p class="location">⦿ {{ active().location }}</p>
         <p class="bio">{{ active().bio }}</p>
         <div class="contact-row">
           <a :href="'mailto:' + active().email" class="contact-btn">
@@ -250,6 +250,12 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
   max-width: 860px;
   margin: 0 auto;
   padding: 3rem clamp(24px, 5vw, 64px) 5rem;
+}
+
+@media (min-width: 1145px) {
+  .about-page {
+    max-width: 1040px;
+  }
 }
 
 /* ── Tab switcher ──────────────────────────────────────────────── */
@@ -380,7 +386,7 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   flex-wrap: wrap;
 }
 
@@ -401,9 +407,10 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
 }
 
 .name-zh {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--vp-c-text-3);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  font-weight: 800;
 }
 
 .role-badge {
@@ -414,18 +421,19 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
   border-radius: 999px;
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.6rem;
 }
 
 .location {
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: var(--vp-c-text-3);
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.6rem;
   letter-spacing: 0.03em;
+  font-weight: 400;
 }
 
 .bio {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--vp-c-text-2);
   line-height: 1.8;
   margin: 0 0 1.25rem;
@@ -463,7 +471,7 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
 }
 
 .section-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
   margin: 0 0 1.5rem;
@@ -522,7 +530,7 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
 }
 
 .value-desc {
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: var(--vp-c-text-2);
   line-height: 1.7;
   margin: 0;
@@ -592,14 +600,14 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
 }
 
 .timeline-org {
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: var(--vp-c-brand-1);
   margin: 0 0 0.4rem;
   font-weight: 500;
 }
 
 .timeline-desc {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--vp-c-text-2);
   line-height: 1.7;
   margin: 0;
@@ -626,7 +634,7 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
 }
 
 .skill-label {
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -641,7 +649,7 @@ const active = () => authors.find((a) => a.id === activeId.value)!;
 }
 
 .skill-tag {
-  font-size: 0.78rem;
+  font-size: 1rem;
   padding: 3px 10px;
   border-radius: 6px;
   background: var(--vp-c-bg-mute);

@@ -494,8 +494,8 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
   top: 50%;
   transform: translateY(-50%) scale(0.9);
   z-index: 10;
-  width: 36px;
-  height: 68px;
+  width: 44px;
+  height: 44px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.45);
   background: linear-gradient(
@@ -533,10 +533,10 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
     var(--vp-c-brand-1)
   );
   border-color: rgba(255, 255, 255, 0.85);
-  box-shadow:
+  /* box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.42),
     0 0 0 5px color-mix(in srgb, var(--vp-c-brand-1) 22%, transparent),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    inset 0 1px 0 rgba(255, 255, 255, 0.5); */
   transform: translateY(-50%) scale(1.14);
 }
 .hbb-arrow:active {
@@ -567,8 +567,8 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
 @media (max-width: 640px) {
   .hbb-arrow {
     opacity: 0.75;
-    width: 28px;
-    height: 52px;
+    width: 36px;
+    height: 36px;
   }
   .hbb-arrow svg {
     width: 15px;

@@ -78,6 +78,7 @@ next: false
 }
 .tw-subtitle {
   font-size: 1rem;
+  font-weight: 600;
   color: var(--vp-c-text-3);
   margin: 0;
   letter-spacing: 0.03em;

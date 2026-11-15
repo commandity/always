@@ -190,20 +190,44 @@ export default {
       });
 
       onMounted(() => {
-        // VitePress's local search box corrupts document.body's scrollTop
-        // while it's open (it calls scrollIntoView on its own result list,
-        // which bubbles up to the real page because body is only visually
-        // locked via overflow:hidden, not actually frozen). Restore the
-        // scroll position we had right before the search box opened.
-        let preSearchScrollY: number | null = null;
+        // VitePress's local search box calls scrollIntoView() on its own
+        // result list every time results update (there's literally a
+        // "FIXME: without this whole page scrolls to the bottom" comment
+        // in its source). scrollIntoView() walks up and scrolls EVERY
+        // scrollable ancestor needed to bring the target into view,
+        // including document.body/html — overscroll-behavior:contain on
+        // the results list doesn't stop this, since that only governs
+        // user-driven wheel/touch scroll chaining, not programmatic
+        // scrollIntoView(). Neutralize scrollIntoView for the duration the
+        // search box is open so it can't touch the real page at all.
+        const nativeScrollIntoView = Element.prototype.scrollIntoView;
+        let neutralized = false;
+        const neutralize = () => {
+          if (neutralized) return;
+          neutralized = true;
+          Element.prototype.scrollIntoView = function (
+            this: Element,
+            ...args: Parameters<typeof nativeScrollIntoView>
+          ) {
+            if (document.querySelector(".VPLocalSearchBox")?.contains(this)) {
+              return;
+            }
+            nativeScrollIntoView.apply(this, args);
+          };
+        };
+        const restore = () => {
+          if (!neutralized) return;
+          neutralized = false;
+          Element.prototype.scrollIntoView = nativeScrollIntoView;
+        };
+
+        let isOpen = false;
         const searchScrollObserver = new MutationObserver(() => {
-          const isOpen = !!document.querySelector(".VPLocalSearchBox");
-          if (isOpen) {
-            if (preSearchScrollY === null) preSearchScrollY = window.scrollY;
-          } else if (preSearchScrollY !== null) {
-            window.scrollTo(0, preSearchScrollY);
-            preSearchScrollY = null;
-          }
+          const nowOpen = !!document.querySelector(".VPLocalSearchBox");
+          if (nowOpen === isOpen) return;
+          isOpen = nowOpen;
+          if (nowOpen) neutralize();
+          else restore();
         });
         searchScrollObserver.observe(document.body, {
           childList: true,

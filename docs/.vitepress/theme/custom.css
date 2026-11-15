@@ -5,6 +5,41 @@
 
 body {
   font-family: var(--vp-font-family-base);
+  font-size: 16px;
+}
+
+/* bump vitepress default 14px components to 16px (double class beats scoped [data-v-*]) */
+.VPNavBarMenuLink.VPNavBarMenuLink,
+.VPSidebarItem.VPSidebarItem,
+.VPFlyout.VPFlyout,
+.VPMenuLink.VPMenuLink,
+.VPFooter.VPFooter,
+.VPDocFooter.VPDocFooter,
+.VPDocOutlineItem.VPDocOutlineItem,
+.VPLocalNav.VPLocalNav,
+.VPMenuGroup.VPMenuGroup,
+.VPNavScreenMenuLink.VPNavScreenMenuLink,
+.VPNavScreenMenuGroup.VPNavScreenMenuGroup,
+.VPNavBarTranslations.VPNavBarTranslations,
+.VPNavBarExtra.VPNavBarExtra,
+.VPNavScreenMenuGroupLink.VPNavScreenMenuGroupLink,
+.VPLocalNavOutlineDropdown.VPLocalNavOutlineDropdown {
+  font-size: 16px;
+}
+
+/* VPFlyout's trigger label ("其他") lives in a nested .text span with its
+   own scoped 14px, which beats the inherited size from .VPFlyout above. */
+.VPFlyout .text {
+  font-size: 16px !important;
+}
+
+/* Same issue on mobile: the "其他" group toggle in the hamburger menu
+   (VPNavScreenMenuGroup) has its own nested .button at scoped 14px. */
+.VPNavScreenMenuGroup .button {
+  font-size: 16px !important;
+}
+:root {
+  --vp-custom-block-font-size: 16px;
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -12,26 +47,6 @@ body {
    ══════════════════════════════════════════════════════════════════ */
 .VPHome {
   position: relative;
-}
-
-/* .VPHome::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("/file-1.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  filter: blur(0.5px) brightness(0.5);
-  z-index: 0;
-  pointer-events: none;
-  transform: scaleX(-1);
-} */
-
-:root:not(.dark) .VPHome::before {
-  opacity: 0.5;
-  filter: blur(0.5px) brightness(0.3);
 }
 
 .VPHome .VPHero,
@@ -192,13 +207,6 @@ body {
 /* ══════════════════════════════════════════════════════════════════
    NAVBAR
    ══════════════════════════════════════════════════════════════════ */
-
-/* Non-sticky on large screens */
-/* @media (min-width: 960px) {
-  .Layout:has(.VPHome) .VPNav {
-    position: absolute !important;
-  }
-} */
 
 /* ── Dividers ── */
 @media (min-width: 960px) {
@@ -461,6 +469,12 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.15) !important;
 }
 
+/* VitePress hides the footer by default on any page with a sidebar;
+   force it to show everywhere for a consistent layout. */
+.VPFooter.has-sidebar {
+  display: block !important;
+}
+
 .dark .VPFooter {
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
@@ -664,16 +678,6 @@ h6 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-/* ══════════════════════════════════════════════════════════════════
-   ── Light mode card backgrounds — subtle gray
-   ══════════════════════════════════════════════════════════════════ */
-
-/* :root:not(.dark) .VPFeature,
-:root:not(.dark) .citation-card,
-:root:not(.dark) .profile-card {
-  background-color: var(--vp-c-bg-soft) !important;
-} */
 
 /* ══════════════════════════════════════════════════════════════════
    NAVBAR — force unified layout (always sidebar-page style)
@@ -1406,6 +1410,7 @@ html {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 800;
+  font-size: 20px;
 }
 
 /* ══════════════════════════════════════════════════════════════════

@@ -231,11 +231,7 @@ export default {
   enhanceApp({ app }) {
     // LAYOUT
     app.component("BlogIndex", BlogIndex);
-    app.component("HomeCitation", HomeCitation);
-    app.component("HomeProfile", HomeProfile);
     app.component("CitationIndex", CitationIndex);
-    app.component("HomeBillboard", HomeBillboard);
-    app.component("GlowBackground", GlowBackground);
     app.component("AboutPage", AboutPage);
     // ANES
     app.component("AsaCalculator", AsaCalculator);

@@ -1,4 +1,4 @@
-import { createContentLoader, defineConfig } from "vitepress";
+import { defineConfig } from "vitepress";
 import { createHash } from "node:crypto";
 
 const base = "/always/";
@@ -31,7 +31,6 @@ export default defineConfig({
         href: `${base}logo/AW.svg?v=2`,
       },
     ],
-    // ✅ ADD THESE THREE BELOW THE ICON LINK
     [
       "link",
       {
@@ -723,15 +722,6 @@ export default defineConfig({
             },
           ],
         },
-        // {
-        //   text: 'API Reference',
-        //   collapsed: false,
-        //   items: [
-        //     { text: 'Config', link: '/reference/config' },
-        //     { text: 'Frontmatter', link: '/reference/frontmatter' },
-        //     { text: 'CLI', link: '/reference/cli' },
-        //   ]
-        // }
       ],
       "/blog/": [
         {

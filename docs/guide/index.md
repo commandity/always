@@ -128,4 +128,10 @@ next: false
   margin: 0 0 0.5rem;
 }
 .tw-card-body p:last-child { margin-bottom: 0; }
+
+@media (max-width: 639px) {
+  .tw-card {
+    gap: 0.5rem;
+  }
+}
 </style>

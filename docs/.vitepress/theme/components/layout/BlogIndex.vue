@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { withBase } from "vitepress";
 import { data as posts } from "../../posts.data.ts";
-import { ref, computed, watch, nextTick, onMounted } from "vue";
+import { ref, computed } from "vue";
+import { cleanExcerpt } from "../../utils/excerpt";
 
 const selectedTag = ref<string | null>(null);
-const contentRefs = ref<Map<string, HTMLElement>>(new Map());
-const truncated = ref<Set<string>>(new Set());
 
 const allTags = computed(() => {
   const tags = new Set<string>();
@@ -31,40 +30,6 @@ function formatDate(dateStr: string) {
   });
 }
 
-function setContentRef(url: string, el: HTMLElement | null) {
-  if (el) contentRefs.value.set(url, el);
-  else contentRefs.value.delete(url);
-}
-
-function stripH1(html: string) {
-  return html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/, "");
-}
-
-function stripCoverImg(html: string, cover: string) {
-  if (!cover) return html;
-  return html.replace(
-    /(<p>\s*)?<img[^>]*src="([^"]*)"[^>]*>(\s*<\/p>)?/,
-    (match, _pOpen, src, _pClose) => (src === cover ? "" : match),
-  );
-}
-
-function detect() {
-  truncated.value = new Set();
-  nextTick().then(() => {
-    const posts = filteredPosts.value;
-    for (const p of posts) {
-      if (p.abstract) continue;
-      const el = contentRefs.value.get(p.url);
-      if (!el) continue;
-      const lh = parseFloat(getComputedStyle(el).lineHeight);
-      const th = (isNaN(lh) ? 27 : lh) * 10;
-      if (el.scrollHeight > th) truncated.value.add(p.url);
-    }
-  });
-}
-
-onMounted(detect);
-watch(filteredPosts, detect);
 </script>
 
 <template>
@@ -125,17 +90,9 @@ watch(filteredPosts, detect);
           </template>
           <template v-else>
             <div class="card-body-content">
-              <div
-                class="card-body-text"
-                :class="{ truncated: truncated.has(post.url) }"
-                :ref="
-                  (el: any) => setContentRef(post.url, el as HTMLElement | null)
-                "
-                v-html="stripCoverImg(stripH1(post.html), post.cover)"
-              />
-              <div v-if="truncated.has(post.url)" class="card-body-more">
-                ......
-              </div>
+              <p class="card-body-excerpt">
+                {{ cleanExcerpt(post.excerpt, 200) }}…
+              </p>
             </div>
           </template>
 
@@ -374,26 +331,16 @@ watch(filteredPosts, detect);
 }
 
 .card-body-content {
-  line-height: 1.7;
-  max-height: calc(1.7em * 11);
-  overflow: hidden;
   flex: 1;
-  display: grid;
-  grid-template-rows: 1fr auto;
 }
-.card-body-text {
-  overflow: hidden;
-}
-.card-body-text.truncated {
-  display: -webkit-box;
-  -webkit-line-clamp: 10;
-  -webkit-box-orient: vertical;
-}
-.card-body-more {
+.card-body-excerpt {
+  margin: 0;
   line-height: 1.7;
-  color: var(--vp-c-text-3);
-  text-align: center;
-  letter-spacing: 0.1em;
+  color: var(--vp-c-text-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card-body-abstract {
@@ -402,34 +349,6 @@ watch(filteredPosts, detect);
 .card-body-abstract p {
   margin: 0 0 0.6rem;
   line-height: 1.7;
-}
-
-.card-body-content :deep(img) {
-  max-width: 100%;
-  border-radius: 6px;
-  margin: 0.75rem 0;
-}
-.card-body-content :deep(p) {
-  margin: 0.6rem 0;
-}
-.card-body-content :deep(blockquote) {
-  border-left: 3px solid var(--vp-c-brand-1);
-  margin: 0.75rem 0;
-  padding: 0.4rem 0.75rem;
-  color: var(--vp-c-text-2);
-  background: var(--vp-c-bg);
-  border-radius: 0 4px 4px 0;
-}
-.card-body-content :deep(h2),
-.card-body-content :deep(h3) {
-  margin: 1.25rem 0 0.6rem;
-}
-.card-body-content :deep(ul),
-.card-body-content :deep(ol) {
-  padding-left: 1.5rem;
-}
-.card-body-content :deep(a) {
-  color: var(--vp-c-brand-1);
 }
 .card-footer {
   display: flex;

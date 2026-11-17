@@ -1,7 +1,7 @@
 import { createContentLoader } from "vitepress";
 
 export default createContentLoader("blog/*.md", {
-  render: true,
+  excerpt: true,
   transform(raw) {
     return raw
       .filter(
@@ -16,7 +16,7 @@ export default createContentLoader("blog/*.md", {
         date: p.frontmatter.date ?? "",
         tags: p.frontmatter.tags ?? [],
         category: p.frontmatter.category ?? "",
-        html: p.html ?? "",
+        excerpt: p.excerpt ?? "",
         author: p.frontmatter.author ?? "Anonymous",
         avatar: p.frontmatter.avatar ?? "",
         cover: p.frontmatter.cover ?? "",

@@ -288,6 +288,56 @@ export default {
         });
       });
 
+      onMounted(() => {
+        // Drives the cursor-tracking gradient "spotlight" on
+        // gradient-text-clip elements (currently the navbar site title
+        // .VPNavBarTitle .title and the home hero name .VPHero .name,
+        // both styled in custom.css): sets --spotlight-x (and -y, for
+        // any element that wants it) to the cursor's position within
+        // the element, and clears them (falling back to custom.css's
+        // default — right-biased, not center) on mouseleave. custom.css
+        // uses the same gradient at rest and while hovering, so these
+        // updates never cause a visible jump — only the transition
+        // point moves.
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          return;
+        }
+
+        const onMove = (e: MouseEvent) => {
+          const el = e.currentTarget as HTMLElement;
+          const rect = el.getBoundingClientRect();
+          const xPct = ((e.clientX - rect.left) / rect.width) * 100;
+          const yPct = ((e.clientY - rect.top) / rect.height) * 100;
+          el.style.setProperty(
+            "--spotlight-x",
+            `${Math.min(100, Math.max(0, xPct))}%`,
+          );
+          el.style.setProperty(
+            "--spotlight-y",
+            `${Math.min(100, Math.max(0, yPct))}%`,
+          );
+        };
+        const onLeave = (e: MouseEvent) => {
+          const el = e.currentTarget as HTMLElement;
+          el.style.removeProperty("--spotlight-x");
+          el.style.removeProperty("--spotlight-y");
+        };
+        const bindSpotlight = (selector: string) => {
+          const el = document.querySelector(selector) as HTMLElement | null;
+          if (!el || el.dataset.spotlightBound) return;
+          el.dataset.spotlightBound = "1";
+          el.addEventListener("mousemove", onMove);
+          el.addEventListener("mouseleave", onLeave);
+        };
+        const attach = () => {
+          bindSpotlight(".VPNavBarTitle .title");
+          bindSpotlight(".VPHero .name");
+        };
+        attach();
+        const observer = new MutationObserver(attach);
+        observer.observe(document.body, { childList: true, subtree: true });
+      });
+
       watch(
         [() => showSidebar.value, () => showAside.value, () => route.path],
         ([, , path], [, , oldPath]) => {

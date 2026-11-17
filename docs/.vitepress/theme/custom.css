@@ -123,6 +123,20 @@ body {
     #f7c59f 80%
   );
   --vp-home-hero-image-filter: blur(130px);
+  /* Darker/lighter ends for the gradient text-clip spotlight (navbar
+     title + hero name, defined further down). Plain static colors per
+     theme, independent of --vp-c-brand-1 (which is used site-wide for
+     links/buttons/etc. and is too light on its own in dark mode to
+     serve as this gradient's "darker" end) — not color-mix()'d with
+     white, not derived via relative-color syntax. See the .dark
+     override below for the dark-mode pair, which both run darker
+     overall than the light-mode pair, not just the usual value swap. */
+  --spotlight-base: var(--vp-c-brand-1);
+  --spotlight-highlight: #6366f1;
+}
+.dark {
+  --spotlight-base: #4c56c9;
+  --spotlight-highlight: #8b93e8;
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -136,13 +150,23 @@ body {
 }
 
 /* ── Home hero typography knobs — adjust size/weight/spacing here ──
-   font-size uses clamp(min, fluid, max) so it still scales on mobile. */
+   font-size uses clamp(min, fluid, max) so it still scales on mobile.
+   Gradient text-clip spotlight (cursor-tracking) is explained further
+   down, under "Gradient text-clip spotlight (navbar title + hero
+   name)". */
 .VPHero .name {
-  background: linear-gradient(
-    135deg,
-    var(--vp-c-brand-1),
-    var(--vp-c-brand-2, var(--vp-c-text-1))
-  );
+  background-image:
+    radial-gradient(
+      circle clamp(100px, 20vw, 220px) at var(--spotlight-x, 85%)
+        var(--spotlight-y, 50%),
+      var(--spotlight-highlight) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      90deg,
+      var(--spotlight-base) 0%,
+      var(--spotlight-highlight) 100%
+    );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1444,13 +1468,31 @@ body.pwd-locked .VPDoc .main {
     0 1px 4px rgba(239, 68, 68, 0.18);
 }
 
-/* ── Navbar site title — gradient text fill (matches the hero name) ── */
+/* ── Gradient text-clip spotlight (navbar title + hero name) ──
+   Two stacked background layers, both clipped to the text:
+   - A static linear-gradient base: darker --spotlight-base on the left,
+     lighter --spotlight-highlight on the right.
+   - A radial-gradient "spotlight" on top, using that same lighter
+     highlight color fading to transparent, centered at --spotlight-x/-y
+     (set by a shared mousemove listener in index.ts, bound to both
+     .VPNavBarTitle .title and .VPHero .name, and cleared back to the
+     default — 85%, i.e. right-biased — on mouseleave), so it adds a
+     moving bright spot without changing the base gradient underneath.
+   Since both layers are always present and only their coordinates
+   change, there's never a structural swap between rest and hover —
+   just the spotlight's position moving — so no visible jump. */
 .VPNavBarTitle .title span {
-  background: linear-gradient(
-    135deg,
-    var(--vp-c-brand-1),
-    var(--vp-c-brand-2, var(--vp-c-text-1))
-  );
+  background-image:
+    radial-gradient(
+      circle 90px at var(--spotlight-x, 85%) var(--spotlight-y, 50%),
+      var(--spotlight-highlight) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      90deg,
+      var(--spotlight-base) 0%,
+      var(--spotlight-highlight) 100%
+    );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

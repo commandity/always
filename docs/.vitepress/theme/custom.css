@@ -685,6 +685,11 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
+/* Left sidebar group heading (VitePress renders top-level sidebar items as h2.text) */
+.VPSidebar h2.text {
+  font-size: 16px;
+}
+
 /* h2 title in .vue */
 h2.title {
   font-size: 24px !important;

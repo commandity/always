@@ -23,6 +23,17 @@ function fmt(raw: string): string {
   return String(raw ?? "").slice(0, 10);
 }
 
+// VitePress's header-anchor plugin embeds a literal "&ZeroWidthSpace;"
+// entity as the (invisible) permalink symbol inside heading HTML. Since
+// excerpts are stripped to plain text (not rendered with v-html), that
+// entity text survives as visible characters unless removed here too.
+function cleanExcerpt(raw: string): string {
+  return raw
+    .replace(/<[^>]*>/g, "")
+    .replace(/&ZeroWidthSpace;/g, "")
+    .slice(0, 100);
+}
+
 // ── Slideshow state ────────────────────────────────────────────────
 const current = ref(0);
 const prev = ref(-1);
@@ -138,7 +149,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
               </div>
               <h2 class="hbb-title">{{ p.title }}</h2>
               <p class="hbb-excerpt" v-if="p.excerpt">
-                {{ p.excerpt.replace(/<[^>]*>/g, "").slice(0, 100) }}…
+                {{ cleanExcerpt(p.excerpt) }}…
               </p>
               <span class="hbb-cta">閱讀全文 →</span>
             </div>

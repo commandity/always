@@ -560,6 +560,52 @@ body {
   left: auto !important;
 }
 
+/* Mobile/tablet local-nav bar (the "tab" row shown below the main nav
+   on narrow screens), outline-dropdown side: toggle button text (theme's
+   outlineTitle "大綱", or returnToTopLabel "回到頂部" on pages with no
+   headings) and the "回到頂部" link inside the opened dropdown panel both
+   have their own scoped font-size (12px/14px) that beats the generic
+   16px bump above. NOT the "目錄" hamburger — see .VPLocalNav .menu below. */
+.VPLocalNavOutlineDropdown button,
+.VPLocalNavOutlineDropdown .top-link {
+  font-size: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Chevron icon next to the "大綱" label — scoped 14px (16px ≥960px),
+   bumped up to match the enlarged text better. */
+.VPLocalNavOutlineDropdown .icon {
+  font-size: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* The button is plain inline/block text flow, so the icon's vertical-align:
+   middle (scoped) lines it up against the text baseline rather than the
+   button's actual vertical center — it reads as sitting low. Make the
+   button a flex row instead so the label and chevron both center on the
+   line regardless of their relative font sizes. */
+.VPLocalNavOutlineDropdown button {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Same bar, left side: the "目錄" hamburger (sidebarMenuLabel) that opens
+   the left sidebar drawer on mobile/tablet (<960px, where the sidebar
+   itself is hidden). Scoped font-size 12px (icon 14px) also beats the
+   generic bump above. */
+.VPLocalNav .menu {
+  font-size: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+
+}
+.VPLocalNav .vpi-align-left.menu-icon {
+  font-size: 14px !important;
+  margin-top: -2px !important;
+}
+
 /* ── Dropdown panel: sidebar visible (desktop with sidebar) ──────── */
 @media (min-width: 960px) {
   .VPLocalNav.has-sidebar .VPLocalNavOutlineDropdown .items {

@@ -366,7 +366,7 @@ function formatDate(dateStr: string) {
   flex-wrap: wrap;
 }
 .card-tag {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   color: var(--vp-c-text-3);
   cursor: pointer;
   padding: 2px 6px;

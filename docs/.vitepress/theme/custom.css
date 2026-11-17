@@ -612,10 +612,10 @@ body {
     display: flex !important;
     align-items: center !important;
   }
-}
-.VPLocalNav .vpi-align-left.menu-icon {
-  font-size: 14px !important;
-  margin-top: -2px !important;
+  .VPLocalNav .vpi-align-left.menu-icon {
+    font-size: 14px !important;
+    margin-top: -1px !important;
+  }
 }
 
 /* ── Dropdown panel: sidebar visible (desktop with sidebar) ──────── */

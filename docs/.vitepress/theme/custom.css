@@ -614,7 +614,7 @@ body {
   }
   .VPLocalNav .vpi-align-left.menu-icon {
     font-size: 14px !important;
-    margin-top: -1px !important;
+    margin-top: 0px !important;
   }
 }
 

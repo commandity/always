@@ -597,9 +597,21 @@ body {
    generic bump above. */
 .VPLocalNav .menu {
   font-size: 12px !important;
-  display: flex !important;
-  align-items: center !important;
+}
 
+/* VitePress hides .menu itself via `display: none` at >=960px — the
+   sidebar is a normal, always-open fixed column there (not a drawer),
+   so there's nothing for the hamburger to toggle. That hide rule isn't
+   !important, so our unguarded `display: flex !important` above was
+   beating it and leaving the hamburger visible at 960–1279px even
+   though the sidebar already sits open and uncollapsed in that range.
+   Scope the flex/centering fix to the range it's actually shown
+   (<960px) so the native hide rule wins again at >=960px. */
+@media (max-width: 959px) {
+  .VPLocalNav .menu {
+    display: flex !important;
+    align-items: center !important;
+  }
 }
 .VPLocalNav .vpi-align-left.menu-icon {
   font-size: 14px !important;

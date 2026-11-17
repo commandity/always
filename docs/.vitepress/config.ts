@@ -724,14 +724,24 @@ export default defineConfig({
         },
       ],
       "/blog/": [
+        // {
+        //   text: "2026",
+        //   collapsed: false,
+        //   items: [
+        //     // { text: "看醫生前的事前功課", link: "/blog/2026-07-15" },
+        //     // { text: "每個人都有自己的因果", link: "/blog/2026-07-06" },
+        //     // { text: "Anger is the enemy of wisdom", link: "/blog/2026-05-30" },
+        //     // { text: "Thoughts of my life", link: "/blog/2026-04-10" },
+        //   ],
+        // },
         {
-          text: "2026",
+          text: "控制",
           collapsed: false,
           items: [
             // { text: "看醫生前的事前功課", link: "/blog/2026-07-15" },
-            { text: "每個人都有自己的因果", link: "/blog/2026-07-06" },
-            { text: "Anger is the enemy of wisdom", link: "/blog/2026-05-30" },
-            { text: "Thoughts of my life", link: "/blog/2026-04-10" },
+            // { text: "每個人都有自己的因果", link: "/blog/2026-07-06" },
+            // { text: "Anger is the enemy of wisdom", link: "/blog/2026-05-30" },
+            // { text: "Thoughts of my life", link: "/blog/2026-04-10" },
           ],
         },
       ],

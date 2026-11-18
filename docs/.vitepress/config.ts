@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import { createHash } from "node:crypto";
 
-const base = "/always/";
+const base = "/";
 
 export default defineConfig({
   base,

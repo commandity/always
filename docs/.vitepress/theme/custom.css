@@ -261,7 +261,7 @@ img.VPImage:not(.image-src) {
 @media (max-width: 639px) {
   /* 1 per row — widest card, most room */
   .VPFeature .title {
-    font-size: 27px !important;
+    font-size: 26px !important;
     line-height: 36px !important;
   }
   .VPFeature .details {
@@ -277,7 +277,7 @@ img.VPImage:not(.image-src) {
     line-height: 31px !important;
   }
   .VPFeature .details {
-    font-size: 15px !important;
+    font-size: 14px !important;
     line-height: 21px !important;
   }
 }
@@ -289,7 +289,7 @@ img.VPImage:not(.image-src) {
     line-height: 30px !important;
   }
   .VPFeature .details {
-    font-size: 15px !important;
+    font-size: 14px !important;
     line-height: 21px !important;
   }
 }

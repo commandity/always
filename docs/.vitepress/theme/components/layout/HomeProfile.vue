@@ -123,7 +123,7 @@ const router = useRouter();
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--vp-c-text-2);
 }
 .status-dot {
@@ -140,7 +140,7 @@ const router = useRouter();
   min-width: 0;
 }
 .profile-name {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--vp-c-text-1);
   margin: 0 0 4px;
@@ -148,13 +148,13 @@ const router = useRouter();
   padding: 0 !important;
 }
 .profile-title {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--vp-c-brand-1);
   font-weight: 600;
   margin: 0 0 0.75rem;
 }
 .profile-bio {
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   color: var(--vp-c-text-1);
   line-height: 1.7;
   margin: 0 0 1rem;
@@ -165,7 +165,7 @@ const router = useRouter();
   gap: 6px;
 }
 .profile-tag {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   padding: 3px 10px;
   border-radius: 999px;
   background: var(--vp-c-brand-soft);
@@ -178,6 +178,7 @@ const router = useRouter();
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 0.75rem;
   }
   .profile-tags {
     justify-content: center;

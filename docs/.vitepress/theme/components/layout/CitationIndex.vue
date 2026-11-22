@@ -70,39 +70,32 @@ function formatDate(dateStr: string) {
         :key="i"
         class="citation-card"
       >
-        <!-- Left accent + big quote mark -->
-        <div class="card-left">
-          <span class="card-quote">"</span>
-        </div>
+        <div class="card-quote">"</div>
+        <blockquote class="card-text" v-html="citation.text"></blockquote>
 
-        <!-- Main content -->
-        <div class="card-body">
-          <blockquote class="card-text" v-html="citation.text"></blockquote>
+        <div class="card-footer">
+          <div class="card-author-block">
+            <span class="card-dash">—</span>
+            <span class="card-author">{{ citation.author }}</span>
+            <span v-if="citation.source" class="card-source"
+              >《{{ citation.source }}》</span
+            >
+          </div>
 
-          <div class="card-footer">
-            <div class="card-author-block">
-              <span class="card-dash">—</span>
-              <span class="card-author">{{ citation.author }}</span>
-              <span v-if="citation.source" class="card-source"
-                >《{{ citation.source }}》</span
+          <div class="card-right-meta">
+            <div class="card-tags">
+              <span
+                v-for="tag in citation.tags"
+                :key="tag"
+                class="card-tag"
+                :class="{ active: selectedTag === tag }"
+                @click.stop="selectTag(tag)"
+                ># {{ tag }}</span
               >
             </div>
-
-            <div class="card-right-meta">
-              <div class="card-tags">
-                <span
-                  v-for="tag in citation.tags"
-                  :key="tag"
-                  class="card-tag"
-                  :class="{ active: selectedTag === tag }"
-                  @click.stop="selectTag(tag)"
-                  ># {{ tag }}</span
-                >
-              </div>
-              <span v-if="citation.date" class="card-date">{{
-                formatDate(citation.date)
-              }}</span>
-            </div>
+            <span v-if="citation.date" class="card-date">{{
+              formatDate(citation.date)
+            }}</span>
           </div>
         </div>
       </article>
@@ -215,59 +208,52 @@ function formatDate(dateStr: string) {
 
 /* ── Card ────────────────────────────────────────────────────── */
 .citation-card {
-  display: flex;
-  align-items: stretch;
+  position: relative;
+  padding: 2rem 2rem 1.5rem 3rem;
   border-radius: 12px;
-  border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
-  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 8px solid var(--vp-c-brand-1);
   transition:
     background 0.25s,
     box-shadow 0.2s,
     border-color 0.2s;
 }
 
+:root:not(.dark) .citation-card {
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  border-left: 15px solid var(--vp-c-brand-1);
+}
+
 .citation-card:hover {
-  background: var(--vp-c-bg-mute);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
-  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, white);
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  border-top-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, white);
+  border-right-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, white);
+  border-bottom-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, white);
 }
 
-/* Left colored strip with big quote mark */
-.card-left {
-  flex-shrink: 0;
-  width: 56px;
-  background: var(--vp-c-brand-1);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 0.6rem;
-}
-
+/* Big faint quote mark */
 .card-quote {
-  font-size: 3.5rem;
+  position: absolute;
+  top: -0.5rem;
+  left: 2rem;
+  font-size: 5rem;
   line-height: 1;
-  color: #fff;
-  opacity: 0.5;
+  color: var(--vp-c-brand-1);
+  opacity: 0.3;
   font-family: Georgia, serif;
   user-select: none;
 }
 
-/* Body */
-.card-body {
-  flex: 1;
-  padding: 1.25rem 1.5rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
 .card-text {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-style: italic;
   color: var(--vp-c-text-1);
   line-height: 1.8;
-  margin: 0;
+  margin: 0 2rem 1rem;
   border: none !important;
   padding: 0 !important;
 }
@@ -279,16 +265,15 @@ function formatDate(dateStr: string) {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
-  padding-top: 0.75rem;
-  border-top: none !important;
-  margin-top: auto;
+  margin: 0 2rem 0;
 }
 
 .card-author-block {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--vp-c-text-3);
 }
 
 .card-dash {
@@ -301,8 +286,8 @@ function formatDate(dateStr: string) {
 }
 
 .card-source {
-  color: var(--vp-c-text-3);
-  font-size: 0.8rem;
+  color: var(--vp-c-text-2);
+  font-size: 0.82rem;
 }
 
 .card-right-meta {
@@ -347,19 +332,40 @@ function formatDate(dateStr: string) {
   font-size: 0.9rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
   .citation-home {
     padding: 2rem 1.25rem;
   }
-  .card-left {
-    width: 40px;
+  .citation-card {
+    padding: 1.5rem 1rem 1.2rem 1.5rem;
+    border-left-width: 8px;
   }
   .card-quote {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    left: 1rem;
+  }
+  .card-text {
+    margin: 0 0 0.75rem;
+    line-height: 1.7;
   }
   .card-footer {
     flex-direction: column;
     align-items: flex-start;
+    gap: 4px;
+    margin: 0;
+  }
+  .card-author-block {
+    flex-wrap: nowrap;
+    gap: 4px;
+    font-size: 0.82rem;
+  }
+}
+
+/* Tablet — default 15px border-left reads too heavy at this width. */
+@media (min-width: 640px) and (max-width: 960px) {
+  .citation-card {
+    padding: 2rem 1rem 1.2rem 1.2rem;
+    border-left-width: 8px;
   }
 }
 /* Japanese furigana (ruby) + Chinese translation line */

@@ -68,7 +68,7 @@ const latest = citations[0];
   border: 1px solid rgba(255, 255, 255, 0.12);
   margin: 3rem 0;
   /* border: 1px solid var(--vp-c-divider); */
-  border-left: 15px solid var(--vp-c-brand-1);
+  border-left: 8px solid var(--vp-c-brand-1);
   transition:
     background 0.25s,
     box-shadow 0.2s,
@@ -151,10 +151,10 @@ const latest = citations[0];
 }
 
 /* ── HomeCitation mobile fixes ──────────────────────────────────── */
-@media (max-width: 430px) {
+@media (max-width: 639px) {
   .citation-card {
     padding: 1.5rem 1rem 1.2rem 1.5rem;
-    border-left-width: 6px;
+    border-left-width: 8px;
     margin: 1.5rem 0;
   }
 
@@ -164,7 +164,6 @@ const latest = citations[0];
   }
 
   .citation-text {
-    font-size: 0.95rem;
     margin: 0 0 0.75rem;
     line-height: 1.7;
   }
@@ -180,6 +179,14 @@ const latest = citations[0];
     flex-wrap: nowrap;
     gap: 4px;
     font-size: 0.82rem;
+  }
+}
+
+/* Tablet — default 15px border-left reads too heavy at this width. */
+@media (min-width: 640px) and (max-width: 960px) {
+  .citation-card {
+    padding: 2rem 1rem 1.2rem 1.2rem;
+    border-left-width: 8px;
   }
 }
 /* Japanese furigana (ruby) + Chinese translation line */

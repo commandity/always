@@ -258,11 +258,11 @@ img.VPImage:not(.image-src) {
    bit. 1279px matches VitePress's own mobile/tablet nav breakpoint. */
 @media (max-width: 1279px) {
   .VPFeature .title {
-    font-size: 23px !important;
+    font-size: 24px !important;
     line-height: 31px !important;
   }
   .VPFeature .details {
-    font-size: 14px !important;
+    font-size: 15px !important;
     line-height: 21px !important;
   }
 }
@@ -270,11 +270,11 @@ img.VPImage:not(.image-src) {
 /* Same cards, bumped again on desktop/"windows" width. */
 @media (min-width: 1280px) {
   .VPFeature .title {
-    font-size: 24px !important;
+    font-size: 25px !important;
     line-height: 32px !important;
   }
   .VPFeature .details {
-    font-size: 15px !important;
+    font-size: 16px !important;
     line-height: 22px !important;
   }
 }

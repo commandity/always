@@ -254,9 +254,24 @@ img.VPImage:not(.image-src) {
 }
 
 /* Landing page feature cards (article.box h2.title / p.details) read too
-   small on mobile/tablet relative to their card width — bump both up a
-   bit. 1279px matches VitePress's own mobile/tablet nav breakpoint. */
-@media (max-width: 1279px) {
+   small relative to their card width. VPFeatures.vue's own grid reflows
+   at 640px/960px (1 card per row → 2 → 4), so card width — and the room
+   available for text — shrinks as columns increase; size each tier to
+   match instead of using an unrelated breakpoint. */
+@media (max-width: 639px) {
+  /* 1 per row — widest card, most room */
+  .VPFeature .title {
+    font-size: 27px !important;
+    line-height: 36px !important;
+  }
+  .VPFeature .details {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+  /* 2 per row */
   .VPFeature .title {
     font-size: 24px !important;
     line-height: 31px !important;
@@ -267,15 +282,15 @@ img.VPImage:not(.image-src) {
   }
 }
 
-/* Same cards, bumped again on desktop/"windows" width. */
-@media (min-width: 1280px) {
+@media (min-width: 960px) {
+  /* 4 per row — narrowest card, least room */
   .VPFeature .title {
-    font-size: 25px !important;
-    line-height: 32px !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
   }
   .VPFeature .details {
-    font-size: 16px !important;
-    line-height: 22px !important;
+    font-size: 15px !important;
+    line-height: 21px !important;
   }
 }
 

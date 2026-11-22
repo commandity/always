@@ -336,6 +336,42 @@ export default {
         attach();
         const observer = new MutationObserver(attach);
         observer.observe(document.body, { childList: true, subtree: true });
+
+        // Cursor-tracking "push": every img.VPImage translates AWAY from
+        // the cursor's offset from its own center while hovered (scaled
+        // down and clamped so it reads as a subtle push, not a shove),
+        // then springs back to rest on mouseleave via the CSS transition
+        // on --push-x/--push-y in custom.css.
+        const PUSH_STRENGTH = 0.15;
+        const PUSH_MAX_PX = 14;
+        const onImagePush = (e: MouseEvent) => {
+          const el = e.currentTarget as HTMLElement;
+          const rect = el.getBoundingClientRect();
+          const dx = e.clientX - (rect.left + rect.width / 2);
+          const dy = e.clientY - (rect.top + rect.height / 2);
+          const clamp = (v: number) =>
+            Math.min(PUSH_MAX_PX, Math.max(-PUSH_MAX_PX, v * PUSH_STRENGTH));
+          el.style.setProperty("--push-x", `${clamp(-dx)}px`);
+          el.style.setProperty("--push-y", `${clamp(-dy)}px`);
+        };
+        const onImagePushLeave = (e: MouseEvent) => {
+          const el = e.currentTarget as HTMLElement;
+          el.style.setProperty("--push-x", "0px");
+          el.style.setProperty("--push-y", "0px");
+        };
+        const bindImagePush = () => {
+          document
+            .querySelectorAll<HTMLElement>("img.VPImage")
+            .forEach((el) => {
+              if (el.dataset.pushBound) return;
+              el.dataset.pushBound = "1";
+              el.addEventListener("mousemove", onImagePush);
+              el.addEventListener("mouseleave", onImagePushLeave);
+            });
+        };
+        bindImagePush();
+        const imageObserver = new MutationObserver(bindImagePush);
+        imageObserver.observe(document.body, { childList: true, subtree: true });
       });
 
       watch(

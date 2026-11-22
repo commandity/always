@@ -413,7 +413,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
 }
 
 .hbb-excerpt {
-  font-size: 0.82rem;
+  font-size: 0.96rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.55;
   margin: 0;

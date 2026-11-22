@@ -253,6 +253,32 @@ img.VPImage:not(.image-src) {
   }
 }
 
+/* Landing page feature cards (article.box h2.title / p.details) read too
+   small on mobile/tablet relative to their card width — bump both up a
+   bit. 1279px matches VitePress's own mobile/tablet nav breakpoint. */
+@media (max-width: 1279px) {
+  .VPFeature .title {
+    font-size: 27px !important;
+    line-height: 35px !important;
+  }
+  .VPFeature .details {
+    font-size: 16px !important;
+    line-height: 26px !important;
+  }
+}
+
+/* Same cards, bumped again on desktop/"windows" width. */
+@media (min-width: 1280px) {
+  .VPFeature .title {
+    font-size: 26px !important;
+    line-height: 34px !important;
+  }
+  .VPFeature .details {
+    font-size: 15px !important;
+    line-height: 24px !important;
+  }
+}
+
 /* ══════════════════════════════════════════════════════════════════
    NAVBAR
    ══════════════════════════════════════════════════════════════════ */

@@ -390,9 +390,15 @@ function formatDate(dateStr: string) {
   opacity: 0.7;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1279px) {
   .card-title {
-    font-size: 1.1rem;
+    font-size: 1.18rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card-title {
+    font-size: 1.32rem;
   }
 }
 </style>

@@ -739,9 +739,12 @@ function tfiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span><span class="tick-threshold">16</span
-          ><span class="tk-mild">36</span><span class="tk-moderate">56</span
-          ><span class="tk-severe">76</span><span class="tk-critical">100</span>
+          <span class="tk-normal" style="left: 0%">0</span>
+          <span class="tick-threshold" style="left: 16%">16</span>
+          <span class="tk-mild" style="left: 36%">36</span>
+          <span class="tk-moderate" style="left: 56%">56</span>
+          <span class="tk-severe" style="left: 76%">76</span>
+          <span class="tk-critical" style="left: 100%">100</span>
         </div>
       </div>
 
@@ -948,9 +951,11 @@ function tfiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span><span class="tick-threshold">25</span
-          ><span class="tk-mild">50</span><span class="tk-moderate">75</span
-          ><span class="tk-severe">100</span>
+          <span class="tk-normal" style="left: 0%">0</span>
+          <span class="tick-threshold" style="left: 25%">25</span>
+          <span class="tk-mild" style="left: 50%">50</span>
+          <span class="tk-moderate" style="left: 75%">75</span>
+          <span class="tk-severe" style="left: 100%">100</span>
         </div>
       </div>
 
@@ -1401,17 +1406,28 @@ function tfiReset() {
 }
 
 .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+
+.severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 
 .tick-threshold {
   color: #f59e0b;
   font-weight: 700;
-  position: relative;
 }
 .tick-threshold::after {
   content: "";

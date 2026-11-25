@@ -169,6 +169,7 @@ async function copyMarkdown() {
             v-for="(t, i) in cur.ticks"
             :key="i"
             :class="i === 0 ? 'tk-normal' : i >= cur.ticks.length - 2 ? 'tk-severe' : ''"
+            :style="{ left: (t / cur.max) * 100 + '%' }"
             >{{ t }}</span
           >
         </div>
@@ -469,12 +470,23 @@ async function copyMarkdown() {
   background: #ef4444;
 }
 .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
   font-weight: 700;
+}
+.severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .severity-ticks .tk-normal {
   color: #22c55e;

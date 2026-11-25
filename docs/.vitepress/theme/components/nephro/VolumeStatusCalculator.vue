@@ -290,9 +290,9 @@ function ivc_reset() {
       </div>
       <div class="severity-ticks-abs">
         <span class="tick-abs green" style="left: 0%">140</span>
-        <span class="tick-abs yellow" style="left: 25%">146</span>
-        <span class="tick-abs orange" style="left: 50%">151</span>
-        <span class="tick-abs red" style="left: 75%">161</span>
+        <span class="tick-abs yellow" style="left: 15%">146</span>
+        <span class="tick-abs orange" style="left: 27.5%">151</span>
+        <span class="tick-abs red" style="left: 52.5%">161</span>
         <span class="tick-abs red" style="left: 100%">180</span>
       </div>
       <div class="severity-labels-abs">
@@ -626,9 +626,9 @@ function ivc_reset() {
       </div>
       <div class="severity-ticks-abs">
         <span class="tick-abs" style="left: 0%">0</span>
-        <span class="tick-abs yellow" style="left: 25%">8</span>
-        <span class="tick-abs green" style="left: 50%">11.5</span>
-        <span class="tick-abs orange" style="left: 75%">14</span>
+        <span class="tick-abs yellow" style="left: 40%">8</span>
+        <span class="tick-abs green" style="left: 57.5%">11.5</span>
+        <span class="tick-abs orange" style="left: 70%">14</span>
         <span class="tick-abs red" style="left: 100%">20+</span>
       </div>
       <div class="severity-labels-abs">

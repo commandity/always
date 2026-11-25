@@ -313,9 +313,12 @@ async function snotCopy() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span><span>1</span><span class="tk-moderate">2</span
-          ><span class="tick-threshold">3 ✓</span
-          ><span class="tk-normal">4</span><span class="tk-normal">5</span>
+          <span style="left: 0%">0</span>
+          <span style="left: 20%">1</span>
+          <span class="tk-moderate" style="left: 40%">2</span>
+          <span class="tick-threshold" style="left: 60%">3 ✓</span>
+          <span class="tk-normal" style="left: 80%">4</span>
+          <span class="tk-normal" style="left: 100%">5</span>
         </div>
       </div>
 
@@ -599,10 +602,11 @@ async function snotCopy() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span><span class="tk-mild">20</span
-          ><span class="tick-threshold amber">40</span
-          ><span class="tk-moderate">60</span
-          ><span class="tk-severe">110</span>
+          <span class="tk-normal" style="left: 0%">0</span>
+          <span class="tk-mild" style="left: 18.18%">20</span>
+          <span class="tick-threshold amber" style="left: 36.36%">40</span>
+          <span class="tk-moderate" style="left: 54.55%">60</span>
+          <span class="tk-severe" style="left: 100%">110</span>
         </div>
       </div>
 
@@ -971,16 +975,26 @@ async function snotCopy() {
 }
 
 .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+.severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .tick-threshold {
   color: #22c55e;
   font-weight: 700;
-  position: relative;
 }
 .tick-threshold::after {
   content: "";

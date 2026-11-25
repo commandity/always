@@ -1048,16 +1048,16 @@ function arc_reset() {
       </div>
       <div class="severity-ticks-abs">
         <span class="tick-abs" style="left: 0%">0%</span>
-        <span class="tick-abs green" style="left: 25%">5%</span>
-        <span class="tick-abs yellow" style="left: 50%">10%</span>
-        <span class="tick-abs orange" style="left: 75%">20%</span>
+        <span class="tick-abs green" style="left: 5%">5%</span>
+        <span class="tick-abs yellow" style="left: 10%">10%</span>
+        <span class="tick-abs orange" style="left: 20%">20%</span>
         <span class="tick-abs red" style="left: 100%">100%</span>
       </div>
       <div class="severity-labels-abs">
         <span class="label-abs" style="left: 0%"></span>
-        <span class="label-abs green" style="left: 25%">正常</span>
-        <span class="label-abs yellow" style="left: 50%">輕度</span>
-        <span class="label-abs orange" style="left: 75%">中度</span>
+        <span class="label-abs green" style="left: 5%">正常</span>
+        <span class="label-abs yellow" style="left: 10%">輕度</span>
+        <span class="label-abs orange" style="left: 20%">中度</span>
         <span class="label-abs red" style="left: 100%">重度</span>
       </div>
     </div>

@@ -2220,8 +2220,8 @@ function cmai_reset() {
       </div>
       <div class="severity-ticks-abs">
         <span class="tick-abs" style="left: 0%">29</span>
-        <span class="tick-abs t-mid" style="left: 16.1%">49</span>
-        <span class="tick-abs t-mid" style="left: 40.2%">79</span>
+        <span class="tick-abs t-mid" style="left: 11.49%">49</span>
+        <span class="tick-abs t-mid" style="left: 28.74%">79</span>
         <span class="tick-abs t-high" style="left: 100%">203</span>
       </div>
       <div class="severity-labels-abs">

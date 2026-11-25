@@ -336,9 +336,11 @@ async function essCopy() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span><span class="tk-normal">1</span
-          ><span class="tick-threshold">3</span
-          ><span class="tk-moderate">5</span><span class="tk-severe">8</span>
+          <span class="tk-normal" style="left: 0%">0</span>
+          <span class="tk-normal" style="left: 12.5%">1</span>
+          <span class="tick-threshold" style="left: 37.5%">3</span>
+          <span class="tk-moderate" style="left: 62.5%">5</span>
+          <span class="tk-severe" style="left: 100%">8</span>
         </div>
       </div>
 
@@ -575,9 +577,12 @@ async function essCopy() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span><span class="tick-threshold">10</span
-          ><span class="tk-mild">12</span><span class="tk-moderate">15</span
-          ><span class="tk-severe">17</span><span class="tk-critical">24</span>
+          <span class="tk-normal" style="left: 0%">0</span>
+          <span class="tick-threshold" style="left: 41.67%">10</span>
+          <span class="tk-mild" style="left: 50%">12</span>
+          <span class="tk-moderate" style="left: 62.5%">15</span>
+          <span class="tk-severe" style="left: 70.83%">17</span>
+          <span class="tk-critical" style="left: 100%">24</span>
         </div>
       </div>
 
@@ -925,16 +930,26 @@ async function essCopy() {
 }
 
 .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+.severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .tick-threshold {
   color: #f97316;
   font-weight: 700;
-  position: relative;
 }
 .tick-threshold::after {
   content: "";

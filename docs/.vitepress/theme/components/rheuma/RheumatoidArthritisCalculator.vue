@@ -859,11 +859,11 @@ function cdai_reset() {
         />
       </div>
       <div class="severity-ticks">
-        <span>0</span>
-        <span class="tick-g">3</span>
-        <span class="tick-y">6</span>
-        <span class="tick-o">12</span>
-        <span>30</span>
+        <span style="left: 0%">0</span>
+        <span class="tick-g" style="left: 10%">3</span>
+        <span class="tick-y" style="left: 20%">6</span>
+        <span class="tick-o" style="left: 40%">12</span>
+        <span style="left: 100%">30</span>
       </div>
     </div>
 
@@ -1271,8 +1271,11 @@ function cdai_reset() {
         />
       </div>
       <div class="severity-ticks">
-        <span>0</span><span class="tick-threshold">2.6</span> <span>3.2</span
-        ><span>5.1</span><span>8</span>
+        <span style="left: 0%">0</span>
+        <span class="tick-threshold" style="left: 32.5%">2.6</span>
+        <span style="left: 40%">3.2</span>
+        <span style="left: 63.75%">5.1</span>
+        <span style="left: 100%">8</span>
       </div>
     </div>
 
@@ -1695,11 +1698,11 @@ function cdai_reset() {
         />
       </div>
       <div class="severity-ticks">
-        <span>0</span>
-        <span class="tick-g">2.8</span>
-        <span class="tick-y">10</span>
-        <span class="tick-o">22</span>
-        <span>76</span>
+        <span style="left: 0%">0</span>
+        <span class="tick-g" style="left: 3.68%">2.8</span>
+        <span class="tick-y" style="left: 13.16%">10</span>
+        <span class="tick-o" style="left: 28.95%">22</span>
+        <span style="left: 100%">76</span>
       </div>
     </div>
 
@@ -2331,11 +2334,22 @@ function cdai_reset() {
   background: linear-gradient(90deg, #ef4444, #f87171);
 }
 .r3 .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+.r3 .severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.r3 .severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.r3 .severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .r3 .tick-g {
   color: #22c55e;
@@ -3398,11 +3412,22 @@ function cdai_reset() {
   background: linear-gradient(90deg, #ef4444, #f87171);
 }
 .das .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+.das .severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.das .severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.das .severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .das .tick-threshold {
   color: #22c55e;
@@ -4183,11 +4208,22 @@ function cdai_reset() {
   background: linear-gradient(90deg, #ef4444, #f87171);
 }
 .cdai .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+.cdai .severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.cdai .severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.cdai .severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .cdai .tick-g {
   color: #22c55e;

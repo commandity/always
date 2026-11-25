@@ -177,9 +177,11 @@ async function copyMarkdown() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">≤0</span><span class="tk-normal">1</span
-          ><span class="tk-mild">2</span><span class="tk-moderate">3</span
-          ><span class="tk-severe">≥4</span>
+          <span class="tk-normal" style="left: 16.67%">≤0</span>
+          <span class="tk-normal" style="left: 33.33%">1</span>
+          <span class="tk-mild" style="left: 50%">2</span>
+          <span class="tk-moderate" style="left: 66.67%">3</span>
+          <span class="tk-severe" style="left: 83.33%">≥4</span>
         </div>
       </div>
 
@@ -469,12 +471,17 @@ async function copyMarkdown() {
   background: #ef4444;
 }
 .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
   font-weight: 700;
+}
+.severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 .severity-ticks .tk-normal {
   color: #22c55e;

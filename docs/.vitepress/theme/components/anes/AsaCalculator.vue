@@ -176,9 +176,12 @@ function reset() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">I</span><span class="tk-mild">II</span
-          ><span class="tk-moderate">III</span><span class="tk-severe">IV</span
-          ><span class="tk-critical">V</span><span>VI</span>
+          <span class="tk-normal" style="left: 16.67%">I</span>
+          <span class="tk-mild" style="left: 33.33%">II</span>
+          <span class="tk-moderate" style="left: 50%">III</span>
+          <span class="tk-severe" style="left: 66.67%">IV</span>
+          <span class="tk-critical" style="left: 83.33%">V</span>
+          <span style="left: 100%">VI</span>
         </div>
       </div>
 
@@ -513,12 +516,20 @@ function reset() {
   background: #64748b;
 }
 .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
   font-weight: 700;
+}
+.severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .severity-ticks .tk-normal {
   color: #22c55e;

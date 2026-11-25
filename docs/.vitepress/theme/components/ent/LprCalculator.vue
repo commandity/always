@@ -367,11 +367,11 @@ function rsiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span>
-          <span class="tick-threshold">7</span>
-          <span class="tk-mild">11</span>
-          <span class="tk-moderate">17</span>
-          <span class="tk-severe">26</span>
+          <span class="tk-normal" style="left: 0%">0</span>
+          <span class="tick-threshold" style="left: 26.92%">7</span>
+          <span class="tk-mild" style="left: 42.31%">11</span>
+          <span class="tk-moderate" style="left: 65.38%">17</span>
+          <span class="tk-severe" style="left: 100%">26</span>
         </div>
       </div>
 
@@ -550,11 +550,11 @@ function rsiReset() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span>
-          <span class="tick-threshold">13</span>
-          <span class="tk-mild">20</span>
-          <span class="tk-moderate">30</span>
-          <span class="tk-severe">45</span>
+          <span class="tk-normal" style="left: 0%">0</span>
+          <span class="tick-threshold" style="left: 28.89%">13</span>
+          <span class="tk-mild" style="left: 44.44%">20</span>
+          <span class="tk-moderate" style="left: 66.67%">30</span>
+          <span class="tk-severe" style="left: 100%">45</span>
         </div>
       </div>
 
@@ -916,17 +916,28 @@ function rsiReset() {
 }
 
 .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+
+.severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 
 .tick-threshold {
   color: #f59e0b;
   font-weight: 700;
-  position: relative;
 }
 .tick-threshold::after {
   content: "";

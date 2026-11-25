@@ -434,10 +434,11 @@ async function eat10Copy() {
           />
         </div>
         <div class="severity-ticks">
-          <span class="tk-normal">0</span
-          ><span class="tick-threshold">3</span
-          ><span class="tk-mild">10</span><span class="tk-moderate">20</span
-          ><span class="tk-severe">40</span>
+          <span class="tk-normal" style="left: 0%">0</span>
+          <span class="tick-threshold" style="left: 7.5%">3</span>
+          <span class="tk-mild" style="left: 25%">10</span>
+          <span class="tk-moderate" style="left: 50%">20</span>
+          <span class="tk-severe" style="left: 100%">40</span>
         </div>
       </div>
 
@@ -797,17 +798,28 @@ async function eat10Copy() {
 }
 
 .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+
+.severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 
 .tick-threshold {
   color: #f59e0b;
   font-weight: 700;
-  position: relative;
 }
 .tick-threshold::after {
   content: "";

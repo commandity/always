@@ -627,12 +627,12 @@ async function prevent_copyMarkdown() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span>
-          <span class="tick-threshold">1</span>
-          <span>2</span>
-          <span>4</span>
-          <span>6</span>
-          <span>9</span>
+          <span style="left: 0%">0</span>
+          <span class="tick-threshold" style="left: 11.11%">1</span>
+          <span style="left: 22.22%">2</span>
+          <span style="left: 44.44%">4</span>
+          <span style="left: 66.67%">6</span>
+          <span style="left: 100%">9</span>
         </div>
       </div>
 
@@ -888,12 +888,12 @@ async function prevent_copyMarkdown() {
           />
         </div>
         <div class="severity-ticks">
-          <span>0%</span>
-          <span class="tick-threshold">3%</span>
-          <span>5%</span>
-          <span>10%</span>
-          <span>20%</span>
-          <span>≥30%</span>
+          <span style="left: 0%">0%</span>
+          <span class="tick-threshold" style="left: 10%">3%</span>
+          <span style="left: 16.67%">5%</span>
+          <span style="left: 33.33%">10%</span>
+          <span style="left: 66.67%">20%</span>
+          <span style="left: 100%">≥30%</span>
         </div>
       </div>
 
@@ -1559,11 +1559,22 @@ async function prevent_copyMarkdown() {
   background: linear-gradient(90deg, #ef4444, #f87171);
 }
 .cha .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+.cha .severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.cha .severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.cha .severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .cha .tick-threshold {
   color: #f59e0b;
@@ -2301,11 +2312,22 @@ async function prevent_copyMarkdown() {
   background: linear-gradient(90deg, #ef4444, #f87171);
 }
 .prevent .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+.prevent .severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.prevent .severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.prevent .severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .prevent .tick-threshold {
   color: #f59e0b;

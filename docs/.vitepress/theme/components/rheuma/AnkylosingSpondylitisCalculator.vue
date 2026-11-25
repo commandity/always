@@ -254,11 +254,11 @@ const domainOrder = ["GS", "MS"] as const;
           />
         </div>
         <div class="severity-ticks">
-          <span>0</span>
-          <span class="tick-y">2</span>
-          <span class="tick-o">4</span>
-          <span class="tick-r">6</span>
-          <span>10</span>
+          <span style="left: 0%">0</span>
+          <span class="tick-y" style="left: 20%">2</span>
+          <span class="tick-o" style="left: 40%">4</span>
+          <span class="tick-r" style="left: 60%">6</span>
+          <span style="left: 100%">10</span>
         </div>
       </div>
 
@@ -813,11 +813,22 @@ const domainOrder = ["GS", "MS"] as const;
   background: linear-gradient(90deg, #ef4444, #f87171);
 }
 .basdai .severity-ticks {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1em;
   font-size: 0.68rem;
   color: var(--vp-c-text-3);
-  padding: 0 2px;
+}
+.basdai .severity-ticks span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.basdai .severity-ticks span:first-child {
+  transform: translateX(0);
+}
+.basdai .severity-ticks span:last-child {
+  transform: translateX(-100%);
 }
 .basdai .tick-y {
   color: #f59e0b;
